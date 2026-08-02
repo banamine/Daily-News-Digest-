@@ -1,0 +1,23 @@
+name: "Codespaces Prebuilds"
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+jobs:
+  prebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Prebuild Dev Container
+        uses: devcontainers/ci@v0.3
+        with:
+          subFolder: '.'
+          runCmd: 'bash .devcontainer/setup.sh'

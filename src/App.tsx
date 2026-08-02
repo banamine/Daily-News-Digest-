@@ -8,10 +8,11 @@ import { SettingsModal } from './components/SettingsModal';
 import { PythonScriptViewer } from './components/PythonScriptViewer';
 import { PipelineRunnerModal } from './components/PipelineRunnerModal';
 import { ScraperStrategyViewer } from './components/ScraperStrategyViewer';
+import { PrebuildConfigViewer } from './components/PrebuildConfigViewer';
 import { BriefingData, RSSFeed, PipelineConfig, PipelineRunStatus, PipelineStep } from './types';
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState<'briefing' | 'live-feeds' | 'scraper' | 'feeds' | 'archive' | 'python' | 'settings'>('briefing');
+  const [activeTab, setActiveTab] = useState<'briefing' | 'live-feeds' | 'scraper' | 'feeds' | 'archive' | 'python' | 'prebuilds' | 'settings'>('briefing');
   const [currentBriefing, setCurrentBriefing] = useState<BriefingData | null>(null);
   const [briefingsList, setBriefingsList] = useState<BriefingData[]>([]);
   const [feeds, setFeeds] = useState<RSSFeed[]>([]);
@@ -28,6 +29,7 @@ export default function App() {
   });
   const [pythonCode, setPythonCode] = useState<string>('');
   const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [autoOpenExport, setAutoOpenExport] = useState<boolean>(false);
 
   // Pipeline execution modal status
   const [pipelineStatus, setPipelineStatus] = useState<PipelineRunStatus>({
@@ -221,8 +223,15 @@ export default function App() {
       {/* Header Navigation */}
       <Header
         activeTab={activeTab}
-        setActiveTab={setActiveTab}
+        setActiveTab={(tab) => {
+          setActiveTab(tab);
+          if (tab !== 'live-feeds') setAutoOpenExport(false);
+        }}
         onRunPipeline={handleRunPipeline}
+        onOpenExportPage={() => {
+          setActiveTab('live-feeds');
+          setAutoOpenExport(true);
+        }}
         isRunning={pipelineStatus.isRunning}
         lastRunDate={currentBriefing?.date || null}
         activeFeedsCount={feeds.filter(f => f.enabled).length}
@@ -241,6 +250,7 @@ export default function App() {
         {activeTab === 'live-feeds' && (
           <LiveFeedExplorer
             feeds={feeds}
+            initialOpenExportDrawer={autoOpenExport}
           />
         )}
 
@@ -271,6 +281,10 @@ export default function App() {
           <PythonScriptViewer
             pythonCode={pythonCode}
           />
+        )}
+
+        {activeTab === 'prebuilds' && (
+          <PrebuildConfigViewer />
         )}
 
         {activeTab === 'settings' && (

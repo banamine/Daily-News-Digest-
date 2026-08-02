@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Code, Copy, Check, Terminal, Download, Github, Play, Sparkles } from 'lucide-react';
+import { Code, Copy, Check, Terminal, Download, Github, Sparkles } from 'lucide-react';
 
 interface PythonScriptViewerProps {
   pythonCode: string;
@@ -66,23 +66,23 @@ jobs:
   return (
     <div id="python-viewer-container" className="max-w-5xl mx-auto space-y-6">
       {/* Header Info */}
-      <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+      <div className="bg-[#0a0a0a] border border-white/10 p-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
         <div>
-          <h2 className="font-extrabold text-xl text-slate-100 flex items-center gap-2">
-            <Code className="w-5 h-5 text-sky-400" />
-            <span>Standalone Python Workflow Script</span>
+          <h2 className="font-serif font-bold text-2xl text-white flex items-center gap-2">
+            <Code className="w-5 h-5 text-amber-500" />
+            <span>Standalone Python Pipeline</span>
           </h2>
-          <p className="text-xs text-slate-400 mt-1">
-            Pre-configured with <code className="text-sky-400 font-mono">google-genai</code> SDK for Google Gemini image generation, news scraping &amp; HTML output.
+          <p className="text-[11px] font-mono text-white/50 mt-1 uppercase tracking-widest">
+            Pre-configured script powered by <code className="text-amber-400">google-genai</code> SDK for background automation
           </p>
         </div>
 
         <div className="flex items-center gap-2">
-          <div className="flex items-center bg-slate-950 p-1 rounded-xl border border-slate-800">
+          <div className="flex items-center bg-black p-1 border border-white/10">
             <button
               onClick={() => setActiveTab('script')}
-              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
-                activeTab === 'script' ? 'bg-sky-500 text-white shadow-sm' : 'text-slate-400 hover:text-slate-200'
+              className={`flex items-center gap-1.5 px-3 py-1.5 text-[11px] font-mono uppercase tracking-wider transition-all ${
+                activeTab === 'script' ? 'bg-amber-500 text-black font-bold' : 'text-white/60 hover:text-white'
               }`}
             >
               <Terminal className="w-3.5 h-3.5" />
@@ -91,8 +91,8 @@ jobs:
 
             <button
               onClick={() => setActiveTab('github')}
-              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
-                activeTab === 'github' ? 'bg-sky-500 text-white shadow-sm' : 'text-slate-400 hover:text-slate-200'
+              className={`flex items-center gap-1.5 px-3 py-1.5 text-[11px] font-mono uppercase tracking-wider transition-all ${
+                activeTab === 'github' ? 'bg-amber-500 text-black font-bold' : 'text-white/60 hover:text-white'
               }`}
             >
               <Github className="w-3.5 h-3.5" />
@@ -102,7 +102,7 @@ jobs:
 
           <button
             onClick={handleDownloadScript}
-            className="flex items-center gap-1.5 px-3.5 py-2 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-xl text-xs font-semibold border border-slate-700 transition-all active:scale-95"
+            className="flex items-center gap-1.5 px-3.5 py-2 bg-white hover:bg-amber-500 text-black text-[10px] font-mono font-bold uppercase tracking-widest transition-all"
           >
             <Download className="w-3.5 h-3.5" />
             <span>Download .py</span>
@@ -112,32 +112,32 @@ jobs:
 
       {/* Main Tab Content */}
       {activeTab === 'script' ? (
-        <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2 text-xs text-slate-300">
-              <Sparkles className="w-4 h-4 text-sky-400" />
-              <span>Google Gemini GenAI SDK Pre-filled (<code className="text-sky-400 font-mono">google.genai</code>)</span>
+        <div className="bg-[#0a0a0a] border border-white/10 p-6 space-y-4">
+          <div className="flex items-center justify-between border-b border-white/10 pb-4">
+            <div className="flex items-center gap-2 text-xs font-mono text-amber-400 uppercase tracking-widest">
+              <Sparkles className="w-4 h-4 text-amber-500" />
+              <span>Google GenAI SDK Integration (<code className="text-amber-300">google.genai</code>)</span>
             </div>
 
             <button
               onClick={() => handleCopy(pythonCode)}
-              className="flex items-center gap-1.5 px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-lg text-xs font-medium border border-slate-700 transition-all active:scale-95"
+              className="flex items-center gap-1.5 px-3.5 py-2 bg-white/10 hover:bg-amber-500 hover:text-black text-white text-[10px] font-mono font-bold uppercase tracking-widest transition-all"
             >
-              {copied ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
-              <span>{copied ? 'Copied Python Code' : 'Copy Code'}</span>
+              {copied ? <Check className="w-3.5 h-3.5 text-green-400" /> : <Copy className="w-3.5 h-3.5" />}
+              <span>{copied ? 'Copied Script' : 'Copy Code'}</span>
             </button>
           </div>
 
-          <pre className="p-4 bg-slate-950 rounded-xl border border-slate-800 text-xs font-mono text-emerald-300 whitespace-pre-wrap leading-relaxed overflow-x-auto max-h-[600px]">
+          <pre className="p-5 bg-black border border-white/10 text-xs font-mono text-green-400 whitespace-pre-wrap leading-relaxed overflow-x-auto max-h-[600px]">
             {pythonCode || '# Loading daily_news.py script...'}
           </pre>
 
-          <div className="bg-slate-950 p-4 rounded-xl border border-slate-800/80 space-y-2">
-            <h4 className="font-bold text-slate-200 text-xs flex items-center gap-1.5">
-              <Terminal className="w-3.5 h-3.5 text-sky-400" />
-              <span>How to run locally:</span>
+          <div className="bg-black p-5 border border-white/10 space-y-2">
+            <h4 className="font-mono text-xs font-bold text-amber-400 flex items-center gap-2 uppercase tracking-widest">
+              <Terminal className="w-3.5 h-3.5 text-amber-500" />
+              <span>Execution Instructions:</span>
             </h4>
-            <pre className="text-xs font-mono text-slate-400 bg-slate-900 p-2.5 rounded-lg border border-slate-800">
+            <pre className="text-xs font-mono text-white/70 bg-[#0a0a0a] p-3 border border-white/10">
               pip install feedparser requests jinja2 google-genai{'\n'}
               export GEMINI_API_KEY="your_api_key_here"{'\n'}
               python daily_news.py
@@ -145,28 +145,28 @@ jobs:
           </div>
         </div>
       ) : (
-        <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-4">
-          <div className="flex items-center justify-between">
+        <div className="bg-[#0a0a0a] border border-white/10 p-6 space-y-4">
+          <div className="flex items-center justify-between border-b border-white/10 pb-4">
             <div>
-              <h3 className="font-bold text-slate-100 text-sm flex items-center gap-2">
-                <Github className="w-4 h-4 text-sky-400" />
-                <span>Automated Daily Cron Workflow (.github/workflows/daily.yml)</span>
+              <h3 className="font-serif font-bold text-white text-base flex items-center gap-2">
+                <Github className="w-4 h-4 text-amber-500" />
+                <span>Automated GitHub Actions Cron Workflow</span>
               </h3>
-              <p className="text-xs text-slate-400 mt-0.5">
-                Automatically runs every day at 08:00 UTC and pushes the new HTML briefing page to GitHub Pages or repository.
+              <p className="text-[11px] font-mono text-white/50 mt-1 uppercase tracking-widest">
+                Executes autonomously every day at 08:00 UTC and commits compiled edition outputs
               </p>
             </div>
 
             <button
               onClick={() => handleCopy(githubWorkflowYaml)}
-              className="flex items-center gap-1.5 px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-lg text-xs font-medium border border-slate-700 transition-all active:scale-95"
+              className="flex items-center gap-1.5 px-3.5 py-2 bg-white/10 hover:bg-amber-500 hover:text-black text-white text-[10px] font-mono font-bold uppercase tracking-widest transition-all"
             >
-              {copied ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
-              <span>{copied ? 'Copied YAML' : 'Copy Workflow'}</span>
+              {copied ? <Check className="w-3.5 h-3.5 text-green-400" /> : <Copy className="w-3.5 h-3.5" />}
+              <span>{copied ? 'Copied' : 'Copy Workflow'}</span>
             </button>
           </div>
 
-          <pre className="p-4 bg-slate-950 rounded-xl border border-slate-800 text-xs font-mono text-sky-300 whitespace-pre-wrap leading-relaxed overflow-x-auto max-h-[500px]">
+          <pre className="p-5 bg-black border border-white/10 text-xs font-mono text-amber-300 whitespace-pre-wrap leading-relaxed overflow-x-auto max-h-[500px]">
             {githubWorkflowYaml}
           </pre>
         </div>

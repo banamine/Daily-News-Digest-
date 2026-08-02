@@ -10,6 +10,7 @@ export interface NewsArticle {
   author?: string;
   ingestionType?: 'rss' | 'scraper';
   sourceGroup?: 'rss' | 'scraped';
+  imageUrl?: string;
 }
 
 export interface CustomFeedPreset {
@@ -34,6 +35,8 @@ export interface BriefingData {
   rawSummaryText: string;
   imagePrompt: string;
   imageUrl: string; // base64 or path
+  collageImages?: string[];
+  collageMode?: 'collage' | 'ai';
   htmlContent: string;
   sourcesCount: number;
   status: 'completed' | 'failed';

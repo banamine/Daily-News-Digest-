@@ -38,20 +38,28 @@ if (!fs.existsSync(OUTPUT_DIR)) fs.mkdirSync(OUTPUT_DIR, { recursive: true });
 if (!fs.existsSync(CURRENT_DIR)) fs.mkdirSync(CURRENT_DIR, { recursive: true });
 if (!fs.existsSync(ARCHIVE_DIR)) fs.mkdirSync(ARCHIVE_DIR, { recursive: true });
 
-// Initial Feeds State with All 11 Baked-In Global News Sources
+// Initial Feeds State with Baked-In Global & Alternative News Sources
 let defaultFeeds = [
   { id: '1', name: 'BBC World News', url: 'https://feeds.bbci.co.uk/news/world/rss.xml', category: 'Global', enabled: true, status: 'active', type: 'rss' },
-  { id: '2', name: 'Reuters Top News', url: 'https://www.reutersagency.com/feed/?best-topics=top-news&post_type=best', category: 'Global', enabled: true, status: 'active', type: 'rss' },
+  { id: '2', name: 'Reuters Top News', url: 'https://news.google.com/rss/search?q=site:reuters.com&hl=en-US&gl=US&ceid=US:en', category: 'Global', enabled: true, status: 'active', type: 'rss' },
   { id: '3', name: 'Daily Mail UK', url: 'https://www.dailymail.co.uk/news/index.rss', category: 'Global', enabled: true, status: 'active', type: 'rss' },
   { id: '4', name: 'New York Post', url: 'https://nypost.com/feed/', category: 'Global', enabled: true, status: 'active', type: 'rss' },
-  { id: '5', name: '100% Fed Up', url: 'https://100percentfedup.com/feed/', category: 'Alternative', enabled: true, status: 'active', type: 'rss' },
-  { id: '6', name: 'The Federalist', url: 'https://thefederalist.com/feed/', category: 'Alternative', enabled: true, status: 'active', type: 'rss' },
-  { id: '7', name: 'The Blaze', url: 'https://www.theblaze.com/feeds/feed.rss', category: 'Alternative', enabled: true, status: 'active', type: 'rss' },
-  { id: '8', name: 'Hot Air', url: 'https://hotair.com/feed', category: 'Alternative', enabled: true, status: 'active', type: 'rss' },
-  { id: '9', name: 'Judicial Watch', url: 'https://www.judicialwatch.org/feed/', category: 'Alternative', enabled: true, status: 'active', type: 'rss' },
-  { id: '10', name: 'American Thinker', url: 'https://www.americanthinker.com/index.xml', category: 'Alternative', enabled: true, status: 'active', type: 'rss' },
-  { id: '11', name: 'Epoch Times', url: 'https://www.theepochtimes.com/c-us/feed', category: 'Alternative', enabled: true, status: 'active', type: 'rss' },
-  { id: '12', name: 'Alex Jones Live (Scraper)', url: 'https://www.alexjoneslive.com/', category: 'Alternative', enabled: true, status: 'active', type: 'scraper' }
+  { id: '5', name: 'Associated Press World', url: 'https://news.google.com/rss/search?q=site:apnews.com&hl=en-US&gl=US&ceid=US:en', category: 'Global', enabled: true, status: 'active', type: 'rss' },
+  { id: '6', name: 'Fox News World', url: 'https://moxie.foxnews.com/google-publisher/world.xml', category: 'Global', enabled: true, status: 'active', type: 'rss' },
+  { id: '7', name: '100% Fed Up', url: 'https://100percentfedup.com/feed/', category: 'Alternative', enabled: true, status: 'active', type: 'rss' },
+  { id: '8', name: 'The Federalist', url: 'https://thefederalist.com/feed/', category: 'Alternative', enabled: true, status: 'active', type: 'rss' },
+  { id: '9', name: 'The Blaze', url: 'https://www.theblaze.com/feeds/feed.rss', category: 'Alternative', enabled: true, status: 'active', type: 'rss' },
+  { id: '10', name: 'Hot Air', url: 'https://hotair.com/feed', category: 'Alternative', enabled: true, status: 'active', type: 'rss' },
+  { id: '11', name: 'Judicial Watch', url: 'https://www.judicialwatch.org/feed/', category: 'Alternative', enabled: true, status: 'active', type: 'rss' },
+  { id: '12', name: 'American Thinker', url: 'https://www.americanthinker.com/index.xml', category: 'Alternative', enabled: true, status: 'active', type: 'rss' },
+  { id: '13', name: 'Epoch Times', url: 'https://news.google.com/rss/search?q=site:theepochtimes.com&hl=en-US&gl=US&ceid=US:en', category: 'Alternative', enabled: true, status: 'active', type: 'rss' },
+  { id: '14', name: 'Gateway Pundit', url: 'https://news.google.com/rss/search?q=site:thegatewaypundit.com&hl=en-US&gl=US&ceid=US:en', category: 'Alternative', enabled: true, status: 'active', type: 'rss' },
+  { id: '15', name: 'Breitbart News', url: 'https://feeds.feedburner.com/breitbart', category: 'Alternative', enabled: true, status: 'active', type: 'rss' },
+  { id: '16', name: 'ZeroHedge', url: 'https://feeds.feedburner.com/zerohedge/feed', category: 'Finance', enabled: true, status: 'active', type: 'rss' },
+  { id: '17', name: 'Wall Street Journal', url: 'https://news.google.com/rss/search?q=site:wsj.com&hl=en-US&gl=US&ceid=US:en', category: 'Finance', enabled: true, status: 'active', type: 'rss' },
+  { id: '18', name: 'TechCrunch', url: 'https://techcrunch.com/feed/', category: 'Tech', enabled: true, status: 'active', type: 'rss' },
+  { id: '19', name: 'Wired News', url: 'https://www.wired.com/feed/rss', category: 'Tech', enabled: true, status: 'active', type: 'rss' },
+  { id: '20', name: 'Alex Jones Live / AJN (Scraper)', url: 'https://www.alexjoneslive.com/', category: 'Alternative', enabled: true, status: 'active', type: 'scraper' }
 ];
 
 // Unified Story Normalization Layer
@@ -66,11 +74,22 @@ function normalizeStoryItem(item: {
   category: string;
   author?: string;
   ingestionType?: 'rss' | 'scraper';
+  imageUrl?: string;
 }) {
   const cleanTitle = (item.title || 'Untitled Article').trim();
   const cleanSummary = (item.summary || cleanTitle).trim();
   const truncatedSummary = cleanSummary.length > 650 ? cleanSummary.substring(0, 650) + '...' : cleanSummary;
   const ingestionType = item.ingestionType || 'rss';
+
+  const categoryFallbackPhotos: Record<string, string> = {
+    'Global': 'https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80',
+    'Alternative': 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80',
+    'Tech': 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80',
+    'Finance': 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=800&q=80',
+    'Custom': 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80'
+  };
+
+  const finalImageUrl = (item.imageUrl || '').trim() || categoryFallbackPhotos[item.category] || categoryFallbackPhotos['Global'];
 
   return {
     id: item.id || Math.random().toString(36).substring(2, 11),
@@ -83,62 +102,63 @@ function normalizeStoryItem(item: {
     category: item.category || 'Global',
     author: item.author || item.feedName,
     ingestionType,
+    imageUrl: finalImageUrl,
     sourceGroup: ingestionType === 'scraper' ? 'scraped' : 'rss'
   };
 }
 
-// Fallback intelligence story generator to guarantee 100% feed uptime & story loading
+// Fallback intelligence story generator with high-resolution news photography
 function getFallbackStoriesForFeed(feedName: string, feedId: string, category: string, ingestionType: 'rss' | 'scraper' = 'rss'): any[] {
   const map: Record<string, any[]> = {
     'BBC World News': [
-      { id: 'bbc-1', title: 'Global Energy Transition Accord Finalized at International Summit', link: 'https://www.bbc.com/news/world', summary: 'Delegates from 80 nations reached a landmark agreement on carbon-neutral grid expansions and renewable energy infrastructure financing.', published: '1 hour ago', feedName, feedId, category: 'Global', author: 'BBC News World', ingestionType },
-      { id: 'bbc-2', title: 'Pacific Maritime Trade Corridors Open New High-Capacity Shipping Lanes', link: 'https://www.bbc.com/news/business', summary: 'Port authorities report record freight throughput following infrastructure modernization across major international trade hubs.', published: '3 hours ago', feedName, feedId, category: 'Global', author: 'BBC Commerce', ingestionType }
+      { id: 'bbc-1', title: 'Global Energy Transition Accord Finalized at International Summit', link: 'https://www.bbc.com/news/world', summary: 'Delegates from 80 nations reached a landmark agreement on carbon-neutral grid expansions and renewable energy infrastructure financing.', published: '1 hour ago', feedName, feedId, category: 'Global', author: 'BBC News World', ingestionType, imageUrl: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=800&q=80' },
+      { id: 'bbc-2', title: 'Pacific Maritime Trade Corridors Open New High-Capacity Shipping Lanes', link: 'https://www.bbc.com/news/business', summary: 'Port authorities report record freight throughput following infrastructure modernization across major international trade hubs.', published: '3 hours ago', feedName, feedId, category: 'Global', author: 'BBC Commerce', ingestionType, imageUrl: 'https://images.unsplash.com/photo-1518241353330-0f7941c2d9b5?auto=format&fit=crop&w=800&q=80' }
     ],
     'Reuters Top News': [
-      { id: 'reut-1', title: 'Central Banks Announce Coordinated Liquidity Reserve Adjustments', link: 'https://www.reuters.com/business/finance/', summary: 'Monetary authorities update fiscal reserve targets amid stabilizing inflationary indicators and robust commercial trade growth.', published: '30 mins ago', feedName, feedId, category: 'Global', author: 'Reuters Markets', ingestionType },
-      { id: 'reut-2', title: 'Global Tech Consortium Unveils Hardware Standards for Next-Gen Semiconductors', link: 'https://www.reuters.com/technology/', summary: 'Leading chip manufacturers agree on open interconnect specifications to boost power efficiency in high-density data centers.', published: '2 hours ago', feedName, feedId, category: 'Global', author: 'Reuters Tech', ingestionType }
+      { id: 'reut-1', title: 'Central Banks Announce Coordinated Liquidity Reserve Adjustments', link: 'https://www.reuters.com/business/finance/', summary: 'Monetary authorities update fiscal reserve targets amid stabilizing inflationary indicators and robust commercial trade growth.', published: '30 mins ago', feedName, feedId, category: 'Global', author: 'Reuters Markets', ingestionType, imageUrl: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=800&q=80' },
+      { id: 'reut-2', title: 'Global Tech Consortium Unveils Hardware Standards for Next-Gen Semiconductors', link: 'https://www.reuters.com/technology/', summary: 'Leading chip manufacturers agree on open interconnect specifications to boost power efficiency in high-density data centers.', published: '2 hours ago', feedName, feedId, category: 'Global', author: 'Reuters Tech', ingestionType, imageUrl: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80' }
     ],
     'Daily Mail UK': [
-      { id: 'dm-1', title: 'UK Aviation Modernization Bill Passes Parliamentary Committee Stage', link: 'https://www.dailymail.co.uk/news', summary: 'Transport officials confirm $12B airport runway upgrade plan aimed at reducing passenger transit delays and boosting regional connectivity.', published: '1 hour ago', feedName, feedId, category: 'Global', author: 'Daily Mail UK', ingestionType },
-      { id: 'dm-2', title: 'Historic Atlantic Ocean Science Expedition Uncovers Deep-Sea Coral Ecosystems', link: 'https://www.dailymail.co.uk/sciencetech', summary: 'Marine biologists capture high-definition underwater footage of sprawling pristine reefs near British territorial waters.', published: '4 hours ago', feedName, feedId, category: 'Global', author: 'Daily Mail Science', ingestionType }
+      { id: 'dm-1', title: 'UK Aviation Modernization Bill Passes Parliamentary Committee Stage', link: 'https://www.dailymail.co.uk/news', summary: 'Transport officials confirm $12B airport runway upgrade plan aimed at reducing passenger transit delays and boosting regional connectivity.', published: '1 hour ago', feedName, feedId, category: 'Global', author: 'Daily Mail UK', ingestionType, imageUrl: 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=800&q=80' },
+      { id: 'dm-2', title: 'Historic Atlantic Ocean Science Expedition Uncovers Deep-Sea Coral Ecosystems', link: 'https://www.dailymail.co.uk/sciencetech', summary: 'Marine biologists capture high-definition underwater footage of sprawling pristine reefs near British territorial waters.', published: '4 hours ago', feedName, feedId, category: 'Global', author: 'Daily Mail Science', ingestionType, imageUrl: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80' }
     ],
     'New York Post': [
-      { id: 'nyp-1', title: 'Empire State Infrastructure Initiative Accelerates Transit Corridor Expansion', link: 'https://nypost.com/news/', summary: 'New York state transportation authorities report key milestones ahead of schedule for regional rail and highway modernization projects.', published: '45 mins ago', feedName, feedId, category: 'Global', author: 'New York Post Metro', ingestionType },
-      { id: 'nyp-2', title: 'Fintech Surge: Wall Street Firms Adopt Automated Algorithmic Compliance Tools', link: 'https://nypost.com/business/', summary: 'Financial institutions deploy advanced AI verification platforms to streamline risk reporting and regulatory auditing.', published: '2 hours ago', feedName, feedId, category: 'Global', author: 'NY Post Markets', ingestionType }
+      { id: 'nyp-1', title: 'Empire State Infrastructure Initiative Accelerates Transit Corridor Expansion', link: 'https://nypost.com/news/', summary: 'New York state transportation authorities report key milestones ahead of schedule for regional rail and highway modernization projects.', published: '45 mins ago', feedName, feedId, category: 'Global', author: 'New York Post Metro', ingestionType, imageUrl: 'https://images.unsplash.com/photo-1514565131-fce0801e5785?auto=format&fit=crop&w=800&q=80' },
+      { id: 'nyp-2', title: 'Fintech Surge: Wall Street Firms Adopt Automated Algorithmic Compliance Tools', link: 'https://nypost.com/business/', summary: 'Financial institutions deploy advanced AI verification platforms to streamline risk reporting and regulatory auditing.', published: '2 hours ago', feedName, feedId, category: 'Global', author: 'NY Post Markets', ingestionType, imageUrl: 'https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&w=800&q=80' }
     ],
     '100% Fed Up': [
-      { id: 'fedup-1', title: 'Grassroots Coalition Urges Election Integrity Audit Protections Nationwide', link: 'https://100percentfedup.com/', summary: 'Community advocates rally for transparent voter verification measures and paper trail standards ahead of upcoming regional ballots.', published: '1 hour ago', feedName, feedId, category: 'Alternative', author: '100% Fed Up News', ingestionType },
-      { id: 'fedup-2', title: 'State Legislators Introduce Sovereign Property Rights Protection Bill', link: 'https://100percentfedup.com/', summary: 'New legislative measures aim to curb regulatory overreach and protect private land use rights for local agricultural producers.', published: '3 hours ago', feedName, feedId, category: 'Alternative', author: '100% Fed Up Investigative', ingestionType }
+      { id: 'fedup-1', title: 'Grassroots Coalition Urges Election Integrity Audit Protections Nationwide', link: 'https://100percentfedup.com/', summary: 'Community advocates rally for transparent voter verification measures and paper trail standards ahead of upcoming regional ballots.', published: '1 hour ago', feedName, feedId, category: 'Alternative', author: '100% Fed Up News', ingestionType, imageUrl: 'https://images.unsplash.com/photo-1540910419892-4a36d2c3266c?auto=format&fit=crop&w=800&q=80' },
+      { id: 'fedup-2', title: 'State Legislators Introduce Sovereign Property Rights Protection Bill', link: 'https://100percentfedup.com/', summary: 'New legislative measures aim to curb regulatory overreach and protect private land use rights for local agricultural producers.', published: '3 hours ago', feedName, feedId, category: 'Alternative', author: '100% Fed Up Investigative', ingestionType, imageUrl: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80' }
     ],
     'The Federalist': [
-      { id: 'fed-1', title: 'Constitutional Rights Victory: Appellate Court Rules on Freedom of Speech Safeguards', link: 'https://thefederalist.com/', summary: 'A federal court upholds protections for independent digital publishers against arbitrary state administrative enforcement.', published: '1 hour ago', feedName, feedId, category: 'Alternative', author: 'The Federalist Legal', ingestionType },
-      { id: 'fed-2', title: 'Economic Analysis: How Local Community Banks Shield Towns From National Recessions', link: 'https://thefederalist.com/', summary: 'Economists highlight the resilience of regional lending institutions when supporting small business stability during volatile markets.', published: '3 hours ago', feedName, feedId, category: 'Alternative', author: 'The Federalist Policy', ingestionType }
+      { id: 'fed-1', title: 'Constitutional Rights Victory: Appellate Court Rules on Freedom of Speech Safeguards', link: 'https://thefederalist.com/', summary: 'A federal court upholds protections for independent digital publishers against arbitrary state administrative enforcement.', published: '1 hour ago', feedName, feedId, category: 'Alternative', author: 'The Federalist Legal', ingestionType, imageUrl: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=800&q=80' },
+      { id: 'fed-2', title: 'Economic Analysis: How Local Community Banks Shield Towns From National Recessions', link: 'https://thefederalist.com/', summary: 'Economists highlight the resilience of regional lending institutions when supporting small business stability during volatile markets.', published: '3 hours ago', feedName, feedId, category: 'Alternative', author: 'The Federalist Policy', ingestionType, imageUrl: 'https://images.unsplash.com/photo-1556742049-0a670f4a4591?auto=format&fit=crop&w=800&q=80' }
     ],
     'The Blaze': [
-      { id: 'blaze-1', title: 'Border Enforcement Chiefs Outline Enhanced Interdiction Strategies', link: 'https://www.theblaze.com/', summary: 'Field commanders detail technology upgrades, including thermal imaging and automated patrol drones, to bolster border security.', published: '2 hours ago', feedName, feedId, category: 'Alternative', author: 'The Blaze Staff', ingestionType },
-      { id: 'blaze-2', title: 'Parental Rights Movement Achieves School Board Governance Milestone', link: 'https://www.theblaze.com/', summary: 'Local school districts adopt transparent curriculum disclosure requirements following active community engagement.', published: '5 hours ago', feedName, feedId, category: 'Alternative', author: 'The Blaze Culture', ingestionType }
+      { id: 'blaze-1', title: 'Border Enforcement Chiefs Outline Enhanced Interdiction Strategies', link: 'https://www.theblaze.com/', summary: 'Field commanders detail technology upgrades, including thermal imaging and automated patrol drones, to bolster border security.', published: '2 hours ago', feedName, feedId, category: 'Alternative', author: 'The Blaze Staff', ingestionType, imageUrl: 'https://images.unsplash.com/photo-1508614589041-895b88991e3e?auto=format&fit=crop&w=800&q=80' },
+      { id: 'blaze-2', title: 'Parental Rights Movement Achieves School Board Governance Milestone', link: 'https://www.theblaze.com/', summary: 'Local school districts adopt transparent curriculum disclosure requirements following active community engagement.', published: '5 hours ago', feedName, feedId, category: 'Alternative', author: 'The Blaze Culture', ingestionType, imageUrl: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80' }
     ],
     'Hot Air': [
-      { id: 'hot-1', title: 'Energy Sector Watch: Natural Gas Reserves Reach Five-Year Highs Ahead of Season', link: 'https://hotair.com/', summary: 'Analysts examine energy stockpiles and production output figures across domestic drilling basins as pipeline capacity expands.', published: '1 hour ago', feedName, feedId, category: 'Alternative', author: 'Hot Air Analysts', ingestionType },
-      { id: 'hot-2', title: 'Media Reform Debates Heat Up Over Federal Broadcast Licensing Protections', link: 'https://hotair.com/', summary: 'Policy experts debate regulatory framework updates governing independent media channels and broadcasting spectrum allocation.', published: '4 hours ago', feedName, feedId, category: 'Alternative', author: 'Hot Air Editorial', ingestionType }
+      { id: 'hot-1', title: 'Energy Sector Watch: Natural Gas Reserves Reach Five-Year Highs Ahead of Season', link: 'https://hotair.com/', summary: 'Analysts examine energy stockpiles and production output figures across domestic drilling basins as pipeline capacity expands.', published: '1 hour ago', feedName, feedId, category: 'Alternative', author: 'Hot Air Analysts', ingestionType, imageUrl: 'https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=800&q=80' },
+      { id: 'hot-2', title: 'Media Reform Debates Heat Up Over Federal Broadcast Licensing Protections', link: 'https://hotair.com/', summary: 'Policy experts debate regulatory framework updates governing independent media channels and broadcasting spectrum allocation.', published: '4 hours ago', feedName, feedId, category: 'Alternative', author: 'Hot Air Editorial', ingestionType, imageUrl: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80' }
     ],
     'Judicial Watch': [
-      { id: 'jw-1', title: 'FOIA Investigation Uncovers Unreleased Government Agency Records', link: 'https://www.judicialwatch.org/', summary: 'Judicial Watch legal team obtains internal email communications regarding federal oversight policies and administrative compliance.', published: '1 hour ago', feedName, feedId, category: 'Alternative', author: 'Judicial Watch Press', ingestionType },
-      { id: 'jw-2', title: 'Federal Court Orders Expedited Release of Public Integrity Audit Documents', link: 'https://www.judicialwatch.org/', summary: 'Magistrate judge denies government motion to delay disclosure, enforcing public accountability standards under federal law.', published: '3 hours ago', feedName, feedId, category: 'Alternative', author: 'Judicial Watch Legal', ingestionType }
+      { id: 'jw-1', title: 'FOIA Investigation Uncovers Unreleased Government Agency Records', link: 'https://www.judicialwatch.org/', summary: 'Judicial Watch legal team obtains internal email communications regarding federal oversight policies and administrative compliance.', published: '1 hour ago', feedName, feedId, category: 'Alternative', author: 'Judicial Watch Press', ingestionType, imageUrl: 'https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=800&q=80' },
+      { id: 'jw-2', title: 'Federal Court Orders Expedited Release of Public Integrity Audit Documents', link: 'https://www.judicialwatch.org/', summary: 'Magistrate judge denies government motion to delay disclosure, enforcing public accountability standards under federal law.', published: '3 hours ago', feedName, feedId, category: 'Alternative', author: 'Judicial Watch Legal', ingestionType, imageUrl: 'https://images.unsplash.com/photo-1436450412740-6b988f486c6b?auto=format&fit=crop&w=800&q=80' }
     ],
     'American Thinker': [
-      { id: 'at-1', title: 'Fiscal Realism: Evaluating Long-Term Sovereign Debt Obligations and Market Impacts', link: 'https://www.americanthinker.com/', summary: 'A comprehensive economic critique examining central expenditure trends and policy recommendations for budget stabilization.', published: '2 hours ago', feedName, feedId, category: 'Alternative', author: 'American Thinker Finance', ingestionType },
-      { id: 'at-2', title: 'The Resurgence of Classical Education and Civic Knowledge in Modern Schools', link: 'https://www.americanthinker.com/', summary: 'Educational reform scholars document a growing national trend toward traditional humanities and civic instruction.', published: '4 hours ago', feedName, feedId, category: 'Alternative', author: 'American Thinker Education', ingestionType }
+      { id: 'at-1', title: 'Fiscal Realism: Evaluating Long-Term Sovereign Debt Obligations and Market Impacts', link: 'https://www.americanthinker.com/', summary: 'A comprehensive economic critique examining central expenditure trends and policy recommendations for budget stabilization.', published: '2 hours ago', feedName, feedId, category: 'Alternative', author: 'American Thinker Finance', ingestionType, imageUrl: 'https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&w=800&q=80' },
+      { id: 'at-2', title: 'The Resurgence of Classical Education and Civic Knowledge in Modern Schools', link: 'https://www.americanthinker.com/', summary: 'Educational reform scholars document a growing national trend toward traditional humanities and civic instruction.', published: '4 hours ago', feedName, feedId, category: 'Alternative', author: 'American Thinker Education', ingestionType, imageUrl: 'https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=800&q=80' }
     ],
     'Epoch Times': [
-      { id: 'et-1', title: 'Special Report: Foreign Influence Operations Targeted by National Security Taskforce', link: 'https://www.theepochtimes.com/', summary: 'Intelligence officials detail countermeasures against foreign state actors attempting to manipulate online political discourse.', published: '1 hour ago', feedName, feedId, category: 'Alternative', author: 'The Epoch Times Intelligence', ingestionType },
-      { id: 'et-2', title: 'Global Tech Supply Chains Diversify Away From High-Risk Manufacturing Hubs', link: 'https://www.theepochtimes.com/', summary: 'Multinational corporations shift manufacturing facilities to allied countries to guarantee supply chain security and resilience.', published: '3 hours ago', feedName, feedId, category: 'Alternative', author: 'Epoch Times Markets', ingestionType }
+      { id: 'et-1', title: 'Special Report: Foreign Influence Operations Targeted by National Security Taskforce', link: 'https://www.theepochtimes.com/', summary: 'Intelligence officials detail countermeasures against foreign state actors attempting to manipulate online political discourse.', published: '1 hour ago', feedName, feedId, category: 'Alternative', author: 'The Epoch Times Intelligence', ingestionType, imageUrl: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80' },
+      { id: 'et-2', title: 'Global Tech Supply Chains Diversify Away From High-Risk Manufacturing Hubs', link: 'https://www.theepochtimes.com/', summary: 'Multinational corporations shift manufacturing facilities to allied countries to guarantee supply chain security and resilience.', published: '3 hours ago', feedName, feedId, category: 'Alternative', author: 'Epoch Times Markets', ingestionType, imageUrl: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80' }
     ]
   };
 
   const stories = map[feedName] || [
-    { id: `${feedId}-fb1`, title: `${feedName}: Daily News & Headline Analysis Update`, link: 'https://google.com', summary: `Live continuous coverage and updates provided by ${feedName}.`, published: 'Recently', feedName, feedId, category, author: feedName, ingestionType },
-    { id: `${feedId}-fb2`, title: `${feedName}: Comprehensive Policy & Current Events Briefing`, link: 'https://google.com', summary: `Analysis of current global trends, current events, and breaking reports from ${feedName}.`, published: 'Today', feedName, feedId, category, author: feedName, ingestionType }
+    { id: `${feedId}-fb1`, title: `${feedName}: Daily News & Headline Analysis Update`, link: 'https://google.com', summary: `Live continuous coverage and updates provided by ${feedName}.`, published: 'Recently', feedName, feedId, category, author: feedName, ingestionType, imageUrl: 'https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80' },
+    { id: `${feedId}-fb2`, title: `${feedName}: Comprehensive Policy & Current Events Briefing`, link: 'https://google.com', summary: `Analysis of current global trends, current events, and breaking reports from ${feedName}.`, published: 'Today', feedName, feedId, category, author: feedName, ingestionType, imageUrl: 'https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=800&q=80' }
   ];
 
   return stories.map(s => normalizeStoryItem(s));
@@ -191,6 +211,7 @@ interface ScrapedStory {
   author: string;
   comment_count: number | null;
   feedName: string;
+  imageUrl?: string;
   scraped_at: string;
   extractionMethod: string;
 }
@@ -240,8 +261,14 @@ async function scrapeAlexJonesLive(maxStories: number = 8): Promise<ScrapedStory
         let author = 'Alex Jones Live';
         let commentCount: number | null = null;
         let extractionMethod = 'Homepage Selector';
+        let articleImageUrl = '';
 
         if (parent.length) {
+          const imgEl = parent.find('img').first();
+          if (imgEl.length) {
+            articleImageUrl = imgEl.attr('src') || imgEl.attr('data-src') || '';
+          }
+
           const excerptEl = parent.find('.entry-summary, .excerpt, p').first();
           if (excerptEl.length) {
             excerpt = excerptEl.text().trim().replace(/\s+/g, ' ');
@@ -266,7 +293,7 @@ async function scrapeAlexJonesLive(maxStories: number = 8): Promise<ScrapedStory
 
         // Content Length Rule (2-6 lines target)
         // If excerpt < 120 chars, open individual article page to pull first 2-4 paragraphs
-        if (excerpt.length < 120) {
+        if (excerpt.length < 120 || !articleImageUrl) {
           try {
             const artRes = await fetch(href, {
               headers: { 'User-Agent': userAgent },
@@ -275,6 +302,13 @@ async function scrapeAlexJonesLive(maxStories: number = 8): Promise<ScrapedStory
             if (artRes.ok) {
               const artHtml = await artRes.text();
               const $art = cheerio.load(artHtml);
+              
+              if (!articleImageUrl) {
+                const ogImg = $art('meta[property="og:image"]').attr('content');
+                const artImg = $art('article img, .entry-content img').first().attr('src');
+                articleImageUrl = ogImg || artImg || '';
+              }
+
               const paragraphs: string[] = [];
               $art('article p, .entry-content p, .post-content p, .content p').each((_, p) => {
                 const txt = $art(p).text().trim().replace(/\s+/g, ' ');
@@ -310,6 +344,7 @@ async function scrapeAlexJonesLive(maxStories: number = 8): Promise<ScrapedStory
           author: author || 'Alex Jones Live',
           comment_count: commentCount,
           feedName: 'Alex Jones Live',
+          imageUrl: articleImageUrl || 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80',
           scraped_at: new Date().toISOString(),
           extractionMethod
         });
@@ -402,17 +437,21 @@ function seedSampleBriefingIfNeeded() {
 **Summary:** Independent research laboratories in Zurich and Boston published peer-reviewed validation of a synthesized ambient-pressure compound exhibiting zero electrical resistance at room temperature. Preliminary industrial trials demonstrate high magnetic levitation stability.
 **Key Theme:** Innovation & Science`;
 
-    const sampleHtml = generateHtmlPage(today, sampleRawSummary, `data:image/svg+xml;utf8,${encodeURIComponent(sampleImageSvg)}`);
+    const sampleArticles = [
+      { id: 'aj1', title: 'Emergency Broadcast: Central Banking Digital Currency Protocol Update', link: 'https://www.alexjoneslive.com/', summary: 'Alex Jones breaks down central banking digital currency protocols.', published: '2 hours ago', feedName: 'Alex Jones Live', category: 'Alternative', imageUrl: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80' },
+      { id: '1', title: 'Global Climate Accord Reaches Milestone Agreement in Geneva', link: 'https://bbc.com', summary: 'Delegates from 140 nations agreed on $500B clean energy deal.', published: 'Today', feedName: 'BBC World News', category: 'Global', imageUrl: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=800&q=80' },
+      { id: '2', title: 'Breakthrough in Room-Temperature Superconductor Testing', link: 'https://techcrunch.com', summary: 'Labs validate ambient-pressure compound with zero resistance.', published: 'Today', feedName: 'TechCrunch', category: 'Tech', imageUrl: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80' },
+      { id: '3', title: 'Central Banks Announce Coordinated Liquidity Reserve Adjustments', link: 'https://reuters.com', summary: 'Monetary authorities update fiscal reserve targets.', published: 'Today', feedName: 'Reuters Top News', category: 'Finance', imageUrl: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=800&q=80' },
+      { id: '4', title: 'Empire State Infrastructure Initiative Accelerates Transit Corridor Expansion', link: 'https://nypost.com', summary: 'New York state transportation authorities report key milestones.', published: 'Today', feedName: 'New York Post', category: 'Global', imageUrl: 'https://images.unsplash.com/photo-1514565131-fce0801e5785?auto=format&fit=crop&w=800&q=80' }
+    ];
+
+    const sampleHtml = generateHtmlPage(today, sampleRawSummary, `data:image/svg+xml;utf8,${encodeURIComponent(sampleImageSvg)}`, sampleArticles);
 
     const initialBriefing = {
       id: today,
       date: today,
       timestamp: new Date().toISOString(),
-      articles: [
-        { id: 'aj1', title: 'Emergency Broadcast: Central Banking Digital Currency Protocol Update', link: 'https://www.alexjoneslive.com/', summary: 'Alex Jones breaks down central banking digital currency protocols.', published: '2 hours ago', feedName: 'Alex Jones Live' },
-        { id: '1', title: 'Global Climate Accord Reaches Milestone Agreement in Geneva', link: 'https://bbc.com', summary: 'Delegates from 140 nations agreed on $500B clean energy deal.', published: 'Today', feedName: 'BBC World News' },
-        { id: '2', title: 'Breakthrough in Room-Temperature Superconductor Testing', link: 'https://techcrunch.com', summary: 'Labs validate ambient-pressure compound with zero resistance.', published: 'Today', feedName: 'TechCrunch' }
-      ],
+      articles: sampleArticles,
       summaries: [
         { headline: 'Emergency Broadcast: Central Banking Digital Currency Protocol Update', summary: 'Alex Jones breaks down central banking digital currency protocols.', category: 'Alternative' },
         { headline: 'Global Climate Accord Reaches Milestone Agreement in Geneva', summary: 'Delegates from over 140 nations finalized a historic international agreement.', category: 'Global' },
@@ -421,6 +460,8 @@ function seedSampleBriefingIfNeeded() {
       rawSummaryText: sampleRawSummary,
       imagePrompt: pipelineConfig.promptTemplate.replace('{themes}', sampleRawSummary),
       imageUrl: `data:image/svg+xml;utf8,${encodeURIComponent(sampleImageSvg)}`,
+      collageImages: sampleArticles.map(a => a.imageUrl),
+      collageMode: 'grid',
       htmlContent: sampleHtml,
       sourcesCount: 5,
       status: 'completed'
@@ -439,16 +480,37 @@ function seedSampleBriefingIfNeeded() {
 
 seedSampleBriefingIfNeeded();
 
-// Helper to construct clean HTML page
-function generateHtmlPage(date: string, rawSummary: string, imageUrl: string): string {
+function sanitizeHtmlText(str: string): string {
+  if (!str) return '';
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
+}
+
+function sanitizeImgUrl(url: string): string {
+  const fallback = 'https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';
+  if (!url) return fallback;
+  const clean = String(url).trim();
+  if (clean.startsWith('http://') || clean.startsWith('https://') || clean.startsWith('data:image/')) {
+    return sanitizeHtmlText(clean);
+  }
+  return fallback;
+}
+
+// Helper to construct clean HTML page with mixed photo collage top placement
+function generateHtmlPage(date: string, rawSummary: string, imageUrl: string, feedArticles: any[] = []): string {
   const formattedDate = new Date(date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+  const fallbackImg = 'https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';
 
   let formattedStoriesHtml = '';
   const blocks = rawSummary.split('### ');
   for (const block of blocks) {
     if (!block.trim()) continue;
     const lines = block.trim().split('\n');
-    const headline = lines[0].replace(/#/g, '').trim();
+    const headline = sanitizeHtmlText(lines[0].replace(/#/g, '').trim());
     const body = lines.slice(1).map(l => l.trim()).filter(Boolean).join('<br/>');
 
     formattedStoriesHtml += `
@@ -456,6 +518,53 @@ function generateHtmlPage(date: string, rawSummary: string, imageUrl: string): s
       <h2 class="story-title">${headline}</h2>
       <div class="story-body">${body}</div>
     </div>`;
+  }
+
+  // Build flexible photo collage markup if feed photos exist
+  let heroMarkup = `<img src="${sanitizeImgUrl(imageUrl)}" alt="Daily Briefing Visual Summary" onerror="this.onerror=null; this.src='${fallbackImg}';" />`;
+  const storiesWithImages = (feedArticles || []).filter(a => a && a.imageUrl && a.imageUrl.length > 8);
+  
+  if (storiesWithImages.length > 0) {
+    const tileCount = Math.min(storiesWithImages.length, 5);
+    const usedStories = storiesWithImages.slice(0, tileCount);
+    const heroStory = usedStories[0];
+    const gridStories = usedStories.slice(1);
+    
+    const gridTiles = gridStories.map(s => {
+      const src = sanitizeImgUrl(s.imageUrl);
+      const feed = sanitizeHtmlText(s.feedName || s.feed || 'Parsed Feed');
+      const title = sanitizeHtmlText(s.title || '');
+      return `
+      <div class="collage-tile">
+        <img src="${src}" alt="${title}" loading="lazy" onerror="this.onerror=null; this.src='${fallbackImg}';" />
+        <div class="collage-overlay">
+          <span class="collage-badge">${feed}</span>
+          <h4 class="collage-title">${title}</h4>
+        </div>
+      </div>`;
+    }).join('');
+
+    const heroSrc = sanitizeImgUrl(heroStory.imageUrl);
+    const heroFeed = sanitizeHtmlText(heroStory.feedName || heroStory.feed || 'Featured Story');
+    const heroTitle = sanitizeHtmlText(heroStory.title || '');
+
+    heroMarkup = `
+      <div class="collage-wrapper">
+        <div class="collage-header-pill">
+          <span>Parsed Feeds Mixed Photo Collage (${tileCount} Photos)</span>
+        </div>
+        <div class="collage-container collage-count-${tileCount}">
+          <div class="collage-tile hero-tile">
+            <img src="${heroSrc}" alt="${heroTitle}" onerror="this.onerror=null; this.src='${fallbackImg}';" />
+            <div class="collage-overlay">
+              <span class="collage-badge hero-badge">${heroFeed}</span>
+              <h3 class="collage-title hero-title">${heroTitle}</h3>
+            </div>
+          </div>
+          ${gridTiles}
+        </div>
+      </div>
+    `;
   }
 
   return `<!DOCTYPE html>
@@ -482,7 +591,7 @@ function generateHtmlPage(date: string, rawSummary: string, imageUrl: string): s
             line-height: 1.65;
             padding: 2.5rem 1rem;
         }
-        .container { max-width: 880px; margin: 0 auto; }
+        .container { max-width: 900px; margin: 0 auto; }
         header { text-align: center; margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
         header .badge {
             display: inline-block;
@@ -500,7 +609,7 @@ function generateHtmlPage(date: string, rawSummary: string, imageUrl: string): s
         header h1 { font-size: 2.25rem; font-weight: 800; letter-spacing: -0.5px; color: #ffffff; }
         .hero-banner {
             width: 100%;
-            border-radius: 12px;
+            border-radius: 16px;
             overflow: hidden;
             margin-bottom: 2.5rem;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
@@ -508,6 +617,66 @@ function generateHtmlPage(date: string, rawSummary: string, imageUrl: string): s
             background: #0f172a;
         }
         .hero-banner img { width: 100%; height: auto; display: block; object-fit: cover; }
+
+        /* Flexible Photo Collage Component */
+        .collage-wrapper { position: relative; width: 100%; }
+        .collage-header-pill {
+            position: absolute; top: 14px; left: 14px; z-index: 10;
+            background: rgba(15, 23, 42, 0.88); backdrop-filter: blur(8px);
+            border: 1px solid rgba(56, 189, 248, 0.35); color: #38bdf8;
+            padding: 5px 12px; border-radius: 999px; font-size: 11px; font-weight: 800;
+            letter-spacing: 0.5px; display: flex; align-items: center; gap: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        }
+        .collage-container {
+            display: grid; gap: 8px; background: #090d16; padding: 8px; border-radius: 16px; min-height: 280px;
+        }
+        .collage-container.collage-count-1 { grid-template-columns: 1fr; grid-template-rows: 360px; }
+        .collage-container.collage-count-1 .hero-tile { grid-row: auto; }
+
+        .collage-container.collage-count-2 { grid-template-columns: 1fr 1fr; grid-template-rows: 320px; }
+        .collage-container.collage-count-2 .hero-tile { grid-row: auto; }
+
+        .collage-container.collage-count-3 { grid-template-columns: 1.6fr 1fr; grid-template-rows: 170px 170px; }
+        .collage-container.collage-count-3 .hero-tile { grid-row: span 2; }
+
+        .collage-container.collage-count-4 { grid-template-columns: 1.6fr 1fr 1fr; grid-template-rows: 170px 170px; }
+        .collage-container.collage-count-4 .hero-tile { grid-row: span 2; }
+        .collage-container.collage-count-4 .collage-tile:nth-child(4) { grid-column: span 2; }
+
+        .collage-container.collage-count-5 { grid-template-columns: 1.8fr 1fr 1fr; grid-template-rows: 180px 180px; }
+        .collage-container.collage-count-5 .hero-tile { grid-row: span 2; }
+
+        @media (max-width: 768px) {
+            .collage-container,
+            .collage-container.collage-count-2,
+            .collage-container.collage-count-3,
+            .collage-container.collage-count-4,
+            .collage-container.collage-count-5 {
+                grid-template-columns: 1fr; grid-template-rows: auto;
+            }
+            .collage-tile, .hero-tile { min-height: 180px; }
+        }
+        .collage-tile {
+            position: relative; border-radius: 10px; overflow: hidden; background: #131927;
+            border: 1px solid rgba(255, 255, 255, 0.08); transition: transform 0.3s ease;
+        }
+        .collage-tile.hero-tile { grid-row: span 2; }
+        .collage-tile img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
+        .collage-tile:hover img { transform: scale(1.06); }
+        .collage-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(to top, rgba(11, 15, 23, 0.95) 0%, rgba(11, 15, 23, 0.2) 60%, transparent 100%);
+            display: flex; flex-direction: column; justify-content: flex-end; padding: 12px;
+        }
+        .collage-badge {
+            align-self: flex-start; background: rgba(56, 189, 248, 0.2); color: #38bdf8;
+            border: 1px solid rgba(56, 189, 248, 0.4); font-size: 10px; font-weight: 700;
+            text-transform: uppercase; padding: 2px 8px; border-radius: 999px; margin-bottom: 6px;
+        }
+        .collage-badge.hero-badge { background: rgba(16, 185, 129, 0.2); color: #34d399; border-color: rgba(16, 185, 129, 0.4); }
+        .collage-title { color: #ffffff; font-size: 12px; font-weight: 700; line-height: 1.35; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        .hero-tile .collage-title { font-size: 16px; }
+
         .stories-grid { display: flex; flex-direction: column; gap: 1.5rem; }
         .story-card {
             background: var(--card);
@@ -539,7 +708,7 @@ function generateHtmlPage(date: string, rawSummary: string, imageUrl: string): s
         </header>
 
         <div class="hero-banner">
-            <img src="${imageUrl}" alt="Daily Briefing Visual Summary" />
+            ${heroMarkup}
         </div>
 
         <main class="stories-grid">
@@ -559,6 +728,10 @@ function generateHtmlPage(date: string, rawSummary: string, imageUrl: string): s
 // Status Check
 app.get('/api/status', (req, res) => {
   const dates = Object.keys(briefingArchive).sort().reverse();
+  const devContainerPath = path.join(process.cwd(), '.devcontainer', 'devcontainer.json');
+  const setupScriptPath = path.join(process.cwd(), '.devcontainer', 'setup.sh');
+  const workflowPath = path.join(process.cwd(), '.github', 'workflows', 'codespaces-prebuilds.yml');
+
   res.json({
     status: 'online',
     lastRunDate: dates[0] || null,
@@ -567,7 +740,54 @@ app.get('/api/status', (req, res) => {
     autoSchedule: pipelineConfig.autoSchedule,
     scheduleTime: pipelineConfig.scheduleTime,
     targetSite: 'https://www.alexjoneslive.com/',
-    scraperStrategy: 'Playwright / Cheerio selector parser with 2-6 line excerpt enforcement'
+    scraperStrategy: 'Playwright / Cheerio selector parser with 2-6 line excerpt enforcement',
+    prebuildConfigured: fs.existsSync(devContainerPath) && fs.existsSync(setupScriptPath) && fs.existsSync(workflowPath)
+  });
+});
+
+// Codespaces & Prebuild Configuration Endpoint
+app.get('/api/prebuild/status', (req, res) => {
+  const devContainerPath = path.join(process.cwd(), '.devcontainer', 'devcontainer.json');
+  const setupScriptPath = path.join(process.cwd(), '.devcontainer', 'setup.sh');
+  const workflowPath = path.join(process.cwd(), '.github', 'workflows', 'codespaces-prebuilds.yml');
+
+  const devContainerExists = fs.existsSync(devContainerPath);
+  const setupScriptExists = fs.existsSync(setupScriptPath);
+  const workflowExists = fs.existsSync(workflowPath);
+
+  let devcontainerJson = null;
+  let setupScript = null;
+  let workflowYaml = null;
+
+  if (devContainerExists) {
+    try {
+      devcontainerJson = JSON.parse(fs.readFileSync(devContainerPath, 'utf-8'));
+    } catch (e) {}
+  }
+  if (setupScriptExists) {
+    setupScript = fs.readFileSync(setupScriptPath, 'utf-8');
+  }
+  if (workflowExists) {
+    workflowYaml = fs.readFileSync(workflowPath, 'utf-8');
+  }
+
+  res.json({
+    configured: devContainerExists && setupScriptExists && workflowExists,
+    files: {
+      devcontainerJson: devContainerExists,
+      setupScript: setupScriptExists,
+      codespacesWorkflow: workflowExists
+    },
+    config: {
+      devcontainerJson,
+      setupScript,
+      workflowYaml
+    },
+    environment: {
+      nodeVersion: process.version,
+      platform: process.platform,
+      arch: process.arch
+    }
   });
 });
 
@@ -845,14 +1065,25 @@ app.post('/api/pipeline/run', async (req, res) => {
         const feedData = await rssParser.parseURL(feed.url);
         const items = (feedData.items || []).slice(0, 2);
         for (const item of items) {
-          articles.push({
+          let itemImg = item.enclosure?.url || (item as any)['media:content']?.$.url || (item as any)['media:thumbnail']?.$.url || '';
+          if (!itemImg && item.content) {
+            const match = item.content.match(/<img[^>]+src=["']([^"']+)["']/i);
+            if (match) itemImg = match[1];
+          }
+
+          articles.push(normalizeStoryItem({
             id: item.guid || item.link || Math.random().toString(),
             title: item.title?.trim() || 'Untitled Story',
             link: item.link || '#',
             summary: (item.contentSnippet || item.content || item.summary || '').substring(0, 600),
             published: item.pubDate || new Date().toISOString(),
-            feedName: feed.name
-          });
+            feedName: feed.name,
+            feedId: feed.id,
+            category: feed.category,
+            author: item.creator || item.author || feed.name,
+            ingestionType: 'rss',
+            imageUrl: itemImg
+          }));
         }
       } catch (err: any) {
         console.error(`Error parsing RSS feed ${feed.name}:`, err.message);
@@ -920,7 +1151,12 @@ app.post('/api/pipeline/run', async (req, res) => {
         }
       }
     } catch (imgErr: any) {
-      console.error("Gemini Image Generation error:", imgErr.message);
+      const msg = imgErr.message || String(imgErr);
+      if (msg.includes('RESOURCE_EXHAUSTED') || msg.includes('429')) {
+        console.log('[info] Gemini Image model quota limit reached (429 RESOURCE_EXHAUSTED). Utilizing high-resolution fallback SVG graphic.');
+      } else {
+        console.warn('[warn] Gemini Image Generation note:', msg);
+      }
     }
 
     // Fallback Image
@@ -941,8 +1177,10 @@ app.post('/api/pipeline/run', async (req, res) => {
       imageUrl = `data:image/svg+xml;utf8,${encodeURIComponent(fallbackSvg)}`;
     }
 
-    // 6. Build HTML Page
-    const htmlPage = generateHtmlPage(today, rawSummaryText, imageUrl);
+    // 6. Build HTML Page with top mixed photo collage placement
+    const htmlPage = generateHtmlPage(today, rawSummaryText, imageUrl, selectedArticles);
+
+    const extractedCollagePhotos = selectedArticles.map(a => a.imageUrl).filter(Boolean);
 
     const structuredSummaries = selectedArticles.map(a => ({
       headline: a.title || a.headline,
@@ -959,6 +1197,8 @@ app.post('/api/pipeline/run', async (req, res) => {
       rawSummaryText,
       imagePrompt,
       imageUrl,
+      collageImages: extractedCollagePhotos,
+      collageMode: 'grid',
       htmlContent: htmlPage,
       sourcesCount: activeFeeds.length,
       status: 'completed'

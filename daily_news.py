@@ -70,7 +70,7 @@ MAX_STORIES = 8
 # Standard RSS feeds for global context
 RSS_FEEDS = [
     {"name": "BBC World News", "url": "https://feeds.bbci.co.uk/news/world/rss.xml"},
-    {"name": "Reuters Top News", "url": "https://www.reutersagency.com/feed/?best-topics=top-news&post_type=best"},
+    {"name": "Reuters Top News", "url": "https://news.google.com/rss/search?q=site:reuters.com&hl=en-US&gl=US&ceid=US:en"},
     {"name": "Daily Mail UK", "url": "https://www.dailymail.co.uk/news/index.rss"},
     {"name": "New York Post", "url": "https://nypost.com/feed/"},
     {"name": "100% Fed Up", "url": "https://100percentfedup.com/feed/"},
@@ -79,7 +79,7 @@ RSS_FEEDS = [
     {"name": "Hot Air", "url": "https://hotair.com/feed"},
     {"name": "Judicial Watch", "url": "https://www.judicialwatch.org/feed/"},
     {"name": "American Thinker", "url": "https://www.americanthinker.com/index.xml"},
-    {"name": "Epoch Times", "url": "https://www.theepochtimes.com/c-us/feed"}
+    {"name": "Epoch Times", "url": "https://news.google.com/rss/search?q=site:theepochtimes.com&hl=en-US&gl=US&ceid=US:en"}
 ]
 
 
@@ -410,7 +410,8 @@ def normalize_story(
     category: str = "Global",
     ingestion_type: str = "rss",
     author: str = "",
-    published: str = "Recently"
+    published: str = "Recently",
+    image_url: str = ""
 ) -> Dict:
     """
     Unified Normalization Layer: Enforces consistent schema across RSS and Scraper sources.
@@ -420,6 +421,16 @@ def normalize_story(
     clean_s = clean_text(summary) or clean_t
     if len(clean_s) > 650:
         clean_s = clean_s[:650].rsplit(" ", 1)[0] + "..."
+
+    # Fallback contextual photo if no image extracted
+    fallback_photos = {
+        "Global": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80",
+        "Alternative": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
+        "Tech": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
+        "Finance": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=800&q=80"
+    }
+
+    final_image = image_url.strip() if image_url else fallback_photos.get(category, fallback_photos["Global"])
 
     return {
         "id": create_story_id(clean_l + clean_t),
@@ -438,6 +449,7 @@ def normalize_story(
         "category": category,
         "ingestionType": ingestion_type,
         "sourceGroup": "scraped" if ingestion_type == "scraper" else "rss",
+        "imageUrl": final_image,
         "scraped_at": datetime.datetime.now(datetime.timezone.utc).isoformat()
     }
 
@@ -469,7 +481,8 @@ def fetch_scraped_sources() -> List[Dict]:
                 category="Alternative",
                 ingestion_type="scraper",
                 author=s.get("author", "Alex Jones Live"),
-                published=s.get("relative_time", "Recently")
+                published=s.get("relative_time", "Recently"),
+                image_url=s.get("image_url", s.get("imageUrl", "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80"))
             )
         )
     return normalized
@@ -477,7 +490,7 @@ def fetch_scraped_sources() -> List[Dict]:
 
 def fetch_rss_feeds() -> List[Dict]:
     """
-    RSS Feed Ingestion Handler: Connects and parses standard RSS/Atom feeds.
+    RSS Feed Ingestion Handler: Connects and parses standard RSS/Atom feeds with photo extraction.
     """
     print("Executing RSS Feed Ingestion Handler...")
     rss_stories = []
@@ -492,6 +505,25 @@ def fetch_rss_feeds() -> List[Dict]:
                 summary = entry.get("summary", entry.get("description", ""))
                 link = entry.get("link", "#")
                 pub = entry.get("published", entry.get("pubDate", "Recently"))
+
+                # Image extraction from RSS feed entries
+                extracted_img = ""
+                if "media_content" in entry and entry["media_content"]:
+                    extracted_img = entry["media_content"][0].get("url", "")
+                elif "media_thumbnail" in entry and entry["media_thumbnail"]:
+                    extracted_img = entry["media_thumbnail"][0].get("url", "")
+                elif "enclosures" in entry and entry["enclosures"]:
+                    for enc in entry["enclosures"]:
+                        if "image" in enc.get("type", "") or enc.get("href", "").endswith((".jpg", ".png", ".webp")):
+                            extracted_img = enc.get("href", "")
+                            break
+
+                if not extracted_img and summary:
+                    import re
+                    img_match = re.search(r'<img[^>]+src=["\']([^"\']+)["\']', summary)
+                    if img_match:
+                        extracted_img = img_match.group(1)
+
                 if title:
                     rss_stories.append(
                         normalize_story(
@@ -502,7 +534,8 @@ def fetch_rss_feeds() -> List[Dict]:
                             category=cat,
                             ingestion_type="rss",
                             author=entry.get("author", feed_name),
-                            published=pub
+                            published=pub,
+                            image_url=extracted_img
                         )
                     )
         except Exception as err:
@@ -629,16 +662,21 @@ def generate_image(prompt: str, output_path: Path) -> Path:
                     )
                 )
             )
-            for part in response.candidates[0].content.parts:
-                if hasattr(part, 'inline_data') and part.inline_data:
-                    img_bytes = part.inline_data.data
-                    if isinstance(img_bytes, str):
-                        img_bytes = base64.b64decode(img_bytes)
-                    output_path.write_bytes(img_bytes)
-                    print(f"✅ Image saved: {output_path}")
-                    return output_path
+            if response.candidates and response.candidates[0].content and response.candidates[0].content.parts:
+                for part in response.candidates[0].content.parts:
+                    if hasattr(part, 'inline_data') and part.inline_data:
+                        img_bytes = part.inline_data.data
+                        if isinstance(img_bytes, str):
+                            img_bytes = base64.b64decode(img_bytes)
+                        output_path.write_bytes(img_bytes)
+                        print(f"✅ Image saved: {output_path}")
+                        return output_path
         except Exception as e:
-            print(f"Gemini Image API error: {e}")
+            err_str = str(e)
+            if "RESOURCE_EXHAUSTED" in err_str or "429" in err_str:
+                print(f"[info] Gemini Image model quota limit reached (429 RESOURCE_EXHAUSTED). Falling back to high-resolution SVG graphic.")
+            else:
+                print(f"[warn] Gemini Image API note: {e}. Falling back to SVG graphic.")
 
     _create_placeholder_image(output_path)
     return output_path
@@ -659,6 +697,82 @@ def _create_placeholder_image(output_path: Path):
 # 5. HTML WEBPAGE BUILDER & SEGMENTED EXPORT
 # =========================================================
 
+def sanitize_text_for_html(text: str) -> str:
+    if not text:
+        return ""
+    import re, html
+    clean = re.sub(r'<[^>]+>', '', str(text))
+    return html.escape(clean.strip())
+
+def sanitize_url(url: str) -> str:
+    if not url:
+        return "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80"
+    import html
+    clean_url = html.escape(str(url).strip())
+    if clean_url.startswith("http://") or clean_url.startswith("https://") or clean_url.startswith("data:image/"):
+        return clean_url
+    return "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80"
+
+def build_flexible_collage_markup(all_stories: List[Dict]) -> str:
+    """
+    Constructs a responsive, multi-tile flexible photo collage from extracted feed stories.
+    Dynamically adjusts grid geometry based on extracted photo count (1 to 5 items).
+    """
+    stories_with_images = []
+    for s in (all_stories or []):
+        img = s.get("imageUrl") or s.get("image_url")
+        if img and len(img) > 8:
+            stories_with_images.append(s)
+
+    if not stories_with_images:
+        return ""
+
+    tile_count = min(len(stories_with_images), 5)
+    stories_to_use = stories_with_images[:tile_count]
+    hero_story = stories_to_use[0]
+    grid_stories = stories_to_use[1:]
+
+    fallback_img = "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80"
+
+    grid_tiles_html = ""
+    for s in grid_stories:
+        img_url = sanitize_url(s.get('imageUrl') or s.get('image_url'))
+        feed_name = sanitize_text_for_html(s.get('feedName') or s.get('feed') or 'News Feed')
+        title_text = sanitize_text_for_html(s.get('title') or '')
+        grid_tiles_html += f"""
+        <div class="collage-tile">
+            <img src="{img_url}" alt="{title_text}" loading="lazy" onerror="this.onerror=null; this.src='{fallback_img}';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">{feed_name}</span>
+                <h4 class="collage-title">{title_text}</h4>
+            </div>
+        </div>
+        """
+
+    hero_img = sanitize_url(hero_story.get('imageUrl') or hero_story.get('image_url'))
+    hero_feed = sanitize_text_for_html(hero_story.get('feedName') or hero_story.get('feed') or 'Featured Story')
+    hero_title = sanitize_text_for_html(hero_story.get('title') or '')
+
+    return f"""
+    <div class="collage-wrapper">
+        <div class="collage-header-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7"/><path d="M16 5h5v5"/><path d="m21 5-9 9"/></svg>
+            <span>Parsed Feeds Mixed Photo Collage ({tile_count} Photos)</span>
+        </div>
+        <div class="collage-container collage-count-{tile_count}">
+            <div class="collage-tile hero-tile">
+                <img src="{hero_img}" alt="{hero_title}" onerror="this.onerror=null; this.src='{fallback_img}';" />
+                <div class="collage-overlay">
+                    <span class="collage-badge hero-badge">{hero_feed}</span>
+                    <h3 class="collage-title hero-title">{hero_title}</h3>
+                </div>
+            </div>
+            {grid_tiles_html}
+        </div>
+    </div>
+    """
+
+
 def build_webpage(raw_summary: str, image_filename: str, date_str: str, rss_stories: List[Dict] = None, scraped_stories: List[Dict] = None) -> str:
     formatted_content = ""
     for block in raw_summary.split("### "):
@@ -673,6 +787,9 @@ def build_webpage(raw_summary: str, image_filename: str, date_str: str, rss_stor
             <div class="story-body">{body}</div>
         </div>
         """
+
+    all_combined = (scraped_stories or []) + (rss_stories or [])
+    collage_markup = build_flexible_collage_markup(all_combined)
 
     # Add Segmented Source Sections
     scraped_html = ""
@@ -722,8 +839,68 @@ def build_webpage(raw_summary: str, image_filename: str, date_str: str, rss_stor
         header { text-align: center; margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
         header h1 { font-size: 2.2rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 0.4rem; color: #ffffff; }
         header .date { color: var(--accent); font-size: 1rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
-        .hero-image { width: 100%; border-radius: 12px; overflow: hidden; margin-bottom: 2.5rem; box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5); border: 1px solid var(--border); }
-        .hero-image img { width: 100%; height: auto; display: block; }
+        
+        .hero-image { width: 100%; border-radius: 16px; overflow: hidden; margin-bottom: 2.5rem; box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6); border: 1px solid var(--border); background: #0b0f19; }
+        
+        /* Flexible Photo Collage Component */
+        .collage-wrapper { position: relative; width: 100%; }
+        .collage-header-pill {
+            position: absolute; top: 14px; left: 14px; z-index: 10;
+            background: rgba(15, 23, 42, 0.88); backdrop-filter: blur(8px);
+            border: 1px solid rgba(56, 189, 248, 0.35); color: #38bdf8;
+            padding: 5px 12px; border-radius: 999px; font-size: 11px; font-weight: 800;
+            letter-spacing: 0.5px; display: flex; items-center; gap: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        }
+        .collage-container {
+            display: grid; gap: 8px; background: #090d16; padding: 8px; border-radius: 16px; min-height: 280px;
+        }
+        .collage-container.collage-count-1 { grid-template-columns: 1fr; grid-template-rows: 360px; }
+        .collage-container.collage-count-1 .hero-tile { grid-row: auto; }
+
+        .collage-container.collage-count-2 { grid-template-columns: 1fr 1fr; grid-template-rows: 320px; }
+        .collage-container.collage-count-2 .hero-tile { grid-row: auto; }
+
+        .collage-container.collage-count-3 { grid-template-columns: 1.6fr 1fr; grid-template-rows: 170px 170px; }
+        .collage-container.collage-count-3 .hero-tile { grid-row: span 2; }
+
+        .collage-container.collage-count-4 { grid-template-columns: 1.6fr 1fr 1fr; grid-template-rows: 170px 170px; }
+        .collage-container.collage-count-4 .hero-tile { grid-row: span 2; }
+        .collage-container.collage-count-4 .collage-tile:nth-child(4) { grid-column: span 2; }
+
+        .collage-container.collage-count-5 { grid-template-columns: 1.8fr 1fr 1fr; grid-template-rows: 180px 180px; }
+        .collage-container.collage-count-5 .hero-tile { grid-row: span 2; }
+
+        @media (max-width: 768px) {
+            .collage-container,
+            .collage-container.collage-count-2,
+            .collage-container.collage-count-3,
+            .collage-container.collage-count-4,
+            .collage-container.collage-count-5 {
+                grid-template-columns: 1fr; grid-template-rows: auto;
+            }
+            .collage-tile, .hero-tile { min-height: 180px; }
+        }
+        .collage-tile {
+            position: relative; border-radius: 10px; overflow: hidden; background: #131927;
+            border: 1px solid rgba(255, 255, 255, 0.08); transition: transform 0.3s ease;
+        }
+        .collage-tile.hero-tile { grid-row: span 2; }
+        .collage-tile img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
+        .collage-tile:hover img { transform: scale(1.06); }
+        .collage-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(to top, rgba(11, 15, 23, 0.95) 0%, rgba(11, 15, 23, 0.2) 60%, transparent 100%);
+            display: flex; flex-direction: column; justify-content: flex-end; padding: 12px;
+        }
+        .collage-badge {
+            align-self: flex-start; background: rgba(56, 189, 248, 0.2); color: #38bdf8;
+            border: 1px solid rgba(56, 189, 248, 0.4); font-size: 10px; font-weight: 700;
+            text-transform: uppercase; padding: 2px 8px; border-radius: 999px; margin-bottom: 6px;
+        }
+        .collage-badge.hero-badge { background: rgba(16, 185, 129, 0.2); color: #34d399; border-color: rgba(16, 185, 129, 0.4); }
+        .collage-title { color: #ffffff; font-size: 12px; font-weight: 700; line-height: 1.35; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        .hero-tile .collage-title { font-size: 17px; }
+
         .stories { display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 3rem; }
         .story { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem; }
         .story h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: #f1f3f5; }
@@ -749,7 +926,11 @@ def build_webpage(raw_summary: str, image_filename: str, date_str: str, rss_stor
         </header>
 
         <div class="hero-image">
-            <img src="{{ image_name }}" alt="Daily generated briefing illustration" />
+            {% if collage_html %}
+                {{ collage_html | safe }}
+            {% else %}
+                <img src="{{ image_name }}" alt="Daily generated briefing illustration" />
+            {% endif %}
         </div>
 
         <main class="stories">
@@ -772,6 +953,7 @@ def build_webpage(raw_summary: str, image_filename: str, date_str: str, rss_stor
         date=date_str,
         content=formatted_content,
         image_name=image_filename,
+        collage_html=collage_markup,
         scraped_section=scraped_html,
         rss_section=rss_html
     )

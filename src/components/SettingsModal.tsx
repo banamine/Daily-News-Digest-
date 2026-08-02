@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Settings, Save, Sparkles, Image, Clock, FileText, Check } from 'lucide-react';
+import { Settings, Save, Sparkles, FileText, Check } from 'lucide-react';
 import { PipelineConfig } from '../types';
 
 interface SettingsModalProps {
@@ -21,42 +21,42 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({ config, onSaveConf
   return (
     <div id="settings-container" className="max-w-4xl mx-auto space-y-6">
       {/* Settings Header */}
-      <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6 flex items-center justify-between">
+      <div className="bg-[#0a0a0a] border border-white/10 p-6 flex items-center justify-between">
         <div>
-          <h2 className="font-extrabold text-xl text-slate-100 flex items-center gap-2">
-            <Settings className="w-5 h-5 text-sky-400" />
-            <span>Pipeline &amp; Gemini Model Settings</span>
+          <h2 className="font-serif font-bold text-2xl text-white flex items-center gap-2">
+            <Settings className="w-5 h-5 text-amber-500" />
+            <span>Pipeline &amp; Gemini Parameters</span>
           </h2>
-          <p className="text-xs text-slate-400 mt-1">
-            Configure Gemini AI models, prompts, image resolution, and automated daily schedule.
+          <p className="text-[11px] font-mono text-white/50 mt-1 uppercase tracking-widest">
+            Configure Google Gemini AI models, prompt engineering templates, and synthesis rules
           </p>
         </div>
 
         {saved && (
-          <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-xs font-semibold">
+          <div className="flex items-center gap-1.5 px-3 py-1.5 bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-[10px] font-mono font-bold uppercase tracking-widest">
             <Check className="w-4 h-4" />
-            <span>Settings Saved!</span>
+            <span>Parameters Saved</span>
           </div>
         )}
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Models & Performance */}
-        <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-4">
-          <h3 className="font-bold text-slate-100 text-sm flex items-center gap-2">
-            <Sparkles className="w-4 h-4 text-sky-400" />
-            <span>Google Gemini Models</span>
+        <div className="bg-[#0a0a0a] border border-white/10 p-6 space-y-4">
+          <h3 className="font-serif font-bold text-white text-base flex items-center gap-2 border-b border-white/10 pb-3">
+            <Sparkles className="w-4 h-4 text-amber-500" />
+            <span>Google Gemini Model Allocation</span>
           </h3>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             <div>
-              <label className="block text-xs font-medium text-slate-300 mb-1">
-                LLM Summarization Model
+              <label className="block text-[10px] font-mono uppercase tracking-widest text-amber-500 mb-1">
+                LLM Summarization Engine
               </label>
               <select
                 value={formData.llmModel}
                 onChange={e => setFormData({ ...formData, llmModel: e.target.value })}
-                className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-slate-200 focus:outline-none focus:border-sky-500 transition-colors"
+                className="w-full bg-black border border-white/10 px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-amber-500 transition-colors font-mono"
               >
                 <option value="gemini-3.6-flash">gemini-3.6-flash (Recommended Fast)</option>
                 <option value="gemini-3.1-pro-preview">gemini-3.1-pro-preview (Deep Reasoning)</option>
@@ -65,13 +65,13 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({ config, onSaveConf
             </div>
 
             <div>
-              <label className="block text-xs font-medium text-slate-300 mb-1">
-                Image Generation Model
+              <label className="block text-[10px] font-mono uppercase tracking-widest text-amber-500 mb-1">
+                Visual Artwork Generator
               </label>
               <select
                 value={formData.imageModel}
                 onChange={e => setFormData({ ...formData, imageModel: e.target.value })}
-                className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-slate-200 focus:outline-none focus:border-sky-500 transition-colors"
+                className="w-full bg-black border border-white/10 px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-amber-500 transition-colors font-mono"
               >
                 <option value="gemini-3.1-flash-image">gemini-3.1-flash-image (High Quality Imagen)</option>
                 <option value="gemini-3.1-flash-lite-image">gemini-3.1-flash-lite-image (Default Lite)</option>
@@ -79,22 +79,22 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({ config, onSaveConf
             </div>
 
             <div>
-              <label className="block text-xs font-medium text-slate-300 mb-1">
-                Aspect Ratio
+              <label className="block text-[10px] font-mono uppercase tracking-widest text-amber-500 mb-1">
+                Aspect Ratio Format
               </label>
               <select
                 value={formData.aspectRatio}
                 onChange={e => setFormData({ ...formData, aspectRatio: e.target.value })}
-                className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-slate-200 focus:outline-none focus:border-sky-500 transition-colors"
+                className="w-full bg-black border border-white/10 px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-amber-500 transition-colors font-mono"
               >
                 <option value="16:9">16:9 Widescreen (Cinematic)</option>
-                <option value="4:3">4:3 Standard</option>
+                <option value="4:3">4:3 Standard Editorial</option>
                 <option value="1:1">1:1 Square</option>
               </select>
             </div>
 
             <div>
-              <label className="block text-xs font-medium text-slate-300 mb-1">
+              <label className="block text-[10px] font-mono uppercase tracking-widest text-amber-500 mb-1">
                 Max Stories Per Briefing
               </label>
               <input
@@ -103,27 +103,27 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({ config, onSaveConf
                 max={20}
                 value={formData.maxStories}
                 onChange={e => setFormData({ ...formData, maxStories: parseInt(e.target.value) || 8 })}
-                className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2 text-xs text-slate-200 focus:outline-none focus:border-sky-500 transition-colors"
+                className="w-full bg-black border border-white/10 px-3.5 py-2 text-xs text-white focus:outline-none focus:border-amber-500 transition-colors font-mono"
               />
             </div>
           </div>
         </div>
 
         {/* Master Prompt Template */}
-        <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-4">
-          <h3 className="font-bold text-slate-100 text-sm flex items-center gap-2">
-            <FileText className="w-4 h-4 text-sky-400" />
-            <span>Master Image Generation Prompt Template</span>
+        <div className="bg-[#0a0a0a] border border-white/10 p-6 space-y-4">
+          <h3 className="font-serif font-bold text-white text-base flex items-center gap-2 border-b border-white/10 pb-3">
+            <FileText className="w-4 h-4 text-amber-500" />
+            <span>Master Image Generation Template</span>
           </h3>
-          <p className="text-xs text-slate-400">
-            Use <code className="text-sky-400 font-mono bg-slate-950 px-1 py-0.5 rounded">{'{themes}'}</code> as the placeholder where today's summarized news themes will be injected.
+          <p className="text-[11px] font-mono text-white/50">
+            Use <code className="text-amber-400 bg-black px-1.5 py-0.5 border border-white/10">{'{themes}'}</code> as the variable placeholder where today's news topics will be injected.
           </p>
 
           <textarea
             rows={8}
             value={formData.promptTemplate}
             onChange={e => setFormData({ ...formData, promptTemplate: e.target.value })}
-            className="w-full bg-slate-950 border border-slate-800 rounded-xl p-4 text-xs font-mono text-sky-300 focus:outline-none focus:border-sky-500 transition-colors leading-relaxed"
+            className="w-full bg-black border border-white/10 p-4 text-xs font-mono text-amber-300 focus:outline-none focus:border-amber-500 transition-colors leading-relaxed"
           />
         </div>
 
@@ -131,10 +131,10 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({ config, onSaveConf
         <div className="flex justify-end">
           <button
             type="submit"
-            className="bg-sky-500 hover:bg-sky-400 text-white font-bold px-6 py-2.5 rounded-xl text-xs transition-all shadow-lg shadow-sky-500/20 active:scale-98 flex items-center gap-2"
+            className="bg-white hover:bg-amber-500 text-black font-mono font-bold px-6 py-3 text-[10px] uppercase tracking-widest transition-all flex items-center gap-2"
           >
             <Save className="w-4 h-4" />
-            <span>Save Configuration</span>
+            <span>Persist Parameters</span>
           </button>
         </div>
       </form>
