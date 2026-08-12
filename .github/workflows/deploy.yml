@@ -36,4 +36,10 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add index.html output/ data/
-          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: automated daily news digest update [skip ci]" && git push)
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "Changes detected. Committing and pushing to repository..."
+            git commit -m "chore: automated daily news digest update [skip ci]"
+            git push
+          else
+            echo "No changes to commit — news digest is already up to date for today."
+          fi
