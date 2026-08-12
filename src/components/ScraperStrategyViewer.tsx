@@ -236,7 +236,7 @@ export const ScraperStrategyViewer: React.FC = () => {
             </div>
           ) : testResult ? (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {testResult.stories.map((s, idx) => (
+              {(testResult.stories || []).map((s, idx) => (
                 <div key={s.id || idx} className="bg-[#0a0a0a] border border-white/10 p-6 space-y-3 flex flex-col justify-between shadow-xl">
                   <div>
                     <div className="flex items-center justify-between gap-2 mb-3 border-b border-white/10 pb-3">
@@ -257,7 +257,7 @@ export const ScraperStrategyViewer: React.FC = () => {
                     <div className="bg-black p-4 border border-white/10 mt-3 text-xs font-serif text-white/70 leading-relaxed">
                       <div className="text-[9px] font-mono uppercase tracking-widest text-white/40 mb-1 flex items-center justify-between">
                         <span>Extracted Excerpt</span>
-                        <span>{s.excerpt.length} chars</span>
+                        <span>{(s.excerpt || '').length} chars</span>
                       </div>
                       <p>{s.excerpt}</p>
                     </div>

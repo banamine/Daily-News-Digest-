@@ -1,3 +1,4 @@
+from __future__ import annotations
 #!/usr/bin/env python3
 """
 Daily News Summarizer + Alex Jones Live Playwright Scraper + Gemini AI + Webpage Builder
@@ -9,6 +10,8 @@ Goal: Continuously extract news items (minimum 2–6 lines of usable info per st
 """
 
 import os
+import sys
+import logging
 import re
 import json
 import asyncio
@@ -16,11 +19,32 @@ import hashlib
 import datetime
 import base64
 from pathlib import Path
-from typing import List, Dict, Optional, Tuple
+from typing import List, Dict, Optional, Tuple, Any
 
-import feedparser          # for general RSS parsing
-import requests
-from jinja2 import Environment, select_autoescape
+import urllib.request
+import urllib.parse
+import xml.etree.ElementTree as ET
+
+# Optional feedparser for general RSS parsing
+try:
+    import feedparser
+    FEEDPARSER_AVAILABLE = True
+except ImportError:
+    FEEDPARSER_AVAILABLE = False
+
+# Optional requests for HTTP requests
+try:
+    import requests
+    REQUESTS_AVAILABLE = True
+except ImportError:
+    REQUESTS_AVAILABLE = False
+
+# Optional Jinja2 for template rendering
+try:
+    from jinja2 import Environment, select_autoescape
+    JINJA2_AVAILABLE = True
+except ImportError:
+    JINJA2_AVAILABLE = False
 
 # Optional BeautifulSoup for fallback scraping
 try:
@@ -35,6 +59,10 @@ try:
     PLAYWRIGHT_AVAILABLE = True
 except ImportError:
     PLAYWRIGHT_AVAILABLE = False
+    class Page:  # type: ignore
+        """Fallback type stub when playwright is not installed."""
+        pass
+    PlaywrightTimeoutError = Exception  # type: ignore
 
 # Import Google GenAI SDK (pip install google-genai)
 try:
@@ -114,7 +142,7 @@ def compute_stories_hash(stories: List[Dict]) -> str:
 # 1. PLAYWRIGHT / BS4 SCRAPER FOR ALEXJONESLIVE.COM
 # =========================================================
 
-async def extract_excerpt_from_article_playwright(page: Page, url: str) -> str:
+async def extract_excerpt_from_article_playwright(page: "Page", url: str) -> str:
     """
     Open individual article and pull first 2-4 paragraphs (2-6 line target).
     """
@@ -149,111 +177,182 @@ async def scrape_alexjoneslive_playwright(max_stories: int = 8) -> List[Dict]:
         print("[info] Playwright not installed. Falling back to HTTP/BeautifulSoup scraper.")
         return scrape_alexjoneslive_bs4(max_stories)
 
-    async with async_playwright() as p:
-        browser = await p.chromium.launch(headless=True)
-        context = await browser.new_context(
-            user_agent=USER_AGENT,
-            viewport={"width": 1280, "height": 900}
-        )
-        page = await context.new_page()
+    try:
+        async with async_playwright() as p:
+            try:
+                browser = await p.chromium.launch(headless=True)
+            except Exception as launch_err:
+                print(f"[info] Playwright browser launch unavailable ({launch_err}). Falling back to BS4/HTTP scraper.")
+                return scrape_alexjoneslive_bs4(max_stories)
 
-        print(f"Scraping homepage via Playwright: {TARGET_SITE_URL}")
-        try:
-            await page.goto(TARGET_SITE_URL, wait_until="domcontentloaded", timeout=30000)
-            await page.wait_for_timeout(2000)
-
-            title_links = await page.query_selector_all(
-                "h2 a, h3 a, .entry-title a, article h2 a, article h3 a"
+            context = await browser.new_context(
+                user_agent=USER_AGENT,
+                viewport={"width": 1280, "height": 900}
             )
-            print(f"Found {len(title_links)} potential story links")
+            page = await context.new_page()
 
-            seen_urls = set()
+            print(f"Scraping homepage via Playwright: {TARGET_SITE_URL}")
+            try:
+                await page.goto(TARGET_SITE_URL, wait_until="domcontentloaded", timeout=30000)
+                await page.wait_for_timeout(2000)
 
-            for link_el in title_links:
-                if len(stories) >= max_stories:
-                    break
+                title_links = await page.query_selector_all(
+                    "h2 a, h3 a, .entry-title a, article h2 a, article h3 a"
+                )
+                print(f"Found {len(title_links)} potential story links")
 
-                try:
-                    title = clean_text(await link_el.inner_text())
-                    href = await link_el.get_attribute("href")
+                seen_urls = set()
 
-                    if not title or not href:
+                for link_el in title_links:
+                    if len(stories) >= max_stories:
+                        break
+
+                    try:
+                        title = clean_text(await link_el.inner_text())
+                        href = await link_el.get_attribute("href")
+
+                        if not title or not href:
+                            continue
+
+                        if href.startswith("/"):
+                            href = TARGET_SITE_URL.rstrip("/") + href
+                        elif not href.startswith("http"):
+                            continue
+
+                        if href in seen_urls:
+                            continue
+                        seen_urls.add(href)
+
+                        parent = await link_el.evaluate_handle("el => el.closest('article, .post, .entry, div')")
+
+                        excerpt = ""
+                        relative_time = ""
+                        author = ""
+                        comment_count = None
+
+                        if parent:
+                            excerpt_el = await parent.query_selector("p, .entry-summary, .excerpt, .entry-content p")
+                            if excerpt_el:
+                                excerpt = clean_text(await excerpt_el.inner_text())
+
+                            time_el = await parent.query_selector("time, .posted-on, .entry-date, span")
+                            if time_el:
+                                relative_time = clean_text(await time_el.inner_text())
+
+                            author_el = await parent.query_selector(".author, .byline, [rel='author']")
+                            if author_el:
+                                author = clean_text(await author_el.inner_text()).replace("By ", "").strip()
+
+                            comments_el = await parent.query_selector("a[href*='#comments'], .comments-link")
+                            if comments_el:
+                                comments_text = clean_text(await comments_el.inner_text())
+                                match = re.search(r"(\d+)", comments_text)
+                                if match:
+                                    comment_count = int(match.group(1))
+
+                        # Enforce Content Length Rule (2-6 lines target)
+                        if len(excerpt) < 120:
+                            print(f"  → Excerpt short (<120 chars) for '{title[:40]}...' – fetching article")
+                            excerpt = await extract_excerpt_from_article_playwright(page, href)
+
+                        if len(excerpt) > 650:
+                            excerpt = excerpt[:650].rsplit(" ", 1)[0] + "..."
+
+                        story = {
+                            "id": create_story_id(href),
+                            "headline": title,
+                            "title": title,
+                            "url": href,
+                            "link": href,
+                            "excerpt": excerpt,
+                            "summary": excerpt or "Breaking development from Alex Jones Live.",
+                            "relative_time": relative_time or "Recently",
+                            "author": author or "Alex Jones Live",
+                            "comment_count": comment_count,
+                            "feed": "Alex Jones Live",
+                            "scraped_at": datetime.datetime.now(datetime.timezone.utc).isoformat()
+                        }
+
+                        stories.append(story)
+                        print(f"  ✓ [{len(stories)}] {title[:60]}...")
+                        await page.wait_for_timeout(800)
+
+                    except Exception as e:
+                        print(f"  [warn] Error processing item: {e}")
                         continue
 
-                    if href.startswith("/"):
-                        href = TARGET_SITE_URL.rstrip("/") + href
-                    elif not href.startswith("http"):
-                        continue
-
-                    if href in seen_urls:
-                        continue
-                    seen_urls.add(href)
-
-                    parent = await link_el.evaluate_handle("el => el.closest('article, .post, .entry, div')")
-
-                    excerpt = ""
-                    relative_time = ""
-                    author = ""
-                    comment_count = None
-
-                    if parent:
-                        excerpt_el = await parent.query_selector("p, .entry-summary, .excerpt, .entry-content p")
-                        if excerpt_el:
-                            excerpt = clean_text(await excerpt_el.inner_text())
-
-                        time_el = await parent.query_selector("time, .posted-on, .entry-date, span")
-                        if time_el:
-                            relative_time = clean_text(await time_el.inner_text())
-
-                        author_el = await parent.query_selector(".author, .byline, [rel='author']")
-                        if author_el:
-                            author = clean_text(await author_el.inner_text()).replace("By ", "").strip()
-
-                        comments_el = await parent.query_selector("a[href*='#comments'], .comments-link")
-                        if comments_el:
-                            comments_text = clean_text(await comments_el.inner_text())
-                            match = re.search(r"(\d+)", comments_text)
-                            if match:
-                                comment_count = int(match.group(1))
-
-                    # Enforce Content Length Rule (2-6 lines target)
-                    if len(excerpt) < 120:
-                        print(f"  → Excerpt short (<120 chars) for '{title[:40]}...' – fetching article")
-                        excerpt = await extract_excerpt_from_article_playwright(page, href)
-
-                    if len(excerpt) > 650:
-                        excerpt = excerpt[:650].rsplit(" ", 1)[0] + "..."
-
-                    story = {
-                        "id": create_story_id(href),
-                        "headline": title,
-                        "title": title,
-                        "url": href,
-                        "link": href,
-                        "excerpt": excerpt,
-                        "summary": excerpt or "Breaking development from Alex Jones Live.",
-                        "relative_time": relative_time or "Recently",
-                        "author": author or "Alex Jones Live",
-                        "comment_count": comment_count,
-                        "feed": "Alex Jones Live",
-                        "scraped_at": datetime.datetime.now(datetime.timezone.utc).isoformat()
-                    }
-
-                    stories.append(story)
-                    print(f"  ✓ [{len(stories)}] {title[:60]}...")
-                    await page.wait_for_timeout(800)
-
-                except Exception as e:
-                    print(f"  [warn] Error processing item: {e}")
-                    continue
-
-        except Exception as e:
-            print(f"[error] Playwright scraping failed: {e}")
-            return scrape_alexjoneslive_bs4(max_stories)
-        finally:
-            await browser.close()
+            except Exception as e:
+                print(f"[error] Playwright scraping failed: {e}")
+                return scrape_alexjoneslive_bs4(max_stories)
+            finally:
+                await browser.close()
+    except Exception as e:
+        print(f"[info] Playwright execution failed ({e}). Falling back to HTTP/BS4 scraper.")
+        return scrape_alexjoneslive_bs4(max_stories)
 
     return stories
+
+
+def http_get_text(url: str, timeout: int = 15) -> str:
+    """Helper for performing HTTP GET using requests or urllib."""
+    headers = {"User-Agent": USER_AGENT}
+    if REQUESTS_AVAILABLE:
+        try:
+            resp = requests.get(url, headers=headers, timeout=timeout)
+            if resp.status_code == 200:
+                return resp.text
+            return ""
+        except Exception:
+            pass
+    try:
+        req = urllib.request.Request(url, headers=headers)
+        with urllib.request.urlopen(req, timeout=timeout) as resp:
+            if resp.status == 200:
+                return resp.read().decode("utf-8", errors="ignore")
+    except Exception:
+        pass
+    return ""
+
+
+def parse_rss_fallback(feed_url: str) -> List[Dict]:
+    """Fallback XML RSS/Atom parser using stdlib xml.etree.ElementTree."""
+    entries = []
+    try:
+        xml_text = http_get_text(feed_url, timeout=10)
+        if not xml_text:
+            return []
+        root = ET.fromstring(xml_text)
+        # Handle RSS 2.0 <channel><item>
+        for item in root.findall(".//item")[:3]:
+            title = item.findtext("title", "")
+            link = item.findtext("link", "#")
+            description = item.findtext("description", "")
+            pubDate = item.findtext("pubDate", "Recently")
+            if title:
+                entries.append({
+                    "title": clean_text(title),
+                    "summary": clean_text(description),
+                    "link": link,
+                    "published": pubDate
+                })
+        # Handle Atom <entry>
+        if not entries:
+            for entry in root.findall(".//{http://www.w3.org/2005/Atom}entry")[:3]:
+                title = entry.findtext("{http://www.w3.org/2005/Atom}title", "")
+                summary = entry.findtext("{http://www.w3.org/2005/Atom}summary", "") or entry.findtext("{http://www.w3.org/2005/Atom}content", "")
+                link_el = entry.find("{http://www.w3.org/2005/Atom}link")
+                link = link_el.get("href", "#") if link_el is not None else "#"
+                published = entry.findtext("{http://www.w3.org/2005/Atom}published", "Recently")
+                if title:
+                    entries.append({
+                        "title": clean_text(title),
+                        "summary": clean_text(summary),
+                        "link": link,
+                        "published": published
+                    })
+    except Exception:
+        pass
+    return entries
 
 
 def scrape_alexjoneslive_bs4(max_stories: int = 8) -> List[Dict]:
@@ -263,13 +362,11 @@ def scrape_alexjoneslive_bs4(max_stories: int = 8) -> List[Dict]:
     print(f"Scraping homepage via Requests/BS4 fallback: {TARGET_SITE_URL}")
     stories = []
     try:
-        headers = {"User-Agent": USER_AGENT}
-        resp = requests.get(TARGET_SITE_URL, headers=headers, timeout=15)
-        if resp.status_code != 200:
-            print(f"[warn] Received status {resp.status_code} from {TARGET_SITE_URL}")
+        html = http_get_text(TARGET_SITE_URL, timeout=15)
+        if not html:
+            print(f"[warn] Failed to fetch content from {TARGET_SITE_URL}")
             return _generate_fallback_alexjones_stories()
 
-        html = resp.text
         if BS4_AVAILABLE:
             soup = BeautifulSoup(html, "html.parser")
             title_links = soup.select("h2 a, h3 a, .entry-title a, article h2 a, article h3 a")
@@ -313,15 +410,12 @@ def scrape_alexjoneslive_bs4(max_stories: int = 8) -> List[Dict]:
 
                 # If excerpt is short, fetch article directly
                 if len(excerpt) < 120 and href:
-                    try:
-                        art_resp = requests.get(href, headers=headers, timeout=10)
-                        if art_resp.status_code == 200:
-                            art_soup = BeautifulSoup(art_resp.text, "html.parser")
-                            paras = [clean_text(p.get_text()) for p in art_soup.select("article p, .entry-content p") if len(clean_text(p.get_text())) > 40]
-                            if paras:
-                                excerpt = " ".join(paras[:4])[:650]
-                    except Exception:
-                        pass
+                    art_html = http_get_text(href, timeout=10)
+                    if art_html:
+                        art_soup = BeautifulSoup(art_html, "html.parser")
+                        paras = [clean_text(p.get_text()) for p in art_soup.select("article p, .entry-content p") if len(clean_text(p.get_text())) > 40]
+                        if paras:
+                            excerpt = " ".join(paras[:4])[:650]
 
                 story = {
                     "id": create_story_id(href),
@@ -503,43 +597,52 @@ def fetch_rss_feeds() -> List[Dict]:
         feed_name = feed_info["name"]
         cat = "Global" if feed_name in ["BBC World News", "Reuters Top News", "Daily Mail UK", "New York Post"] else "Alternative"
         try:
-            feed = feedparser.parse(feed_url)
-            for entry in feed.entries[:3]:
+            entries = []
+            if FEEDPARSER_AVAILABLE:
+                feed = feedparser.parse(feed_url)
+                for entry in feed.entries[:3]:
+                    extracted_img = ""
+                    if "media_content" in entry and entry["media_content"]:
+                        extracted_img = entry["media_content"][0].get("url", "")
+                    elif "media_thumbnail" in entry and entry["media_thumbnail"]:
+                        extracted_img = entry["media_thumbnail"][0].get("url", "")
+                    elif "enclosures" in entry and entry["enclosures"]:
+                        for enc in entry["enclosures"]:
+                            if "image" in enc.get("type", "") or enc.get("href", "").endswith((".jpg", ".png", ".webp")):
+                                extracted_img = enc.get("href", "")
+                                break
+
+                    summary = entry.get("summary", entry.get("description", ""))
+                    if not extracted_img and summary:
+                        img_match = re.search(r'<img[^>]+src=["\']([^"\']+)["\']', summary)
+                        if img_match:
+                            extracted_img = img_match.group(1)
+
+                    entries.append({
+                        "title": entry.get("title", ""),
+                        "summary": summary,
+                        "link": entry.get("link", "#"),
+                        "published": entry.get("published", entry.get("pubDate", "Recently")),
+                        "author": entry.get("author", feed_name),
+                        "image_url": extracted_img
+                    })
+            else:
+                entries = parse_rss_fallback(feed_url)
+
+            for entry in entries:
                 title = entry.get("title", "")
-                summary = entry.get("summary", entry.get("description", ""))
-                link = entry.get("link", "#")
-                pub = entry.get("published", entry.get("pubDate", "Recently"))
-
-                # Image extraction from RSS feed entries
-                extracted_img = ""
-                if "media_content" in entry and entry["media_content"]:
-                    extracted_img = entry["media_content"][0].get("url", "")
-                elif "media_thumbnail" in entry and entry["media_thumbnail"]:
-                    extracted_img = entry["media_thumbnail"][0].get("url", "")
-                elif "enclosures" in entry and entry["enclosures"]:
-                    for enc in entry["enclosures"]:
-                        if "image" in enc.get("type", "") or enc.get("href", "").endswith((".jpg", ".png", ".webp")):
-                            extracted_img = enc.get("href", "")
-                            break
-
-                if not extracted_img and summary:
-                    import re
-                    img_match = re.search(r'<img[^>]+src=["\']([^"\']+)["\']', summary)
-                    if img_match:
-                        extracted_img = img_match.group(1)
-
                 if title:
                     rss_stories.append(
                         normalize_story(
                             title=title,
-                            link=link,
-                            summary=summary,
+                            link=entry.get("link", "#"),
+                            summary=entry.get("summary", ""),
                             source_name=feed_name,
                             category=cat,
                             ingestion_type="rss",
                             author=entry.get("author", feed_name),
-                            published=pub,
-                            image_url=extracted_img
+                            published=entry.get("published", "Recently"),
+                            image_url=entry.get("image_url", "")
                         )
                     )
         except Exception as err:
@@ -610,9 +713,10 @@ For each story provided, format it clearly as:
                     temperature=0.2
                 )
             )
-            return response.text
+            if response and getattr(response, 'text', None):
+                return response.text
         except Exception as e:
-            print(f"Gemini LLM error: {e}")
+            print(f"Gemini LLM note: {e}")
 
     # Fallback summary
     fallback_lines = []
@@ -653,6 +757,7 @@ Photorealistic cinematic artwork, octane render detail, crisp vector interfaces,
 
 def generate_image(prompt: str, output_path: Path) -> Path:
     print(f"Generating image using Google Gemini ({IMAGE_MODEL})...")
+    output_path.parent.mkdir(parents=True, exist_ok=True)
     if GENAI_AVAILABLE and GEMINI_API_KEY:
         try:
             client = genai.Client(api_key=GEMINI_API_KEY)
@@ -687,6 +792,7 @@ def generate_image(prompt: str, output_path: Path) -> Path:
 
 
 def _create_placeholder_image(output_path: Path):
+    output_path.parent.mkdir(parents=True, exist_ok=True)
     svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
       <rect width="1280" height="720" fill="#0f1115"/>
       <rect x="40" y="40" width="1200" height="640" rx="16" fill="#1a1d24" stroke="#2a2e38" stroke-width="2"/>
@@ -778,13 +884,27 @@ def build_flexible_collage_markup(all_stories: List[Dict]) -> str:
 
 
 def build_webpage(raw_summary: str, image_filename: str, date_str: str, rss_stories: List[Dict] = None, scraped_stories: List[Dict] = None) -> str:
+    import html as html_lib, re
     formatted_content = ""
     for block in raw_summary.split("### "):
         if not block.strip():
             continue
         lines = block.strip().split("\n")
-        headline = lines[0].replace("#", "").strip()
-        body = "<br>".join([l for l in lines[1:] if l.strip()])
+        headline = sanitize_text_for_html(lines[0].replace("#", "").strip())
+        
+        body_lines = []
+        for l in lines[1:]:
+            l_str = l.strip()
+            if not l_str:
+                continue
+            # Remove any raw unclosed HTML tags from feed excerpts
+            l_clean = re.sub(r'<[^>]+>', '', l_str)
+            l_escaped = html_lib.escape(l_clean)
+            # Convert markdown bold **Text** -> <strong>Text</strong>
+            l_formatted = re.sub(r'\*\*(.*?)\*\*', r'<strong>\1</strong>', l_escaped)
+            body_lines.append(l_formatted)
+            
+        body = "<br>".join(body_lines)
         formatted_content += f"""
         <div class="story">
             <h2>{headline}</h2>
@@ -800,11 +920,15 @@ def build_webpage(raw_summary: str, image_filename: str, date_str: str, rss_stor
     if scraped_stories:
         scraped_html = "<div class='section-title'>Custom HTML Scraped Feeds</div><div class='segmented-grid'>"
         for s in scraped_stories:
+            feed_name = sanitize_text_for_html(s.get('feed', 'Scraper'))
+            link_url = sanitize_url(s.get('link', '#'))
+            title_txt = sanitize_text_for_html(s.get('title', ''))
+            summary_txt = sanitize_text_for_html(s.get('summary', ''))[:200]
             scraped_html += f"""
             <div class='mini-card scraped'>
-                <div class='source-tag'>{s.get('feed', 'Scraper')}</div>
-                <h3><a href='{s.get('link', '#')}' target='_blank'>{s.get('title', '')}</a></h3>
-                <p>{s.get('summary', '')[:200]}...</p>
+                <div class='source-tag'>{feed_name}</div>
+                <h3><a href='{link_url}' target='_blank' rel='noopener'>{title_txt}</a></h3>
+                <p>{summary_txt}...</p>
             </div>
             """
         scraped_html += "</div>"
@@ -813,11 +937,15 @@ def build_webpage(raw_summary: str, image_filename: str, date_str: str, rss_stor
     if rss_stories:
         rss_html = "<div class='section-title'>Global &amp; Alternative RSS Feeds</div><div class='segmented-grid'>"
         for s in rss_stories:
+            feed_name = sanitize_text_for_html(s.get('feed', 'RSS'))
+            link_url = sanitize_url(s.get('link', '#'))
+            title_txt = sanitize_text_for_html(s.get('title', ''))
+            summary_txt = sanitize_text_for_html(s.get('summary', ''))[:200]
             rss_html += f"""
             <div class='mini-card rss'>
-                <div class='source-tag'>{s.get('feed', 'RSS')}</div>
-                <h3><a href='{s.get('link', '#')}' target='_blank'>{s.get('title', '')}</a></h3>
-                <p>{s.get('summary', '')[:200]}...</p>
+                <div class='source-tag'>{feed_name}</div>
+                <h3><a href='{link_url}' target='_blank' rel='noopener'>{title_txt}</a></h3>
+                <p>{summary_txt}...</p>
             </div>
             """
         rss_html += "</div>"
@@ -853,7 +981,7 @@ def build_webpage(raw_summary: str, image_filename: str, date_str: str, rss_stor
             background: rgba(15, 23, 42, 0.88); backdrop-filter: blur(8px);
             border: 1px solid rgba(56, 189, 248, 0.35); color: #38bdf8;
             padding: 5px 12px; border-radius: 999px; font-size: 11px; font-weight: 800;
-            letter-spacing: 0.5px; display: flex; items-center; gap: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+            letter-spacing: 0.5px; display: flex; align-items: center; gap: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.5);
         }
         .collage-container {
             display: grid; gap: 8px; background: #090d16; padding: 8px; border-radius: 16px; min-height: 280px;
@@ -951,16 +1079,41 @@ def build_webpage(raw_summary: str, image_filename: str, date_str: str, rss_stor
 </body>
 </html>
 """
-    env = Environment(autoescape=select_autoescape(["html"]))
-    template = env.from_string(template_str)
-    return template.render(
-        date=date_str,
-        content=formatted_content,
-        image_name=image_filename,
-        collage_html=collage_markup,
-        scraped_section=scraped_html,
-        rss_section=rss_html
-    )
+    if JINJA2_AVAILABLE:
+        env = Environment(autoescape=select_autoescape(["html"]))
+        template = env.from_string(template_str)
+        return template.render(
+            date=date_str,
+            content=formatted_content,
+            image_name=image_filename,
+            collage_html=collage_markup,
+            scraped_section=scraped_html,
+            rss_section=rss_html
+        )
+    else:
+        # Fallback string replacement
+        rendered = template_str
+        rendered = rendered.replace("{{ date }}", date_str)
+        rendered = rendered.replace("{{ content | safe }}", formatted_content)
+        rendered = rendered.replace("{{ scraped_section | safe }}", scraped_html)
+        rendered = rendered.replace("{{ rss_section | safe }}", rss_html)
+        
+        if collage_markup:
+            rendered = re.sub(
+                r'\{%\s*if collage_html\s*%\}.*?\{%\s*else\s*%\}.*?\{%\s*endif\s*%\}',
+                collage_markup,
+                rendered,
+                flags=re.DOTALL
+            )
+        else:
+            rendered = re.sub(
+                r'\{%\s*if collage_html\s*%\}.*?\{%\s*else\s*%\}(.*?)\{%\s*endif\s*%\}',
+                r'\1',
+                rendered,
+                flags=re.DOTALL
+            )
+            rendered = rendered.replace("{{ image_name }}", image_filename)
+        return rendered
 
 
 # =========================================================
@@ -1017,21 +1170,30 @@ def run_pipeline() -> Dict:
     generate_image(image_prompt, current_image_path)
 
     # Copy image to archive folders as well
-    archive_image_path = day_archive_dir / f"{today}.jpg"
-    archive_image_path.write_bytes(current_image_path.read_bytes())
+    if current_image_path.exists():
+        img_data = current_image_path.read_bytes()
+        archive_image_path = day_archive_dir / f"{today}.jpg"
+        archive_image_path.write_bytes(img_data)
 
-    data_archive_image_path = day_data_archive_dir / f"{today}.jpg"
-    data_archive_image_path.write_bytes(current_image_path.read_bytes())
+        data_archive_image_path = day_data_archive_dir / f"{today}.jpg"
+        data_archive_image_path.write_bytes(img_data)
 
     # Step 5: HTML Build with Segmented Export
     print("\nStep 5: Building HTML page & updating public GitHub index.html and /data/archive/...")
     html_content = build_webpage(raw_summary, "latest.jpg", today, rss_stories=rss_articles, scraped_stories=scraped_articles)
     archive_html_content = build_webpage(raw_summary, f"{today}.jpg", today, rss_stories=rss_articles, scraped_stories=scraped_articles)
 
-    # Populate root index.html for public viewing on GitHub Pages
-    Path("index.html").write_text(html_content, encoding="utf-8")
+    # Populate root index.html for public viewing on GitHub Pages (only if running in GitHub Actions or if root index.html isn't a React app template)
+    is_github_actions = os.environ.get("GITHUB_ACTIONS") == "true"
+    root_index_path = Path("index.html")
+    is_react_app = root_index_path.exists() and '<div id="root">' in root_index_path.read_text(encoding="utf-8", errors="ignore")
+    
+    if is_github_actions or not is_react_app:
+        root_index_path.write_text(html_content, encoding="utf-8")
 
-    # Write to /output/current/ and /data/current/
+    # Write to /output/index.html, /output/current/ and /data/current/
+    (Path("output") / "index.html").parent.mkdir(parents=True, exist_ok=True)
+    (Path("output") / "index.html").write_text(html_content, encoding="utf-8")
     (CURRENT_DIR / "index.html").write_text(html_content, encoding="utf-8")
     (DATA_CURRENT_DIR / "index.html").write_text(html_content, encoding="utf-8")
 

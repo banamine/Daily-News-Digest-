@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Intelligence Briefing – 2026-08-12</title>
+    <style>
+        :root {
+            --bg: #0f1115;
+            --card: #1a1d24;
+            --text: #e6e8ec;
+            --muted: #9ba1ad;
+            --accent: #3b82f6;
+            --border: #2a2e38;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; padding: 2rem 1rem; }
+        .container { max-width: 960px; margin: 0 auto; }
+        header { text-align: center; margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+        header h1 { font-size: 2.2rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 0.4rem; color: #ffffff; }
+        header .date { color: var(--accent); font-size: 1rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+        
+        .hero-image { width: 100%; border-radius: 16px; overflow: hidden; margin-bottom: 2.5rem; box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6); border: 1px solid var(--border); background: #0b0f19; }
+        
+        /* Flexible Photo Collage Component */
+        .collage-wrapper { position: relative; width: 100%; }
+        .collage-header-pill {
+            position: absolute; top: 14px; left: 14px; z-index: 10;
+            background: rgba(15, 23, 42, 0.88); backdrop-filter: blur(8px);
+            border: 1px solid rgba(56, 189, 248, 0.35); color: #38bdf8;
+            padding: 5px 12px; border-radius: 999px; font-size: 11px; font-weight: 800;
+            letter-spacing: 0.5px; display: flex; align-items: center; gap: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        }
+        .collage-container {
+            display: grid; gap: 8px; background: #090d16; padding: 8px; border-radius: 16px; min-height: 280px;
+        }
+        .collage-container.collage-count-1 { grid-template-columns: 1fr; grid-template-rows: 360px; }
+        .collage-container.collage-count-1 .hero-tile { grid-row: auto; }
+
+        .collage-container.collage-count-2 { grid-template-columns: 1fr 1fr; grid-template-rows: 320px; }
+        .collage-container.collage-count-2 .hero-tile { grid-row: auto; }
+
+        .collage-container.collage-count-3 { grid-template-columns: 1.6fr 1fr; grid-template-rows: 170px 170px; }
+        .collage-container.collage-count-3 .hero-tile { grid-row: span 2; }
+
+        .collage-container.collage-count-4 { grid-template-columns: 1.6fr 1fr 1fr; grid-template-rows: 170px 170px; }
+        .collage-container.collage-count-4 .hero-tile { grid-row: span 2; }
+        .collage-container.collage-count-4 .collage-tile:nth-child(4) { grid-column: span 2; }
+
+        .collage-container.collage-count-5 { grid-template-columns: 1.8fr 1fr 1fr; grid-template-rows: 180px 180px; }
+        .collage-container.collage-count-5 .hero-tile { grid-row: span 2; }
+
+        @media (max-width: 768px) {
+            .collage-container,
+            .collage-container.collage-count-2,
+            .collage-container.collage-count-3,
+            .collage-container.collage-count-4,
+            .collage-container.collage-count-5 {
+                grid-template-columns: 1fr; grid-template-rows: auto;
+            }
+            .collage-tile, .hero-tile { min-height: 180px; }
+        }
+        .collage-tile {
+            position: relative; border-radius: 10px; overflow: hidden; background: #131927;
+            border: 1px solid rgba(255, 255, 255, 0.08); transition: transform 0.3s ease;
+        }
+        .collage-tile.hero-tile { grid-row: span 2; }
+        .collage-tile img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
+        .collage-tile:hover img { transform: scale(1.06); }
+        .collage-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(to top, rgba(11, 15, 23, 0.95) 0%, rgba(11, 15, 23, 0.2) 60%, transparent 100%);
+            display: flex; flex-direction: column; justify-content: flex-end; padding: 12px;
+        }
+        .collage-badge {
+            align-self: flex-start; background: rgba(56, 189, 248, 0.2); color: #38bdf8;
+            border: 1px solid rgba(56, 189, 248, 0.4); font-size: 10px; font-weight: 700;
+            text-transform: uppercase; padding: 2px 8px; border-radius: 999px; margin-bottom: 6px;
+        }
+        .collage-badge.hero-badge { background: rgba(16, 185, 129, 0.2); color: #34d399; border-color: rgba(16, 185, 129, 0.4); }
+        .collage-title { color: #ffffff; font-size: 12px; font-weight: 700; line-height: 1.35; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        .hero-tile .collage-title { font-size: 17px; }
+
+        .stories { display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 3rem; }
+        .story { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem; }
+        .story h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: #f1f3f5; }
+        .story-body { color: var(--muted); font-size: 0.98rem; }
+        .section-title { font-size: 1.3rem; font-weight: 800; color: var(--accent); margin: 2rem 0 1rem; border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; }
+        .segmented-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
+        .mini-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+        .mini-card.scraped { border-left: 3px solid #8b5cf6; }
+        .mini-card.rss { border-left: 3px solid #3b82f6; }
+        .source-tag { font-size: 0.75rem; font-weight: bold; color: var(--accent); margin-bottom: 0.4rem; }
+        .mini-card h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.4rem; }
+        .mini-card h3 a { color: #f1f3f5; text-decoration: none; }
+        .mini-card h3 a:hover { text-decoration: underline; color: var(--accent); }
+        .mini-card p { font-size: 0.82rem; color: var(--muted); line-height: 1.4; }
+        footer { text-align: center; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="date">2026-08-12</div>
+            <h1>Daily Intelligence Briefing</h1>
+        </header>
+
+        <div class="hero-image">
+            
+    <div class="collage-wrapper">
+        <div class="collage-header-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7"/><path d="M16 5h5v5"/><path d="m21 5-9 9"/></svg>
+            <span>Parsed Feeds Mixed Photo Collage (5 Photos)</span>
+        </div>
+        <div class="collage-container collage-count-5">
+            <div class="collage-tile hero-tile">
+                <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Emergency Broadcast: Global Economic Shift &amp; Centralized Digital Currency Protocols" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+                <div class="collage-overlay">
+                    <span class="collage-badge hero-badge">Alex Jones Live (Scraper)</span>
+                    <h3 class="collage-title hero-title">Emergency Broadcast: Global Economic Shift &amp; Centralized Digital Currency Protocols</h3>
+                </div>
+            </div>
+            
+        <div class="collage-tile">
+            <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Special Report: AI Surveillance Frameworks &amp; Data Privacy Mandates" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">Alex Jones Live (Scraper)</span>
+                <h4 class="collage-title">Special Report: AI Surveillance Frameworks &amp; Data Privacy Mandates</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Rescuers scramble for survivors with 180 dead in Colombia earthquake" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">BBC World News</span>
+                <h4 class="collage-title">Rescuers scramble for survivors with 180 dead in Colombia earthquake</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Trump confirms he switched planes after Nato summit because of possible threat" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">BBC World News</span>
+                <h4 class="collage-title">Trump confirms he switched planes after Nato summit because of possible threat</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Trump&#x27;s dramatic plane swap hints at personal stakes of Iran war" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">BBC World News</span>
+                <h4 class="collage-title">Trump&#x27;s dramatic plane swap hints at personal stakes of Iran war</h4>
+            </div>
+        </div>
+        
+        </div>
+    </div>
+    
+        </div>
+
+        <main class="stories">
+            
+        <div class="story">
+            <h2>Emergency Broadcast: Global Economic Shift &amp; Centralized Digital Currency Protocols</h2>
+            <div class="story-body"><strong>Source:</strong> Alex Jones Live (Scraper)<br><strong>Summary:</strong> Alex Jones analyzes policy announcements from major central banking consortiums regarding liquidity mandates and digital currency protocols....</div>
+        </div>
+        
+        <div class="story">
+            <h2>Special Report: AI Surveillance Frameworks &amp; Data Privacy Mandates</h2>
+            <div class="story-body"><strong>Source:</strong> Alex Jones Live (Scraper)<br><strong>Summary:</strong> An in-depth investigation into algorithmic monitoring protocols and policy implications for digital civil liberties....</div>
+        </div>
+        
+        <div class="story">
+            <h2>Rescuers scramble for survivors with 180 dead in Colombia earthquake</h2>
+            <div class="story-body"><strong>Source:</strong> BBC World News<br><strong>Summary:</strong> Colombia experienced a number of aftershocks on Tuesday, as efforts continued to free survivors trapped in rubble and buildings....</div>
+        </div>
+        
+        <div class="story">
+            <h2>Trump confirms he switched planes after Nato summit because of possible threat</h2>
+            <div class="story-body"><strong>Source:</strong> BBC World News<br><strong>Summary:</strong> Journalists and White House staff who were on board the jet were unaware the president had left....</div>
+        </div>
+        
+        <div class="story">
+            <h2>Trump&#x27;s dramatic plane swap hints at personal stakes of Iran war</h2>
+            <div class="story-body"><strong>Source:</strong> BBC World News<br><strong>Summary:</strong> It marks another striking episode in the turbulent history of his relationship with Iran, writes the BBC&#x27;s Anthony Zurcher....</div>
+        </div>
+        
+        <div class="story">
+            <h2>Russia&#x27;s Novorossiysk grain terminal halts operations after Ukrainian drone attack, industry source says - reuters.com</h2>
+            <div class="story-body"><strong>Source:</strong> Reuters Top News<br><strong>Summary:</strong> &lt;a href=&quot;https://news.google.com/rss/articles/CBMitwFBVV95cUxONm1OVFhKdVF3WHJaSlZsaTAwVzI4WmV5eDFhZjctdUxxZ0twOVgxNXFsbVoyU3NfYmg2aWNMdklRTlRnWDJOYWoyOTlfUTBkOUo5Sjd1T3lqUUZUOVZQbDRmV0d6UDRRSUdHWGN0RmY5TEJXN29vU1NVbGJTUGYwNzQ0amNIMGR4N3hud3BFOG9OMmsx...</div>
+        </div>
+        
+        <div class="story">
+            <h2>Ukraine halts strikes on tankers using Russian port at US request, FT says - reuters.com</h2>
+            <div class="story-body"><strong>Source:</strong> Reuters Top News<br><strong>Summary:</strong> &lt;a href=&quot;https://news.google.com/rss/articles/CBMirgFBVV95cUxQVkZkYzMtVVN3NE53N0Zpbk8xV3hlVjJFLUU0c1p2S291LW03Y05IRG11ZFA4QVZQZUJFSHFiT1hNaFgzTkdkbHc4Ri1HbEx3MzVyQkpYMHo3dGY0aURzam5zX1piSzhQZGFYUzczWUVEVTYzZDdVRGQ2OEp3aTVoZUE5dlBsODN3NWxBdWJyVXJkajdm...</div>
+        </div>
+        
+        <div class="story">
+            <h2>South Korea unveils future technology projects, targets moon landing by 2030 - reuters.com</h2>
+            <div class="story-body"><strong>Source:</strong> Reuters Top News<br><strong>Summary:</strong> &lt;a href=&quot;https://news.google.com/rss/articles/CBMiygFBVV95cUxQWloxM0JBWi1KZHlmdHJEZzZFWnhNeXVnVHRZa0JCdFhfZW5wTF9jeEdrRk9XM2xaWWlMWnhtbS1EVGNpX3Bta2dGcHBHYlF3UVlhV3ZodE1SWjNIMzNrUWc0aXdKQURNdkFZZ3FQMzVEb2FHQ1loTldoREwzaWotLU4yVVJsQWVqQ2k2blctRW9UaXI2...</div>
+        </div>
+        
+        </main>
+
+        <div class='section-title'>Custom HTML Scraped Feeds</div><div class='segmented-grid'>
+            <div class='mini-card scraped'>
+                <div class='source-tag'>Alex Jones Live (Scraper)</div>
+                <h3><a href='https://www.alexjoneslive.com/story-1' target='_blank' rel='noopener'>Emergency Broadcast: Global Economic Shift &amp; Centralized Digital Currency Protocols</a></h3>
+                <p>Alex Jones analyzes policy announcements from major central banking consortiums regarding liquidity mandates and digital currency protocols....</p>
+            </div>
+            
+            <div class='mini-card scraped'>
+                <div class='source-tag'>Alex Jones Live (Scraper)</div>
+                <h3><a href='https://www.alexjoneslive.com/story-2' target='_blank' rel='noopener'>Special Report: AI Surveillance Frameworks &amp; Data Privacy Mandates</a></h3>
+                <p>An in-depth investigation into algorithmic monitoring protocols and policy implications for digital civil liberties....</p>
+            </div>
+            </div>
+        <div class='section-title'>Global &amp; Alternative RSS Feeds</div><div class='segmented-grid'>
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/articles/c20dqd9qwq4o?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>Rescuers scramble for survivors with 180 dead in Colombia earthquake</a></h3>
+                <p>Colombia experienced a number of aftershocks on Tuesday, as efforts continued to free survivors trapped in rubble and buildings....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/articles/c980r4wpl9lo?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>Trump confirms he switched planes after Nato summit because of possible threat</a></h3>
+                <p>Journalists and White House staff who were on board the jet were unaware the president had left....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/articles/cly8jexn1z9o?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>Trump&#x27;s dramatic plane swap hints at personal stakes of Iran war</a></h3>
+                <p>It marks another striking episode in the turbulent history of his relationship with Iran, writes the BBC&#x27;s Anthony Zurcher....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMitwFBVV95cUxONm1OVFhKdVF3WHJaSlZsaTAwVzI4WmV5eDFhZjctdUxxZ0twOVgxNXFsbVoyU3NfYmg2aWNMdklRTlRnWDJOYWoyOTlfUTBkOUo5Sjd1T3lqUUZUOVZQbDRmV0d6UDRRSUdHWGN0RmY5TEJXN29vU1NVbGJTUGYwNzQ0amNIMGR4N3hud3BFOG9OMmsxZmxJQ2lBNVdPU3FpRjYxUHROOE01d2ZVWVpwUnBVZ0s3LUk?oc=5' target='_blank' rel='noopener'>Russia&#x27;s Novorossiysk grain terminal halts operations after Ukrainian drone attack, industry source says - reuters.com</a></h3>
+                <p>Russia&#x27;s Novorossiysk grain terminal halts operations after Ukrainian drone attack, industry source says&amp;nbsp;&amp;nbsp;reuters.com...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMirgFBVV95cUxQVkZkYzMtVVN3NE53N0Zpbk8xV3hlVjJFLUU0c1p2S291LW03Y05IRG11ZFA4QVZQZUJFSHFiT1hNaFgzTkdkbHc4Ri1HbEx3MzVyQkpYMHo3dGY0aURzam5zX1piSzhQZGFYUzczWUVEVTYzZDdVRGQ2OEp3aTVoZUE5dlBsODN3NWxBdWJyVXJkajdmc3BJZDlmWkszUl9hU0dmcEpCZm1ER0twSkE?oc=5' target='_blank' rel='noopener'>Ukraine halts strikes on tankers using Russian port at US request, FT says - reuters.com</a></h3>
+                <p>Ukraine halts strikes on tankers using Russian port at US request, FT says&amp;nbsp;&amp;nbsp;reuters.com...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMiygFBVV95cUxQWloxM0JBWi1KZHlmdHJEZzZFWnhNeXVnVHRZa0JCdFhfZW5wTF9jeEdrRk9XM2xaWWlMWnhtbS1EVGNpX3Bta2dGcHBHYlF3UVlhV3ZodE1SWjNIMzNrUWc0aXdKQURNdkFZZ3FQMzVEb2FHQ1loTldoREwzaWotLU4yVVJsQWVqQ2k2blctRW9UaXI2Zm9Dc2dIQTJXVkN6OTB5UlFGS2NuX1hLWmFuS2ViY1JHeXVwM242SzgxaFdKLW85VEZodkNn?oc=5' target='_blank' rel='noopener'>South Korea unveils future technology projects, targets moon landing by 2030 - reuters.com</a></h3>
+                <p>South Korea unveils future technology projects, targets moon landing by 2030&amp;nbsp;&amp;nbsp;reuters.com...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/news/article-16046363/The-river-garbage-Workers-wade-rubbish-storm-hits-Philippines.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>The river of garbage: Workers wade through rubbish after storm hits the Philippines</a></h3>
+                <p>Rubbish collectors have been sent to swim through a river filled with garbage in the Philippines after nine days of torrential rain....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/sciencetech/article-16041805/solar-eclipse-UK-TONIGHT-guide.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>Everything you need to know about tonight&#x27;s total solar eclipse: The best times and locations to see it</a></h3>
+                <p>Tonight, millions of Britons will witness the best solar eclipse in a generation - and you will not want to miss out....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/news/article-16046399/Borders-minister-defends-imposing-1-200-migrants-Oxfordshire-village-just-400-people-PM-said-middle-class-areas-accept-asylum-seekers.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>Labour doubles down on Burnham&#x27;s vow to make middle class areas take more migrants as minister defends imposing 1,200 on village of 400 people</a></h3>
+                <p>Anna Turley said there needed to be a &#x27;fair and equitable system&#x27; for distributing asylum seekers across the country....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>New York Post</div>
+                <h3><a href='https://nypost.com/2026/08/12/sports/roger-federer-loses-billionaire-status-as-fortune-wiped-out-in-day-of-carnage/' target='_blank' rel='noopener'>Roger Federer loses billionaire status as fortune wiped out in day of carnage</a></h3>
+                <p>Roger Federer is no longer a billionaire with the tennis icon watching on as millions of dollars were wiped out on Tuesday. The 20-time grand slam champ lost a fortune when luxury sneaker brand On suf...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>New York Post</div>
+                <h3><a href='https://pagesix.com/2026/08/12/celebrity-news/twilight-star-kellan-lutz-reveals-why-he-traded-california-for-tennessee/' target='_blank' rel='noopener'>‘Twilight’ star Kellan Lutz reveals why he traded California for Tennessee</a></h3>
+                <p>&quot;We got some land, got great Bible studies that we&#x27;re a part of, great churches, great community,&quot; he said....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/fort-knox-gold-is-still-there-republican-senator/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=fort-knox-gold-is-still-there-republican-senator' target='_blank' rel='noopener'>Fort Knox Gold Is “Still There,” Republican Senator Claims</a></h3>
+                <p>Sen. Rand Paul (R-KY) said the gold in Fort Knox is &amp;#8220;still there&amp;#8221; after announcing he was visiting the United [&amp;#8230;] The post &lt;a......</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/commercial-flight-makes-emergency-landing-after-flames-shoot/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=commercial-flight-makes-emergency-landing-after-flames-shoot' target='_blank' rel='noopener'>Commercial Flight Makes Emergency Landing After Flames Shoot From Engine</a></h3>
+                <p>An American Airlines airplane was forced to make an emergency landing in South Carolina after flames shot from one of [&amp;#8230;] The post &lt;a......</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/nearly-30000-pounds-imported-raw-beef-recalled-impacts/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=nearly-30000-pounds-imported-raw-beef-recalled-impacts' target='_blank' rel='noopener'>Nearly 30,000 Pounds Of Imported Raw Beef Recalled, Impacts Two States</a></h3>
+                <p>Nearly 30,000 pounds of raw beef from Argentina has been recalled after the U.S. Department of Agriculture (USDA) determined the [&amp;#8230;] The post Nearly 30,000 Pounds Of Imported Raw Beef Recall...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/08/11/aocs-woke-1-comment-reveals-the-left-is-planning-to-make-woke-2-even-worse/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=aocs-woke-1-comment-reveals-the-left-is-planning-to-make-woke-2-even-worse' target='_blank' rel='noopener'>AOC’s ‘Woke 1’ Comment Reveals The Left Is Planning To Make ‘Woke 2’ Even Worse</a></h3>
+                <p>&lt;img src=&quot;https://thefederalist.com/wp-content/uploads/2026/08/Screenshot-2026-08-11-at-2.44.38-PM-scaled-e1786473977557-1200x675.png&quot; class=&quot;webfeedsFeaturedVisual wp-post-image&quo...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/08/11/margaret-brennan-exists-to-speak-power-to-truth/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=margaret-brennan-exists-to-speak-power-to-truth' target='_blank' rel='noopener'>Margaret Brennan Exists To Speak Power To Truth</a></h3>
+                <p>&lt;img src=&quot;https://thefederalist.com/wp-content/uploads/2026/08/brennan-dangerous-1200x675.jpg&quot; class=&quot;webfeedsFeaturedVisual wp-post-image&quot; alt=&quot;In a yellow pantsuit, Marga...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/08/11/in-massachusetts-you-can-now-abort-babies-minutes-before-birth-for-any-reason/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=in-massachusetts-you-can-now-abort-babies-minutes-before-birth-for-any-reason' target='_blank' rel='noopener'>In Massachusetts, You Can Now Abort Babies Minutes Before Birth For Any Reason</a></h3>
+                <p>&#x27;We do all we can in Massachusetts to save baby whales and stray cats yet we murder thousands of unborn children and in many cases the taxpayer pays for it.&#x27;...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/news/mamdani-pied-terre-tax-trump' target='_blank' rel='noopener'>Mamdani gets pie in the face from judge against pied-à-terre tax — and then Trump piles on</a></h3>
+                <p>The mayor of New York City faced two major roadblocks for his far-left plan to hit certain rentals in the city with a pied-à-terre tax.The tax scheme from Mayor Zohran Mamdani was temporarily blocked ...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/news/ceuta-protest-migrants-residents-spanish' target='_blank' rel='noopener'>MASSIVE PROTEST against illegal migrants OVERRUNNING tiny Spanish province: &#x27;Enough, Ceuta won&#x27;t give up!&#x27;</a></h3>
+                <p>The residents of a tiny Spanish province in Northern Africa mounted a mass protest to call for action against the tens of thousands of illegal aliens who tried to breach the border from Morocco.The pr...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/news/california-cancel-rich-dei-enclave' target='_blank' rel='noopener'>Oakland activists seek to &#x27;CANCEL&#x27; wealthy enclave with separate police, school district — and only 1% black residents</a></h3>
+                <p>Oakland resident Jesse Rosemoore began the campaign to &quot;cancel Piedmont&quot; more than a year ago against the 1.7-square mile city with its own police force and school district.Rosemoore hands o...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/ed-morrissey/2026/08/11/tuesdays-final-word-n3817883' target='_blank' rel='noopener'>Tuesday&#x27;s Final Word</a></h3>
+                <p>...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/john-s-2/2026/08/11/wpath-our-standards-of-care-are-one-side-of-an-ongoing-debate-n3817893' target='_blank' rel='noopener'>WPATH: Our Standards of Care Are Just an Opinion</a></h3>
+                <p>...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/tree-hugging-sister/2026/08/11/mrs-mamdani-wont-get-to-take-new-yorks-finest-to-syria-with-her-n3817891' target='_blank' rel='noopener'>Mrs. Mamdani Won&#x27;t Get to Take New York&#x27;s Finest to Syria With Her</a></h3>
+                <p>...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Judicial Watch</div>
+                <h3><a href='https://www.judicialwatch.org/fauci-cell-phone-records/' target='_blank' rel='noopener'>Judicial Watch Sues FBI for Fauci Cell Phone Records</a></h3>
+                <p>(Washington, DC) – Judicial Watch announced today that it filed a Freedom of Information Act (FOIA) lawsuit against&amp;#8230; The post Judicial Watch Sues FBI for Fauci Cell Phone Records appeared fi...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Judicial Watch</div>
+                <h3><a href='https://www.judicialwatch.org/judicial-watch-seeks-biden-doj-lawfare-evidence/' target='_blank' rel='noopener'>Judicial Watch Seeks Biden DOJ Lawfare Evidence</a></h3>
+                <p>Judicial Watch Seeks Evidence of Biden Justice Department’s Lawfare Illegal Immigration Doubled Under Kamala’s Costly Project to Stop&amp;#8230; The post Judicial Watch Seeks Biden DOJ Lawfare Evidenc...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Judicial Watch</div>
+                <h3><a href='https://www.judicialwatch.org/former-trump-lawyers-phone-email/' target='_blank' rel='noopener'>Judicial Watch Moves to Unseal the Biden Justice Department’s Warrant Records of Search and Seizure ...</a></h3>
+                <p>(Washington, DC) – Judicial Watch announced today that it and Victoria Toensing, a former attorney for President Donald&amp;#8230; The post Judicial Watch Moves to Unseal the Biden Justice Department’...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/08/what-matt-walsh-gets-wrong-about-the-civil-war/' target='_blank' rel='noopener'>What Matt Walsh Gets Wrong about the Civil War</a></h3>
+                <p>Photo Credit:  LoCBy J. Robert SmithIf a state is free to leave the Union at will -- if its leaders and citizens object to the results of an election or policies, or a state just decides that secessio...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/08/freedom-dies-when-legitimate-dissent-is-branded-anti-tech-extremism/' target='_blank' rel='noopener'>Freedom Dies When Legitimate Dissent Is Branded ‘Anti-Tech Extremism’</a></h3>
+                <p>Photo Credit:ChatGPT  ChatGPT for American ThinkerBy Janet LevyOver the past year,&amp;nbsp;dozens of people&amp;nbsp;have been silenced or arrested for criticizing data centers in public forums. This...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/08/wondering-about-trump-and-iran-and-everything/' target='_blank' rel='noopener'>Wondering about Trump and Iran and Everything</a></h3>
+                <p>Photo Credit:  Perchance AIBy Christopher ChantrillIt&amp;rsquo;s not just that the old Mass Media has lost its grip. We now have a president who lives by sowing confusion....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMifEFVX3lxTE5sQ3M3ZTFkX19VVEFHSHNEX1BmTmZTZzlkemFnVUZfVjBja010TlFJTmIzaU1IU1BlZVRXRU1vemVIREhQeTNpZktjdEFjeGVCS0R3cXRrYVdkZ3VGRXBteUNHeTZ2UklaaWlpTnk5dEJSbF9wOWJvMFhRVjc?oc=5' target='_blank' rel='noopener'>Spot the Difference Daily- Play Now online &amp; 100% Free - theepochtimes.com</a></h3>
+                <p>Spot the Difference Daily- Play Now online &amp; 100% Free&amp;nbsp;&amp;nbsp;theepochtimes.com...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMiREFVX3lxTFBSU2dZLXZaX21HbzlKWGxkWnM1eEQwNEZ3VE4xUkJFWFJWSkJ3d0pSY2c4MTBKZXctUXdyWWdicWJQaklP?oc=5' target='_blank' rel='noopener'>The Epoch Times | Breaking News, Latest News, World News and Videos - theepochtimes.com</a></h3>
+                <p>The Epoch Times | Breaking News, Latest News, World News and Videos&amp;nbsp;&amp;nbsp;theepochtimes.com...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMikAFBVV95cUxPZC1lQ0NKcmFLUnpuTEdtaUFBaHY4WjZZU2hrczVvV1ZZNUk3Yy15bWNCMmNwWHcza29FRGU4YXpKX3VwQjZHSng3WXQwRTZaMFN6Zkt5bXNEc2xXOXpDVjRvS0piYmN6elE4TzFTRWZNdF9uNk9Fb0NHX3U2eEc5Mlk0ejBHS0E0LTBYRWFmbGw?oc=5' target='_blank' rel='noopener'>Spot the Difference Daily - Version 2 - theepochtimes.com</a></h3>
+                <p>Spot the Difference Daily - Version 2&amp;nbsp;&amp;nbsp;theepochtimes.com...</p>
+            </div>
+            </div>
+
+        <footer>
+            Automated Segmented Pipeline powered by HTML Scrapers, 11 Global RSS Feeds &amp; Google Gemini AI &bull; 2026-08-12
+        </footer>
+    </div>
+</body>
+</html>

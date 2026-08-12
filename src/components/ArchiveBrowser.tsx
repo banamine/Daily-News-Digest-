@@ -87,7 +87,7 @@ export const ArchiveBrowser: React.FC<ArchiveBrowserProps> = ({ briefings, onSel
               <Folder className="w-3 h-3" /> Dedicated Folder: data/archive/
             </span>
             <span className="px-2.5 py-0.5 text-[10px] font-mono uppercase tracking-widest bg-white/10 text-white/70 border border-white/10">
-              {briefings.length} Saved Edition{briefings.length === 1 ? '' : 's'}
+              {(briefings || []).length} Saved Edition{(briefings || []).length === 1 ? '' : 's'}
             </span>
           </div>
 
@@ -110,7 +110,7 @@ export const ArchiveBrowser: React.FC<ArchiveBrowserProps> = ({ briefings, onSel
                 activeViewMode === 'editions' ? 'bg-amber-500 text-black font-bold' : 'text-white/60 hover:text-white'
               }`}
             >
-              Editions ({displayBriefings.length})
+              Editions ({(displayBriefings || []).length})
             </button>
             <button
               onClick={() => setActiveViewMode('articles')}
@@ -118,7 +118,7 @@ export const ArchiveBrowser: React.FC<ArchiveBrowserProps> = ({ briefings, onSel
                 activeViewMode === 'articles' ? 'bg-amber-500 text-black font-bold' : 'text-white/60 hover:text-white'
               }`}
             >
-              Article Search ({searchResults.matchingArticles.length})
+              Article Search ({(searchResults?.matchingArticles || []).length})
             </button>
           </div>
 
@@ -140,7 +140,7 @@ export const ArchiveBrowser: React.FC<ArchiveBrowserProps> = ({ briefings, onSel
 
       {/* Main View: Editions Grid vs Deep Article Results */}
       {activeViewMode === 'editions' ? (
-        displayBriefings.length === 0 ? (
+        (displayBriefings || []).length === 0 ? (
           <div className="bg-[#0a0a0a] border border-white/10 p-12 text-center text-white/40 font-mono text-xs uppercase tracking-widest space-y-2">
             <div>NO ARCHIVED EDITIONS MATCHING "{searchQuery}"</div>
             <p className="text-[10px] text-white/30">
@@ -149,7 +149,7 @@ export const ArchiveBrowser: React.FC<ArchiveBrowserProps> = ({ briefings, onSel
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {displayBriefings.map(b => {
+            {(displayBriefings || []).map(b => {
               const isPublishedNow = publishedStatus[b.date];
               return (
                 <div
@@ -246,20 +246,20 @@ export const ArchiveBrowser: React.FC<ArchiveBrowserProps> = ({ briefings, onSel
         <div className="space-y-4">
           <div className="p-4 bg-[#0a0a0a] border border-white/10 flex items-center justify-between text-xs font-mono">
             <span className="text-white/60">
-              Found <span className="text-amber-400 font-bold">{searchResults.matchingArticles.length}</span> archived news articles matching <span className="text-white font-bold">"{searchQuery}"</span>
+              Found <span className="text-amber-400 font-bold">{(searchResults?.matchingArticles || []).length}</span> archived news articles matching <span className="text-white font-bold">"{searchQuery}"</span>
             </span>
             <span className="text-amber-500/80 uppercase tracking-widest text-[10px]">
               Deep Search &bull; data/archive/
             </span>
           </div>
 
-          {searchResults.matchingArticles.length === 0 ? (
+          {(searchResults?.matchingArticles || []).length === 0 ? (
             <div className="bg-[#0a0a0a] border border-white/10 p-12 text-center text-white/40 font-mono text-xs uppercase tracking-widest">
               NO MATCHING ARTICLES FOUND IN ARCHIVED DATA FOLDER
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {searchResults.matchingArticles.map((art, idx) => (
+              {(searchResults?.matchingArticles || []).map((art, idx) => (
                 <div key={idx} className="bg-[#0a0a0a] border border-white/10 p-5 space-y-3 hover:border-amber-500/40 transition-colors">
                   <div className="flex items-center justify-between text-[10px] font-mono border-b border-white/10 pb-2">
                     <span className="px-2 py-0.5 bg-amber-500/10 text-amber-400 border border-amber-500/20 uppercase font-bold">

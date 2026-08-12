@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+      <rect width="1280" height="720" fill="#0f1115"/>
+      <rect x="40" y="40" width="1200" height="640" rx="16" fill="#1a1d24" stroke="#2a2e38" stroke-width="2"/>
+      <circle cx="640" cy="300" r="80" fill="#3b82f6" opacity="0.2"/>
+      <text x="640" y="310" font-family="system-ui" font-size="28" fill="#3b82f6" text-anchor="middle" font-weight="bold">DAILY NEWS BRIEFING VISUAL</text>
+      <text x="640" y="360" font-family="system-ui" font-size="18" fill="#9ba1ad" text-anchor="middle">Generated on 2026-08-12</text>
+    </svg>

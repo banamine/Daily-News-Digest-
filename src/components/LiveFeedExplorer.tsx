@@ -150,8 +150,8 @@ export const LiveFeedExplorer: React.FC<LiveFeedExplorerProps> = ({ feeds, initi
 
   // Initialize custom feeds array to all enabled feeds on first load
   useEffect(() => {
-    if (feeds.length > 0 && selectedCustomFeedIds.length === 0) {
-      setSelectedCustomFeedIds(feeds.map(f => f.id));
+    if ((feeds || []).length > 0 && (selectedCustomFeedIds || []).length === 0) {
+      setSelectedCustomFeedIds((feeds || []).map(f => f.id));
       if (feeds[0]) setSelectedSingleFeedId(feeds[0].id);
     }
   }, [feeds]);
@@ -162,7 +162,7 @@ export const LiveFeedExplorer: React.FC<LiveFeedExplorerProps> = ({ feeds, initi
       return selectedSingleFeedId;
     }
     if (selectionType === 'custom') {
-      return selectedCustomFeedIds.length > 0 ? selectedCustomFeedIds.join(',') : 'none';
+      return (selectedCustomFeedIds || []).length > 0 ? selectedCustomFeedIds.join(',') : 'none';
     }
     return 'all';
   }, [selectionType, selectedSingleFeedId, selectedCustomFeedIds]);

@@ -31,8 +31,8 @@ export const FeedManager: React.FC<FeedManagerProps> = ({
   const categories = ['All', 'Global', 'Tech', 'Alternative', 'Finance', 'Custom'];
 
   const filteredFeeds = selectedCategoryFilter === 'All'
-    ? feeds
-    : feeds.filter(f => f.category === selectedCategoryFilter);
+    ? (feeds || [])
+    : (feeds || []).filter(f => f.category === selectedCategoryFilter);
 
   return (
     <div id="feed-manager-container" className="space-y-6 max-w-5xl mx-auto">

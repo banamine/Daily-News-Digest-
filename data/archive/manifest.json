@@ -1,0 +1,16 @@
+[
+  {
+    "date": "2026-08-12",
+    "timestamp": "2026-08-12T08:17:27.262796+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "Emergency Broadcast: Global Economic Shift & Centralized Digital Currency Protocols",
+      "Special Report: AI Surveillance Frameworks & Data Privacy Mandates",
+      "Rescuers scramble for survivors with 180 dead in Colombia earthquake",
+      "Trump confirms he switched planes after Nato summit because of possible threat",
+      "Trump's dramatic plane swap hints at personal stakes of Iran war"
+    ],
+    "archive_html_path": "data/archive/2026-08-12/index.html",
+    "data_json_path": "data/archive/2026-08-12/data.json"
+  }
+]

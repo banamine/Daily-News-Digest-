@@ -93,7 +93,7 @@ export const BriefingViewer: React.FC<BriefingViewerProps> = ({ briefing, onRefr
               <Calendar className="w-3 h-3" /> {briefing.date}
             </span>
             <span className="px-2.5 py-0.5 text-[10px] font-mono font-semibold bg-amber-500/10 text-amber-400 border border-amber-500/20 uppercase tracking-widest">
-              {briefing.articles.length} Stories Compiled
+              {briefing.articles?.length || 0} Stories Compiled
             </span>
             <span className="px-2.5 py-0.5 text-[10px] font-mono font-semibold bg-blue-500/10 text-blue-400 border border-blue-500/20 uppercase tracking-widest">
               Archive: data/archive/{briefing.date}/
@@ -225,7 +225,8 @@ export const BriefingViewer: React.FC<BriefingViewerProps> = ({ briefing, onRefr
         <div id="stories-panel" className="space-y-6">
           {/* Top Placement: Extracted Feed Photos Mixed Collage */}
           {(() => {
-            const articlesWithImages = briefing.articles.filter(a => a && a.imageUrl && a.imageUrl.length > 8);
+            const articlesList = briefing.articles || [];
+            const articlesWithImages = articlesList.filter(a => a && a.imageUrl && typeof a.imageUrl === 'string' && a.imageUrl.length > 8);
             if (articlesWithImages.length === 0) return null;
 
             const fallbackImg = 'https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';
@@ -342,7 +343,7 @@ export const BriefingViewer: React.FC<BriefingViewerProps> = ({ briefing, onRefr
 
           {/* Stories List */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {briefing.articles.map((art, idx) => (
+            {(briefing.articles || []).map((art, idx) => (
               <div key={art.id || idx} className="bg-[#0a0a0a] border border-white/10 p-6 hover:border-amber-500/40 transition-all flex flex-col justify-between group">
                 <div>
                   <div className="flex items-center justify-between gap-2 mb-3">

@@ -94,7 +94,7 @@ export default function App() {
       // Step 1 simulated progress while server fetches feeds
       await new Promise(r => setTimeout(r, 800));
       initialSteps[0].status = 'completed';
-      initialSteps[0].message = `Collected top stories from ${feeds.filter(f => f.enabled).length} news feeds`;
+      initialSteps[0].message = `Collected top stories from ${(feeds || []).filter(f => f.enabled).length} news feeds`;
       initialSteps[1].status = 'running';
       initialSteps[1].message = `Sending stories to Google Gemini (${config.llmModel})...`;
       setPipelineStatus({ isRunning: true, currentStepIndex: 1, steps: [...initialSteps] });
@@ -234,7 +234,7 @@ export default function App() {
         }}
         isRunning={pipelineStatus.isRunning}
         lastRunDate={currentBriefing?.date || null}
-        activeFeedsCount={feeds.filter(f => f.enabled).length}
+        activeFeedsCount={(feeds || []).filter(f => f.enabled).length}
       />
 
       {/* Main Body */}
