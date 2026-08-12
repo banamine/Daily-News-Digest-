@@ -1,5 +1,10 @@
-from __future__ import annotations
 #!/usr/bin/env python3
+from __future__ import annotations
+import sys
+import logging
+
+logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
+
 """
 Daily News Summarizer + Alex Jones Live Playwright Scraper + Gemini AI + Webpage Builder
 -----------------------------------------------------------------------------------------
@@ -10,8 +15,6 @@ Goal: Continuously extract news items (minimum 2–6 lines of usable info per st
 """
 
 import os
-import sys
-import logging
 import re
 import json
 import asyncio
