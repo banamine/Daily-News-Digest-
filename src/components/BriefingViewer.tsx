@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Newspaper, Eye, Code, Sparkles, Download, Copy, Check, ExternalLink, RefreshCw, Layers, Calendar } from 'lucide-react';
+import { Newspaper, Eye, Code, Sparkles, Download, Copy, Check, ExternalLink, RefreshCw, Layers, Calendar, Globe, CheckCircle2 } from 'lucide-react';
 import { BriefingData } from '../types';
 
 interface BriefingViewerProps {
@@ -11,6 +11,8 @@ interface BriefingViewerProps {
 export const BriefingViewer: React.FC<BriefingViewerProps> = ({ briefing, onRefresh, isLoading }) => {
   const [viewMode, setViewMode] = useState<'preview' | 'stories' | 'prompt' | 'html'>('preview');
   const [copied, setCopied] = useState(false);
+  const [isPublishing, setIsPublishing] = useState(false);
+  const [publishMessage, setPublishMessage] = useState<string | null>(null);
 
   if (isLoading) {
     return (
@@ -52,24 +54,56 @@ export const BriefingViewer: React.FC<BriefingViewerProps> = ({ briefing, onRefr
     URL.revokeObjectURL(url);
   };
 
+  const handlePublishToGitHubIndex = async () => {
+    setIsPublishing(true);
+    setPublishMessage(null);
+    try {
+      const res = await fetch('/api/export/publish', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          date: briefing.date,
+          briefing,
+          htmlContent: briefing.htmlContent
+        })
+      });
+
+      if (res.ok) {
+        const data = await res.json();
+        setPublishMessage(`Public GitHub index.html updated! Archived in ${data.archivePath || `data/archive/${briefing.date}/`}`);
+        setTimeout(() => setPublishMessage(null), 6000);
+      } else {
+        setPublishMessage('Failed to publish index page');
+      }
+    } catch (err) {
+      console.error('Publish error:', err);
+      setPublishMessage('Network error during publish');
+    } finally {
+      setIsPublishing(false);
+    }
+  };
+
   return (
     <div id="briefing-viewer-container" className="space-y-6">
       {/* Top Controls & Meta Bar */}
       <div className="bg-[#0a0a0a] border border-white/10 p-5 md:p-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
         <div>
-          <div className="flex items-center gap-2">
+          <div className="flex flex-wrap items-center gap-2">
             <span className="px-2.5 py-0.5 text-[10px] font-mono font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 flex items-center gap-1 uppercase tracking-widest">
               <Calendar className="w-3 h-3" /> {briefing.date}
             </span>
             <span className="px-2.5 py-0.5 text-[10px] font-mono font-semibold bg-amber-500/10 text-amber-400 border border-amber-500/20 uppercase tracking-widest">
               {briefing.articles.length} Stories Compiled
             </span>
+            <span className="px-2.5 py-0.5 text-[10px] font-mono font-semibold bg-blue-500/10 text-blue-400 border border-blue-500/20 uppercase tracking-widest">
+              Archive: data/archive/{briefing.date}/
+            </span>
           </div>
           <h2 className="font-serif text-2xl md:text-3xl font-bold text-white mt-2 tracking-wide">
             Daily Intelligence Synthesis
           </h2>
           <p className="text-[11px] font-mono text-white/50 mt-1 uppercase tracking-widest">
-            Gemini 3.6 LLM • Editorial Layout Engine • High Resolution Render
+            Gemini 3.6 LLM • Public Index Publisher • Data Archiving Enabled
           </p>
         </div>
 
@@ -122,16 +156,39 @@ export const BriefingViewer: React.FC<BriefingViewerProps> = ({ briefing, onRefr
           </div>
 
           <button
+            id="btn-publish-github-index"
+            onClick={handlePublishToGitHubIndex}
+            disabled={isPublishing}
+            className="flex items-center gap-1.5 px-4 py-2 bg-amber-500 hover:bg-amber-400 text-black text-[10px] font-mono font-bold uppercase tracking-widest transition-all active:scale-95 disabled:opacity-50"
+            title="Publish HTML to root index.html for public viewing and archive in data/archive/"
+          >
+            {isPublishing ? (
+              <RefreshCw className="w-3.5 h-3.5 animate-spin" />
+            ) : (
+              <Globe className="w-3.5 h-3.5" />
+            )}
+            <span>{isPublishing ? 'Publishing...' : 'Publish to index.html'}</span>
+          </button>
+
+          <button
             id="btn-download-html"
             onClick={handleDownloadHtml}
-            className="flex items-center gap-1.5 px-4 py-2 bg-white hover:bg-amber-500 text-black text-[10px] font-mono font-bold uppercase tracking-widest transition-all active:scale-95"
+            className="flex items-center gap-1.5 px-4 py-2 bg-white/10 hover:bg-white/20 text-white border border-white/20 text-[10px] font-mono font-bold uppercase tracking-widest transition-all active:scale-95"
             title="Download complete HTML briefing file"
           >
             <Download className="w-3.5 h-3.5" />
-            <span>Export HTML</span>
+            <span>Export File</span>
           </button>
         </div>
       </div>
+
+      {/* Publish Notification Banner */}
+      {publishMessage && (
+        <div className="bg-emerald-500/10 border border-emerald-500/30 p-4 text-emerald-400 text-xs font-mono flex items-center gap-2 animate-fade-in">
+          <CheckCircle2 className="w-4 h-4 shrink-0" />
+          <span>{publishMessage}</span>
+        </div>
+      )}
 
       {/* Main Content Area depending on viewMode */}
       {viewMode === 'preview' && (

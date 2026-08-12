@@ -53,6 +53,10 @@ OUTPUT_DIR = Path("output")
 CURRENT_DIR = OUTPUT_DIR / "current"
 ARCHIVE_DIR = OUTPUT_DIR / "archive"
 
+DATA_DIR = Path("data")
+DATA_CURRENT_DIR = DATA_DIR / "current"
+DATA_ARCHIVE_DIR = DATA_DIR / "archive"
+
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 
 LLM_MODEL = "gemini-3.6-flash"
@@ -970,6 +974,10 @@ def run_pipeline() -> Dict:
     day_archive_dir = ARCHIVE_DIR / today
     day_archive_dir.mkdir(parents=True, exist_ok=True)
 
+    DATA_CURRENT_DIR.mkdir(parents=True, exist_ok=True)
+    day_data_archive_dir = DATA_ARCHIVE_DIR / today
+    day_data_archive_dir.mkdir(parents=True, exist_ok=True)
+
     print(f"\n=============================================")
     print(f"   Daily News Pipeline Execution ({today})")
     print(f"=============================================\n")
@@ -1008,18 +1016,24 @@ def run_pipeline() -> Dict:
     current_image_path = CURRENT_DIR / "latest.jpg"
     generate_image(image_prompt, current_image_path)
 
-    # Copy image to archive folder as well
+    # Copy image to archive folders as well
     archive_image_path = day_archive_dir / f"{today}.jpg"
     archive_image_path.write_bytes(current_image_path.read_bytes())
 
+    data_archive_image_path = day_data_archive_dir / f"{today}.jpg"
+    data_archive_image_path.write_bytes(current_image_path.read_bytes())
+
     # Step 5: HTML Build with Segmented Export
-    print("\nStep 5: Building HTML page & updating /output/current/ and /output/archive/...")
+    print("\nStep 5: Building HTML page & updating public GitHub index.html and /data/archive/...")
     html_content = build_webpage(raw_summary, "latest.jpg", today, rss_stories=rss_articles, scraped_stories=scraped_articles)
     archive_html_content = build_webpage(raw_summary, f"{today}.jpg", today, rss_stories=rss_articles, scraped_stories=scraped_articles)
 
-    # Write to /output/current/ (ALWAYS OVERWRITTEN) and root index.html for GitHub Pages
-    (CURRENT_DIR / "index.html").write_text(html_content, encoding="utf-8")
+    # Populate root index.html for public viewing on GitHub Pages
     Path("index.html").write_text(html_content, encoding="utf-8")
+
+    # Write to /output/current/ and /data/current/
+    (CURRENT_DIR / "index.html").write_text(html_content, encoding="utf-8")
+    (DATA_CURRENT_DIR / "index.html").write_text(html_content, encoding="utf-8")
 
     result_json = {
         "last_updated": datetime.datetime.now(datetime.timezone.utc).isoformat(),
@@ -1034,20 +1048,50 @@ def run_pipeline() -> Dict:
         "stories": articles,
         "raw_summary": raw_summary,
         "image_prompt": image_prompt,
+        "public_index_path": "index.html",
         "current_html_path": str(CURRENT_DIR / "index.html"),
-        "archive_html_path": str(day_archive_dir / "index.html")
+        "data_current_html_path": str(DATA_CURRENT_DIR / "index.html"),
+        "archive_html_path": str(day_archive_dir / "index.html"),
+        "data_archive_html_path": str(day_data_archive_dir / "index.html")
     }
 
     (CURRENT_DIR / "data.json").write_text(json.dumps(result_json, indent=2), encoding="utf-8")
+    (DATA_CURRENT_DIR / "data.json").write_text(json.dumps(result_json, indent=2), encoding="utf-8")
 
-    # Snapshot to /output/archive/YYYY-MM-DD/
+    # Snapshot to /output/archive/YYYY-MM-DD/ and /data/archive/YYYY-MM-DD/
     (day_archive_dir / "index.html").write_text(archive_html_content, encoding="utf-8")
     (day_archive_dir / "data.json").write_text(json.dumps(result_json, indent=2), encoding="utf-8")
 
+    (day_data_archive_dir / "index.html").write_text(archive_html_content, encoding="utf-8")
+    (day_data_archive_dir / "data.json").write_text(json.dumps(result_json, indent=2), encoding="utf-8")
+
+    # Maintain data/archive/manifest.json for retrieval and searching
+    manifest_path = DATA_ARCHIVE_DIR / "manifest.json"
+    manifest = []
+    if manifest_path.exists():
+        try:
+            manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        except Exception:
+            manifest = []
+
+    # Update or prepend today's entry
+    headlines = [s.get("title", s.get("headline", "")) for s in articles[:5]]
+    entry = {
+        "date": today,
+        "timestamp": datetime.datetime.now(datetime.timezone.utc).isoformat(),
+        "stories_count": len(articles),
+        "headlines": headlines,
+        "archive_html_path": f"data/archive/{today}/index.html",
+        "data_json_path": f"data/archive/{today}/data.json"
+    }
+    manifest = [m for m in manifest if m.get("date") != today]
+    manifest.insert(0, entry)
+    manifest_path.write_text(json.dumps(manifest, indent=2), encoding="utf-8")
+
     print(f"\n=============================================")
-    print(f"🎉 Segmented Pipeline successfully completed!")
-    print(f"   Current Live Page: {CURRENT_DIR / 'index.html'}")
-    print(f"   Archived Snapshot: {day_archive_dir / 'index.html'}")
+    print(f"🎉 Pipeline completed successfully!")
+    print(f"   Public GitHub Index: index.html")
+    print(f"   Archived Data Snapshot: data/archive/{today}/index.html")
     print(f"=============================================\n")
 
     return result_json

@@ -34,9 +34,16 @@ const OUTPUT_DIR = path.join(process.cwd(), 'output');
 const CURRENT_DIR = path.join(OUTPUT_DIR, 'current');
 const ARCHIVE_DIR = path.join(OUTPUT_DIR, 'archive');
 
+const DATA_DIR = path.join(process.cwd(), 'data');
+const DATA_CURRENT_DIR = path.join(DATA_DIR, 'current');
+const DATA_ARCHIVE_DIR = path.join(DATA_DIR, 'archive');
+
 if (!fs.existsSync(OUTPUT_DIR)) fs.mkdirSync(OUTPUT_DIR, { recursive: true });
 if (!fs.existsSync(CURRENT_DIR)) fs.mkdirSync(CURRENT_DIR, { recursive: true });
 if (!fs.existsSync(ARCHIVE_DIR)) fs.mkdirSync(ARCHIVE_DIR, { recursive: true });
+if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
+if (!fs.existsSync(DATA_CURRENT_DIR)) fs.mkdirSync(DATA_CURRENT_DIR, { recursive: true });
+if (!fs.existsSync(DATA_ARCHIVE_DIR)) fs.mkdirSync(DATA_ARCHIVE_DIR, { recursive: true });
 
 // Initial Feeds State with Baked-In Global & Alternative News Sources
 let defaultFeeds = [
@@ -723,6 +730,100 @@ function generateHtmlPage(date: string, rawSummary: string, imageUrl: string, fe
 </html>`;
 }
 
+// Helper to update manifest.json in data/archive/
+function updateArchiveManifest(date: string, briefingData: any) {
+  const manifestPath = path.join(DATA_ARCHIVE_DIR, 'manifest.json');
+  let manifest: any[] = [];
+  if (fs.existsSync(manifestPath)) {
+    try {
+      manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf-8'));
+    } catch (e) {
+      manifest = [];
+    }
+  }
+
+  const headlines = (briefingData.articles || []).slice(0, 5).map((a: any) => a.title || a.headline || '');
+  const entry = {
+    date,
+    timestamp: briefingData.timestamp || new Date().toISOString(),
+    stories_count: briefingData.articles?.length || 0,
+    headlines,
+    archive_html_path: `data/archive/${date}/index.html`,
+    data_json_path: `data/archive/${date}/data.json`
+  };
+
+  manifest = manifest.filter((m: any) => m.date !== date);
+  manifest.unshift(entry);
+
+  fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2), 'utf-8');
+}
+
+// Helper to save briefing HTML and data across all target directories
+function saveBriefingToDisk(date: string, htmlContent: string, briefingData: any) {
+  // 1. Root index.html for public viewing on GitHub Pages
+  const rootIndexPath = path.join(process.cwd(), 'index.html');
+  fs.writeFileSync(rootIndexPath, htmlContent, 'utf-8');
+
+  // 2. Output current folder
+  fs.writeFileSync(path.join(CURRENT_DIR, 'index.html'), htmlContent, 'utf-8');
+  fs.writeFileSync(path.join(CURRENT_DIR, 'data.json'), JSON.stringify(briefingData, null, 2), 'utf-8');
+
+  // 3. Dedicated data current folder
+  fs.writeFileSync(path.join(DATA_CURRENT_DIR, 'index.html'), htmlContent, 'utf-8');
+  fs.writeFileSync(path.join(DATA_CURRENT_DIR, 'data.json'), JSON.stringify(briefingData, null, 2), 'utf-8');
+
+  // 4. Output archive folder
+  const dayOutputArchive = path.join(ARCHIVE_DIR, date);
+  if (!fs.existsSync(dayOutputArchive)) fs.mkdirSync(dayOutputArchive, { recursive: true });
+  fs.writeFileSync(path.join(dayOutputArchive, 'index.html'), htmlContent, 'utf-8');
+  fs.writeFileSync(path.join(dayOutputArchive, 'data.json'), JSON.stringify(briefingData, null, 2), 'utf-8');
+
+  // 5. Dedicated data archive folder
+  const dayDataArchive = path.join(DATA_ARCHIVE_DIR, date);
+  if (!fs.existsSync(dayDataArchive)) fs.mkdirSync(dayDataArchive, { recursive: true });
+  fs.writeFileSync(path.join(dayDataArchive, 'index.html'), htmlContent, 'utf-8');
+  fs.writeFileSync(path.join(dayDataArchive, 'data.json'), JSON.stringify(briefingData, null, 2), 'utf-8');
+
+  // 6. Update manifest
+  updateArchiveManifest(date, briefingData);
+}
+
+// Load existing archive data from disk into memory
+function loadArchiveFromDisk() {
+  const checkDirs = [DATA_ARCHIVE_DIR, ARCHIVE_DIR];
+  for (const archiveDir of checkDirs) {
+    if (fs.existsSync(archiveDir)) {
+      const entries = fs.readdirSync(archiveDir, { withFileTypes: true });
+      for (const entry of entries) {
+        if (entry.isDirectory()) {
+          const jsonPath = path.join(archiveDir, entry.name, 'data.json');
+          if (fs.existsSync(jsonPath)) {
+            try {
+              const data = JSON.parse(fs.readFileSync(jsonPath, 'utf-8'));
+              if (data && data.date) {
+                briefingArchive[data.date] = data;
+              }
+            } catch (e) {}
+          }
+        }
+      }
+    }
+  }
+
+  const currentDataPath = path.join(DATA_CURRENT_DIR, 'data.json');
+  if (fs.existsSync(currentDataPath)) {
+    try {
+      const data = JSON.parse(fs.readFileSync(currentDataPath, 'utf-8'));
+      if (data && data.date) {
+        briefingArchive[data.date] = data;
+      }
+    } catch (e) {}
+  }
+}
+
+// Load archives at startup
+loadArchiveFromDisk();
+
 // ================= API ENDPOINTS =================
 
 // Status Check
@@ -1028,6 +1129,119 @@ app.get('/api/briefings', (req, res) => {
   res.json(list);
 });
 
+// Export / Publish to GitHub index page and dedicated data folder
+app.post('/api/export/publish', (req, res) => {
+  try {
+    const today = req.body.date || new Date().toISOString().split('T')[0];
+    let briefingData = req.body.briefing || briefingArchive[today];
+    
+    if (!briefingData) {
+      const dates = Object.keys(briefingArchive).sort().reverse();
+      if (dates.length > 0) {
+        briefingData = briefingArchive[dates[0]];
+      }
+    }
+
+    if (!briefingData) {
+      return res.status(404).json({ error: 'No briefing available to publish' });
+    }
+
+    const htmlContent = req.body.htmlContent || briefingData.htmlContent;
+    if (!htmlContent) {
+      return res.status(400).json({ error: 'HTML content missing for export' });
+    }
+
+    const exportDate = briefingData.date || today;
+    saveBriefingToDisk(exportDate, htmlContent, briefingData);
+
+    res.json({
+      success: true,
+      message: 'Published to GitHub index.html and archived in dedicated data folder',
+      publicIndexPath: 'index.html',
+      dataCurrentPath: 'data/current/index.html',
+      archivePath: `data/archive/${exportDate}/index.html`,
+      date: exportDate
+    });
+  } catch (err: any) {
+    console.error('Error publishing export:', err);
+    res.status(500).json({ error: err.message || 'Export publish failed' });
+  }
+});
+
+// Search Older News Items in Archive Data Folder
+app.get('/api/archive/search', (req, res) => {
+  const query = ((req.query.q as string) || '').toLowerCase().trim();
+  const allBriefings = Object.values(briefingArchive);
+
+  if (!query) {
+    return res.json({
+      query: '',
+      totalMatches: allBriefings.length,
+      briefings: allBriefings
+    });
+  }
+
+  const matchedBriefings = allBriefings.filter(b => {
+    const dateMatch = b.date?.toLowerCase().includes(query);
+    const summaryMatch = b.rawSummaryText?.toLowerCase().includes(query);
+    const articleMatch = (b.articles || []).some((a: any) =>
+      (a.title || '').toLowerCase().includes(query) ||
+      (a.summary || '').toLowerCase().includes(query) ||
+      (a.feedName || '').toLowerCase().includes(query)
+    );
+    return dateMatch || summaryMatch || articleMatch;
+  });
+
+  const matchingArticles: any[] = [];
+  allBriefings.forEach(b => {
+    (b.articles || []).forEach((a: any) => {
+      if (
+        (a.title || '').toLowerCase().includes(query) ||
+        (a.summary || '').toLowerCase().includes(query) ||
+        (a.feedName || '').toLowerCase().includes(query)
+      ) {
+        matchingArticles.push({
+          ...a,
+          editionDate: b.date,
+          archivePath: `data/archive/${b.date}/index.html`
+        });
+      }
+    });
+  });
+
+  res.json({
+    query,
+    totalMatches: matchedBriefings.length,
+    briefings: matchedBriefings,
+    matchingArticlesCount: matchingArticles.length,
+    matchingArticles
+  });
+});
+
+// Get Archive Manifest
+app.get('/api/archive/manifest', (req, res) => {
+  const manifestPath = path.join(DATA_ARCHIVE_DIR, 'manifest.json');
+  if (fs.existsSync(manifestPath)) {
+    try {
+      const data = JSON.parse(fs.readFileSync(manifestPath, 'utf-8'));
+      return res.json(data);
+    } catch (e) {}
+  }
+  
+  const manifest = Object.values(briefingArchive)
+    .sort((a: any, b: any) => b.date.localeCompare(a.date))
+    .map((b: any) => ({
+      date: b.date,
+      timestamp: b.timestamp || new Date().toISOString(),
+      stories_count: b.articles?.length || 0,
+      headlines: (b.articles || []).slice(0, 5).map((a: any) => a.title || ''),
+      archive_html_path: `data/archive/${b.date}/index.html`,
+      data_json_path: `data/archive/${b.date}/data.json`
+    }));
+
+  res.json(manifest);
+});
+
 // Get Specific Briefing
 app.get('/api/briefings/:date', (req, res) => {
   const briefing = briefingArchive[req.params.date];
@@ -1214,21 +1428,14 @@ app.post('/api/pipeline/run', async (req, res) => {
 
     briefingArchive[today] = resultBriefing;
 
-    // Save to OVERWRITE model (/output/current/)
-    fs.writeFileSync(path.join(CURRENT_DIR, 'index.html'), htmlPage, 'utf-8');
-    fs.writeFileSync(path.join(CURRENT_DIR, 'data.json'), JSON.stringify(resultBriefing, null, 2), 'utf-8');
-
-    // Save to ARCHIVE model (/output/archive/YYYY-MM-DD/)
-    const dayArchiveFolder = path.join(ARCHIVE_DIR, today);
-    if (!fs.existsSync(dayArchiveFolder)) {
-      fs.mkdirSync(dayArchiveFolder, { recursive: true });
-    }
-    fs.writeFileSync(path.join(dayArchiveFolder, 'index.html'), htmlPage, 'utf-8');
-    fs.writeFileSync(path.join(dayArchiveFolder, 'data.json'), JSON.stringify(resultBriefing, null, 2), 'utf-8');
+    // Save to public root index.html, output/, and dedicated data/ folders
+    saveBriefingToDisk(today, htmlPage, resultBriefing);
 
     res.json({
       success: true,
-      briefing: resultBriefing
+      briefing: resultBriefing,
+      publicIndexPath: 'index.html',
+      dataArchiveFolder: `data/archive/${today}/`
     });
   } catch (err: any) {
     console.error("Pipeline run failed:", err);
