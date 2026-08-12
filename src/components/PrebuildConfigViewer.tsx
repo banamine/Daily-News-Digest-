@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Cpu, CheckCircle2, Copy, Check, Terminal, FileCode, Zap, Layers, RefreshCw } from 'lucide-react';
+import { Cpu, CheckCircle2, Copy, Check, Terminal, FileCode, Zap, Layers, RefreshCw, Globe, Key, Rocket } from 'lucide-react';
 
 export const PrebuildConfigViewer: React.FC = () => {
   const [prebuildData, setPrebuildData] = useState<any>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [copiedFile, setCopiedFile] = useState<string | null>(null);
-  const [activeTab, setActiveTab] = useState<'devcontainer' | 'setup' | 'workflow' | 'guide'>('devcontainer');
+  const [activeTab, setActiveTab] = useState<'devcontainer' | 'setup' | 'workflow' | 'deploy' | 'guide'>('deploy');
 
   const fetchPrebuildStatus = async () => {
     setLoading(true);
@@ -58,7 +58,7 @@ export const PrebuildConfigViewer: React.FC = () => {
         </div>
 
         {/* Readiness Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6 pt-6 border-t border-white/10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-6 pt-6 border-t border-white/10">
           <div className="bg-black p-4 border border-white/10 flex items-center gap-3">
             <div className="w-9 h-9 bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400">
               <FileCode className="w-4 h-4" />
@@ -115,6 +115,25 @@ export const PrebuildConfigViewer: React.FC = () => {
               </div>
             </div>
           </div>
+
+          <div className="bg-black p-4 border border-white/10 flex items-center gap-3">
+            <div className="w-9 h-9 bg-sky-500/10 border border-sky-500/20 flex items-center justify-center text-sky-400">
+              <Globe className="w-4 h-4" />
+            </div>
+            <div>
+              <div className="text-[10px] font-mono uppercase tracking-widest text-white/50">GitHub Pages CI/CD</div>
+              <div className="text-xs font-mono font-bold text-white flex items-center gap-1.5 mt-0.5">
+                {prebuildData?.files?.deployWorkflow ? (
+                  <>
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
+                    <span>deploy.yml</span>
+                  </>
+                ) : (
+                  <span className="text-amber-400">Not Detected</span>
+                )}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -123,10 +142,20 @@ export const PrebuildConfigViewer: React.FC = () => {
         <div className="flex flex-wrap items-center justify-between gap-4 border-b border-white/10 pb-4">
           <div className="flex items-center gap-2">
             <Layers className="w-4 h-4 text-amber-500" />
-            <h3 className="font-serif font-bold text-lg text-white">Prebuild Configuration Files &amp; Deployment Manual</h3>
+            <h3 className="font-serif font-bold text-lg text-white">CI/CD Workflows &amp; Deployment Specification</h3>
           </div>
 
-          <div className="flex items-center gap-1 bg-black p-1 border border-white/10">
+          <div className="flex flex-wrap items-center gap-1 bg-black p-1 border border-white/10">
+            <button
+              onClick={() => setActiveTab('deploy')}
+              className={`px-3 py-1.5 text-[10px] font-mono uppercase tracking-widest transition-all ${
+                activeTab === 'deploy'
+                  ? 'bg-sky-500 text-black font-bold'
+                  : 'text-white/60 hover:text-white'
+              }`}
+            >
+              deploy.yml (GitHub Pages)
+            </button>
             <button
               onClick={() => setActiveTab('devcontainer')}
               className={`px-3 py-1.5 text-[10px] font-mono uppercase tracking-widest transition-all ${
@@ -169,6 +198,59 @@ export const PrebuildConfigViewer: React.FC = () => {
             </button>
           </div>
         </div>
+
+        {/* Tab 0: deploy.yml (GitHub Pages CI/CD) */}
+        {activeTab === 'deploy' && (
+          <div className="space-y-6">
+            <div className="bg-sky-500/10 border border-sky-500/20 p-4 text-sky-300 flex items-start gap-3">
+              <Rocket className="w-5 h-5 text-sky-400 shrink-0 mt-0.5" />
+              <div className="space-y-1">
+                <strong className="text-white block font-mono uppercase tracking-widest text-xs">Automated Daily News GitHub Pages CI/CD Workflow</strong>
+                <p className="text-white/70 text-xs font-serif leading-relaxed">
+                  This workflow executes <code className="font-mono bg-black px-1.5 py-0.5 text-sky-300 border border-white/10">daily_news.py</code> automatically on a daily cron schedule (<code className="font-mono text-sky-300">0 6 * * *</code>) or manual trigger. It builds <code className="font-mono text-sky-300">index.html</code> with Google Gemini AI summaries &amp; photos and commits the compiled output directly to GitHub Pages: <a href="https://banamine.github.io/Daily-News-Digest-/" target="_blank" rel="noreferrer" className="underline text-sky-400 hover:text-sky-300">https://banamine.github.io/Daily-News-Digest-/</a>
+                </p>
+              </div>
+            </div>
+
+            <div className="space-y-4">
+              <div className="flex items-center justify-between text-[10px] font-mono uppercase tracking-widest text-white/50">
+                <span>Path: <code className="text-sky-400 font-mono bg-black px-2 py-0.5 border border-white/10">/.github/workflows/deploy.yml</code></span>
+                <button
+                  onClick={() => handleCopy(prebuildData?.config?.deployYaml || '', 'deploy')}
+                  className="flex items-center gap-1.5 px-3 py-1 bg-black hover:bg-white/10 text-white border border-white/10 transition-colors"
+                >
+                  {copiedFile === 'deploy' ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
+                  <span>{copiedFile === 'deploy' ? 'Copied Deploy Workflow' : 'Copy File'}</span>
+                </button>
+              </div>
+              <pre className="bg-black p-4 border border-white/10 font-mono text-xs text-sky-200/90 overflow-x-auto max-h-96 leading-relaxed">
+                {prebuildData?.config?.deployYaml || '# deploy.yml created'}
+              </pre>
+            </div>
+
+            {/* Quick 2-Step GitHub Repository Setup Guide */}
+            <div className="p-4 bg-black border border-white/10 space-y-3">
+              <div className="flex items-center gap-2 text-white font-mono text-xs font-bold uppercase tracking-wider">
+                <Key className="w-4 h-4 text-amber-400" />
+                <span>GitHub Repository Setup Checklist</span>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+                <div className="bg-[#0a0a0a] p-3 border border-white/10 space-y-1">
+                  <div className="text-amber-400 font-mono font-bold text-[11px]">1. Add GEMINI_API_KEY Secret</div>
+                  <p className="text-white/60 text-[11px] font-serif">
+                    Go to <a href="https://github.com/banamine/Daily-News-Digest-/settings/secrets/actions" target="_blank" rel="noreferrer" className="text-sky-400 hover:underline">Repo Settings &rarr; Secrets &amp; Variables &rarr; Actions</a>. Add <code className="text-amber-300 font-mono">GEMINI_API_KEY</code> with your Google AI Studio key.
+                  </p>
+                </div>
+                <div className="bg-[#0a0a0a] p-3 border border-white/10 space-y-1">
+                  <div className="text-emerald-400 font-mono font-bold text-[11px]">2. Enable GitHub Pages</div>
+                  <p className="text-white/60 text-[11px] font-serif">
+                    Go to <a href="https://github.com/banamine/Daily-News-Digest-/settings/pages" target="_blank" rel="noreferrer" className="text-sky-400 hover:underline">Repo Settings &rarr; Pages</a>. Set Source to <strong>Deploy from a branch</strong>, select branch <code className="text-emerald-300 font-mono">main</code> and root folder <code className="text-emerald-300 font-mono">/ (root)</code>.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
 
         {/* Tab 1: devcontainer.json */}
         {activeTab === 'devcontainer' && (

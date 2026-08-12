@@ -1017,8 +1017,9 @@ def run_pipeline() -> Dict:
     html_content = build_webpage(raw_summary, "latest.jpg", today, rss_stories=rss_articles, scraped_stories=scraped_articles)
     archive_html_content = build_webpage(raw_summary, f"{today}.jpg", today, rss_stories=rss_articles, scraped_stories=scraped_articles)
 
-    # Write to /output/current/ (ALWAYS OVERWRITTEN)
+    # Write to /output/current/ (ALWAYS OVERWRITTEN) and root index.html for GitHub Pages
     (CURRENT_DIR / "index.html").write_text(html_content, encoding="utf-8")
+    Path("index.html").write_text(html_content, encoding="utf-8")
 
     result_json = {
         "last_updated": datetime.datetime.now(datetime.timezone.utc).isoformat(),

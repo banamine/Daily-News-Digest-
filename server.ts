@@ -750,14 +750,17 @@ app.get('/api/prebuild/status', (req, res) => {
   const devContainerPath = path.join(process.cwd(), '.devcontainer', 'devcontainer.json');
   const setupScriptPath = path.join(process.cwd(), '.devcontainer', 'setup.sh');
   const workflowPath = path.join(process.cwd(), '.github', 'workflows', 'codespaces-prebuilds.yml');
+  const deployWorkflowPath = path.join(process.cwd(), '.github', 'workflows', 'deploy.yml');
 
   const devContainerExists = fs.existsSync(devContainerPath);
   const setupScriptExists = fs.existsSync(setupScriptPath);
   const workflowExists = fs.existsSync(workflowPath);
+  const deployWorkflowExists = fs.existsSync(deployWorkflowPath);
 
   let devcontainerJson = null;
   let setupScript = null;
   let workflowYaml = null;
+  let deployYaml = null;
 
   if (devContainerExists) {
     try {
@@ -770,18 +773,23 @@ app.get('/api/prebuild/status', (req, res) => {
   if (workflowExists) {
     workflowYaml = fs.readFileSync(workflowPath, 'utf-8');
   }
+  if (deployWorkflowExists) {
+    deployYaml = fs.readFileSync(deployWorkflowPath, 'utf-8');
+  }
 
   res.json({
     configured: devContainerExists && setupScriptExists && workflowExists,
     files: {
       devcontainerJson: devContainerExists,
       setupScript: setupScriptExists,
-      codespacesWorkflow: workflowExists
+      codespacesWorkflow: workflowExists,
+      deployWorkflow: deployWorkflowExists
     },
     config: {
       devcontainerJson,
       setupScript,
-      workflowYaml
+      workflowYaml,
+      deployYaml
     },
     environment: {
       nodeVersion: process.version,
