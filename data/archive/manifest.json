@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-08-13",
+    "timestamp": "2026-08-13T07:24:43.214265+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "BREAKING VIDEO: Fox News\u2019 John Roberts Now Feels It\u2019s Safe To Admit He Got Pericarditis After His THIRD COVID Shot \u2014 \u201cAnd It Got WORSE After The Fourth!\u201d ALEX JONES Rips Roberts A New A*%hole!",
+      "Putin can no longer claim victory in Ukraine, Nobel Peace Prize winner tells BBC",
+      "Israeli settlers besieging Palestinian families in West Bank village",
+      "Ebola outbreak on track to be deadliest ever, WHO chief says",
+      "Russia's Putin visits Japan-claimed islands for first time; Tokyo protests - Reuters"
+    ],
+    "archive_html_path": "data/archive/2026-08-13/index.html",
+    "data_json_path": "data/archive/2026-08-13/data.json"
+  },
+  {
     "date": "2026-08-12",
     "timestamp": "2026-08-12T09:40:22.366271+00:00",
     "stories_count": 8,
