@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-08-16",
+    "timestamp": "2026-08-16T06:34:51.512699+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "Hawaii Braces For Direct Tropical Storm Hit On Big Island",
+      "Rescuers search for survivors of powerful Indonesia earthquake",
+      "Morocco detains dozens of migrants trying to cross into Ceuta, reports say",
+      "Eleven killed in Israeli strikes on southern Lebanon, authorities say",
+      "Thousands evacuate after Indonesia quake kills 51, cuts roads - Reuters"
+    ],
+    "archive_html_path": "data/archive/2026-08-16/index.html",
+    "data_json_path": "data/archive/2026-08-16/data.json"
+  },
+  {
     "date": "2026-08-15",
     "timestamp": "2026-08-15T06:34:02.672871+00:00",
     "stories_count": 8,
