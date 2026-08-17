@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-08-17",
+    "timestamp": "2026-08-17T06:49:32.838311+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "RED ALERT! Live Shows on X See 90% Reduction in Viewers After Change in Algorithm!",
+      "Trump envoy Kushner arrives in Israel after rare Hamas talks on Gaza peace plan",
+      "Ukrainian strikes kill six in Russia, acting governor says",
+      "Trump says US to reduce military drills with South Korea after it stayed out of Iran war",
+      "'Heroes' and 'Nashville' actress, Hayden Panettiere, dies at 36 - Reuters"
+    ],
+    "archive_html_path": "data/archive/2026-08-17/index.html",
+    "data_json_path": "data/archive/2026-08-17/data.json"
+  },
+  {
     "date": "2026-08-16",
     "timestamp": "2026-08-16T06:34:51.512699+00:00",
     "stories_count": 8,
