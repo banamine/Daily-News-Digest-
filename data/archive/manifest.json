@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-08-18",
+    "timestamp": "2026-08-18T06:39:25.467289+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "\u201cThis Is What Limited Government Looks Like\u201d \u2013 Texas Constable Unplugs & Covers Flock Cameras Across County",
+      "IVF staff accused of misleading UK parents about sperm and egg donors in northern Cyprus",
+      "Tupac murder trial: 'All hell broke loose' night of rapper's shooting, witness says",
+      "Inside secret police warehouse as Germany targets small boats gangs",
+      "Vessel struck by unknown projectile in Strait of Hormuz, crew casualty reported, UKMTO says - reuters.com"
+    ],
+    "archive_html_path": "data/archive/2026-08-18/index.html",
+    "data_json_path": "data/archive/2026-08-18/data.json"
+  },
+  {
     "date": "2026-08-17",
     "timestamp": "2026-08-17T06:49:32.838311+00:00",
     "stories_count": 8,
