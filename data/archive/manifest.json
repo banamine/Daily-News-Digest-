@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-08-19",
+    "timestamp": "2026-08-19T06:42:20.090404+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "MUST-WATCH: The Quartering Joins Alex Jones For Powerful Debate/Discussion Over The Key Issues Dividing The American Right!",
+      "Sacked Ukrainian defence minister calls for presidential election",
+      "Trump pauses new tariffs on Canada and says countries close to a deal",
+      "Meta hooked children on Facebook and Instagram, US court hears",
+      "Former Fauci adviser pleads guilty in US to conspiring to conceal COVID-19 records - Reuters"
+    ],
+    "archive_html_path": "data/archive/2026-08-19/index.html",
+    "data_json_path": "data/archive/2026-08-19/data.json"
+  },
+  {
     "date": "2026-08-18",
     "timestamp": "2026-08-18T06:39:25.467289+00:00",
     "stories_count": 8,
