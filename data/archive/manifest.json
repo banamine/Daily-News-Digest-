@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-08-20",
+    "timestamp": "2026-08-20T06:42:08.268301+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "Trump Threatens \u201cTremendous Economic Consequences\u201d On Countries That Do Business With Iran",
+      "Australia 'outraged' after Israel decides not to open criminal investigation into killing of aid worker in Gaza",
+      "Founder of collapsed Chinese property giant Evergrande sentenced to life in prison",
+      "Russia launches missile strikes on Kyiv and surrounding region, killing at least eight",
+      "China Evergrande founder sentenced to life in prison - Reuters"
+    ],
+    "archive_html_path": "data/archive/2026-08-20/index.html",
+    "data_json_path": "data/archive/2026-08-20/data.json"
+  },
+  {
     "date": "2026-08-19",
     "timestamp": "2026-08-19T06:42:20.090404+00:00",
     "stories_count": 8,
