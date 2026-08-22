@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-08-22",
+    "timestamp": "2026-08-22T06:35:05.763731+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "Three Truckers Busted for Human Smuggling in Texas",
+      "Canada says it will match US tariffs 'dollar for dollar' as trade talks break down",
+      "TikTok to pay $400m to US in one of largest child privacy settlements",
+      "Israel re-establishes closed West Bank settlement, defying growing international protests",
+      "US judge strikes down policy suspending immigrant visa processing for 75 nations - Reuters"
+    ],
+    "archive_html_path": "data/archive/2026-08-22/index.html",
+    "data_json_path": "data/archive/2026-08-22/data.json"
+  },
+  {
     "date": "2026-08-21",
     "timestamp": "2026-08-21T06:41:16.472613+00:00",
     "stories_count": 8,
