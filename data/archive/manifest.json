@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-08-23",
+    "timestamp": "2026-08-23T06:36:43.128948+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "Five Illegals Refuse to Deplane Deportation Flight to Liberia, Flown to Alternate African Nation \u2013 Report",
+      "Trump says Canada wants 'benefits' of being US state as Carney says countries in trade war",
+      "Carney faces crucial test after walking away from Trump's deal",
+      "Rescuers dig through Ukraine mall wreckage as Zelensky condemns 'despicable' Russian strike",
+      "Nvidia customers notified about AI-related price hikes above 15%, Bloomberg News reports - Reuters"
+    ],
+    "archive_html_path": "data/archive/2026-08-23/index.html",
+    "data_json_path": "data/archive/2026-08-23/data.json"
+  },
+  {
     "date": "2026-08-22",
     "timestamp": "2026-08-22T06:35:05.763731+00:00",
     "stories_count": 8,
