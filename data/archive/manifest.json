@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-08-24",
+    "timestamp": "2026-08-24T06:52:49.259975+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "WATCH: Carjacking Suspect Arrested After High-Speed Pursuit and Crash in Florida",
+      "Divorce, smartphones and control - BBC sees how Taliban run Afghanistan",
+      "Trump says Canada wants 'benefits' of being US state after trade talks collapse",
+      "Shein aims for almost $27bn valuation in stock market debut",
+      "Norway will drill in Arctic regardless of EU's position, says energy minister - Reuters"
+    ],
+    "archive_html_path": "data/archive/2026-08-24/index.html",
+    "data_json_path": "data/archive/2026-08-24/data.json"
+  },
+  {
     "date": "2026-08-23",
     "timestamp": "2026-08-23T06:36:43.128948+00:00",
     "stories_count": 8,
