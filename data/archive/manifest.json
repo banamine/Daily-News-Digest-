@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-08-25",
+    "timestamp": "2026-08-25T06:42:46.528569+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "Supreme Court Upholds Trump\u2019s Order To Restrict Mail-In Ballots, But The Legal Battle Continues",
+      "Iran says it is 'fully prepared' to counter widened US economic sanctions",
+      "Lockerbie bombing trial postponed days before it was due to start",
+      "UK drone factories may face attacks from 'unknown sources', says Kremlin adviser",
+      "Pakistan and Iran made 'significant progress' in talks on conflict, minister says - Reuters"
+    ],
+    "archive_html_path": "data/archive/2026-08-25/index.html",
+    "data_json_path": "data/archive/2026-08-25/data.json"
+  },
+  {
     "date": "2026-08-24",
     "timestamp": "2026-08-24T06:52:49.259975+00:00",
     "stories_count": 8,
