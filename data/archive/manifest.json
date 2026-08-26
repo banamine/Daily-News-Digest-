@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-08-26",
+    "timestamp": "2026-08-26T06:44:36.471979+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "EXCLUSIVE: Nevada Wild Horse Roundups Leave 11 Dead, Leaving Locals Concerned",
+      "Canada announces 'dollar-for-dollar' retaliatory tariffs on US as high as 50%",
+      "China hits out at 'illegal' new US sanctions on Iran and trading partners",
+      "CIA chief travels to Moscow for unannounced talks, US media reports",
+      "At least 15 infants killed in Islamabad hospital fire, local TV reports - Reuters"
+    ],
+    "archive_html_path": "data/archive/2026-08-26/index.html",
+    "data_json_path": "data/archive/2026-08-26/data.json"
+  },
+  {
     "date": "2026-08-25",
     "timestamp": "2026-08-25T06:42:46.528569+00:00",
     "stories_count": 8,
