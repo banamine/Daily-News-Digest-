@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-08-27",
+    "timestamp": "2026-08-27T17:18:44.775449+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "Trump Sycophants Attack Former Border Patrol Commander-At-Large Bovino For Exposing POTUS Immigration Flip-Flop",
+      "Collapsed glacier likely caused devastating Nepal-Tibet floods, scientists say",
+      "What we know about deadly Nepal-Tibet floods",
+      "Convicted Bosnian Serb war criminal Mladi\u0107 dies aged 84",
+      "Nvidia to start employee-funded US political action committee - Reuters"
+    ],
+    "archive_html_path": "data/archive/2026-08-27/index.html",
+    "data_json_path": "data/archive/2026-08-27/data.json"
+  },
+  {
     "date": "2026-08-26",
     "timestamp": "2026-08-26T06:44:36.471979+00:00",
     "stories_count": 8,
