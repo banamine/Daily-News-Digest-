@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-08-28",
+    "timestamp": "2026-08-28T18:11:39.844591+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "Trump Stuns By Outright Dismissing Notion Putin Preparing To Attack A NATO State",
+      "Watch: Why rescuers fear new barrier lake could cause another Nepal-Tibet flood",
+      "Oslo mayor calls off wedding ceremony after death of Norway's king",
+      "Violence breaks out in Ceuta as migrant crisis continues",
+      "Zelenskiy says US gave Kyiv information about meetings in Moscow - Reuters"
+    ],
+    "archive_html_path": "data/archive/2026-08-28/index.html",
+    "data_json_path": "data/archive/2026-08-28/data.json"
+  },
+  {
     "date": "2026-08-27",
     "timestamp": "2026-08-27T17:18:44.775449+00:00",
     "stories_count": 8,
