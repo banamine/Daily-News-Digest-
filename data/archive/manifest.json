@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-08-29",
+    "timestamp": "2026-08-29T12:15:37.170602+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "Dems Targeting RFK Jr. over Samoa Trip",
+      "Footage of Tibet floods isn't being shown in China - and we know little about victims there",
+      "At least 37 dead and hundreds evacuated after strike on Kyiv warehouse",
+      "Trump hails 'historic' deal for US to control 65bn barrels of Venezuela's oil",
+      "Russian strike on Kyiv-area warehouse sparks detonation, killing 37 - Reuters"
+    ],
+    "archive_html_path": "data/archive/2026-08-29/index.html",
+    "data_json_path": "data/archive/2026-08-29/data.json"
+  },
+  {
     "date": "2026-08-28",
     "timestamp": "2026-08-28T18:11:39.844591+00:00",
     "stories_count": 8,
