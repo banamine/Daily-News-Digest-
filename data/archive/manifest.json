@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-08-30",
+    "timestamp": "2026-08-30T11:13:00.674635+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "Trump Admin Blocks $1.6 Billion in Fraudulent Medicare Lab Bills",
+      "Footage of Tibet floods isn't being shown in China - and we know little about victims there",
+      "Manhunt after shooting at Swiss rave kills woman, 22, and injures five",
+      "Iceland votes against restarting talks on joining EU",
+      "Niger says it regains control of airbase after soldiers mutiny - Reuters"
+    ],
+    "archive_html_path": "data/archive/2026-08-30/index.html",
+    "data_json_path": "data/archive/2026-08-30/data.json"
+  },
+  {
     "date": "2026-08-29",
     "timestamp": "2026-08-29T12:15:37.170602+00:00",
     "stories_count": 8,
