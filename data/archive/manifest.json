@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-08-31",
+    "timestamp": "2026-08-31T12:38:40.010307+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "Bowne Report: Screwwormed Beef Industry Teeters On The Brink",
+      "US and Iran trade strikes for first time in weeks",
+      "Man arrested after Swiss rave shooting that killed woman",
+      "South African airline defends low-altitude aerial stunt over packed stadium",
+      "India must uphold water-sharing treaty with Pakistan, international court says - Reuters"
+    ],
+    "archive_html_path": "data/archive/2026-08-31/index.html",
+    "data_json_path": "data/archive/2026-08-31/data.json"
+  },
+  {
     "date": "2026-08-30",
     "timestamp": "2026-08-30T11:13:00.674635+00:00",
     "stories_count": 8,
