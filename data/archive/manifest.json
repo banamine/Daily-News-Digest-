@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-09-01",
+    "timestamp": "2026-09-01T11:05:20.473512+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "EXCLUSIVE: \u201cMy Phone Was Talking To Me Like A Prostitute!\u201d",
+      "'I've never been to Afghanistan': Six million deportees forced to start over under the Taliban",
+      "Nepal death toll crosses 1,000 as rescuers race to find workers trapped in mud-filled tunnels",
+      "The final minutes before floodwater crashed through Nepal-China border",
+      "Two tankers carrying Saudi oil attacked in Strait of Hormuz - Reuters"
+    ],
+    "archive_html_path": "data/archive/2026-09-01/index.html",
+    "data_json_path": "data/archive/2026-09-01/data.json"
+  },
+  {
     "date": "2026-08-31",
     "timestamp": "2026-08-31T12:38:40.010307+00:00",
     "stories_count": 8,
