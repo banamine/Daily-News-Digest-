@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-09-02",
+    "timestamp": "2026-09-02T10:35:31.171832+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "Spanish Judge Frees Moroccan Illegal Police Caught Raping Young Woman On Beach",
+      "US aircraft carrier docks near Thai beach resort Pattaya after record 250 days at sea",
+      "Why US troops have a history in this raucous Thai city",
+      "Thousands still missing as Nepal-Tibet flood relief and recovery intensifies",
+      "Germany successfully tests Israeli ballistic missile, officials say - Reuters"
+    ],
+    "archive_html_path": "data/archive/2026-09-02/index.html",
+    "data_json_path": "data/archive/2026-09-02/data.json"
+  },
+  {
     "date": "2026-09-01",
     "timestamp": "2026-09-01T11:05:20.473512+00:00",
     "stories_count": 8,
