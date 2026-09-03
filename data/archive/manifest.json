@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-09-03",
+    "timestamp": "2026-09-03T10:41:08.221963+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "ID Verification Breach Exposes Millions Of Sensitive Identity Documents",
+      "UN warns of 'supersized' El Ni\u00f1o as countries prepare for impact",
+      "Feminist activist and journalist Gloria Steinem dies at 92",
+      "Channel smuggling gangs resort to 'mega-dinghies' as crackdown limits small boat supply",
+      "Spain's PM Sanchez says no evidence Morocco orchestrated Ceuta border surge - Reuters"
+    ],
+    "archive_html_path": "data/archive/2026-09-03/index.html",
+    "data_json_path": "data/archive/2026-09-03/data.json"
+  },
+  {
     "date": "2026-09-02",
     "timestamp": "2026-09-02T10:35:31.171832+00:00",
     "stories_count": 8,
