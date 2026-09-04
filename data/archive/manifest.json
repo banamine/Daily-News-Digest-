@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-09-04",
+    "timestamp": "2026-09-04T10:34:18.486775+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "VIDEO: James Fishback PHYSICALLY REMOVED From Miami Dade County Commission Meeting For Criticizing Vote To Give Up To $450 Million To The Israeli Government!",
+      "'Layer upon layer of miracles': How Nepal flood survivors were rescued from tunnel",
+      "Europe targeted by spiralling campaign of sabotage and Russia is the chief suspect",
+      "Tensions flare as judge declines to remove juror in Lindsay Clancy trial",
+      "Romanian prosecutors indict Andrew Tate for trafficking minors, money laundering - Reuters"
+    ],
+    "archive_html_path": "data/archive/2026-09-04/index.html",
+    "data_json_path": "data/archive/2026-09-04/data.json"
+  },
+  {
     "date": "2026-09-03",
     "timestamp": "2026-09-03T10:41:08.221963+00:00",
     "stories_count": 8,
