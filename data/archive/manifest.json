@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-09-05",
+    "timestamp": "2026-09-05T09:56:31.158893+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "TRUMP: Iran\u2019s Pickaxe Mountain Nuke Site May Be Next",
+      "Mistrial declared in Lindsay Clancy murder case, after jury deadlocks",
+      "Trump's peace envoys to visit Moscow and Kyiv over weekend",
+      "Europe targeted by spiralling campaign of sabotage - and Russia is the chief suspect",
+      "How escalating attacks are upending daily life in Kyiv - Reuters"
+    ],
+    "archive_html_path": "data/archive/2026-09-05/index.html",
+    "data_json_path": "data/archive/2026-09-05/data.json"
+  },
+  {
     "date": "2026-09-04",
     "timestamp": "2026-09-04T10:34:18.486775+00:00",
     "stories_count": 8,
