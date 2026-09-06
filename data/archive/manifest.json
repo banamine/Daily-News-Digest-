@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-09-06",
+    "timestamp": "2026-09-06T10:15:27.912468+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "Trump Admin Drawing Up Plans for Post-War Middle East Strategy",
+      "US envoys set for Ukraine talks after meeting Putin in Russia",
+      "US and Iran trade retaliatory attacks on ships as conflict flares",
+      "TV presenter among 12 sentenced to death in Egypt drugs case",
+      "US carrier Abraham Lincoln departs Thailand after respite visit - Reuters"
+    ],
+    "archive_html_path": "data/archive/2026-09-06/index.html",
+    "data_json_path": "data/archive/2026-09-06/data.json"
+  },
+  {
     "date": "2026-09-05",
     "timestamp": "2026-09-05T09:56:31.158893+00:00",
     "stories_count": 8,
