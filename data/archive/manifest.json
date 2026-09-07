@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-09-07",
+    "timestamp": "2026-09-07T11:33:24.247496+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "Women Account for 98% of August Job Gains",
+      "Germany's far-right AfD says 'democracy demands' parties work with them after state election win",
+      "Israeli strikes in southern Lebanese village kill nine",
+      "New videos of man in 9/11 lawsuit reveal extremist links",
+      "Volkswagen finds defence future for German plant amid major overhaul - reuters.com"
+    ],
+    "archive_html_path": "data/archive/2026-09-07/index.html",
+    "data_json_path": "data/archive/2026-09-07/data.json"
+  },
+  {
     "date": "2026-09-06",
     "timestamp": "2026-09-06T10:15:27.912468+00:00",
     "stories_count": 8,
