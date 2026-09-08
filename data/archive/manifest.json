@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-09-08",
+    "timestamp": "2026-09-08T10:33:44.463840+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "French Volleyball Player Allegedly Sexually Assaulted By Moroccan Soccer Player On Cruise Ship",
+      "Canada braces for prolonged trade war as counter-tariffs on US take effect",
+      "Eiffel Tower shut by staff protest after female workers moved for religious visit",
+      "Trial over alleged murders of Australian surfer brothers starts in Mexico",
+      "Macron urges EU ban on social media for under-15s in letter to Von der Leyen - Reuters"
+    ],
+    "archive_html_path": "data/archive/2026-09-08/index.html",
+    "data_json_path": "data/archive/2026-09-08/data.json"
+  },
+  {
     "date": "2026-09-07",
     "timestamp": "2026-09-07T11:33:24.247496+00:00",
     "stories_count": 8,
