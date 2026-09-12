@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-09-12",
+    "timestamp": "2026-09-12T10:03:31.167486+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "Afghan Deported in First Use of Alien Terrorist Court",
+      "Saudi Arabia shuts key oil pipeline after drone attack launched from Iraq",
+      "US and Ireland's relationship 'stronger than ever'",
+      "Tragic death of woman who testified against father in notorious mafia murder of mother",
+      "BRICS agrees on joint declaration before New Delhi summit, sources say - Reuters"
+    ],
+    "archive_html_path": "data/archive/2026-09-12/index.html",
+    "data_json_path": "data/archive/2026-09-12/data.json"
+  },
+  {
     "date": "2026-09-11",
     "timestamp": "2026-09-11T10:35:49.217984+00:00",
     "stories_count": 8,
