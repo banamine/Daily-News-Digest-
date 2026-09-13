@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-09-13",
+    "timestamp": "2026-09-13T11:04:14.585174+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "OpenAI: Altman Says No IPO This Year, AI Extinction Risk \u201cUnacceptable\u201d",
+      "Anthropic boss Dario Amodei calls for AI development to slow down",
+      "Trump's comments on a united Ireland may have targeted audience across the Atlantic",
+      "They lost their jobs after posting about Charlie Kirk, but some have no regrets",
+      "Russia hits Ukrainian-Polish border area, Kyiv says - Reuters"
+    ],
+    "archive_html_path": "data/archive/2026-09-13/index.html",
+    "data_json_path": "data/archive/2026-09-13/data.json"
+  },
+  {
     "date": "2026-09-12",
     "timestamp": "2026-09-12T10:03:31.167486+00:00",
     "stories_count": 8,
