@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-09-14",
+    "timestamp": "2026-09-14T11:44:50.397981+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "14-Year-Old Girl Suffered \u201cViolent Anal Rape\u201d From Man With \u201cArabic-Sounding Name\u201d On Danish Park Bench",
+      "China criticises idea it is in 'malicious competition' over AI",
+      "Russia hits Ukrainian train shortly after Boris Johnson and top European officials leave station",
+      "Thousands demand end to violence in Mexican cartel hotspot",
+      "How China is preparing for the risk of AI escaping human control - Reuters"
+    ],
+    "archive_html_path": "data/archive/2026-09-14/index.html",
+    "data_json_path": "data/archive/2026-09-14/data.json"
+  },
+  {
     "date": "2026-09-13",
     "timestamp": "2026-09-13T11:04:14.585174+00:00",
     "stories_count": 8,
