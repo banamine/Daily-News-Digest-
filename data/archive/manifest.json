@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-09-15",
+    "timestamp": "2026-09-15T11:01:39.052740+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "Supremacist Greater Israel Rabbis Are The #1 Threat To Israel & The Jews!",
+      "Trump says AI safety fears a 'hoax' as he rejects calls for greater safeguards",
+      "AI regulation faces political deadlock as calls grow for Congress to act",
+      "Denmark says Russian warship fired flares at military helicopter",
+      "Bond selloff drives US benchmark beyond 5%; stocks rattled - Reuters"
+    ],
+    "archive_html_path": "data/archive/2026-09-15/index.html",
+    "data_json_path": "data/archive/2026-09-15/data.json"
+  },
+  {
     "date": "2026-09-14",
     "timestamp": "2026-09-14T11:44:50.397981+00:00",
     "stories_count": 8,
