@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-09-16",
+    "timestamp": "2026-09-16T10:49:32.698989+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "Germany: \u2018Transgender\u2019 Police Officer On Trial For Raping 14-Year-Old Girl In Fast Food Toilet Stall, Possessing Hundreds Of Child & Animal Abuse Videos",
+      "EU chief opens door for Canada to become 'associate member'",
+      "OpenAI boss says world 'right to be afraid' but should trust AI firms",
+      "All support acts on Ed Sheeran's US tour quit after Macklemore dropped",
+      "Former Kosovo president Thaci sentenced to 25 years in prison for war crimes - Reuters"
+    ],
+    "archive_html_path": "data/archive/2026-09-16/index.html",
+    "data_json_path": "data/archive/2026-09-16/data.json"
+  },
+  {
     "date": "2026-09-15",
     "timestamp": "2026-09-15T11:01:39.052740+00:00",
     "stories_count": 8,
