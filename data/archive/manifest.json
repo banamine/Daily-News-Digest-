@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-09-17",
+    "timestamp": "2026-09-17T10:56:05.899160+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "Assad regime planned US journalist's kidnap for weeks, BBC finds",
+      "Uncontrolled AI could lead to 'silicon species' rivalling humans, warns Microsoft",
+      "Ninth woman's body found as South African police investigate string of deaths",
+      "UN mission finds grounds to believe US committed war crimes in Iran, and Tehran crimes against humanity - Reuters",
+      "AI military risks spark concern at China security conference - Reuters"
+    ],
+    "archive_html_path": "data/archive/2026-09-17/index.html",
+    "data_json_path": "data/archive/2026-09-17/data.json"
+  },
+  {
     "date": "2026-09-16",
     "timestamp": "2026-09-16T10:49:32.698989+00:00",
     "stories_count": 8,
