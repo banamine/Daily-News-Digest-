@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-09-18",
+    "timestamp": "2026-09-18T10:32:06.044543+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "Three dead and eight injured in Philippines school shooting",
+      "At least 16 killed in attack on mosque in Pakistan",
+      "Canada welcomes EU proposal to become 'associate member'",
+      "One killed, four injured in Philippines school shooting, provincial governor says - Reuters",
+      "Voting begins in Russian parliamentary election which Putin has cast as barometer of support for war - Reuters"
+    ],
+    "archive_html_path": "data/archive/2026-09-18/index.html",
+    "data_json_path": "data/archive/2026-09-18/data.json"
+  },
+  {
     "date": "2026-09-17",
     "timestamp": "2026-09-17T10:56:05.899160+00:00",
     "stories_count": 8,
