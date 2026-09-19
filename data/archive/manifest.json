@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-09-19",
+    "timestamp": "2026-09-19T10:17:30.397185+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "US and Denmark reach deal over Greenland after Trump annexation threats",
+      "Trump says he is banning CNN and Politico from White House",
+      "Google's Gemini AI hacked three companies in security test",
+      "Poland starts preventive military aviation operations as Russia strikes Ukraine, army says - Reuters",
+      "AfD surge in eastern Germany makes some immigrants question whether they still belong - Reuters"
+    ],
+    "archive_html_path": "data/archive/2026-09-19/index.html",
+    "data_json_path": "data/archive/2026-09-19/data.json"
+  },
+  {
     "date": "2026-09-18",
     "timestamp": "2026-09-18T10:32:06.044543+00:00",
     "stories_count": 8,
