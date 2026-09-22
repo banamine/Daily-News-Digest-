@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-09-22",
+    "timestamp": "2026-09-22T10:58:13.391154+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "Major US outlets boycott shared Trump coverage in protest at media ban",
+      "Lithuania ready to 'fight back' but has evacuation plans in face of Russia threats, PM tells BBC",
+      "Iran must stop arming Houthis in Yemen, G7 says ahead of UN General Assembly",
+      "Saudi Arabia restarts East-West oil pipeline, to resume exports from Yanbu, sources say - Reuters",
+      "EXCLUSIVE: DeepSeek to brief UN Security Council on AI this week, sources say - Reuters"
+    ],
+    "archive_html_path": "data/archive/2026-09-22/index.html",
+    "data_json_path": "data/archive/2026-09-22/data.json"
+  },
+  {
     "date": "2026-09-21",
     "timestamp": "2026-09-21T11:56:43.448560+00:00",
     "stories_count": 8,
