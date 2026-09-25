@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-09-25",
+    "timestamp": "2026-09-25T11:05:52.774012+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "Trump and Xi exchange warm words at state dinner but little progress on key issues",
+      "Xi got Trump's red carpet welcome - but not everything he wanted",
+      "Netanyahu defends Israeli military action as delegates walk out before UN speech",
+      "Russia's Novoshakhtinsk oil refinery suspends operations after drone attack, governor says - Reuters",
+      "Swedish, Finnish fighter jets intercept group of Russian military aircraft - Reuters"
+    ],
+    "archive_html_path": "data/archive/2026-09-25/index.html",
+    "data_json_path": "data/archive/2026-09-25/data.json"
+  },
+  {
     "date": "2026-09-24",
     "timestamp": "2026-09-24T11:05:10.253839+00:00",
     "stories_count": 8,
