@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-09-27",
+    "timestamp": "2026-09-27T11:22:29.663031+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "Iranian minister says only negotiation can end conflict after Trump rejects Hormuz deal",
+      "Killer Christa Pike is to be executed within days - but her defence say she's a victim too",
+      "Four killed in helicopter crash near Montreal",
+      "Afghanistan says 28 fighters killed after crossing from Pakistan - Reuters",
+      "Italy's Catania airport keeps flights suspended until midnight due to Etna ash - Reuters"
+    ],
+    "archive_html_path": "data/archive/2026-09-27/index.html",
+    "data_json_path": "data/archive/2026-09-27/data.json"
+  },
+  {
     "date": "2026-09-26",
     "timestamp": "2026-09-26T10:47:30.392186+00:00",
     "stories_count": 8,
