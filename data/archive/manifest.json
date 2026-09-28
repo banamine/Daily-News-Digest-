@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-09-28",
+    "timestamp": "2026-09-28T12:51:35.160112+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "\u201cNow It\u2019s Our Turn\u201d: Russian Payback for Ukraine Oil Attacks Imminent",
+      "Inside Yemen's front-line city as Houthis battle for control",
+      "Trump-Xi summit: What wasn't said might matter the most",
+      "Mexico's Pacific coast braces for Hurricane Polo",
+      "Nvidia adds $150 billion to existing share repurchase plan - Reuters"
+    ],
+    "archive_html_path": "data/archive/2026-09-28/index.html",
+    "data_json_path": "data/archive/2026-09-28/data.json"
+  },
+  {
     "date": "2026-09-27",
     "timestamp": "2026-09-27T11:22:29.663031+00:00",
     "stories_count": 8,
