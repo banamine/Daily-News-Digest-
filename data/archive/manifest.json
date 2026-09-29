@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-09-29",
+    "timestamp": "2026-09-29T12:06:02.691483+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "EXCLUSIVE: The Greater Israel Project Is Designed To Bring In A One World Government, Warns Former Green Beret Matt Murphy!",
+      "OpenAI scraps rollout of new model over safety concerns",
+      "Evicted Spanish pensioner can move back home, lawyer says",
+      "Argentina threatens legal action against UK over Falkland Islands oil exploration",
+      "Trump to host Zuckerberg, Anthropic's Amodei, and other AI titans Tuesday - reuters.com"
+    ],
+    "archive_html_path": "data/archive/2026-09-29/index.html",
+    "data_json_path": "data/archive/2026-09-29/data.json"
+  },
+  {
     "date": "2026-09-28",
     "timestamp": "2026-09-28T12:51:35.160112+00:00",
     "stories_count": 8,
