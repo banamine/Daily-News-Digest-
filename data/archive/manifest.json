@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-10-01",
+    "timestamp": "2026-10-01T12:24:18.999643+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "US death row inmate survives execution attempt after two lethal injections",
+      "Too early to say if Iran involved in Dubai-Tel Aviv flight attack, Israeli PM says",
+      "What we know about stabbing on Flydubai flight to Israel",
+      "EXCLUSIVE: Syrian government officials and Hezbollah held secret talks in Turkey, sources say - Reuters",
+      "EXCLUSIVE: Broadcom to lend Anthropic up to $42 billion to lease its chips, filing says - Reuters"
+    ],
+    "archive_html_path": "data/archive/2026-10-01/index.html",
+    "data_json_path": "data/archive/2026-10-01/data.json"
+  },
+  {
     "date": "2026-09-30",
     "timestamp": "2026-09-30T11:54:06.359488+00:00",
     "stories_count": 8,
