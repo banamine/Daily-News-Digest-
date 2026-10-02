@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-10-02",
+    "timestamp": "2026-10-02T11:51:24.327103+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "'I was not going to let others die' - pilot of Flydubai flight describes cockpit attack by co-pilot",
+      "Christa Pike in critical condition after surviving two lethal injections, lawyer says",
+      "A 'dark cloud' and 'dismal' mood: How it feels on Cornell campus right now",
+      "Euro zone inflation surges more than expected, keeping pressure on ECB to hike rates - Reuters",
+      "EXCLUSIVE: Europe weighs new diesel stocks release after US pressure, sources say - Reuters"
+    ],
+    "archive_html_path": "data/archive/2026-10-02/index.html",
+    "data_json_path": "data/archive/2026-10-02/data.json"
+  },
+  {
     "date": "2026-10-01",
     "timestamp": "2026-10-01T12:24:18.999643+00:00",
     "stories_count": 8,
