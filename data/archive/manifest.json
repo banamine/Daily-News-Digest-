@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-10-03",
+    "timestamp": "2026-10-03T11:04:42.750374+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "More than 250K Visas Revoked by Trump",
+      "Flydubai co-pilot attacked captain with axe, UAE official says",
+      "Russia strikes second major bridge in Kyiv, mayor says",
+      "G7 to release millions of barrels of oil and diesel after Trump threat",
+      "India beat Pakistan in final to complete cricket double - Reuters"
+    ],
+    "archive_html_path": "data/archive/2026-10-03/index.html",
+    "data_json_path": "data/archive/2026-10-03/data.json"
+  },
+  {
     "date": "2026-10-02",
     "timestamp": "2026-10-02T11:51:24.327103+00:00",
     "stories_count": 8,
