@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-10-04",
+    "timestamp": "2026-10-04T11:46:10.469572+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "Kyiv bridge hit in further Russian drone attack as German chancellor makes surprise visit",
+      "Australia investigating Flydubai co-pilot's links to country",
+      "Tennessee prison chief to resign after Christa Pike's failed execution",
+      "Government forces seize capital of Ethiopia's Tigray region from rebels - Reuters",
+      "Rare police raid of Taipei gay bar sparks angry protest - Reuters"
+    ],
+    "archive_html_path": "data/archive/2026-10-04/index.html",
+    "data_json_path": "data/archive/2026-10-04/data.json"
+  },
+  {
     "date": "2026-10-03",
     "timestamp": "2026-10-03T11:04:42.750374+00:00",
     "stories_count": 8,
