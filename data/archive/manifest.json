@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-10-05",
+    "timestamp": "2026-10-05T13:33:14.238364+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "LGBT Migrants Deported To \u201cHostile\u201d Third Countries",
+      "Spanish PM S\u00e1nchez calls early election after housing protests",
+      "Flydubai co-pilot planned to crash plane into Tel Aviv airport or building, reports say",
+      "Teenager's hand blown off during confrontation between France school protesters and police",
+      "Teenager has hand blown off during French school protests, official says - Reuters"
+    ],
+    "archive_html_path": "data/archive/2026-10-05/index.html",
+    "data_json_path": "data/archive/2026-10-05/data.json"
+  },
+  {
     "date": "2026-10-04",
     "timestamp": "2026-10-04T11:46:10.469572+00:00",
     "stories_count": 8,
