@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-10-06",
+    "timestamp": "2026-10-06T12:43:53.809399+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "Former German spy chief arrested for espionage and treason",
+      "Trump says 'threat' led US to pull bombers from RAF Fairford",
+      "Fort Hood shooter to be executed by firing squad - a first for US military since World War Two",
+      "France tests upgraded nuclear missile against backdrop of Russia tensions - Reuters",
+      "Rubio tells Russia to share more information about plague death - Reuters"
+    ],
+    "archive_html_path": "data/archive/2026-10-06/index.html",
+    "data_json_path": "data/archive/2026-10-06/data.json"
+  },
+  {
     "date": "2026-10-05",
     "timestamp": "2026-10-05T13:33:14.238364+00:00",
     "stories_count": 8,
