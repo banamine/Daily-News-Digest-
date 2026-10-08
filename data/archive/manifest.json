@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-10-08",
+    "timestamp": "2026-10-08T12:47:14.503661+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "Russian strike on buses kills at least 30, say officials, as deadly attacks on Ukraine surge",
+      "US and Lebanon protecting wanted Syrian general, BBC finds",
+      "Most UK diplomats to leave East Jerusalem consulate, Israel says, as Miliband says 'vital services' to remain",
+      "Canadian writer Anne Carson wins 2026 Nobel Prize in Literature - Reuters",
+      "Booms and flight disruptions in Riyadh as Saudi-Houthi war escalates - Reuters"
+    ],
+    "archive_html_path": "data/archive/2026-10-08/index.html",
+    "data_json_path": "data/archive/2026-10-08/data.json"
+  },
+  {
     "date": "2026-10-07",
     "timestamp": "2026-10-07T12:37:17.250510+00:00",
     "stories_count": 8,
