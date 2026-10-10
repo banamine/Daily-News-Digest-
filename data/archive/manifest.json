@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-10-10",
+    "timestamp": "2026-10-10T11:53:05.961309+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "Another US Base in UK Faces Breach by Foreign Nationals",
+      "Trump announces deal for Russian diesel as Zelensky calls it a gift to Putin",
+      "Analysis: Trump's shock Russia deal highlights mounting pressure to curb fuel prices",
+      "Three men found guilty of murdering Australian brothers and US friend in Mexico",
+      "Five shot dead at residence in Georgia's Douglas, police says - Reuters"
+    ],
+    "archive_html_path": "data/archive/2026-10-10/index.html",
+    "data_json_path": "data/archive/2026-10-10/data.json"
+  },
+  {
     "date": "2026-10-09",
     "timestamp": "2026-10-09T12:50:12.556876+00:00",
     "stories_count": 8,
