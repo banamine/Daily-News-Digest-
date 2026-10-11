@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-10-11",
+    "timestamp": "2026-10-11T12:04:58.899183+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "'Time for Ukraine to get new president,' says Trump after Zelensky condemns diesel deal",
+      "Pope Leo to have surgery after lump found on lung",
+      "Young men live in fear of being snatched off the streets and sold to Myanmar's army",
+      "Yemen's Houthis renew warning over Saudi airports after deadly Riyadh attack - Reuters",
+      "Ukraine will stop hitting refineries if Russia halts energy attacks, Zelenskiy says - Reuters"
+    ],
+    "archive_html_path": "data/archive/2026-10-11/index.html",
+    "data_json_path": "data/archive/2026-10-11/data.json"
+  },
+  {
     "date": "2026-10-10",
     "timestamp": "2026-10-10T11:53:05.961309+00:00",
     "stories_count": 8,
