@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-10-12",
+    "timestamp": "2026-10-12T14:22:49.649378+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "Documents falsified to evade tax on Abramovich's wealth, BBC finds",
+      "Saudi minister vows 'serious response' to Houthi attacks on airports",
+      "Trump faces growing backlash over plans to import diesel from Russia",
+      "US launches immigration raid of Democratic congresswoman Ilhan Omar's home - Reuters",
+      "NATO commander Grynkewich warns Russia attack would be 'utterly futile' - Reuters"
+    ],
+    "archive_html_path": "data/archive/2026-10-12/index.html",
+    "data_json_path": "data/archive/2026-10-12/data.json"
+  },
+  {
     "date": "2026-10-11",
     "timestamp": "2026-10-11T12:04:58.899183+00:00",
     "stories_count": 8,
