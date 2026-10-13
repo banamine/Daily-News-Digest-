@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-10-13",
+    "timestamp": "2026-10-13T13:31:28.329623+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "Russia's offensive ability is broken, Kyiv's former top general tells BBC",
+      "Breaking Bad actor RJ Mitte dies aged 34",
+      "One dead and several hurt after rollercoaster incident at Six Flags",
+      "Iran and Russia ramping up hybrid campaigns in Britain, UK spy chief says - Reuters",
+      "Russia hits no energy targets in Ukraine for first time since Trump's 'truce' - Reuters"
+    ],
+    "archive_html_path": "data/archive/2026-10-13/index.html",
+    "data_json_path": "data/archive/2026-10-13/data.json"
+  },
+  {
     "date": "2026-10-12",
     "timestamp": "2026-10-12T14:22:49.649378+00:00",
     "stories_count": 8,
