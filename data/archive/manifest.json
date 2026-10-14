@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-10-14",
+    "timestamp": "2026-10-14T11:08:50.917804+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "Russian strikes leave 600,000 without power in Ukraine, as Starlink restrictions affect front line",
+      "Pope diagnosed with lung cancer but had successful surgery, Vatican says",
+      "Germany puts Ukrainian on trial accused of blowing up Nord Stream pipelines",
+      "Yemen's Houthis vow more attacks on Saudi airports, oil facilities after Aramco HQ hit - Reuters",
+      "Comedian Russell Brand was a sexual predator, UK prosecutors say - Reuters"
+    ],
+    "archive_html_path": "data/archive/2026-10-14/index.html",
+    "data_json_path": "data/archive/2026-10-14/data.json"
+  },
+  {
     "date": "2026-10-13",
     "timestamp": "2026-10-13T13:31:28.329623+00:00",
     "stories_count": 8,
