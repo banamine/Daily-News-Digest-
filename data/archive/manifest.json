@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-10-16",
+    "timestamp": "2026-10-16T10:39:37.348966+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "IT\u2019S OFFICIAL: ALEX JONES Admits His Secret Flaw, Live On-Air!",
+      "Children aged 5, 8 and 11 killed in US school shooting before suspect shot by bystander",
+      "'It's really hard to believe' - How Oregon primary school shooting unfolded",
+      "Ship attack reports near Hormuz reach record high as oil exports slow",
+      "EU leaders rally around Zelenskiy as Trump calls Ukrainian strikes on Russia a 'disgrace' - Reuters"
+    ],
+    "archive_html_path": "data/archive/2026-10-16/index.html",
+    "data_json_path": "data/archive/2026-10-16/data.json"
+  },
+  {
     "date": "2026-10-15",
     "timestamp": "2026-10-15T10:50:21.321288+00:00",
     "stories_count": 8,
