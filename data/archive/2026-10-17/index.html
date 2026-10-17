@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Intelligence Briefing – 2026-10-17</title>
+    <style>
+        :root {
+            --bg: #0f1115;
+            --card: #1a1d24;
+            --text: #e6e8ec;
+            --muted: #9ba1ad;
+            --accent: #3b82f6;
+            --border: #2a2e38;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; padding: 2rem 1rem; }
+        .container { max-width: 960px; margin: 0 auto; }
+        header { text-align: center; margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+        header h1 { font-size: 2.2rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 0.4rem; color: #ffffff; }
+        header .date { color: var(--accent); font-size: 1rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+        
+        .hero-image { width: 100%; border-radius: 16px; overflow: hidden; margin-bottom: 2.5rem; box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6); border: 1px solid var(--border); background: #0b0f19; }
+        
+        /* Flexible Photo Collage Component */
+        .collage-wrapper { position: relative; width: 100%; }
+        .collage-header-pill {
+            position: absolute; top: 14px; left: 14px; z-index: 10;
+            background: rgba(15, 23, 42, 0.88); backdrop-filter: blur(8px);
+            border: 1px solid rgba(56, 189, 248, 0.35); color: #38bdf8;
+            padding: 5px 12px; border-radius: 999px; font-size: 11px; font-weight: 800;
+            letter-spacing: 0.5px; display: flex; align-items: center; gap: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        }
+        .collage-container {
+            display: grid; gap: 8px; background: #090d16; padding: 8px; border-radius: 16px; min-height: 280px;
+        }
+        .collage-container.collage-count-1 { grid-template-columns: 1fr; grid-template-rows: 360px; }
+        .collage-container.collage-count-1 .hero-tile { grid-row: auto; }
+
+        .collage-container.collage-count-2 { grid-template-columns: 1fr 1fr; grid-template-rows: 320px; }
+        .collage-container.collage-count-2 .hero-tile { grid-row: auto; }
+
+        .collage-container.collage-count-3 { grid-template-columns: 1.6fr 1fr; grid-template-rows: 170px 170px; }
+        .collage-container.collage-count-3 .hero-tile { grid-row: span 2; }
+
+        .collage-container.collage-count-4 { grid-template-columns: 1.6fr 1fr 1fr; grid-template-rows: 170px 170px; }
+        .collage-container.collage-count-4 .hero-tile { grid-row: span 2; }
+        .collage-container.collage-count-4 .collage-tile:nth-child(4) { grid-column: span 2; }
+
+        .collage-container.collage-count-5 { grid-template-columns: 1.8fr 1fr 1fr; grid-template-rows: 180px 180px; }
+        .collage-container.collage-count-5 .hero-tile { grid-row: span 2; }
+
+        @media (max-width: 768px) {
+            .collage-container,
+            .collage-container.collage-count-2,
+            .collage-container.collage-count-3,
+            .collage-container.collage-count-4,
+            .collage-container.collage-count-5 {
+                grid-template-columns: 1fr; grid-template-rows: auto;
+            }
+            .collage-tile, .hero-tile { min-height: 180px; }
+        }
+        .collage-tile {
+            position: relative; border-radius: 10px; overflow: hidden; background: #131927;
+            border: 1px solid rgba(255, 255, 255, 0.08); transition: transform 0.3s ease;
+        }
+        .collage-tile.hero-tile { grid-row: span 2; }
+        .collage-tile img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
+        .collage-tile:hover img { transform: scale(1.06); }
+        .collage-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(to top, rgba(11, 15, 23, 0.95) 0%, rgba(11, 15, 23, 0.2) 60%, transparent 100%);
+            display: flex; flex-direction: column; justify-content: flex-end; padding: 12px;
+        }
+        .collage-badge {
+            align-self: flex-start; background: rgba(56, 189, 248, 0.2); color: #38bdf8;
+            border: 1px solid rgba(56, 189, 248, 0.4); font-size: 10px; font-weight: 700;
+            text-transform: uppercase; padding: 2px 8px; border-radius: 999px; margin-bottom: 6px;
+        }
+        .collage-badge.hero-badge { background: rgba(16, 185, 129, 0.2); color: #34d399; border-color: rgba(16, 185, 129, 0.4); }
+        .collage-title { color: #ffffff; font-size: 12px; font-weight: 700; line-height: 1.35; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        .hero-tile .collage-title { font-size: 17px; }
+
+        .stories { display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 3rem; }
+        .story { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem; }
+        .story h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: #f1f3f5; }
+        .story-body { color: var(--muted); font-size: 0.98rem; }
+        .section-title { font-size: 1.3rem; font-weight: 800; color: var(--accent); margin: 2rem 0 1rem; border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; }
+        .segmented-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
+        .mini-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+        .mini-card.scraped { border-left: 3px solid #8b5cf6; }
+        .mini-card.rss { border-left: 3px solid #3b82f6; }
+        .source-tag { font-size: 0.75rem; font-weight: bold; color: var(--accent); margin-bottom: 0.4rem; }
+        .mini-card h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.4rem; }
+        .mini-card h3 a { color: #f1f3f5; text-decoration: none; }
+        .mini-card h3 a:hover { text-decoration: underline; color: var(--accent); }
+        .mini-card p { font-size: 0.82rem; color: var(--muted); line-height: 1.4; }
+        footer { text-align: center; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="date">2026-10-17</div>
+            <h1>Daily Intelligence Briefing</h1>
+        </header>
+
+        <div class="hero-image">
+            
+                
+    <div class="collage-wrapper">
+        <div class="collage-header-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7"/><path d="M16 5h5v5"/><path d="m21 5-9 9"/></svg>
+            <span>Parsed Feeds Mixed Photo Collage (5 Photos)</span>
+        </div>
+        <div class="collage-container collage-count-5">
+            <div class="collage-tile hero-tile">
+                <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/c147/live/f608c860-c9cf-11f1-84c1-fd3c3266bb86.jpg" alt="Trump waives several Russia sanctions as row with Zelensky intensifies" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+                <div class="collage-overlay">
+                    <span class="collage-badge hero-badge">BBC World News</span>
+                    <h3 class="collage-title hero-title">Trump waives several Russia sanctions as row with Zelensky intensifies</h3>
+                </div>
+            </div>
+            
+        <div class="collage-tile">
+            <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/7c80/live/72894110-c9b4-11f1-9409-01a8c77950d7.jpg" alt="Oregon teacher fought school attacker before armed dad shot suspect &#x27;multiple times&#x27;" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">BBC World News</span>
+                <h4 class="collage-title">Oregon teacher fought school attacker before armed dad shot suspect &#x27;multiple times&#x27;</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9ab9/live/138578c0-c453-11f1-bc2e-018d645d8d21.jpg" alt="Three men jailed for 158 years each for murdering Australian and US surfers in Mexico" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">BBC World News</span>
+                <h4 class="collage-title">Three men jailed for 158 years each for murdering Australian and US surfers in Mexico</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="&#x27;Our land, our Albania&#x27;: young lawmaker demands new future as protests rage - Reuters" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">Reuters Top News</span>
+                <h4 class="collage-title">&#x27;Our land, our Albania&#x27;: young lawmaker demands new future as protests rage - Reuters</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="IMFC chair says global economy resilient; delegates walk out on Russian official - Reuters" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">Reuters Top News</span>
+                <h4 class="collage-title">IMFC chair says global economy resilient; delegates walk out on Russian official - Reuters</h4>
+            </div>
+        </div>
+        
+        </div>
+    </div>
+    
+            
+        </div>
+
+        <main class="stories">
+            
+        <div class="story">
+            <h2>Trump waives several Russia sanctions as row with Zelensky intensifies</h2>
+            <div class="story-body"><strong>Source:</strong> BBC World News<br><strong>Summary:</strong> US President Donald Trump has temporarily waived several sanctions against Russia recently passed by Congress, citing national security concerns. The move comes amid an escalating dispute between the US administration and Ukrainian President Volodymyr Zelensky.<br><strong>Key Theme:</strong> International Relations<br>---</div>
+        </div>
+        
+        <div class="story">
+            <h2>Oregon teacher fought school attacker before armed dad shot suspect &#x27;multiple times&#x27;</h2>
+            <div class="story-body"><strong>Source:</strong> BBC World News<br><strong>Summary:</strong> A 16-year-old former student targeted a special educational needs classroom at an Oregon primary school before being shot multiple times by an armed parent. Prior to the shooting, a teacher confronted and physically fought the attacker to protect the students.<br><strong>Key Theme:</strong> Public Safety<br>---</div>
+        </div>
+        
+        <div class="story">
+            <h2>Three men jailed for 158 years each for murdering Australian and US surfers in Mexico</h2>
+            <div class="story-body"><strong>Source:</strong> BBC World News<br><strong>Summary:</strong> A Mexican court has sentenced three men to 158 years in prison each for the murders of two Australian brothers and an American tourist. Victims Jake Robinson, Callum Robinson, and Carter Rhoad were killed during a botched robbery while on a surfing trip.<br><strong>Key Theme:</strong> Justice<br>---</div>
+        </div>
+        
+        <div class="story">
+            <h2>&#x27;Our land, our Albania&#x27;: young lawmaker demands new future as protests rage</h2>
+            <div class="story-body"><strong>Source:</strong> Reuters Top News<br><strong>Summary:</strong> Widespread public protests continue to unfold across Albania amid rising political discontent. A young lawmaker has emerged as a prominent voice during the unrest, demanding systemic change and a new direction for the nation.<br><strong>Key Theme:</strong> Political Unrest<br>---</div>
+        </div>
+        
+        <div class="story">
+            <h2>IMFC chair says global economy resilient; delegates walk out on Russian official</h2>
+            <div class="story-body"><strong>Source:</strong> Reuters Top News<br><strong>Summary:</strong> The chair of the International Monetary and Financial Committee stated that the global economy continues to show resilience despite ongoing geopolitical headwinds. During the proceedings, international delegates staged a walkout while a Russian official was delivering remarks.<br><strong>Key Theme:</strong> Global Economy<br>---</div>
+        </div>
+        
+        <div class="story">
+            <h2>Students, trade unions and Yellow Vests set to protest across France</h2>
+            <div class="story-body"><strong>Source:</strong> Reuters Top News<br><strong>Summary:</strong> Activists from student groups, trade unions, and the Yellow Vests movement are preparing for coordinated nationwide demonstrations across France. The upcoming protests aim to mobilize public opposition against current social and economic government policies.<br><strong>Key Theme:</strong> Civil Unrest<br>---</div>
+        </div>
+        
+        <div class="story">
+            <h2>South African rugby player Hyron Andrews dead aged 31</h2>
+            <div class="story-body"><strong>Source:</strong> Daily Mail UK<br><strong>Summary:</strong> South African rugby player and former Sale Sharks lock Hyron Andrews has passed away at the age of 31 following a suspected heart attack. The incident occurred at his team&#x27;s hotel in France on the eve of a Champions Cup match against La Rochelle.<br><strong>Key Theme:</strong> Sports<br>---</div>
+        </div>
+        
+        <div class="story">
+            <h2>$170million Baby Reindeer case WILL go to court as &#x27;elated&#x27; Fiona Harvey lands a key win in her legal battle against Netflix</h2>
+            <div class="story-body"><strong>Source:</strong> Daily Mail UK<br><strong>Summary:</strong> A $170 million lawsuit filed against Netflix over the hit series *Baby Reindeer* will proceed to trial after a court rejected the streaming service&#x27;s appeal to dismiss the case. Plaintiff Fiona Harvey secured the ruling, allowing her legal claims against the company to move forward.<br><strong>Key Theme:</strong> Media Law</div>
+        </div>
+        
+        </main>
+
+        
+        <div class='section-title'>Global &amp; Alternative RSS Feeds</div><div class='segmented-grid'>
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/articles/cxr5yvzv7rp0o?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>Trump waives several Russia sanctions as row with Zelensky intensifies</a></h3>
+                <p>The US president temporarily ends many restrictions on Moscow recently passed by Congress over &quot;national security&quot; concerns....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/articles/cv98zw1k8kp3o?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>Oregon teacher fought school attacker before armed dad shot suspect &#x27;multiple times&#x27;</a></h3>
+                <p>The 16-year-old suspect previously attended the primary school and had targeted a special educational needs classroom, police say....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/articles/c3kgqjkzw29wo?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>Three men jailed for 158 years each for murdering Australian and US surfers in Mexico</a></h3>
+                <p>Brothers Jake and Callum Robinson and their friend Carter Rhoad were killed on a surfing trip in an apparent botched robbery....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMiuAFBVV95cUxPbC1qYWlqcW1qUTM3TllqMnBDSmRaRFJiaW03WDZJOU5KNUx4U1U5US1iMktLZmVlMEctLWR2WC1NbkJTMHN3LWQ0RDRtY3FFZkV6aGFvWkNIRC1qLXQwQUtjYVk3aW9jZ3g2bHdNOFBPSk1TRTZ6RUJUbW5vTlBOWERCc0VEdmlSUnI5UXUwaEhTaGRvZ2hpMzJtdFpvMnlFMjIxR2pfTFQ3UEJLbzVKTi1ac1ZyNnFS?oc=5' target='_blank' rel='noopener'>&#x27;Our land, our Albania&#x27;: young lawmaker demands new future as protests rage - Reuters</a></h3>
+                <p>&#x27;Our land, our Albania&#x27;: young lawmaker demands new future as protests rage&amp;nbsp;&amp;nbsp;Reuters...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMixgFBVV95cUxOa05jVFdUVTlxcG85OVFRMF94Wmo0TXlmSjRUWXhlb0xYYUVXdXd3ODJ6QWFMXzlSRW0ybkJ1MHgtbmt6ZjhXNzN1UkwwTEFURzJsRk8zSVBlQldrWXlHMGlhSTJoSDdYMjc5UWttN1dDX1VKZ2xTcGRHYVEyRW16TUdGbGpSMVVKck1ITUk5dkpyOHhrODd5bi1vLXJpUy1pR0tUd2V2T1hXOUNQcDJLMlNEMVZXUVl2RlgzVGZJaEV2VUNsSGc?oc=5' target='_blank' rel='noopener'>IMFC chair says global economy resilient; delegates walk out on Russian official - Reuters</a></h3>
+                <p>IMFC chair says global economy resilient; delegates walk out on Russian official&amp;nbsp;&amp;nbsp;Reuters...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMipAFBVV95cUxNQ3ZSMTR3dmZDamlnT3EyMWx2U1hma3VycjFxblg3SmxXMi1mUEhibjJVTV8ySGRheTEyVndBWEF4em1sbEdoZ0pKcU0tS0JVSzVVS3VZdUVrOXdHNVNYdThleU0zaDE2RXpwMWxyYURCNGt1akVuRUF0aWhYY1VkQTV6cG9UeWd2eVRjTXV6U2V2NnpCeS1zMUl5M2N3Wk16a0t3ZQ?oc=5' target='_blank' rel='noopener'>Students, trade unions and Yellow Vests set to protest across France - Reuters</a></h3>
+                <p>Students, trade unions and Yellow Vests set to protest across France&amp;nbsp;&amp;nbsp;Reuters...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/sport/rugbyunion/article-16214619/Rugby-star-South-African-Lions-dies-heart-attack-day-game-France.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>South African rugby player Hyron Andrews dead aged 31: Former Sale Sharks star suffers heart attack at team hotel in France on eve of Champions Cup clash with La Rochelle</a></h3>
+                <p>ALEX BYWATER: Tributes have been paid to &#x27;funny&#x27; and &#x27;brilliant team-mate&#x27; Hyron Andrews after the former Sale Sharks lock died of a suspected heart attack in news that has shocked...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/tvshowbiz/article-16213183/Baby-Reindeer-case-court-elated-Fiona-Harvey-ALISON-BOSHOFF.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>$170million Baby Reindeer case WILL go to court as &#x27;elated&#x27; Fiona Harvey lands a key win in her legal battle against Netflix: ALISON BOSHOFF</a></h3>
+                <p>A trial between Harvey and the streamer has moved a step closer, after an appeal by Netflix against a decision not to throw the case out has itself been thrown out....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/news/article-16214079/Indian-migrant-pretended-model-actor-murdered-woman-Airbnb-no-right-UK-jailed-28-years.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>Illegal migrant who pretended to be a model and actor and murdered woman at Airbnb when he had no right to be in UK is jailed for 28 years</a></h3>
+                <p>Deepak Sandhu (pictured) had come to the UK on a student visa the UK in September 2024 which was revoked six months later after he dropped out of a university in Southampton....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>New York Post</div>
+                <h3><a href='https://nypost.com/2026/10/17/media/kid-rock-details-dinner-with-trump-stephen-a-smith-and-bill-maher-and-the-issues-they-agreed-on/' target='_blank' rel='noopener'>Kid Rock details ‘epic’ dinner with Trump, Stephen A. Smith and Bill Maher</a></h3>
+                <p>&quot;Two Democrats, two Republicans sit down, break bread, have laughs.&quot;...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>New York Post</div>
+                <h3><a href='https://pagesix.com/2026/10/17/celebrity-news/melissa-gilbert-speaks-out-after-husband-timothy-busfields-child-sex-abuse-charges-are-dismissed/' target='_blank' rel='noopener'>Melissa Gilbert cryptically quotes Willy Wonka after husband Timothy Busfield’s child sex abuse charges are dismissed</a></h3>
+                <p>“So shines a good deed in a weary world,” Gilbert posted after a New Mexico judge tossed the indictment against the actor....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/saudi-national-arrested-after-secret-recording-device-is/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=saudi-national-arrested-after-secret-recording-device-is' target='_blank' rel='noopener'>Saudi National Arrested After Secret Recording Device Is Found Inside OpenAI</a></h3>
+                <p>Federal prosecutors say an OpenAI engineer hid an encrypted audio recorder inside an executive conference room holding sensitive company meetings. The post Saudi National Arrested After Secret Recordi...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/theyll-go-jail-long-time-trump-doj-warn/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=theyll-go-jail-long-time-trump-doj-warn' target='_blank' rel='noopener'>“They’ll Go to Jail for a Long Time”: Trump, DOJ Warn L.A. Election Officials Over Noncitizen Ballots</a></h3>
+                <p>President Trump and the Justice Department warned Los Angeles County election officials that knowingly tabulating unlawful noncitizen ballots could bring federal criminal exposure. The post “They’ll G...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/just-katie-zacharia-issues-statement-confirming-white-house/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=just-katie-zacharia-issues-statement-confirming-white-house' target='_blank' rel='noopener'>JUST IN: Katie Zacharia Issues Statement Confirming White House Press Secretary Exit</a></h3>
+                <p>Katie Zacharia has issued a statement confirming her departure as White House press secretary, calling it an honor to serve President Trump. The post JUST IN: Katie Zacharia Issues Statement Confirmin...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/10/16/american-universities-are-corporatized-grant-money-factories-that-rely-on-cheap-foreign-labor/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=american-universities-are-corporatized-grant-money-factories-that-rely-on-cheap-foreign-labor' target='_blank' rel='noopener'>American Universities Are Corporatized Grant Money Factories That Rely On Cheap Foreign Labor</a></h3>
+                <p>There&#x27;s apparently not a single American who has a bachelor&#x27;s degree and understands accounting, so Stanford has no choice but to import a foreign laborer to fill in this extraordinarily tec...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/10/16/the-nyt-will-only-acknowledge-your-professional-degree-if-youre-a-democrat/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=the-nyt-will-only-acknowledge-your-professional-degree-if-youre-a-democrat' target='_blank' rel='noopener'>The NYT Will Only Acknowledge Your Professional Degree If You’re A Democrat</a></h3>
+                <p>The New York Times used Katie Zacharia&#x27;s lawyer designation as a smear opportunity while eagerly identifying Abdul El-Sayed as a doctor....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/10/16/jack-smiths-arctic-frost-team-seized-conservative-orgs-payroll-data/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=jack-smiths-arctic-frost-team-seized-conservative-orgs-payroll-data' target='_blank' rel='noopener'>Jack Smith’s Arctic Frost Team Seized Conservative Org’s Payroll Data</a></h3>
+                <p>Former Special Counsel Jack Smith seized the personal payroll data of a notable conservative organization as part of his Arctic Frost lawfare against President Donald Trump, according to a new bombshe...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/news/mass-shooting-high-school-hoax' target='_blank' rel='noopener'>Mass shooting threat alarms Florida high school officials — police say teen girl framed ex-boyfriend with AI</a></h3>
+                <p>Florida police investigating a mass shooting threat online determined that a teenage girl had tried to frame her ex-boyfriend to get him in trouble.Officials at Riverview High School were alerted to t...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/shows/relatable/allie-beth-stuckey-exposes-the-evil-behind-popular-cycle-tracking-apps-and-announces-her-pro-life-alternative' target='_blank' rel='noopener'>Allie Beth Stuckey exposes the evil behind popular cycle tracking apps — and announces her pro-life alternative</a></h3>
+                <p>On October 10 at Share the Arrows — Allie Beth Stuckey’s annual Christian women’s conference — the BlazeTV host and soon-to-be mother of four announced a project she and her husband have been working ...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/lifestyle/blinded-by-the-lights-can-washington-finally-save-american-drivers-from-headlight-hell' target='_blank' rel='noopener'>BLINDED BY THE LIGHTS: Can Washington finally save American drivers from headlight hell?</a></h3>
+                <p>If you drive at night, you know the problem. An SUV approaches from the opposite direction, and suddenly its headlights hit you like a spotlight. You squint, look toward the edge of the road, and hope...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/ed-morrissey/2026/10/16/fridays-final-word-n3820021' target='_blank' rel='noopener'>Friday&#x27;s Final Word</a></h3>
+                <p>Friday&#x27;s Final Word...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/john-s-2/2026/10/16/another-wildfire-starts-up-in-orange-county-n3820039' target='_blank' rel='noopener'>Another Wildfire Starts Up in Orange County</a></h3>
+                <p>Another Wildfire Starts Up in Orange County...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/tree-hugging-sister/2026/10/16/chicago-hands-out-lifetime-achievement-award-to-convicted-terrorists-grooms-new-ones-n3820037' target='_blank' rel='noopener'>Chicago Hands Out &#x27;Lifetime Achievement Award&#x27; to Convicted Terrorists, Grooms New Ones</a></h3>
+                <p>Chicago Hands Out &#x27;Lifetime Achievement Award&#x27; to Convicted Terrorists, Grooms New Ones...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Judicial Watch</div>
+                <h3><a href='https://www.judicialwatch.org/noncitizens-voted-in-washington-dc-update/' target='_blank' rel='noopener'>Noncitizens Voted in Washington, DC – Update!</a></h3>
+                <p>578 Noncitizens Voted in DC’s June 2026 Election Judicial Watch Asks Court to Defend Arizona’s Verification of Voter&amp;#8230; The post Noncitizens Voted in Washington, DC – Update! appeared first on...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Judicial Watch</div>
+                <h3><a href='https://www.judicialwatch.org/unacceptable-truth-about-ilhan-omars-disappearing-30m-fortune-and-accounting-errors-as-her-husbands-mystery-assets-now-come-under-microscope/' target='_blank' rel='noopener'>Unacceptable truth about Ilhan Omar’s disappearing $30m fortune and ‘accounting errors&amp;#...</a></h3>
+                <p>From Daily Mail: Minnesota Congresswoman Ilhan Omar went from being one of the poorest members of Congress to potentially one of&amp;#8230; The post Unacceptable truth about Ilhan Omar&amp;#8217;s dis...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Judicial Watch</div>
+                <h3><a href='https://www.judicialwatch.org/judicial-watch-sues-state-department-for-records-related-to-imprisonment-of-american-jimmy-wilgus-in-russia/' target='_blank' rel='noopener'>Judicial Watch Sues State Department for Records Related to Imprisonment of American Jimmy Wilgus in...</a></h3>
+                <p>(Washington, DC) – Judicial Watch announced today that it filed a second Freedom of Information Act (FOIA) lawsuit&amp;#8230; The post Judicial Watch Sues State Department for Records Related to Impri...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/10/work-together-to-save-the-country/' target='_blank' rel='noopener'>Work Together To Save The Country</a></h3>
+                <p>Photo Credit:  Perchance AIBy Linnea LuekenThe generations need each other, need to empathize with and work together, to save the country from the real problem: far-left Democrats....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/10/a-no-vote-on-virginia-amendment-2-is-a-vote-for-marriage/' target='_blank' rel='noopener'>A &#x27;No&#x27; Vote On Virginia Amendment 2 Is A Vote for Marriage</a></h3>
+                <p>Photo Credit:  Perchance AIBy John M. GrondelskiMarriage is not some esoteric thing. It has been part and parcel of the lives of most human beings for millennia.&amp;nbsp;...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/10/omar-obama-and-the-danger-of-false-identities/' target='_blank' rel='noopener'>Omar, Obama, And The Danger Of False Identities</a></h3>
+                <p>Photo Credit:Image: John Brennan. Credit: Gage Skidmore via Flickr, CC BY-SA 2.0.   gage SkidmoreBy J.B. ShurkBe on the lookout for John Brennan....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMifEFVX3lxTE5sQ3M3ZTFkX19VVEFHSHNEX1BmTmZTZzlkemFnVUZfVjBja010TlFJTmIzaU1IU1BlZVRXRU1vemVIREhQeTNpZktjdEFjeGVCS0R3cXRrYVdkZ3VGRXBteUNHeTZ2UklaaWlpTnk5dEJSbF9wOWJvMFhRVjc?oc=5' target='_blank' rel='noopener'>Spot the Difference Daily- Play Now online &amp; 100% Free - The Epoch Times</a></h3>
+                <p>Spot the Difference Daily- Play Now online &amp; 100% Free&amp;nbsp;&amp;nbsp;The Epoch Times...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMiZEFVX3lxTE1ZWFMxWlpDRlozcDR3T0RMNV94THJQbmRtYjAwY3JfSTZzZnAyZE5YU2lsQVczRHVvcUFOeng2ZktFa1RjeTlUVEJkOGoyUVFoY3YySFpmZXdBOXo4MU40NE9kUW8?oc=5' target='_blank' rel='noopener'>Subscribe to The Epoch Times - The Epoch Times</a></h3>
+                <p>Subscribe to The Epoch Times&amp;nbsp;&amp;nbsp;The Epoch Times...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMiREFVX3lxTFBSU2dZLXZaX21HbzlKWGxkWnM1eEQwNEZ3VE4xUkJFWFJWSkJ3d0pSY2c4MTBKZXctUXdyWWdicWJQaklP?oc=5' target='_blank' rel='noopener'>The Epoch Times | Breaking News, Latest News, World News and Videos - The Epoch Times</a></h3>
+                <p>The Epoch Times | Breaking News, Latest News, World News and Videos&amp;nbsp;&amp;nbsp;The Epoch Times...</p>
+            </div>
+            </div>
+
+        <footer>
+            Automated Segmented Pipeline powered by HTML Scrapers, 11 Global RSS Feeds &amp; Google Gemini AI &bull; 2026-10-17
+        </footer>
+    </div>
+</body>
+</html>

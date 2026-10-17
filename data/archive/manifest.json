@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-10-17",
+    "timestamp": "2026-10-17T10:08:14.987153+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "Trump waives several Russia sanctions as row with Zelensky intensifies",
+      "Oregon teacher fought school attacker before armed dad shot suspect 'multiple times'",
+      "Three men jailed for 158 years each for murdering Australian and US surfers in Mexico",
+      "'Our land, our Albania': young lawmaker demands new future as protests rage - Reuters",
+      "IMFC chair says global economy resilient; delegates walk out on Russian official - Reuters"
+    ],
+    "archive_html_path": "data/archive/2026-10-17/index.html",
+    "data_json_path": "data/archive/2026-10-17/data.json"
+  },
+  {
     "date": "2026-10-16",
     "timestamp": "2026-10-16T10:39:37.348966+00:00",
     "stories_count": 8,
