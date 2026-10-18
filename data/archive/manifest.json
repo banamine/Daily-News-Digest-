@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-10-18",
+    "timestamp": "2026-10-18T10:22:03.614670+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "Burnt out cars and shattered glass on Paris streets after protests turn to riots and looting",
+      "Photos show luxury boat with 50m pool and water slides near Kim Jong Un's summer retreat",
+      "A wave of homemade, synthetic drugs sweeps US and deepens crisis",
+      "Iran's parliament approves Mehrdad Akhlaqi as minister of defence - Reuters",
+      "China proposes export controls on solar-manufacturing technologies - Reuters"
+    ],
+    "archive_html_path": "data/archive/2026-10-18/index.html",
+    "data_json_path": "data/archive/2026-10-18/data.json"
+  },
+  {
     "date": "2026-10-17",
     "timestamp": "2026-10-17T10:08:14.987153+00:00",
     "stories_count": 8,
