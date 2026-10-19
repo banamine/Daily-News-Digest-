@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Intelligence Briefing – 2026-10-19</title>
+    <style>
+        :root {
+            --bg: #0f1115;
+            --card: #1a1d24;
+            --text: #e6e8ec;
+            --muted: #9ba1ad;
+            --accent: #3b82f6;
+            --border: #2a2e38;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; padding: 2rem 1rem; }
+        .container { max-width: 960px; margin: 0 auto; }
+        header { text-align: center; margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+        header h1 { font-size: 2.2rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 0.4rem; color: #ffffff; }
+        header .date { color: var(--accent); font-size: 1rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+        
+        .hero-image { width: 100%; border-radius: 16px; overflow: hidden; margin-bottom: 2.5rem; box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6); border: 1px solid var(--border); background: #0b0f19; }
+        
+        /* Flexible Photo Collage Component */
+        .collage-wrapper { position: relative; width: 100%; }
+        .collage-header-pill {
+            position: absolute; top: 14px; left: 14px; z-index: 10;
+            background: rgba(15, 23, 42, 0.88); backdrop-filter: blur(8px);
+            border: 1px solid rgba(56, 189, 248, 0.35); color: #38bdf8;
+            padding: 5px 12px; border-radius: 999px; font-size: 11px; font-weight: 800;
+            letter-spacing: 0.5px; display: flex; align-items: center; gap: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        }
+        .collage-container {
+            display: grid; gap: 8px; background: #090d16; padding: 8px; border-radius: 16px; min-height: 280px;
+        }
+        .collage-container.collage-count-1 { grid-template-columns: 1fr; grid-template-rows: 360px; }
+        .collage-container.collage-count-1 .hero-tile { grid-row: auto; }
+
+        .collage-container.collage-count-2 { grid-template-columns: 1fr 1fr; grid-template-rows: 320px; }
+        .collage-container.collage-count-2 .hero-tile { grid-row: auto; }
+
+        .collage-container.collage-count-3 { grid-template-columns: 1.6fr 1fr; grid-template-rows: 170px 170px; }
+        .collage-container.collage-count-3 .hero-tile { grid-row: span 2; }
+
+        .collage-container.collage-count-4 { grid-template-columns: 1.6fr 1fr 1fr; grid-template-rows: 170px 170px; }
+        .collage-container.collage-count-4 .hero-tile { grid-row: span 2; }
+        .collage-container.collage-count-4 .collage-tile:nth-child(4) { grid-column: span 2; }
+
+        .collage-container.collage-count-5 { grid-template-columns: 1.8fr 1fr 1fr; grid-template-rows: 180px 180px; }
+        .collage-container.collage-count-5 .hero-tile { grid-row: span 2; }
+
+        @media (max-width: 768px) {
+            .collage-container,
+            .collage-container.collage-count-2,
+            .collage-container.collage-count-3,
+            .collage-container.collage-count-4,
+            .collage-container.collage-count-5 {
+                grid-template-columns: 1fr; grid-template-rows: auto;
+            }
+            .collage-tile, .hero-tile { min-height: 180px; }
+        }
+        .collage-tile {
+            position: relative; border-radius: 10px; overflow: hidden; background: #131927;
+            border: 1px solid rgba(255, 255, 255, 0.08); transition: transform 0.3s ease;
+        }
+        .collage-tile.hero-tile { grid-row: span 2; }
+        .collage-tile img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
+        .collage-tile:hover img { transform: scale(1.06); }
+        .collage-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(to top, rgba(11, 15, 23, 0.95) 0%, rgba(11, 15, 23, 0.2) 60%, transparent 100%);
+            display: flex; flex-direction: column; justify-content: flex-end; padding: 12px;
+        }
+        .collage-badge {
+            align-self: flex-start; background: rgba(56, 189, 248, 0.2); color: #38bdf8;
+            border: 1px solid rgba(56, 189, 248, 0.4); font-size: 10px; font-weight: 700;
+            text-transform: uppercase; padding: 2px 8px; border-radius: 999px; margin-bottom: 6px;
+        }
+        .collage-badge.hero-badge { background: rgba(16, 185, 129, 0.2); color: #34d399; border-color: rgba(16, 185, 129, 0.4); }
+        .collage-title { color: #ffffff; font-size: 12px; font-weight: 700; line-height: 1.35; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        .hero-tile .collage-title { font-size: 17px; }
+
+        .stories { display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 3rem; }
+        .story { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem; }
+        .story h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: #f1f3f5; }
+        .story-body { color: var(--muted); font-size: 0.98rem; }
+        .section-title { font-size: 1.3rem; font-weight: 800; color: var(--accent); margin: 2rem 0 1rem; border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; }
+        .segmented-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
+        .mini-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+        .mini-card.scraped { border-left: 3px solid #8b5cf6; }
+        .mini-card.rss { border-left: 3px solid #3b82f6; }
+        .source-tag { font-size: 0.75rem; font-weight: bold; color: var(--accent); margin-bottom: 0.4rem; }
+        .mini-card h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.4rem; }
+        .mini-card h3 a { color: #f1f3f5; text-decoration: none; }
+        .mini-card h3 a:hover { text-decoration: underline; color: var(--accent); }
+        .mini-card p { font-size: 0.82rem; color: var(--muted); line-height: 1.4; }
+        footer { text-align: center; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="date">2026-10-19</div>
+            <h1>Daily Intelligence Briefing</h1>
+        </header>
+
+        <div class="hero-image">
+            
+                
+    <div class="collage-wrapper">
+        <div class="collage-header-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7"/><path d="M16 5h5v5"/><path d="m21 5-9 9"/></svg>
+            <span>Parsed Feeds Mixed Photo Collage (5 Photos)</span>
+        </div>
+        <div class="collage-container collage-count-5">
+            <div class="collage-tile hero-tile">
+                <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/975c/live/8ec83c20-cb9c-11f1-93a7-b36f3083f4d3.jpg" alt="Alberta heads to polls to decide whether to hold vote on separation from Canada" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+                <div class="collage-overlay">
+                    <span class="collage-badge hero-badge">BBC World News</span>
+                    <h3 class="collage-title hero-title">Alberta heads to polls to decide whether to hold vote on separation from Canada</h3>
+                </div>
+            </div>
+            
+        <div class="collage-tile">
+            <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/8068/live/34a82040-c956-11f1-8879-9d9deeb686e1.jpg" alt="Kenya pastor accused of ordering parents to starve their children to death faces verdict" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">BBC World News</span>
+                <h4 class="collage-title">Kenya pastor accused of ordering parents to starve their children to death faces verdict</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/1a2c/live/e6934370-cb7c-11f1-8d42-dd1c1e8413a3.jpg" alt="Funding shortages force World Food Programme to cut aid to Gaza" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">BBC World News</span>
+                <h4 class="collage-title">Funding shortages force World Food Programme to cut aid to Gaza</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="French Prime Minister calls for partial curfews after weekend riots - Reuters" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">Reuters Top News</span>
+                <h4 class="collage-title">French Prime Minister calls for partial curfews after weekend riots - Reuters</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="European governments warn citizens over security in France after riots - Reuters" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">Reuters Top News</span>
+                <h4 class="collage-title">European governments warn citizens over security in France after riots - Reuters</h4>
+            </div>
+        </div>
+        
+        </div>
+    </div>
+    
+            
+        </div>
+
+        <main class="stories">
+            
+        <div class="story">
+            <h2>Alberta heads to polls to decide whether to hold vote on separation from Canada</h2>
+            <div class="story-body"><strong>Source:</strong> BBC World News<br><strong>Summary:</strong> Alberta residents are casting votes to determine whether the province should hold a formal referendum on separating from Canada. Although current polling indicates that a majority of Albertans prefer remaining part of the nation, the referendum debate has heightened political division across the region.<br><strong>Key Theme:</strong> Politics</div>
+        </div>
+        
+        <div class="story">
+            <h2>Kenya pastor accused of ordering parents to starve their children to death faces verdict</h2>
+            <div class="story-body"><strong>Source:</strong> BBC World News<br><strong>Summary:</strong> Self-proclaimed pastor Paul Mackenzie faces a court verdict in Kenya over 191 murder charges linked to a deadly cult. Authorities accuse Mackenzie of instructing parents to starve their children to death, with all but one of the murder charges involving child victims.<br><strong>Key Theme:</strong> Justice</div>
+        </div>
+        
+        <div class="story">
+            <h2>Funding shortages force World Food Programme to cut aid to Gaza</h2>
+            <div class="story-body"><strong>Source:</strong> BBC World News<br><strong>Summary:</strong> Severe financial shortfalls have forced the United Nations World Food Programme to scale back humanitarian relief in Gaza. As a result of the funding cuts, the number of individuals receiving assistance in the territory will drop significantly from 1.6 million to 1.1 million.<br><strong>Key Theme:</strong> Humanitarian Aid</div>
+        </div>
+        
+        <div class="story">
+            <h2>French Prime Minister calls for partial curfews after weekend riots</h2>
+            <div class="story-body"><strong>Source:</strong> Reuters Top News<br><strong>Summary:</strong> The French Prime Minister has requested the implementation of partial curfews following a wave of violent weekend riots. The proposed measure aims to curb civil unrest and restore public order in affected areas across the country.<br><strong>Key Theme:</strong> Civil Unrest</div>
+        </div>
+        
+        <div class="story">
+            <h2>European governments warn citizens over security in France after riots</h2>
+            <div class="story-body"><strong>Source:</strong> Reuters Top News<br><strong>Summary:</strong> Several European nations have issued security warnings to their citizens traveling to or residing in France following widespread weekend rioting. The travel advisories urge caution due to ongoing public safety concerns and potential disruptions stemming from the violence.<br><strong>Key Theme:</strong> Security</div>
+        </div>
+        
+        <div class="story">
+            <h2>The midterm election outcomes that could shape Trump&#x27;s final two years</h2>
+            <div class="story-body"><strong>Source:</strong> Reuters Top News<br><strong>Summary:</strong> An analysis outlines potential political scenarios stemming from upcoming U.S. midterm elections and how they might impact Donald Trump&#x27;s final two years in office. The election outcomes will determine congressional power balances, directly shaping legislative priorities and executive oversight.<br><strong>Key Theme:</strong> US Elections</div>
+        </div>
+        
+        <div class="story">
+            <h2>Cindy Crawford and Rande Gerber break silence on son Presley&#x27;s tragic death at 27: &#x27;We are beyond heartbroken&#x27;</h2>
+            <div class="story-body"><strong>Source:</strong> Daily Mail UK<br><strong>Summary:</strong> Cindy Crawford and Rande Gerber released a joint statement expressing grief over the death of their 27-year-old son, Presley. The family confirmed his passing on September 20, which occurred due to a suspected drug overdose.<br><strong>Key Theme:</strong> Celebrity</div>
+        </div>
+        
+        <div class="story">
+            <h2>ANDREW NEIL: The orgy of violence in France makes a Right-wing Le Pen victory all but inevitable next year</h2>
+            <div class="story-body"><strong>Source:</strong> Daily Mail UK<br><strong>Summary:</strong> Commentary by Andrew Neil suggests that recent intense street violence in France will significantly sway public sentiment toward right-wing politics. He argues that political backlash against the weekend unrest makes a presidential victory for Marine Le Pen increasingly probable in the next election.<br><strong>Key Theme:</strong> Political Opinion</div>
+        </div>
+        
+        </main>
+
+        
+        <div class='section-title'>Global &amp; Alternative RSS Feeds</div><div class='segmented-grid'>
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/articles/cxvgd0ymgzgyo?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>Alberta heads to polls to decide whether to hold vote on separation from Canada</a></h3>
+                <p>Polling suggests most Albertans favour remaining part of the country, although the debate alone has proven divisive....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/articles/ckd6d2l3dz4xo?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>Kenya pastor accused of ordering parents to starve their children to death faces verdict</a></h3>
+                <p>Self-proclaimed pastor Paul Mackenzie faces 191 murder charges - all but one of them children....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/articles/cm79plrvpl4vo?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>Funding shortages force World Food Programme to cut aid to Gaza</a></h3>
+                <p>The number of people helped by the UN agency in the Palestinian territory will drop by about a third - from 1.6 million to 1.1 million....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMiqAFBVV95cUxOS05IaFlBa0paMExacEp0cGpsM0JDeGF2RmZTR3JDZWxxRUZ4TGF4TVMtV09yay1PQjFhMnJRT3UteEtWQV9nUU9DMHFfaU1Kd054UlF3aFh1WGtuaUlFWTQ0RXExNVNfT3RwRFhLLW82XzhpNEFNdjd6X2RmVXNETzVsYTR5TjBFWTFrbHZ5NVhpcnNpbDF6UGVaSU9sMnR4d1hxZlVSLTY?oc=5' target='_blank' rel='noopener'>French Prime Minister calls for partial curfews after weekend riots - Reuters</a></h3>
+                <p>French Prime Minister calls for partial curfews after weekend riots&amp;nbsp;&amp;nbsp;Reuters...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMirgFBVV95cUxPWmxMTDYtS1VOLVA5TE5qSGZzeW96a0g0N2dXWlpSaUVZMk93MkNIS2ZsLUpHNmtCNElLaXdmVHNaalNzbTdyUkxsMUdNUFFEZTZES0hmMmxSNERLWnlJUjB6MkE3bXExVW9mMTI2WmZOeGVrcDhlUkpLRjRKSXRGeUVmMU5FUUhHUkw3TGpmdFp5UDRHSnVwMlBXdDI4T2JwR1kwOVZydmROQlFzQlE?oc=5' target='_blank' rel='noopener'>European governments warn citizens over security in France after riots - Reuters</a></h3>
+                <p>European governments warn citizens over security in France after riots&amp;nbsp;&amp;nbsp;Reuters...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMiugFBVV95cUxQaEV4NHdWNVNlYU41Q0ZMbVJEbGl1bC1Sb3Y1aW9pWE5pR083em1jeXphd1RfSlkxdW4ySzR1ekdpMUNta3JXenJQOGR4VkNMektwRXlhcVRISTZqci1sNDRMYTNzbk5aRWc4WTJKaWZfazFGRXNMdG1fR1BjWnJRdHNoZ3NMWjVMU0tzTTNsNTUyWEhIc0FvN2tleXFlemx6RFBqWE9vRUtFWU91V3JxRHE3UUphdUoyV0E?oc=5' target='_blank' rel='noopener'>The midterm election outcomes that could shape Trump&#x27;s final two years - Reuters</a></h3>
+                <p>The midterm election outcomes that could shape Trump&#x27;s final two years&amp;nbsp;&amp;nbsp;Reuters...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/tvshowbiz/article-16218985/Cindy-Crawford-Rande-Gerber-break-silence-son-Presleys-tragic-death-27-heartbroken.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>Cindy Crawford and Rande Gerber break silence on son Presley&#x27;s tragic death at 27: &#x27;We are beyond heartbroken&#x27;</a></h3>
+                <p>On Sunday, the couple issued a joint statement shared on Instagram in which they detailed their devastation at the loss of their son. Presley died of a suspected overdose on September 20....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/debate/article-16219065/ANDREW-NEIL-orgy-violence-France-makes-Right-wing-Le-Pen-victory-inevitable-year.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>ANDREW NEIL: The orgy of violence in France makes a Right-wing Le Pen victory all but inevitable next year</a></h3>
+                <p>Every generation or so the course of French democracy is determined on the streets. Be in no doubt that just happened again at the weekend...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/sport/football/article-16218639/fans-boo-footballers-knee-premier-league.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>MORE Premier League stars join rejection of taking the knee as fans boo the anti-racism gesture amid growing doubts over its impact</a></h3>
+                <p>Bournemouth stars Rayan and Tyler Adams rejected taking the knee, while the gesture was loudly booed at Leeds United, as doubts over the anti-racism gesture&#x27;s impact continue to grow....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>New York Post</div>
+                <h3><a href='https://decider.com/2026/10/19/the-13-best-new-horror-movies-of-2026-and-where-to-watch-them/' target='_blank' rel='noopener'>The 13 Best New Horror Movies of 2026 (and Where to Watch Them)</a></h3>
+                <p>Need to catch up on 2026 horror releases? Here&#x27;s a guide to what you should prioritize....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>New York Post</div>
+                <h3><a href='https://nypost.com/2026/10/19/us-news/mamdanis-dsa-ally-chi-osse-has-worst-attendance-of-any-nyc-council-member-performative-stuff/' target='_blank' rel='noopener'>Mamdani’s DSA ally Chi Ossé has worst attendance of any NYC Council member</a></h3>
+                <p>Mayor Zohran Mamdani&#x27;s Democratic Socialists of America crony Chi Ossé has the worst attendance record of any member of the City Council, records show....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>New York Post</div>
+                <h3><a href='https://nypost.com/2026/10/19/sports/49ers-commanders-worlds-apart-in-qb-head-coaching-confidence/' target='_blank' rel='noopener'>49ers have one thing the Commanders desperately need — Brock Purdy’s game sense</a></h3>
+                <p>It doesn’t get more dysfunctional than the last time Jayden Daniels had the football in his hands. Can you imagine Kyle Shanahan or Brock Purdy ever putting the 49ers in such a situation?...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/president-trump-unveils-championship-golf-plan-as-judge/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=president-trump-unveils-championship-golf-plan-as-judge' target='_blank' rel='noopener'>President Trump Unveils Championship Golf Plan As Judge Rejects DOJ Recusal Bid</a></h3>
+                <p>Judge Ana Reyes rejected DOJ&#x27;s bid to remove her from the East Potomac Golf Links case as President Trump&#x27;s renovation fight intensifies. The post President Trump Unveils Championship Golf P...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/president-trump-seven-rally-seven-state-midterm-sprint/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=president-trump-seven-rally-seven-state-midterm-sprint' target='_blank' rel='noopener'>President Trump Launches Seven-Rally, Seven-State Midterm Sprint</a></h3>
+                <p>President Trump is launching a seven-rally, seven-state campaign sprint to fire up Republican voters and defend control of Congress in the closing midterm stretch. The post President Trump Launches Se...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/mike-rogers-turns-tables-dana-bash-cnn-interview/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=mike-rogers-turns-tables-dana-bash-cnn-interview' target='_blank' rel='noopener'>Mike Rogers Turns The Tables On Dana Bash During Fiery CNN Interview</a></h3>
+                <p>Mike Rogers refused CNN&#x27;s preferred frame, challenged Dana Bash over the press&#x27;s defense of Abdul El-Sayed, and forced the interview back onto the Michigan Democrat&#x27;s record. The post M...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/10/19/the-unholy-marriage-between-marxists-and-islamists-is-the-most-dangerous-partnership-in-u-s-politics/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=the-unholy-marriage-between-marxists-and-islamists-is-the-most-dangerous-partnership-in-u-s-politics' target='_blank' rel='noopener'>The Unholy Marriage Between Marxists And Islamists Is ‘The Most Dangerous Partnership’ In U.S. Politics</a></h3>
+                <p>The Article III Project is releasing daily digital ads warning American voters of the &#x27;Red-Green Alliance&#x27; of Marxists and Islamists....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/10/19/feminists-ask-men-to-sleep-with-them-leave-them-alone-and-save-them-from-themselves/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=feminists-ask-men-to-sleep-with-them-leave-them-alone-and-save-them-from-themselves' target='_blank' rel='noopener'>Feminists Ask Men To Sleep With Them, Leave Them Alone, And Save Them From Themselves</a></h3>
+                <p>Our culture has spent decades denigrating basic truths about sexual morality. Is it any wonder we don’t produce many gentlemen or ladies?...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/10/19/stop-letting-your-kids-call-you-bro/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=stop-letting-your-kids-call-you-bro' target='_blank' rel='noopener'>Stop Letting Your Kids Call You ‘Bro’</a></h3>
+                <p>There&amp;#8217;s a graphic I&amp;#8217;ve seen printed on signs, shirts, and other apparel that says, &amp;#8220;Mama. Mommy. Mom. Bruh.&amp;#8221; All parents, especially mothers, should be appalled...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/lifestyle/my-publisher-thought-my-new-thriller-was-too-political-so-i-found-another' target='_blank' rel='noopener'>My publisher thought my new thriller was too political. So I found another.</a></h3>
+                <p>There are three high bars in the modern literary trade — writing a good novel, getting it published, and selling it to the public.I’ve cleared the first two with my new political-thriller mystery, “Th...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/news/book-claiming-white-paint-is-racist-is-up-for-national-book-foundation-award-yes-you-read-that-correctly' target='_blank' rel='noopener'>Book claiming white paint is racist is up for National Book Foundation award — yes, you read that correctly</a></h3>
+                <p>Since 1950, the National Book Awards — now overseen by the National Book Foundation — has recognized the best in American literary talent, honoring the likes of Ralph Ellison, William Faulkner, Flanne...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/columns/opinion/for-the-vfw-pride-came-before-a-fall' target='_blank' rel='noopener'>For the VFW, Pride came before a fall</a></h3>
+                <p>In June, the Veterans of Foreign Wars celebrated the left-wing holy of holies: LGBTQIA+ month. They paid tribute to those who fall under the ever-expanding umbrella of sexual identities and genders.Fr...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/david-strom/2026/10/19/migration-skeptics-to-france-we-told-you-so-n3820067' target='_blank' rel='noopener'>Migration Skeptics to France: We Told You So</a></h3>
+                <p>Migration Skeptics to France: We Told You So...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/headlines/2026/10/19/hey-democrats-that-rage-engine-of-yours-is-going-to-throw-a-rod-you-know-n3820057' target='_blank' rel='noopener'>Hey Democrats, That Rage Engine of Yours Is Going to Throw a Rod, You Know</a></h3>
+                <p>Hey Democrats, That Rage Engine of Yours Is Going to Throw a Rod, You Know...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/headlines/2026/10/18/a-philly-tour-for-the-birds-n3820055' target='_blank' rel='noopener'>A Philly Tour for the Birds</a></h3>
+                <p>A Philly Tour for the Birds...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Judicial Watch</div>
+                <h3><a href='https://www.judicialwatch.org/noncitizens-voted-in-washington-dc-update/' target='_blank' rel='noopener'>Noncitizens Voted in Washington, DC – Update!</a></h3>
+                <p>578 Noncitizens Voted in DC’s June 2026 Election Judicial Watch Asks Court to Defend Arizona’s Verification of Voter&amp;#8230; The post Noncitizens Voted in Washington, DC – Update! appeared first on...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Judicial Watch</div>
+                <h3><a href='https://www.judicialwatch.org/unacceptable-truth-about-ilhan-omars-disappearing-30m-fortune-and-accounting-errors-as-her-husbands-mystery-assets-now-come-under-microscope/' target='_blank' rel='noopener'>Unacceptable truth about Ilhan Omar’s disappearing $30m fortune and ‘accounting errors&amp;#...</a></h3>
+                <p>From Daily Mail: Minnesota Congresswoman Ilhan Omar went from being one of the poorest members of Congress to potentially one of&amp;#8230; The post Unacceptable truth about Ilhan Omar&amp;#8217;s dis...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Judicial Watch</div>
+                <h3><a href='https://www.judicialwatch.org/judicial-watch-sues-state-department-for-records-related-to-imprisonment-of-american-jimmy-wilgus-in-russia/' target='_blank' rel='noopener'>Judicial Watch Sues State Department for Records Related to Imprisonment of American Jimmy Wilgus in...</a></h3>
+                <p>(Washington, DC) – Judicial Watch announced today that it filed a second Freedom of Information Act (FOIA) lawsuit&amp;#8230; The post Judicial Watch Sues State Department for Records Related to Impri...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/10/is-marine-le-pen-losing-the-plot/' target='_blank' rel='noopener'>Is Marine Le Pen Losing The Plot?</a></h3>
+                <p>Photo Credit:Image: Marine Le Pen. Credit: Rémi Noyon via Flickr, CC BY 2.0.   Rémi NoyonBy Thomas KolbeLe Pen&#x27;s attempt to turn France&#x27;s domestic fragmentation into its neighbor&#x27;s prob...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/10/marxists-deception-and-violence/' target='_blank' rel='noopener'>Marxists, Deception, And Violence</a></h3>
+                <p>Photo Credit:  AI for American ThinkerBy John A. GentryFrom Lenin and Stalin to today&amp;rsquo;s radical left, the history of communism reveals a recurring pattern of false promises, political repres...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/10/nidal-hasan-fort-hood-s-danny-deever/' target='_blank' rel='noopener'>Nidal Hasan: Fort Hood&#x27;s Danny Deever</a></h3>
+                <p>Photo Credit:Rudyard Kipling  Bonhams Fine Art Auctioneers &amp; Valuers, via Picryl // public domainBy Civis AmericanusSome parallels to a famous poem by Rudyard Kipling....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMiqwFBVV95cUxQM0F0SnJ5WkF6VVhhS3ZpSGFfYlQ0RHoyU2xXa1NHWGNPLUd5WFUwQ1FqeTVYQlVPejNwWlp5NUhuRkl0b00ydnF4dHlXVWVVZUl5MWRhRk1LRU5TMGVGNUgwNzRyYWFYZGk1RnNHcWdqalNPTDUyNGNUWFZ3WEZnd2NxNFhrMUVlYUhuZkdXOUVPNkhweUxsblRlRGtzR2xmZWI3SE5wRkpLaWM?oc=5' target='_blank' rel='noopener'>Journal Retracts COVID-19 Vaccine Paper Based on Faked Content - The Epoch Times</a></h3>
+                <p>Journal Retracts COVID-19 Vaccine Paper Based on Faked Content&amp;nbsp;&amp;nbsp;The Epoch Times...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMifEFVX3lxTE5sQ3M3ZTFkX19VVEFHSHNEX1BmTmZTZzlkemFnVUZfVjBja010TlFJTmIzaU1IU1BlZVRXRU1vemVIREhQeTNpZktjdEFjeGVCS0R3cXRrYVdkZ3VGRXBteUNHeTZ2UklaaWlpTnk5dEJSbF9wOWJvMFhRVjc?oc=5' target='_blank' rel='noopener'>Spot the Difference Daily- Play Now online &amp; 100% Free - The Epoch Times</a></h3>
+                <p>Spot the Difference Daily- Play Now online &amp; 100% Free&amp;nbsp;&amp;nbsp;The Epoch Times...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMiREFVX3lxTFBSU2dZLXZaX21HbzlKWGxkWnM1eEQwNEZ3VE4xUkJFWFJWSkJ3d0pSY2c4MTBKZXctUXdyWWdicWJQaklP?oc=5' target='_blank' rel='noopener'>The Epoch Times | Breaking News, Latest News, World News and Videos - The Epoch Times</a></h3>
+                <p>The Epoch Times | Breaking News, Latest News, World News and Videos&amp;nbsp;&amp;nbsp;The Epoch Times...</p>
+            </div>
+            </div>
+
+        <footer>
+            Automated Segmented Pipeline powered by HTML Scrapers, 11 Global RSS Feeds &amp; Google Gemini AI &bull; 2026-10-19
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-10-19",
+    "timestamp": "2026-10-19T12:04:23.014216+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "Alberta heads to polls to decide whether to hold vote on separation from Canada",
+      "Kenya pastor accused of ordering parents to starve their children to death faces verdict",
+      "Funding shortages force World Food Programme to cut aid to Gaza",
+      "French Prime Minister calls for partial curfews after weekend riots - Reuters",
+      "European governments warn citizens over security in France after riots - Reuters"
+    ],
+    "archive_html_path": "data/archive/2026-10-19/index.html",
+    "data_json_path": "data/archive/2026-10-19/data.json"
+  },
+  {
     "date": "2026-10-18",
     "timestamp": "2026-10-18T10:22:03.614670+00:00",
     "stories_count": 8,
