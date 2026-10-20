@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-10-20",
+    "timestamp": "2026-10-20T10:54:55.685619+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "Suspect arrested after historic town hall set alight during disorder - French media",
+      "Seventh day of violent clashes between Albanian protesters and police",
+      "Canadian tourist found guilty of animal cruelty after stealing Las Vegas flamingo from enclosure",
+      "Google Cloud services face outage in London, Revolut services down too - Reuters",
+      "EXCLUSIVE: ByteDance, Alibaba, Tencent place over $35 billion worth of Nvidia chip orders - Reuters"
+    ],
+    "archive_html_path": "data/archive/2026-10-20/index.html",
+    "data_json_path": "data/archive/2026-10-20/data.json"
+  },
+  {
     "date": "2026-10-19",
     "timestamp": "2026-10-19T12:04:23.014216+00:00",
     "stories_count": 8,
