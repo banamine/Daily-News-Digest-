@@ -1,0 +1,61 @@
+name: Refresh Feed Data (hourly)
+
+# Light refresh of data/current/data.json only: RSS + scraper ingestion, no Gemini,
+# no image generation, no HTML/archive rewrite. The daily deploy job still builds
+# the briefing page. Commits only when a story actually changed.
+on:
+  schedule:
+    - cron: '17 * * * *' # every hour at :17 (off the :00 rush; GitHub may delay runs)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# Share one lock with the daily deploy so the two never push at the same time.
+concurrency:
+  group: news-digest-write
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+        with:
+          persist-credentials: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.10'
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Offline tests
+        run: |
+          python -I tests/test_clean_text.py
+          python -I tests/test_refresh_feed.py
+
+      - name: Refresh feed data
+        env:
+          AJN_SKIP_PLAYWRIGHT: '1'   # no browser install on the hourly job
+        run: python daily_news.py --refresh-feed
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/current/data.json output/current/data.json
+          if git diff --cached --quiet; then
+            echo "No new stories; nothing to commit."
+          else
+            git commit -m "chore: hourly feed refresh [skip ci]"
+            git pull --rebase origin "${GITHUB_REF_NAME}"
+            git push
+          fi

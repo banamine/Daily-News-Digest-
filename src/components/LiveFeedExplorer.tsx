@@ -590,13 +590,13 @@ export const LiveFeedExplorer: React.FC<LiveFeedExplorerProps> = ({ feeds, initi
                       {/* Story Title */}
                       <h3
                         onClick={() => setActiveStoryModal(art)}
-                        className="font-serif font-bold text-white text-lg leading-snug mb-3 group-hover:text-amber-300 transition-colors cursor-pointer line-clamp-3"
+                        className="font-serif font-bold text-white text-lg leading-snug mb-3 group-hover:text-amber-300 transition-colors cursor-pointer line-clamp-3 break-words [overflow-wrap:anywhere]"
                       >
                         {art.title}
                       </h3>
 
                       {/* Excerpt */}
-                      <p className="text-xs text-white/60 leading-relaxed line-clamp-4 font-serif">
+                      <p className="text-xs text-white/60 leading-relaxed line-clamp-4 font-serif break-words [overflow-wrap:anywhere]">
                         {art.summary}
                       </p>
                     </div>
@@ -856,7 +856,7 @@ export const LiveFeedExplorer: React.FC<LiveFeedExplorerProps> = ({ feeds, initi
                       {art.title}
                     </h2>
 
-                    <p className="font-serif text-white/80 leading-relaxed whitespace-pre-wrap">
+                    <p className="font-serif text-white/80 leading-relaxed whitespace-pre-wrap break-words [overflow-wrap:anywhere]">
                       {art.summary}
                     </p>
 

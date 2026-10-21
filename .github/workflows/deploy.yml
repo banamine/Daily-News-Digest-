@@ -8,6 +8,11 @@ on:
 permissions:
   contents: write
 
+# One writer at a time with the hourly refresh workflow.
+concurrency:
+  group: news-digest-write
+  cancel-in-progress: false
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -39,6 +44,9 @@ jobs:
         if: always()
         run: |
           python -m playwright install --with-deps
+
+      - name: Offline tests (summary cleaning)
+        run: python -I tests/test_clean_text.py
 
       - name: Run News Generation Pipeline
         env:
