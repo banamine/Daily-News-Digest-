@@ -40,6 +40,9 @@ jobs:
         run: |
           python -m playwright install --with-deps
 
+      - name: Offline tests (summary cleaning)
+        run: python -I tests/test_clean_text.py
+
       - name: Run News Generation Pipeline
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
