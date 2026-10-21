@@ -103,6 +103,8 @@ USER_AGENT = (
 )
 
 MAX_STORIES = 8
+SOURCE_CAP = 2            # max Top-8 cards from one feed
+DIVERSITY_MAX_AGE_H = 48  # a roundup/wire story must be this fresh to get the guaranteed slot
 
 # Standard RSS feeds for global context
 RSS_FEEDS = [
@@ -739,6 +741,68 @@ def fetch_rss_feeds() -> List[Dict]:
     return rss_stories
 
 
+# Feeds eligible for the guaranteed Top-8 diversity slot, in priority order:
+# the hourly TV roundup first, then the wire service.
+DIVERSITY_FEEDS = [TV_SUMMARY_FEED["name"], "Reuters Top News"]
+
+
+def _story_age_hours(story: Dict, now: datetime.datetime) -> Optional[float]:
+    raw = story.get("published") or ""
+    try:
+        when = email.utils.parsedate_to_datetime(raw)
+        if when.tzinfo is None:
+            when = when.replace(tzinfo=datetime.timezone.utc)
+        return (now - when).total_seconds() / 3600
+    except Exception:
+        try:
+            when = datetime.datetime.fromisoformat(raw.replace("Z", "+00:00"))
+            if when.tzinfo is None:
+                when = when.replace(tzinfo=datetime.timezone.utc)
+            return (now - when).total_seconds() / 3600
+        except Exception:
+            return None
+
+
+def select_top_stories(stories: List[Dict], n: int = MAX_STORIES, cap: int = SOURCE_CAP,
+                       now: Optional[datetime.datetime] = None) -> List[Dict]:
+    """Pick the Top-N grid: at most `cap` per feed, plus one guaranteed diversity slot.
+
+    The guaranteed slot goes to the first fresh (<= 48h) story from DIVERSITY_FEEDS
+    (TV roundup preferred, then Reuters). Order of `stories` is kept, so ranking
+    within the pool is unchanged. If the cap leaves fewer than n cards, the grid is
+    topped up from the remaining stories so it is never short. Stories left out are
+    not dropped: they stay in the full rss/scraped lists the page and News Cube read.
+    """
+    now = now or datetime.datetime.now(datetime.timezone.utc)
+    chosen: List[int] = []
+    counts: Dict[str, int] = {}
+
+    for feed in DIVERSITY_FEEDS:
+        for i, st in enumerate(stories):
+            age = _story_age_hours(st, now)
+            if st.get("feed") == feed and age is not None and -1 <= age <= DIVERSITY_MAX_AGE_H:
+                chosen.append(i)
+                counts[feed] = counts.get(feed, 0) + 1
+                break
+        if chosen:
+            break
+
+    for i, st in enumerate(stories):
+        if len(chosen) >= n:
+            break
+        feed = st.get("feed", "")
+        if i in chosen or counts.get(feed, 0) >= cap:
+            continue
+        chosen.append(i)
+        counts[feed] = counts.get(feed, 0) + 1
+    for i in range(len(stories)):  # top-up only if the cap left the grid short
+        if len(chosen) >= n:
+            break
+        if i not in chosen:
+            chosen.append(i)
+    return [stories[i] for i in sorted(chosen)]
+
+
 def fetch_all_stories() -> Dict[str, List[Dict]]:
     """
     Combines ingestion from both handlers into a segmented dataset.
@@ -764,7 +828,7 @@ def fetch_all_stories() -> Dict[str, List[Dict]]:
     return {
         "scraped": scraped_clean,
         "rss": rss_clean,
-        "combined": all_combined[:MAX_STORIES]
+        "combined": select_top_stories(all_combined)
     }
 
 
@@ -1368,7 +1432,7 @@ def refresh_feed() -> Optional[Dict]:
     fetched = fetch_all_stories()
     scraped = [a for a in fetched["scraped"] if not _FAKE_URL_RE.search(a.get("url", ""))]
     rss = [a for a in fetched["rss"] if not _FAKE_URL_RE.search(a.get("url", ""))]
-    combined = (scraped + rss)[:MAX_STORIES]
+    combined = select_top_stories(scraped + rss)
 
     if not rss and not scraped:
         print("::warning::refresh-feed: ingestion returned no stories; keeping the existing data.json")
