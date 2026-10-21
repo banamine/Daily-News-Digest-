@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-10-21",
+    "timestamp": "2026-10-21T11:08:00.776747+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "US citizen Stephen Hubbard freed by Russia and 'on his way home', Trump says",
+      "Trump and Zelensky appear at loggerheads despite new optimism",
+      "Katya Adler: France divided over who to blame for riots and what to learn from them",
+      "EXCLUSIVE: Order to limit Starshield for Ukraine came from inside White House, sources say - Reuters",
+      "US considers removing sanctions on some shadow fleet vessels to cut freight rates, official says - Reuters"
+    ],
+    "archive_html_path": "data/archive/2026-10-21/index.html",
+    "data_json_path": "data/archive/2026-10-21/data.json"
+  },
+  {
     "date": "2026-10-20",
     "timestamp": "2026-10-20T10:54:55.685619+00:00",
     "stories_count": 8,
