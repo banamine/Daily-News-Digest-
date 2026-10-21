@@ -494,41 +494,14 @@ def scrape_alexjoneslive_bs4(max_stories: int = 8) -> List[Dict]:
 
 
 def _generate_fallback_alexjones_stories() -> List[Dict]:
-    return [
-        {
-            "id": create_story_id("https://www.alexjoneslive.com/story-1"),
-            "headline": "Emergency Broadcast: Global Economic Shift & Centralized Digital Currency Protocols",
-            "title": "Emergency Broadcast: Global Economic Shift & Centralized Digital Currency Protocols",
-            "url": "https://www.alexjoneslive.com/story-1",
-            "link": "https://www.alexjoneslive.com/story-1",
-            "excerpt": "Alex Jones analyzes the latest policy announcements from major international central banking consortiums. The report breaks down how upcoming liquidity mandates could affect independent financial sovereignty and retail banking access across key global markets over the coming fiscal quarter.",
-            "summary": "Alex Jones analyzes policy announcements from major central banking consortiums regarding liquidity mandates and digital currency protocols.",
-            "relative_time": "2 hours ago",
-            "author": "Alex Jones",
-            "comment_count": 48,
-            "feed": "Alex Jones Live",
-            "scraped_at": datetime.datetime.now(datetime.timezone.utc).isoformat()
-        },
-        {
-            "id": create_story_id("https://www.alexjoneslive.com/story-2"),
-            "headline": "Special Report: AI Surveillance Frameworks & Data Privacy Mandates",
-            "title": "Special Report: AI Surveillance Frameworks & Data Privacy Mandates",
-            "url": "https://www.alexjoneslive.com/story-2",
-            "link": "https://www.alexjoneslive.com/story-2",
-            "excerpt": "An in-depth investigation into new algorithmic monitoring protocols implemented across municipal transport hubs and cloud hosting providers. Analysts examine the operational scope and policy implications for digital civil liberties.",
-            "summary": "An in-depth investigation into algorithmic monitoring protocols and policy implications for digital civil liberties.",
-            "relative_time": "5 hours ago",
-            "author": "Alex Jones Live",
-            "comment_count": 32,
-            "feed": "Alex Jones Live",
-            "scraped_at": datetime.datetime.now(datetime.timezone.utc).isoformat()
-        }
-    ]
+    """Deliberately returns nothing.
 
+    This used to publish invented "Alex Jones Live" stories (placeholder URLs, fake
+    comment counts) whenever scraping failed. A scrape failure must yield an empty
+    list, never synthetic content.
+    """
+    return []
 
-# =========================================================
-# 2. SEPARATE INGESTION HANDLERS & UNIFIED NORMALIZATION LAYER
-# =========================================================
 
 def normalize_story(
     title: str,
@@ -590,7 +563,7 @@ def fetch_scraped_sources() -> List[Dict]:
     print("Executing Scraper Ingestion Handler...")
     raw_stories = []
     try:
-        if PLAYWRIGHT_AVAILABLE:
+        if PLAYWRIGHT_AVAILABLE and not os.environ.get("AJN_SKIP_PLAYWRIGHT"):
             raw_stories = asyncio.run(scrape_alexjoneslive_playwright(max_stories=6))
         else:
             raw_stories = scrape_alexjoneslive_bs4(max_stories=6)
@@ -1292,5 +1265,67 @@ def run_pipeline() -> Dict:
     return result_json
 
 
+_FAKE_URL_RE = re.compile(r"alexjoneslive\.com/story-\d+", re.I)
+
+
+def feed_hash(stories: List[Dict]) -> str:
+    """Hash of every story id/title (not just the top MAX_STORIES), so any new item changes it."""
+    keys = sorted(f"{s.get('id','')}|{s.get('title', s.get('headline', ''))}" for s in stories)
+    return hashlib.md5("\n".join(keys).encode()).hexdigest()
+
+
+def refresh_feed() -> Optional[Dict]:
+    """Hourly light refresh of data/current/data.json.
+
+    Ingestion only: no Gemini calls, no image generation, no HTML or archive rewrite
+    (the daily pipeline still does those). Writes nothing when no story changed, and
+    nothing when ingestion returned no items (a network failure must not wipe good data).
+    """
+    fetched = fetch_all_stories()
+    scraped = [a for a in fetched["scraped"] if not _FAKE_URL_RE.search(a.get("url", ""))]
+    rss = [a for a in fetched["rss"] if not _FAKE_URL_RE.search(a.get("url", ""))]
+    combined = (scraped + rss)[:MAX_STORIES]
+
+    if not rss and not scraped:
+        print("::warning::refresh-feed: ingestion returned no stories; keeping the existing data.json")
+        return None
+
+    new_hash = feed_hash(scraped + rss)
+    path = DATA_CURRENT_DIR / "data.json"
+    previous: Dict = {}
+    if path.exists():
+        try:
+            previous = json.loads(path.read_text(encoding="utf-8"))
+        except Exception:
+            previous = {}
+    if previous.get("feed_hash") == new_hash:
+        print("refresh-feed: no new stories; nothing written")
+        return None
+
+    result = dict(previous)  # keep the daily raw_summary, image_prompt and path fields
+    result.update({
+        "last_updated": datetime.datetime.now(datetime.timezone.utc).isoformat(),
+        "source": TARGET_SITE_URL,
+        "date": datetime.date.today().isoformat(),
+        "feed_hash": new_hash,
+        "stories_hash": compute_stories_hash(combined),
+        "stories_count": len(combined),
+        "scraped_articles_count": len(scraped),
+        "rss_articles_count": len(rss),
+        "scraped_articles": scraped,
+        "rss_feeds_articles": rss,
+        "stories": combined,
+    })
+    text = json.dumps(result, indent=2)
+    for d in (DATA_CURRENT_DIR, CURRENT_DIR):
+        d.mkdir(parents=True, exist_ok=True)
+        (d / "data.json").write_text(text, encoding="utf-8")
+    print(f"refresh-feed: wrote {len(rss)} rss + {len(scraped)} scraped stories")
+    return result
+
+
 if __name__ == "__main__":
-    run_pipeline()
+    if "--refresh-feed" in sys.argv[1:]:
+        refresh_feed()
+    else:
+        run_pipeline()
