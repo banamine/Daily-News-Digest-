@@ -22,6 +22,7 @@ import hashlib
 import datetime
 import base64
 import html
+import email.utils
 from pathlib import Path
 from typing import List, Dict, Optional, Tuple, Any
 
@@ -117,6 +118,14 @@ RSS_FEEDS = [
     {"name": "American Thinker", "url": "https://www.americanthinker.com/index.xml"},
     {"name": "Epoch Times", "url": "https://news.google.com/rss/search?q=site:theepochtimes.com&hl=en-US&gl=US&ceid=US:en"}
 ]
+
+# Hourly TV news summaries posted by Internet Archive's TV News account on Mastodon.
+# Items have no <title>, no links out and no images, so they get their own handler
+# (see fetch_tv_summary) instead of the generic RSS loop.
+TV_SUMMARY_FEED = {
+    "name": "Internet Archive TV News (hourly summary)",
+    "url": "https://mastodon.archive.org/@tv.rss",
+}
 
 
 # =========================================================
@@ -513,7 +522,8 @@ def normalize_story(
     ingestion_type: str = "rss",
     author: str = "",
     published: str = "Recently",
-    image_url: str = ""
+    image_url: str = "",
+    use_stock_image: bool = True
 ) -> Dict:
     """
     Unified Normalization Layer: Enforces consistent schema across RSS and Scraper sources.
@@ -532,7 +542,12 @@ def normalize_story(
         "Finance": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=800&q=80"
     }
 
-    final_image = image_url.strip() if image_url else fallback_photos.get(category, fallback_photos["Global"])
+    if image_url:
+        final_image = image_url.strip()
+    elif use_stock_image:
+        final_image = fallback_photos.get(category, fallback_photos["Global"])
+    else:
+        final_image = ""
 
     return {
         "id": create_story_id(clean_l + clean_t),
@@ -588,6 +603,75 @@ def fetch_scraped_sources() -> List[Dict]:
             )
         )
     return normalized
+
+
+_SUMMARY_PREFIX_RE = re.compile(r"^\s*SUMMARY:\s*", re.I)
+_CUT_MARK_RE = re.compile(r"(?:\.{2,}|\u2026)\s*$")
+
+
+def tidy_truncated_post(text: str) -> str:
+    """Make a length-capped social post end cleanly.
+
+    Mastodon posts here are capped near 500 chars and the cut leaves things like
+    'DHS gets approval t..'. A trailing '..' ends in a period, so a plain
+    'ends with punctuation' test wrongly calls it complete. Detect the cut marker
+    or a missing terminal mark, then back up to the last complete sentence, or
+    failing that the last whole word, and end with an ellipsis.
+    """
+    text = clean_text(text)
+    if not text:
+        return ""
+    cut = bool(_CUT_MARK_RE.search(text))
+    if not cut and re.search(r"[.!?][\"')\u201d\u2019]*$", text):
+        return text
+    body = _CUT_MARK_RE.sub("", text).rstrip()
+    ends = [m.end() for m in re.finditer(r"[.!?][\"')\u201d\u2019]*(?=\s)", body)]
+    if ends and ends[-1] >= len(body) * 0.25:
+        return body[:ends[-1]].strip()
+    if re.search(r"[.!?][\"')\u201d\u2019]*$", body) and not cut:
+        return body
+    word_cut = body.rsplit(" ", 1)[0] if " " in body else body
+    return word_cut.rstrip(",;:-\u2013\u2014 ") + "\u2026"
+
+
+def fetch_tv_summary() -> List[Dict]:
+    """Return at most one story: the newest hourly TV news summary post.
+
+    The feed is newest-first and each post restates the day's headlines, so only
+    the newest post is kept. It is labelled as a TV roundup (not original reporting),
+    links to the Mastodon permalink and carries no image.
+    """
+    feed = TV_SUMMARY_FEED
+    try:
+        root = ET.fromstring(http_get_text(feed["url"], timeout=15))
+    except Exception as err:
+        print(f"[warn] TV summary feed unavailable: {err}")
+        return []
+    for item in root.findall(".//item"):
+        link = (item.findtext("link") or "").strip()
+        body = tidy_truncated_post(_SUMMARY_PREFIX_RE.sub("", clean_text(item.findtext("description", ""))))
+        if not link or not body:
+            continue
+        raw_date = (item.findtext("pubDate") or "").strip()
+        try:
+            when = email.utils.parsedate_to_datetime(raw_date).astimezone(datetime.timezone.utc)
+            label = when.strftime("%b %-d, %H:%M UTC")
+        except Exception:
+            label = "latest"
+        story = normalize_story(
+            title=f"TV news hourly summary \u00b7 {label}",
+            link=link,
+            summary=body,
+            source_name=feed["name"],
+            category="Global",
+            ingestion_type="rss",
+            author="Internet Archive TV News",
+            published=raw_date or "Recently",
+            image_url="",
+            use_stock_image=False,
+        )
+        return [story]
+    return []
 
 
 def fetch_rss_feeds() -> List[Dict]:
@@ -660,7 +744,7 @@ def fetch_all_stories() -> Dict[str, List[Dict]]:
     Combines ingestion from both handlers into a segmented dataset.
     """
     scraped = fetch_scraped_sources()
-    rss = fetch_rss_feeds()
+    rss = fetch_rss_feeds() + fetch_tv_summary()
 
     # Deduplicate within each segment
     def dedupe(items):
