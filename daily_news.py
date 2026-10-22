@@ -22,6 +22,7 @@ import hashlib
 import datetime
 import base64
 import html
+import email.utils
 from pathlib import Path
 from typing import List, Dict, Optional, Tuple, Any
 
@@ -102,6 +103,8 @@ USER_AGENT = (
 )
 
 MAX_STORIES = 8
+SOURCE_CAP = 2            # max Top-8 cards from one feed
+DIVERSITY_MAX_AGE_H = 48  # a roundup/wire story must be this fresh to get the guaranteed slot
 
 # Standard RSS feeds for global context
 RSS_FEEDS = [
@@ -117,6 +120,14 @@ RSS_FEEDS = [
     {"name": "American Thinker", "url": "https://www.americanthinker.com/index.xml"},
     {"name": "Epoch Times", "url": "https://news.google.com/rss/search?q=site:theepochtimes.com&hl=en-US&gl=US&ceid=US:en"}
 ]
+
+# Hourly TV news summaries posted by Internet Archive's TV News account on Mastodon.
+# Items have no <title>, no links out and no images, so they get their own handler
+# (see fetch_tv_summary) instead of the generic RSS loop.
+TV_SUMMARY_FEED = {
+    "name": "Internet Archive TV News (hourly summary)",
+    "url": "https://mastodon.archive.org/@tv.rss",
+}
 
 
 # =========================================================
@@ -513,7 +524,8 @@ def normalize_story(
     ingestion_type: str = "rss",
     author: str = "",
     published: str = "Recently",
-    image_url: str = ""
+    image_url: str = "",
+    use_stock_image: bool = True
 ) -> Dict:
     """
     Unified Normalization Layer: Enforces consistent schema across RSS and Scraper sources.
@@ -532,7 +544,12 @@ def normalize_story(
         "Finance": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=800&q=80"
     }
 
-    final_image = image_url.strip() if image_url else fallback_photos.get(category, fallback_photos["Global"])
+    if image_url:
+        final_image = image_url.strip()
+    elif use_stock_image:
+        final_image = fallback_photos.get(category, fallback_photos["Global"])
+    else:
+        final_image = ""
 
     return {
         "id": create_story_id(clean_l + clean_t),
@@ -588,6 +605,75 @@ def fetch_scraped_sources() -> List[Dict]:
             )
         )
     return normalized
+
+
+_SUMMARY_PREFIX_RE = re.compile(r"^\s*SUMMARY:\s*", re.I)
+_CUT_MARK_RE = re.compile(r"(?:\.{2,}|\u2026)\s*$")
+
+
+def tidy_truncated_post(text: str) -> str:
+    """Make a length-capped social post end cleanly.
+
+    Mastodon posts here are capped near 500 chars and the cut leaves things like
+    'DHS gets approval t..'. A trailing '..' ends in a period, so a plain
+    'ends with punctuation' test wrongly calls it complete. Detect the cut marker
+    or a missing terminal mark, then back up to the last complete sentence, or
+    failing that the last whole word, and end with an ellipsis.
+    """
+    text = clean_text(text)
+    if not text:
+        return ""
+    cut = bool(_CUT_MARK_RE.search(text))
+    if not cut and re.search(r"[.!?][\"')\u201d\u2019]*$", text):
+        return text
+    body = _CUT_MARK_RE.sub("", text).rstrip()
+    ends = [m.end() for m in re.finditer(r"[.!?][\"')\u201d\u2019]*(?=\s)", body)]
+    if ends and ends[-1] >= len(body) * 0.25:
+        return body[:ends[-1]].strip()
+    if re.search(r"[.!?][\"')\u201d\u2019]*$", body) and not cut:
+        return body
+    word_cut = body.rsplit(" ", 1)[0] if " " in body else body
+    return word_cut.rstrip(",;:-\u2013\u2014 ") + "\u2026"
+
+
+def fetch_tv_summary() -> List[Dict]:
+    """Return at most one story: the newest hourly TV news summary post.
+
+    The feed is newest-first and each post restates the day's headlines, so only
+    the newest post is kept. It is labelled as a TV roundup (not original reporting),
+    links to the Mastodon permalink and carries no image.
+    """
+    feed = TV_SUMMARY_FEED
+    try:
+        root = ET.fromstring(http_get_text(feed["url"], timeout=15))
+    except Exception as err:
+        print(f"[warn] TV summary feed unavailable: {err}")
+        return []
+    for item in root.findall(".//item"):
+        link = (item.findtext("link") or "").strip()
+        body = tidy_truncated_post(_SUMMARY_PREFIX_RE.sub("", clean_text(item.findtext("description", ""))))
+        if not link or not body:
+            continue
+        raw_date = (item.findtext("pubDate") or "").strip()
+        try:
+            when = email.utils.parsedate_to_datetime(raw_date).astimezone(datetime.timezone.utc)
+            label = when.strftime("%b %-d, %H:%M UTC")
+        except Exception:
+            label = "latest"
+        story = normalize_story(
+            title=f"TV news hourly summary \u00b7 {label}",
+            link=link,
+            summary=body,
+            source_name=feed["name"],
+            category="Global",
+            ingestion_type="rss",
+            author="Internet Archive TV News",
+            published=raw_date or "Recently",
+            image_url="",
+            use_stock_image=False,
+        )
+        return [story]
+    return []
 
 
 def fetch_rss_feeds() -> List[Dict]:
@@ -655,12 +741,74 @@ def fetch_rss_feeds() -> List[Dict]:
     return rss_stories
 
 
+# Feeds eligible for the guaranteed Top-8 diversity slot, in priority order:
+# the hourly TV roundup first, then the wire service.
+DIVERSITY_FEEDS = [TV_SUMMARY_FEED["name"], "Reuters Top News"]
+
+
+def _story_age_hours(story: Dict, now: datetime.datetime) -> Optional[float]:
+    raw = story.get("published") or ""
+    try:
+        when = email.utils.parsedate_to_datetime(raw)
+        if when.tzinfo is None:
+            when = when.replace(tzinfo=datetime.timezone.utc)
+        return (now - when).total_seconds() / 3600
+    except Exception:
+        try:
+            when = datetime.datetime.fromisoformat(raw.replace("Z", "+00:00"))
+            if when.tzinfo is None:
+                when = when.replace(tzinfo=datetime.timezone.utc)
+            return (now - when).total_seconds() / 3600
+        except Exception:
+            return None
+
+
+def select_top_stories(stories: List[Dict], n: int = MAX_STORIES, cap: int = SOURCE_CAP,
+                       now: Optional[datetime.datetime] = None) -> List[Dict]:
+    """Pick the Top-N grid: at most `cap` per feed, plus one guaranteed diversity slot.
+
+    The guaranteed slot goes to the first fresh (<= 48h) story from DIVERSITY_FEEDS
+    (TV roundup preferred, then Reuters). Order of `stories` is kept, so ranking
+    within the pool is unchanged. If the cap leaves fewer than n cards, the grid is
+    topped up from the remaining stories so it is never short. Stories left out are
+    not dropped: they stay in the full rss/scraped lists the page and News Cube read.
+    """
+    now = now or datetime.datetime.now(datetime.timezone.utc)
+    chosen: List[int] = []
+    counts: Dict[str, int] = {}
+
+    for feed in DIVERSITY_FEEDS:
+        for i, st in enumerate(stories):
+            age = _story_age_hours(st, now)
+            if st.get("feed") == feed and age is not None and -1 <= age <= DIVERSITY_MAX_AGE_H:
+                chosen.append(i)
+                counts[feed] = counts.get(feed, 0) + 1
+                break
+        if chosen:
+            break
+
+    for i, st in enumerate(stories):
+        if len(chosen) >= n:
+            break
+        feed = st.get("feed", "")
+        if i in chosen or counts.get(feed, 0) >= cap:
+            continue
+        chosen.append(i)
+        counts[feed] = counts.get(feed, 0) + 1
+    for i in range(len(stories)):  # top-up only if the cap left the grid short
+        if len(chosen) >= n:
+            break
+        if i not in chosen:
+            chosen.append(i)
+    return [stories[i] for i in sorted(chosen)]
+
+
 def fetch_all_stories() -> Dict[str, List[Dict]]:
     """
     Combines ingestion from both handlers into a segmented dataset.
     """
     scraped = fetch_scraped_sources()
-    rss = fetch_rss_feeds()
+    rss = fetch_rss_feeds() + fetch_tv_summary()
 
     # Deduplicate within each segment
     def dedupe(items):
@@ -680,7 +828,7 @@ def fetch_all_stories() -> Dict[str, List[Dict]]:
     return {
         "scraped": scraped_clean,
         "rss": rss_clean,
-        "combined": all_combined[:MAX_STORIES]
+        "combined": select_top_stories(all_combined)
     }
 
 
@@ -1284,7 +1432,7 @@ def refresh_feed() -> Optional[Dict]:
     fetched = fetch_all_stories()
     scraped = [a for a in fetched["scraped"] if not _FAKE_URL_RE.search(a.get("url", ""))]
     rss = [a for a in fetched["rss"] if not _FAKE_URL_RE.search(a.get("url", ""))]
-    combined = (scraped + rss)[:MAX_STORIES]
+    combined = select_top_stories(scraped + rss)
 
     if not rss and not scraped:
         print("::warning::refresh-feed: ingestion returned no stories; keeping the existing data.json")

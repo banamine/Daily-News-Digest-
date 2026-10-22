@@ -40,6 +40,8 @@ jobs:
       - name: Offline tests
         run: |
           python -I tests/test_clean_text.py
+          python -I tests/test_tv_summary.py
+          python -I tests/test_top_selection.py
           python -I tests/test_refresh_feed.py
 
       - name: Refresh feed data
