@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-10-22",
+    "timestamp": "2026-10-22T11:08:20.201173+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "How Arab parties could hold critical balance of power in Israeli election",
+      "Celebrity shark guided out of South Korea canal refuses to swim out to sea",
+      "France reports first human Shamonda virus case - Reuters",
+      "Italy, Spain lift border controls brought in after Ceuta migrant rush - Reuters",
+      "Revealed: The no-nonsense food bank volunteer who ignored Meghan's 'performative' questions about filling a food bag on quasi-royal visit is a millionaire businesswoman"
+    ],
+    "archive_html_path": "data/archive/2026-10-22/index.html",
+    "data_json_path": "data/archive/2026-10-22/data.json"
+  },
+  {
     "date": "2026-10-21",
     "timestamp": "2026-10-21T22:01:47.741214+00:00",
     "stories_count": 8,

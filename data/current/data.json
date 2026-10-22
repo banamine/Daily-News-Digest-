@@ -1,8 +1,8 @@
 {
-  "last_updated": "2026-10-22T10:17:50.131328+00:00",
+  "last_updated": "2026-10-22T11:08:20.197569+00:00",
   "source": "https://www.alexjoneslive.com/",
   "date": "2026-10-22",
-  "stories_hash": "83ebfbc9e82327da9599b4ae3ee0fa35",
+  "stories_hash": "334348e0f4cbfa4ebefe16b78bdab0a7",
   "stories_count": 8,
   "scraped_articles_count": 0,
   "rss_articles_count": 34,
@@ -26,7 +26,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9938/live/80172d90-cd26-11f1-bc2e-018d645d8d21.jpg",
-      "scraped_at": "2026-10-22T10:17:46.154335+00:00"
+      "scraped_at": "2026-10-22T11:08:14.488893+00:00"
     },
     {
       "id": "6df6efd08b59",
@@ -46,7 +46,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/b8eb/live/0ca70d20-cdc2-11f1-ae0b-3f5d64e6a869.jpg",
-      "scraped_at": "2026-10-22T10:17:46.154373+00:00"
+      "scraped_at": "2026-10-22T11:08:14.488947+00:00"
     },
     {
       "id": "24e352bea6a6",
@@ -66,7 +66,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/5e3c/live/e7d9d390-cdf5-11f1-a64c-550be9e3c66b.jpg",
-      "scraped_at": "2026-10-22T10:17:46.154399+00:00"
+      "scraped_at": "2026-10-22T11:08:14.488991+00:00"
     },
     {
       "id": "0f20ad011442",
@@ -86,18 +86,18 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-22T10:17:46.642323+00:00"
+      "scraped_at": "2026-10-22T11:08:15.110210+00:00"
     },
     {
-      "id": "d4d5e7f01594",
-      "headline": "Barclays to cut 5,000 jobs this year - Reuters",
-      "title": "Barclays to cut 5,000 jobs this year - Reuters",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNNnpycDlZTWVVLTN4MW5nX2gydHZsVU5iZXlqdVktS3J0d1A2Slp3U1VOWng3bGdla19QV1FQbnpOZVdpV3FLUFh5UUx3dldxR3dLZEhPcWlRZG1qQjZJb2FBQXZINlFHbUE0MjB2Z0lvbjlyUGNXSUdfNG9VdVc0d1I4dHFaZXFjeHF6RVZwYW5hZFl4aWc?oc=5",
-      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNNnpycDlZTWVVLTN4MW5nX2gydHZsVU5iZXlqdVktS3J0d1A2Slp3U1VOWng3bGdla19QV1FQbnpOZVdpV3FLUFh5UUx3dldxR3dLZEhPcWlRZG1qQjZJb2FBQXZINlFHbUE0MjB2Z0lvbjlyUGNXSUdfNG9VdVc0d1I4dHFaZXFjeHF6RVZwYW5hZFl4aWc?oc=5",
-      "excerpt": "Barclays to cut 5,000 jobs this year Reuters",
-      "summary": "Barclays to cut 5,000 jobs this year Reuters",
-      "relative_time": "Thu, 22 Oct 2026 07:41:40 GMT",
-      "published": "Thu, 22 Oct 2026 07:41:40 GMT",
+      "id": "e450e9fb168e",
+      "headline": "Italy, Spain lift border controls brought in after Ceuta migrant rush - Reuters",
+      "title": "Italy, Spain lift border controls brought in after Ceuta migrant rush - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOcE9Ga0hselFMSGZwNVRuZUgwaFdUOS1MaHpxeHF3U0dWVFNqQWpIZWI1RUV4WDhZdzlodm1OaWRsbi1Kcy1kVm5WZWVxOVZHU29IZmxvOFliQ2c2c19BMk1pamp1dEl4TENJbzV0cmMwajk1ZFNfY2ZPVGVtN01ReDY2Y3R1MkxMenQ5amRCUVpKeENhY3lhSmliV1o3bWFHbW42UndFMHNJd0E?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOcE9Ga0hselFMSGZwNVRuZUgwaFdUOS1MaHpxeHF3U0dWVFNqQWpIZWI1RUV4WDhZdzlodm1OaWRsbi1Kcy1kVm5WZWVxOVZHU29IZmxvOFliQ2c2c19BMk1pamp1dEl4TENJbzV0cmMwajk1ZFNfY2ZPVGVtN01ReDY2Y3R1MkxMenQ5amRCUVpKeENhY3lhSmliV1o3bWFHbW42UndFMHNJd0E?oc=5",
+      "excerpt": "Italy, Spain lift border controls brought in after Ceuta migrant rush Reuters",
+      "summary": "Italy, Spain lift border controls brought in after Ceuta migrant rush Reuters",
+      "relative_time": "Thu, 22 Oct 2026 09:25:00 GMT",
+      "published": "Thu, 22 Oct 2026 09:25:00 GMT",
       "author": "Reuters Top News",
       "feed": "Reuters Top News",
       "feedName": "Reuters Top News",
@@ -106,18 +106,18 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-22T10:17:46.642356+00:00"
+      "scraped_at": "2026-10-22T11:08:15.110265+00:00"
     },
     {
-      "id": "cb7987ab30e0",
-      "headline": "Norway's wealth fund posts $30 billion loss in third quarter - Reuters",
-      "title": "Norway's wealth fund posts $30 billion loss in third quarter - Reuters",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNa3pHaTAydzc2dGxNdlNJQ2FkbDl0UF9BUjhGUkpsSEVmTF9nT0lJekdnTU9VV29lTzdTMU1wUmxwSUdxUDNpVVhZLUg3UHZHbXFmcnkyNEVTTGd1RnZlbFROaTBRcjVSSVdRNE1mblk1UFZoczJsemxrYlZyczNpMmUyMTFfakxqNVd3Rl8xd3hUYlJweXdzSG5OV3cwS1RPZUE?oc=5",
-      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNa3pHaTAydzc2dGxNdlNJQ2FkbDl0UF9BUjhGUkpsSEVmTF9nT0lJekdnTU9VV29lTzdTMU1wUmxwSUdxUDNpVVhZLUg3UHZHbXFmcnkyNEVTTGd1RnZlbFROaTBRcjVSSVdRNE1mblk1UFZoczJsemxrYlZyczNpMmUyMTFfakxqNVd3Rl8xd3hUYlJweXdzSG5OV3cwS1RPZUE?oc=5",
-      "excerpt": "Norway's wealth fund posts $30 billion loss in third quarter Reuters",
-      "summary": "Norway's wealth fund posts $30 billion loss in third quarter Reuters",
-      "relative_time": "Thu, 22 Oct 2026 08:27:56 GMT",
-      "published": "Thu, 22 Oct 2026 08:27:56 GMT",
+      "id": "4d44aef83094",
+      "headline": "US banks detect unauthorized AI agents in customer accounts, Axios reports - Reuters",
+      "title": "US banks detect unauthorized AI agents in customer accounts, Axios reports - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPcEFxNjAweHdoQ0ZaOWpUTGdVNWRkTXJ2Z08zeG1wOG03ZklKSW9WbTFBbGJWUVZVb211eFN4UFpjTG83aHBtMTViQ21fQmxBd2U0b2JTLXNHcjBReXRpMDl3am82SUVqVU1ndmRxejczTVZaWFlCMVZQSGNwWEQ0NXcyLWt0dlduZ2VUbjNyTUdyRUVndWEzV041cVQ1Mk1uV21vNGZBTUpaQ0tkVk1sOElNZW5NQThVZm9SemdUbXY?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPcEFxNjAweHdoQ0ZaOWpUTGdVNWRkTXJ2Z08zeG1wOG03ZklKSW9WbTFBbGJWUVZVb211eFN4UFpjTG83aHBtMTViQ21fQmxBd2U0b2JTLXNHcjBReXRpMDl3am82SUVqVU1ndmRxejczTVZaWFlCMVZQSGNwWEQ0NXcyLWt0dlduZ2VUbjNyTUdyRUVndWEzV041cVQ1Mk1uV21vNGZBTUpaQ0tkVk1sOElNZW5NQThVZm9SemdUbXY?oc=5",
+      "excerpt": "US banks detect unauthorized AI agents in customer accounts, Axios reports Reuters",
+      "summary": "US banks detect unauthorized AI agents in customer accounts, Axios reports Reuters",
+      "relative_time": "Thu, 22 Oct 2026 09:17:44 GMT",
+      "published": "Thu, 22 Oct 2026 09:17:44 GMT",
       "author": "Reuters Top News",
       "feed": "Reuters Top News",
       "feedName": "Reuters Top News",
@@ -126,7 +126,27 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-22T10:17:46.642381+00:00"
+      "scraped_at": "2026-10-22T11:08:15.110307+00:00"
+    },
+    {
+      "id": "80299304eaab",
+      "headline": "Revealed: The no-nonsense food bank volunteer who ignored Meghan's 'performative' questions about filling a food bag on quasi-royal visit is a millionaire businesswoman",
+      "title": "Revealed: The no-nonsense food bank volunteer who ignored Meghan's 'performative' questions about filling a food bag on quasi-royal visit is a millionaire businesswoman",
+      "url": "https://www.dailymail.com/news/article-16227519/food-bank-Meghan-millionaire.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
+      "link": "https://www.dailymail.com/news/article-16227519/food-bank-Meghan-millionaire.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
+      "excerpt": "Mrs Teasdale is a wealthy former solicitor who founded the very successful Springhead Brewery and lives in a grand Victorian mansion that is among the finest homes in Nottingham.",
+      "summary": "Mrs Teasdale is a wealthy former solicitor who founded the very successful Springhead Brewery and lives in a grand Victorian mansion that is among the finest homes in Nottingham.",
+      "relative_time": "Thu, 22 Oct 2026 10:21:54 GMT",
+      "published": "Thu, 22 Oct 2026 10:21:54 GMT",
+      "author": "Daily Mail UK",
+      "feed": "Daily Mail UK",
+      "feedName": "Daily Mail UK",
+      "feedId": "59b9073e561e",
+      "category": "Global",
+      "ingestionType": "rss",
+      "sourceGroup": "rss",
+      "imageUrl": "https://i.dailymail.com/1s/2026/10/21/18/112006409-0-image-a-11_1792604052739.jpg",
+      "scraped_at": "2026-10-22T11:08:15.830554+00:00"
     },
     {
       "id": "0156bbd5b223",
@@ -146,7 +166,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://i.dailymail.com/1s/2026/10/21/15/112001425-0-image-a-58_1792592498062.jpg",
-      "scraped_at": "2026-10-22T10:17:47.177514+00:00"
+      "scraped_at": "2026-10-22T11:08:15.830627+00:00"
     },
     {
       "id": "4c09c6a9aff8",
@@ -166,87 +186,67 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://i.dailymail.com/1s/2026/10/22/06/112016533-0-image-a-55_1792646705605.jpg",
-      "scraped_at": "2026-10-22T10:17:47.177561+00:00"
+      "scraped_at": "2026-10-22T11:08:15.830699+00:00"
     },
     {
-      "id": "f3fd889ee403",
-      "headline": "Homeowner forced to remove fence from his own land after planners say it is too 'overbearing' for walkers using nearby public footpath",
-      "title": "Homeowner forced to remove fence from his own land after planners say it is too 'overbearing' for walkers using nearby public footpath",
-      "url": "https://www.dailymail.com/news/article-16226505/Homeowner-remove-fence-planners-walkers-footpath.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
-      "link": "https://www.dailymail.com/news/article-16226505/Homeowner-remove-fence-planners-walkers-footpath.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
-      "excerpt": "Giles Savage shifted the fence closer to a path next to his \u00a3635,000 home on the East Broyle estate in Chichester, West Sussex, in August 2025 - four months after moving.",
-      "summary": "Giles Savage shifted the fence closer to a path next to his \u00a3635,000 home on the East Broyle estate in Chichester, West Sussex, in August 2025 - four months after moving.",
-      "relative_time": "Thu, 22 Oct 2026 09:29:23 GMT",
-      "published": "Thu, 22 Oct 2026 09:29:23 GMT",
-      "author": "Daily Mail UK",
-      "feed": "Daily Mail UK",
-      "feedName": "Daily Mail UK",
-      "feedId": "59b9073e561e",
-      "category": "Global",
-      "ingestionType": "rss",
-      "sourceGroup": "rss",
-      "imageUrl": "https://i.dailymail.com/1s/2026/10/21/16/111999479-0-image-a-20_1792595243745.jpg",
-      "scraped_at": "2026-10-22T10:17:47.177601+00:00"
-    },
-    {
-      "id": "bae357063e93",
-      "headline": "Australian man threatens female politician with nunchucks days after another lawmaker is hit by car",
-      "title": "Australian man threatens female politician with nunchucks days after another lawmaker is hit by car",
-      "url": "https://nypost.com/2026/10/22/world-news/australian-man-threatens-female-politician-with-nunchucks-days-after-another-lawmaker-is-hit-by-car/",
-      "link": "https://nypost.com/2026/10/22/world-news/australian-man-threatens-female-politician-with-nunchucks-days-after-another-lawmaker-is-hit-by-car/",
-      "excerpt": "The incidents are heightening concerns about female politicians\u2019 safety in the country.",
-      "summary": "The incidents are heightening concerns about female politicians\u2019 safety in the country.",
-      "relative_time": "Thu, 22 Oct 2026 06:03:18 -0400",
-      "published": "Thu, 22 Oct 2026 06:03:18 -0400",
-      "author": "Associated Press",
+      "id": "3ef711a027b7",
+      "headline": "E-bike rider clinging to life after hit-and-run driver hits him on busy NYC street: cops",
+      "title": "E-bike rider clinging to life after hit-and-run driver hits him on busy NYC street: cops",
+      "url": "https://nypost.com/2026/10/22/us-news/e-bike-rider-clinging-to-life-after-hit-and-run-driver-hits-him-on-busy-nyc-street-cops/",
+      "link": "https://nypost.com/2026/10/22/us-news/e-bike-rider-clinging-to-life-after-hit-and-run-driver-hits-him-on-busy-nyc-street-cops/",
+      "excerpt": "The 33-year-old biker was riding south in the right lane on Nostrand Avenue near Atlantic Avenue in Crown Heights \u2013 a buzzing commercial intersection \u2013 around 7:30 p.m. when he was struck by the driver of a white 2026 Hyundai Elantra, police said.",
+      "summary": "The 33-year-old biker was riding south in the right lane on Nostrand Avenue near Atlantic Avenue in Crown Heights \u2013 a buzzing commercial intersection \u2013 around 7:30 p.m. when he was struck by the driver of a white 2026 Hyundai Elantra, police said.",
+      "relative_time": "Thu, 22 Oct 2026 07:02:30 -0400",
+      "published": "Thu, 22 Oct 2026 07:02:30 -0400",
+      "author": "Amanda Woods",
       "feed": "New York Post",
       "feedName": "New York Post",
       "feedId": "f35f2eec037f",
       "category": "Global",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F10%2Fwestern-australian-state-government-minister-146050881.jpg?w%3D1024",
-      "scraped_at": "2026-10-22T10:17:48.040039+00:00"
+      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F10%2Fnypd-scene-accident-involving-car-145908538.jpg?w%3D1024",
+      "scraped_at": "2026-10-22T11:08:16.857855+00:00"
     },
     {
-      "id": "a7d9caf449cc",
-      "headline": "Council lefties aim to crush minority-owned biz just to spite Amazon",
-      "title": "Council lefties aim to crush minority-owned biz just to spite Amazon",
-      "url": "https://nypost.com/2026/10/22/opinion/council-lefties-aim-to-crush-minority-owned-biz-to-spite-amazon/",
-      "link": "https://nypost.com/2026/10/22/opinion/council-lefties-aim-to-crush-minority-owned-biz-to-spite-amazon/",
-      "excerpt": "An unlikely critic is slamming the City Council\u2019s anti-Amazon drive: the National Urban League, which actually cares about the jobs the so-called Delivery Protection Act would kill.",
-      "summary": "An unlikely critic is slamming the City Council\u2019s anti-Amazon drive: the National Urban League, which actually cares about the jobs the so-called Delivery Protection Act would kill.",
-      "relative_time": "Thu, 22 Oct 2026 06:00:00 -0400",
-      "published": "Thu, 22 Oct 2026 06:00:00 -0400",
-      "author": "Post Editorial Board",
+      "id": "4585c4660218",
+      "headline": "Long Island Marine vet who delivered \u20182 million\u2019 toys to needy kids keeps going despite stroke",
+      "title": "Long Island Marine vet who delivered \u20182 million\u2019 toys to needy kids keeps going despite stroke",
+      "url": "https://nypost.com/2026/10/22/us-news/long-island-marine-vet-who-delivered-2-million-toys-to-needy-kids-keeps-going-despite-stroke/",
+      "link": "https://nypost.com/2026/10/22/us-news/long-island-marine-vet-who-delivered-2-million-toys-to-needy-kids-keeps-going-despite-stroke/",
+      "excerpt": "Chuck Kilbride, a retired USMC Major and Long Island native who has led Nassau County\u2019s Toys For Tots since the 1990s, showed up to help hand out toys to children from Hempstead at Miller\u2019s Ale House in Levittown despite his health issues on Wednesday.",
+      "summary": "Chuck Kilbride, a retired USMC Major and Long Island native who has led Nassau County\u2019s Toys For Tots since the 1990s, showed up to help hand out toys to children from Hempstead at Miller\u2019s Ale House in Levittown despite his health issues on Wednesday.",
+      "relative_time": "Thu, 22 Oct 2026 07:00:00 -0400",
+      "published": "Thu, 22 Oct 2026 07:00:00 -0400",
+      "author": "Alex Mitchell, Brandon Cruz",
       "feed": "New York Post",
       "feedName": "New York Post",
       "feedId": "f35f2eec037f",
       "category": "Global",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F10%2Fman-delivers-amazon-prime-package-144114502-e1792535423352.jpg?quality%3D90%26strip%3Dall",
-      "scraped_at": "2026-10-22T10:17:48.040092+00:00"
+      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F10%2F1990s-showered-honors-wednesday-helped-145989086.jpg?w%3D1024",
+      "scraped_at": "2026-10-22T11:08:16.857941+00:00"
     },
     {
-      "id": "1df12e596a0a",
-      "headline": "Prepare to be floored: Wayfair\u2019s October Way Day rug deals start at $19",
-      "title": "Prepare to be floored: Wayfair\u2019s October Way Day rug deals start at $19",
-      "url": "https://nypost.com/shopping/wayfair-way-day-rugs-carpets-sales-deals-october-2026/",
-      "link": "https://nypost.com/shopping/wayfair-way-day-rugs-carpets-sales-deals-october-2026/",
-      "excerpt": "We're wrapped up in a massive sale on Wayfair rugs.",
-      "summary": "We're wrapped up in a massive sale on Wayfair rugs.",
-      "relative_time": "Thu, 22 Oct 2026 06:00:00 -0400",
-      "published": "Thu, 22 Oct 2026 06:00:00 -0400",
-      "author": "Carrie Berk",
+      "id": "a45d4b700186",
+      "headline": "I spent 7 years battling the excruciating \u2018suicide disease\u2019 \u2014 I couldn\u2019t even smile without pain",
+      "title": "I spent 7 years battling the excruciating \u2018suicide disease\u2019 \u2014 I couldn\u2019t even smile without pain",
+      "url": "https://nypost.com/2026/10/22/health/i-spent-7-years-battling-excruciating-suicide-disease/",
+      "link": "https://nypost.com/2026/10/22/health/i-spent-7-years-battling-excruciating-suicide-disease/",
+      "excerpt": "Natisha \u201cTish\u201d Long is familiar with what\u2019s considered to be one of the most agonizing sensations humans can experience. She underwent a first-in-the-world procedure to cure it.",
+      "summary": "Natisha \u201cTish\u201d Long is familiar with what\u2019s considered to be one of the most agonizing sensations humans can experience. She underwent a first-in-the-world procedure to cure it.",
+      "relative_time": "Thu, 22 Oct 2026 07:00:00 -0400",
+      "published": "Thu, 22 Oct 2026 07:00:00 -0400",
+      "author": "Allie Yang",
       "feed": "New York Post",
       "feedName": "New York Post",
       "feedId": "f35f2eec037f",
       "category": "Global",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F10%2Frugs.jpg?quality%3D90%26strip%3Dall",
-      "scraped_at": "2026-10-22T10:17:48.040116+00:00"
+      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F10%2Fhandouts-i-spend-decade-battling-144001523.jpg?w%3D768",
+      "scraped_at": "2026-10-22T11:08:16.858000+00:00"
     },
     {
       "id": "e643e96aa561",
@@ -266,7 +266,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://100percentfedup.com/wp-content/uploads/2026/10/ilhan-omar-court-filing-name.jpg",
-      "scraped_at": "2026-10-22T10:17:48.357126+00:00"
+      "scraped_at": "2026-10-22T11:08:17.356858+00:00"
     },
     {
       "id": "b3d6ed217733",
@@ -286,7 +286,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://100percentfedup.com/wp-content/uploads/2026/10/the-rival-book-cover.jpg",
-      "scraped_at": "2026-10-22T10:17:48.357188+00:00"
+      "scraped_at": "2026-10-22T11:08:17.356950+00:00"
     },
     {
       "id": "b3e8abe9c3bd",
@@ -306,7 +306,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://100percentfedup.com/wp-content/uploads/2026/10/ilhan-omar-house-press-conference.jpg",
-      "scraped_at": "2026-10-22T10:17:48.357224+00:00"
+      "scraped_at": "2026-10-22T11:08:17.357009+00:00"
     },
     {
       "id": "2dcbce0c3597",
@@ -326,7 +326,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://thefederalist.com/wp-content/uploads/2026/10/IMG_1749-scaled-e1792525148429-1200x675.jpg",
-      "scraped_at": "2026-10-22T10:17:48.463994+00:00"
+      "scraped_at": "2026-10-22T11:08:17.525235+00:00"
     },
     {
       "id": "e05fca8ed0c7",
@@ -346,7 +346,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://thefederalist.com/wp-content/uploads/2026/10/Screenshot-2026-10-21-161701-1200x675.jpg",
-      "scraped_at": "2026-10-22T10:17:48.464041+00:00"
+      "scraped_at": "2026-10-22T11:08:17.525288+00:00"
     },
     {
       "id": "98c18a76f775",
@@ -366,7 +366,27 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://thefederalist.com/wp-content/uploads/2026/10/50564517847_341add3e43_k-e1792612299594-1200x675.jpg",
-      "scraped_at": "2026-10-22T10:17:48.464089+00:00"
+      "scraped_at": "2026-10-22T11:08:17.525372+00:00"
+    },
+    {
+      "id": "54d7b89d7e44",
+      "headline": "At 96, Thomas Sowell still has homework for you",
+      "title": "At 96, Thomas Sowell still has homework for you",
+      "url": "https://www.theblaze.com/lifestyle/at-96-thomas-sowell-still-has-homework-for-you",
+      "link": "https://www.theblaze.com/lifestyle/at-96-thomas-sowell-still-has-homework-for-you",
+      "excerpt": "Thomas Sowell has a suggestion for young people heading off to college: Get an education while you\u2019re there. He\u2019s even put together a reading list. Sowell's introductory statement makes clear that he expects readers to question what they find, including his own arguments. The economist and author, now 96, launched Facts Against Rhetoric last year to help people find arguments they might otherwise go through their entire schooling without encountering. It\u2019s an extensive collection of books, essays, interviews, lectures, and online courses, organized by subject and available to anyone with the curiosity to start clicking. Introducing the...",
+      "summary": "Thomas Sowell has a suggestion for young people heading off to college: Get an education while you\u2019re there. He\u2019s even put together a reading list. Sowell's introductory statement makes clear that he expects readers to question what they find, including his own arguments. The economist and author, now 96, launched Facts Against Rhetoric last year to help people find arguments they might otherwise go through their entire schooling without encountering. It\u2019s an extensive collection of books, essays, interviews, lectures, and online courses, organized by subject and available to anyone with the curiosity to start clicking. Introducing the...",
+      "relative_time": "Thu, 22 Oct 2026 11:00:00 +0000",
+      "published": "Thu, 22 Oct 2026 11:00:00 +0000",
+      "author": "Matt Himes",
+      "feed": "The Blaze",
+      "feedName": "The Blaze",
+      "feedId": "ebb74cbdeb82",
+      "category": "Alternative",
+      "ingestionType": "rss",
+      "sourceGroup": "rss",
+      "imageUrl": "https://www.theblaze.com/media-library/at-96-thomas-sowell-still-has-homework-for-you.jpg?id=68496158&width=980",
+      "scraped_at": "2026-10-22T11:08:17.826963+00:00"
     },
     {
       "id": "a3f53f96287c",
@@ -386,7 +406,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://www.theblaze.com/media-library/metallicas-best-act-of-rebellion-no-political-lectures.jpg?id=68500871&width=980",
-      "scraped_at": "2026-10-22T10:17:48.727601+00:00"
+      "scraped_at": "2026-10-22T11:08:17.827455+00:00"
     },
     {
       "id": "2f9202b2501c",
@@ -406,27 +426,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://www.theblaze.com/media-library/9-children-rescued-from-horrific-disgusting-living-conditions-at-couple-s-home-police-say.jpg?id=68502809&width=980",
-      "scraped_at": "2026-10-22T10:17:48.727832+00:00"
-    },
-    {
-      "id": "057ebe44e502",
-      "headline": "Nick Freitas: France\u2019s \u2018decolonization\u2019 movement is coming for Western civilization",
-      "title": "Nick Freitas: France\u2019s \u2018decolonization\u2019 movement is coming for Western civilization",
-      "url": "https://www.theblaze.com/shows/making-the-argument-with-nick-freitas/frances-decolonization-movement-is-coming-for-the-west",
-      "link": "https://www.theblaze.com/shows/making-the-argument-with-nick-freitas/frances-decolonization-movement-is-coming-for-the-west",
-      "excerpt": "France has spent centuries defending its independence, but BlazeTV host Nick Freitas warns that the country now faces a different kind of battle: one over the future of Western civilization itself. This battle is being waged by a very unlikely team: the left and Islam. While the pair has very \u201cdifferent ultimate objectives\u201d and very \u201cdifferent worldviews,\u201d that isn\u2019t stopping them from \u201cusing each other to achieve their objectives.\u201d \u201cThe left is arrogant enough to believe that Islamists just really want to be woke leftists, they just need to experience a more elaborate welfare system. And then Islam recognizes that look, they do not have the...",
-      "summary": "France has spent centuries defending its independence, but BlazeTV host Nick Freitas warns that the country now faces a different kind of battle: one over the future of Western civilization itself. This battle is being waged by a very unlikely team: the left and Islam. While the pair has very \u201cdifferent ultimate objectives\u201d and very \u201cdifferent worldviews,\u201d that isn\u2019t stopping them from \u201cusing each other to achieve their objectives.\u201d \u201cThe left is arrogant enough to believe that Islamists just really want to be woke leftists, they just need to experience a more elaborate welfare system. And then Islam recognizes that look, they do not have the...",
-      "relative_time": "Thu, 22 Oct 2026 09:00:00 +0000",
-      "published": "Thu, 22 Oct 2026 09:00:00 +0000",
-      "author": "BlazeTV Staff",
-      "feed": "The Blaze",
-      "feedName": "The Blaze",
-      "feedId": "ebb74cbdeb82",
-      "category": "Alternative",
-      "ingestionType": "rss",
-      "sourceGroup": "rss",
-      "imageUrl": "https://www.theblaze.com/media-library/image.jpg?id=68501266&width=980",
-      "scraped_at": "2026-10-22T10:17:48.728122+00:00"
+      "scraped_at": "2026-10-22T11:08:17.827812+00:00"
     },
     {
       "id": "8317ede227f9",
@@ -446,7 +446,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://media.townhall.com/cdn/hodl/2026/294/0b9c8a89-1ebe-4133-ac2e-41397a6a6ad7.jpg",
-      "scraped_at": "2026-10-22T10:17:48.828916+00:00"
+      "scraped_at": "2026-10-22T11:08:17.979020+00:00"
     },
     {
       "id": "ba93304a8af5",
@@ -466,7 +466,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://media.townhall.com/cdn/hodl/2026/264/f093c214-742a-4157-8f84-3a3bf91d02e1.jpg",
-      "scraped_at": "2026-10-22T10:17:48.828938+00:00"
+      "scraped_at": "2026-10-22T11:08:17.979051+00:00"
     },
     {
       "id": "dba7043aca47",
@@ -486,7 +486,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://media.townhall.com/cdn/hodl/2018/247/41d8912c-0f32-4f28-82a1-4ef2e9a2f0f4.jpg",
-      "scraped_at": "2026-10-22T10:17:48.828954+00:00"
+      "scraped_at": "2026-10-22T11:08:17.979077+00:00"
     },
     {
       "id": "b48c2e29c69e",
@@ -506,7 +506,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-22T10:17:49.025022+00:00"
+      "scraped_at": "2026-10-22T11:08:18.343256+00:00"
     },
     {
       "id": "e21f7a56ca25",
@@ -526,7 +526,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-22T10:17:49.025075+00:00"
+      "scraped_at": "2026-10-22T11:08:18.343329+00:00"
     },
     {
       "id": "0a88717b2b1a",
@@ -546,7 +546,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-22T10:17:49.025115+00:00"
+      "scraped_at": "2026-10-22T11:08:18.343393+00:00"
     },
     {
       "id": "8a871b6a66c8",
@@ -566,7 +566,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.americanthinker.com/7t/7tzpodhqwz0dbeuwtfyq_640.jpg",
-      "scraped_at": "2026-10-22T10:17:49.203768+00:00"
+      "scraped_at": "2026-10-22T11:08:18.542165+00:00"
     },
     {
       "id": "54dfad587918",
@@ -586,7 +586,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.americanthinker.com/b2/b2j9sololxr5pav1mkog_640.jpg",
-      "scraped_at": "2026-10-22T10:17:49.203984+00:00"
+      "scraped_at": "2026-10-22T11:08:18.542480+00:00"
     },
     {
       "id": "f82cb4628b25",
@@ -606,7 +606,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.americanthinker.com/nh/nhklxvneavom0hszukss_640.jpg",
-      "scraped_at": "2026-10-22T10:17:49.204228+00:00"
+      "scraped_at": "2026-10-22T11:08:18.542875+00:00"
     },
     {
       "id": "db611cceef8e",
@@ -626,7 +626,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-22T10:17:49.662367+00:00"
+      "scraped_at": "2026-10-22T11:08:18.980869+00:00"
     },
     {
       "id": "6e85d50c6f05",
@@ -646,7 +646,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-22T10:17:49.662415+00:00"
+      "scraped_at": "2026-10-22T11:08:18.980938+00:00"
     },
     {
       "id": "373547fec632",
@@ -666,18 +666,18 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-22T10:17:49.662445+00:00"
+      "scraped_at": "2026-10-22T11:08:18.980986+00:00"
     },
     {
-      "id": "f21641837e25",
-      "headline": "TV news hourly summary \u00b7 Oct 22, 10:03 UTC",
-      "title": "TV news hourly summary \u00b7 Oct 22, 10:03 UTC",
-      "url": "https://mastodon.archive.org/@tv/117483987631343220",
-      "link": "https://mastodon.archive.org/@tv/117483987631343220",
-      "excerpt": "Trump campaigned for Republicans in South Carolina and planned stops in Iowa as tight midterm races featured heated Senate debates. A major cybersecurity flaw sparked widespread hacking attempts and website disruptions. Russia and Ukraine signaled openness to renewed talks amid strikes; a Russian attack injured 22 in Kyiv, and debris from a drone interception killed two in Saudi Arabia.",
-      "summary": "Trump campaigned for Republicans in South Carolina and planned stops in Iowa as tight midterm races featured heated Senate debates. A major cybersecurity flaw sparked widespread hacking attempts and website disruptions. Russia and Ukraine signaled openness to renewed talks amid strikes; a Russian attack injured 22 in Kyiv, and debris from a drone interception killed two in Saudi Arabia.",
-      "relative_time": "Thu, 22 Oct 2026 10:03:05 +0000",
-      "published": "Thu, 22 Oct 2026 10:03:05 +0000",
+      "id": "95f26e46b462",
+      "headline": "TV news hourly summary \u00b7 Oct 22, 11:03 UTC",
+      "title": "TV news hourly summary \u00b7 Oct 22, 11:03 UTC",
+      "url": "https://mastodon.archive.org/@tv/117484223512350817",
+      "link": "https://mastodon.archive.org/@tv/117484223512350817",
+      "excerpt": "With midterms 12 days away, candidates clash in Michigan, Kansas and Minnesota, while Trump campaigns across several states and warns of economic fallout if Democrats win. Ukraine says Russia launched a major strike; Putin agreed to resume peace talks, and Russia freed American Stephen Hubbard. A cybersecurity flaw is reportedly under attack, disrupting websites.",
+      "summary": "With midterms 12 days away, candidates clash in Michigan, Kansas and Minnesota, while Trump campaigns across several states and warns of economic fallout if Democrats win. Ukraine says Russia launched a major strike; Putin agreed to resume peace talks, and Russia freed American Stephen Hubbard. A cybersecurity flaw is reportedly under attack, disrupting websites.",
+      "relative_time": "Thu, 22 Oct 2026 11:03:04 +0000",
+      "published": "Thu, 22 Oct 2026 11:03:04 +0000",
       "author": "Internet Archive TV News",
       "feed": "Internet Archive TV News (hourly summary)",
       "feedName": "Internet Archive TV News (hourly summary)",
@@ -686,7 +686,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "",
-      "scraped_at": "2026-10-22T10:17:50.130597+00:00"
+      "scraped_at": "2026-10-22T11:08:19.391763+00:00"
     }
   ],
   "stories": [
@@ -708,7 +708,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9938/live/80172d90-cd26-11f1-bc2e-018d645d8d21.jpg",
-      "scraped_at": "2026-10-22T10:17:46.154335+00:00"
+      "scraped_at": "2026-10-22T11:08:14.488893+00:00"
     },
     {
       "id": "6df6efd08b59",
@@ -728,7 +728,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/b8eb/live/0ca70d20-cdc2-11f1-ae0b-3f5d64e6a869.jpg",
-      "scraped_at": "2026-10-22T10:17:46.154373+00:00"
+      "scraped_at": "2026-10-22T11:08:14.488947+00:00"
     },
     {
       "id": "0f20ad011442",
@@ -748,18 +748,18 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-22T10:17:46.642323+00:00"
+      "scraped_at": "2026-10-22T11:08:15.110210+00:00"
     },
     {
-      "id": "d4d5e7f01594",
-      "headline": "Barclays to cut 5,000 jobs this year - Reuters",
-      "title": "Barclays to cut 5,000 jobs this year - Reuters",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNNnpycDlZTWVVLTN4MW5nX2gydHZsVU5iZXlqdVktS3J0d1A2Slp3U1VOWng3bGdla19QV1FQbnpOZVdpV3FLUFh5UUx3dldxR3dLZEhPcWlRZG1qQjZJb2FBQXZINlFHbUE0MjB2Z0lvbjlyUGNXSUdfNG9VdVc0d1I4dHFaZXFjeHF6RVZwYW5hZFl4aWc?oc=5",
-      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNNnpycDlZTWVVLTN4MW5nX2gydHZsVU5iZXlqdVktS3J0d1A2Slp3U1VOWng3bGdla19QV1FQbnpOZVdpV3FLUFh5UUx3dldxR3dLZEhPcWlRZG1qQjZJb2FBQXZINlFHbUE0MjB2Z0lvbjlyUGNXSUdfNG9VdVc0d1I4dHFaZXFjeHF6RVZwYW5hZFl4aWc?oc=5",
-      "excerpt": "Barclays to cut 5,000 jobs this year Reuters",
-      "summary": "Barclays to cut 5,000 jobs this year Reuters",
-      "relative_time": "Thu, 22 Oct 2026 07:41:40 GMT",
-      "published": "Thu, 22 Oct 2026 07:41:40 GMT",
+      "id": "e450e9fb168e",
+      "headline": "Italy, Spain lift border controls brought in after Ceuta migrant rush - Reuters",
+      "title": "Italy, Spain lift border controls brought in after Ceuta migrant rush - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOcE9Ga0hselFMSGZwNVRuZUgwaFdUOS1MaHpxeHF3U0dWVFNqQWpIZWI1RUV4WDhZdzlodm1OaWRsbi1Kcy1kVm5WZWVxOVZHU29IZmxvOFliQ2c2c19BMk1pamp1dEl4TENJbzV0cmMwajk1ZFNfY2ZPVGVtN01ReDY2Y3R1MkxMenQ5amRCUVpKeENhY3lhSmliV1o3bWFHbW42UndFMHNJd0E?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOcE9Ga0hselFMSGZwNVRuZUgwaFdUOS1MaHpxeHF3U0dWVFNqQWpIZWI1RUV4WDhZdzlodm1OaWRsbi1Kcy1kVm5WZWVxOVZHU29IZmxvOFliQ2c2c19BMk1pamp1dEl4TENJbzV0cmMwajk1ZFNfY2ZPVGVtN01ReDY2Y3R1MkxMenQ5amRCUVpKeENhY3lhSmliV1o3bWFHbW42UndFMHNJd0E?oc=5",
+      "excerpt": "Italy, Spain lift border controls brought in after Ceuta migrant rush Reuters",
+      "summary": "Italy, Spain lift border controls brought in after Ceuta migrant rush Reuters",
+      "relative_time": "Thu, 22 Oct 2026 09:25:00 GMT",
+      "published": "Thu, 22 Oct 2026 09:25:00 GMT",
       "author": "Reuters Top News",
       "feed": "Reuters Top News",
       "feedName": "Reuters Top News",
@@ -768,7 +768,27 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-22T10:17:46.642356+00:00"
+      "scraped_at": "2026-10-22T11:08:15.110265+00:00"
+    },
+    {
+      "id": "80299304eaab",
+      "headline": "Revealed: The no-nonsense food bank volunteer who ignored Meghan's 'performative' questions about filling a food bag on quasi-royal visit is a millionaire businesswoman",
+      "title": "Revealed: The no-nonsense food bank volunteer who ignored Meghan's 'performative' questions about filling a food bag on quasi-royal visit is a millionaire businesswoman",
+      "url": "https://www.dailymail.com/news/article-16227519/food-bank-Meghan-millionaire.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
+      "link": "https://www.dailymail.com/news/article-16227519/food-bank-Meghan-millionaire.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
+      "excerpt": "Mrs Teasdale is a wealthy former solicitor who founded the very successful Springhead Brewery and lives in a grand Victorian mansion that is among the finest homes in Nottingham.",
+      "summary": "Mrs Teasdale is a wealthy former solicitor who founded the very successful Springhead Brewery and lives in a grand Victorian mansion that is among the finest homes in Nottingham.",
+      "relative_time": "Thu, 22 Oct 2026 10:21:54 GMT",
+      "published": "Thu, 22 Oct 2026 10:21:54 GMT",
+      "author": "Daily Mail UK",
+      "feed": "Daily Mail UK",
+      "feedName": "Daily Mail UK",
+      "feedId": "59b9073e561e",
+      "category": "Global",
+      "ingestionType": "rss",
+      "sourceGroup": "rss",
+      "imageUrl": "https://i.dailymail.com/1s/2026/10/21/18/112006409-0-image-a-11_1792604052739.jpg",
+      "scraped_at": "2026-10-22T11:08:15.830554+00:00"
     },
     {
       "id": "0156bbd5b223",
@@ -788,58 +808,38 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://i.dailymail.com/1s/2026/10/21/15/112001425-0-image-a-58_1792592498062.jpg",
-      "scraped_at": "2026-10-22T10:17:47.177514+00:00"
+      "scraped_at": "2026-10-22T11:08:15.830627+00:00"
     },
     {
-      "id": "4c09c6a9aff8",
-      "headline": "Oregon teacher describes harrowing moment she played dead after being injured in school shooting: 'Only thing I could do'",
-      "title": "Oregon teacher describes harrowing moment she played dead after being injured in school shooting: 'Only thing I could do'",
-      "url": "https://www.dailymail.com/news/article-16228831/Oregon-teacher-Becky-Drury-harrowing-played-dead-injured-school-shooting.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
-      "link": "https://www.dailymail.com/news/article-16228831/Oregon-teacher-Becky-Drury-harrowing-played-dead-injured-school-shooting.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
-      "excerpt": "Oregon teacher Becky Drury, 54, has revealed how she pretended to be dead after being shot at close range during last week's horrific elementary school massacre.",
-      "summary": "Oregon teacher Becky Drury, 54, has revealed how she pretended to be dead after being shot at close range during last week's horrific elementary school massacre.",
-      "relative_time": "Thu, 22 Oct 2026 09:38:31 GMT",
-      "published": "Thu, 22 Oct 2026 09:38:31 GMT",
-      "author": "Daily Mail UK",
-      "feed": "Daily Mail UK",
-      "feedName": "Daily Mail UK",
-      "feedId": "59b9073e561e",
-      "category": "Global",
-      "ingestionType": "rss",
-      "sourceGroup": "rss",
-      "imageUrl": "https://i.dailymail.com/1s/2026/10/22/06/112016533-0-image-a-55_1792646705605.jpg",
-      "scraped_at": "2026-10-22T10:17:47.177561+00:00"
-    },
-    {
-      "id": "bae357063e93",
-      "headline": "Australian man threatens female politician with nunchucks days after another lawmaker is hit by car",
-      "title": "Australian man threatens female politician with nunchucks days after another lawmaker is hit by car",
-      "url": "https://nypost.com/2026/10/22/world-news/australian-man-threatens-female-politician-with-nunchucks-days-after-another-lawmaker-is-hit-by-car/",
-      "link": "https://nypost.com/2026/10/22/world-news/australian-man-threatens-female-politician-with-nunchucks-days-after-another-lawmaker-is-hit-by-car/",
-      "excerpt": "The incidents are heightening concerns about female politicians\u2019 safety in the country.",
-      "summary": "The incidents are heightening concerns about female politicians\u2019 safety in the country.",
-      "relative_time": "Thu, 22 Oct 2026 06:03:18 -0400",
-      "published": "Thu, 22 Oct 2026 06:03:18 -0400",
-      "author": "Associated Press",
+      "id": "3ef711a027b7",
+      "headline": "E-bike rider clinging to life after hit-and-run driver hits him on busy NYC street: cops",
+      "title": "E-bike rider clinging to life after hit-and-run driver hits him on busy NYC street: cops",
+      "url": "https://nypost.com/2026/10/22/us-news/e-bike-rider-clinging-to-life-after-hit-and-run-driver-hits-him-on-busy-nyc-street-cops/",
+      "link": "https://nypost.com/2026/10/22/us-news/e-bike-rider-clinging-to-life-after-hit-and-run-driver-hits-him-on-busy-nyc-street-cops/",
+      "excerpt": "The 33-year-old biker was riding south in the right lane on Nostrand Avenue near Atlantic Avenue in Crown Heights \u2013 a buzzing commercial intersection \u2013 around 7:30 p.m. when he was struck by the driver of a white 2026 Hyundai Elantra, police said.",
+      "summary": "The 33-year-old biker was riding south in the right lane on Nostrand Avenue near Atlantic Avenue in Crown Heights \u2013 a buzzing commercial intersection \u2013 around 7:30 p.m. when he was struck by the driver of a white 2026 Hyundai Elantra, police said.",
+      "relative_time": "Thu, 22 Oct 2026 07:02:30 -0400",
+      "published": "Thu, 22 Oct 2026 07:02:30 -0400",
+      "author": "Amanda Woods",
       "feed": "New York Post",
       "feedName": "New York Post",
       "feedId": "f35f2eec037f",
       "category": "Global",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F10%2Fwestern-australian-state-government-minister-146050881.jpg?w%3D1024",
-      "scraped_at": "2026-10-22T10:17:48.040039+00:00"
+      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F10%2Fnypd-scene-accident-involving-car-145908538.jpg?w%3D1024",
+      "scraped_at": "2026-10-22T11:08:16.857855+00:00"
     },
     {
-      "id": "f21641837e25",
-      "headline": "TV news hourly summary \u00b7 Oct 22, 10:03 UTC",
-      "title": "TV news hourly summary \u00b7 Oct 22, 10:03 UTC",
-      "url": "https://mastodon.archive.org/@tv/117483987631343220",
-      "link": "https://mastodon.archive.org/@tv/117483987631343220",
-      "excerpt": "Trump campaigned for Republicans in South Carolina and planned stops in Iowa as tight midterm races featured heated Senate debates. A major cybersecurity flaw sparked widespread hacking attempts and website disruptions. Russia and Ukraine signaled openness to renewed talks amid strikes; a Russian attack injured 22 in Kyiv, and debris from a drone interception killed two in Saudi Arabia.",
-      "summary": "Trump campaigned for Republicans in South Carolina and planned stops in Iowa as tight midterm races featured heated Senate debates. A major cybersecurity flaw sparked widespread hacking attempts and website disruptions. Russia and Ukraine signaled openness to renewed talks amid strikes; a Russian attack injured 22 in Kyiv, and debris from a drone interception killed two in Saudi Arabia.",
-      "relative_time": "Thu, 22 Oct 2026 10:03:05 +0000",
-      "published": "Thu, 22 Oct 2026 10:03:05 +0000",
+      "id": "95f26e46b462",
+      "headline": "TV news hourly summary \u00b7 Oct 22, 11:03 UTC",
+      "title": "TV news hourly summary \u00b7 Oct 22, 11:03 UTC",
+      "url": "https://mastodon.archive.org/@tv/117484223512350817",
+      "link": "https://mastodon.archive.org/@tv/117484223512350817",
+      "excerpt": "With midterms 12 days away, candidates clash in Michigan, Kansas and Minnesota, while Trump campaigns across several states and warns of economic fallout if Democrats win. Ukraine says Russia launched a major strike; Putin agreed to resume peace talks, and Russia freed American Stephen Hubbard. A cybersecurity flaw is reportedly under attack, disrupting websites.",
+      "summary": "With midterms 12 days away, candidates clash in Michigan, Kansas and Minnesota, while Trump campaigns across several states and warns of economic fallout if Democrats win. Ukraine says Russia launched a major strike; Putin agreed to resume peace talks, and Russia freed American Stephen Hubbard. A cybersecurity flaw is reportedly under attack, disrupting websites.",
+      "relative_time": "Thu, 22 Oct 2026 11:03:04 +0000",
+      "published": "Thu, 22 Oct 2026 11:03:04 +0000",
       "author": "Internet Archive TV News",
       "feed": "Internet Archive TV News (hourly summary)",
       "feedName": "Internet Archive TV News (hourly summary)",
@@ -848,15 +848,14 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "",
-      "scraped_at": "2026-10-22T10:17:50.130597+00:00"
+      "scraped_at": "2026-10-22T11:08:19.391763+00:00"
     }
   ],
-  "raw_summary": "### Missiles hit Kyiv after Russia agrees to US call to resume Ukraine peace talks\n**Source:** BBC World News\n**Summary:** Russia says it is \"ready in principle\" to resume peace talks and US President Donald Trump says the world is \"the closest we've been\" to ending the war....\n\n### Rosenberg: US diplomatic push offers little hope for imminent Ukraine peace\n**Source:** BBC World News\n**Summary:** Russia's President Putin does not feel under pressure right now to end the war....\n\n### Macron accuses foreign leaders of exploiting French riots\n**Source:** BBC World News\n**Summary:** The comment is an apparent swipe at Benjamin Netanyahu and Donald Trump, who both face elections in coming weeks....\n\n### Tesla posts surprise positive cash flow on lower-than-expected AI spending - Reuters\n**Source:** Reuters Top News\n**Summary:** Tesla posts surprise positive cash flow on lower-than-expected AI spending Reuters...\n\n### Anthropic unveils Claude Duet AI agent app - Reuters\n**Source:** Reuters Top News\n**Summary:** Anthropic unveils Claude Duet AI agent app Reuters...\n\n### EXCLUSIVE: US orders departure of diplomats from Saudi Arabia amid Houthi strikes - Reuters\n**Source:** Reuters Top News\n**Summary:** EXCLUSIVE: US orders departure of diplomats from Saudi Arabia amid Houthi strikes Reuters...\n\n### Aberfan. 21 October 1966. The day the children didn't come home from school: 60 years ago today, 116 pupils were buried side by side by a 30ft-mountain of slurry - their helpless parents reduced to clasping their hands through the rubble as they suffocated\n**Source:** Daily Mail UK\n**Summary:** Sixty years ago today, 144 people - most of them schoolchildren - were killed when a colliery spoil tip collapsed, triggering an avalanche of industrial waste to slide down into Aberfan, South Wales....\n\n### Mother-of-two, 47, dies after being stabbed in retirement village and crashing as she desperately tried to drive herself to hospital\n**Source:** Daily Mail UK\n**Summary:** Eleanor Barnfield, 47, was severely injured and bleeding after being attacked at work when she got into her car in Bridgend, South Wales, on Monday morning....\n",
-  "image_prompt": "Create a hyper-detailed, cinematic digital illustration in a dramatic, high-stakes news aesthetic that captures the key global events and themes of today.\n\nComposition:\nWide cinematic 16:9 frame. Multi-layered collage-style scene with strong diagonal composition. Foreground: metallic newsroom monitors, glowing holographic data streams, and dark reflective glass surfaces. Midground: split visual screens displaying global maps, satellite tracks, financial tickers, and high-contrast headlines. Background: dramatic city skyline at twilight with searchlights and volumetric atmospheric haze.\n\nLighting:\nHigh-contrast noir-cinematic lighting. Cold cyan and deep electric blue key lights combined with warm amber warning alerts.\n\nColor Palette:\nDeep midnight blue, dark slate gray, crimson red alert accents, neon cyan data overlays, and stark gold warm highlights.\n\nKey News Themes & Summaries of the Day to Visualise Conceptually:\n### Missiles hit Kyiv after Russia agrees to US call to resume Ukraine peace talks\n**Source:** BBC World News\n**Summary:** Russia says it is \"ready in principle\" to resume peace talks and US President Donald Trump says the world is \"the closest we've been\" to ending the war....\n\n### Rosenberg: US diplomatic push offers little hope for imminent Ukraine peace\n**Source:** BBC World News\n**Summary:** Russia's President Putin does not feel under pressure right now to end the war....\n\n### Macron accuses foreign leaders of exploiting French riots\n**Source:** BBC World News\n**Summary:** The comment is an apparent swipe at Benjamin Netanyahu and Donald Trump, who both face elections in coming weeks....\n\n### Tesla posts surprise positive cash flow on lower-than-expected AI spending - Reuters\n**Source:** Reuters Top News\n**Summary:** Tesla posts surprise positive cash flow on lower-than-expected AI spending Reuters...\n\n### Anthropic unveils Claude Duet AI agent app - Reuters\n**Source:** Reuters Top News\n**Summary:** Anthropic unveils Claude Duet AI agent app Reuters...\n\n### EXCLUSIVE: US orders departure of diplomats from Saudi Arabia amid Houthi strikes - Reuters\n**Source:** Reuters Top News\n**Summary:** EXCLUSIVE: US orders departure of diplomats from Saudi Arabia amid Houthi strikes Reuters...\n\n### Aberfan. 21 October 1966. The day the children didn't come home from school: 60 years ago today, 116 pupils were buried side by side by a 30ft-mountain of slurry - their helpless parents r\n\nVisual Style:\nPhotorealistic cinematic artwork, octane render detail, crisp vector interfaces, volumetric god rays. No readable text overlays.",
+  "raw_summary": "### How Arab parties could hold critical balance of power in Israeli election\n**Source:** BBC World News\n**Summary:** Disaffection has often driven down turnout among Arab Israelis, but there is a strong push to get rid of the right-wing governing coalition....\n\n### Celebrity shark guided out of South Korea canal refuses to swim out to sea\n**Source:** BBC World News\n**Summary:** Bukangi the shark became an unlikely sensation after it was spotted in a canal in Busan weeks ago....\n\n### France reports first human Shamonda virus case - Reuters\n**Source:** Reuters Top News\n**Summary:** France reports first human Shamonda virus case Reuters...\n\n### Italy, Spain lift border controls brought in after Ceuta migrant rush - Reuters\n**Source:** Reuters Top News\n**Summary:** Italy, Spain lift border controls brought in after Ceuta migrant rush Reuters...\n\n### Revealed: The no-nonsense food bank volunteer who ignored Meghan's 'performative' questions about filling a food bag on quasi-royal visit is a millionaire businesswoman\n**Source:** Daily Mail UK\n**Summary:** Mrs Teasdale is a wealthy former solicitor who founded the very successful Springhead Brewery and lives in a grand Victorian mansion that is among the finest homes in Nottingham....\n\n### The schoolgirl comic strip sparking surge in Japanese tourists to world's most beautiful village: Bizarre Tokyo animation studio uses Bibury as location for its 'Manga' TV series\n**Source:** Daily Mail UK\n**Summary:** For Bibury's residents, the dream of living in rural paradise has increasingly become a nightmare....\n\n### E-bike rider clinging to life after hit-and-run driver hits him on busy NYC street: cops\n**Source:** New York Post\n**Summary:** The 33-year-old biker was riding south in the right lane on Nostrand Avenue near Atlantic Avenue in Crown Heights \u2013 a buzzing commercial intersection \u2013 around 7:30 p.m. when he was struck by the driver of a white 2026 Hyundai Elantra, police said....\n\n### TV news hourly summary \u00b7 Oct 22, 11:03 UTC\n**Source:** Internet Archive TV News (hourly summary)\n**Summary:** With midterms 12 days away, candidates clash in Michigan, Kansas and Minnesota, while Trump campaigns across several states and warns of economic fallout if Democrats win. Ukraine says Russia launched a major strike; Putin agreed to resume peace talk...\n",
+  "image_prompt": "Create a hyper-detailed, cinematic digital illustration in a dramatic, high-stakes news aesthetic that captures the key global events and themes of today.\n\nComposition:\nWide cinematic 16:9 frame. Multi-layered collage-style scene with strong diagonal composition. Foreground: metallic newsroom monitors, glowing holographic data streams, and dark reflective glass surfaces. Midground: split visual screens displaying global maps, satellite tracks, financial tickers, and high-contrast headlines. Background: dramatic city skyline at twilight with searchlights and volumetric atmospheric haze.\n\nLighting:\nHigh-contrast noir-cinematic lighting. Cold cyan and deep electric blue key lights combined with warm amber warning alerts.\n\nColor Palette:\nDeep midnight blue, dark slate gray, crimson red alert accents, neon cyan data overlays, and stark gold warm highlights.\n\nKey News Themes & Summaries of the Day to Visualise Conceptually:\n### How Arab parties could hold critical balance of power in Israeli election\n**Source:** BBC World News\n**Summary:** Disaffection has often driven down turnout among Arab Israelis, but there is a strong push to get rid of the right-wing governing coalition....\n\n### Celebrity shark guided out of South Korea canal refuses to swim out to sea\n**Source:** BBC World News\n**Summary:** Bukangi the shark became an unlikely sensation after it was spotted in a canal in Busan weeks ago....\n\n### France reports first human Shamonda virus case - Reuters\n**Source:** Reuters Top News\n**Summary:** France reports first human Shamonda virus case Reuters...\n\n### Italy, Spain lift border controls brought in after Ceuta migrant rush - Reuters\n**Source:** Reuters Top News\n**Summary:** Italy, Spain lift border controls brought in after Ceuta migrant rush Reuters...\n\n### Revealed: The no-nonsense food bank volunteer who ignored Meghan's 'performative' questions about filling a food bag on quasi-royal visit is a millionaire businesswoman\n**Source:** Daily Mail UK\n**Summary:** Mrs Teasdale is a wealthy former solicitor who founded the very successful Springhead Brewery and lives in a grand Victorian mansion that is among the finest homes in Nottingham....\n\n### The schoolgirl comic strip sparking surge in Japanese tourists to world's most beautiful village: Bizarre Tokyo animation studio uses Bibury as location for its 'Manga' TV series\n**Source:** Daily Mail UK\n**Summary:** For Bibury's residents, the \n\nVisual Style:\nPhotorealistic cinematic artwork, octane render detail, crisp vector interfaces, volumetric god rays. No readable text overlays.",
   "public_index_path": "index.html",
   "current_html_path": "output/current/index.html",
   "data_current_html_path": "data/current/index.html",
-  "archive_html_path": "output/archive/2026-10-21/index.html",
-  "data_archive_html_path": "data/archive/2026-10-21/index.html",
-  "feed_hash": "ee6c8fd9a2d3eece07fad2059f3fa9ce"
+  "archive_html_path": "output/archive/2026-10-22/index.html",
+  "data_archive_html_path": "data/archive/2026-10-22/index.html"
 }
