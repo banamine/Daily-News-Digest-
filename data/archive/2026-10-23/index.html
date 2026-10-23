@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Intelligence Briefing – 2026-10-23</title>
+    <style>
+        :root {
+            --bg: #0f1115;
+            --card: #1a1d24;
+            --text: #e6e8ec;
+            --muted: #9ba1ad;
+            --accent: #3b82f6;
+            --border: #2a2e38;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; padding: 2rem 1rem; }
+        .container { max-width: 960px; margin: 0 auto; }
+        header { text-align: center; margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+        header h1 { font-size: 2.2rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 0.4rem; color: #ffffff; }
+        header .date { color: var(--accent); font-size: 1rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+        
+        .hero-image { width: 100%; border-radius: 16px; overflow: hidden; margin-bottom: 2.5rem; box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6); border: 1px solid var(--border); background: #0b0f19; }
+        
+        /* Flexible Photo Collage Component */
+        .collage-wrapper { position: relative; width: 100%; }
+        .collage-header-pill {
+            position: absolute; top: 14px; left: 14px; z-index: 10;
+            background: rgba(15, 23, 42, 0.88); backdrop-filter: blur(8px);
+            border: 1px solid rgba(56, 189, 248, 0.35); color: #38bdf8;
+            padding: 5px 12px; border-radius: 999px; font-size: 11px; font-weight: 800;
+            letter-spacing: 0.5px; display: flex; align-items: center; gap: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        }
+        .collage-container {
+            display: grid; gap: 8px; background: #090d16; padding: 8px; border-radius: 16px; min-height: 280px;
+        }
+        .collage-container.collage-count-1 { grid-template-columns: 1fr; grid-template-rows: 360px; }
+        .collage-container.collage-count-1 .hero-tile { grid-row: auto; }
+
+        .collage-container.collage-count-2 { grid-template-columns: 1fr 1fr; grid-template-rows: 320px; }
+        .collage-container.collage-count-2 .hero-tile { grid-row: auto; }
+
+        .collage-container.collage-count-3 { grid-template-columns: 1.6fr 1fr; grid-template-rows: 170px 170px; }
+        .collage-container.collage-count-3 .hero-tile { grid-row: span 2; }
+
+        .collage-container.collage-count-4 { grid-template-columns: 1.6fr 1fr 1fr; grid-template-rows: 170px 170px; }
+        .collage-container.collage-count-4 .hero-tile { grid-row: span 2; }
+        .collage-container.collage-count-4 .collage-tile:nth-child(4) { grid-column: span 2; }
+
+        .collage-container.collage-count-5 { grid-template-columns: 1.8fr 1fr 1fr; grid-template-rows: 180px 180px; }
+        .collage-container.collage-count-5 .hero-tile { grid-row: span 2; }
+
+        @media (max-width: 768px) {
+            .collage-container,
+            .collage-container.collage-count-2,
+            .collage-container.collage-count-3,
+            .collage-container.collage-count-4,
+            .collage-container.collage-count-5 {
+                grid-template-columns: 1fr; grid-template-rows: auto;
+            }
+            .collage-tile, .hero-tile { min-height: 180px; }
+        }
+        .collage-tile {
+            position: relative; border-radius: 10px; overflow: hidden; background: #131927;
+            border: 1px solid rgba(255, 255, 255, 0.08); transition: transform 0.3s ease;
+        }
+        .collage-tile.hero-tile { grid-row: span 2; }
+        .collage-tile img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
+        .collage-tile:hover img { transform: scale(1.06); }
+        .collage-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(to top, rgba(11, 15, 23, 0.95) 0%, rgba(11, 15, 23, 0.2) 60%, transparent 100%);
+            display: flex; flex-direction: column; justify-content: flex-end; padding: 12px;
+        }
+        .collage-badge {
+            align-self: flex-start; background: rgba(56, 189, 248, 0.2); color: #38bdf8;
+            border: 1px solid rgba(56, 189, 248, 0.4); font-size: 10px; font-weight: 700;
+            text-transform: uppercase; padding: 2px 8px; border-radius: 999px; margin-bottom: 6px;
+        }
+        .collage-badge.hero-badge { background: rgba(16, 185, 129, 0.2); color: #34d399; border-color: rgba(16, 185, 129, 0.4); }
+        .collage-title { color: #ffffff; font-size: 12px; font-weight: 700; line-height: 1.35; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        .hero-tile .collage-title { font-size: 17px; }
+
+        .stories { display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 3rem; }
+        .story { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem; }
+        .story h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: #f1f3f5; }
+        .story-body { color: var(--muted); font-size: 0.98rem; overflow-wrap: anywhere; word-break: break-word; }
+        .story h2, .mini-card h3, .mini-card p { overflow-wrap: anywhere; }
+        .container { min-width: 0; max-width: 100%; }
+        .section-title { font-size: 1.3rem; font-weight: 800; color: var(--accent); margin: 2rem 0 1rem; border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; }
+        .segmented-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
+        .mini-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+        .mini-card.scraped { border-left: 3px solid #8b5cf6; }
+        .mini-card.rss { border-left: 3px solid #3b82f6; }
+        .source-tag { font-size: 0.75rem; font-weight: bold; color: var(--accent); margin-bottom: 0.4rem; }
+        .mini-card h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.4rem; }
+        .mini-card h3 a { color: #f1f3f5; text-decoration: none; }
+        .mini-card h3 a:hover { text-decoration: underline; color: var(--accent); }
+        .mini-card p { font-size: 0.82rem; color: var(--muted); line-height: 1.4; }
+        footer { text-align: center; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="date">2026-10-23</div>
+            <h1>Daily Intelligence Briefing</h1>
+        </header>
+
+        <div class="hero-image">
+            
+                
+    <div class="collage-wrapper">
+        <div class="collage-header-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7"/><path d="M16 5h5v5"/><path d="m21 5-9 9"/></svg>
+            <span>Parsed Feeds Mixed Photo Collage (5 Photos)</span>
+        </div>
+        <div class="collage-container collage-count-5">
+            <div class="collage-tile hero-tile">
+                <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/271c/live/d171b6a0-cebc-11f1-a64c-550be9e3c66b.jpg" alt="Ukraine says Starlink still restricted after Trump says limits lifted" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+                <div class="collage-overlay">
+                    <span class="collage-badge hero-badge">BBC World News</span>
+                    <h3 class="collage-title hero-title">Ukraine says Starlink still restricted after Trump says limits lifted</h3>
+                </div>
+            </div>
+            
+        <div class="collage-tile">
+            <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/a095/live/c39c9a30-cec7-11f1-b9e0-e5f0da03dc7f.jpg" alt="Five Israelis wounded and two suspected Palestinian attackers killed in West Bank shooting" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">BBC World News</span>
+                <h4 class="collage-title">Five Israelis wounded and two suspected Palestinian attackers killed in West Bank shooting</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/8cb6/live/26f20040-cec1-11f1-ae9c-0303957c36f8.jpg" alt="Hundreds of flights cancelled as Typhoon Champi shuts Taiwan" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">BBC World News</span>
+                <h4 class="collage-title">Hundreds of flights cancelled as Typhoon Champi shuts Taiwan</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="One killed, four injured in drive-by shooting near Paris - Reuters" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">Reuters Top News</span>
+                <h4 class="collage-title">One killed, four injured in drive-by shooting near Paris - Reuters</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="US airlines favor higher fares over fuller planes as fuel costs squeeze profits - Reuters" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">Reuters Top News</span>
+                <h4 class="collage-title">US airlines favor higher fares over fuller planes as fuel costs squeeze profits - Reuters</h4>
+            </div>
+        </div>
+        
+        </div>
+    </div>
+    
+            
+        </div>
+
+        <main class="stories">
+            
+        <div class="story">
+            <h2>Ukraine says Starlink still restricted after Trump says limits lifted</h2>
+            <div class="story-body"><strong>Source:</strong> BBC World News<br><strong>Summary:</strong> Issues remain with the network used by the Ukrainian military, sources say, after repeated denials of a deliberate slowdown....</div>
+        </div>
+        
+        <div class="story">
+            <h2>Five Israelis wounded and two suspected Palestinian attackers killed in West Bank shooting</h2>
+            <div class="story-body"><strong>Source:</strong> BBC World News<br><strong>Summary:</strong> The attack comes at a time of heightened tensions in the occupied West Bank and four days before Israel&#x27;s general election....</div>
+        </div>
+        
+        <div class="story">
+            <h2>One killed, four injured in drive-by shooting near Paris - Reuters</h2>
+            <div class="story-body"><strong>Source:</strong> Reuters Top News<br><strong>Summary:</strong> One killed, four injured in drive-by shooting near Paris Reuters...</div>
+        </div>
+        
+        <div class="story">
+            <h2>US airlines favor higher fares over fuller planes as fuel costs squeeze profits - Reuters</h2>
+            <div class="story-body"><strong>Source:</strong> Reuters Top News<br><strong>Summary:</strong> US airlines favor higher fares over fuller planes as fuel costs squeeze profits Reuters...</div>
+        </div>
+        
+        <div class="story">
+            <h2>Meghan says she is &#x27;deeply distressed&#x27; by allegations her father Thomas possessed child sex abuse images and reveals letter with &#x27;disturbing&#x27; claims was passed to Met Police in 2018</h2>
+            <div class="story-body"><strong>Source:</strong> Daily Mail UK<br><strong>Summary:</strong> The Duchess of Sussex revealed claims against Thomas Markle Sr were passed to her in 2018 after a letter was sent to the Metropolitan Police&#x27;s royal protection team....</div>
+        </div>
+        
+        <div class="story">
+            <h2>Cheers! England&#x27;s oldest pub is finally named as experts confirm &#x27;national treasure&#x27; boozer started pulling pints 600 years ago after studying tree rings in timber frame</h2>
+            <div class="story-body"><strong>Source:</strong> Daily Mail UK<br><strong>Summary:</strong> Everyone thinks they know where England&#x27;s oldest pub is - and have had many a drunken debate over it. But that argument now seems to have been settled....</div>
+        </div>
+        
+        <div class="story">
+            <h2>Bears suffer devastating Cole Kmet injury: ‘I don’t have the words’</h2>
+            <div class="story-body"><strong>Source:</strong> New York Post<br><strong>Summary:</strong> Kmet tallied three catches for 28 yards Thursday night....</div>
+        </div>
+        
+        <div class="story">
+            <h2>TV news hourly summary · Oct 23, 11:03 UTC</h2>
+            <div class="story-body"><strong>Source:</strong> Internet Archive TV News (hourly summary)<br><strong>Summary:</strong> Political news focused on Trump’s defense of a controversial ad and Vivek Ramaswamy, midterm campaigning, and disputes over investigations and Senate races. Other headlines included a West Bank attack, Sudanese forces targeting hospitals, floods in U...</div>
+        </div>
+        
+        </main>
+
+        
+        <div class='section-title'>Global &amp; Alternative RSS Feeds</div><div class='segmented-grid'>
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/articles/cq74pjpmx0e8o?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>Ukraine says Starlink still restricted after Trump says limits lifted</a></h3>
+                <p>Issues remain with the network used by the Ukrainian military, sources say, after repeated denials of a deliberate slowdown....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/articles/cq4g1p974wxko?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>Five Israelis wounded and two suspected Palestinian attackers killed in West Bank shooting</a></h3>
+                <p>The attack comes at a time of heightened tensions in the occupied West Bank and four days before Israel&#x27;s general election....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/articles/cw98zn304zg7o?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>Hundreds of flights cancelled as Typhoon Champi shuts Taiwan</a></h3>
+                <p>One person has died after being swept away by waves in Taiwan&#x27;s Liuqiu island, authorities say....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMinwFBVV95cUxPRWRWa2ZyY2MySVU3NVpEWElTQXlveTJMWjlZaXBHTUphcTlTekxveFBQY2ppTFF4enFSWHRrZDVHTDlpMXYwVWlTZ1h3M2dkNEpfTFNmSWc2STFaUVpNRHhrU0hZVnVHSExaMDF0blpEYXNDaThEbWxKeV91UEdGVm1Uc25GSnR6U3R0QS0xbVpZLU9tWC1oN2N4ZkJsZEU?oc=5' target='_blank' rel='noopener'>One killed, four injured in drive-by shooting near Paris - Reuters</a></h3>
+                <p>One killed, four injured in drive-by shooting near Paris Reuters...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMivgFBVV95cUxNUG5rYnl2SW5GYjhBR1ZrdWVreEJac3JUU2ZIWFVlcWk3NHBmaTBudUlxYTN5MFF1OHdlaUs4MUVCOVo4RDh2RnQ5SVRuWmRwSkVpOE9kdS1JN3g4ckpCc1NZVDhrVzUxc0c3TXdqblAzVldVVTk4a1VZWng3OHBPODVEOWJmR25MVm5wM2w4WmI5VkxTU3NjdEZhZEJQNEROS1N5TFRCVXBtbkJVY0J1MzJOTEpOeWF4SXBtRDJ3?oc=5' target='_blank' rel='noopener'>US airlines favor higher fares over fuller planes as fuel costs squeeze profits - Reuters</a></h3>
+                <p>US airlines favor higher fares over fuller planes as fuel costs squeeze profits Reuters...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMitgFBVV95cUxPM3AwOWFSMUtfNXFVU01WekJVSDBWbHlRSC1CLS1GOGZJak5qeXRXclpHMF8xM2pzNVpXaGthMkRXMEZidWFuRU5UTVY5d3BvNjZHTUxIdzB1RnZWbnNFWXlMWHFFX1JrZllMNjN2dDZfZ1pNaDZmNkpxckRFRFdLOUlnZGt6X3FQaGs3VGRrZllULXdtVHB4SlpzYzlIdktfbW8xTy1UeVVTdjk5LWxLOUpkTURodw?oc=5' target='_blank' rel='noopener'>Trump&#x27;s diesel price relief efforts grow costlier as election nears - Reuters</a></h3>
+                <p>Trump&#x27;s diesel price relief efforts grow costlier as election nears Reuters...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/news/article-16232163/Meghan-Markles-father-child-sex-images-son-lies.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>Meghan says she is &#x27;deeply distressed&#x27; by allegations her father Thomas possessed child sex abuse images and reveals letter with &#x27;disturbing&#x27; claims was passed to Met Police in 2018</a></h3>
+                <p>The Duchess of Sussex revealed claims against Thomas Markle Sr were passed to her in 2018 after a letter was sent to the Metropolitan Police&#x27;s royal protection team....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/news/article-16232363/Cheers-Englands-oldest-pub-finally-named-experts-confirm-national-treasure-boozer-started-pulling-pints-600-years-ago-studying-tree-rings-timber-frame.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>Cheers! England&#x27;s oldest pub is finally named as experts confirm &#x27;national treasure&#x27; boozer started pulling pints 600 years ago after studying tree rings in timber frame</a></h3>
+                <p>Everyone thinks they know where England&#x27;s oldest pub is - and have had many a drunken debate over it. But that argument now seems to have been settled....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/news/article-16232307/British-mother-drowns-Bahamas-save-children.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>British mother drowns in Bahamas while trying to save her two children who were swept away while snorkelling</a></h3>
+                <p>A British woman has reportedly drowned in the Bahamas while trying to save her two children who were swept out to sea....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>New York Post</div>
+                <h3><a href='https://nypost.com/2026/10/23/sports/bears-suffer-devastating-cole-kmet-injury-i-dont-have-the-words/' target='_blank' rel='noopener'>Bears suffer devastating Cole Kmet injury: ‘I don’t have the words’</a></h3>
+                <p>Kmet tallied three catches for 28 yards Thursday night....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>New York Post</div>
+                <h3><a href='https://nypost.com/2026/10/23/sports/the-giants-keep-finding-a-spark-just-when-everything-seems-lost/' target='_blank' rel='noopener'>The Giants keep finding a spark just when everything seems lost</a></h3>
+                <p>So many teams would’ve crumbled before this point. A third quarterback making a start in a season by Week 7? The best of those three out for the season with a significant knee injury? The best defende...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>New York Post</div>
+                <h3><a href='https://nypost.com/2026/10/23/us-news/disabled-toddler-grandparents-found-dead-in-ohio-murder-suicide-after-tragic-911-call-pleas-softly-for-help/' target='_blank' rel='noopener'>Disabled toddler, grandparents found dead in murder-suicide after tragic 911 call pleas softly for ‘help’</a></h3>
+                <p>Three people, including a disabled toddler, were found shot dead in an apparent murder-suicide at an Ohio home following a 911 call for help....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/texas-tax-official-indicted-alleged-scheme-put-personal/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=texas-tax-official-indicted-alleged-scheme-put-personal' target='_blank' rel='noopener'>Texas Tax Official Indicted in Alleged Scheme to Put Personal Caretakers on County Payroll</a></h3>
+                <p>A Fort Bend County tax official and two others face federal charges over an alleged scheme involving county-paid caregivers, a Chicago employee and false payroll records....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/breaking-supreme-court-clears-new-hampshire-enforce-student/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=breaking-supreme-court-clears-new-hampshire-enforce-student' target='_blank' rel='noopener'>BREAKING: Supreme Court Clears New Hampshire To Enforce Student ID Voting Rules Ahead Of Midterms</a></h3>
+                <p>The Supreme Court granted New Hampshire an emergency stay, restoring its student-ID voting guidance before the November 3 midterms....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/justtholic-bishops-gather-oval-office-pray-president/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=justtholic-bishops-gather-oval-office-pray-president' target='_blank' rel='noopener'>JUST IN: Catholic Bishops Gather In The Oval Office To Pray Over President Trump</a></h3>
+                <p>Catholic archbishops and bishops gathered around President Trump in the Oval Office for a powerful moment of prayer at the White House....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/10/23/dimwitted-quisling-david-french-has-an-infinite-appetite-for-ritual-humiliation/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=dimwitted-quisling-david-french-has-an-infinite-appetite-for-ritual-humiliation' target='_blank' rel='noopener'>Dimwitted Quisling David French Has An Infinite Appetite For Ritual Humiliation</a></h3>
+                <p>A quite recent chief of staff to Democrat Gov. Gavin Newsom is awaiting sentencing for fraud, so David French says that voters who are tired of fraud blame Republicans and will elect Democrats....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/10/23/the-dsa-plans-to-incite-nationwide-violence-ahead-of-2028-election/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=the-dsa-plans-to-incite-nationwide-violence-ahead-of-2028-election' target='_blank' rel='noopener'>The DSA Plans To Incite Nationwide Violence Ahead Of 2028 Election</a></h3>
+                <p>The reported DSA-linked planning treats the Insurrection Act as a trap that works only if Trump walks into it on their timetable and terms....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/10/23/james-talarico-wants-to-win-texas-in-republican-drag/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=james-talarico-wants-to-win-texas-in-republican-drag' target='_blank' rel='noopener'>James Talarico Wants To Win Texas In Republican Drag</a></h3>
+                <p>Why does a Democrat running for Senate in Texas need to borrow the cultural packaging of conservatism?...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/tech/apple-homeview-announcement' target='_blank' rel='noopener'>Apple wants you using this new product to run your household</a></h3>
+                <p>Apple is known for many innovative products — phones, tablets, watches, and computers. It has had a harder time getting into the smart home market, but now that Siri is finally closer to an intelligen...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/news/dhs-to-test-military-grade-heat-ray-that-causes-an-irresistible-urge-to-run-to-protect-southern-border' target='_blank' rel='noopener'>DHS to test military-grade ‘heat ray’ that causes an ‘irresistible urge to run’ to protect southern border</a></h3>
+                <p>The Department of War recently gave the green light for the Department of Homeland Security to test a &quot;heat ray&quot; weapon for potential use at the southern border. According to a memo obtained...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/columns/opinion/the-1776-immigration-fight-america-forgot-and-why-it-matters-now' target='_blank' rel='noopener'>The 1776 immigration fight America forgot — and why it matters now</a></h3>
+                <p>The mass rioting and destruction across France in recent weeks has laid bare the direct connection between multiculturalism and authoritarian political movements across the West, as does the similar c...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/ed-morrissey/2026/10/22/thursdays-final-word-n3820218' target='_blank' rel='noopener'>Thursday&#x27;s Final Word</a></h3>
+                <p>Thursday&#x27;s Final Word...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/john-s-2/2026/10/22/anduril-and-colossal-team-up-for-warhound-n3820228' target='_blank' rel='noopener'>Anduril and Colossal Team Up for Warhound</a></h3>
+                <p>Anduril and Colossal Team Up for Warhound...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/tree-hugging-sister/2026/10/22/virginia-man-knocks-the-head-off-one-of-the-marines-at-the-quantico-iwo-jima-statue-n3820224' target='_blank' rel='noopener'>&#x27;Stafford County Man&#x27; Knocks the Head Off One of the Marines on the Quantico Iwo Jima Statue ILLEGAL</a></h3>
+                <p>&#x27;Stafford County Man&#x27; Knocks the Head Off One of the Marines on the Quantico Iwo Jima Statue ILLEGAL...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Judicial Watch</div>
+                <h3><a href='https://www.judicialwatch.org/the-search-warrant-of-ilhan-omars-washington-d-c-residence-et-al-v-united-states-of-america-motion-for-extension-of-time/' target='_blank' rel='noopener'>Motion for Extension of Time in THE SEARCH WARRANT OF ILHAN OMAR’S WASHINGTON, D.C. RESIDENCE ...</a></h3>
+                <p>View the court filing by clicking the link below… CLICK HERE...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Judicial Watch</div>
+                <h3><a href='https://www.judicialwatch.org/judicial-watch-sues-for-fbis-2021-rosetta-stone-report-on-crossfire-hurricane/' target='_blank' rel='noopener'>Judicial Watch Sues for FBI’s 2021 ‘Rosetta Stone’ Report on Crossfire Hurricane</a></h3>
+                <p>(Washington, DC) – Judicial Watch announced today that it filed a Freedom of Information Act (FOIA) lawsuit against…...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Judicial Watch</div>
+                <h3><a href='https://www.judicialwatch.org/u-s-takes-few-enforcement-actions-on-visa-overstays-deemed-high-risk-to-national-security/' target='_blank' rel='noopener'>U.S. Takes “Few Enforcement Actions” on Visa Overstays Deemed High Risk to National Security</a></h3>
+                <p>As if it weren’t bad enough that the U.S. government has long compromised national security by losing track…...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/10/when-money-dies-a-century-long-prophecy/' target='_blank' rel='noopener'>When Money Dies: A Century-Long Prophecy</a></h3>
+                <p>Photo Credit: Grok Grok By Kyle McClay A monetary system anchored to energy is a system anchored to reality....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/10/how-modern-activism-ignores-history/' target='_blank' rel='noopener'>How Modern Activism Ignores History</a></h3>
+                <p>Photo Credit: Marxism and Islamism montage ChatGPT ai-generated illustration By John Stephen Frey Bound by shared opposition to Western institutions, Judeo-Christian values, and constitutional conserv...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/10/supporting-illegal-immigration-is-it-compassion-or-its-opposite/' target='_blank' rel='noopener'>Supporting Illegal Immigration: Is It Compassion Or Its Opposite?</a></h3>
+                <p>Photo Credit: AI for American Thinker By Meda Parameswara Reddy The media relentlessly focus on those coming to America, without regard for those Americans hurt by this influx of foreign labor....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMifEFVX3lxTE5sQ3M3ZTFkX19VVEFHSHNEX1BmTmZTZzlkemFnVUZfVjBja010TlFJTmIzaU1IU1BlZVRXRU1vemVIREhQeTNpZktjdEFjeGVCS0R3cXRrYVdkZ3VGRXBteUNHeTZ2UklaaWlpTnk5dEJSbF9wOWJvMFhRVjc?oc=5' target='_blank' rel='noopener'>Spot the Difference Daily- Play Now online &amp; 100% Free - The Epoch Times</a></h3>
+                <p>Spot the Difference Daily- Play Now online &amp; 100% Free The Epoch Times...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMiREFVX3lxTFBSU2dZLXZaX21HbzlKWGxkWnM1eEQwNEZ3VE4xUkJFWFJWSkJ3d0pSY2c4MTBKZXctUXdyWWdicWJQaklP?oc=5' target='_blank' rel='noopener'>The Epoch Times | Breaking News, Latest News, World News and Videos - The Epoch Times</a></h3>
+                <p>The Epoch Times | Breaking News, Latest News, World News and Videos The Epoch Times...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMi4wFBVV95cUxOdG5aREVvdERyaEhmVUlGS0NpbUxVTVpSNW5ndjhxRzlsZ2R0UlFuRzBxX2prLVlmNmNlem9LNS1xb0YzRTlRRmQxZ0p0TEhlejNSQVFQZGpXeHNmT2hmdE5JaUV6dEdfNkNsRFp6c2UwMDVTZjFFdkc4TVRJcWpDVHViSmVpR1ZVNHZ1REc3ZFROSk85Mk5JcjNCWWRDZFNmeDNUTVdwOVBLdkx3ZnA1V3NxZVpyb0dfRVM3T3R2dFlrNmNFVlg0bndUZ3VyZGMwUnc1UnV6Q0cxSjVNZnZFN2hhUQ?oc=5' target='_blank' rel='noopener'>Regional Chinese CDC Calls Plague Info Confidential as Public Suspicions Grow After Suspected Russia Case - The Epoch Times</a></h3>
+                <p>Regional Chinese CDC Calls Plague Info Confidential as Public Suspicions Grow After Suspected Russia Case The Epoch Times...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Internet Archive TV News (hourly summary)</div>
+                <h3><a href='https://mastodon.archive.org/@tv/117489885886912212' target='_blank' rel='noopener'>TV news hourly summary · Oct 23, 11:03 UTC</a></h3>
+                <p>Political news focused on Trump’s defense of a controversial ad and Vivek Ramaswamy, midterm campaigning, and disputes over investigations and Senate races. Other headlines included a West Bank attack...</p>
+            </div>
+            </div>
+
+        <footer>
+            Automated Segmented Pipeline powered by HTML Scrapers, 11 Global RSS Feeds &amp; Google Gemini AI &bull; 2026-10-23
+        </footer>
+    </div>
+</body>
+</html>

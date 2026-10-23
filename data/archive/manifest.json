@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-10-23",
+    "timestamp": "2026-10-23T11:47:37.276296+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "Ukraine says Starlink still restricted after Trump says limits lifted",
+      "Five Israelis wounded and two suspected Palestinian attackers killed in West Bank shooting",
+      "One killed, four injured in drive-by shooting near Paris - Reuters",
+      "US airlines favor higher fares over fuller planes as fuel costs squeeze profits - Reuters",
+      "Meghan says she is 'deeply distressed' by allegations her father Thomas possessed child sex abuse images and reveals letter with 'disturbing' claims was passed to Met Police in 2018"
+    ],
+    "archive_html_path": "data/archive/2026-10-23/index.html",
+    "data_json_path": "data/archive/2026-10-23/data.json"
+  },
+  {
     "date": "2026-10-22",
     "timestamp": "2026-10-22T11:08:20.201173+00:00",
     "stories_count": 8,
