@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-10-24",
+    "timestamp": "2026-10-24T10:16:24.541592+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "Arrest made after fire at Hitler's mountaintop Eagle's Nest retreat",
+      "Father who killed Oregon school gunman describes anguish over children he couldn't save",
+      "Ukraine says Starlink and Starshield operating at 400 kph after week of throttling - Reuters",
+      "Four Philippine Air Force pilots killed in training accident - Reuters",
+      "Pictured: British mother, 36, who drowned in the Bahamas trying to save her two children"
+    ],
+    "archive_html_path": "data/archive/2026-10-24/index.html",
+    "data_json_path": "data/archive/2026-10-24/data.json"
+  },
+  {
     "date": "2026-10-23",
     "timestamp": "2026-10-23T11:47:37.276296+00:00",
     "stories_count": 8,
