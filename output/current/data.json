@@ -1,13 +1,33 @@
 {
-  "last_updated": "2026-10-24T19:32:44.771059+00:00",
+  "last_updated": "2026-10-24T22:33:26.534602+00:00",
   "source": "https://www.alexjoneslive.com/",
   "date": "2026-10-24",
-  "stories_hash": "66b976c3f9689fb4c668033e49d1786d",
+  "stories_hash": "195a41115e7bd3e2bde68dddf5a24541",
   "stories_count": 8,
   "scraped_articles_count": 0,
-  "rss_articles_count": 33,
+  "rss_articles_count": 34,
   "scraped_articles": [],
   "rss_feeds_articles": [
+    {
+      "id": "198fe9478956",
+      "headline": "Almost 1,000 arrested as clashes follow another day of mass protests across France",
+      "title": "Almost 1,000 arrested as clashes follow another day of mass protests across France",
+      "url": "https://www.bbc.co.uk/news/articles/c95ynd587ynzo?at_medium=RSS&at_campaign=rss",
+      "link": "https://www.bbc.co.uk/news/articles/c95ynd587ynzo?at_medium=RSS&at_campaign=rss",
+      "excerpt": "Officials have so far managed to avoid a repeat of last weekend's rioting and looting as hundreds of thousands took part in demonstrations.",
+      "summary": "Officials have so far managed to avoid a repeat of last weekend's rioting and looting as hundreds of thousands took part in demonstrations.",
+      "relative_time": "Sat, 24 Oct 2026 21:09:27 GMT",
+      "published": "Sat, 24 Oct 2026 21:09:27 GMT",
+      "author": "BBC World News",
+      "feed": "BBC World News",
+      "feedName": "BBC World News",
+      "feedId": "dd267a14f6bc",
+      "category": "Global",
+      "ingestionType": "rss",
+      "sourceGroup": "rss",
+      "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/6090/live/bf46ec40-cfe6-11f1-93e1-3b657b665bcf.jpg",
+      "scraped_at": "2026-10-24T22:33:22.584039+00:00"
+    },
     {
       "id": "a8f47c330f17",
       "headline": "Ukraine says Starlink connection 'now stable' after network limits",
@@ -26,12 +46,12 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/6049/live/9c0d0c10-cf9a-11f1-b441-2b33b063138f.jpg",
-      "scraped_at": "2026-10-24T19:32:42.082451+00:00"
+      "scraped_at": "2026-10-24T22:33:22.584077+00:00"
     },
     {
-      "id": "063f07f2a650",
-      "headline": "Palestinian families displaced as Israeli forces demolish Hebron homes, local officials say",
-      "title": "Palestinian families displaced as Israeli forces demolish Hebron homes, local officials say",
+      "id": "9f9c7e945ee9",
+      "headline": "Palestinian families displaced as Israeli forces demolish Hebron homes",
+      "title": "Palestinian families displaced as Israeli forces demolish Hebron homes",
       "url": "https://www.bbc.co.uk/news/articles/cqd09k1k7532o?at_medium=RSS&at_campaign=rss",
       "link": "https://www.bbc.co.uk/news/articles/cqd09k1k7532o?at_medium=RSS&at_campaign=rss",
       "excerpt": "The crackdown follows the killing of two Israeli soldiers by two Palestinian gunmen on Friday - and comes just days ahead of Israel's election.",
@@ -46,27 +66,47 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3b86/live/6920a5d0-cfba-11f1-9012-0172b9f73a72.jpg",
-      "scraped_at": "2026-10-24T19:32:42.082513+00:00"
+      "scraped_at": "2026-10-24T22:33:22.584101+00:00"
     },
     {
-      "id": "8ca1067644f9",
-      "headline": "Man arrested after fire at Hitler's mountaintop Eagle's Nest retreat",
-      "title": "Man arrested after fire at Hitler's mountaintop Eagle's Nest retreat",
-      "url": "https://www.bbc.co.uk/news/articles/cr93zwjw1k4qo?at_medium=RSS&at_campaign=rss",
-      "link": "https://www.bbc.co.uk/news/articles/cr93zwjw1k4qo?at_medium=RSS&at_campaign=rss",
-      "excerpt": "Some 200 emergency personnel were deployed to fight the blaze at the Nazi dictator's Alpine residence in Germany.",
-      "summary": "Some 200 emergency personnel were deployed to fight the blaze at the Nazi dictator's Alpine residence in Germany.",
-      "relative_time": "Sat, 24 Oct 2026 15:21:44 GMT",
-      "published": "Sat, 24 Oct 2026 15:21:44 GMT",
-      "author": "BBC World News",
-      "feed": "BBC World News",
-      "feedName": "BBC World News",
-      "feedId": "dd267a14f6bc",
+      "id": "f405e3f3413f",
+      "headline": "Protests sweep Italian cities amid heavy security presence, some violence reported - Reuters",
+      "title": "Protests sweep Italian cities amid heavy security presence, some violence reported - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOdkVjV19ld3VNNFRlLXZaOFh2aUhReW5lUXgyblRhTHJPWEM4bUg0QU5XeFVXd0tKelV5LVFhSGJKMndmNjg1aFJLcmtITDNjTVpFVFU3YUFtcGdSc3ZGTDQzMHJTN05nZldOVkM0WDZyS3Y1TF9RbUVtMFh5MENrajRfRFRlOTR6Vlc5MWV4aklwMi1ielVIUEVmelIzMkVKaDAyT09wWWs2NXU2QVJwNUp0bXM?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOdkVjV19ld3VNNFRlLXZaOFh2aUhReW5lUXgyblRhTHJPWEM4bUg0QU5XeFVXd0tKelV5LVFhSGJKMndmNjg1aFJLcmtITDNjTVpFVFU3YUFtcGdSc3ZGTDQzMHJTN05nZldOVkM0WDZyS3Y1TF9RbUVtMFh5MENrajRfRFRlOTR6Vlc5MWV4aklwMi1ielVIUEVmelIzMkVKaDAyT09wWWs2NXU2QVJwNUp0bXM?oc=5",
+      "excerpt": "Protests sweep Italian cities amid heavy security presence, some violence reported Reuters",
+      "summary": "Protests sweep Italian cities amid heavy security presence, some violence reported Reuters",
+      "relative_time": "Sat, 24 Oct 2026 18:23:43 GMT",
+      "published": "Sat, 24 Oct 2026 18:23:43 GMT",
+      "author": "Reuters Top News",
+      "feed": "Reuters Top News",
+      "feedName": "Reuters Top News",
+      "feedId": "2a73bb6c12bf",
       "category": "Global",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/723c/live/ca5c07b0-cfc2-11f1-b441-2b33b063138f.jpg",
-      "scraped_at": "2026-10-24T19:32:42.082551+00:00"
+      "imageUrl": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80",
+      "scraped_at": "2026-10-24T22:33:23.249253+00:00"
+    },
+    {
+      "id": "cb1ba4371fe6",
+      "headline": "Gunmen kill at least 40 people in northeastern Nigeria, Amnesty International says - Reuters",
+      "title": "Gunmen kill at least 40 people in northeastern Nigeria, Amnesty International says - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPb1J4ZnFKQkVEMmNqNnhnQ1hzU290Wm5VWVI1ajhVUmpDbkpqLUlrNEVuckpONnNoN0hlZGJVTnhGY0V3dUh4UXFKUzN2ZFZSbk1fYWtEeUtMNDJRSVlfVDNjX1dWVWd2UzhlZFplZXA3d1l3dkdWLVRUMEhzd1RBcC1GRnRTQk8tNGNjc3B5RHZPcy1DOTlJeHp0Y3ZkdHhaX0xlTktJSWJlVDQ5b1hWQkpmb1ZrRC12RlNpTG5YekQ1Zw?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPb1J4ZnFKQkVEMmNqNnhnQ1hzU290Wm5VWVI1ajhVUmpDbkpqLUlrNEVuckpONnNoN0hlZGJVTnhGY0V3dUh4UXFKUzN2ZFZSbk1fYWtEeUtMNDJRSVlfVDNjX1dWVWd2UzhlZFplZXA3d1l3dkdWLVRUMEhzd1RBcC1GRnRTQk8tNGNjc3B5RHZPcy1DOTlJeHp0Y3ZkdHhaX0xlTktJSWJlVDQ5b1hWQkpmb1ZrRC12RlNpTG5YekQ1Zw?oc=5",
+      "excerpt": "Gunmen kill at least 40 people in northeastern Nigeria, Amnesty International says Reuters",
+      "summary": "Gunmen kill at least 40 people in northeastern Nigeria, Amnesty International says Reuters",
+      "relative_time": "Sat, 24 Oct 2026 19:03:57 GMT",
+      "published": "Sat, 24 Oct 2026 19:03:57 GMT",
+      "author": "Reuters Top News",
+      "feed": "Reuters Top News",
+      "feedName": "Reuters Top News",
+      "feedId": "2a73bb6c12bf",
+      "category": "Global",
+      "ingestionType": "rss",
+      "sourceGroup": "rss",
+      "imageUrl": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80",
+      "scraped_at": "2026-10-24T22:33:23.249293+00:00"
     },
     {
       "id": "a4e12860c7eb",
@@ -86,47 +126,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-24T19:32:42.199097+00:00"
-    },
-    {
-      "id": "010f7fdc2a38",
-      "headline": "Belgian protesters and police skirmish at anti-government demonstrations in Brussels - Reuters",
-      "title": "Belgian protesters and police skirmish at anti-government demonstrations in Brussels - Reuters",
-      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNdWRmTGozX08xMlVRbHEtbWNESTBRVUg5eVNVR2dJTnh2UTNoU1F1aktWc2FYZVh6N0hkcFJxN05OS1hmNmQzLWZZODBIVFRBYlQ1SG5BUzJvUUdxMmFsRWJlcFdlR3pSRTdJT0pDWk1XYUl6UENiTzNja0ExT0VFbWZvU01iTmpjY0R4bnF1RmRscUtDSnJUQTFJeUtLeF9BZ2kzcWxQOGlOZUhyUThmY29IOTY5eWc?oc=5",
-      "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNdWRmTGozX08xMlVRbHEtbWNESTBRVUg5eVNVR2dJTnh2UTNoU1F1aktWc2FYZVh6N0hkcFJxN05OS1hmNmQzLWZZODBIVFRBYlQ1SG5BUzJvUUdxMmFsRWJlcFdlR3pSRTdJT0pDWk1XYUl6UENiTzNja0ExT0VFbWZvU01iTmpjY0R4bnF1RmRscUtDSnJUQTFJeUtLeF9BZ2kzcWxQOGlOZUhyUThmY29IOTY5eWc?oc=5",
-      "excerpt": "Belgian protesters and police skirmish at anti-government demonstrations in Brussels Reuters",
-      "summary": "Belgian protesters and police skirmish at anti-government demonstrations in Brussels Reuters",
-      "relative_time": "Sat, 24 Oct 2026 16:06:20 GMT",
-      "published": "Sat, 24 Oct 2026 16:06:20 GMT",
-      "author": "Reuters Top News",
-      "feed": "Reuters Top News",
-      "feedName": "Reuters Top News",
-      "feedId": "2a73bb6c12bf",
-      "category": "Global",
-      "ingestionType": "rss",
-      "sourceGroup": "rss",
-      "imageUrl": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-24T19:32:42.199151+00:00"
-    },
-    {
-      "id": "3e217a6b9410",
-      "headline": "Trump says he may move White House press corps - Reuters",
-      "title": "Trump says he may move White House press corps - Reuters",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNSk1kdkRlZlJWcUhpbzJzSW1OS2RSRG4zVXd1Y0Vsci1UQjR3ZGZiX2xyU2w4TG1YRUZ6VVhfajRiVmt1MTZxdm5rOXF4MUlEbEN0VjJxb2EyR2VCOGUtRzY3MkprdHZlMVBPckJoOVJFcEtkUVZ0cjNlYzNnSVRXM2t3YnZFM0FkLWRUdWRabDlONk1qeVNQa0JNMndwU1lRcG9GUUZtWG0?oc=5",
-      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNSk1kdkRlZlJWcUhpbzJzSW1OS2RSRG4zVXd1Y0Vsci1UQjR3ZGZiX2xyU2w4TG1YRUZ6VVhfajRiVmt1MTZxdm5rOXF4MUlEbEN0VjJxb2EyR2VCOGUtRzY3MkprdHZlMVBPckJoOVJFcEtkUVZ0cjNlYzNnSVRXM2t3YnZFM0FkLWRUdWRabDlONk1qeVNQa0JNMndwU1lRcG9GUUZtWG0?oc=5",
-      "excerpt": "Trump says he may move White House press corps Reuters",
-      "summary": "Trump says he may move White House press corps Reuters",
-      "relative_time": "Sat, 24 Oct 2026 12:59:43 GMT",
-      "published": "Sat, 24 Oct 2026 12:59:43 GMT",
-      "author": "Reuters Top News",
-      "feed": "Reuters Top News",
-      "feedName": "Reuters Top News",
-      "feedId": "2a73bb6c12bf",
-      "category": "Global",
-      "ingestionType": "rss",
-      "sourceGroup": "rss",
-      "imageUrl": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-24T19:32:42.199184+00:00"
+      "scraped_at": "2026-10-24T22:33:23.249317+00:00"
     },
     {
       "id": "6a86a9ec035d",
@@ -146,7 +146,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://i.dailymail.com/1s/2026/10/24/18/112069757-0-image-a-2_1792864272690.jpg",
-      "scraped_at": "2026-10-24T19:32:42.621749+00:00"
+      "scraped_at": "2026-10-24T22:33:23.880827+00:00"
     },
     {
       "id": "509f214e7c35",
@@ -166,7 +166,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://i.dailymail.com/1s/2026/10/23/20/112057975-0-image-a-4_1792785218079.jpg",
-      "scraped_at": "2026-10-24T19:32:42.621832+00:00"
+      "scraped_at": "2026-10-24T22:33:23.880883+00:00"
     },
     {
       "id": "0e42366bbb19",
@@ -186,58 +186,78 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://i.dailymail.com/1s/2026/10/23/16/112054011-0-image-a-76_1792770946358.jpg",
-      "scraped_at": "2026-10-24T19:32:42.621891+00:00"
+      "scraped_at": "2026-10-24T22:33:23.880918+00:00"
     },
     {
-      "id": "4c5b842d87aa",
-      "headline": "Novig promo code NYPOST: Deposit $10, get $50 in trade credits for Nets vs. Cavaliers",
-      "title": "Novig promo code NYPOST: Deposit $10, get $50 in trade credits for Nets vs. Cavaliers",
-      "url": "https://nypost.com/2026/10/24/betting/novig-promo-code-nypost-deposit-10-get-50-in-trade-credits-for-nets-vs-cavaliers/",
-      "link": "https://nypost.com/2026/10/24/betting/novig-promo-code-nypost-deposit-10-get-50-in-trade-credits-for-nets-vs-cavaliers/",
-      "excerpt": "New traders can unlock $50 in trade credits by entering the Novig promo code NYPOST during sign-up.",
-      "summary": "New traders can unlock $50 in trade credits by entering the Novig promo code NYPOST during sign-up.",
-      "relative_time": "Sat, 24 Oct 2026 15:30:00 -0400",
-      "published": "Sat, 24 Oct 2026 15:30:00 -0400",
-      "author": "Mike Turay",
+      "id": "68f12c79bd0c",
+      "headline": "America\u2019s billionaire boom: Florida gains on New York as California dominates top 10",
+      "title": "America\u2019s billionaire boom: Florida gains on New York as California dominates top 10",
+      "url": "https://nypost.com/2026/10/24/us-news/americas-billionaire-boom-florida-gains-on-new-york-as-california-dominates/",
+      "link": "https://nypost.com/2026/10/24/us-news/americas-billionaire-boom-florida-gains-on-new-york-as-california-dominates/",
+      "excerpt": "California leads the country in the number of billionaires, but New York and Florida are catching up, according to a Forbes report.",
+      "summary": "California leads the country in the number of billionaires, but New York and Florida are catching up, according to a Forbes report.",
+      "relative_time": "Sat, 24 Oct 2026 18:30:35 -0400",
+      "published": "Sat, 24 Oct 2026 18:30:35 -0400",
+      "author": "Jeanne Erickson",
       "feed": "New York Post",
       "feedName": "New York Post",
       "feedId": "f35f2eec037f",
       "category": "Global",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F10%2Fnewspress-collage-712a3qeqw-1792532925231.jpg?quality%3D90%26strip%3Dall%261792518593%261792518593",
-      "scraped_at": "2026-10-24T19:32:42.765816+00:00"
+      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F10%2F2025-innovator-awards-moma-october-146215091.jpg?w%3D647",
+      "scraped_at": "2026-10-24T22:33:24.554109+00:00"
     },
     {
-      "id": "ab57a10e7cb5",
-      "headline": "\u2018Knots Landing\u2019 star Donna Mills, 85, reveals bizarre OnlyFans requests she refuses to fulfill",
-      "title": "\u2018Knots Landing\u2019 star Donna Mills, 85, reveals bizarre OnlyFans requests she refuses to fulfill",
-      "url": "https://pagesix.com/2026/10/24/celebrity-news/knots-landing-star-donna-mills-reveals-onlyfans-requests-she-rejects/",
-      "link": "https://pagesix.com/2026/10/24/celebrity-news/knots-landing-star-donna-mills-reveals-onlyfans-requests-she-rejects/",
-      "excerpt": "Mills announced she'd joined the subscription-based site in July.",
-      "summary": "Mills announced she'd joined the subscription-based site in July.",
-      "relative_time": "Sat, 24 Oct 2026 15:23:38 -0400",
-      "published": "Sat, 24 Oct 2026 15:23:38 -0400",
-      "author": "Audrey Rock",
+      "id": "3b7824ed15b9",
+      "headline": "The absurd usage of sideline reporters is nothing short of a self-backfiring manuever",
+      "title": "The absurd usage of sideline reporters is nothing short of a self-backfiring manuever",
+      "url": "https://nypost.com/2026/10/24/sports/usage-of-sideline-reporters-is-nothing-short-of-a-self-backfiring-manuever/",
+      "link": "https://nypost.com/2026/10/24/sports/usage-of-sideline-reporters-is-nothing-short-of-a-self-backfiring-manuever/",
+      "excerpt": "If it weren\u2019t so redundant \u2014 so worn out \u2014 it would be remarkable.",
+      "summary": "If it weren\u2019t so redundant \u2014 so worn out \u2014 it would be remarkable.",
+      "relative_time": "Sat, 24 Oct 2026 18:29:21 -0400",
+      "published": "Sat, 24 Oct 2026 18:29:21 -0400",
+      "author": "Phil Mushnick",
       "feed": "New York Post",
       "feedName": "New York Post",
       "feedId": "f35f2eec037f",
       "category": "Global",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://pagesix.com/wp-content%2Fuploads%2Fsites%2F3%2F2026%2F10%2Fknots-landing-star-donna-mills-146334640.jpg",
-      "scraped_at": "2026-10-24T19:32:42.765876+00:00"
+      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F10%2FGettyImages-2300781430.jpg?quality%3D90%26strip%3Dall",
+      "scraped_at": "2026-10-24T22:33:24.554145+00:00"
     },
     {
-      "id": "2e23578faa00",
-      "headline": "Ilhan Omar\u2019s Deleted Father\u2019s Day Post Resurfaces \u2014 The Name She Used Is Now Under a Microscope",
-      "title": "Ilhan Omar\u2019s Deleted Father\u2019s Day Post Resurfaces \u2014 The Name She Used Is Now Under a Microscope",
-      "url": "https://100percentfedup.com/ilhan-omars-deleted-fathers-day-post-resurfaces-name/?utm_source=rss&utm_medium=rss&utm_campaign=ilhan-omars-deleted-fathers-day-post-resurfaces-name",
-      "link": "https://100percentfedup.com/ilhan-omars-deleted-fathers-day-post-resurfaces-name/?utm_source=rss&utm_medium=rss&utm_campaign=ilhan-omars-deleted-fathers-day-post-resurfaces-name",
-      "excerpt": "A deleted 2013 Father's Day post, recent court filings and Omar's own denial are colliding as federal investigators examine her identity and immigration records.",
-      "summary": "A deleted 2013 Father's Day post, recent court filings and Omar's own denial are colliding as federal investigators examine her identity and immigration records.",
-      "relative_time": "Sat, 24 Oct 2026 19:07:05 +0000",
-      "published": "Sat, 24 Oct 2026 19:07:05 +0000",
+      "id": "b504d42ffa8e",
+      "headline": "49ers star Fred Warner hit with hefty fine as suspension threat looms",
+      "title": "49ers star Fred Warner hit with hefty fine as suspension threat looms",
+      "url": "https://nypost.com/2026/10/24/sports/49ers-star-fred-warner-hit-with-hefty-fine-as-suspension-threat-looms/",
+      "link": "https://nypost.com/2026/10/24/sports/49ers-star-fred-warner-hit-with-hefty-fine-as-suspension-threat-looms/",
+      "excerpt": "The NFL fined 49ers linebacker Fred Warner $65,673. Warner was pegged for two unnecessary roughness violations during San Francisco\u2019s win over the Commanders last week. Warner was fined $47,762 for a hit on Commanders tight end Chig Okonkwo, where officials threw a flag on the play, but then picked it up. San Francisco 49ers offensive...",
+      "summary": "The NFL fined 49ers linebacker Fred Warner $65,673. Warner was pegged for two unnecessary roughness violations during San Francisco\u2019s win over the Commanders last week. Warner was fined $47,762 for a hit on Commanders tight end Chig Okonkwo, where officials threw a flag on the play, but then picked it up. San Francisco 49ers offensive...",
+      "relative_time": "Sat, 24 Oct 2026 18:09:28 -0400",
+      "published": "Sat, 24 Oct 2026 18:09:28 -0400",
+      "author": "Valentina Martinez",
+      "feed": "New York Post",
+      "feedName": "New York Post",
+      "feedId": "f35f2eec037f",
+      "category": "Global",
+      "ingestionType": "rss",
+      "sourceGroup": "rss",
+      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F10%2FMT1USATODAY30001419-1351397828-3.jpg?w%3D1024",
+      "scraped_at": "2026-10-24T22:33:24.554193+00:00"
+    },
+    {
+      "id": "f2ec8889d072",
+      "headline": "Trump Turns to Cold War-Era Powers to Ramp Up U.S. Oil Production",
+      "title": "Trump Turns to Cold War-Era Powers to Ramp Up U.S. Oil Production",
+      "url": "https://100percentfedup.com/trump-turns-cold-war-era-powers-ramp-up/?utm_source=rss&utm_medium=rss&utm_campaign=trump-turns-cold-war-era-powers-ramp-up",
+      "link": "https://100percentfedup.com/trump-turns-cold-war-era-powers-ramp-up/?utm_source=rss&utm_medium=rss&utm_campaign=trump-turns-cold-war-era-powers-ramp-up",
+      "excerpt": "President Trump is invoking the Defense Production Act to expand America's petroleum production, refining and fuel infrastructure.",
+      "summary": "President Trump is invoking the Defense Production Act to expand America's petroleum production, refining and fuel infrastructure.",
+      "relative_time": "Sat, 24 Oct 2026 20:40:04 +0000",
+      "published": "Sat, 24 Oct 2026 20:40:04 +0000",
       "author": "Jack",
       "feed": "100% Fed Up",
       "feedName": "100% Fed Up",
@@ -245,19 +265,19 @@
       "category": "Alternative",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://100percentfedup.com/wp-content/uploads/2026/10/ilhan-omar-deleted-fathers-day-post-20261024.jpg",
-      "scraped_at": "2026-10-24T19:32:43.039599+00:00"
+      "imageUrl": "https://100percentfedup.com/wp-content/uploads/2026/10/president-trump-american-oil-production-20261024.jpg",
+      "scraped_at": "2026-10-24T22:33:24.821795+00:00"
     },
     {
-      "id": "effc1a7fb472",
-      "headline": "JUST IN: President Trump Takes His Midterm Blitz Back to Georgia",
-      "title": "JUST IN: President Trump Takes His Midterm Blitz Back to Georgia",
-      "url": "https://100percentfedup.com/just-president-trump-takes-his-midterm-blitz-back/?utm_source=rss&utm_medium=rss&utm_campaign=just-president-trump-takes-his-midterm-blitz-back",
-      "link": "https://100percentfedup.com/just-president-trump-takes-his-midterm-blitz-back/?utm_source=rss&utm_medium=rss&utm_campaign=just-president-trump-takes-his-midterm-blitz-back",
-      "excerpt": "President Trump is taking his final-stretch midterm push back to Georgia with a Saturday night rally in Perry.",
-      "summary": "President Trump is taking his final-stretch midterm push back to Georgia with a Saturday night rally in Perry.",
-      "relative_time": "Sat, 24 Oct 2026 18:12:04 +0000",
-      "published": "Sat, 24 Oct 2026 18:12:04 +0000",
+      "id": "60dffddd3c6f",
+      "headline": "VIDEO: Central American Migrant Caravan Surges North Toward U.S. as Members Root for Democrat Midterm Win",
+      "title": "VIDEO: Central American Migrant Caravan Surges North Toward U.S. as Members Root for Democrat Midterm Win",
+      "url": "https://100percentfedup.com/video-central-american-migrantravan-surges-north-toward/?utm_source=rss&utm_medium=rss&utm_campaign=video-central-american-migrantravan-surges-north-toward",
+      "link": "https://100percentfedup.com/video-central-american-migrantravan-surges-north-toward/?utm_source=rss&utm_medium=rss&utm_campaign=video-central-american-migrantravan-surges-north-toward",
+      "excerpt": "Hundreds of migrants have left southern Mexico and are moving north, while some members reportedly say they are hoping Democrats prevail in the midterm elections.",
+      "summary": "Hundreds of migrants have left southern Mexico and are moving north, while some members reportedly say they are hoping Democrats prevail in the midterm elections.",
+      "relative_time": "Sat, 24 Oct 2026 20:23:03 +0000",
+      "published": "Sat, 24 Oct 2026 20:23:03 +0000",
       "author": "Isaac",
       "feed": "100% Fed Up",
       "feedName": "100% Fed Up",
@@ -265,19 +285,19 @@
       "category": "Alternative",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://100percentfedup.com/wp-content/uploads/2026/10/president-trump-georgia-midterm-rally-20261024.jpg",
-      "scraped_at": "2026-10-24T19:32:43.039660+00:00"
+      "imageUrl": "https://100percentfedup.com/wp-content/uploads/2026/10/central-american-migrant-caravan-mexico-20261024.jpg",
+      "scraped_at": "2026-10-24T22:33:24.821843+00:00"
     },
     {
-      "id": "cb5e5aae1172",
-      "headline": "President Trump Orders DOJ Into Alaska\u2019s Two-Dan-Sullivan Ballot Fight",
-      "title": "President Trump Orders DOJ Into Alaska\u2019s Two-Dan-Sullivan Ballot Fight",
-      "url": "https://100percentfedup.com/trump-doj-alaska-two-dan-sullivan-ballot-fight/?utm_source=rss&utm_medium=rss&utm_campaign=trump-doj-alaska-two-dan-sullivan-ballot-fight",
-      "link": "https://100percentfedup.com/trump-doj-alaska-two-dan-sullivan-ballot-fight/?utm_source=rss&utm_medium=rss&utm_campaign=trump-doj-alaska-two-dan-sullivan-ballot-fight",
-      "excerpt": "The Justice Department is asking a federal court to stop Alaska from certifying a Senate result that may have been changed by two candidates with nearly identical names.",
-      "summary": "The Justice Department is asking a federal court to stop Alaska from certifying a Senate result that may have been changed by two candidates with nearly identical names.",
-      "relative_time": "Sat, 24 Oct 2026 17:33:04 +0000",
-      "published": "Sat, 24 Oct 2026 17:33:04 +0000",
+      "id": "d4733930360d",
+      "headline": "Historic WWII-Era Landmark Devastated by Flames as Police Probe Suspected Arson",
+      "title": "Historic WWII-Era Landmark Devastated by Flames as Police Probe Suspected Arson",
+      "url": "https://100percentfedup.com/historic-wwii-landmark-fire-suspected-arson/?utm_source=rss&utm_medium=rss&utm_campaign=historic-wwii-landmark-fire-suspected-arson",
+      "link": "https://100percentfedup.com/historic-wwii-landmark-fire-suspected-arson/?utm_source=rss&utm_medium=rss&utm_campaign=historic-wwii-landmark-fire-suspected-arson",
+      "excerpt": "A notorious WWII-era landmark was largely destroyed in an overnight inferno, and German authorities say evidence against a detained arson suspect has intensified.",
+      "summary": "A notorious WWII-era landmark was largely destroyed in an overnight inferno, and German authorities say evidence against a detained arson suspect has intensified.",
+      "relative_time": "Sat, 24 Oct 2026 20:02:18 +0000",
+      "published": "Sat, 24 Oct 2026 20:02:18 +0000",
       "author": "Donald",
       "feed": "100% Fed Up",
       "feedName": "100% Fed Up",
@@ -285,8 +305,8 @@
       "category": "Alternative",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://100percentfedup.com/wp-content/uploads/2026/10/dan-sullivan-alaska-ballot-fight-1600x900-1.jpg",
-      "scraped_at": "2026-10-24T19:32:43.039725+00:00"
+      "imageUrl": "https://100percentfedup.com/wp-content/uploads/2026/10/hitler-eagles-nest-history-enhanced-20261024.png",
+      "scraped_at": "2026-10-24T22:33:24.821871+00:00"
     },
     {
       "id": "518606dd88f2",
@@ -306,7 +326,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://thefederalist.com/wp-content/uploads/2026/10/Hunter-Biden-1200x675.png",
-      "scraped_at": "2026-10-24T19:32:43.142813+00:00"
+      "scraped_at": "2026-10-24T22:33:24.954566+00:00"
     },
     {
       "id": "6873ab85e6f0",
@@ -326,7 +346,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://thefederalist.com/wp-content/uploads/2026/10/IMG_0853-1-1200x675.jpeg",
-      "scraped_at": "2026-10-24T19:32:43.142871+00:00"
+      "scraped_at": "2026-10-24T22:33:24.954606+00:00"
     },
     {
       "id": "1626da781f1f",
@@ -346,7 +366,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://thefederalist.com/wp-content/uploads/2026/10/Clarence-Thomas-1200x675.png",
-      "scraped_at": "2026-10-24T19:32:43.142912+00:00"
+      "scraped_at": "2026-10-24T22:33:24.954640+00:00"
     },
     {
       "id": "fa5237ae8208",
@@ -366,7 +386,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://www.theblaze.com/media-library/you-dont-have-to-convict-a-trump-aide-to-bankrupt-one.jpg?id=68516440&width=980",
-      "scraped_at": "2026-10-24T19:32:43.334926+00:00"
+      "scraped_at": "2026-10-24T22:33:25.194882+00:00"
     },
     {
       "id": "54ecf19751b1",
@@ -386,7 +406,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://www.theblaze.com/media-library/image.jpg?id=68502993&width=980",
-      "scraped_at": "2026-10-24T19:32:43.335332+00:00"
+      "scraped_at": "2026-10-24T22:33:25.195097+00:00"
     },
     {
       "id": "3eb8775c16db",
@@ -406,38 +426,18 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://www.theblaze.com/media-library/the-wnba-has-a-tolerance-problem-and-its-not-coming-from-the-women-in-xx-xy-shirts.jpg?id=68518119&width=980",
-      "scraped_at": "2026-10-24T19:32:43.336494+00:00"
+      "scraped_at": "2026-10-24T22:33:25.195740+00:00"
     },
     {
-      "id": "d74164ddae48",
-      "headline": "'X Is the Only Thing Keeping Democracy Alive' in France'",
-      "title": "'X Is the Only Thing Keeping Democracy Alive' in France'",
-      "url": "https://hotair.com/david-strom/2026/10/24/x-is-the-only-thing-keeping-democracy-alive-in-france-n3820306",
-      "link": "https://hotair.com/david-strom/2026/10/24/x-is-the-only-thing-keeping-democracy-alive-in-france-n3820306",
-      "excerpt": "'X Is the Only Thing Keeping Democracy Alive' in France'",
-      "summary": "'X Is the Only Thing Keeping Democracy Alive' in France'",
-      "relative_time": "Sat, 24 Oct 2026 15:30:54 -0400",
-      "published": "Sat, 24 Oct 2026 15:30:54 -0400",
-      "author": "Hot Air",
-      "feed": "Hot Air",
-      "feedName": "Hot Air",
-      "feedId": "9c153127586e",
-      "category": "Alternative",
-      "ingestionType": "rss",
-      "sourceGroup": "rss",
-      "imageUrl": "https://media.townhall.com/cdn/hodl/2026/296/02327d80-a54f-46d6-bc2e-be437046eb7a.jpg",
-      "scraped_at": "2026-10-24T19:32:43.438236+00:00"
-    },
-    {
-      "id": "24343529dfec",
-      "headline": "Cats And Their Owners Seem to Share A Weird, Hormonal Connection",
-      "title": "Cats And Their Owners Seem to Share A Weird, Hormonal Connection",
-      "url": "https://hotair.com/headlines/2026/10/24/cats-and-their-owners-seem-to-share-a-weird-hormonal-connection-n3820204",
-      "link": "https://hotair.com/headlines/2026/10/24/cats-and-their-owners-seem-to-share-a-weird-hormonal-connection-n3820204",
-      "excerpt": "Cats And Their Owners Seem to Share A Weird, Hormonal Connection",
-      "summary": "Cats And Their Owners Seem to Share A Weird, Hormonal Connection",
-      "relative_time": "Sat, 24 Oct 2026 15:00:00 -0400",
-      "published": "Sat, 24 Oct 2026 15:00:00 -0400",
+      "id": "76ec656ca1b0",
+      "headline": "(Old But Good) War and Wilderness: British Soldiers in Revolutionary America",
+      "title": "(Old But Good) War and Wilderness: British Soldiers in Revolutionary America",
+      "url": "https://hotair.com/headlines/2026/10/24/old-but-good-war-and-wilderness-british-soldiers-in-revolutionary-america-n3820256",
+      "link": "https://hotair.com/headlines/2026/10/24/old-but-good-war-and-wilderness-british-soldiers-in-revolutionary-america-n3820256",
+      "excerpt": "(Old But Good) War and Wilderness: British Soldiers in Revolutionary America",
+      "summary": "(Old But Good) War and Wilderness: British Soldiers in Revolutionary America",
+      "relative_time": "Sat, 24 Oct 2026 18:20:00 -0400",
+      "published": "Sat, 24 Oct 2026 18:20:00 -0400",
       "author": "Hot Air",
       "feed": "Hot Air",
       "feedName": "Hot Air",
@@ -446,18 +446,18 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-24T19:32:43.438270+00:00"
+      "scraped_at": "2026-10-24T22:33:25.350706+00:00"
     },
     {
-      "id": "5dbcaf1facc6",
-      "headline": "Martha MacCallum and the Stories That Define Us",
-      "title": "Martha MacCallum and the Stories That Define Us",
-      "url": "https://hotair.com/salena-zito/2026/10/24/martha-maccallum-and-the-stories-that-define-us-n3820265",
-      "link": "https://hotair.com/salena-zito/2026/10/24/martha-maccallum-and-the-stories-that-define-us-n3820265",
-      "excerpt": "Martha MacCallum and the Stories That Define Us",
-      "summary": "Martha MacCallum and the Stories That Define Us",
-      "relative_time": "Sat, 24 Oct 2026 14:30:00 -0400",
-      "published": "Sat, 24 Oct 2026 14:30:00 -0400",
+      "id": "de606f050c76",
+      "headline": "White House Makes Bold Claims on Immigration Enforcement, Border",
+      "title": "White House Makes Bold Claims on Immigration Enforcement, Border",
+      "url": "https://hotair.com/headlines/2026/10/24/white-house-makes-bold-claims-on-immigration-enforcement-border-n3820253",
+      "link": "https://hotair.com/headlines/2026/10/24/white-house-makes-bold-claims-on-immigration-enforcement-border-n3820253",
+      "excerpt": "White House Makes Bold Claims on Immigration Enforcement, Border",
+      "summary": "White House Makes Bold Claims on Immigration Enforcement, Border",
+      "relative_time": "Sat, 24 Oct 2026 17:40:00 -0400",
+      "published": "Sat, 24 Oct 2026 17:40:00 -0400",
       "author": "Hot Air",
       "feed": "Hot Air",
       "feedName": "Hot Air",
@@ -465,8 +465,28 @@
       "category": "Alternative",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://media.townhall.com/cdn/hodl/2025/58/a1b6600d-a8db-4a92-9bd8-e865fbae58d6.jpeg",
-      "scraped_at": "2026-10-24T19:32:43.438304+00:00"
+      "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
+      "scraped_at": "2026-10-24T22:33:25.350733+00:00"
+    },
+    {
+      "id": "fdfb9b9d4735",
+      "headline": "How a 1959 Classic Is More Relevant Today Than a Bomb Like \u2018Digger\u2019",
+      "title": "How a 1959 Classic Is More Relevant Today Than a Bomb Like \u2018Digger\u2019",
+      "url": "https://hotair.com/headlines/2026/10/24/how-a-1959-classic-is-more-relevant-today-than-a-bomb-like-digger-n3820252",
+      "link": "https://hotair.com/headlines/2026/10/24/how-a-1959-classic-is-more-relevant-today-than-a-bomb-like-digger-n3820252",
+      "excerpt": "How a 1959 Classic Is More Relevant Today Than a Bomb Like \u2018Digger\u2019",
+      "summary": "How a 1959 Classic Is More Relevant Today Than a Bomb Like \u2018Digger\u2019",
+      "relative_time": "Sat, 24 Oct 2026 17:00:00 -0400",
+      "published": "Sat, 24 Oct 2026 17:00:00 -0400",
+      "author": "Hot Air",
+      "feed": "Hot Air",
+      "feedName": "Hot Air",
+      "feedId": "9c153127586e",
+      "category": "Alternative",
+      "ingestionType": "rss",
+      "sourceGroup": "rss",
+      "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
+      "scraped_at": "2026-10-24T22:33:25.350752+00:00"
     },
     {
       "id": "19b71ed26541",
@@ -486,7 +506,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-24T19:32:43.699735+00:00"
+      "scraped_at": "2026-10-24T22:33:25.529178+00:00"
     },
     {
       "id": "b604d1a1d732",
@@ -506,7 +526,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-24T19:32:43.699808+00:00"
+      "scraped_at": "2026-10-24T22:33:25.529228+00:00"
     },
     {
       "id": "b48c2e29c69e",
@@ -526,7 +546,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-24T19:32:43.699867+00:00"
+      "scraped_at": "2026-10-24T22:33:25.529261+00:00"
     },
     {
       "id": "a1b4be587628",
@@ -546,7 +566,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.americanthinker.com/q7/q7ub1yh8neqrzc8ktx54_640.jpg",
-      "scraped_at": "2026-10-24T19:32:43.839552+00:00"
+      "scraped_at": "2026-10-24T22:33:25.686255+00:00"
     },
     {
       "id": "0021f53dfb24",
@@ -566,7 +586,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.americanthinker.com/r6/r6wlnesu1fja8lzk5yas_640.JPG",
-      "scraped_at": "2026-10-24T19:32:43.839895+00:00"
+      "scraped_at": "2026-10-24T22:33:25.686441+00:00"
     },
     {
       "id": "3579c409ceb3",
@@ -586,7 +606,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.americanthinker.com/0y/0ygwvtzsc1bbqqmn9rji_640.jpg",
-      "scraped_at": "2026-10-24T19:32:43.840199+00:00"
+      "scraped_at": "2026-10-24T22:33:25.686598+00:00"
     },
     {
       "id": "983644140dac",
@@ -606,27 +626,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-24T19:32:44.310883+00:00"
-    },
-    {
-      "id": "43fdd732cb82",
-      "headline": "Regional Chinese CDC Calls Plague Info Confidential as Public Suspicions Grow After Suspected Russia Case - The Epoch Times",
-      "title": "Regional Chinese CDC Calls Plague Info Confidential as Public Suspicions Grow After Suspected Russia Case - The Epoch Times",
-      "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOdG5aREVvdERyaEhmVUlGS0NpbUxVTVpSNW5ndjhxRzlsZ2R0UlFuRzBxX2prLVlmNmNlem9LNS1xb0YzRTlRRmQxZ0p0TEhlejNSQVFQZGpXeHNmT2hmdE5JaUV6dEdfNkNsRFp6c2UwMDVTZjFFdkc4TVRJcWpDVHViSmVpR1ZVNHZ1REc3ZFROSk85Mk5JcjNCWWRDZFNmeDNUTVdwOVBLdkx3ZnA1V3NxZVpyb0dfRVM3T3R2dFlrNmNFVlg0bndUZ3VyZGMwUnc1UnV6Q0cxSjVNZnZFN2hhUQ?oc=5",
-      "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOdG5aREVvdERyaEhmVUlGS0NpbUxVTVpSNW5ndjhxRzlsZ2R0UlFuRzBxX2prLVlmNmNlem9LNS1xb0YzRTlRRmQxZ0p0TEhlejNSQVFQZGpXeHNmT2hmdE5JaUV6dEdfNkNsRFp6c2UwMDVTZjFFdkc4TVRJcWpDVHViSmVpR1ZVNHZ1REc3ZFROSk85Mk5JcjNCWWRDZFNmeDNUTVdwOVBLdkx3ZnA1V3NxZVpyb0dfRVM3T3R2dFlrNmNFVlg0bndUZ3VyZGMwUnc1UnV6Q0cxSjVNZnZFN2hhUQ?oc=5",
-      "excerpt": "Regional Chinese CDC Calls Plague Info Confidential as Public Suspicions Grow After Suspected Russia Case The Epoch Times",
-      "summary": "Regional Chinese CDC Calls Plague Info Confidential as Public Suspicions Grow After Suspected Russia Case The Epoch Times",
-      "relative_time": "Tue, 20 Oct 2026 16:10:56 GMT",
-      "published": "Tue, 20 Oct 2026 16:10:56 GMT",
-      "author": "Epoch Times",
-      "feed": "Epoch Times",
-      "feedName": "Epoch Times",
-      "feedId": "0c3ddaca4649",
-      "category": "Alternative",
-      "ingestionType": "rss",
-      "sourceGroup": "rss",
-      "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-24T19:32:44.310952+00:00"
+      "scraped_at": "2026-10-24T22:33:26.166637+00:00"
     },
     {
       "id": "373547fec632",
@@ -646,18 +646,38 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-24T19:32:44.310997+00:00"
+      "scraped_at": "2026-10-24T22:33:26.166680+00:00"
     },
     {
-      "id": "a4ba65ecc48a",
-      "headline": "TV news hourly summary \u00b7 Oct 24, 19:03 UTC",
-      "title": "TV news hourly summary \u00b7 Oct 24, 19:03 UTC",
-      "url": "https://mastodon.archive.org/@tv/117497435565268439",
-      "link": "https://mastodon.archive.org/@tv/117497435565268439",
-      "excerpt": "French protests saw clashes with police and nearly 1,000 arrests; protests also took place in Italy. Albanian students protested against the government. Israel prepared to vote on Netanyahu\u2019s fate, while Brazil\u2019s Lula and Bolsonaro held final rallies ahead of Sunday\u2019s election. Israel demolished buildings in Hebron, displacing 1,200 people, according to the mayor. Russia freed Stephen Hubbard after four years, and Putin agreed to resume peace talks next month. U.S.",
-      "summary": "French protests saw clashes with police and nearly 1,000 arrests; protests also took place in Italy. Albanian students protested against the government. Israel prepared to vote on Netanyahu\u2019s fate, while Brazil\u2019s Lula and Bolsonaro held final rallies ahead of Sunday\u2019s election. Israel demolished buildings in Hebron, displacing 1,200 people, according to the mayor. Russia freed Stephen Hubbard after four years, and Putin agreed to resume peace talks next month. U.S.",
-      "relative_time": "Sat, 24 Oct 2026 19:03:04 +0000",
-      "published": "Sat, 24 Oct 2026 19:03:04 +0000",
+      "id": "49b910d6aefd",
+      "headline": "Top RFK Jr. Adviser Resigns - The Epoch Times",
+      "title": "Top RFK Jr. Adviser Resigns - The Epoch Times",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBDeG44TUNteDRXMzdfZk54ejdBZTNrUFdZNHVqdS1BNUh6NmlWbUtUaXZwaXNBa1NEd0ZlM1J5RkNfU0NEbmlJOVZjX21zbFNZVGVTQ2dvMWREUGJYMm82WkNNN1R5MDU2LUJzcXppV0hRd1VQRlE?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBDeG44TUNteDRXMzdfZk54ejdBZTNrUFdZNHVqdS1BNUh6NmlWbUtUaXZwaXNBa1NEd0ZlM1J5RkNfU0NEbmlJOVZjX21zbFNZVGVTQ2dvMWREUGJYMm82WkNNN1R5MDU2LUJzcXppV0hRd1VQRlE?oc=5",
+      "excerpt": "Top RFK Jr. Adviser Resigns The Epoch Times",
+      "summary": "Top RFK Jr. Adviser Resigns The Epoch Times",
+      "relative_time": "Thu, 22 Oct 2026 21:41:05 GMT",
+      "published": "Thu, 22 Oct 2026 21:41:05 GMT",
+      "author": "Epoch Times",
+      "feed": "Epoch Times",
+      "feedName": "Epoch Times",
+      "feedId": "0c3ddaca4649",
+      "category": "Alternative",
+      "ingestionType": "rss",
+      "sourceGroup": "rss",
+      "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
+      "scraped_at": "2026-10-24T22:33:26.166699+00:00"
+    },
+    {
+      "id": "9f32ab9adcac",
+      "headline": "TV news hourly summary \u00b7 Oct 24, 22:03 UTC",
+      "title": "TV news hourly summary \u00b7 Oct 24, 22:03 UTC",
+      "url": "https://mastodon.archive.org/@tv/117498143410270740",
+      "link": "https://mastodon.archive.org/@tv/117498143410270740",
+      "excerpt": "President Trump voted as he and Obama campaigned in battleground states. Polls showed tight Senate races in Michigan, Texas and Maine; Michigan voters cited cost of living as a top concern. French protests led to nearly 1,000 arrests, with unrest reported elsewhere in Europe. U.S. personnel were told to leave Saudi Arabia amid Iranian threats. Other news included flooding warnings in the UK, a planned UK biosecurity lab, and people displaced in Hebron.",
+      "summary": "President Trump voted as he and Obama campaigned in battleground states. Polls showed tight Senate races in Michigan, Texas and Maine; Michigan voters cited cost of living as a top concern. French protests led to nearly 1,000 arrests, with unrest reported elsewhere in Europe. U.S. personnel were told to leave Saudi Arabia amid Iranian threats. Other news included flooding warnings in the UK, a planned UK biosecurity lab, and people displaced in Hebron.",
+      "relative_time": "Sat, 24 Oct 2026 22:03:05 +0000",
+      "published": "Sat, 24 Oct 2026 22:03:05 +0000",
       "author": "Internet Archive TV News",
       "feed": "Internet Archive TV News (hourly summary)",
       "feedName": "Internet Archive TV News (hourly summary)",
@@ -666,10 +686,30 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "",
-      "scraped_at": "2026-10-24T19:32:44.770128+00:00"
+      "scraped_at": "2026-10-24T22:33:26.533983+00:00"
     }
   ],
   "stories": [
+    {
+      "id": "198fe9478956",
+      "headline": "Almost 1,000 arrested as clashes follow another day of mass protests across France",
+      "title": "Almost 1,000 arrested as clashes follow another day of mass protests across France",
+      "url": "https://www.bbc.co.uk/news/articles/c95ynd587ynzo?at_medium=RSS&at_campaign=rss",
+      "link": "https://www.bbc.co.uk/news/articles/c95ynd587ynzo?at_medium=RSS&at_campaign=rss",
+      "excerpt": "Officials have so far managed to avoid a repeat of last weekend's rioting and looting as hundreds of thousands took part in demonstrations.",
+      "summary": "Officials have so far managed to avoid a repeat of last weekend's rioting and looting as hundreds of thousands took part in demonstrations.",
+      "relative_time": "Sat, 24 Oct 2026 21:09:27 GMT",
+      "published": "Sat, 24 Oct 2026 21:09:27 GMT",
+      "author": "BBC World News",
+      "feed": "BBC World News",
+      "feedName": "BBC World News",
+      "feedId": "dd267a14f6bc",
+      "category": "Global",
+      "ingestionType": "rss",
+      "sourceGroup": "rss",
+      "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/6090/live/bf46ec40-cfe6-11f1-93e1-3b657b665bcf.jpg",
+      "scraped_at": "2026-10-24T22:33:22.584039+00:00"
+    },
     {
       "id": "a8f47c330f17",
       "headline": "Ukraine says Starlink connection 'now stable' after network limits",
@@ -688,38 +728,18 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/6049/live/9c0d0c10-cf9a-11f1-b441-2b33b063138f.jpg",
-      "scraped_at": "2026-10-24T19:32:42.082451+00:00"
+      "scraped_at": "2026-10-24T22:33:22.584077+00:00"
     },
     {
-      "id": "063f07f2a650",
-      "headline": "Palestinian families displaced as Israeli forces demolish Hebron homes, local officials say",
-      "title": "Palestinian families displaced as Israeli forces demolish Hebron homes, local officials say",
-      "url": "https://www.bbc.co.uk/news/articles/cqd09k1k7532o?at_medium=RSS&at_campaign=rss",
-      "link": "https://www.bbc.co.uk/news/articles/cqd09k1k7532o?at_medium=RSS&at_campaign=rss",
-      "excerpt": "The crackdown follows the killing of two Israeli soldiers by two Palestinian gunmen on Friday - and comes just days ahead of Israel's election.",
-      "summary": "The crackdown follows the killing of two Israeli soldiers by two Palestinian gunmen on Friday - and comes just days ahead of Israel's election.",
-      "relative_time": "Sat, 24 Oct 2026 17:21:42 GMT",
-      "published": "Sat, 24 Oct 2026 17:21:42 GMT",
-      "author": "BBC World News",
-      "feed": "BBC World News",
-      "feedName": "BBC World News",
-      "feedId": "dd267a14f6bc",
-      "category": "Global",
-      "ingestionType": "rss",
-      "sourceGroup": "rss",
-      "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3b86/live/6920a5d0-cfba-11f1-9012-0172b9f73a72.jpg",
-      "scraped_at": "2026-10-24T19:32:42.082513+00:00"
-    },
-    {
-      "id": "a4e12860c7eb",
-      "headline": "Albanian police fire tear gas as anti-government student protests turn violent - Reuters",
-      "title": "Albanian police fire tear gas as anti-government student protests turn violent - Reuters",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOX21BMWozRzgtZFdWcVVVc3o5dHh3bUIzSzZjcTdZTnNzcFdXN2lVYVpXTmY0OHB0UWdFbjdmQ0FKV0hxOVUxeVJGNEhxTGdhQW9tZWtuTGoxTDNKZWplYjBkLWd4Q2sxdlhXdElFaVo1a0pWbm9walRONWoxRVZCU2VFTEUwMlZfNEZZeWpsVGJPMnF6MW9ZNW11WHlKRGEtVjNoRlFsMTIxT0pvQkU5UnRhT3RxTThD?oc=5",
-      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOX21BMWozRzgtZFdWcVVVc3o5dHh3bUIzSzZjcTdZTnNzcFdXN2lVYVpXTmY0OHB0UWdFbjdmQ0FKV0hxOVUxeVJGNEhxTGdhQW9tZWtuTGoxTDNKZWplYjBkLWd4Q2sxdlhXdElFaVo1a0pWbm9walRONWoxRVZCU2VFTEUwMlZfNEZZeWpsVGJPMnF6MW9ZNW11WHlKRGEtVjNoRlFsMTIxT0pvQkU5UnRhT3RxTThD?oc=5",
-      "excerpt": "Albanian police fire tear gas as anti-government student protests turn violent Reuters",
-      "summary": "Albanian police fire tear gas as anti-government student protests turn violent Reuters",
-      "relative_time": "Sat, 24 Oct 2026 17:11:44 GMT",
-      "published": "Sat, 24 Oct 2026 17:11:44 GMT",
+      "id": "f405e3f3413f",
+      "headline": "Protests sweep Italian cities amid heavy security presence, some violence reported - Reuters",
+      "title": "Protests sweep Italian cities amid heavy security presence, some violence reported - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOdkVjV19ld3VNNFRlLXZaOFh2aUhReW5lUXgyblRhTHJPWEM4bUg0QU5XeFVXd0tKelV5LVFhSGJKMndmNjg1aFJLcmtITDNjTVpFVFU3YUFtcGdSc3ZGTDQzMHJTN05nZldOVkM0WDZyS3Y1TF9RbUVtMFh5MENrajRfRFRlOTR6Vlc5MWV4aklwMi1ielVIUEVmelIzMkVKaDAyT09wWWs2NXU2QVJwNUp0bXM?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOdkVjV19ld3VNNFRlLXZaOFh2aUhReW5lUXgyblRhTHJPWEM4bUg0QU5XeFVXd0tKelV5LVFhSGJKMndmNjg1aFJLcmtITDNjTVpFVFU3YUFtcGdSc3ZGTDQzMHJTN05nZldOVkM0WDZyS3Y1TF9RbUVtMFh5MENrajRfRFRlOTR6Vlc5MWV4aklwMi1ielVIUEVmelIzMkVKaDAyT09wWWs2NXU2QVJwNUp0bXM?oc=5",
+      "excerpt": "Protests sweep Italian cities amid heavy security presence, some violence reported Reuters",
+      "summary": "Protests sweep Italian cities amid heavy security presence, some violence reported Reuters",
+      "relative_time": "Sat, 24 Oct 2026 18:23:43 GMT",
+      "published": "Sat, 24 Oct 2026 18:23:43 GMT",
       "author": "Reuters Top News",
       "feed": "Reuters Top News",
       "feedName": "Reuters Top News",
@@ -728,18 +748,18 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-24T19:32:42.199097+00:00"
+      "scraped_at": "2026-10-24T22:33:23.249253+00:00"
     },
     {
-      "id": "010f7fdc2a38",
-      "headline": "Belgian protesters and police skirmish at anti-government demonstrations in Brussels - Reuters",
-      "title": "Belgian protesters and police skirmish at anti-government demonstrations in Brussels - Reuters",
-      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNdWRmTGozX08xMlVRbHEtbWNESTBRVUg5eVNVR2dJTnh2UTNoU1F1aktWc2FYZVh6N0hkcFJxN05OS1hmNmQzLWZZODBIVFRBYlQ1SG5BUzJvUUdxMmFsRWJlcFdlR3pSRTdJT0pDWk1XYUl6UENiTzNja0ExT0VFbWZvU01iTmpjY0R4bnF1RmRscUtDSnJUQTFJeUtLeF9BZ2kzcWxQOGlOZUhyUThmY29IOTY5eWc?oc=5",
-      "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNdWRmTGozX08xMlVRbHEtbWNESTBRVUg5eVNVR2dJTnh2UTNoU1F1aktWc2FYZVh6N0hkcFJxN05OS1hmNmQzLWZZODBIVFRBYlQ1SG5BUzJvUUdxMmFsRWJlcFdlR3pSRTdJT0pDWk1XYUl6UENiTzNja0ExT0VFbWZvU01iTmpjY0R4bnF1RmRscUtDSnJUQTFJeUtLeF9BZ2kzcWxQOGlOZUhyUThmY29IOTY5eWc?oc=5",
-      "excerpt": "Belgian protesters and police skirmish at anti-government demonstrations in Brussels Reuters",
-      "summary": "Belgian protesters and police skirmish at anti-government demonstrations in Brussels Reuters",
-      "relative_time": "Sat, 24 Oct 2026 16:06:20 GMT",
-      "published": "Sat, 24 Oct 2026 16:06:20 GMT",
+      "id": "cb1ba4371fe6",
+      "headline": "Gunmen kill at least 40 people in northeastern Nigeria, Amnesty International says - Reuters",
+      "title": "Gunmen kill at least 40 people in northeastern Nigeria, Amnesty International says - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPb1J4ZnFKQkVEMmNqNnhnQ1hzU290Wm5VWVI1ajhVUmpDbkpqLUlrNEVuckpONnNoN0hlZGJVTnhGY0V3dUh4UXFKUzN2ZFZSbk1fYWtEeUtMNDJRSVlfVDNjX1dWVWd2UzhlZFplZXA3d1l3dkdWLVRUMEhzd1RBcC1GRnRTQk8tNGNjc3B5RHZPcy1DOTlJeHp0Y3ZkdHhaX0xlTktJSWJlVDQ5b1hWQkpmb1ZrRC12RlNpTG5YekQ1Zw?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPb1J4ZnFKQkVEMmNqNnhnQ1hzU290Wm5VWVI1ajhVUmpDbkpqLUlrNEVuckpONnNoN0hlZGJVTnhGY0V3dUh4UXFKUzN2ZFZSbk1fYWtEeUtMNDJRSVlfVDNjX1dWVWd2UzhlZFplZXA3d1l3dkdWLVRUMEhzd1RBcC1GRnRTQk8tNGNjc3B5RHZPcy1DOTlJeHp0Y3ZkdHhaX0xlTktJSWJlVDQ5b1hWQkpmb1ZrRC12RlNpTG5YekQ1Zw?oc=5",
+      "excerpt": "Gunmen kill at least 40 people in northeastern Nigeria, Amnesty International says Reuters",
+      "summary": "Gunmen kill at least 40 people in northeastern Nigeria, Amnesty International says Reuters",
+      "relative_time": "Sat, 24 Oct 2026 19:03:57 GMT",
+      "published": "Sat, 24 Oct 2026 19:03:57 GMT",
       "author": "Reuters Top News",
       "feed": "Reuters Top News",
       "feedName": "Reuters Top News",
@@ -748,7 +768,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-24T19:32:42.199151+00:00"
+      "scraped_at": "2026-10-24T22:33:23.249293+00:00"
     },
     {
       "id": "6a86a9ec035d",
@@ -768,7 +788,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://i.dailymail.com/1s/2026/10/24/18/112069757-0-image-a-2_1792864272690.jpg",
-      "scraped_at": "2026-10-24T19:32:42.621749+00:00"
+      "scraped_at": "2026-10-24T22:33:23.880827+00:00"
     },
     {
       "id": "509f214e7c35",
@@ -788,38 +808,38 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://i.dailymail.com/1s/2026/10/23/20/112057975-0-image-a-4_1792785218079.jpg",
-      "scraped_at": "2026-10-24T19:32:42.621832+00:00"
+      "scraped_at": "2026-10-24T22:33:23.880883+00:00"
     },
     {
-      "id": "4c5b842d87aa",
-      "headline": "Novig promo code NYPOST: Deposit $10, get $50 in trade credits for Nets vs. Cavaliers",
-      "title": "Novig promo code NYPOST: Deposit $10, get $50 in trade credits for Nets vs. Cavaliers",
-      "url": "https://nypost.com/2026/10/24/betting/novig-promo-code-nypost-deposit-10-get-50-in-trade-credits-for-nets-vs-cavaliers/",
-      "link": "https://nypost.com/2026/10/24/betting/novig-promo-code-nypost-deposit-10-get-50-in-trade-credits-for-nets-vs-cavaliers/",
-      "excerpt": "New traders can unlock $50 in trade credits by entering the Novig promo code NYPOST during sign-up.",
-      "summary": "New traders can unlock $50 in trade credits by entering the Novig promo code NYPOST during sign-up.",
-      "relative_time": "Sat, 24 Oct 2026 15:30:00 -0400",
-      "published": "Sat, 24 Oct 2026 15:30:00 -0400",
-      "author": "Mike Turay",
+      "id": "68f12c79bd0c",
+      "headline": "America\u2019s billionaire boom: Florida gains on New York as California dominates top 10",
+      "title": "America\u2019s billionaire boom: Florida gains on New York as California dominates top 10",
+      "url": "https://nypost.com/2026/10/24/us-news/americas-billionaire-boom-florida-gains-on-new-york-as-california-dominates/",
+      "link": "https://nypost.com/2026/10/24/us-news/americas-billionaire-boom-florida-gains-on-new-york-as-california-dominates/",
+      "excerpt": "California leads the country in the number of billionaires, but New York and Florida are catching up, according to a Forbes report.",
+      "summary": "California leads the country in the number of billionaires, but New York and Florida are catching up, according to a Forbes report.",
+      "relative_time": "Sat, 24 Oct 2026 18:30:35 -0400",
+      "published": "Sat, 24 Oct 2026 18:30:35 -0400",
+      "author": "Jeanne Erickson",
       "feed": "New York Post",
       "feedName": "New York Post",
       "feedId": "f35f2eec037f",
       "category": "Global",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F10%2Fnewspress-collage-712a3qeqw-1792532925231.jpg?quality%3D90%26strip%3Dall%261792518593%261792518593",
-      "scraped_at": "2026-10-24T19:32:42.765816+00:00"
+      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F10%2F2025-innovator-awards-moma-october-146215091.jpg?w%3D647",
+      "scraped_at": "2026-10-24T22:33:24.554109+00:00"
     },
     {
-      "id": "a4ba65ecc48a",
-      "headline": "TV news hourly summary \u00b7 Oct 24, 19:03 UTC",
-      "title": "TV news hourly summary \u00b7 Oct 24, 19:03 UTC",
-      "url": "https://mastodon.archive.org/@tv/117497435565268439",
-      "link": "https://mastodon.archive.org/@tv/117497435565268439",
-      "excerpt": "French protests saw clashes with police and nearly 1,000 arrests; protests also took place in Italy. Albanian students protested against the government. Israel prepared to vote on Netanyahu\u2019s fate, while Brazil\u2019s Lula and Bolsonaro held final rallies ahead of Sunday\u2019s election. Israel demolished buildings in Hebron, displacing 1,200 people, according to the mayor. Russia freed Stephen Hubbard after four years, and Putin agreed to resume peace talks next month. U.S.",
-      "summary": "French protests saw clashes with police and nearly 1,000 arrests; protests also took place in Italy. Albanian students protested against the government. Israel prepared to vote on Netanyahu\u2019s fate, while Brazil\u2019s Lula and Bolsonaro held final rallies ahead of Sunday\u2019s election. Israel demolished buildings in Hebron, displacing 1,200 people, according to the mayor. Russia freed Stephen Hubbard after four years, and Putin agreed to resume peace talks next month. U.S.",
-      "relative_time": "Sat, 24 Oct 2026 19:03:04 +0000",
-      "published": "Sat, 24 Oct 2026 19:03:04 +0000",
+      "id": "9f32ab9adcac",
+      "headline": "TV news hourly summary \u00b7 Oct 24, 22:03 UTC",
+      "title": "TV news hourly summary \u00b7 Oct 24, 22:03 UTC",
+      "url": "https://mastodon.archive.org/@tv/117498143410270740",
+      "link": "https://mastodon.archive.org/@tv/117498143410270740",
+      "excerpt": "President Trump voted as he and Obama campaigned in battleground states. Polls showed tight Senate races in Michigan, Texas and Maine; Michigan voters cited cost of living as a top concern. French protests led to nearly 1,000 arrests, with unrest reported elsewhere in Europe. U.S. personnel were told to leave Saudi Arabia amid Iranian threats. Other news included flooding warnings in the UK, a planned UK biosecurity lab, and people displaced in Hebron.",
+      "summary": "President Trump voted as he and Obama campaigned in battleground states. Polls showed tight Senate races in Michigan, Texas and Maine; Michigan voters cited cost of living as a top concern. French protests led to nearly 1,000 arrests, with unrest reported elsewhere in Europe. U.S. personnel were told to leave Saudi Arabia amid Iranian threats. Other news included flooding warnings in the UK, a planned UK biosecurity lab, and people displaced in Hebron.",
+      "relative_time": "Sat, 24 Oct 2026 22:03:05 +0000",
+      "published": "Sat, 24 Oct 2026 22:03:05 +0000",
       "author": "Internet Archive TV News",
       "feed": "Internet Archive TV News (hourly summary)",
       "feedName": "Internet Archive TV News (hourly summary)",
@@ -828,7 +848,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "",
-      "scraped_at": "2026-10-24T19:32:44.770128+00:00"
+      "scraped_at": "2026-10-24T22:33:26.533983+00:00"
     }
   ],
   "raw_summary": "### Arrest made after fire at Hitler's mountaintop Eagle's Nest retreat\n**Source:** BBC World News  \n**Summary:** German authorities have arrested a suspect following a major fire at the Eagle's Nest, Adolf Hitler's former mountaintop retreat in the Bavarian Alps. Approximately 200 emergency personnel were deployed to fight the blaze at the historical site. An investigation into the cause of the fire and the suspect's involvement remains ongoing.  \n**Key Theme:** Crime / History  \n\n---\n\n### Father who killed Oregon school gunman describes anguish over children he couldn't save\n**Source:** BBC World News  \n**Summary:** Kaylub Giamanco, who intervened and killed a teenage gunman during a deadly Oregon school shooting, has spoken publicly about his grief over the victims he could not save. The gunman killed three children and a teacher before being fatally stopped by Giamanco. While local community members have praised him as a hero, Giamanco expressed deep emotional distress in the aftermath of the event.  \n**Key Theme:** Public Safety / Tragedy  \n\n---\n\n### Ukraine says Starlink and Starshield operating at 400 kph after week of throttling - Reuters\n**Source:** Reuters Top News  \n**Summary:** Ukrainian officials announced that satellite internet services Starlink and Starshield are now operating effectively at speeds of up to 400 kilometers per hour. The performance restoration follows a week of operational throttling that impacted the systems. High-speed satellite connectivity remains essential for Ukrainian military operations and frontline communications.  \n**Key Theme:** Technology / Defense  \n\n---\n\n### Four Philippine Air Force pilots killed in training accident - Reuters\n**Source:** Reuters Top News  \n**Summary:** Four Philippine Air Force pilots were killed during a military training exercise following an aircraft accident. Military authorities have launched a formal investigation to determine the cause of the crash. Additional details regarding the aircraft involved and the precise location have not yet been released.  \n**Key Theme:** Military / Aviation  \n\n---\n\n### Pictured: British mother, 36, who drowned in the Bahamas trying to save her two children\n**Source:** Daily Mail UK  \n**Summary:** A 36-year-old British mother, Leanne Gregory, drowned in the Bahamas after being caught in a strong current while trying to save her two sons. The family was on a snorkeling trip when her children were swept away by the water. Her husband and children were rescued safely, but Gregory died during the attempt to save them.  \n**Key Theme:** Tragedy / Rescue  \n\n---\n\n### She wants a huge event with Elton John singing... and he wants to elope. As Liz Hurley and Billy Ray Cyrus get engaged, how the unlikely couple finally found happiness - if they can reconcile their wildly different wedding plans!\n**Source:** Daily Mail UK  \n**Summary:** Actress Elizabeth Hurley and country musician Billy Ray Cyrus have officially announced their engagement. Despite their plans to marry, the couple currently holds conflicting ideas regarding their ceremony. Hurley favors a grand event featuring high-profile musical performances, whereas Cyrus reportedly prefers a simple elopement.  \n**Key Theme:** Celebrity / Relationships  \n\n---\n\n### NY teen genius, 14, denied early high school graduation due to his age\n**Source:** New York Post  \n**Summary:** Michael Sweeney, a 14-year-old high school student in New York, was denied early high school graduation due to age-related administrative restrictions. Despite already taking full-time classes at a community college, local regulations prevent him from receiving his diploma early. As a result, his immediate enrollment in his target university has been put on hold.  \n**Key Theme:** Education / Policy  \n\n---\n\n### TV news hourly summary \u00b7 Oct 24, 08:03 UTC\n**Source:** Internet Archive TV News (hourly summary)  \n**Summary:** Former President Donald Trump announced plans to direct the Department of Justice to challenge election results in Alaska if his endorsed Senate candidate loses. Additionally, he proposed lifting certain tariffs on Canadian goods to support Republican candidates. Trump also stated he would veto all congressional legislation if Democrats win control of Congress.  \n**Key Theme:** Politics / Elections",
@@ -838,5 +858,5 @@
   "data_current_html_path": "data/current/index.html",
   "archive_html_path": "output/archive/2026-10-24/index.html",
   "data_archive_html_path": "data/archive/2026-10-24/index.html",
-  "feed_hash": "f4c42190d022787d2305f0792b5f316f"
+  "feed_hash": "abe209444fcc70041e7e97369a4ed0ed"
 }
