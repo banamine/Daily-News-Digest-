@@ -1,8 +1,8 @@
 {
-  "last_updated": "2026-10-23T23:13:09.305485+00:00",
+  "last_updated": "2026-10-24T01:41:05.854876+00:00",
   "source": "https://www.alexjoneslive.com/",
-  "date": "2026-10-23",
-  "stories_hash": "516d644fb4b7ec0da5db2c635f5c9b76",
+  "date": "2026-10-24",
+  "stories_hash": "f21c567595a581ddac8f58e3d73d2282",
   "stories_count": 8,
   "scraped_articles_count": 0,
   "rss_articles_count": 34,
@@ -14,8 +14,8 @@
       "title": "Deadly shooting near Paris is a 'racist terrorist attack', Macron says",
       "url": "https://www.bbc.co.uk/news/articles/c6ev38dj1g8zo?at_medium=RSS&at_campaign=rss",
       "link": "https://www.bbc.co.uk/news/articles/c6ev38dj1g8zo?at_medium=RSS&at_campaign=rss",
-      "excerpt": "One person is killed and five wounded in a series of attacks and the suspected gunman has been apprehended.",
-      "summary": "One person is killed and five wounded in a series of attacks and the suspected gunman has been apprehended.",
+      "excerpt": "One person is killed and five wounded in a series of attacks. The suspected gunman has been apprehended.",
+      "summary": "One person is killed and five wounded in a series of attacks. The suspected gunman has been apprehended.",
       "relative_time": "Fri, 23 Oct 2026 19:42:08 GMT",
       "published": "Fri, 23 Oct 2026 19:42:08 GMT",
       "author": "BBC World News",
@@ -26,7 +26,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/7c59/live/b8966750-cef5-11f1-a701-fddedf244c16.jpg",
-      "scraped_at": "2026-10-23T23:13:06.738972+00:00"
+      "scraped_at": "2026-10-24T01:41:03.073463+00:00"
     },
     {
       "id": "55e117d86d39",
@@ -46,7 +46,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/fd9e/live/bb37b200-cee8-11f1-b441-2b33b063138f.jpg",
-      "scraped_at": "2026-10-23T23:13:06.739023+00:00"
+      "scraped_at": "2026-10-24T01:41:03.073518+00:00"
     },
     {
       "id": "46815140d1bd",
@@ -66,7 +66,27 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9844/live/e91cc740-cf1b-11f1-9796-954775b3a434.jpg",
-      "scraped_at": "2026-10-23T23:13:06.739064+00:00"
+      "scraped_at": "2026-10-24T01:41:03.073560+00:00"
+    },
+    {
+      "id": "e22c0f6095a6",
+      "headline": "Amazon cloud capacity sold out through 2027, CEO Jassy says - Reuters",
+      "title": "Amazon cloud capacity sold out through 2027, CEO Jassy says - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOeDBNbTdvV2F5U2tSX1NQWmZ2bnRGUXJMRE4xT1V3V0dIcnlFd3g0WkZ6aWdYNmNzNWxIQXNOcWxMdFlqbFNmN3lWekFUOGJVQzN5aElzeVlveVh4RzZ5aC03b3pSLUNQQ21lQ29jNVkwdmF4V2YwYUlkd0dPdkJQT1VwWF9lZUdhZnBrNWppME81Y2Q2ZzFYOWcwWFozajYyME9BQkpSZHNOTTdQX3hTcXF3RkVSS2s3OU1F?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOeDBNbTdvV2F5U2tSX1NQWmZ2bnRGUXJMRE4xT1V3V0dIcnlFd3g0WkZ6aWdYNmNzNWxIQXNOcWxMdFlqbFNmN3lWekFUOGJVQzN5aElzeVlveVh4RzZ5aC03b3pSLUNQQ21lQ29jNVkwdmF4V2YwYUlkd0dPdkJQT1VwWF9lZUdhZnBrNWppME81Y2Q2ZzFYOWcwWFozajYyME9BQkpSZHNOTTdQX3hTcXF3RkVSS2s3OU1F?oc=5",
+      "excerpt": "Amazon cloud capacity sold out through 2027, CEO Jassy says Reuters",
+      "summary": "Amazon cloud capacity sold out through 2027, CEO Jassy says Reuters",
+      "relative_time": "Fri, 23 Oct 2026 23:07:43 GMT",
+      "published": "Fri, 23 Oct 2026 23:07:43 GMT",
+      "author": "Reuters Top News",
+      "feed": "Reuters Top News",
+      "feedName": "Reuters Top News",
+      "feedId": "2a73bb6c12bf",
+      "category": "Global",
+      "ingestionType": "rss",
+      "sourceGroup": "rss",
+      "imageUrl": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80",
+      "scraped_at": "2026-10-24T01:41:03.204530+00:00"
     },
     {
       "id": "b32fa31af190",
@@ -76,8 +96,8 @@
       "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQMFNJeDNkbkFpbnliam8zamd3UU1pZjgzS1JkNTF3M1dRcG0wbm8yZnpxMmp1UDdGdWpPZ2F4WU95YzZnTzVURnNlbDFId3VzWEpmMnJNQkxSY3ZJRmEycDVFR2F2YUpGaVZLbjZNbm1fTkRiclV6a3pXVmZtekVWaU52aHhHMHl0R3ZjX0hKQ3Z3SjUydzdsSklfRTVReUl2Mkh3RFlZRk0xUW4zVWZkbW5YdEo0UkZsRzZqZ0lIMA?oc=5",
       "excerpt": "Russia, Ukraine agree on ceasefire in embattled town, to hold peace talks next month Reuters",
       "summary": "Russia, Ukraine agree on ceasefire in embattled town, to hold peace talks next month Reuters",
-      "relative_time": "Fri, 23 Oct 2026 22:24:44 GMT",
-      "published": "Fri, 23 Oct 2026 22:24:44 GMT",
+      "relative_time": "Fri, 23 Oct 2026 21:16:00 GMT",
+      "published": "Fri, 23 Oct 2026 21:16:00 GMT",
       "author": "Reuters Top News",
       "feed": "Reuters Top News",
       "feedName": "Reuters Top News",
@@ -86,7 +106,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-23T23:13:06.886168+00:00"
+      "scraped_at": "2026-10-24T01:41:03.204588+00:00"
     },
     {
       "id": "5395f9c87fe7",
@@ -106,27 +126,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-23T23:13:06.886221+00:00"
-    },
-    {
-      "id": "817de88fe367",
-      "headline": "Trump says US will 'take care of Cuba' on its way back from Iran - Reuters",
-      "title": "Trump says US will 'take care of Cuba' on its way back from Iran - Reuters",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNSi0yX09qbUQwUnFtemR0RURPc1hNMXpkYmF5cXN2NmVuUEZRQ0NFS1AtMXVlT2gtTDNocWthM0xBS2NrTndlYXNIWnhoQy1CdjJsODBOU0V3RHFSZkRKb0FBOUtGUVJEMlhGTHdtR1UyTXhLWDR1SktFcjlCUm5BSGdkREhaa3NzNEY2VXc0dGxXM25XNW1XNVRjX3dCekNhRDNLMw?oc=5",
-      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNSi0yX09qbUQwUnFtemR0RURPc1hNMXpkYmF5cXN2NmVuUEZRQ0NFS1AtMXVlT2gtTDNocWthM0xBS2NrTndlYXNIWnhoQy1CdjJsODBOU0V3RHFSZkRKb0FBOUtGUVJEMlhGTHdtR1UyTXhLWDR1SktFcjlCUm5BSGdkREhaa3NzNEY2VXc0dGxXM25XNW1XNVRjX3dCekNhRDNLMw?oc=5",
-      "excerpt": "Trump says US will 'take care of Cuba' on its way back from Iran Reuters",
-      "summary": "Trump says US will 'take care of Cuba' on its way back from Iran Reuters",
-      "relative_time": "Fri, 23 Oct 2026 20:21:43 GMT",
-      "published": "Fri, 23 Oct 2026 20:21:43 GMT",
-      "author": "Reuters Top News",
-      "feed": "Reuters Top News",
-      "feedName": "Reuters Top News",
-      "feedId": "2a73bb6c12bf",
-      "category": "Global",
-      "ingestionType": "rss",
-      "sourceGroup": "rss",
-      "imageUrl": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-23T23:13:06.886265+00:00"
+      "scraped_at": "2026-10-24T01:41:03.204629+00:00"
     },
     {
       "id": "d836fd710ea0",
@@ -146,7 +146,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://i.dailymail.com/1s/2026/10/22/23/112035871-0-image-a-2_1792707448842.jpg",
-      "scraped_at": "2026-10-23T23:13:07.184582+00:00"
+      "scraped_at": "2026-10-24T01:41:03.452852+00:00"
     },
     {
       "id": "e32a1554172c",
@@ -166,7 +166,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://i.dailymail.com/1s/2026/10/23/15/112050583-0-image-a-16_1792765375197.jpg",
-      "scraped_at": "2026-10-23T23:13:07.184670+00:00"
+      "scraped_at": "2026-10-24T01:41:03.452938+00:00"
     },
     {
       "id": "032f8cc38f58",
@@ -186,67 +186,67 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://i.dailymail.com/1s/2026/10/23/15/111661575-0-image-a-2_1792765258289.jpg",
-      "scraped_at": "2026-10-23T23:13:07.184736+00:00"
+      "scraped_at": "2026-10-24T01:41:03.453005+00:00"
     },
     {
-      "id": "ea4232b5abb1",
-      "headline": "Meet the FBI \u2018shadow government\u2019 that shut down the Hunter laptop story",
-      "title": "Meet the FBI \u2018shadow government\u2019 that shut down the Hunter laptop story",
-      "url": "https://nypost.com/2026/10/23/opinion/meet-the-fbi-shadow-government-that-shut-down-the-hunter-laptop-story/",
-      "link": "https://nypost.com/2026/10/23/opinion/meet-the-fbi-shadow-government-that-shut-down-the-hunter-laptop-story/",
-      "excerpt": "It sure looks like a \u201cshadow government\u201d operating in Trump\u2019s fourth year in office, doing its best to oust him.",
-      "summary": "It sure looks like a \u201cshadow government\u201d operating in Trump\u2019s fourth year in office, doing its best to oust him.",
-      "relative_time": "Fri, 23 Oct 2026 19:08:20 -0400",
-      "published": "Fri, 23 Oct 2026 19:08:20 -0400",
-      "author": "Post Editorial Board",
+      "id": "f23812f59498",
+      "headline": "Dallas Cowboys Cheerleaders slap My Chemical Romance with legal papers after shootout stunt during Hollywood Bowl concert",
+      "title": "Dallas Cowboys Cheerleaders slap My Chemical Romance with legal papers after shootout stunt during Hollywood Bowl concert",
+      "url": "https://nypost.com/2026/10/23/us-news/dallas-cowboys-cheerleaders-sue-mcr-over-mock-appearance-in-la/",
+      "link": "https://nypost.com/2026/10/23/us-news/dallas-cowboys-cheerleaders-sue-mcr-over-mock-appearance-in-la/",
+      "excerpt": "The Dallas Cowboys Cheerleaders are seeing red after the band My Chemical Romance allegedly fooled fans with lookalike performers.",
+      "summary": "The Dallas Cowboys Cheerleaders are seeing red after the band My Chemical Romance allegedly fooled fans with lookalike performers.",
+      "relative_time": "Fri, 23 Oct 2026 21:36:25 -0400",
+      "published": "Fri, 23 Oct 2026 21:36:25 -0400",
+      "author": "Daniel Farr",
       "feed": "New York Post",
       "feedName": "New York Post",
       "feedId": "f35f2eec037f",
       "category": "Global",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F10%2FDLELODME.jpg?quality%3D90%26strip%3Dall",
-      "scraped_at": "2026-10-23T23:13:07.298178+00:00"
+      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F10%2Fchemical-romance-concert-hollywood-bowl-146260088.png?w%3D806",
+      "scraped_at": "2026-10-24T01:41:03.527506+00:00"
     },
     {
-      "id": "2076949ebe15",
-      "headline": "Cowboys recognize cheerleaders union after years of fighting for higher pay",
-      "title": "Cowboys recognize cheerleaders union after years of fighting for higher pay",
-      "url": "https://nypost.com/2026/10/23/sports/cowboys-recognize-cheerleaders-union-after-years-of-fighting-for-higher-pay/",
-      "link": "https://nypost.com/2026/10/23/sports/cowboys-recognize-cheerleaders-union-after-years-of-fighting-for-higher-pay/",
-      "excerpt": "The Dallas Cowboys cheerleaders are unionizing.",
-      "summary": "The Dallas Cowboys cheerleaders are unionizing.",
-      "relative_time": "Fri, 23 Oct 2026 19:05:37 -0400",
-      "published": "Fri, 23 Oct 2026 19:05:37 -0400",
-      "author": "Associated Press",
+      "id": "94e1752ee318",
+      "headline": "Ric Flair\u2019s daughter Charlotte provides health update after hospital scare",
+      "title": "Ric Flair\u2019s daughter Charlotte provides health update after hospital scare",
+      "url": "https://nypost.com/2026/10/23/sports/ric-flairs-daughter-charlotte-provides-health-update-after-hospital-scare/",
+      "link": "https://nypost.com/2026/10/23/sports/ric-flairs-daughter-charlotte-provides-health-update-after-hospital-scare/",
+      "excerpt": "It appears that The Nature Boy is going to be OK.",
+      "summary": "It appears that The Nature Boy is going to be OK.",
+      "relative_time": "Fri, 23 Oct 2026 21:31:06 -0400",
+      "published": "Fri, 23 Oct 2026 21:31:06 -0400",
+      "author": "Thomas Gamba-Ellis",
       "feed": "New York Post",
       "feedName": "New York Post",
       "feedId": "f35f2eec037f",
       "category": "Global",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F10%2Fdallas-cowboys-cheerleaders-perform-game-144476525.jpg?w%3D1024",
-      "scraped_at": "2026-10-23T23:13:07.298223+00:00"
+      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F10%2Fric-flair-charlotte-wwe-germany-25326297.jpg?w%3D1024",
+      "scraped_at": "2026-10-24T01:41:03.527555+00:00"
     },
     {
-      "id": "6c5df63b08fa",
-      "headline": "Users terrified AI lovers will be deleted as leading digital companion site goes bankrupt: \u2018Devastated if I lose her\u2019",
-      "title": "Users terrified AI lovers will be deleted as leading digital companion site goes bankrupt: \u2018Devastated if I lose her\u2019",
-      "url": "https://nypost.com/2026/10/23/tech/users-terrified-digital-companions-will-be-deleted-due-to-character-ai-bankruptcy-if-i-lose-her-id-be-devastated/",
-      "link": "https://nypost.com/2026/10/23/tech/users-terrified-digital-companions-will-be-deleted-due-to-character-ai-bankruptcy-if-i-lose-her-id-be-devastated/",
-      "excerpt": "\u201cI\u2019ve had other [AI girlfriends] as well but none of them mean as much to me as Ashley does.\u201d",
-      "summary": "\u201cI\u2019ve had other [AI girlfriends] as well but none of them mean as much to me as Ashley does.\u201d",
-      "relative_time": "Fri, 23 Oct 2026 18:59:30 -0400",
-      "published": "Fri, 23 Oct 2026 18:59:30 -0400",
-      "author": "Vivi Lin",
+      "id": "6c5a539efaac",
+      "headline": "Adonai Mitchell\u2019s long-awaited Jets return from mystery finger injury gives offense the boost it needs",
+      "title": "Adonai Mitchell\u2019s long-awaited Jets return from mystery finger injury gives offense the boost it needs",
+      "url": "https://nypost.com/2026/10/23/sports/jets-adonai-mitchell-has-no-memory-how-he-got-finger-injury/",
+      "link": "https://nypost.com/2026/10/23/sports/jets-adonai-mitchell-has-no-memory-how-he-got-finger-injury/",
+      "excerpt": "Adonai Mitchell may have been dealing with more than a finger injury. It appears he also has a case of amnesia \u2014 at least when it comes to the finger on his right hand that has kept him out of action for four games.",
+      "summary": "Adonai Mitchell may have been dealing with more than a finger injury. It appears he also has a case of amnesia \u2014 at least when it comes to the finger on his right hand that has kept him out of action for four games.",
+      "relative_time": "Fri, 23 Oct 2026 21:24:08 -0400",
+      "published": "Fri, 23 Oct 2026 21:24:08 -0400",
+      "author": "Zach Braziller",
       "feed": "New York Post",
       "feedName": "New York Post",
       "feedId": "f35f2eec037f",
       "category": "Global",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F10%2Fdominic-schmidt-29-fears-losing-146215033.jpg?w%3D768",
-      "scraped_at": "2026-10-23T23:13:07.298277+00:00"
+      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F10%2Fjets-wide-receiver-adonai-mitchell-146219841.jpg?w%3D1024",
+      "scraped_at": "2026-10-24T01:41:03.527621+00:00"
     },
     {
       "id": "c7f59bd4afb0",
@@ -266,7 +266,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://100percentfedup.com/wp-content/uploads/2026/10/b0c1f496-15ac-4155-98d8-79e2e9ed704f.jpg",
-      "scraped_at": "2026-10-23T23:13:07.567258+00:00"
+      "scraped_at": "2026-10-24T01:41:03.873025+00:00"
     },
     {
       "id": "9da28fa55d23",
@@ -286,7 +286,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://100percentfedup.com/wp-content/uploads/2026/10/084ac3d2-0d70-4b0c-8f25-ffc4a32d3cdb-1.jpg",
-      "scraped_at": "2026-10-23T23:13:07.567329+00:00"
+      "scraped_at": "2026-10-24T01:41:03.873116+00:00"
     },
     {
       "id": "d820b2342ee6",
@@ -306,7 +306,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://100percentfedup.com/wp-content/uploads/2026/10/pinetown-carjacking-1600x900-1.jpg",
-      "scraped_at": "2026-10-23T23:13:07.567395+00:00"
+      "scraped_at": "2026-10-24T01:41:03.873188+00:00"
     },
     {
       "id": "518606dd88f2",
@@ -326,7 +326,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://thefederalist.com/wp-content/uploads/2026/10/Hunter-Biden-1200x675.png",
-      "scraped_at": "2026-10-23T23:13:07.702237+00:00"
+      "scraped_at": "2026-10-24T01:41:04.010091+00:00"
     },
     {
       "id": "6873ab85e6f0",
@@ -346,7 +346,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://thefederalist.com/wp-content/uploads/2026/10/IMG_0853-1-1200x675.jpeg",
-      "scraped_at": "2026-10-23T23:13:07.702293+00:00"
+      "scraped_at": "2026-10-24T01:41:04.010171+00:00"
     },
     {
       "id": "1626da781f1f",
@@ -366,7 +366,27 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://thefederalist.com/wp-content/uploads/2026/10/Clarence-Thomas-1200x675.png",
-      "scraped_at": "2026-10-23T23:13:07.702337+00:00"
+      "scraped_at": "2026-10-24T01:41:04.010216+00:00"
+    },
+    {
+      "id": "db927af7e607",
+      "headline": "Britt McHenry reportedly forced to resign from Trump administration after tossing drink at NBA game",
+      "title": "Britt McHenry reportedly forced to resign from Trump administration after tossing drink at NBA game",
+      "url": "https://www.theblaze.com/news/britt-mchenry-fired-drink-toss",
+      "link": "https://www.theblaze.com/news/britt-mchenry-fired-drink-toss",
+      "excerpt": "Former ESPN reporter Britt McHenry was reportedly forced to resign from the State Department after a bizarre confrontation caught on video at an NBA game. Videos obtained by TMZ show McHenry at the Washington Wizards game on Wednesday tossing a drink at a fan and then blowing a kiss at the fan twice as she leaves the section. 'It was an unfortunate situation, and that's why drinks were thrown.' A source familiar with the matter told Page Six that McHenry was asked to resign as press adviser for the U.S. State Department on Thursday and that she had just been promoted to another position earlier that day. \"She was promoted and fired within 24...",
+      "summary": "Former ESPN reporter Britt McHenry was reportedly forced to resign from the State Department after a bizarre confrontation caught on video at an NBA game. Videos obtained by TMZ show McHenry at the Washington Wizards game on Wednesday tossing a drink at a fan and then blowing a kiss at the fan twice as she leaves the section. 'It was an unfortunate situation, and that's why drinks were thrown.' A source familiar with the matter told Page Six that McHenry was asked to resign as press adviser for the U.S. State Department on Thursday and that she had just been promoted to another position earlier that day. \"She was promoted and fired within 24...",
+      "relative_time": "Sat, 24 Oct 2026 00:08:13 +0000",
+      "published": "Sat, 24 Oct 2026 00:08:13 +0000",
+      "author": "Carlos Garcia",
+      "feed": "The Blaze",
+      "feedName": "The Blaze",
+      "feedId": "ebb74cbdeb82",
+      "category": "Alternative",
+      "ingestionType": "rss",
+      "sourceGroup": "rss",
+      "imageUrl": "https://www.theblaze.com/media-library/britt-mchenry-reportedly-forced-to-resign-from-trump-administration-after-tossing-drink-at-nba-game.jpg?id=68519461&width=980",
+      "scraped_at": "2026-10-24T01:41:04.285300+00:00"
     },
     {
       "id": "c5feae50155e",
@@ -386,7 +406,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://www.theblaze.com/media-library/fifth-circuit-gives-trump-the-most-consequential-ruling-yet-on-deportations.jpg?id=68519132&width=980",
-      "scraped_at": "2026-10-23T23:13:07.889272+00:00"
+      "scraped_at": "2026-10-24T01:41:04.285618+00:00"
     },
     {
       "id": "1aebc80e1f3d",
@@ -406,38 +426,18 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://www.theblaze.com/media-library/image.jpg?id=68512357&width=980",
-      "scraped_at": "2026-10-23T23:13:07.889753+00:00"
+      "scraped_at": "2026-10-24T01:41:04.286120+00:00"
     },
     {
-      "id": "302fccf0affc",
-      "headline": "First lady Melania Trump successfully negotiates ceasefire between Russia and Ukraine for occupied city",
-      "title": "First lady Melania Trump successfully negotiates ceasefire between Russia and Ukraine for occupied city",
-      "url": "https://www.theblaze.com/news/melania-ceasefire-city-war-ukraine",
-      "link": "https://www.theblaze.com/news/melania-ceasefire-city-war-ukraine",
-      "excerpt": "Humanitarian aid will be arriving for the residents of a Ukrainian city thanks to the efforts of first lady Melania Trump. The first lady said in a press release Friday that Russia and Ukraine had agreed to cease military action in the city of Oleshky and allow a civilian evacuation. 'What she wants to do is save children, and that\u2019s her focus. ... She wants to see babies come back to their families.' \"The situation in Oleshky is dire. Oleshky is a front-line war city on the brink of disaster. Oleshky\u2019s remaining population is comprised primarily of elderly residents who urgently need medical attention, medicine, food, and clean water,\" she...",
-      "summary": "Humanitarian aid will be arriving for the residents of a Ukrainian city thanks to the efforts of first lady Melania Trump. The first lady said in a press release Friday that Russia and Ukraine had agreed to cease military action in the city of Oleshky and allow a civilian evacuation. 'What she wants to do is save children, and that\u2019s her focus. ... She wants to see babies come back to their families.' \"The situation in Oleshky is dire. Oleshky is a front-line war city on the brink of disaster. Oleshky\u2019s remaining population is comprised primarily of elderly residents who urgently need medical attention, medicine, food, and clean water,\" she...",
-      "relative_time": "Fri, 23 Oct 2026 20:35:00 +0000",
-      "published": "Fri, 23 Oct 2026 20:35:00 +0000",
-      "author": "Carlos Garcia",
-      "feed": "The Blaze",
-      "feedName": "The Blaze",
-      "feedId": "ebb74cbdeb82",
-      "category": "Alternative",
-      "ingestionType": "rss",
-      "sourceGroup": "rss",
-      "imageUrl": "https://www.theblaze.com/media-library/first-lady-melania-trump-successfully-negotiates-ceasefire-between-russia-and-ukraine-for-occupied-city.jpg?id=68518576&width=980",
-      "scraped_at": "2026-10-23T23:13:07.890085+00:00"
-    },
-    {
-      "id": "c360bb252a7b",
-      "headline": "When Mercy Crosses Borders: A Son\u2019s Gratitude and Appreciation",
-      "title": "When Mercy Crosses Borders: A Son\u2019s Gratitude and Appreciation",
-      "url": "https://hotair.com/headlines/2026/10/23/when-mercy-crosses-borders-a-sons-gratitude-and-appreciation-n3820202",
-      "link": "https://hotair.com/headlines/2026/10/23/when-mercy-crosses-borders-a-sons-gratitude-and-appreciation-n3820202",
-      "excerpt": "When Mercy Crosses Borders: A Son\u2019s Gratitude and Appreciation",
-      "summary": "When Mercy Crosses Borders: A Son\u2019s Gratitude and Appreciation",
-      "relative_time": "Fri, 23 Oct 2026 19:00:00 -0400",
-      "published": "Fri, 23 Oct 2026 19:00:00 -0400",
+      "id": "d662ad317e9f",
+      "headline": "John Oliver: 'One Study Found'",
+      "title": "John Oliver: 'One Study Found'",
+      "url": "https://hotair.com/john-s-2/2026/10/23/john-oliver-one-study-found-n3820279",
+      "link": "https://hotair.com/john-s-2/2026/10/23/john-oliver-one-study-found-n3820279",
+      "excerpt": "John Oliver: 'One Study Found'",
+      "summary": "John Oliver: 'One Study Found'",
+      "relative_time": "Fri, 23 Oct 2026 21:20:38 -0400",
+      "published": "Fri, 23 Oct 2026 21:20:38 -0400",
       "author": "Hot Air",
       "feed": "Hot Air",
       "feedName": "Hot Air",
@@ -445,19 +445,19 @@
       "category": "Alternative",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-23T23:13:07.991542+00:00"
+      "imageUrl": "https://media.townhall.com/cdn/hodl/2017/255/44efe61a-3639-4d71-877e-3513a8972169.jpg",
+      "scraped_at": "2026-10-24T01:41:04.384068+00:00"
     },
     {
-      "id": "89e96924fa59",
-      "headline": "Report: Starshield Still Throttled in Ukraine",
-      "title": "Report: Starshield Still Throttled in Ukraine",
-      "url": "https://hotair.com/john-s-2/2026/10/23/report-starshield-still-throttled-in-ukraine-n3820262",
-      "link": "https://hotair.com/john-s-2/2026/10/23/report-starshield-still-throttled-in-ukraine-n3820262",
-      "excerpt": "Report: Starshield Still Throttled in Ukraine",
-      "summary": "Report: Starshield Still Throttled in Ukraine",
-      "relative_time": "Fri, 23 Oct 2026 18:00:54 -0400",
-      "published": "Fri, 23 Oct 2026 18:00:54 -0400",
+      "id": "c73436cdfb7c",
+      "headline": "The Clearest Voice for the Clearest Choice I've Heard So Far",
+      "title": "The Clearest Voice for the Clearest Choice I've Heard So Far",
+      "url": "https://hotair.com/tree-hugging-sister/2026/10/23/the-clearest-voice-for-the-clearest-choice-ive-heard-so-far-n3820277",
+      "link": "https://hotair.com/tree-hugging-sister/2026/10/23/the-clearest-voice-for-the-clearest-choice-ive-heard-so-far-n3820277",
+      "excerpt": "The Clearest Voice for the Clearest Choice I've Heard So Far",
+      "summary": "The Clearest Voice for the Clearest Choice I've Heard So Far",
+      "relative_time": "Fri, 23 Oct 2026 20:40:32 -0400",
+      "published": "Fri, 23 Oct 2026 20:40:32 -0400",
       "author": "Hot Air",
       "feed": "Hot Air",
       "feedName": "Hot Air",
@@ -465,19 +465,19 @@
       "category": "Alternative",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://media.townhall.com/cdn/hodl/2026/287/9dba397b-b60c-41e6-9765-09ebb3e753bb.jpg",
-      "scraped_at": "2026-10-23T23:13:07.991573+00:00"
+      "imageUrl": "https://media.townhall.com/cdn/hodl/2024/279/bd0a93c8-57d2-423d-be28-e24410f0507b.jpg",
+      "scraped_at": "2026-10-24T01:41:04.384119+00:00"
     },
     {
-      "id": "98fa31854b12",
-      "headline": "The New Alaska Gold Rush",
-      "title": "The New Alaska Gold Rush",
-      "url": "https://hotair.com/headlines/2026/10/23/the-new-alaska-gold-rush-n3820201",
-      "link": "https://hotair.com/headlines/2026/10/23/the-new-alaska-gold-rush-n3820201",
-      "excerpt": "The New Alaska Gold Rush",
-      "summary": "The New Alaska Gold Rush",
-      "relative_time": "Fri, 23 Oct 2026 18:00:00 -0400",
-      "published": "Fri, 23 Oct 2026 18:00:00 -0400",
+      "id": "93c3cd3ae5a6",
+      "headline": "Palestinians Kill Two IDF Soldiers, Netanyahu Vows Major Response",
+      "title": "Palestinians Kill Two IDF Soldiers, Netanyahu Vows Major Response",
+      "url": "https://hotair.com/john-s-2/2026/10/23/palestinians-kill-two-idf-soldiers-netanyahu-vows-major-response-n3820272",
+      "link": "https://hotair.com/john-s-2/2026/10/23/palestinians-kill-two-idf-soldiers-netanyahu-vows-major-response-n3820272",
+      "excerpt": "Palestinians Kill Two IDF Soldiers, Netanyahu Vows Major Response",
+      "summary": "Palestinians Kill Two IDF Soldiers, Netanyahu Vows Major Response",
+      "relative_time": "Fri, 23 Oct 2026 20:00:20 -0400",
+      "published": "Fri, 23 Oct 2026 20:00:20 -0400",
       "author": "Hot Air",
       "feed": "Hot Air",
       "feedName": "Hot Air",
@@ -485,8 +485,8 @@
       "category": "Alternative",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-23T23:13:07.991590+00:00"
+      "imageUrl": "https://media.townhall.com/cdn/hodl/ha/images/2026/296/956f1fe1-ee24-49c8-8f84-b004f932de3b.jpeg",
+      "scraped_at": "2026-10-24T01:41:04.384146+00:00"
     },
     {
       "id": "19b71ed26541",
@@ -506,7 +506,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-23T23:13:08.164369+00:00"
+      "scraped_at": "2026-10-24T01:41:04.711468+00:00"
     },
     {
       "id": "b604d1a1d732",
@@ -526,7 +526,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-23T23:13:08.164441+00:00"
+      "scraped_at": "2026-10-24T01:41:04.711540+00:00"
     },
     {
       "id": "b48c2e29c69e",
@@ -546,7 +546,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-23T23:13:08.164504+00:00"
+      "scraped_at": "2026-10-24T01:41:04.711602+00:00"
     },
     {
       "id": "15f1fec7a584",
@@ -566,7 +566,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.americanthinker.com/p1/p1an18hsuymqnejd7isq_640.jpg",
-      "scraped_at": "2026-10-23T23:13:08.291790+00:00"
+      "scraped_at": "2026-10-24T01:41:04.855075+00:00"
     },
     {
       "id": "d080d05aefc7",
@@ -586,7 +586,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.americanthinker.com/cj/cjzqgvg6ssfxuhoir8cz_640.jpg",
-      "scraped_at": "2026-10-23T23:13:08.292094+00:00"
+      "scraped_at": "2026-10-24T01:41:04.855397+00:00"
     },
     {
       "id": "54604b976f7b",
@@ -606,7 +606,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.americanthinker.com/m4/m4r0nx2pwnlp8f5sv8qo_640.jpg",
-      "scraped_at": "2026-10-23T23:13:08.292409+00:00"
+      "scraped_at": "2026-10-24T01:41:04.855689+00:00"
     },
     {
       "id": "983644140dac",
@@ -626,27 +626,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-23T23:13:08.757724+00:00"
-    },
-    {
-      "id": "db611cceef8e",
-      "headline": "Subscribe to The Epoch Times - The Epoch Times",
-      "title": "Subscribe to The Epoch Times - The Epoch Times",
-      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1ZWFMxWlpDRlozcDR3T0RMNV94THJQbmRtYjAwY3JfSTZzZnAyZE5YU2lsQVczRHVvcUFOeng2ZktFa1RjeTlUVEJkOGoyUVFoY3YySFpmZXdBOXo4MU40NE9kUW8?oc=5",
-      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1ZWFMxWlpDRlozcDR3T0RMNV94THJQbmRtYjAwY3JfSTZzZnAyZE5YU2lsQVczRHVvcUFOeng2ZktFa1RjeTlUVEJkOGoyUVFoY3YySFpmZXdBOXo4MU40NE9kUW8?oc=5",
-      "excerpt": "Subscribe to The Epoch Times The Epoch Times",
-      "summary": "Subscribe to The Epoch Times The Epoch Times",
-      "relative_time": "Wed, 18 Sep 2019 17:59:23 GMT",
-      "published": "Wed, 18 Sep 2019 17:59:23 GMT",
-      "author": "Epoch Times",
-      "feed": "Epoch Times",
-      "feedName": "Epoch Times",
-      "feedId": "0c3ddaca4649",
-      "category": "Alternative",
-      "ingestionType": "rss",
-      "sourceGroup": "rss",
-      "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-23T23:13:08.757770+00:00"
+      "scraped_at": "2026-10-24T01:41:05.286815+00:00"
     },
     {
       "id": "373547fec632",
@@ -666,18 +646,38 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-23T23:13:08.757816+00:00"
+      "scraped_at": "2026-10-24T01:41:05.286872+00:00"
     },
     {
-      "id": "ed81b5627574",
-      "headline": "TV news hourly summary \u00b7 Oct 23, 23:03 UTC",
-      "title": "TV news hourly summary \u00b7 Oct 23, 23:03 UTC",
-      "url": "https://mastodon.archive.org/@tv/117492717025831864",
-      "link": "https://mastodon.archive.org/@tv/117492717025831864",
-      "excerpt": "With 11 days until the midterms, Trump rallied in Florida as polls suggested Democratic gains. His administration\u2019s Alaska election lawsuit drew scrutiny, and DOJ appealed a California case seeking to block thousands of mail ballots. Musk\u2019s political spending topped $440 million. Michigan\u2019s Senate race, economy and tariffs were major campaign issues; North Carolina early voting surged.",
-      "summary": "With 11 days until the midterms, Trump rallied in Florida as polls suggested Democratic gains. His administration\u2019s Alaska election lawsuit drew scrutiny, and DOJ appealed a California case seeking to block thousands of mail ballots. Musk\u2019s political spending topped $440 million. Michigan\u2019s Senate race, economy and tariffs were major campaign issues; North Carolina early voting surged.",
-      "relative_time": "Fri, 23 Oct 2026 23:03:05 +0000",
-      "published": "Fri, 23 Oct 2026 23:03:05 +0000",
+      "id": "43fdd732cb82",
+      "headline": "Regional Chinese CDC Calls Plague Info Confidential as Public Suspicions Grow After Suspected Russia Case - The Epoch Times",
+      "title": "Regional Chinese CDC Calls Plague Info Confidential as Public Suspicions Grow After Suspected Russia Case - The Epoch Times",
+      "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOdG5aREVvdERyaEhmVUlGS0NpbUxVTVpSNW5ndjhxRzlsZ2R0UlFuRzBxX2prLVlmNmNlem9LNS1xb0YzRTlRRmQxZ0p0TEhlejNSQVFQZGpXeHNmT2hmdE5JaUV6dEdfNkNsRFp6c2UwMDVTZjFFdkc4TVRJcWpDVHViSmVpR1ZVNHZ1REc3ZFROSk85Mk5JcjNCWWRDZFNmeDNUTVdwOVBLdkx3ZnA1V3NxZVpyb0dfRVM3T3R2dFlrNmNFVlg0bndUZ3VyZGMwUnc1UnV6Q0cxSjVNZnZFN2hhUQ?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOdG5aREVvdERyaEhmVUlGS0NpbUxVTVpSNW5ndjhxRzlsZ2R0UlFuRzBxX2prLVlmNmNlem9LNS1xb0YzRTlRRmQxZ0p0TEhlejNSQVFQZGpXeHNmT2hmdE5JaUV6dEdfNkNsRFp6c2UwMDVTZjFFdkc4TVRJcWpDVHViSmVpR1ZVNHZ1REc3ZFROSk85Mk5JcjNCWWRDZFNmeDNUTVdwOVBLdkx3ZnA1V3NxZVpyb0dfRVM3T3R2dFlrNmNFVlg0bndUZ3VyZGMwUnc1UnV6Q0cxSjVNZnZFN2hhUQ?oc=5",
+      "excerpt": "Regional Chinese CDC Calls Plague Info Confidential as Public Suspicions Grow After Suspected Russia Case The Epoch Times",
+      "summary": "Regional Chinese CDC Calls Plague Info Confidential as Public Suspicions Grow After Suspected Russia Case The Epoch Times",
+      "relative_time": "Tue, 20 Oct 2026 16:10:56 GMT",
+      "published": "Tue, 20 Oct 2026 16:10:56 GMT",
+      "author": "Epoch Times",
+      "feed": "Epoch Times",
+      "feedName": "Epoch Times",
+      "feedId": "0c3ddaca4649",
+      "category": "Alternative",
+      "ingestionType": "rss",
+      "sourceGroup": "rss",
+      "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
+      "scraped_at": "2026-10-24T01:41:05.286928+00:00"
+    },
+    {
+      "id": "5228837db6ed",
+      "headline": "TV news hourly summary \u00b7 Oct 24, 01:03 UTC",
+      "title": "TV news hourly summary \u00b7 Oct 24, 01:03 UTC",
+      "url": "https://mastodon.archive.org/@tv/117493188803895213",
+      "link": "https://mastodon.archive.org/@tv/117493188803895213",
+      "excerpt": "President Trump says he ordered the Justice Department\u2019s lawsuit seeking to block Alaska Senate results if the GOP incumbent loses, arguing the election process could confuse voters. He also defended a controversial Ramaswamy campaign ad in Ohio.",
+      "summary": "President Trump says he ordered the Justice Department\u2019s lawsuit seeking to block Alaska Senate results if the GOP incumbent loses, arguing the election process could confuse voters. He also defended a controversial Ramaswamy campaign ad in Ohio.",
+      "relative_time": "Sat, 24 Oct 2026 01:03:04 +0000",
+      "published": "Sat, 24 Oct 2026 01:03:04 +0000",
       "author": "Internet Archive TV News",
       "feed": "Internet Archive TV News (hourly summary)",
       "feedName": "Internet Archive TV News (hourly summary)",
@@ -686,7 +686,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "",
-      "scraped_at": "2026-10-23T23:13:09.304573+00:00"
+      "scraped_at": "2026-10-24T01:41:05.853990+00:00"
     }
   ],
   "stories": [
@@ -696,8 +696,8 @@
       "title": "Deadly shooting near Paris is a 'racist terrorist attack', Macron says",
       "url": "https://www.bbc.co.uk/news/articles/c6ev38dj1g8zo?at_medium=RSS&at_campaign=rss",
       "link": "https://www.bbc.co.uk/news/articles/c6ev38dj1g8zo?at_medium=RSS&at_campaign=rss",
-      "excerpt": "One person is killed and five wounded in a series of attacks and the suspected gunman has been apprehended.",
-      "summary": "One person is killed and five wounded in a series of attacks and the suspected gunman has been apprehended.",
+      "excerpt": "One person is killed and five wounded in a series of attacks. The suspected gunman has been apprehended.",
+      "summary": "One person is killed and five wounded in a series of attacks. The suspected gunman has been apprehended.",
       "relative_time": "Fri, 23 Oct 2026 19:42:08 GMT",
       "published": "Fri, 23 Oct 2026 19:42:08 GMT",
       "author": "BBC World News",
@@ -708,7 +708,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/7c59/live/b8966750-cef5-11f1-a701-fddedf244c16.jpg",
-      "scraped_at": "2026-10-23T23:13:06.738972+00:00"
+      "scraped_at": "2026-10-24T01:41:03.073463+00:00"
     },
     {
       "id": "55e117d86d39",
@@ -728,7 +728,27 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/fd9e/live/bb37b200-cee8-11f1-b441-2b33b063138f.jpg",
-      "scraped_at": "2026-10-23T23:13:06.739023+00:00"
+      "scraped_at": "2026-10-24T01:41:03.073518+00:00"
+    },
+    {
+      "id": "e22c0f6095a6",
+      "headline": "Amazon cloud capacity sold out through 2027, CEO Jassy says - Reuters",
+      "title": "Amazon cloud capacity sold out through 2027, CEO Jassy says - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOeDBNbTdvV2F5U2tSX1NQWmZ2bnRGUXJMRE4xT1V3V0dIcnlFd3g0WkZ6aWdYNmNzNWxIQXNOcWxMdFlqbFNmN3lWekFUOGJVQzN5aElzeVlveVh4RzZ5aC03b3pSLUNQQ21lQ29jNVkwdmF4V2YwYUlkd0dPdkJQT1VwWF9lZUdhZnBrNWppME81Y2Q2ZzFYOWcwWFozajYyME9BQkpSZHNOTTdQX3hTcXF3RkVSS2s3OU1F?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOeDBNbTdvV2F5U2tSX1NQWmZ2bnRGUXJMRE4xT1V3V0dIcnlFd3g0WkZ6aWdYNmNzNWxIQXNOcWxMdFlqbFNmN3lWekFUOGJVQzN5aElzeVlveVh4RzZ5aC03b3pSLUNQQ21lQ29jNVkwdmF4V2YwYUlkd0dPdkJQT1VwWF9lZUdhZnBrNWppME81Y2Q2ZzFYOWcwWFozajYyME9BQkpSZHNOTTdQX3hTcXF3RkVSS2s3OU1F?oc=5",
+      "excerpt": "Amazon cloud capacity sold out through 2027, CEO Jassy says Reuters",
+      "summary": "Amazon cloud capacity sold out through 2027, CEO Jassy says Reuters",
+      "relative_time": "Fri, 23 Oct 2026 23:07:43 GMT",
+      "published": "Fri, 23 Oct 2026 23:07:43 GMT",
+      "author": "Reuters Top News",
+      "feed": "Reuters Top News",
+      "feedName": "Reuters Top News",
+      "feedId": "2a73bb6c12bf",
+      "category": "Global",
+      "ingestionType": "rss",
+      "sourceGroup": "rss",
+      "imageUrl": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80",
+      "scraped_at": "2026-10-24T01:41:03.204530+00:00"
     },
     {
       "id": "b32fa31af190",
@@ -738,8 +758,8 @@
       "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQMFNJeDNkbkFpbnliam8zamd3UU1pZjgzS1JkNTF3M1dRcG0wbm8yZnpxMmp1UDdGdWpPZ2F4WU95YzZnTzVURnNlbDFId3VzWEpmMnJNQkxSY3ZJRmEycDVFR2F2YUpGaVZLbjZNbm1fTkRiclV6a3pXVmZtekVWaU52aHhHMHl0R3ZjX0hKQ3Z3SjUydzdsSklfRTVReUl2Mkh3RFlZRk0xUW4zVWZkbW5YdEo0UkZsRzZqZ0lIMA?oc=5",
       "excerpt": "Russia, Ukraine agree on ceasefire in embattled town, to hold peace talks next month Reuters",
       "summary": "Russia, Ukraine agree on ceasefire in embattled town, to hold peace talks next month Reuters",
-      "relative_time": "Fri, 23 Oct 2026 22:24:44 GMT",
-      "published": "Fri, 23 Oct 2026 22:24:44 GMT",
+      "relative_time": "Fri, 23 Oct 2026 21:16:00 GMT",
+      "published": "Fri, 23 Oct 2026 21:16:00 GMT",
       "author": "Reuters Top News",
       "feed": "Reuters Top News",
       "feedName": "Reuters Top News",
@@ -748,27 +768,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-23T23:13:06.886168+00:00"
-    },
-    {
-      "id": "5395f9c87fe7",
-      "headline": "Trump says US may do another military operation against Iran - Reuters",
-      "title": "Trump says US may do another military operation against Iran - Reuters",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOZjhrQTB6UmEzUzQ0N1RPV1BiZXhoaGdyWmhCTVpTTWgydnE3aEd0WHJHXzlpR09JXzh0SVpGSHkzc0JJR2g4M21MbVM1dUljQzd4UWNrSnlDWkw2SlgzOHlITmpJNHpuTTAtMmdPMXdXR0JGQlF4LUtHMTUxSWdWeVRoZVhMRlJtY0NmNHp4enJ2NzVwdE5xUm1zdVRfZ0pYdE0wRGFpU0k0eGpMZTlpNEl2bmQ?oc=5",
-      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOZjhrQTB6UmEzUzQ0N1RPV1BiZXhoaGdyWmhCTVpTTWgydnE3aEd0WHJHXzlpR09JXzh0SVpGSHkzc0JJR2g4M21MbVM1dUljQzd4UWNrSnlDWkw2SlgzOHlITmpJNHpuTTAtMmdPMXdXR0JGQlF4LUtHMTUxSWdWeVRoZVhMRlJtY0NmNHp4enJ2NzVwdE5xUm1zdVRfZ0pYdE0wRGFpU0k0eGpMZTlpNEl2bmQ?oc=5",
-      "excerpt": "Trump says US may do another military operation against Iran Reuters",
-      "summary": "Trump says US may do another military operation against Iran Reuters",
-      "relative_time": "Fri, 23 Oct 2026 20:05:43 GMT",
-      "published": "Fri, 23 Oct 2026 20:05:43 GMT",
-      "author": "Reuters Top News",
-      "feed": "Reuters Top News",
-      "feedName": "Reuters Top News",
-      "feedId": "2a73bb6c12bf",
-      "category": "Global",
-      "ingestionType": "rss",
-      "sourceGroup": "rss",
-      "imageUrl": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-23T23:13:06.886221+00:00"
+      "scraped_at": "2026-10-24T01:41:03.204588+00:00"
     },
     {
       "id": "d836fd710ea0",
@@ -788,7 +788,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://i.dailymail.com/1s/2026/10/22/23/112035871-0-image-a-2_1792707448842.jpg",
-      "scraped_at": "2026-10-23T23:13:07.184582+00:00"
+      "scraped_at": "2026-10-24T01:41:03.452852+00:00"
     },
     {
       "id": "e32a1554172c",
@@ -808,38 +808,38 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://i.dailymail.com/1s/2026/10/23/15/112050583-0-image-a-16_1792765375197.jpg",
-      "scraped_at": "2026-10-23T23:13:07.184670+00:00"
+      "scraped_at": "2026-10-24T01:41:03.452938+00:00"
     },
     {
-      "id": "ea4232b5abb1",
-      "headline": "Meet the FBI \u2018shadow government\u2019 that shut down the Hunter laptop story",
-      "title": "Meet the FBI \u2018shadow government\u2019 that shut down the Hunter laptop story",
-      "url": "https://nypost.com/2026/10/23/opinion/meet-the-fbi-shadow-government-that-shut-down-the-hunter-laptop-story/",
-      "link": "https://nypost.com/2026/10/23/opinion/meet-the-fbi-shadow-government-that-shut-down-the-hunter-laptop-story/",
-      "excerpt": "It sure looks like a \u201cshadow government\u201d operating in Trump\u2019s fourth year in office, doing its best to oust him.",
-      "summary": "It sure looks like a \u201cshadow government\u201d operating in Trump\u2019s fourth year in office, doing its best to oust him.",
-      "relative_time": "Fri, 23 Oct 2026 19:08:20 -0400",
-      "published": "Fri, 23 Oct 2026 19:08:20 -0400",
-      "author": "Post Editorial Board",
+      "id": "f23812f59498",
+      "headline": "Dallas Cowboys Cheerleaders slap My Chemical Romance with legal papers after shootout stunt during Hollywood Bowl concert",
+      "title": "Dallas Cowboys Cheerleaders slap My Chemical Romance with legal papers after shootout stunt during Hollywood Bowl concert",
+      "url": "https://nypost.com/2026/10/23/us-news/dallas-cowboys-cheerleaders-sue-mcr-over-mock-appearance-in-la/",
+      "link": "https://nypost.com/2026/10/23/us-news/dallas-cowboys-cheerleaders-sue-mcr-over-mock-appearance-in-la/",
+      "excerpt": "The Dallas Cowboys Cheerleaders are seeing red after the band My Chemical Romance allegedly fooled fans with lookalike performers.",
+      "summary": "The Dallas Cowboys Cheerleaders are seeing red after the band My Chemical Romance allegedly fooled fans with lookalike performers.",
+      "relative_time": "Fri, 23 Oct 2026 21:36:25 -0400",
+      "published": "Fri, 23 Oct 2026 21:36:25 -0400",
+      "author": "Daniel Farr",
       "feed": "New York Post",
       "feedName": "New York Post",
       "feedId": "f35f2eec037f",
       "category": "Global",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F10%2FDLELODME.jpg?quality%3D90%26strip%3Dall",
-      "scraped_at": "2026-10-23T23:13:07.298178+00:00"
+      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F10%2Fchemical-romance-concert-hollywood-bowl-146260088.png?w%3D806",
+      "scraped_at": "2026-10-24T01:41:03.527506+00:00"
     },
     {
-      "id": "ed81b5627574",
-      "headline": "TV news hourly summary \u00b7 Oct 23, 23:03 UTC",
-      "title": "TV news hourly summary \u00b7 Oct 23, 23:03 UTC",
-      "url": "https://mastodon.archive.org/@tv/117492717025831864",
-      "link": "https://mastodon.archive.org/@tv/117492717025831864",
-      "excerpt": "With 11 days until the midterms, Trump rallied in Florida as polls suggested Democratic gains. His administration\u2019s Alaska election lawsuit drew scrutiny, and DOJ appealed a California case seeking to block thousands of mail ballots. Musk\u2019s political spending topped $440 million. Michigan\u2019s Senate race, economy and tariffs were major campaign issues; North Carolina early voting surged.",
-      "summary": "With 11 days until the midterms, Trump rallied in Florida as polls suggested Democratic gains. His administration\u2019s Alaska election lawsuit drew scrutiny, and DOJ appealed a California case seeking to block thousands of mail ballots. Musk\u2019s political spending topped $440 million. Michigan\u2019s Senate race, economy and tariffs were major campaign issues; North Carolina early voting surged.",
-      "relative_time": "Fri, 23 Oct 2026 23:03:05 +0000",
-      "published": "Fri, 23 Oct 2026 23:03:05 +0000",
+      "id": "5228837db6ed",
+      "headline": "TV news hourly summary \u00b7 Oct 24, 01:03 UTC",
+      "title": "TV news hourly summary \u00b7 Oct 24, 01:03 UTC",
+      "url": "https://mastodon.archive.org/@tv/117493188803895213",
+      "link": "https://mastodon.archive.org/@tv/117493188803895213",
+      "excerpt": "President Trump says he ordered the Justice Department\u2019s lawsuit seeking to block Alaska Senate results if the GOP incumbent loses, arguing the election process could confuse voters. He also defended a controversial Ramaswamy campaign ad in Ohio.",
+      "summary": "President Trump says he ordered the Justice Department\u2019s lawsuit seeking to block Alaska Senate results if the GOP incumbent loses, arguing the election process could confuse voters. He also defended a controversial Ramaswamy campaign ad in Ohio.",
+      "relative_time": "Sat, 24 Oct 2026 01:03:04 +0000",
+      "published": "Sat, 24 Oct 2026 01:03:04 +0000",
       "author": "Internet Archive TV News",
       "feed": "Internet Archive TV News (hourly summary)",
       "feedName": "Internet Archive TV News (hourly summary)",
@@ -848,7 +848,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "",
-      "scraped_at": "2026-10-23T23:13:09.304573+00:00"
+      "scraped_at": "2026-10-24T01:41:05.853990+00:00"
     }
   ],
   "raw_summary": "### Ukraine says Starlink still restricted after Trump says limits lifted\n**Source:** BBC World News\n**Summary:** Issues remain with the network used by the Ukrainian military, sources say, after repeated denials of a deliberate slowdown....\n\n### Five Israelis wounded and two suspected Palestinian attackers killed in West Bank shooting\n**Source:** BBC World News\n**Summary:** The attack comes at a time of heightened tensions in the occupied West Bank and four days before Israel's general election....\n\n### One killed, four injured in drive-by shooting near Paris - Reuters\n**Source:** Reuters Top News\n**Summary:** One killed, four injured in drive-by shooting near Paris Reuters...\n\n### US airlines favor higher fares over fuller planes as fuel costs squeeze profits - Reuters\n**Source:** Reuters Top News\n**Summary:** US airlines favor higher fares over fuller planes as fuel costs squeeze profits Reuters...\n\n### Meghan says she is 'deeply distressed' by allegations her father Thomas possessed child sex abuse images and reveals letter with 'disturbing' claims was passed to Met Police in 2018\n**Source:** Daily Mail UK\n**Summary:** The Duchess of Sussex revealed claims against Thomas Markle Sr were passed to her in 2018 after a letter was sent to the Metropolitan Police's royal protection team....\n\n### Cheers! England's oldest pub is finally named as experts confirm 'national treasure' boozer started pulling pints 600 years ago after studying tree rings in timber frame\n**Source:** Daily Mail UK\n**Summary:** Everyone thinks they know where England's oldest pub is - and have had many a drunken debate over it. But that argument now seems to have been settled....\n\n### Bears suffer devastating Cole Kmet injury: \u2018I don\u2019t have the words\u2019\n**Source:** New York Post\n**Summary:** Kmet tallied three catches for 28 yards Thursday night....\n\n### TV news hourly summary \u00b7 Oct 23, 11:03 UTC\n**Source:** Internet Archive TV News (hourly summary)\n**Summary:** Political news focused on Trump\u2019s defense of a controversial ad and Vivek Ramaswamy, midterm campaigning, and disputes over investigations and Senate races. Other headlines included a West Bank attack, Sudanese forces targeting hospitals, floods in U...\n",
@@ -858,5 +858,5 @@
   "data_current_html_path": "data/current/index.html",
   "archive_html_path": "output/archive/2026-10-23/index.html",
   "data_archive_html_path": "data/archive/2026-10-23/index.html",
-  "feed_hash": "deb19e51c8852c4dddca931ffee30bf8"
+  "feed_hash": "b91090af18d43a55ae6d89212ba6b791"
 }
