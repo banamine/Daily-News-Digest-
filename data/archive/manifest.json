@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-10-25",
+    "timestamp": "2026-10-25T10:41:08.990258+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "More than 1,300 arrested as clashes follow another day of mass protests across France",
+      "Israel to close West Bank crossings on election day as crackdown escalates",
+      "Iranian army says it shot down US drone over Bandar Abbas, Tasnim reports - Reuters",
+      "Three people killed and 14 injured in Ukrainian attacks on Russia's Belgorod region, governor says - Reuters",
+      "Stunned witnesses detail EXACTLY what happened inside the football club 'Ladies Night' sex scandal rocking the sleepy Notswold town of Banbury - as it's revealed one middle-aged woman has been KICKED OUT by her partner"
+    ],
+    "archive_html_path": "data/archive/2026-10-25/index.html",
+    "data_json_path": "data/archive/2026-10-25/data.json"
+  },
+  {
     "date": "2026-10-24",
     "timestamp": "2026-10-24T10:16:24.541592+00:00",
     "stories_count": 8,
