@@ -1,8 +1,8 @@
 {
-  "last_updated": "2026-10-25T10:41:08.987300+00:00",
+  "last_updated": "2026-10-25T12:37:29.874624+00:00",
   "source": "https://www.alexjoneslive.com/",
   "date": "2026-10-25",
-  "stories_hash": "93e8ee0a3f44ae72589a700a4438daab",
+  "stories_hash": "e7aa087aa4892e7ea06d64a6775922ac",
   "stories_count": 8,
   "scraped_articles_count": 0,
   "rss_articles_count": 34,
@@ -26,7 +26,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3d00/live/edf93830-cffb-11f1-b444-6fb1f13f8d87.jpg",
-      "scraped_at": "2026-10-25T10:40:49.069910+00:00"
+      "scraped_at": "2026-10-25T12:37:25.990167+00:00"
     },
     {
       "id": "7375c020a7ee",
@@ -46,18 +46,18 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/5815/live/ca832c30-d019-11f1-b441-2b33b063138f.jpg",
-      "scraped_at": "2026-10-25T10:40:49.069960+00:00"
+      "scraped_at": "2026-10-25T12:37:25.990222+00:00"
     },
     {
-      "id": "cd4097138cc0",
-      "headline": "Voters in Brazil to choose between Lula and Bolsonaro's son",
-      "title": "Voters in Brazil to choose between Lula and Bolsonaro's son",
+      "id": "841f7d1891d1",
+      "headline": "Voters in Brazil head to polls as Lula goes up against Bolsonaro's son",
+      "title": "Voters in Brazil head to polls as Lula goes up against Bolsonaro's son",
       "url": "https://www.bbc.co.uk/news/articles/cxp8g21j4648o?at_medium=RSS&at_campaign=rss",
       "link": "https://www.bbc.co.uk/news/articles/cxp8g21j4648o?at_medium=RSS&at_campaign=rss",
-      "excerpt": "Fl\u00e1vio Bolsonaro, the son of Brazil's imprisoned former president, is presenting a strong challenge to Lula, 80, who is seeking a fourth term in office.",
-      "summary": "Fl\u00e1vio Bolsonaro, the son of Brazil's imprisoned former president, is presenting a strong challenge to Lula, 80, who is seeking a fourth term in office.",
-      "relative_time": "Sat, 24 Oct 2026 23:50:02 GMT",
-      "published": "Sat, 24 Oct 2026 23:50:02 GMT",
+      "excerpt": "Fl\u00e1vio Bolsonaro, the son of Brazil's imprisoned ex-president, is challenging Lula, who is seeking a fourth term in office.",
+      "summary": "Fl\u00e1vio Bolsonaro, the son of Brazil's imprisoned ex-president, is challenging Lula, who is seeking a fourth term in office.",
+      "relative_time": "Sun, 25 Oct 2026 11:54:16 GMT",
+      "published": "Sun, 25 Oct 2026 11:54:16 GMT",
       "author": "BBC World News",
       "feed": "BBC World News",
       "feedName": "BBC World News",
@@ -65,19 +65,19 @@
       "category": "Global",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/cc2d/live/5e5c94f0-cffc-11f1-b444-6fb1f13f8d87.jpg",
-      "scraped_at": "2026-10-25T10:40:49.069997+00:00"
+      "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/5c93/live/6c2dbd80-d064-11f1-bbf5-99ed69f0d81f.jpg",
+      "scraped_at": "2026-10-25T12:37:25.990266+00:00"
     },
     {
-      "id": "ddd6dc32c256",
-      "headline": "Iranian army says it shot down US drone over Bandar Abbas, Tasnim reports - Reuters",
-      "title": "Iranian army says it shot down US drone over Bandar Abbas, Tasnim reports - Reuters",
-      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNNjlxWUNjczg2SHFQamFEZDV0SVhZaHA5bFdqaVQzT1oxSjd0b2ZQQjd6MldHeEhKcUstbGJEa1QxMmFBMFhad2VnREVIa2xoT0tPWlFXVW5lcXVEYjMwdUd5NTRIYm0zTFpabXUxY2pCakRGM3JnWE1iNHc3MmtlbWduRno3ZWVGVWVpa2JtRjF4VDh5TEFHN21hUV9sQUhxOWpJMVVPNlhFMDd5SkJMekZkTFdtQzlnYnBQNkd2MG1TNzZy?oc=5",
-      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNNjlxWUNjczg2SHFQamFEZDV0SVhZaHA5bFdqaVQzT1oxSjd0b2ZQQjd6MldHeEhKcUstbGJEa1QxMmFBMFhad2VnREVIa2xoT0tPWlFXVW5lcXVEYjMwdUd5NTRIYm0zTFpabXUxY2pCakRGM3JnWE1iNHc3MmtlbWduRno3ZWVGVWVpa2JtRjF4VDh5TEFHN21hUV9sQUhxOWpJMVVPNlhFMDd5SkJMekZkTFdtQzlnYnBQNkd2MG1TNzZy?oc=5",
-      "excerpt": "Iranian army says it shot down US drone over Bandar Abbas, Tasnim reports Reuters",
-      "summary": "Iranian army says it shot down US drone over Bandar Abbas, Tasnim reports Reuters",
-      "relative_time": "Sun, 25 Oct 2026 07:22:39 GMT",
-      "published": "Sun, 25 Oct 2026 07:22:39 GMT",
+      "id": "d3bf161231cc",
+      "headline": "Trump campaigns in Michigan a day after Obama rallies Democrats - Reuters",
+      "title": "Trump campaigns in Michigan a day after Obama rallies Democrats - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNbW50b2RKQnYxQ3pEY21lOWdDMTNwTmN6cDFsS1lKVmpWcDZ2U25TVGlELXpFMkZoOXJhU1R4WUF5NHNISmNKejJ2VnFnckRaUWlrVi04SFQxT2xOS19qQWM0ZkZsVmlpOFBjUVlNN3gxU2Y4aTRsZGtLRXZfWlVSV0xoSXd1em0xUUlfZzlIVDJGOElMdlpvVVY3ZGFDcjRGaDRQMlVR?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNbW50b2RKQnYxQ3pEY21lOWdDMTNwTmN6cDFsS1lKVmpWcDZ2U25TVGlELXpFMkZoOXJhU1R4WUF5NHNISmNKejJ2VnFnckRaUWlrVi04SFQxT2xOS19qQWM0ZkZsVmlpOFBjUVlNN3gxU2Y4aTRsZGtLRXZfWlVSV0xoSXd1em0xUUlfZzlIVDJGOElMdlpvVVY3ZGFDcjRGaDRQMlVR?oc=5",
+      "excerpt": "Trump campaigns in Michigan a day after Obama rallies Democrats Reuters",
+      "summary": "Trump campaigns in Michigan a day after Obama rallies Democrats Reuters",
+      "relative_time": "Sun, 25 Oct 2026 10:03:43 GMT",
+      "published": "Sun, 25 Oct 2026 10:03:43 GMT",
       "author": "Reuters Top News",
       "feed": "Reuters Top News",
       "feedName": "Reuters Top News",
@@ -86,7 +86,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-25T10:40:49.630789+00:00"
+      "scraped_at": "2026-10-25T12:37:26.129929+00:00"
     },
     {
       "id": "333e1437a53a",
@@ -106,18 +106,18 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-25T10:40:49.630842+00:00"
+      "scraped_at": "2026-10-25T12:37:26.129996+00:00"
     },
     {
-      "id": "3a14037f820c",
-      "headline": "Borr Drilling rig sinks off Gabon, five personnel missing - Reuters",
-      "title": "Borr Drilling rig sinks off Gabon, five personnel missing - Reuters",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOd0syTVctQjBVNERoUW43ei1PUjIxVmJ0aENNdDFtaEwzQXZBZF9IaGNpdU1fX3VNQVZaVE96c3pURGhiSDdZVHFnU01TZF9uelpTRnFkcVZxQ0hzUG8zS05CMHFpRTg3NXc0SE5zSWdWbnNqLUM5Rm1Qd0g3bDJkNzZpQW45RDg2VTJNek1vcEptWUtJRlhkUW5jRXRLUjBZT2d0cHhVTi1TNDRCYnYw?oc=5",
-      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOd0syTVctQjBVNERoUW43ei1PUjIxVmJ0aENNdDFtaEwzQXZBZF9IaGNpdU1fX3VNQVZaVE96c3pURGhiSDdZVHFnU01TZF9uelpTRnFkcVZxQ0hzUG8zS05CMHFpRTg3NXc0SE5zSWdWbnNqLUM5Rm1Qd0g3bDJkNzZpQW45RDg2VTJNek1vcEptWUtJRlhkUW5jRXRLUjBZT2d0cHhVTi1TNDRCYnYw?oc=5",
-      "excerpt": "Borr Drilling rig sinks off Gabon, five personnel missing Reuters",
-      "summary": "Borr Drilling rig sinks off Gabon, five personnel missing Reuters",
-      "relative_time": "Sun, 25 Oct 2026 06:30:00 GMT",
-      "published": "Sun, 25 Oct 2026 06:30:00 GMT",
+      "id": "ddd6dc32c256",
+      "headline": "Iranian army says it shot down US drone over Bandar Abbas, Tasnim reports - Reuters",
+      "title": "Iranian army says it shot down US drone over Bandar Abbas, Tasnim reports - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNNjlxWUNjczg2SHFQamFEZDV0SVhZaHA5bFdqaVQzT1oxSjd0b2ZQQjd6MldHeEhKcUstbGJEa1QxMmFBMFhad2VnREVIa2xoT0tPWlFXVW5lcXVEYjMwdUd5NTRIYm0zTFpabXUxY2pCakRGM3JnWE1iNHc3MmtlbWduRno3ZWVGVWVpa2JtRjF4VDh5TEFHN21hUV9sQUhxOWpJMVVPNlhFMDd5SkJMekZkTFdtQzlnYnBQNkd2MG1TNzZy?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNNjlxWUNjczg2SHFQamFEZDV0SVhZaHA5bFdqaVQzT1oxSjd0b2ZQQjd6MldHeEhKcUstbGJEa1QxMmFBMFhad2VnREVIa2xoT0tPWlFXVW5lcXVEYjMwdUd5NTRIYm0zTFpabXUxY2pCakRGM3JnWE1iNHc3MmtlbWduRno3ZWVGVWVpa2JtRjF4VDh5TEFHN21hUV9sQUhxOWpJMVVPNlhFMDd5SkJMekZkTFdtQzlnYnBQNkd2MG1TNzZy?oc=5",
+      "excerpt": "Iranian army says it shot down US drone over Bandar Abbas, Tasnim reports Reuters",
+      "summary": "Iranian army says it shot down US drone over Bandar Abbas, Tasnim reports Reuters",
+      "relative_time": "Sun, 25 Oct 2026 07:22:39 GMT",
+      "published": "Sun, 25 Oct 2026 07:22:39 GMT",
       "author": "Reuters Top News",
       "feed": "Reuters Top News",
       "feedName": "Reuters Top News",
@@ -126,18 +126,58 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-25T10:40:49.630870+00:00"
+      "scraped_at": "2026-10-25T12:37:26.130041+00:00"
     },
     {
-      "id": "86726a004341",
-      "headline": "Stunned witnesses detail EXACTLY what happened inside the football club 'Ladies Night' sex scandal rocking the sleepy Notswold town of Banbury - as it's revealed one middle-aged woman has been KICKED OUT by her partner",
-      "title": "Stunned witnesses detail EXACTLY what happened inside the football club 'Ladies Night' sex scandal rocking the sleepy Notswold town of Banbury - as it's revealed one middle-aged woman has been KICKED OUT by her partner",
+      "id": "252e84772a33",
+      "headline": "ROBERT HARDMAN: Why is a charity founded to protect London's ailing bridges instead squandering millions on trans rights, asylum seekers and a group allegedly linked to Hamas?",
+      "title": "ROBERT HARDMAN: Why is a charity founded to protect London's ailing bridges instead squandering millions on trans rights, asylum seekers and a group allegedly linked to Hamas?",
+      "url": "https://www.dailymail.com/news/article-16236013/ROBERT-HARDMAN-medieval-monks-London-bridges-trans-alleged-Hamas.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
+      "link": "https://www.dailymail.com/news/article-16236013/ROBERT-HARDMAN-medieval-monks-London-bridges-trans-alleged-Hamas.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
+      "excerpt": "The City Bridge Foundation has a very specific role: to maintain all the Square Mile's non-rail bridges over the River Thames.",
+      "summary": "The City Bridge Foundation has a very specific role: to maintain all the Square Mile's non-rail bridges over the River Thames.",
+      "relative_time": "Sun, 25 Oct 2026 12:31:21 GMT",
+      "published": "Sun, 25 Oct 2026 12:31:21 GMT",
+      "author": "Daily Mail UK",
+      "feed": "Daily Mail UK",
+      "feedName": "Daily Mail UK",
+      "feedId": "59b9073e561e",
+      "category": "Global",
+      "ingestionType": "rss",
+      "sourceGroup": "rss",
+      "imageUrl": "https://i.dailymail.com/1s/2026/10/25/02/112074009-0-Robert_Hardman_on_Hammersmith_Bridge_which_remains_closed_to_all-a-6_1792893614119.jpg",
+      "scraped_at": "2026-10-25T12:37:26.630588+00:00"
+    },
+    {
+      "id": "9827228eda0d",
+      "headline": "Meghan Markle's father Thomas makes a stark confession: 'I paid for sex in Far East, but I'm no child abuser' - as Met admits it sat on abuse claims for SEVEN years",
+      "title": "Meghan Markle's father Thomas makes a stark confession: 'I paid for sex in Far East, but I'm no child abuser' - as Met admits it sat on abuse claims for SEVEN years",
+      "url": "https://www.dailymail.com/news/article-16236071/Meghan-Markles-father-Thomas-admits-paid-sex-Far-East-Im-no-child-abuser.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
+      "link": "https://www.dailymail.com/news/article-16236071/Meghan-Markles-father-Thomas-admits-paid-sex-Far-East-Im-no-child-abuser.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
+      "excerpt": "Thomas Markle has vowed to 'do whatever it takes' to clear his name after being accused of sickening child sex crimes.",
+      "summary": "Thomas Markle has vowed to 'do whatever it takes' to clear his name after being accused of sickening child sex crimes.",
+      "relative_time": "Sun, 25 Oct 2026 11:55:00 GMT",
+      "published": "Sun, 25 Oct 2026 11:55:00 GMT",
+      "author": "Daily Mail UK",
+      "feed": "Daily Mail UK",
+      "feedName": "Daily Mail UK",
+      "feedId": "59b9073e561e",
+      "category": "Global",
+      "ingestionType": "rss",
+      "sourceGroup": "rss",
+      "imageUrl": "https://i.dailymail.com/1s/2026/10/24/21/112072029-0-image-a-18_1792872905344.jpg",
+      "scraped_at": "2026-10-25T12:37:26.630661+00:00"
+    },
+    {
+      "id": "b5d5be734d7d",
+      "headline": "Stunned eyewitnesses detail EXACTLY what happened inside the football club 'Ladies Night' sex scandal rocking the sleepy Notswolds town of Banbury - as it's revealed one middle-aged woman has been KICKED OUT by her partner",
+      "title": "Stunned eyewitnesses detail EXACTLY what happened inside the football club 'Ladies Night' sex scandal rocking the sleepy Notswolds town of Banbury - as it's revealed one middle-aged woman has been KICKED OUT by her partner",
       "url": "https://www.dailymail.com/news/article-16233403/orgy-football-club-Ladies-Night-scandal-Banbury.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
       "link": "https://www.dailymail.com/news/article-16233403/orgy-football-club-Ladies-Night-scandal-Banbury.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
       "excerpt": "Startling video footage of the shindig, held at Banbury United FC's clubhouse last Saturday night, showed nude male models engaging in shockingly intimate sexual acts with the audience.",
       "summary": "Startling video footage of the shindig, held at Banbury United FC's clubhouse last Saturday night, showed nude male models engaging in shockingly intimate sexual acts with the audience.",
-      "relative_time": "Sun, 25 Oct 2026 10:34:44 GMT",
-      "published": "Sun, 25 Oct 2026 10:34:44 GMT",
+      "relative_time": "Sun, 25 Oct 2026 11:38:38 GMT",
+      "published": "Sun, 25 Oct 2026 11:38:38 GMT",
       "author": "Daily Mail UK",
       "feed": "Daily Mail UK",
       "feedName": "Daily Mail UK",
@@ -146,107 +186,67 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://i.dailymail.com/1s/2026/10/23/15/112050583-0-image-a-16_1792765375197.jpg",
-      "scraped_at": "2026-10-25T10:40:50.437829+00:00"
+      "scraped_at": "2026-10-25T12:37:26.630737+00:00"
     },
     {
-      "id": "2a79b08b8f68",
-      "headline": "EDEN CONFIDENTIAL: Vivienne Westwood son's fears over her last collection",
-      "title": "EDEN CONFIDENTIAL: Vivienne Westwood son's fears over her last collection",
-      "url": "https://www.dailymail.com/tvshowbiz/article-16235929/EDEN-CONFIDENTIAL-Vivienne-Westwood-sons-collection.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
-      "link": "https://www.dailymail.com/tvshowbiz/article-16235929/EDEN-CONFIDENTIAL-Vivienne-Westwood-sons-collection.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
-      "excerpt": "Nearly four years after Dame Vivienne Westwood's death, a bitter battle over her legacy continues to rage between her family and the fashion house bearing her name.",
-      "summary": "Nearly four years after Dame Vivienne Westwood's death, a bitter battle over her legacy continues to rage between her family and the fashion house bearing her name.",
-      "relative_time": "Sun, 25 Oct 2026 10:20:40 GMT",
-      "published": "Sun, 25 Oct 2026 10:20:40 GMT",
-      "author": "Daily Mail UK",
-      "feed": "Daily Mail UK",
-      "feedName": "Daily Mail UK",
-      "feedId": "59b9073e561e",
-      "category": "Global",
-      "ingestionType": "rss",
-      "sourceGroup": "rss",
-      "imageUrl": "https://i.dailymail.com/1s/2026/10/24/21/112072043-0-image-a-6_1792873219531.jpg",
-      "scraped_at": "2026-10-25T10:40:50.437877+00:00"
-    },
-    {
-      "id": "a5c2d0f319e0",
-      "headline": "Traitors insiders have told me the intriguing demands celebrities made to show's bosses before filming. Their revelations mean that - regardless of who wins the show - Maya Jama will come out on top: KATIE HIND",
-      "title": "Traitors insiders have told me the intriguing demands celebrities made to show's bosses before filming. Their revelations mean that - regardless of who wins the show - Maya Jama will come out on top: KATIE HIND",
-      "url": "https://www.dailymail.com/tvshowbiz/article-16236087/Traitors-insiders-Maya-Jama-KATIE-HIND.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
-      "link": "https://www.dailymail.com/tvshowbiz/article-16236087/Traitors-insiders-Maya-Jama-KATIE-HIND.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
-      "excerpt": "There have been intriguing whispers between well-connected agents and industry sources around the demands of some cast members.",
-      "summary": "There have been intriguing whispers between well-connected agents and industry sources around the demands of some cast members.",
-      "relative_time": "Sun, 25 Oct 2026 10:18:02 GMT",
-      "published": "Sun, 25 Oct 2026 10:18:02 GMT",
-      "author": "Daily Mail UK",
-      "feed": "Daily Mail UK",
-      "feedName": "Daily Mail UK",
-      "feedId": "59b9073e561e",
-      "category": "Global",
-      "ingestionType": "rss",
-      "sourceGroup": "rss",
-      "imageUrl": "https://i.dailymail.com/1s/2026/10/24/20/112070843-0-image-a-16_1792871652455.jpg",
-      "scraped_at": "2026-10-25T10:40:50.437933+00:00"
-    },
-    {
-      "id": "164621eba2e1",
-      "headline": "NFL Week 7 predictions, best bets: Picks against the spread for every game",
-      "title": "NFL Week 7 predictions, best bets: Picks against the spread for every game",
-      "url": "https://nypost.com/2026/10/25/betting/nfl-week-7-predictions-best-bets-picks-against-the-spread-for-every-game-2/",
-      "link": "https://nypost.com/2026/10/25/betting/nfl-week-7-predictions-best-bets-picks-against-the-spread-for-every-game-2/",
-      "excerpt": "Dave Blezow shares his picks for every game in Week 7.",
-      "summary": "Dave Blezow shares his picks for every game in Week 7.",
-      "relative_time": "Sun, 25 Oct 2026 06:00:00 -0400",
-      "published": "Sun, 25 Oct 2026 06:00:00 -0400",
-      "author": "Michael Leboff",
+      "id": "303c360fa61a",
+      "headline": "Jets vs. Dolphins prediction, picks: Gang Green runs over hapless Dolphins in Week 7",
+      "title": "Jets vs. Dolphins prediction, picks: Gang Green runs over hapless Dolphins in Week 7",
+      "url": "https://nypost.com/2026/10/25/betting/jets-vs-dolphins-prediction-nfl-week-7-picks-best-bets-sunday/",
+      "link": "https://nypost.com/2026/10/25/betting/jets-vs-dolphins-prediction-nfl-week-7-picks-best-bets-sunday/",
+      "excerpt": "Must-win territory for the 2-4 Jets.",
+      "summary": "Must-win territory for the 2-4 Jets.",
+      "relative_time": "Sun, 25 Oct 2026 08:30:00 -0400",
+      "published": "Sun, 25 Oct 2026 08:30:00 -0400",
+      "author": "Erich Richter",
       "feed": "New York Post",
       "feedName": "New York Post",
       "feedId": "f35f2eec037f",
       "category": "Global",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F10%2Fnew-york-jets-quarterback-geno-145600861.jpg?quality%3D90%26strip%3Dall",
-      "scraped_at": "2026-10-25T10:40:51.333803+00:00"
+      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F10%2Fjets-dolphins-prediction.jpg?quality%3D90%26strip%3Dall",
+      "scraped_at": "2026-10-25T12:37:27.358485+00:00"
     },
     {
-      "id": "cb3069e0e885",
-      "headline": "Horndog NYPD capt. and jealous cop clique torment female officer after she spurns his advances, lawsuit claims",
-      "title": "Horndog NYPD capt. and jealous cop clique torment female officer after she spurns his advances, lawsuit claims",
-      "url": "https://nypost.com/2026/10/25/us-news/nypd-captain-jealous-cop-clique-torment-female-officer-after-she-spurns-his-advances-lawsuit/",
-      "link": "https://nypost.com/2026/10/25/us-news/nypd-captain-jealous-cop-clique-torment-female-officer-after-she-spurns-his-advances-lawsuit/",
-      "excerpt": "NYPD Officer Maria Delacruz filed a lawsuit against Capt. Amanjeet Sandhu, claiming he sexually harassed her and retaliated when she refused him.",
-      "summary": "NYPD Officer Maria Delacruz filed a lawsuit against Capt. Amanjeet Sandhu, claiming he sexually harassed her and retaliated when she refused him.",
-      "relative_time": "Sun, 25 Oct 2026 05:47:27 -0400",
-      "published": "Sun, 25 Oct 2026 05:47:27 -0400",
-      "author": "Tina Moore",
+      "id": "52a1db238f5e",
+      "headline": "Buccaneers vs. Panters picks, best bets: Bryce Young continues blazing start",
+      "title": "Buccaneers vs. Panters picks, best bets: Bryce Young continues blazing start",
+      "url": "https://nypost.com/2026/10/25/betting/buccaneers-vs-panters-picks-best-bets-nfl-week-7-odds-predictions/",
+      "link": "https://nypost.com/2026/10/25/betting/buccaneers-vs-panters-picks-best-bets-nfl-week-7-odds-predictions/",
+      "excerpt": "For all the consternation about the NFC East, the NFC South is up to its usual shenanigans.",
+      "summary": "For all the consternation about the NFC East, the NFC South is up to its usual shenanigans.",
+      "relative_time": "Sun, 25 Oct 2026 08:30:00 -0400",
+      "published": "Sun, 25 Oct 2026 08:30:00 -0400",
+      "author": "Matt Ehalt",
       "feed": "New York Post",
       "feedName": "New York Post",
       "feedId": "f35f2eec037f",
       "category": "Global",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F10%2F2023-declared-love-expressed-desire-146308977.jpg?w%3D610",
-      "scraped_at": "2026-10-25T10:40:51.333853+00:00"
+      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F10%2Fcarolina-panthers-quarterback-bryce-young-145628873.jpg?quality%3D90%26strip%3Dall",
+      "scraped_at": "2026-10-25T12:37:27.358535+00:00"
     },
     {
-      "id": "8546fc443a31",
-      "headline": "Knife-wielding man arrested after clashing with crew member on NYC film set of \u2018Miami Vice \u201885\u2019: police",
-      "title": "Knife-wielding man arrested after clashing with crew member on NYC film set of \u2018Miami Vice \u201885\u2019: police",
-      "url": "https://nypost.com/2026/10/25/us-news/nyc-knife-wielding-man-alex-perez-arrested-after-clashing-with-crew-member-on-miami-vice-85-set-police/",
-      "link": "https://nypost.com/2026/10/25/us-news/nyc-knife-wielding-man-alex-perez-arrested-after-clashing-with-crew-member-on-miami-vice-85-set-police/",
-      "excerpt": "Alex Perez allegedly pulled out the knife during a verbal dispute with a 43-year-old male production staffer, who feared for his safety, cops said.",
-      "summary": "Alex Perez allegedly pulled out the knife during a verbal dispute with a 43-year-old male production staffer, who feared for his safety, cops said.",
-      "relative_time": "Sun, 25 Oct 2026 05:36:24 -0400",
-      "published": "Sun, 25 Oct 2026 05:36:24 -0400",
-      "author": "Adam Silverstein",
+      "id": "d2d9388e6b22",
+      "headline": "Kenya highway crash kills 22, weeks after similar fatal accident: police",
+      "title": "Kenya highway crash kills 22, weeks after similar fatal accident: police",
+      "url": "https://nypost.com/2026/10/25/world-news/kenya-highway-crash-kills-22-weeks-after-fatal-accident/",
+      "link": "https://nypost.com/2026/10/25/world-news/kenya-highway-crash-kills-22-weeks-after-fatal-accident/",
+      "excerpt": "Makueni County Commissioner Abdullahi Khalif said that the crash's death toll could still rise.",
+      "summary": "Makueni County Commissioner Abdullahi Khalif said that the crash's death toll could still rise.",
+      "relative_time": "Sun, 25 Oct 2026 08:16:54 -0400",
+      "published": "Sun, 25 Oct 2026 08:16:54 -0400",
+      "author": "Associated Press",
       "feed": "New York Post",
       "feedName": "New York Post",
       "feedId": "f35f2eec037f",
       "category": "Global",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F10%2Fnew-york-ny-actor-michael-146270371.jpg?w%3D1024",
-      "scraped_at": "2026-10-25T10:40:51.333903+00:00"
+      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F10%2Fkenyan-police-officers-look-bus-146432473.jpg?w%3D1024",
+      "scraped_at": "2026-10-25T12:37:27.358571+00:00"
     },
     {
       "id": "22cd8f72f661",
@@ -266,7 +266,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://100percentfedup.com/wp-content/uploads/2026/10/king-abdullah-jordan-response-1600x900-1.jpg",
-      "scraped_at": "2026-10-25T10:40:51.622553+00:00"
+      "scraped_at": "2026-10-25T12:37:27.955487+00:00"
     },
     {
       "id": "acdee8b01b73",
@@ -286,7 +286,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://100percentfedup.com/wp-content/uploads/2026/10/zohran-mamdani-voting-line-20261024.jpg",
-      "scraped_at": "2026-10-25T10:40:51.622621+00:00"
+      "scraped_at": "2026-10-25T12:37:27.955553+00:00"
     },
     {
       "id": "2093ad10c7a7",
@@ -306,7 +306,27 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://100percentfedup.com/wp-content/uploads/2026/10/president-trump-veto-gridlock-1600x900-1.png",
-      "scraped_at": "2026-10-25T10:40:51.622685+00:00"
+      "scraped_at": "2026-10-25T12:37:27.955630+00:00"
+    },
+    {
+      "id": "05e8b29cef7f",
+      "headline": "NYT: Investigating Omar Is \u2018Authoritarian,\u2019 But Prosecuting Trump Is \u2018Accountability\u2019",
+      "title": "NYT: Investigating Omar Is \u2018Authoritarian,\u2019 But Prosecuting Trump Is \u2018Accountability\u2019",
+      "url": "https://thefederalist.com/2026/10/25/nyt-investigating-omar-is-authoritarian-but-prosecuting-trump-is-accountability/?utm_source=rss&utm_medium=rss&utm_campaign=nyt-investigating-omar-is-authoritarian-but-prosecuting-trump-is-accountability",
+      "link": "https://thefederalist.com/2026/10/25/nyt-investigating-omar-is-authoritarian-but-prosecuting-trump-is-accountability/?utm_source=rss&utm_medium=rss&utm_campaign=nyt-investigating-omar-is-authoritarian-but-prosecuting-trump-is-accountability",
+      "excerpt": "Notably, the editorial board acknowledges it has no idea whether the allegations 'have merit.'",
+      "summary": "Notably, the editorial board acknowledges it has no idea whether the allegations 'have merit.'",
+      "relative_time": "Sun, 25 Oct 2026 12:30:00 +0000",
+      "published": "Sun, 25 Oct 2026 12:30:00 +0000",
+      "author": "Brianna Lyman",
+      "feed": "The Federalist",
+      "feedName": "The Federalist",
+      "feedId": "89a563ceae0b",
+      "category": "Alternative",
+      "ingestionType": "rss",
+      "sourceGroup": "rss",
+      "imageUrl": "https://thefederalist.com/wp-content/uploads/2026/10/Ilhan_Omar_01-e1792788904312-1200x675.jpg",
+      "scraped_at": "2026-10-25T12:37:28.100667+00:00"
     },
     {
       "id": "518606dd88f2",
@@ -326,7 +346,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://thefederalist.com/wp-content/uploads/2026/10/Hunter-Biden-1200x675.png",
-      "scraped_at": "2026-10-25T10:40:51.759036+00:00"
+      "scraped_at": "2026-10-25T12:37:28.100731+00:00"
     },
     {
       "id": "6873ab85e6f0",
@@ -346,27 +366,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://thefederalist.com/wp-content/uploads/2026/10/IMG_0853-1-1200x675.jpeg",
-      "scraped_at": "2026-10-25T10:40:51.759085+00:00"
-    },
-    {
-      "id": "1626da781f1f",
-      "headline": "5 Superb Clarence Thomas Opinions To Mark His 35 Years At SCOTUS",
-      "title": "5 Superb Clarence Thomas Opinions To Mark His 35 Years At SCOTUS",
-      "url": "https://thefederalist.com/2026/10/23/5-superb-clarence-thomas-opinions-to-mark-his-35-years-at-scotus/?utm_source=rss&utm_medium=rss&utm_campaign=5-superb-clarence-thomas-opinions-to-mark-his-35-years-at-scotus",
-      "link": "https://thefederalist.com/2026/10/23/5-superb-clarence-thomas-opinions-to-mark-his-35-years-at-scotus/?utm_source=rss&utm_medium=rss&utm_campaign=5-superb-clarence-thomas-opinions-to-mark-his-35-years-at-scotus",
-      "excerpt": "The Federalist has compiled five of Thomas' greatest opinions to commemorate his 35 years on the nation's highest bench.",
-      "summary": "The Federalist has compiled five of Thomas' greatest opinions to commemorate his 35 years on the nation's highest bench.",
-      "relative_time": "Fri, 23 Oct 2026 17:08:22 +0000",
-      "published": "Fri, 23 Oct 2026 17:08:22 +0000",
-      "author": "Shawn Fleetwood",
-      "feed": "The Federalist",
-      "feedName": "The Federalist",
-      "feedId": "89a563ceae0b",
-      "category": "Alternative",
-      "ingestionType": "rss",
-      "sourceGroup": "rss",
-      "imageUrl": "https://thefederalist.com/wp-content/uploads/2026/10/Clarence-Thomas-1200x675.png",
-      "scraped_at": "2026-10-25T10:40:51.759119+00:00"
+      "scraped_at": "2026-10-25T12:37:28.100800+00:00"
     },
     {
       "id": "3715d1d13bb0",
@@ -386,7 +386,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://www.theblaze.com/media-library/we-argue-about-what-a-woman-is-what-about-a-gentleman.jpg?id=68516385&width=980",
-      "scraped_at": "2026-10-25T10:40:52.016939+00:00"
+      "scraped_at": "2026-10-25T12:37:28.328527+00:00"
     },
     {
       "id": "47b8812cd973",
@@ -406,7 +406,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://www.theblaze.com/media-library/image.jpg?id=68492818&width=980",
-      "scraped_at": "2026-10-25T10:40:52.017508+00:00"
+      "scraped_at": "2026-10-25T12:37:28.329218+00:00"
     },
     {
       "id": "bf5a0f105066",
@@ -426,7 +426,27 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://www.theblaze.com/media-library/5-times-christians-lost-debates-with-atheists-and-what-they-did-wrong.jpg?id=68513179&width=980",
-      "scraped_at": "2026-10-25T10:40:52.018691+00:00"
+      "scraped_at": "2026-10-25T12:37:28.330582+00:00"
+    },
+    {
+      "id": "ff5e97a98334",
+      "headline": "Hollywood Lawyers Perverting Justice",
+      "title": "Hollywood Lawyers Perverting Justice",
+      "url": "https://hotair.com/betsy-mccaughey/2026/10/25/hollywood-lawyers-perverting-justice-n3820266",
+      "link": "https://hotair.com/betsy-mccaughey/2026/10/25/hollywood-lawyers-perverting-justice-n3820266",
+      "excerpt": "Hollywood Lawyers Perverting Justice",
+      "summary": "Hollywood Lawyers Perverting Justice",
+      "relative_time": "Sun, 25 Oct 2026 08:30:00 -0400",
+      "published": "Sun, 25 Oct 2026 08:30:00 -0400",
+      "author": "Hot Air",
+      "feed": "Hot Air",
+      "feedName": "Hot Air",
+      "feedId": "9c153127586e",
+      "category": "Alternative",
+      "ingestionType": "rss",
+      "sourceGroup": "rss",
+      "imageUrl": "https://media.townhall.com/cdn/hodl/2026/293/d36be09e-fc66-4654-a653-8b4873d6279b.png",
+      "scraped_at": "2026-10-25T12:37:28.446007+00:00"
     },
     {
       "id": "0b9d7dacc09c",
@@ -446,7 +466,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-25T10:40:52.131354+00:00"
+      "scraped_at": "2026-10-25T12:37:28.446043+00:00"
     },
     {
       "id": "2d5438614fc6",
@@ -466,27 +486,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://media.townhall.com/cdn/hodl/2026/286/0e4efb3e-a107-4cbe-8b38-0c3a06e338f8.jpg",
-      "scraped_at": "2026-10-25T10:40:52.131374+00:00"
-    },
-    {
-      "id": "15d5e541aff2",
-      "headline": "Athens, Jerusalem, and the Western Soul",
-      "title": "Athens, Jerusalem, and the Western Soul",
-      "url": "https://hotair.com/headlines/2026/10/24/athens-jerusalem-and-the-western-soul-n3820254",
-      "link": "https://hotair.com/headlines/2026/10/24/athens-jerusalem-and-the-western-soul-n3820254",
-      "excerpt": "Athens, Jerusalem, and the Western Soul",
-      "summary": "Athens, Jerusalem, and the Western Soul",
-      "relative_time": "Sat, 24 Oct 2026 19:40:00 -0400",
-      "published": "Sat, 24 Oct 2026 19:40:00 -0400",
-      "author": "Hot Air",
-      "feed": "Hot Air",
-      "feedName": "Hot Air",
-      "feedId": "9c153127586e",
-      "category": "Alternative",
-      "ingestionType": "rss",
-      "sourceGroup": "rss",
-      "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-25T10:40:52.131389+00:00"
+      "scraped_at": "2026-10-25T12:37:28.446058+00:00"
     },
     {
       "id": "19b71ed26541",
@@ -506,7 +506,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-25T10:40:52.480674+00:00"
+      "scraped_at": "2026-10-25T12:37:28.931280+00:00"
     },
     {
       "id": "b604d1a1d732",
@@ -526,7 +526,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-25T10:40:52.480736+00:00"
+      "scraped_at": "2026-10-25T12:37:28.931352+00:00"
     },
     {
       "id": "b48c2e29c69e",
@@ -546,7 +546,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-25T10:40:52.480785+00:00"
+      "scraped_at": "2026-10-25T12:37:28.931415+00:00"
     },
     {
       "id": "f48002eeb5a1",
@@ -566,7 +566,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.americanthinker.com/65/65iw6uyrf4bso7q2hlmk_640.jpg",
-      "scraped_at": "2026-10-25T10:40:52.635114+00:00"
+      "scraped_at": "2026-10-25T12:37:29.161561+00:00"
     },
     {
       "id": "7d1593275bb7",
@@ -586,7 +586,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.americanthinker.com/1x/1xauy12z8cbf1lgeiocx_640.JPG",
-      "scraped_at": "2026-10-25T10:40:52.635419+00:00"
+      "scraped_at": "2026-10-25T12:37:29.161982+00:00"
     },
     {
       "id": "9fa2813c3bc3",
@@ -606,7 +606,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.americanthinker.com/2f/2fcjwjfcifk28y6ot8hi_640.jpg",
-      "scraped_at": "2026-10-25T10:40:52.635699+00:00"
+      "scraped_at": "2026-10-25T12:37:29.162338+00:00"
     },
     {
       "id": "983644140dac",
@@ -626,7 +626,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-25T10:40:53.083729+00:00"
+      "scraped_at": "2026-10-25T12:37:29.592226+00:00"
     },
     {
       "id": "373547fec632",
@@ -646,7 +646,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-25T10:40:53.083776+00:00"
+      "scraped_at": "2026-10-25T12:37:29.592286+00:00"
     },
     {
       "id": "49b910d6aefd",
@@ -666,18 +666,18 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-25T10:40:53.083801+00:00"
+      "scraped_at": "2026-10-25T12:37:29.592319+00:00"
     },
     {
-      "id": "841584f9ab83",
-      "headline": "TV news hourly summary \u00b7 Oct 25, 10:03 UTC",
-      "title": "TV news hourly summary \u00b7 Oct 25, 10:03 UTC",
-      "url": "https://mastodon.archive.org/@tv/117500974453611664",
-      "link": "https://mastodon.archive.org/@tv/117500974453611664",
-      "excerpt": "France saw mass protests, with nearly 1,000 arrests. Serbia held a snap election, while Brazil\u2019s presidential runoff pitted Lula against Bolsonaro. Storm Babet brought amber warnings to the UK and gusts up to 85 mph. Israel\u2019s election was scheduled for Tuesday; US midterms were 10 days away, with Obama campaigning in Michigan and Ohio. Other stories included Ukraine\u2019s Starlink dispute, Meghan\u2019s claims about her father, and an Amy Winehouse tribute concert.",
-      "summary": "France saw mass protests, with nearly 1,000 arrests. Serbia held a snap election, while Brazil\u2019s presidential runoff pitted Lula against Bolsonaro. Storm Babet brought amber warnings to the UK and gusts up to 85 mph. Israel\u2019s election was scheduled for Tuesday; US midterms were 10 days away, with Obama campaigning in Michigan and Ohio. Other stories included Ukraine\u2019s Starlink dispute, Meghan\u2019s claims about her father, and an Amy Winehouse tribute concert.",
-      "relative_time": "Sun, 25 Oct 2026 10:03:03 +0000",
-      "published": "Sun, 25 Oct 2026 10:03:03 +0000",
+      "id": "dd4c1bd22c36",
+      "headline": "TV news hourly summary \u00b7 Oct 25, 12:03 UTC",
+      "title": "TV news hourly summary \u00b7 Oct 25, 12:03 UTC",
+      "url": "https://mastodon.archive.org/@tv/117501446429494247",
+      "link": "https://mastodon.archive.org/@tv/117501446429494247",
+      "excerpt": "Brazil held a presidential election, with Jair and Fl\u00e1vio Bolsonaro casting votes as Bolsonaro faced Lula in a runoff. Obama campaigned for Michigan Democrat Abdul El-Sayed and rallied voters in Ohio and Michigan; Trump warned of a \u201cradical left agenda.\u201d Protests spread across Europe, with about 410,000 people reported demonstrating in France and roughly 1,000 arrests. Storm Babet brought UK amber warnings and gusts up to 85 mph. UK leaders debated future EU ties.",
+      "summary": "Brazil held a presidential election, with Jair and Fl\u00e1vio Bolsonaro casting votes as Bolsonaro faced Lula in a runoff. Obama campaigned for Michigan Democrat Abdul El-Sayed and rallied voters in Ohio and Michigan; Trump warned of a \u201cradical left agenda.\u201d Protests spread across Europe, with about 410,000 people reported demonstrating in France and roughly 1,000 arrests. Storm Babet brought UK amber warnings and gusts up to 85 mph. UK leaders debated future EU ties.",
+      "relative_time": "Sun, 25 Oct 2026 12:03:05 +0000",
+      "published": "Sun, 25 Oct 2026 12:03:05 +0000",
       "author": "Internet Archive TV News",
       "feed": "Internet Archive TV News (hourly summary)",
       "feedName": "Internet Archive TV News (hourly summary)",
@@ -686,7 +686,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "",
-      "scraped_at": "2026-10-25T10:40:53.491218+00:00"
+      "scraped_at": "2026-10-25T12:37:29.873705+00:00"
     }
   ],
   "stories": [
@@ -708,7 +708,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3d00/live/edf93830-cffb-11f1-b444-6fb1f13f8d87.jpg",
-      "scraped_at": "2026-10-25T10:40:49.069910+00:00"
+      "scraped_at": "2026-10-25T12:37:25.990167+00:00"
     },
     {
       "id": "7375c020a7ee",
@@ -728,18 +728,18 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/5815/live/ca832c30-d019-11f1-b441-2b33b063138f.jpg",
-      "scraped_at": "2026-10-25T10:40:49.069960+00:00"
+      "scraped_at": "2026-10-25T12:37:25.990222+00:00"
     },
     {
-      "id": "ddd6dc32c256",
-      "headline": "Iranian army says it shot down US drone over Bandar Abbas, Tasnim reports - Reuters",
-      "title": "Iranian army says it shot down US drone over Bandar Abbas, Tasnim reports - Reuters",
-      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNNjlxWUNjczg2SHFQamFEZDV0SVhZaHA5bFdqaVQzT1oxSjd0b2ZQQjd6MldHeEhKcUstbGJEa1QxMmFBMFhad2VnREVIa2xoT0tPWlFXVW5lcXVEYjMwdUd5NTRIYm0zTFpabXUxY2pCakRGM3JnWE1iNHc3MmtlbWduRno3ZWVGVWVpa2JtRjF4VDh5TEFHN21hUV9sQUhxOWpJMVVPNlhFMDd5SkJMekZkTFdtQzlnYnBQNkd2MG1TNzZy?oc=5",
-      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNNjlxWUNjczg2SHFQamFEZDV0SVhZaHA5bFdqaVQzT1oxSjd0b2ZQQjd6MldHeEhKcUstbGJEa1QxMmFBMFhad2VnREVIa2xoT0tPWlFXVW5lcXVEYjMwdUd5NTRIYm0zTFpabXUxY2pCakRGM3JnWE1iNHc3MmtlbWduRno3ZWVGVWVpa2JtRjF4VDh5TEFHN21hUV9sQUhxOWpJMVVPNlhFMDd5SkJMekZkTFdtQzlnYnBQNkd2MG1TNzZy?oc=5",
-      "excerpt": "Iranian army says it shot down US drone over Bandar Abbas, Tasnim reports Reuters",
-      "summary": "Iranian army says it shot down US drone over Bandar Abbas, Tasnim reports Reuters",
-      "relative_time": "Sun, 25 Oct 2026 07:22:39 GMT",
-      "published": "Sun, 25 Oct 2026 07:22:39 GMT",
+      "id": "d3bf161231cc",
+      "headline": "Trump campaigns in Michigan a day after Obama rallies Democrats - Reuters",
+      "title": "Trump campaigns in Michigan a day after Obama rallies Democrats - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNbW50b2RKQnYxQ3pEY21lOWdDMTNwTmN6cDFsS1lKVmpWcDZ2U25TVGlELXpFMkZoOXJhU1R4WUF5NHNISmNKejJ2VnFnckRaUWlrVi04SFQxT2xOS19qQWM0ZkZsVmlpOFBjUVlNN3gxU2Y4aTRsZGtLRXZfWlVSV0xoSXd1em0xUUlfZzlIVDJGOElMdlpvVVY3ZGFDcjRGaDRQMlVR?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNbW50b2RKQnYxQ3pEY21lOWdDMTNwTmN6cDFsS1lKVmpWcDZ2U25TVGlELXpFMkZoOXJhU1R4WUF5NHNISmNKejJ2VnFnckRaUWlrVi04SFQxT2xOS19qQWM0ZkZsVmlpOFBjUVlNN3gxU2Y4aTRsZGtLRXZfWlVSV0xoSXd1em0xUUlfZzlIVDJGOElMdlpvVVY3ZGFDcjRGaDRQMlVR?oc=5",
+      "excerpt": "Trump campaigns in Michigan a day after Obama rallies Democrats Reuters",
+      "summary": "Trump campaigns in Michigan a day after Obama rallies Democrats Reuters",
+      "relative_time": "Sun, 25 Oct 2026 10:03:43 GMT",
+      "published": "Sun, 25 Oct 2026 10:03:43 GMT",
       "author": "Reuters Top News",
       "feed": "Reuters Top News",
       "feedName": "Reuters Top News",
@@ -748,7 +748,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-25T10:40:49.630789+00:00"
+      "scraped_at": "2026-10-25T12:37:26.129929+00:00"
     },
     {
       "id": "333e1437a53a",
@@ -768,18 +768,18 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-25T10:40:49.630842+00:00"
+      "scraped_at": "2026-10-25T12:37:26.129996+00:00"
     },
     {
-      "id": "86726a004341",
-      "headline": "Stunned witnesses detail EXACTLY what happened inside the football club 'Ladies Night' sex scandal rocking the sleepy Notswold town of Banbury - as it's revealed one middle-aged woman has been KICKED OUT by her partner",
-      "title": "Stunned witnesses detail EXACTLY what happened inside the football club 'Ladies Night' sex scandal rocking the sleepy Notswold town of Banbury - as it's revealed one middle-aged woman has been KICKED OUT by her partner",
-      "url": "https://www.dailymail.com/news/article-16233403/orgy-football-club-Ladies-Night-scandal-Banbury.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
-      "link": "https://www.dailymail.com/news/article-16233403/orgy-football-club-Ladies-Night-scandal-Banbury.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
-      "excerpt": "Startling video footage of the shindig, held at Banbury United FC's clubhouse last Saturday night, showed nude male models engaging in shockingly intimate sexual acts with the audience.",
-      "summary": "Startling video footage of the shindig, held at Banbury United FC's clubhouse last Saturday night, showed nude male models engaging in shockingly intimate sexual acts with the audience.",
-      "relative_time": "Sun, 25 Oct 2026 10:34:44 GMT",
-      "published": "Sun, 25 Oct 2026 10:34:44 GMT",
+      "id": "252e84772a33",
+      "headline": "ROBERT HARDMAN: Why is a charity founded to protect London's ailing bridges instead squandering millions on trans rights, asylum seekers and a group allegedly linked to Hamas?",
+      "title": "ROBERT HARDMAN: Why is a charity founded to protect London's ailing bridges instead squandering millions on trans rights, asylum seekers and a group allegedly linked to Hamas?",
+      "url": "https://www.dailymail.com/news/article-16236013/ROBERT-HARDMAN-medieval-monks-London-bridges-trans-alleged-Hamas.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
+      "link": "https://www.dailymail.com/news/article-16236013/ROBERT-HARDMAN-medieval-monks-London-bridges-trans-alleged-Hamas.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
+      "excerpt": "The City Bridge Foundation has a very specific role: to maintain all the Square Mile's non-rail bridges over the River Thames.",
+      "summary": "The City Bridge Foundation has a very specific role: to maintain all the Square Mile's non-rail bridges over the River Thames.",
+      "relative_time": "Sun, 25 Oct 2026 12:31:21 GMT",
+      "published": "Sun, 25 Oct 2026 12:31:21 GMT",
       "author": "Daily Mail UK",
       "feed": "Daily Mail UK",
       "feedName": "Daily Mail UK",
@@ -787,19 +787,19 @@
       "category": "Global",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://i.dailymail.com/1s/2026/10/23/15/112050583-0-image-a-16_1792765375197.jpg",
-      "scraped_at": "2026-10-25T10:40:50.437829+00:00"
+      "imageUrl": "https://i.dailymail.com/1s/2026/10/25/02/112074009-0-Robert_Hardman_on_Hammersmith_Bridge_which_remains_closed_to_all-a-6_1792893614119.jpg",
+      "scraped_at": "2026-10-25T12:37:26.630588+00:00"
     },
     {
-      "id": "2a79b08b8f68",
-      "headline": "EDEN CONFIDENTIAL: Vivienne Westwood son's fears over her last collection",
-      "title": "EDEN CONFIDENTIAL: Vivienne Westwood son's fears over her last collection",
-      "url": "https://www.dailymail.com/tvshowbiz/article-16235929/EDEN-CONFIDENTIAL-Vivienne-Westwood-sons-collection.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
-      "link": "https://www.dailymail.com/tvshowbiz/article-16235929/EDEN-CONFIDENTIAL-Vivienne-Westwood-sons-collection.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
-      "excerpt": "Nearly four years after Dame Vivienne Westwood's death, a bitter battle over her legacy continues to rage between her family and the fashion house bearing her name.",
-      "summary": "Nearly four years after Dame Vivienne Westwood's death, a bitter battle over her legacy continues to rage between her family and the fashion house bearing her name.",
-      "relative_time": "Sun, 25 Oct 2026 10:20:40 GMT",
-      "published": "Sun, 25 Oct 2026 10:20:40 GMT",
+      "id": "9827228eda0d",
+      "headline": "Meghan Markle's father Thomas makes a stark confession: 'I paid for sex in Far East, but I'm no child abuser' - as Met admits it sat on abuse claims for SEVEN years",
+      "title": "Meghan Markle's father Thomas makes a stark confession: 'I paid for sex in Far East, but I'm no child abuser' - as Met admits it sat on abuse claims for SEVEN years",
+      "url": "https://www.dailymail.com/news/article-16236071/Meghan-Markles-father-Thomas-admits-paid-sex-Far-East-Im-no-child-abuser.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
+      "link": "https://www.dailymail.com/news/article-16236071/Meghan-Markles-father-Thomas-admits-paid-sex-Far-East-Im-no-child-abuser.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
+      "excerpt": "Thomas Markle has vowed to 'do whatever it takes' to clear his name after being accused of sickening child sex crimes.",
+      "summary": "Thomas Markle has vowed to 'do whatever it takes' to clear his name after being accused of sickening child sex crimes.",
+      "relative_time": "Sun, 25 Oct 2026 11:55:00 GMT",
+      "published": "Sun, 25 Oct 2026 11:55:00 GMT",
       "author": "Daily Mail UK",
       "feed": "Daily Mail UK",
       "feedName": "Daily Mail UK",
@@ -807,39 +807,39 @@
       "category": "Global",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://i.dailymail.com/1s/2026/10/24/21/112072043-0-image-a-6_1792873219531.jpg",
-      "scraped_at": "2026-10-25T10:40:50.437877+00:00"
+      "imageUrl": "https://i.dailymail.com/1s/2026/10/24/21/112072029-0-image-a-18_1792872905344.jpg",
+      "scraped_at": "2026-10-25T12:37:26.630661+00:00"
     },
     {
-      "id": "164621eba2e1",
-      "headline": "NFL Week 7 predictions, best bets: Picks against the spread for every game",
-      "title": "NFL Week 7 predictions, best bets: Picks against the spread for every game",
-      "url": "https://nypost.com/2026/10/25/betting/nfl-week-7-predictions-best-bets-picks-against-the-spread-for-every-game-2/",
-      "link": "https://nypost.com/2026/10/25/betting/nfl-week-7-predictions-best-bets-picks-against-the-spread-for-every-game-2/",
-      "excerpt": "Dave Blezow shares his picks for every game in Week 7.",
-      "summary": "Dave Blezow shares his picks for every game in Week 7.",
-      "relative_time": "Sun, 25 Oct 2026 06:00:00 -0400",
-      "published": "Sun, 25 Oct 2026 06:00:00 -0400",
-      "author": "Michael Leboff",
+      "id": "303c360fa61a",
+      "headline": "Jets vs. Dolphins prediction, picks: Gang Green runs over hapless Dolphins in Week 7",
+      "title": "Jets vs. Dolphins prediction, picks: Gang Green runs over hapless Dolphins in Week 7",
+      "url": "https://nypost.com/2026/10/25/betting/jets-vs-dolphins-prediction-nfl-week-7-picks-best-bets-sunday/",
+      "link": "https://nypost.com/2026/10/25/betting/jets-vs-dolphins-prediction-nfl-week-7-picks-best-bets-sunday/",
+      "excerpt": "Must-win territory for the 2-4 Jets.",
+      "summary": "Must-win territory for the 2-4 Jets.",
+      "relative_time": "Sun, 25 Oct 2026 08:30:00 -0400",
+      "published": "Sun, 25 Oct 2026 08:30:00 -0400",
+      "author": "Erich Richter",
       "feed": "New York Post",
       "feedName": "New York Post",
       "feedId": "f35f2eec037f",
       "category": "Global",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F10%2Fnew-york-jets-quarterback-geno-145600861.jpg?quality%3D90%26strip%3Dall",
-      "scraped_at": "2026-10-25T10:40:51.333803+00:00"
+      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F10%2Fjets-dolphins-prediction.jpg?quality%3D90%26strip%3Dall",
+      "scraped_at": "2026-10-25T12:37:27.358485+00:00"
     },
     {
-      "id": "841584f9ab83",
-      "headline": "TV news hourly summary \u00b7 Oct 25, 10:03 UTC",
-      "title": "TV news hourly summary \u00b7 Oct 25, 10:03 UTC",
-      "url": "https://mastodon.archive.org/@tv/117500974453611664",
-      "link": "https://mastodon.archive.org/@tv/117500974453611664",
-      "excerpt": "France saw mass protests, with nearly 1,000 arrests. Serbia held a snap election, while Brazil\u2019s presidential runoff pitted Lula against Bolsonaro. Storm Babet brought amber warnings to the UK and gusts up to 85 mph. Israel\u2019s election was scheduled for Tuesday; US midterms were 10 days away, with Obama campaigning in Michigan and Ohio. Other stories included Ukraine\u2019s Starlink dispute, Meghan\u2019s claims about her father, and an Amy Winehouse tribute concert.",
-      "summary": "France saw mass protests, with nearly 1,000 arrests. Serbia held a snap election, while Brazil\u2019s presidential runoff pitted Lula against Bolsonaro. Storm Babet brought amber warnings to the UK and gusts up to 85 mph. Israel\u2019s election was scheduled for Tuesday; US midterms were 10 days away, with Obama campaigning in Michigan and Ohio. Other stories included Ukraine\u2019s Starlink dispute, Meghan\u2019s claims about her father, and an Amy Winehouse tribute concert.",
-      "relative_time": "Sun, 25 Oct 2026 10:03:03 +0000",
-      "published": "Sun, 25 Oct 2026 10:03:03 +0000",
+      "id": "dd4c1bd22c36",
+      "headline": "TV news hourly summary \u00b7 Oct 25, 12:03 UTC",
+      "title": "TV news hourly summary \u00b7 Oct 25, 12:03 UTC",
+      "url": "https://mastodon.archive.org/@tv/117501446429494247",
+      "link": "https://mastodon.archive.org/@tv/117501446429494247",
+      "excerpt": "Brazil held a presidential election, with Jair and Fl\u00e1vio Bolsonaro casting votes as Bolsonaro faced Lula in a runoff. Obama campaigned for Michigan Democrat Abdul El-Sayed and rallied voters in Ohio and Michigan; Trump warned of a \u201cradical left agenda.\u201d Protests spread across Europe, with about 410,000 people reported demonstrating in France and roughly 1,000 arrests. Storm Babet brought UK amber warnings and gusts up to 85 mph. UK leaders debated future EU ties.",
+      "summary": "Brazil held a presidential election, with Jair and Fl\u00e1vio Bolsonaro casting votes as Bolsonaro faced Lula in a runoff. Obama campaigned for Michigan Democrat Abdul El-Sayed and rallied voters in Ohio and Michigan; Trump warned of a \u201cradical left agenda.\u201d Protests spread across Europe, with about 410,000 people reported demonstrating in France and roughly 1,000 arrests. Storm Babet brought UK amber warnings and gusts up to 85 mph. UK leaders debated future EU ties.",
+      "relative_time": "Sun, 25 Oct 2026 12:03:05 +0000",
+      "published": "Sun, 25 Oct 2026 12:03:05 +0000",
       "author": "Internet Archive TV News",
       "feed": "Internet Archive TV News (hourly summary)",
       "feedName": "Internet Archive TV News (hourly summary)",
@@ -848,7 +848,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "",
-      "scraped_at": "2026-10-25T10:40:53.491218+00:00"
+      "scraped_at": "2026-10-25T12:37:29.873705+00:00"
     }
   ],
   "raw_summary": "### More than 1,300 arrested as clashes follow another day of mass protests across France\n**Source:** BBC World News  \n**Summary:** Hundreds of thousands of demonstrators took to the streets across France and several neighboring European countries during a day of widespread protests. Authorities reported over 1,300 arrests after violent clashes broke out between protesters and law enforcement. The arrests highlight an escalating wave of civil unrest over current socio-political issues in the region.  \n**Key Theme:** Civil Unrest\n\n---\n\n### Israel to close West Bank crossings on election day as crackdown escalates\n**Source:** BBC World News  \n**Summary:** The Israeli Defense Forces announced plans to close West Bank border crossings to Palestinian workers in the period leading up to and on Tuesday's election day. Officials cited security measures for the restrictions amid an escalating regional crackdown. The decision limits movement across border points during the national vote.  \n**Key Theme:** Security / Middle East\n\n---\n\n### Iranian army says it shot down US drone over Bandar Abbas, Tasnim reports - Reuters\n**Source:** Reuters Top News  \n**Summary:** The Iranian military reported shooting down an unmanned U.S. drone near the coastal city of Bandar Abbas, according to state news agency Tasnim. The claim highlights ongoing military friction between Iranian forces and the United States in the Persian Gulf region. U.S. officials have not immediately confirmed the loss of an aircraft.  \n**Key Theme:** Military Conflict\n\n---\n\n### Three people killed and 14 injured in Ukrainian attacks on Russia's Belgorod region, governor says - Reuters\n**Source:** Reuters Top News  \n**Summary:** Ukrainian strikes targeting Russia's border region of Belgorod resulted in three fatalities and 14 injuries, according to the regional governor. The strikes damaged local infrastructure and residential property in the area. The incident marks a continuation of cross-border shelling connected to the ongoing military conflict.  \n**Key Theme:** War / Regional Conflict\n\n---\n\n### Stunned witnesses detail EXACTLY what happened inside the football club 'Ladies Night' sex scandal rocking the sleepy Notswold town of Banbury - as it's revealed one middle-aged woman has been KICKED OUT by her partner\n**Source:** Daily Mail UK  \n**Summary:** A \"Ladies Night\" event at Banbury United FC's clubhouse triggered local public reaction after reports and video emerged showing explicit acts involving male models and attendees. Eyewitnesses detailed the events that took place during the weekend gathering. The fallout from the event has led to personal and administrative consequences for those involved.  \n**Key Theme:** Local Scandal\n\n---\n\n### EDEN CONFIDENTIAL: Vivienne Westwood son's fears over her last collection\n**Source:** Daily Mail UK  \n**Summary:** A dispute continues between the family of the late Dame Vivienne Westwood and the brand's management over the designer's final collection. Westwood's son expressed concerns regarding how her artistic legacy and unreleased works are being handled by the fashion house. The ongoing conflict emphasizes broader tensions regarding control over the brand's creative direction.  \n**Key Theme:** Fashion / Business Dispute\n\n---\n\n### NFL Week 7 predictions, best bets: Picks against the spread for every game\n**Source:** New York Post  \n**Summary:** Sports analyst Dave Blezow released detailed predictions and betting analyses for the upcoming Week 7 of the NFL season. The coverage features picks against the spread for every scheduled professional football game. The analysis aims to inform readers about team match-ups and point spread lines.  \n**Key Theme:** Sports Betting\n\n---\n\n### TV news hourly summary \u00b7 Oct 25, 10:03 UTC\n**Source:** Internet Archive TV News (hourly summary)  \n**Summary:** A global news summary captures major developments, including mass arrests during French protests, snap elections in Serbia, and political campaigning in the U.S. and Brazil. Severe weather updates highlighted high winds and amber warnings from Storm Babet in the UK. Additional segments covered international conflict updates regarding Ukraine and Middle East security developments.  \n**Key Theme:** Global News",
@@ -857,5 +857,6 @@
   "current_html_path": "output/current/index.html",
   "data_current_html_path": "data/current/index.html",
   "archive_html_path": "output/archive/2026-10-25/index.html",
-  "data_archive_html_path": "data/archive/2026-10-25/index.html"
+  "data_archive_html_path": "data/archive/2026-10-25/index.html",
+  "feed_hash": "147b5b816f8feb263bd934cabda72cac"
 }
