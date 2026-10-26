@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-10-26",
+    "timestamp": "2026-10-26T12:13:40.914013+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "Celebrations in Serbia after veteran ruler Vu\u010di\u0107 loses election to student-led protest movement",
+      "Venezuelan opposition leader Mar\u00eda Machado returns after months in exile",
+      "Meta launches $35 billion stock offering to fund AI expansion - Reuters",
+      "EXCLUSIVE: Ambani, Adani outlets among Indian publishers contesting Modi\u2019s privacy law - Reuters",
+      "Fight breaks out on Cornwall beach as family with small children ignore 80mph wind warnings to go boogie boarding during Storm Austen"
+    ],
+    "archive_html_path": "data/archive/2026-10-26/index.html",
+    "data_json_path": "data/archive/2026-10-26/data.json"
+  },
+  {
     "date": "2026-10-25",
     "timestamp": "2026-10-25T10:41:08.990258+00:00",
     "stories_count": 8,

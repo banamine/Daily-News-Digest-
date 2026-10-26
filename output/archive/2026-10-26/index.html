@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Intelligence Briefing – 2026-10-26</title>
+    <style>
+        :root {
+            --bg: #0f1115;
+            --card: #1a1d24;
+            --text: #e6e8ec;
+            --muted: #9ba1ad;
+            --accent: #3b82f6;
+            --border: #2a2e38;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; padding: 2rem 1rem; }
+        .container { max-width: 960px; margin: 0 auto; }
+        header { text-align: center; margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+        header h1 { font-size: 2.2rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 0.4rem; color: #ffffff; }
+        header .date { color: var(--accent); font-size: 1rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+        
+        .hero-image { width: 100%; border-radius: 16px; overflow: hidden; margin-bottom: 2.5rem; box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6); border: 1px solid var(--border); background: #0b0f19; }
+        
+        /* Flexible Photo Collage Component */
+        .collage-wrapper { position: relative; width: 100%; }
+        .collage-header-pill {
+            position: absolute; top: 14px; left: 14px; z-index: 10;
+            background: rgba(15, 23, 42, 0.88); backdrop-filter: blur(8px);
+            border: 1px solid rgba(56, 189, 248, 0.35); color: #38bdf8;
+            padding: 5px 12px; border-radius: 999px; font-size: 11px; font-weight: 800;
+            letter-spacing: 0.5px; display: flex; align-items: center; gap: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        }
+        .collage-container {
+            display: grid; gap: 8px; background: #090d16; padding: 8px; border-radius: 16px; min-height: 280px;
+        }
+        .collage-container.collage-count-1 { grid-template-columns: 1fr; grid-template-rows: 360px; }
+        .collage-container.collage-count-1 .hero-tile { grid-row: auto; }
+
+        .collage-container.collage-count-2 { grid-template-columns: 1fr 1fr; grid-template-rows: 320px; }
+        .collage-container.collage-count-2 .hero-tile { grid-row: auto; }
+
+        .collage-container.collage-count-3 { grid-template-columns: 1.6fr 1fr; grid-template-rows: 170px 170px; }
+        .collage-container.collage-count-3 .hero-tile { grid-row: span 2; }
+
+        .collage-container.collage-count-4 { grid-template-columns: 1.6fr 1fr 1fr; grid-template-rows: 170px 170px; }
+        .collage-container.collage-count-4 .hero-tile { grid-row: span 2; }
+        .collage-container.collage-count-4 .collage-tile:nth-child(4) { grid-column: span 2; }
+
+        .collage-container.collage-count-5 { grid-template-columns: 1.8fr 1fr 1fr; grid-template-rows: 180px 180px; }
+        .collage-container.collage-count-5 .hero-tile { grid-row: span 2; }
+
+        @media (max-width: 768px) {
+            .collage-container,
+            .collage-container.collage-count-2,
+            .collage-container.collage-count-3,
+            .collage-container.collage-count-4,
+            .collage-container.collage-count-5 {
+                grid-template-columns: 1fr; grid-template-rows: auto;
+            }
+            .collage-tile, .hero-tile { min-height: 180px; }
+        }
+        .collage-tile {
+            position: relative; border-radius: 10px; overflow: hidden; background: #131927;
+            border: 1px solid rgba(255, 255, 255, 0.08); transition: transform 0.3s ease;
+        }
+        .collage-tile.hero-tile { grid-row: span 2; }
+        .collage-tile img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
+        .collage-tile:hover img { transform: scale(1.06); }
+        .collage-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(to top, rgba(11, 15, 23, 0.95) 0%, rgba(11, 15, 23, 0.2) 60%, transparent 100%);
+            display: flex; flex-direction: column; justify-content: flex-end; padding: 12px;
+        }
+        .collage-badge {
+            align-self: flex-start; background: rgba(56, 189, 248, 0.2); color: #38bdf8;
+            border: 1px solid rgba(56, 189, 248, 0.4); font-size: 10px; font-weight: 700;
+            text-transform: uppercase; padding: 2px 8px; border-radius: 999px; margin-bottom: 6px;
+        }
+        .collage-badge.hero-badge { background: rgba(16, 185, 129, 0.2); color: #34d399; border-color: rgba(16, 185, 129, 0.4); }
+        .collage-title { color: #ffffff; font-size: 12px; font-weight: 700; line-height: 1.35; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        .hero-tile .collage-title { font-size: 17px; }
+
+        .stories { display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 3rem; }
+        .story { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem; }
+        .story h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: #f1f3f5; }
+        .story-body { color: var(--muted); font-size: 0.98rem; overflow-wrap: anywhere; word-break: break-word; }
+        .story h2, .mini-card h3, .mini-card p { overflow-wrap: anywhere; }
+        .container { min-width: 0; max-width: 100%; }
+        .section-title { font-size: 1.3rem; font-weight: 800; color: var(--accent); margin: 2rem 0 1rem; border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; }
+        .segmented-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
+        .mini-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+        .mini-card.scraped { border-left: 3px solid #8b5cf6; }
+        .mini-card.rss { border-left: 3px solid #3b82f6; }
+        .source-tag { font-size: 0.75rem; font-weight: bold; color: var(--accent); margin-bottom: 0.4rem; }
+        .mini-card h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.4rem; }
+        .mini-card h3 a { color: #f1f3f5; text-decoration: none; }
+        .mini-card h3 a:hover { text-decoration: underline; color: var(--accent); }
+        .mini-card p { font-size: 0.82rem; color: var(--muted); line-height: 1.4; }
+        footer { text-align: center; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="date">2026-10-26</div>
+            <h1>Daily Intelligence Briefing</h1>
+        </header>
+
+        <div class="hero-image">
+            
+                
+    <div class="collage-wrapper">
+        <div class="collage-header-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7"/><path d="M16 5h5v5"/><path d="m21 5-9 9"/></svg>
+            <span>Parsed Feeds Mixed Photo Collage (5 Photos)</span>
+        </div>
+        <div class="collage-container collage-count-5">
+            <div class="collage-tile hero-tile">
+                <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/f0c7/live/712973e0-d110-11f1-b441-2b33b063138f.jpg" alt="Celebrations in Serbia after veteran ruler Vučić loses election to student-led protest movement" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+                <div class="collage-overlay">
+                    <span class="collage-badge hero-badge">BBC World News</span>
+                    <h3 class="collage-title hero-title">Celebrations in Serbia after veteran ruler Vučić loses election to student-led protest movement</h3>
+                </div>
+            </div>
+            
+        <div class="collage-tile">
+            <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/4dcf/live/679d8fc0-d0a0-11f1-87fa-c1809f43a7a8.jpg" alt="Venezuelan opposition leader María Machado returns after months in exile" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">BBC World News</span>
+                <h4 class="collage-title">Venezuelan opposition leader María Machado returns after months in exile</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/1263/live/4ad06900-d12a-11f1-b441-2b33b063138f.jpg" alt="Australian murderer loses bid to eat Vegemite in prison" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">BBC World News</span>
+                <h4 class="collage-title">Australian murderer loses bid to eat Vegemite in prison</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Meta launches $35 billion stock offering to fund AI expansion - Reuters" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">Reuters Top News</span>
+                <h4 class="collage-title">Meta launches $35 billion stock offering to fund AI expansion - Reuters</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="EXCLUSIVE: Ambani, Adani outlets among Indian publishers contesting Modi’s privacy law - Reuters" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">Reuters Top News</span>
+                <h4 class="collage-title">EXCLUSIVE: Ambani, Adani outlets among Indian publishers contesting Modi’s privacy law - Reuters</h4>
+            </div>
+        </div>
+        
+        </div>
+    </div>
+    
+            
+        </div>
+
+        <main class="stories">
+            
+        <div class="story">
+            <h2>Celebrations in Serbia after veteran ruler Vučić loses election to student-led protest movement</h2>
+            <div class="story-body"><strong>Source:</strong> BBC World News<br><strong>Summary:</strong> The populist right-wing leader of 12 years says it is &quot;clear&quot; his party has lost the vote billed as a referendum on the country&#x27;s future....</div>
+        </div>
+        
+        <div class="story">
+            <h2>Venezuelan opposition leader María Machado returns after months in exile</h2>
+            <div class="story-body"><strong>Source:</strong> BBC World News<br><strong>Summary:</strong> Machado had left the country just a month before the US government seized Venezuelan President Nicolás Maduro....</div>
+        </div>
+        
+        <div class="story">
+            <h2>Meta launches $35 billion stock offering to fund AI expansion - Reuters</h2>
+            <div class="story-body"><strong>Source:</strong> Reuters Top News<br><strong>Summary:</strong> Meta launches $35 billion stock offering to fund AI expansion Reuters...</div>
+        </div>
+        
+        <div class="story">
+            <h2>EXCLUSIVE: Ambani, Adani outlets among Indian publishers contesting Modi’s privacy law - Reuters</h2>
+            <div class="story-body"><strong>Source:</strong> Reuters Top News<br><strong>Summary:</strong> EXCLUSIVE: Ambani, Adani outlets among Indian publishers contesting Modi’s privacy law Reuters...</div>
+        </div>
+        
+        <div class="story">
+            <h2>Fight breaks out on Cornwall beach as family with small children ignore 80mph wind warnings to go boogie boarding during Storm Austen</h2>
+            <div class="story-body"><strong>Source:</strong> Daily Mail UK<br><strong>Summary:</strong> Footage shows a father punching a man who warned him not to take his young family boogie boarding in the sea at a beach in Cornwall during storm Austen&#x27;s 80mph winds....</div>
+        </div>
+        
+        <div class="story">
+            <h2>Fury as Wetherspoons BANS veterans from entering if they&#x27;re wearing a poppy - as Gosport pub tells customers &#x27;it could be political&#x27;</h2>
+            <div class="story-body"><strong>Source:</strong> Daily Mail UK<br><strong>Summary:</strong> Members of the group were told to remove their poppies before entering The Star in Gosport, Hampshire, on Sunday afternoon....</div>
+        </div>
+        
+        <div class="story">
+            <h2>Dodgers’ loaded farm system is about to become a roster headache</h2>
+            <div class="story-body"><strong>Source:</strong> New York Post<br><strong>Summary:</strong> The Dodgers could have used a player like Miguel Vargas this year. Their lineup was starved for power at times and Vargas homered 31 times. Their team was old and Vargas was a 26-year-old All-Star. Here’s the irony: Just two years ago, the Dodgers ha...</div>
+        </div>
+        
+        <div class="story">
+            <h2>TV news hourly summary · Oct 26, 12:03 UTC</h2>
+            <div class="story-body"><strong>Source:</strong> Internet Archive TV News (hourly summary)<br><strong>Summary:</strong> Trump and Obama campaigned for rival candidates ahead of the midterms, as Trump defended the economy and faced criticism over anti-Muslim rhetoric and high gas prices. Harris campaigned for Democrats and said she is undecided about 2028. The DOJ’s ef...</div>
+        </div>
+        
+        </main>
+
+        
+        <div class='section-title'>Global &amp; Alternative RSS Feeds</div><div class='segmented-grid'>
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/articles/cw5yn3xlprpmo?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>Celebrations in Serbia after veteran ruler Vučić loses election to student-led protest movement</a></h3>
+                <p>The populist right-wing leader of 12 years says it is &quot;clear&quot; his party has lost the vote billed as a referendum on the country&#x27;s future....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/articles/cq8ez592pp0eo?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>Venezuelan opposition leader María Machado returns after months in exile</a></h3>
+                <p>Machado had left the country just a month before the US government seized Venezuelan President Nicolás Maduro....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/articles/cvwy7wz9x12go?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>Australian murderer loses bid to eat Vegemite in prison</a></h3>
+                <p>Andre McKechnie, who murdered a property developer, argued it was his right to enjoy Australian culture....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMiswFBVV95cUxPclhjOFJvYkM0S0hLUmxaY0l2X3hCdWI0N1prZlo2QXhXdmt5T0pNQVpFODVpYzgycWdZcHM2NkZ2LTdaMEVUVlpTXzVFUzc2ZEdVdlpTeThUVkZtc3V4cEFTelk5bDd2Z0dfRDFsb0dGQ0MxRXhYMExFZTlXVkNjRXF6TDBLalZ5ZTFBbFMyX24wMVBTQW1GQkJNRjNYWTRiVGJJWWdialBfV1oyQUZNN3I4RQ?oc=5' target='_blank' rel='noopener'>Meta launches $35 billion stock offering to fund AI expansion - Reuters</a></h3>
+                <p>Meta launches $35 billion stock offering to fund AI expansion Reuters...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMizAFBVV95cUxNanFza21ic1VNOTdSMzhhUTBrQVRqYVhhZWdxYUF5cTJueG9XSEV6NFg4aWc1ZnRHenhTdGtpdDhDdlJjUWFhUnlXN1pUckxqWjMxbENtZ2dNZjh6MHVwOEptMi04QW5WaVBJTUFoM1JMSUpQRENLVE5Ud0JYX3dCM2F6VHBRd2ZHVWkzSGU4VjhQdF9TRVR6RmlYZ05HV2JSVUxPbWN5UTVqNXBuS25OamFEVnVqV0l3Q1RlM2lteXM5MG5pallBZ0hxTW0?oc=5' target='_blank' rel='noopener'>EXCLUSIVE: Ambani, Adani outlets among Indian publishers contesting Modi’s privacy law - Reuters</a></h3>
+                <p>EXCLUSIVE: Ambani, Adani outlets among Indian publishers contesting Modi’s privacy law Reuters...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMitwFBVV95cUxNWDBXeHFlUjhKM2poLUxJVXp5S1RtbEYzVzdqeEU1d2YzNFpraU02SVhwTzVPUU9ERno4bElMZzdGQ1JJY2NraXMtRExidHpOOEtUZkVBaFk3Z2RxVjJhSHJELTFqdUx0SThqV3N5cGcwWUl2cUcxbTZrcHZBS0dXRU56MzNFTExhc0VzT1VvQUV1ejBQZlpONTgtcEFwNXRScTJVcXdGSHpmZkpXdVBsRDFGcy1wVzg?oc=5' target='_blank' rel='noopener'>After Vucic defeat, Serbia waits to see how student-backed leaders will govern - Reuters</a></h3>
+                <p>After Vucic defeat, Serbia waits to see how student-backed leaders will govern Reuters...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/news/article-16239059/Fight-Cornwall-beach-family-small-children-ignore-80mph-wind-warnings-boogie-boarding-Storm-Austen.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>Fight breaks out on Cornwall beach as family with small children ignore 80mph wind warnings to go boogie boarding during Storm Austen</a></h3>
+                <p>Footage shows a father punching a man who warned him not to take his young family boogie boarding in the sea at a beach in Cornwall during storm Austen&#x27;s 80mph winds....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/news/article-16238719/Fury-Wetherspoons-BANS-veterans-entering-theyre-wearing-poppy-Gosport-pub-tells-customers-political.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>Fury as Wetherspoons BANS veterans from entering if they&#x27;re wearing a poppy - as Gosport pub tells customers &#x27;it could be political&#x27;</a></h3>
+                <p>Members of the group were told to remove their poppies before entering The Star in Gosport, Hampshire, on Sunday afternoon....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/news/article-16238901/Football-club-president-ordered-demolish-24ft-eyesore-man-cave-garden-100-000-court-battle-neighbour.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>Football club president ordered to demolish 24ft &#x27;eyesore man cave&#x27; in his garden after £100,000 court battle with neighbour</a></h3>
+                <p>Justin Salmon upset neighbour Andrianna Neophytou after erecting what he has described as a &#x27;den&#x27; - featuring a TV, bar, plastered walls, carpeting, furniture and an electric doorbell....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>New York Post</div>
+                <h3><a href='https://nypost.com/2026/10/26/sports/dodgers-loaded-farm-system-is-about-to-become-a-roster-headache/' target='_blank' rel='noopener'>Dodgers’ loaded farm system is about to become a roster headache</a></h3>
+                <p>The Dodgers could have used a player like Miguel Vargas this year. Their lineup was starved for power at times and Vargas homered 31 times. Their team was old and Vargas was a 26-year-old All-Star. He...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>New York Post</div>
+                <h3><a href='https://decider.com/2026/10/26/movies-like-you-can-see-everything/' target='_blank' rel='noopener'>More Movies Like ‘You Can See Everything’: From ‘Musk’ to ‘O.J.: Made in America’</a></h3>
+                <p>The longest, wildest, and most epic documentaries ever made....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>New York Post</div>
+                <h3><a href='https://pagesix.com/2026/10/26/celebrity-news/abby-lee-miller-and-cathy-nesbitt-stein-reignite-dance-moms-rivalry-on-new-show-hit-the-8/' target='_blank' rel='noopener'>Abby Lee Miller and Cathy Nesbitt-Stein reignite ‘Dance Moms’ rivalry on new show ‘Hit the 8’</a></h3>
+                <p>Despite their complicated history, both women jumped at the opportunity to reunite after being approached by a former producer on &quot;Dance Moms.&quot;...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/president-trump-drops-1300-word-hammer-bill-maher/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=president-trump-drops-1300-word-hammer-bill-maher' target='_blank' rel='noopener'>President Trump Drops 1,300-Word HAMMER on Bill Maher After Second White House Dinner</a></h3>
+                <p>President Trump answered Bill Maher&#x27;s latest television attacks with a blistering 1,300-word Truth Social post after their second White House dinner....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/nicki-minaj-takes-stage-trump-then-makes-surprise/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=nicki-minaj-takes-stage-trump-then-makes-surprise' target='_blank' rel='noopener'>Nicki Minaj Takes the Stage With Trump — Then Makes a Surprise Promise About His Future</a></h3>
+                <p>Nicki Minaj joined President Trump onstage in Port Huron, delivered a full-throated endorsement and ended with a surprise promise about his future....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/justr-crash-leaves-alaska-democrat-senate-hopeful/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=justr-crash-leaves-alaska-democrat-senate-hopeful' target='_blank' rel='noopener'>JUST IN: Car Crash Leaves Alaska Democrat Senate Hopeful Mary Peltola Injured</a></h3>
+                <p>Mary Peltola and members of her family suffered minor injuries after another driver struck their vehicle. Two Alaska campaign stops have been rescheduled....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/10/26/the-anti-trump-left-has-descended-into-a-persistent-hallucinatory-state/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=the-anti-trump-left-has-descended-into-a-persistent-hallucinatory-state' target='_blank' rel='noopener'>The Anti-Trump Left Has Descended Into A Persistent Hallucinatory State</a></h3>
+                <p>The relentless handwringing and panic-mongering is literally unreal: It invents an American past that never existed, then laments its fake loss....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/10/26/to-divorce-proof-your-marriage-and-boost-your-happiness-go-to-church-often/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=to-divorce-proof-your-marriage-and-boost-your-happiness-go-to-church-often' target='_blank' rel='noopener'>To Divorce-Proof Your Marriage And Boost Your Happiness, Go To Church Often</a></h3>
+                <p>Only half of Americans say shared religious values are important to marriage. New data shows those who don’t think so are wrong....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/10/25/nyt-investigating-omar-is-authoritarian-but-prosecuting-trump-is-accountability/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=nyt-investigating-omar-is-authoritarian-but-prosecuting-trump-is-accountability' target='_blank' rel='noopener'>NYT: Investigating Omar Is ‘Authoritarian,’ But Prosecuting Trump Is ‘Accountability’</a></h3>
+                <p>Notably, the editorial board acknowledges it has no idea whether the allegations &#x27;have merit.&#x27;...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/tech/the-x-subscription-launch' target='_blank' rel='noopener'>Elon Musk just granted huge new perks to X subscribers — just don&#x27;t give Grok your credit card</a></h3>
+                <p>The subscription options on X have evolved a lot since they launched in late 2022 , then under the Twitter Blue name. Originally, they gave users longer posts and boosted their algorithmic reach, amon...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/news/meet-the-former-oil-trader-smuggling-the-green-agenda-into-the-republican-party' target='_blank' rel='noopener'>Meet the former oil trader smuggling the green agenda into the Republican Party</a></h3>
+                <p>John Arnold has been busy since leaving Enron. His money has fueled research into probation leniency decried as &quot; pro-criminal .&quot; In other states, Arnold backs nominally conservative energy ...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/shows/the-auron-macintyre-show/democrats-want-to-bankrupt-trump-allies-and-scare-off-the-next-generation-of-conservatives' target='_blank' rel='noopener'>Democrats want to bankrupt Trump allies — and scare off the next generation of conservatives</a></h3>
+                <p>Is the goal of prosecuting political opponents to punish the people in power — or to scare everyone else away from serving them? The latter is the disturbing implication in Michigan Democratic Sen. El...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/david-strom/2026/10/26/ag-blanche-spent-sunday-forced-to-deny-he-plans-to-commit-nonexistent-crimes-n3820309' target='_blank' rel='noopener'>AG Blanche Spent Sunday Forced to Deny He Plans to Commit Nonexistent Crimes.</a></h3>
+                <p>AG Blanche Spent Sunday Forced to Deny He Plans to Commit Nonexistent Crimes....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/headlines/2026/10/26/think-europes-chaos-cant-happen-here-its-already-being-planned-n3820296' target='_blank' rel='noopener'>Think Europe’s Chaos Can’t Happen Here? It’s Already Being Planned</a></h3>
+                <p>Think Europe’s Chaos Can’t Happen Here? It’s Already Being Planned...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/headlines/2026/10/25/large-hearts-dispense-a-large-helping-of-kindness-n3820295' target='_blank' rel='noopener'>Large Hearts Dispense a Large Helping of Kindness</a></h3>
+                <p>Large Hearts Dispense a Large Helping of Kindness...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Judicial Watch</div>
+                <h3><a href='https://www.judicialwatch.org/victory-court-orders-cia-to-release-january-6-records/' target='_blank' rel='noopener'>Victory: Court Orders CIA to Release January 6 Records</a></h3>
+                <p>Victory: Court Orders CIA to Begin Producing January 6 Records Judicial Watch Sues for FBI’s ‘Rosetta Stone’ Report…...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Judicial Watch</div>
+                <h3><a href='https://www.judicialwatch.org/the-search-warrant-of-ilhan-omars-washington-d-c-residence-et-al-v-united-states-of-america-motion-for-extension-of-time/' target='_blank' rel='noopener'>Motion for Extension of Time in THE SEARCH WARRANT OF ILHAN OMAR’S WASHINGTON, D.C. RESIDENCE ...</a></h3>
+                <p>View the court filing by clicking the link below… CLICK HERE...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Judicial Watch</div>
+                <h3><a href='https://www.judicialwatch.org/judicial-watch-sues-for-fbis-2021-rosetta-stone-report-on-crossfire-hurricane/' target='_blank' rel='noopener'>Judicial Watch Sues for FBI’s 2021 ‘Rosetta Stone’ Report on Crossfire Hurricane</a></h3>
+                <p>(Washington, DC) – Judicial Watch announced today that it filed a Freedom of Information Act (FOIA) lawsuit against…...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/10/for-the-midterms-democrats-hate-president-trump-s-stunning-record/' target='_blank' rel='noopener'>For the Midterms, Democrats Hate President Trump’s Stunning Record!</a></h3>
+                <p>Photo Credit: Image: Gage Skidmore via Flickr , CC BY-SA 2.0 . Gage Skidmore By Joan Swirsky Unless Democrats succeed in rigging the upcoming midterm elections, Americans will continue to benefit and ...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/10/why-leftists-won-t-let-us-live/' target='_blank' rel='noopener'>Why Leftists Won’t Let Us Live</a></h3>
+                <p>Photo Credit: Image: Chris Dodds via Flickr , CC BY-SA 2.0 . Chris Dodds By J.B. Shurk Leftism cannot succeed unless everyone fails together....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/10/a-europe-united-in-infamy/' target='_blank' rel='noopener'>A Europe United In Infamy</a></h3>
+                <p>Photo Credit: AI for American Thinker By Evelyne Joslain The European Parliament’s insulting Trump statue exposes the continent’s political decadence....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMifEFVX3lxTE5sQ3M3ZTFkX19VVEFHSHNEX1BmTmZTZzlkemFnVUZfVjBja010TlFJTmIzaU1IU1BlZVRXRU1vemVIREhQeTNpZktjdEFjeGVCS0R3cXRrYVdkZ3VGRXBteUNHeTZ2UklaaWlpTnk5dEJSbF9wOWJvMFhRVjc?oc=5' target='_blank' rel='noopener'>Spot the Difference Daily- Play Now online &amp; 100% Free - The Epoch Times</a></h3>
+                <p>Spot the Difference Daily- Play Now online &amp; 100% Free The Epoch Times...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMiREFVX3lxTFBSU2dZLXZaX21HbzlKWGxkWnM1eEQwNEZ3VE4xUkJFWFJWSkJ3d0pSY2c4MTBKZXctUXdyWWdicWJQaklP?oc=5' target='_blank' rel='noopener'>The Epoch Times | Breaking News, Latest News, World News and Videos - The Epoch Times</a></h3>
+                <p>The Epoch Times | Breaking News, Latest News, World News and Videos The Epoch Times...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMinAFBVV95cUxNbnNNLXhyeHNpZkYycjUyeGlwcVgyS2pGWnpDQklPZ1c4NWU0U0M3ajljU0pmZ3oyOER3OV9nR2lZLWtWdUxnSy1xWHdiUW9Zb05YcE1BcFNDOFZkNzJxR2xYLXl4SHFESE44d29YYmpqYXhjVjF1ak5xS2QwaFNrazA5NWlEdUJ2ckVUdG5GallOZVlhaURfZlVZczM?oc=5' target='_blank' rel='noopener'>Judge Restricts DHS Election Investigations in 9 States - The Epoch Times</a></h3>
+                <p>Judge Restricts DHS Election Investigations in 9 States The Epoch Times...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Internet Archive TV News (hourly summary)</div>
+                <h3><a href='https://mastodon.archive.org/@tv/117507108722363303' target='_blank' rel='noopener'>TV news hourly summary · Oct 26, 12:03 UTC</a></h3>
+                <p>Trump and Obama campaigned for rival candidates ahead of the midterms, as Trump defended the economy and faced criticism over anti-Muslim rhetoric and high gas prices. Harris campaigned for Democrats ...</p>
+            </div>
+            </div>
+
+        <footer>
+            Automated Segmented Pipeline powered by HTML Scrapers, 11 Global RSS Feeds &amp; Google Gemini AI &bull; 2026-10-26
+        </footer>
+    </div>
+</body>
+</html>
