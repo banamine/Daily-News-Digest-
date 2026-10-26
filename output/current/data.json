@@ -1,17 +1,17 @@
 {
-  "last_updated": "2026-10-26T01:17:17.917276+00:00",
+  "last_updated": "2026-10-26T06:27:54.672231+00:00",
   "source": "https://www.alexjoneslive.com/",
   "date": "2026-10-26",
-  "stories_hash": "acec9384229dde9ab072f07b578e574e",
+  "stories_hash": "adcefa3397e1b5d98fd12196e9250900",
   "stories_count": 8,
   "scraped_articles_count": 0,
   "rss_articles_count": 34,
   "scraped_articles": [],
   "rss_feeds_articles": [
     {
-      "id": "943326d782ff",
-      "headline": "Elation across Serbia after veteran ruler Vu\u010di\u0107 concedes to student-led protest movement",
-      "title": "Elation across Serbia after veteran ruler Vu\u010di\u0107 concedes to student-led protest movement",
+      "id": "927b99c09c82",
+      "headline": "Celebrations in Serbia after veteran ruler Vu\u010di\u0107 loses election to student-led protest movement",
+      "title": "Celebrations in Serbia after veteran ruler Vu\u010di\u0107 loses election to student-led protest movement",
       "url": "https://www.bbc.co.uk/news/articles/cw5yn3xlprpmo?at_medium=RSS&at_campaign=rss",
       "link": "https://www.bbc.co.uk/news/articles/cw5yn3xlprpmo?at_medium=RSS&at_campaign=rss",
       "excerpt": "The populist right-wing leader of 12 years says it is \"clear\" his party has lost the vote billed as a referendum on the country's future.",
@@ -25,8 +25,28 @@
       "category": "Global",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/e676/live/8534e970-d0c8-11f1-b441-2b33b063138f.jpg",
-      "scraped_at": "2026-10-26T01:17:14.724498+00:00"
+      "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/a400/live/789d12b0-d0f9-11f1-93e1-3b657b665bcf.jpg",
+      "scraped_at": "2026-10-26T06:27:50.488090+00:00"
+    },
+    {
+      "id": "97f31d971dfa",
+      "headline": "Venezuelan opposition leader Mar\u00eda Machado returns after months in exile",
+      "title": "Venezuelan opposition leader Mar\u00eda Machado returns after months in exile",
+      "url": "https://www.bbc.co.uk/news/articles/cq8ez592pp0eo?at_medium=RSS&at_campaign=rss",
+      "link": "https://www.bbc.co.uk/news/articles/cq8ez592pp0eo?at_medium=RSS&at_campaign=rss",
+      "excerpt": "Machado had left the country just a month before the US government seized Venezuelan President Nicol\u00e1s Maduro.",
+      "summary": "Machado had left the country just a month before the US government seized Venezuelan President Nicol\u00e1s Maduro.",
+      "relative_time": "Mon, 26 Oct 2026 05:20:19 GMT",
+      "published": "Mon, 26 Oct 2026 05:20:19 GMT",
+      "author": "BBC World News",
+      "feed": "BBC World News",
+      "feedName": "BBC World News",
+      "feedId": "dd267a14f6bc",
+      "category": "Global",
+      "ingestionType": "rss",
+      "sourceGroup": "rss",
+      "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/a26f/live/3f12cea0-d0f8-11f1-b5b1-192f0fa11760.jpg",
+      "scraped_at": "2026-10-26T06:27:50.488137+00:00"
     },
     {
       "id": "f9cc8a284962",
@@ -46,38 +66,18 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/c38d/live/19e08ff0-d0a3-11f1-adbe-cd0eaeb0fff9.jpg",
-      "scraped_at": "2026-10-26T01:17:14.724531+00:00"
+      "scraped_at": "2026-10-26T06:27:50.488164+00:00"
     },
     {
-      "id": "97f31d971dfa",
-      "headline": "Venezuelan opposition leader Mar\u00eda Machado returns after months in exile",
-      "title": "Venezuelan opposition leader Mar\u00eda Machado returns after months in exile",
-      "url": "https://www.bbc.co.uk/news/articles/cq8ez592pp0eo?at_medium=RSS&at_campaign=rss",
-      "link": "https://www.bbc.co.uk/news/articles/cq8ez592pp0eo?at_medium=RSS&at_campaign=rss",
-      "excerpt": "Machado had left the country just a month before the US government seized Venezuelan President Nicol\u00e1s Maduro.",
-      "summary": "Machado had left the country just a month before the US government seized Venezuelan President Nicol\u00e1s Maduro.",
-      "relative_time": "Sun, 25 Oct 2026 23:33:14 GMT",
-      "published": "Sun, 25 Oct 2026 23:33:14 GMT",
-      "author": "BBC World News",
-      "feed": "BBC World News",
-      "feedName": "BBC World News",
-      "feedId": "dd267a14f6bc",
-      "category": "Global",
-      "ingestionType": "rss",
-      "sourceGroup": "rss",
-      "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/116f/live/8cce05e0-d096-11f1-b441-2b33b063138f.jpg",
-      "scraped_at": "2026-10-26T01:17:14.724573+00:00"
-    },
-    {
-      "id": "6e1c2e75e1c7",
-      "headline": "Brazil's Lula reelected president in runoff vote - Reuters",
-      "title": "Brazil's Lula reelected president in runoff vote - Reuters",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQejBZNU9pVW5mLWs3YVoyWE1CZm9YdVhFUld3WHZSaWJrWlJ1SVFJNDFnRG5FRVNnVEVkOGZVMmY2RHdlcU45bGluZFpTZ3FlcXdqZGtmYW5oajNpTnhpVWZlN2tIWnRBdWFBcW9CbjdEREFnLVQ3YnV5WDgxdE0xNlR2SExJWWkyZzIxSWtCa1ZwRmdFMHhlYUp5Yw?oc=5",
-      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQejBZNU9pVW5mLWs3YVoyWE1CZm9YdVhFUld3WHZSaWJrWlJ1SVFJNDFnRG5FRVNnVEVkOGZVMmY2RHdlcU45bGluZFpTZ3FlcXdqZGtmYW5oajNpTnhpVWZlN2tIWnRBdWFBcW9CbjdEREFnLVQ3YnV5WDgxdE0xNlR2SExJWWkyZzIxSWtCa1ZwRmdFMHhlYUp5Yw?oc=5",
-      "excerpt": "Brazil's Lula reelected president in runoff vote Reuters",
-      "summary": "Brazil's Lula reelected president in runoff vote Reuters",
-      "relative_time": "Mon, 26 Oct 2026 00:13:00 GMT",
-      "published": "Mon, 26 Oct 2026 00:13:00 GMT",
+      "id": "ddec7acdfe11",
+      "headline": "Jordan arrests three suspects in deadly church attack, state media says - Reuters",
+      "title": "Jordan arrests three suspects in deadly church attack, state media says - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOMHVaa0dtU1RzeGQ3ZEhYLUVIV1ZpY092c1JBdE9tVE5xbk8tNDZpbF9GZDkzdG9mUUxOaVV1ZjBvYnFCV1V5WVFsa19xdnp4Tmc5anppU1pVbGhwYjdyeE9ybGFnc0x0MDZHVHA2SndrNnRyQWdhZFlRQXJwREh0S042cG1SeHpjUHJaWnNkcHdMODMyeUNacDN4aGZob2hhcUYzM2tJdGVpNF9wRG8yc2tRUQ?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOMHVaa0dtU1RzeGQ3ZEhYLUVIV1ZpY092c1JBdE9tVE5xbk8tNDZpbF9GZDkzdG9mUUxOaVV1ZjBvYnFCV1V5WVFsa19xdnp4Tmc5anppU1pVbGhwYjdyeE9ybGFnc0x0MDZHVHA2SndrNnRyQWdhZFlRQXJwREh0S042cG1SeHpjUHJaWnNkcHdMODMyeUNacDN4aGZob2hhcUYzM2tJdGVpNF9wRG8yc2tRUQ?oc=5",
+      "excerpt": "Jordan arrests three suspects in deadly church attack, state media says Reuters",
+      "summary": "Jordan arrests three suspects in deadly church attack, state media says Reuters",
+      "relative_time": "Mon, 26 Oct 2026 03:35:00 GMT",
+      "published": "Mon, 26 Oct 2026 03:35:00 GMT",
       "author": "Reuters Top News",
       "feed": "Reuters Top News",
       "feedName": "Reuters Top News",
@@ -86,18 +86,18 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-26T01:17:14.920031+00:00"
+      "scraped_at": "2026-10-26T06:27:50.964422+00:00"
     },
     {
-      "id": "43bcf45815d9",
-      "headline": "Oil slips from near six-months highs despite supply concerns - Reuters",
-      "title": "Oil slips from near six-months highs despite supply concerns - Reuters",
-      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQb2J2QlNheno1OW9FdmN3RTJWVHF1RXdLX0VQSGlKSkZlZEtNTnFxU3FUd1Zab1FPME1felpOVl9oM1oyNXc0T2xkdDZhc0JfUVlSTFU4Vm9aYWRrd1BhQmw1QThZRDZHbEZZR3Y5UlhNaDlWWm8tbjU2bjVtaFRVM0VMcml2OXY4TUtxNXRZU2c3c0lC?oc=5",
-      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQb2J2QlNheno1OW9FdmN3RTJWVHF1RXdLX0VQSGlKSkZlZEtNTnFxU3FUd1Zab1FPME1felpOVl9oM1oyNXc0T2xkdDZhc0JfUVlSTFU4Vm9aYWRrd1BhQmw1QThZRDZHbEZZR3Y5UlhNaDlWWm8tbjU2bjVtaFRVM0VMcml2OXY4TUtxNXRZU2c3c0lC?oc=5",
-      "excerpt": "Oil slips from near six-months highs despite supply concerns Reuters",
-      "summary": "Oil slips from near six-months highs despite supply concerns Reuters",
-      "relative_time": "Sun, 25 Oct 2026 23:24:00 GMT",
-      "published": "Sun, 25 Oct 2026 23:24:00 GMT",
+      "id": "18ade9ce7bcf",
+      "headline": "Houthis say they attacked East-West oil pumping stations; No Saudi confirmation - Reuters",
+      "title": "Houthis say they attacked East-West oil pumping stations; No Saudi confirmation - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxORlYwOVl3Z1hlOFdacWVmeXZVNnVhejFlWDVOR0toczJ2MWNjT1FMRWZjVU0xd1hGaGtzNU9VcGdYSnR1Z2NVQjFfRVpKallEcEVuTzNweldmeEdYOE05UXFOejl1ekR1ZjlxUlhHT1NLa3J0cmZYWUxhSEs2eXNGb2xNNUJycVNWci1ZVzZUOXBSNGc0bzRJNWVTTnVlWHhXRlBrLWRTOV9HbmlJTmVfZk95N0FIQnBLQTlTa3N3eFBaVDJMWGptVU1VN3A?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxORlYwOVl3Z1hlOFdacWVmeXZVNnVhejFlWDVOR0toczJ2MWNjT1FMRWZjVU0xd1hGaGtzNU9VcGdYSnR1Z2NVQjFfRVpKallEcEVuTzNweldmeEdYOE05UXFOejl1ekR1ZjlxUlhHT1NLa3J0cmZYWUxhSEs2eXNGb2xNNUJycVNWci1ZVzZUOXBSNGc0bzRJNWVTTnVlWHhXRlBrLWRTOV9HbmlJTmVfZk95N0FIQnBLQTlTa3N3eFBaVDJMWGptVU1VN3A?oc=5",
+      "excerpt": "Houthis say they attacked East-West oil pumping stations; No Saudi confirmation Reuters",
+      "summary": "Houthis say they attacked East-West oil pumping stations; No Saudi confirmation Reuters",
+      "relative_time": "Mon, 26 Oct 2026 03:48:00 GMT",
+      "published": "Mon, 26 Oct 2026 03:48:00 GMT",
       "author": "Reuters Top News",
       "feed": "Reuters Top News",
       "feedName": "Reuters Top News",
@@ -106,18 +106,18 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-26T01:17:14.920069+00:00"
+      "scraped_at": "2026-10-26T06:27:50.964468+00:00"
     },
     {
-      "id": "4609db40c2e4",
-      "headline": "Reactions to election victory of Serbia's Student List - Reuters",
-      "title": "Reactions to election victory of Serbia's Student List - Reuters",
-      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNZFFtSkZDaktTdnFfWEY2d3JHRlVJbU1GT2cyN054TmtlWXd0VmNha1B6NHp4M2l4Wjd5T2hTaVFuNGxJZllacHFKbkR1THpqYktzYUZkQ3VENDNCdjRjSHVoUUZrOHBkbUM3dVc1NGZaR2ZJTWtlU0ZjREV0QkJ3cENMc2ZONXp5Qng1NzRsdzEwMlk?oc=5",
-      "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNZFFtSkZDaktTdnFfWEY2d3JHRlVJbU1GT2cyN054TmtlWXd0VmNha1B6NHp4M2l4Wjd5T2hTaVFuNGxJZllacHFKbkR1THpqYktzYUZkQ3VENDNCdjRjSHVoUUZrOHBkbUM3dVc1NGZaR2ZJTWtlU0ZjREV0QkJ3cENMc2ZONXp5Qng1NzRsdzEwMlk?oc=5",
-      "excerpt": "Reactions to election victory of Serbia's Student List Reuters",
-      "summary": "Reactions to election victory of Serbia's Student List Reuters",
-      "relative_time": "Sun, 25 Oct 2026 23:51:58 GMT",
-      "published": "Sun, 25 Oct 2026 23:51:58 GMT",
+      "id": "42b6612ee941",
+      "headline": "Top officials from Mecca pact countries to meet Iranian officials in Tehran on Monday, two sources say - Reuters",
+      "title": "Top officials from Mecca pact countries to meet Iranian officials in Tehran on Monday, two sources say - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxORnpERmd3Z1pYM2xFeTBMOEVnY21scU00QlNJOTdFdE5wbFhmcjdQU1ljTk9vWlJmd1JKdDRvT1p1LVZLT2hpM3h4UmVKYTRhTkJnVmJKZFhkRmFuUF9CZzA1YXNON1VmQ0ZOODVVTkJDZndUUzUzRUxEZmdDa2YyZlA4N1IyVGVCaVlNN2lGRnVXZWxQeTVlYTZnMmRJOHhrRGxYVTFNSXNEZTZfOGhWRGQ4RVlGSWNyTXZoSi1Zb1N0VW1EODBSdFBn?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxORnpERmd3Z1pYM2xFeTBMOEVnY21scU00QlNJOTdFdE5wbFhmcjdQU1ljTk9vWlJmd1JKdDRvT1p1LVZLT2hpM3h4UmVKYTRhTkJnVmJKZFhkRmFuUF9CZzA1YXNON1VmQ0ZOODVVTkJDZndUUzUzRUxEZmdDa2YyZlA4N1IyVGVCaVlNN2lGRnVXZWxQeTVlYTZnMmRJOHhrRGxYVTFNSXNEZTZfOGhWRGQ4RVlGSWNyTXZoSi1Zb1N0VW1EODBSdFBn?oc=5",
+      "excerpt": "Top officials from Mecca pact countries to meet Iranian officials in Tehran on Monday, two sources say Reuters",
+      "summary": "Top officials from Mecca pact countries to meet Iranian officials in Tehran on Monday, two sources say Reuters",
+      "relative_time": "Mon, 26 Oct 2026 03:20:00 GMT",
+      "published": "Mon, 26 Oct 2026 03:20:00 GMT",
       "author": "Reuters Top News",
       "feed": "Reuters Top News",
       "feedName": "Reuters Top News",
@@ -126,18 +126,18 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-26T01:17:14.920090+00:00"
+      "scraped_at": "2026-10-26T06:27:50.964509+00:00"
     },
     {
-      "id": "00e5ffe7f174",
-      "headline": "Angela Rayner signals Shabana Mahmood will weaken Labour's immigration crackdown after she led revolt against 'un-British' reforms",
-      "title": "Angela Rayner signals Shabana Mahmood will weaken Labour's immigration crackdown after she led revolt against 'un-British' reforms",
-      "url": "https://www.dailymail.com/news/article-16237087/Angela-Rayner-signals-Shabana-Mahmood-weaken-Labours-immigration-crackdown-led-revolt-against-British-reforms.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
-      "link": "https://www.dailymail.com/news/article-16237087/Angela-Rayner-signals-Shabana-Mahmood-weaken-Labours-immigration-crackdown-led-revolt-against-British-reforms.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
-      "excerpt": "Ms Mahmood, the Home Secretary, has fronted plans to make migrant workers wait longer before they can settle in Britain permanently.",
-      "summary": "Ms Mahmood, the Home Secretary, has fronted plans to make migrant workers wait longer before they can settle in Britain permanently.",
-      "relative_time": "Mon, 26 Oct 2026 00:44:02 GMT",
-      "published": "Mon, 26 Oct 2026 00:44:02 GMT",
+      "id": "749c3ac2de56",
+      "headline": "Inside 'devastated' Natasha Kaplinsky's magnificent nine-bedroom country estate on the market for \u00a37million as her 20-year marriage ends in divorce",
+      "title": "Inside 'devastated' Natasha Kaplinsky's magnificent nine-bedroom country estate on the market for \u00a37million as her 20-year marriage ends in divorce",
+      "url": "https://www.dailymail.com/tvshowbiz/article-16232831/Inside-devastated-Natasha-Kaplinskys-magnificant-nine-bedroom-country-estate.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
+      "link": "https://www.dailymail.com/tvshowbiz/article-16232831/Inside-devastated-Natasha-Kaplinskys-magnificant-nine-bedroom-country-estate.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
+      "excerpt": "The foremr newsreader is said to be devastated by the end of her marriage to financier Justin Bower - and now she is saying goodbyre to their East Sussex farmhouse too.",
+      "summary": "The foremr newsreader is said to be devastated by the end of her marriage to financier Justin Bower - and now she is saying goodbyre to their East Sussex farmhouse too.",
+      "relative_time": "Mon, 26 Oct 2026 06:13:36 GMT",
+      "published": "Mon, 26 Oct 2026 06:13:36 GMT",
       "author": "Daily Mail UK",
       "feed": "Daily Mail UK",
       "feedName": "Daily Mail UK",
@@ -145,19 +145,19 @@
       "category": "Global",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://i.dailymail.com/1s/2026/10/25/11/112078277-0-image-a-2_1792928694517.jpg",
-      "scraped_at": "2026-10-26T01:17:15.508088+00:00"
+      "imageUrl": "https://i.dailymail.com/1s/2026/10/23/16/112053631-0-image-a-51_1792770417606.jpg",
+      "scraped_at": "2026-10-26T06:27:51.553386+00:00"
     },
     {
-      "id": "3aea7e69c0a5",
-      "headline": "William and Kate share new family photo from Princess of Wales's Three Peaks Challenge - as they thank volunteers for their vital work on Mountain Rescue Awareness Day",
-      "title": "William and Kate share new family photo from Princess of Wales's Three Peaks Challenge - as they thank volunteers for their vital work on Mountain Rescue Awareness Day",
-      "url": "https://www.dailymail.com/news/royals/article-16237085/William-Kate-family-photo-Three-Peaks-Challenge.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
-      "link": "https://www.dailymail.com/news/royals/article-16237085/William-Kate-family-photo-Three-Peaks-Challenge.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
-      "excerpt": "Posted to Instagram this morning, the image shows the Wales family and others following Kate's mountain-climbing expedition in June.",
-      "summary": "Posted to Instagram this morning, the image shows the Wales family and others following Kate's mountain-climbing expedition in June.",
-      "relative_time": "Sun, 25 Oct 2026 23:18:49 GMT",
-      "published": "Sun, 25 Oct 2026 23:18:49 GMT",
+      "id": "7108fae837fc",
+      "headline": "Trump vows to make Abdul El- Sayed go through metal detectors in Senate if he wins",
+      "title": "Trump vows to make Abdul El- Sayed go through metal detectors in Senate if he wins",
+      "url": "https://www.dailymail.com/news/article-16237749/Trump-Muslim-jihadist-Abdul-El-Sayed-metal-detector-Senate.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
+      "link": "https://www.dailymail.com/news/article-16237749/Trump-Muslim-jihadist-Abdul-El-Sayed-metal-detector-Senate.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
+      "excerpt": "Trump arrived on stage in Port Huron, Michigan, on Sunday afternoon to rally for the Republican cause with less than two weeks to go before the midterms.",
+      "summary": "Trump arrived on stage in Port Huron, Michigan, on Sunday afternoon to rally for the Republican cause with less than two weeks to go before the midterms.",
+      "relative_time": "Mon, 26 Oct 2026 05:59:35 GMT",
+      "published": "Mon, 26 Oct 2026 05:59:35 GMT",
       "author": "Daily Mail UK",
       "feed": "Daily Mail UK",
       "feedName": "Daily Mail UK",
@@ -165,19 +165,19 @@
       "category": "Global",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://i.dailymail.com/1s/2026/10/25/12/112078813-0-image-a-8_1792931595244.jpg",
-      "scraped_at": "2026-10-26T01:17:15.508139+00:00"
+      "imageUrl": "https://i.dailymail.com/1s/2026/10/25/20/112084125-0-image-a-6_1792961817173.jpg",
+      "scraped_at": "2026-10-26T06:27:51.553437+00:00"
     },
     {
-      "id": "b1966f3a32d6",
-      "headline": "Clash of the presidents: Obama and Trump lock horns in explosive midterm showdown as savage barbs fly and campaign battle reaches fever pitch",
-      "title": "Clash of the presidents: Obama and Trump lock horns in explosive midterm showdown as savage barbs fly and campaign battle reaches fever pitch",
-      "url": "https://www.dailymail.com/news/article-16236391/Barack-Obama-tears-Trump-fiery-campaign-trail-attack-former-president-takes-Ohio-midterm-elections.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
-      "link": "https://www.dailymail.com/news/article-16236391/Barack-Obama-tears-Trump-fiery-campaign-trail-attack-former-president-takes-Ohio-midterm-elections.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
-      "excerpt": "Barack Obama and Donald Trump traded savage insults on the campaign trail, with Obama mocking Trump's lavish White House renovations and accusing him of enriching himself.",
-      "summary": "Barack Obama and Donald Trump traded savage insults on the campaign trail, with Obama mocking Trump's lavish White House renovations and accusing him of enriching himself.",
-      "relative_time": "Sun, 25 Oct 2026 22:02:31 GMT",
-      "published": "Sun, 25 Oct 2026 22:02:31 GMT",
+      "id": "5f7538287702",
+      "headline": "Subscribe to The Crime Desk for an exclusive bonus podcast analysing the key moments from week two of Russell Brand's rape trial",
+      "title": "Subscribe to The Crime Desk for an exclusive bonus podcast analysing the key moments from week two of Russell Brand's rape trial",
+      "url": "https://www.dailymail.com/crime-desk/article-16233045/russell-brand-trial-week-two-four-women-evidence-crime-desk-subscribe.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
+      "link": "https://www.dailymail.com/crime-desk/article-16233045/russell-brand-trial-week-two-four-women-evidence-crime-desk-subscribe.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
+      "excerpt": "Every week, the Daily Mail's award-winning Trial podcast team rounds up the key moments from Russell Brand's rape trial at Southwark Crown Court.",
+      "summary": "Every week, the Daily Mail's award-winning Trial podcast team rounds up the key moments from Russell Brand's rape trial at Southwark Crown Court.",
+      "relative_time": "Mon, 26 Oct 2026 04:00:59 GMT",
+      "published": "Mon, 26 Oct 2026 04:00:59 GMT",
       "author": "Daily Mail UK",
       "feed": "Daily Mail UK",
       "feedName": "Daily Mail UK",
@@ -185,68 +185,88 @@
       "category": "Global",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://i.dailymail.com/1s/2026/10/25/06/112076787-0-image-a-8_1792908283569.jpg",
-      "scraped_at": "2026-10-26T01:17:15.508173+00:00"
+      "imageUrl": "https://i.dailymail.com/1s/2026/10/19/11/111952059-0-image-a-8_1792405966996.jpg",
+      "scraped_at": "2026-10-26T06:27:51.553480+00:00"
     },
     {
-      "id": "3272546044a6",
-      "headline": "My plea to Spencer Pratt voters: Don\u2019t hand LA to socialists out of spite",
-      "title": "My plea to Spencer Pratt voters: Don\u2019t hand LA to socialists out of spite",
-      "url": "https://nypost.com/2026/10/25/opinion/my-plea-to-spencer-pratt-voters-dont-hand-la-to-socialists/",
-      "link": "https://nypost.com/2026/10/25/opinion/my-plea-to-spencer-pratt-voters-dont-hand-la-to-socialists/",
-      "excerpt": "If you voted for Spencer because you wanted LA to stop getting worse, don\u2019t hand the city to the people who would make it worse faster. On Election Day, vote for Karen Bass.",
-      "summary": "If you voted for Spencer because you wanted LA to stop getting worse, don\u2019t hand the city to the people who would make it worse faster. On Election Day, vote for Karen Bass.",
-      "relative_time": "Sun, 25 Oct 2026 21:09:37 -0400",
-      "published": "Sun, 25 Oct 2026 21:09:37 -0400",
-      "author": "Shervin Natan",
+      "id": "7553f5887e1b",
+      "headline": "Firehouse Subs co-founder dies after building beloved American sandwich chain with brother",
+      "title": "Firehouse Subs co-founder dies after building beloved American sandwich chain with brother",
+      "url": "https://nypost.com/2026/10/26/us-news/firehouse-subs-co-founder-chris-sorensen-dies-after-building-beloved-american-sandwich-chain-with-brother/",
+      "link": "https://nypost.com/2026/10/26/us-news/firehouse-subs-co-founder-chris-sorensen-dies-after-building-beloved-american-sandwich-chain-with-brother/",
+      "excerpt": "The former firefighter and professional guitarist left a legacy of philanthropy and 1,200 restaurant locations nationwide.",
+      "summary": "The former firefighter and professional guitarist left a legacy of philanthropy and 1,200 restaurant locations nationwide.",
+      "relative_time": "Mon, 26 Oct 2026 02:00:45 -0400",
+      "published": "Mon, 26 Oct 2026 02:00:45 -0400",
+      "author": "Fox News",
       "feed": "New York Post",
       "feedName": "New York Post",
       "feedId": "f35f2eec037f",
       "category": "Global",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F10%2FLELA_CAPOST_053026_23.jpg?w%3D1024",
-      "scraped_at": "2026-10-26T01:17:15.629036+00:00"
+      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F10%2Ffirehouse-subs-co-founder-dies-146516740.jpg?w%3D747",
+      "scraped_at": "2026-10-26T06:27:52.313513+00:00"
     },
     {
-      "id": "7eada4947a40",
-      "headline": "Islanders see how far they have to go with key deficiency exposed in eye-opening loss to Stars",
-      "title": "Islanders see how far they have to go with key deficiency exposed in eye-opening loss to Stars",
-      "url": "https://nypost.com/2026/10/25/sports/stars-remind-islanders-how-far-they-have-to-go-in-loss/",
-      "link": "https://nypost.com/2026/10/25/sports/stars-remind-islanders-how-far-they-have-to-go-in-loss/",
-      "excerpt": "That will put a halt on the Islanders\u2019 fledgling momentum.",
-      "summary": "That will put a halt on the Islanders\u2019 fledgling momentum.",
-      "relative_time": "Sun, 25 Oct 2026 20:59:47 -0400",
-      "published": "Sun, 25 Oct 2026 20:59:47 -0400",
-      "author": "Ethan Sears",
+      "id": "74ee6deb5725",
+      "headline": "Florida man convicted of stealing over $760k worth of Tiffany\u2019s jewelry he swallowed",
+      "title": "Florida man convicted of stealing over $760k worth of Tiffany\u2019s jewelry he swallowed",
+      "url": "https://nypost.com/2026/10/26/us-news/florida-man-convicted-of-stealing-over-760k-worth-of-tiffanys-jewelry-he-swallowed/",
+      "link": "https://nypost.com/2026/10/26/us-news/florida-man-convicted-of-stealing-over-760k-worth-of-tiffanys-jewelry-he-swallowed/",
+      "excerpt": "While in jail, he \u201cspontaneously\u201d asked staff if he was going to be charged \u201cwith what\u2019s in my stomach,\u201d according to an arrest report.",
+      "summary": "While in jail, he \u201cspontaneously\u201d asked staff if he was going to be charged \u201cwith what\u2019s in my stomach,\u201d according to an arrest report.",
+      "relative_time": "Mon, 26 Oct 2026 01:07:26 -0400",
+      "published": "Mon, 26 Oct 2026 01:07:26 -0400",
+      "author": "Zoe Hussain",
       "feed": "New York Post",
       "feedName": "New York Post",
       "feedId": "f35f2eec037f",
       "category": "Global",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F10%2Fjake-oettinger-29-dallas-stars-146497326.jpg?w%3D1024",
-      "scraped_at": "2026-10-26T01:17:15.629076+00:00"
+      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F10%2F2025-jaythan-lawrence-gilder-32-146514126.jpg?w%3D941",
+      "scraped_at": "2026-10-26T06:27:52.313572+00:00"
     },
     {
-      "id": "0e1a86ea5dc9",
-      "headline": "Kyle Shanahan has no answers for 49ers\u2019 kicking mess as bye week arrives",
-      "title": "Kyle Shanahan has no answers for 49ers\u2019 kicking mess as bye week arrives",
-      "url": "https://nypost.com/2026/10/25/sports/kyle-shanahan-has-no-answers-for-49ers-kicking-mess-as-bye-week-arrives/",
-      "link": "https://nypost.com/2026/10/25/sports/kyle-shanahan-has-no-answers-for-49ers-kicking-mess-as-bye-week-arrives/",
-      "excerpt": "Kyle Shanahan and the San Francisco 49ers have a special teams problem. Particularly at the kicker position. After the 49ers\u2019 26-20 loss to the Atlanta Falcons on Sunday, Shanahan said he doesn\u2019t know if the team will work out other kicking options during the team\u2019s bye week. Kyle Shanahan admits the 49ers have a kicker...",
-      "summary": "Kyle Shanahan and the San Francisco 49ers have a special teams problem. Particularly at the kicker position. After the 49ers\u2019 26-20 loss to the Atlanta Falcons on Sunday, Shanahan said he doesn\u2019t know if the team will work out other kicking options during the team\u2019s bye week. Kyle Shanahan admits the 49ers have a kicker...",
-      "relative_time": "Sun, 25 Oct 2026 20:56:33 -0400",
-      "published": "Sun, 25 Oct 2026 20:56:33 -0400",
-      "author": "Thomas L. Murray",
+      "id": "b9f9e59fbf26",
+      "headline": "Rangers bracing to welcome a couple of old pals back to the Garden with Kings",
+      "title": "Rangers bracing to welcome a couple of old pals back to the Garden with Kings",
+      "url": "https://nypost.com/2026/10/26/sports/rangers-bracing-to-welcome-laviolette-panarin-back-to-msg/",
+      "link": "https://nypost.com/2026/10/26/sports/rangers-bracing-to-welcome-laviolette-panarin-back-to-msg/",
+      "excerpt": "The next test for the Rangers\u2019 perfect home record \u2014 the next possibility to play spoiler to a start nearing the point of being a historic one \u2014 will involve a pair of Garden returns.",
+      "summary": "The next test for the Rangers\u2019 perfect home record \u2014 the next possibility to play spoiler to a start nearing the point of being a historic one \u2014 will involve a pair of Garden returns.",
+      "relative_time": "Mon, 26 Oct 2026 00:41:27 -0400",
+      "published": "Mon, 26 Oct 2026 00:41:27 -0400",
+      "author": "Andrew Crane",
       "feed": "New York Post",
       "feedName": "New York Post",
       "feedId": "f35f2eec037f",
       "category": "Global",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F10%2FMT1USATODAY30185638-835097602-3.jpg?w%3D1024",
-      "scraped_at": "2026-10-26T01:17:15.629126+00:00"
+      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F10%2Fartemi-panarin-10-los-angeles-146359391.jpg?w%3D1024",
+      "scraped_at": "2026-10-26T06:27:52.313618+00:00"
+    },
+    {
+      "id": "71bc8dae1001",
+      "headline": "President Trump Drops 1,300-Word HAMMER on Bill Maher After Second White House Dinner",
+      "title": "President Trump Drops 1,300-Word HAMMER on Bill Maher After Second White House Dinner",
+      "url": "https://100percentfedup.com/president-trump-drops-1300-word-hammer-bill-maher/?utm_source=rss&utm_medium=rss&utm_campaign=president-trump-drops-1300-word-hammer-bill-maher",
+      "link": "https://100percentfedup.com/president-trump-drops-1300-word-hammer-bill-maher/?utm_source=rss&utm_medium=rss&utm_campaign=president-trump-drops-1300-word-hammer-bill-maher",
+      "excerpt": "President Trump answered Bill Maher's latest television attacks with a blistering 1,300-word Truth Social post after their second White House dinner.",
+      "summary": "President Trump answered Bill Maher's latest television attacks with a blistering 1,300-word Truth Social post after their second White House dinner.",
+      "relative_time": "Mon, 26 Oct 2026 01:40:00 +0000",
+      "published": "Mon, 26 Oct 2026 01:40:00 +0000",
+      "author": "Jack",
+      "feed": "100% Fed Up",
+      "feedName": "100% Fed Up",
+      "feedId": "fa340e6e9ab1",
+      "category": "Alternative",
+      "ingestionType": "rss",
+      "sourceGroup": "rss",
+      "imageUrl": "https://100percentfedup.com/wp-content/uploads/2026/10/trump-bill-maher-white-house-dinner-20261025.jpg",
+      "scraped_at": "2026-10-26T06:27:52.594121+00:00"
     },
     {
       "id": "257ef0f4288c",
@@ -266,7 +286,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://100percentfedup.com/wp-content/uploads/2026/10/nicki-minaj-featured-1600x900-1.jpg",
-      "scraped_at": "2026-10-26T01:17:15.913359+00:00"
+      "scraped_at": "2026-10-26T06:27:52.594189+00:00"
     },
     {
       "id": "5ed361406229",
@@ -286,27 +306,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://100percentfedup.com/wp-content/uploads/2026/10/mary-peltola-public-domain-enhanced-1600x900-1.jpg",
-      "scraped_at": "2026-10-26T01:17:15.913405+00:00"
-    },
-    {
-      "id": "a1895f34c10d",
-      "headline": "VIDEO: CNN Hits Democrats With a Midterm Polling Reality Check",
-      "title": "VIDEO: CNN Hits Democrats With a Midterm Polling Reality Check",
-      "url": "https://100percentfedup.com/cnn-democrats-midterm-polling-reality-check/?utm_source=rss&utm_medium=rss&utm_campaign=cnn-democrats-midterm-polling-reality-check",
-      "link": "https://100percentfedup.com/cnn-democrats-midterm-polling-reality-check/?utm_source=rss&utm_medium=rss&utm_campaign=cnn-democrats-midterm-polling-reality-check",
-      "excerpt": "CNN's Harry Enten says Republicans have historically beaten Senate polling averages by 4.1 points in Trump-won states\u2014a gap that could decide control.",
-      "summary": "CNN's Harry Enten says Republicans have historically beaten Senate polling averages by 4.1 points in Trump-won states\u2014a gap that could decide control.",
-      "relative_time": "Sun, 25 Oct 2026 21:19:17 +0000",
-      "published": "Sun, 25 Oct 2026 21:19:17 +0000",
-      "author": "Donald",
-      "feed": "100% Fed Up",
-      "feedName": "100% Fed Up",
-      "feedId": "fa340e6e9ab1",
-      "category": "Alternative",
-      "ingestionType": "rss",
-      "sourceGroup": "rss",
-      "imageUrl": "https://100percentfedup.com/wp-content/uploads/2026/10/trump-midterm-polls-enhanced-1600x900-1.jpg",
-      "scraped_at": "2026-10-26T01:17:15.913436+00:00"
+      "scraped_at": "2026-10-26T06:27:52.594230+00:00"
     },
     {
       "id": "05e8b29cef7f",
@@ -326,7 +326,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://thefederalist.com/wp-content/uploads/2026/10/Ilhan_Omar_01-e1792788904312-1200x675.jpg",
-      "scraped_at": "2026-10-26T01:17:16.054701+00:00"
+      "scraped_at": "2026-10-26T06:27:52.771197+00:00"
     },
     {
       "id": "518606dd88f2",
@@ -346,7 +346,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://thefederalist.com/wp-content/uploads/2026/10/Hunter-Biden-1200x675.png",
-      "scraped_at": "2026-10-26T01:17:16.054745+00:00"
+      "scraped_at": "2026-10-26T06:27:52.771248+00:00"
     },
     {
       "id": "6873ab85e6f0",
@@ -366,7 +366,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://thefederalist.com/wp-content/uploads/2026/10/IMG_0853-1-1200x675.jpeg",
-      "scraped_at": "2026-10-26T01:17:16.054772+00:00"
+      "scraped_at": "2026-10-26T06:27:52.771284+00:00"
     },
     {
       "id": "80bd4c839fae",
@@ -386,7 +386,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://www.theblaze.com/media-library/the-champagne-communists-who-sold-millennials-a-bill-of-goods.jpg?id=68515948&width=980",
-      "scraped_at": "2026-10-26T01:17:16.255473+00:00"
+      "scraped_at": "2026-10-26T06:27:53.008719+00:00"
     },
     {
       "id": "38715a831ed0",
@@ -406,7 +406,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://www.theblaze.com/media-library/image.jpg?id=68501247&width=980",
-      "scraped_at": "2026-10-26T01:17:16.255771+00:00"
+      "scraped_at": "2026-10-26T06:27:53.009172+00:00"
     },
     {
       "id": "c4d9721f4e5b",
@@ -426,7 +426,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://www.theblaze.com/media-library/they-fled-trumps-america-for-europe-now-they-want-to-come-home.jpg?id=68518486&width=980",
-      "scraped_at": "2026-10-26T01:17:16.256358+00:00"
+      "scraped_at": "2026-10-26T06:27:53.010090+00:00"
     },
     {
       "id": "c0b2735ceac8",
@@ -446,7 +446,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-26T01:17:16.427372+00:00"
+      "scraped_at": "2026-10-26T06:27:53.106542+00:00"
     },
     {
       "id": "35358f30bb84",
@@ -466,7 +466,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-26T01:17:16.427396+00:00"
+      "scraped_at": "2026-10-26T06:27:53.106569+00:00"
     },
     {
       "id": "5d634c690ef7",
@@ -486,7 +486,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-26T01:17:16.427418+00:00"
+      "scraped_at": "2026-10-26T06:27:53.106600+00:00"
     },
     {
       "id": "19b71ed26541",
@@ -506,7 +506,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-26T01:17:16.660917+00:00"
+      "scraped_at": "2026-10-26T06:27:53.410435+00:00"
     },
     {
       "id": "b604d1a1d732",
@@ -526,7 +526,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-26T01:17:16.660967+00:00"
+      "scraped_at": "2026-10-26T06:27:53.410498+00:00"
     },
     {
       "id": "b48c2e29c69e",
@@ -546,7 +546,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-26T01:17:16.661002+00:00"
+      "scraped_at": "2026-10-26T06:27:53.410544+00:00"
     },
     {
       "id": "f48002eeb5a1",
@@ -566,7 +566,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.americanthinker.com/65/65iw6uyrf4bso7q2hlmk_640.jpg",
-      "scraped_at": "2026-10-26T01:17:16.925645+00:00"
+      "scraped_at": "2026-10-26T06:27:53.542710+00:00"
     },
     {
       "id": "7d1593275bb7",
@@ -586,7 +586,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.americanthinker.com/1x/1xauy12z8cbf1lgeiocx_640.JPG",
-      "scraped_at": "2026-10-26T01:17:16.925850+00:00"
+      "scraped_at": "2026-10-26T06:27:53.543085+00:00"
     },
     {
       "id": "9fa2813c3bc3",
@@ -606,7 +606,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.americanthinker.com/2f/2fcjwjfcifk28y6ot8hi_640.jpg",
-      "scraped_at": "2026-10-26T01:17:16.926019+00:00"
+      "scraped_at": "2026-10-26T06:27:53.543461+00:00"
     },
     {
       "id": "983644140dac",
@@ -626,7 +626,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-26T01:17:17.364900+00:00"
+      "scraped_at": "2026-10-26T06:27:54.008140+00:00"
     },
     {
       "id": "373547fec632",
@@ -646,18 +646,18 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-26T01:17:17.364941+00:00"
+      "scraped_at": "2026-10-26T06:27:54.008188+00:00"
     },
     {
-      "id": "43fdd732cb82",
-      "headline": "Regional Chinese CDC Calls Plague Info Confidential as Public Suspicions Grow After Suspected Russia Case - The Epoch Times",
-      "title": "Regional Chinese CDC Calls Plague Info Confidential as Public Suspicions Grow After Suspected Russia Case - The Epoch Times",
-      "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOdG5aREVvdERyaEhmVUlGS0NpbUxVTVpSNW5ndjhxRzlsZ2R0UlFuRzBxX2prLVlmNmNlem9LNS1xb0YzRTlRRmQxZ0p0TEhlejNSQVFQZGpXeHNmT2hmdE5JaUV6dEdfNkNsRFp6c2UwMDVTZjFFdkc4TVRJcWpDVHViSmVpR1ZVNHZ1REc3ZFROSk85Mk5JcjNCWWRDZFNmeDNUTVdwOVBLdkx3ZnA1V3NxZVpyb0dfRVM3T3R2dFlrNmNFVlg0bndUZ3VyZGMwUnc1UnV6Q0cxSjVNZnZFN2hhUQ?oc=5",
-      "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOdG5aREVvdERyaEhmVUlGS0NpbUxVTVpSNW5ndjhxRzlsZ2R0UlFuRzBxX2prLVlmNmNlem9LNS1xb0YzRTlRRmQxZ0p0TEhlejNSQVFQZGpXeHNmT2hmdE5JaUV6dEdfNkNsRFp6c2UwMDVTZjFFdkc4TVRJcWpDVHViSmVpR1ZVNHZ1REc3ZFROSk85Mk5JcjNCWWRDZFNmeDNUTVdwOVBLdkx3ZnA1V3NxZVpyb0dfRVM3T3R2dFlrNmNFVlg0bndUZ3VyZGMwUnc1UnV6Q0cxSjVNZnZFN2hhUQ?oc=5",
-      "excerpt": "Regional Chinese CDC Calls Plague Info Confidential as Public Suspicions Grow After Suspected Russia Case The Epoch Times",
-      "summary": "Regional Chinese CDC Calls Plague Info Confidential as Public Suspicions Grow After Suspected Russia Case The Epoch Times",
-      "relative_time": "Tue, 20 Oct 2026 16:10:56 GMT",
-      "published": "Tue, 20 Oct 2026 16:10:56 GMT",
+      "id": "f0cf5c03a3e7",
+      "headline": "Mahjong Solitaire - The Epoch Times",
+      "title": "Mahjong Solitaire - The Epoch Times",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxObGdrbV8xR3A4WHlGUmhSSHFBVEExM29JOHRoVWw0Z3E5aURienVIVjEzemxkcndfcFlXVEVEZGZtTDU2VDNBenNTMDBPa3Q3am5lcFJRWGlyQzB0SzV0TkFIb1FnaHFVdGxMUU91X1hQNWItWW5xTlhPV010SkdUN1Fn?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxObGdrbV8xR3A4WHlGUmhSSHFBVEExM29JOHRoVWw0Z3E5aURienVIVjEzemxkcndfcFlXVEVEZGZtTDU2VDNBenNTMDBPa3Q3am5lcFJRWGlyQzB0SzV0TkFIb1FnaHFVdGxMUU91X1hQNWItWW5xTlhPV010SkdUN1Fn?oc=5",
+      "excerpt": "Mahjong Solitaire The Epoch Times",
+      "summary": "Mahjong Solitaire The Epoch Times",
+      "relative_time": "Thu, 09 Nov 2023 20:55:35 GMT",
+      "published": "Thu, 09 Nov 2023 20:55:35 GMT",
       "author": "Epoch Times",
       "feed": "Epoch Times",
       "feedName": "Epoch Times",
@@ -666,18 +666,18 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-26T01:17:17.364971+00:00"
+      "scraped_at": "2026-10-26T06:27:54.008210+00:00"
     },
     {
-      "id": "d7f0c9399b30",
-      "headline": "TV news hourly summary \u00b7 Oct 26, 01:03 UTC",
-      "title": "TV news hourly summary \u00b7 Oct 26, 01:03 UTC",
-      "url": "https://mastodon.archive.org/@tv/117504513437454441",
-      "link": "https://mastodon.archive.org/@tv/117504513437454441",
-      "excerpt": "Brazil\u2019s electoral authority confirmed that Luiz In\u00e1cio Lula da Silva defeated Jair Bolsonaro. A Serbian student movement reportedly ousted Aleksandar Vu\u010di\u0107. Opposition leader Mar\u00eda Corina Machado returned to Venezuela from exile. Texas Senate candidates continued campaigning as the governor\u2019s race heated up ahead of Election Day. An Oregon seafood plant fire led to ammonia contamination and evacuations.",
-      "summary": "Brazil\u2019s electoral authority confirmed that Luiz In\u00e1cio Lula da Silva defeated Jair Bolsonaro. A Serbian student movement reportedly ousted Aleksandar Vu\u010di\u0107. Opposition leader Mar\u00eda Corina Machado returned to Venezuela from exile. Texas Senate candidates continued campaigning as the governor\u2019s race heated up ahead of Election Day. An Oregon seafood plant fire led to ammonia contamination and evacuations.",
-      "relative_time": "Mon, 26 Oct 2026 01:03:04 +0000",
-      "published": "Mon, 26 Oct 2026 01:03:04 +0000",
+      "id": "b7bf042a5d20",
+      "headline": "TV news hourly summary \u00b7 Oct 26, 06:03 UTC",
+      "title": "TV news hourly summary \u00b7 Oct 26, 06:03 UTC",
+      "url": "https://mastodon.archive.org/@tv/117505693128998631",
+      "link": "https://mastodon.archive.org/@tv/117505693128998631",
+      "excerpt": "Trump campaigned in Michigan ahead of the midterms, drawing criticism for targeting Abdul El-Sayed\u2019s Muslim faith. Other political stories included the Senate and House battles, redistricting, and election lawsuits in Alaska and California. Brazil\u2019s Lula defeated Bolsonaro; Serbia\u2019s president conceded defeat. Other headlines covered Iran tensions, extreme weather in Spain, and a proposed California billionaire tax.",
+      "summary": "Trump campaigned in Michigan ahead of the midterms, drawing criticism for targeting Abdul El-Sayed\u2019s Muslim faith. Other political stories included the Senate and House battles, redistricting, and election lawsuits in Alaska and California. Brazil\u2019s Lula defeated Bolsonaro; Serbia\u2019s president conceded defeat. Other headlines covered Iran tensions, extreme weather in Spain, and a proposed California billionaire tax.",
+      "relative_time": "Mon, 26 Oct 2026 06:03:05 +0000",
+      "published": "Mon, 26 Oct 2026 06:03:05 +0000",
       "author": "Internet Archive TV News",
       "feed": "Internet Archive TV News (hourly summary)",
       "feedName": "Internet Archive TV News (hourly summary)",
@@ -686,14 +686,14 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "",
-      "scraped_at": "2026-10-26T01:17:17.916631+00:00"
+      "scraped_at": "2026-10-26T06:27:54.671462+00:00"
     }
   ],
   "stories": [
     {
-      "id": "943326d782ff",
-      "headline": "Elation across Serbia after veteran ruler Vu\u010di\u0107 concedes to student-led protest movement",
-      "title": "Elation across Serbia after veteran ruler Vu\u010di\u0107 concedes to student-led protest movement",
+      "id": "927b99c09c82",
+      "headline": "Celebrations in Serbia after veteran ruler Vu\u010di\u0107 loses election to student-led protest movement",
+      "title": "Celebrations in Serbia after veteran ruler Vu\u010di\u0107 loses election to student-led protest movement",
       "url": "https://www.bbc.co.uk/news/articles/cw5yn3xlprpmo?at_medium=RSS&at_campaign=rss",
       "link": "https://www.bbc.co.uk/news/articles/cw5yn3xlprpmo?at_medium=RSS&at_campaign=rss",
       "excerpt": "The populist right-wing leader of 12 years says it is \"clear\" his party has lost the vote billed as a referendum on the country's future.",
@@ -707,19 +707,19 @@
       "category": "Global",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/e676/live/8534e970-d0c8-11f1-b441-2b33b063138f.jpg",
-      "scraped_at": "2026-10-26T01:17:14.724498+00:00"
+      "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/a400/live/789d12b0-d0f9-11f1-93e1-3b657b665bcf.jpg",
+      "scraped_at": "2026-10-26T06:27:50.488090+00:00"
     },
     {
-      "id": "f9cc8a284962",
-      "headline": "Deeply divided Israel braces for pivotal election",
-      "title": "Deeply divided Israel braces for pivotal election",
-      "url": "https://www.bbc.co.uk/news/articles/ckpdgy6pl7xlo?at_medium=RSS&at_campaign=rss",
-      "link": "https://www.bbc.co.uk/news/articles/ckpdgy6pl7xlo?at_medium=RSS&at_campaign=rss",
-      "excerpt": "After three years of regional war, this is a battle Israel always knew was coming, writes Lucy Williamson.",
-      "summary": "After three years of regional war, this is a battle Israel always knew was coming, writes Lucy Williamson.",
-      "relative_time": "Sun, 25 Oct 2026 22:11:13 GMT",
-      "published": "Sun, 25 Oct 2026 22:11:13 GMT",
+      "id": "97f31d971dfa",
+      "headline": "Venezuelan opposition leader Mar\u00eda Machado returns after months in exile",
+      "title": "Venezuelan opposition leader Mar\u00eda Machado returns after months in exile",
+      "url": "https://www.bbc.co.uk/news/articles/cq8ez592pp0eo?at_medium=RSS&at_campaign=rss",
+      "link": "https://www.bbc.co.uk/news/articles/cq8ez592pp0eo?at_medium=RSS&at_campaign=rss",
+      "excerpt": "Machado had left the country just a month before the US government seized Venezuelan President Nicol\u00e1s Maduro.",
+      "summary": "Machado had left the country just a month before the US government seized Venezuelan President Nicol\u00e1s Maduro.",
+      "relative_time": "Mon, 26 Oct 2026 05:20:19 GMT",
+      "published": "Mon, 26 Oct 2026 05:20:19 GMT",
       "author": "BBC World News",
       "feed": "BBC World News",
       "feedName": "BBC World News",
@@ -727,19 +727,19 @@
       "category": "Global",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/c38d/live/19e08ff0-d0a3-11f1-adbe-cd0eaeb0fff9.jpg",
-      "scraped_at": "2026-10-26T01:17:14.724531+00:00"
+      "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/a26f/live/3f12cea0-d0f8-11f1-b5b1-192f0fa11760.jpg",
+      "scraped_at": "2026-10-26T06:27:50.488137+00:00"
     },
     {
-      "id": "6e1c2e75e1c7",
-      "headline": "Brazil's Lula reelected president in runoff vote - Reuters",
-      "title": "Brazil's Lula reelected president in runoff vote - Reuters",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQejBZNU9pVW5mLWs3YVoyWE1CZm9YdVhFUld3WHZSaWJrWlJ1SVFJNDFnRG5FRVNnVEVkOGZVMmY2RHdlcU45bGluZFpTZ3FlcXdqZGtmYW5oajNpTnhpVWZlN2tIWnRBdWFBcW9CbjdEREFnLVQ3YnV5WDgxdE0xNlR2SExJWWkyZzIxSWtCa1ZwRmdFMHhlYUp5Yw?oc=5",
-      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQejBZNU9pVW5mLWs3YVoyWE1CZm9YdVhFUld3WHZSaWJrWlJ1SVFJNDFnRG5FRVNnVEVkOGZVMmY2RHdlcU45bGluZFpTZ3FlcXdqZGtmYW5oajNpTnhpVWZlN2tIWnRBdWFBcW9CbjdEREFnLVQ3YnV5WDgxdE0xNlR2SExJWWkyZzIxSWtCa1ZwRmdFMHhlYUp5Yw?oc=5",
-      "excerpt": "Brazil's Lula reelected president in runoff vote Reuters",
-      "summary": "Brazil's Lula reelected president in runoff vote Reuters",
-      "relative_time": "Mon, 26 Oct 2026 00:13:00 GMT",
-      "published": "Mon, 26 Oct 2026 00:13:00 GMT",
+      "id": "ddec7acdfe11",
+      "headline": "Jordan arrests three suspects in deadly church attack, state media says - Reuters",
+      "title": "Jordan arrests three suspects in deadly church attack, state media says - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOMHVaa0dtU1RzeGQ3ZEhYLUVIV1ZpY092c1JBdE9tVE5xbk8tNDZpbF9GZDkzdG9mUUxOaVV1ZjBvYnFCV1V5WVFsa19xdnp4Tmc5anppU1pVbGhwYjdyeE9ybGFnc0x0MDZHVHA2SndrNnRyQWdhZFlRQXJwREh0S042cG1SeHpjUHJaWnNkcHdMODMyeUNacDN4aGZob2hhcUYzM2tJdGVpNF9wRG8yc2tRUQ?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOMHVaa0dtU1RzeGQ3ZEhYLUVIV1ZpY092c1JBdE9tVE5xbk8tNDZpbF9GZDkzdG9mUUxOaVV1ZjBvYnFCV1V5WVFsa19xdnp4Tmc5anppU1pVbGhwYjdyeE9ybGFnc0x0MDZHVHA2SndrNnRyQWdhZFlRQXJwREh0S042cG1SeHpjUHJaWnNkcHdMODMyeUNacDN4aGZob2hhcUYzM2tJdGVpNF9wRG8yc2tRUQ?oc=5",
+      "excerpt": "Jordan arrests three suspects in deadly church attack, state media says Reuters",
+      "summary": "Jordan arrests three suspects in deadly church attack, state media says Reuters",
+      "relative_time": "Mon, 26 Oct 2026 03:35:00 GMT",
+      "published": "Mon, 26 Oct 2026 03:35:00 GMT",
       "author": "Reuters Top News",
       "feed": "Reuters Top News",
       "feedName": "Reuters Top News",
@@ -748,18 +748,18 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-26T01:17:14.920031+00:00"
+      "scraped_at": "2026-10-26T06:27:50.964422+00:00"
     },
     {
-      "id": "43bcf45815d9",
-      "headline": "Oil slips from near six-months highs despite supply concerns - Reuters",
-      "title": "Oil slips from near six-months highs despite supply concerns - Reuters",
-      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQb2J2QlNheno1OW9FdmN3RTJWVHF1RXdLX0VQSGlKSkZlZEtNTnFxU3FUd1Zab1FPME1felpOVl9oM1oyNXc0T2xkdDZhc0JfUVlSTFU4Vm9aYWRrd1BhQmw1QThZRDZHbEZZR3Y5UlhNaDlWWm8tbjU2bjVtaFRVM0VMcml2OXY4TUtxNXRZU2c3c0lC?oc=5",
-      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQb2J2QlNheno1OW9FdmN3RTJWVHF1RXdLX0VQSGlKSkZlZEtNTnFxU3FUd1Zab1FPME1felpOVl9oM1oyNXc0T2xkdDZhc0JfUVlSTFU4Vm9aYWRrd1BhQmw1QThZRDZHbEZZR3Y5UlhNaDlWWm8tbjU2bjVtaFRVM0VMcml2OXY4TUtxNXRZU2c3c0lC?oc=5",
-      "excerpt": "Oil slips from near six-months highs despite supply concerns Reuters",
-      "summary": "Oil slips from near six-months highs despite supply concerns Reuters",
-      "relative_time": "Sun, 25 Oct 2026 23:24:00 GMT",
-      "published": "Sun, 25 Oct 2026 23:24:00 GMT",
+      "id": "18ade9ce7bcf",
+      "headline": "Houthis say they attacked East-West oil pumping stations; No Saudi confirmation - Reuters",
+      "title": "Houthis say they attacked East-West oil pumping stations; No Saudi confirmation - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxORlYwOVl3Z1hlOFdacWVmeXZVNnVhejFlWDVOR0toczJ2MWNjT1FMRWZjVU0xd1hGaGtzNU9VcGdYSnR1Z2NVQjFfRVpKallEcEVuTzNweldmeEdYOE05UXFOejl1ekR1ZjlxUlhHT1NLa3J0cmZYWUxhSEs2eXNGb2xNNUJycVNWci1ZVzZUOXBSNGc0bzRJNWVTTnVlWHhXRlBrLWRTOV9HbmlJTmVfZk95N0FIQnBLQTlTa3N3eFBaVDJMWGptVU1VN3A?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxORlYwOVl3Z1hlOFdacWVmeXZVNnVhejFlWDVOR0toczJ2MWNjT1FMRWZjVU0xd1hGaGtzNU9VcGdYSnR1Z2NVQjFfRVpKallEcEVuTzNweldmeEdYOE05UXFOejl1ekR1ZjlxUlhHT1NLa3J0cmZYWUxhSEs2eXNGb2xNNUJycVNWci1ZVzZUOXBSNGc0bzRJNWVTTnVlWHhXRlBrLWRTOV9HbmlJTmVfZk95N0FIQnBLQTlTa3N3eFBaVDJMWGptVU1VN3A?oc=5",
+      "excerpt": "Houthis say they attacked East-West oil pumping stations; No Saudi confirmation Reuters",
+      "summary": "Houthis say they attacked East-West oil pumping stations; No Saudi confirmation Reuters",
+      "relative_time": "Mon, 26 Oct 2026 03:48:00 GMT",
+      "published": "Mon, 26 Oct 2026 03:48:00 GMT",
       "author": "Reuters Top News",
       "feed": "Reuters Top News",
       "feedName": "Reuters Top News",
@@ -768,18 +768,18 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-26T01:17:14.920069+00:00"
+      "scraped_at": "2026-10-26T06:27:50.964468+00:00"
     },
     {
-      "id": "00e5ffe7f174",
-      "headline": "Angela Rayner signals Shabana Mahmood will weaken Labour's immigration crackdown after she led revolt against 'un-British' reforms",
-      "title": "Angela Rayner signals Shabana Mahmood will weaken Labour's immigration crackdown after she led revolt against 'un-British' reforms",
-      "url": "https://www.dailymail.com/news/article-16237087/Angela-Rayner-signals-Shabana-Mahmood-weaken-Labours-immigration-crackdown-led-revolt-against-British-reforms.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
-      "link": "https://www.dailymail.com/news/article-16237087/Angela-Rayner-signals-Shabana-Mahmood-weaken-Labours-immigration-crackdown-led-revolt-against-British-reforms.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
-      "excerpt": "Ms Mahmood, the Home Secretary, has fronted plans to make migrant workers wait longer before they can settle in Britain permanently.",
-      "summary": "Ms Mahmood, the Home Secretary, has fronted plans to make migrant workers wait longer before they can settle in Britain permanently.",
-      "relative_time": "Mon, 26 Oct 2026 00:44:02 GMT",
-      "published": "Mon, 26 Oct 2026 00:44:02 GMT",
+      "id": "749c3ac2de56",
+      "headline": "Inside 'devastated' Natasha Kaplinsky's magnificent nine-bedroom country estate on the market for \u00a37million as her 20-year marriage ends in divorce",
+      "title": "Inside 'devastated' Natasha Kaplinsky's magnificent nine-bedroom country estate on the market for \u00a37million as her 20-year marriage ends in divorce",
+      "url": "https://www.dailymail.com/tvshowbiz/article-16232831/Inside-devastated-Natasha-Kaplinskys-magnificant-nine-bedroom-country-estate.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
+      "link": "https://www.dailymail.com/tvshowbiz/article-16232831/Inside-devastated-Natasha-Kaplinskys-magnificant-nine-bedroom-country-estate.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
+      "excerpt": "The foremr newsreader is said to be devastated by the end of her marriage to financier Justin Bower - and now she is saying goodbyre to their East Sussex farmhouse too.",
+      "summary": "The foremr newsreader is said to be devastated by the end of her marriage to financier Justin Bower - and now she is saying goodbyre to their East Sussex farmhouse too.",
+      "relative_time": "Mon, 26 Oct 2026 06:13:36 GMT",
+      "published": "Mon, 26 Oct 2026 06:13:36 GMT",
       "author": "Daily Mail UK",
       "feed": "Daily Mail UK",
       "feedName": "Daily Mail UK",
@@ -787,19 +787,19 @@
       "category": "Global",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://i.dailymail.com/1s/2026/10/25/11/112078277-0-image-a-2_1792928694517.jpg",
-      "scraped_at": "2026-10-26T01:17:15.508088+00:00"
+      "imageUrl": "https://i.dailymail.com/1s/2026/10/23/16/112053631-0-image-a-51_1792770417606.jpg",
+      "scraped_at": "2026-10-26T06:27:51.553386+00:00"
     },
     {
-      "id": "3aea7e69c0a5",
-      "headline": "William and Kate share new family photo from Princess of Wales's Three Peaks Challenge - as they thank volunteers for their vital work on Mountain Rescue Awareness Day",
-      "title": "William and Kate share new family photo from Princess of Wales's Three Peaks Challenge - as they thank volunteers for their vital work on Mountain Rescue Awareness Day",
-      "url": "https://www.dailymail.com/news/royals/article-16237085/William-Kate-family-photo-Three-Peaks-Challenge.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
-      "link": "https://www.dailymail.com/news/royals/article-16237085/William-Kate-family-photo-Three-Peaks-Challenge.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
-      "excerpt": "Posted to Instagram this morning, the image shows the Wales family and others following Kate's mountain-climbing expedition in June.",
-      "summary": "Posted to Instagram this morning, the image shows the Wales family and others following Kate's mountain-climbing expedition in June.",
-      "relative_time": "Sun, 25 Oct 2026 23:18:49 GMT",
-      "published": "Sun, 25 Oct 2026 23:18:49 GMT",
+      "id": "7108fae837fc",
+      "headline": "Trump vows to make Abdul El- Sayed go through metal detectors in Senate if he wins",
+      "title": "Trump vows to make Abdul El- Sayed go through metal detectors in Senate if he wins",
+      "url": "https://www.dailymail.com/news/article-16237749/Trump-Muslim-jihadist-Abdul-El-Sayed-metal-detector-Senate.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
+      "link": "https://www.dailymail.com/news/article-16237749/Trump-Muslim-jihadist-Abdul-El-Sayed-metal-detector-Senate.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
+      "excerpt": "Trump arrived on stage in Port Huron, Michigan, on Sunday afternoon to rally for the Republican cause with less than two weeks to go before the midterms.",
+      "summary": "Trump arrived on stage in Port Huron, Michigan, on Sunday afternoon to rally for the Republican cause with less than two weeks to go before the midterms.",
+      "relative_time": "Mon, 26 Oct 2026 05:59:35 GMT",
+      "published": "Mon, 26 Oct 2026 05:59:35 GMT",
       "author": "Daily Mail UK",
       "feed": "Daily Mail UK",
       "feedName": "Daily Mail UK",
@@ -807,39 +807,39 @@
       "category": "Global",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://i.dailymail.com/1s/2026/10/25/12/112078813-0-image-a-8_1792931595244.jpg",
-      "scraped_at": "2026-10-26T01:17:15.508139+00:00"
+      "imageUrl": "https://i.dailymail.com/1s/2026/10/25/20/112084125-0-image-a-6_1792961817173.jpg",
+      "scraped_at": "2026-10-26T06:27:51.553437+00:00"
     },
     {
-      "id": "3272546044a6",
-      "headline": "My plea to Spencer Pratt voters: Don\u2019t hand LA to socialists out of spite",
-      "title": "My plea to Spencer Pratt voters: Don\u2019t hand LA to socialists out of spite",
-      "url": "https://nypost.com/2026/10/25/opinion/my-plea-to-spencer-pratt-voters-dont-hand-la-to-socialists/",
-      "link": "https://nypost.com/2026/10/25/opinion/my-plea-to-spencer-pratt-voters-dont-hand-la-to-socialists/",
-      "excerpt": "If you voted for Spencer because you wanted LA to stop getting worse, don\u2019t hand the city to the people who would make it worse faster. On Election Day, vote for Karen Bass.",
-      "summary": "If you voted for Spencer because you wanted LA to stop getting worse, don\u2019t hand the city to the people who would make it worse faster. On Election Day, vote for Karen Bass.",
-      "relative_time": "Sun, 25 Oct 2026 21:09:37 -0400",
-      "published": "Sun, 25 Oct 2026 21:09:37 -0400",
-      "author": "Shervin Natan",
+      "id": "7553f5887e1b",
+      "headline": "Firehouse Subs co-founder dies after building beloved American sandwich chain with brother",
+      "title": "Firehouse Subs co-founder dies after building beloved American sandwich chain with brother",
+      "url": "https://nypost.com/2026/10/26/us-news/firehouse-subs-co-founder-chris-sorensen-dies-after-building-beloved-american-sandwich-chain-with-brother/",
+      "link": "https://nypost.com/2026/10/26/us-news/firehouse-subs-co-founder-chris-sorensen-dies-after-building-beloved-american-sandwich-chain-with-brother/",
+      "excerpt": "The former firefighter and professional guitarist left a legacy of philanthropy and 1,200 restaurant locations nationwide.",
+      "summary": "The former firefighter and professional guitarist left a legacy of philanthropy and 1,200 restaurant locations nationwide.",
+      "relative_time": "Mon, 26 Oct 2026 02:00:45 -0400",
+      "published": "Mon, 26 Oct 2026 02:00:45 -0400",
+      "author": "Fox News",
       "feed": "New York Post",
       "feedName": "New York Post",
       "feedId": "f35f2eec037f",
       "category": "Global",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F10%2FLELA_CAPOST_053026_23.jpg?w%3D1024",
-      "scraped_at": "2026-10-26T01:17:15.629036+00:00"
+      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F10%2Ffirehouse-subs-co-founder-dies-146516740.jpg?w%3D747",
+      "scraped_at": "2026-10-26T06:27:52.313513+00:00"
     },
     {
-      "id": "d7f0c9399b30",
-      "headline": "TV news hourly summary \u00b7 Oct 26, 01:03 UTC",
-      "title": "TV news hourly summary \u00b7 Oct 26, 01:03 UTC",
-      "url": "https://mastodon.archive.org/@tv/117504513437454441",
-      "link": "https://mastodon.archive.org/@tv/117504513437454441",
-      "excerpt": "Brazil\u2019s electoral authority confirmed that Luiz In\u00e1cio Lula da Silva defeated Jair Bolsonaro. A Serbian student movement reportedly ousted Aleksandar Vu\u010di\u0107. Opposition leader Mar\u00eda Corina Machado returned to Venezuela from exile. Texas Senate candidates continued campaigning as the governor\u2019s race heated up ahead of Election Day. An Oregon seafood plant fire led to ammonia contamination and evacuations.",
-      "summary": "Brazil\u2019s electoral authority confirmed that Luiz In\u00e1cio Lula da Silva defeated Jair Bolsonaro. A Serbian student movement reportedly ousted Aleksandar Vu\u010di\u0107. Opposition leader Mar\u00eda Corina Machado returned to Venezuela from exile. Texas Senate candidates continued campaigning as the governor\u2019s race heated up ahead of Election Day. An Oregon seafood plant fire led to ammonia contamination and evacuations.",
-      "relative_time": "Mon, 26 Oct 2026 01:03:04 +0000",
-      "published": "Mon, 26 Oct 2026 01:03:04 +0000",
+      "id": "b7bf042a5d20",
+      "headline": "TV news hourly summary \u00b7 Oct 26, 06:03 UTC",
+      "title": "TV news hourly summary \u00b7 Oct 26, 06:03 UTC",
+      "url": "https://mastodon.archive.org/@tv/117505693128998631",
+      "link": "https://mastodon.archive.org/@tv/117505693128998631",
+      "excerpt": "Trump campaigned in Michigan ahead of the midterms, drawing criticism for targeting Abdul El-Sayed\u2019s Muslim faith. Other political stories included the Senate and House battles, redistricting, and election lawsuits in Alaska and California. Brazil\u2019s Lula defeated Bolsonaro; Serbia\u2019s president conceded defeat. Other headlines covered Iran tensions, extreme weather in Spain, and a proposed California billionaire tax.",
+      "summary": "Trump campaigned in Michigan ahead of the midterms, drawing criticism for targeting Abdul El-Sayed\u2019s Muslim faith. Other political stories included the Senate and House battles, redistricting, and election lawsuits in Alaska and California. Brazil\u2019s Lula defeated Bolsonaro; Serbia\u2019s president conceded defeat. Other headlines covered Iran tensions, extreme weather in Spain, and a proposed California billionaire tax.",
+      "relative_time": "Mon, 26 Oct 2026 06:03:05 +0000",
+      "published": "Mon, 26 Oct 2026 06:03:05 +0000",
       "author": "Internet Archive TV News",
       "feed": "Internet Archive TV News (hourly summary)",
       "feedName": "Internet Archive TV News (hourly summary)",
@@ -848,7 +848,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "",
-      "scraped_at": "2026-10-26T01:17:17.916631+00:00"
+      "scraped_at": "2026-10-26T06:27:54.671462+00:00"
     }
   ],
   "raw_summary": "### More than 1,300 arrested as clashes follow another day of mass protests across France\n**Source:** BBC World News  \n**Summary:** Hundreds of thousands of demonstrators took to the streets across France and several neighboring European countries during a day of widespread protests. Authorities reported over 1,300 arrests after violent clashes broke out between protesters and law enforcement. The arrests highlight an escalating wave of civil unrest over current socio-political issues in the region.  \n**Key Theme:** Civil Unrest\n\n---\n\n### Israel to close West Bank crossings on election day as crackdown escalates\n**Source:** BBC World News  \n**Summary:** The Israeli Defense Forces announced plans to close West Bank border crossings to Palestinian workers in the period leading up to and on Tuesday's election day. Officials cited security measures for the restrictions amid an escalating regional crackdown. The decision limits movement across border points during the national vote.  \n**Key Theme:** Security / Middle East\n\n---\n\n### Iranian army says it shot down US drone over Bandar Abbas, Tasnim reports - Reuters\n**Source:** Reuters Top News  \n**Summary:** The Iranian military reported shooting down an unmanned U.S. drone near the coastal city of Bandar Abbas, according to state news agency Tasnim. The claim highlights ongoing military friction between Iranian forces and the United States in the Persian Gulf region. U.S. officials have not immediately confirmed the loss of an aircraft.  \n**Key Theme:** Military Conflict\n\n---\n\n### Three people killed and 14 injured in Ukrainian attacks on Russia's Belgorod region, governor says - Reuters\n**Source:** Reuters Top News  \n**Summary:** Ukrainian strikes targeting Russia's border region of Belgorod resulted in three fatalities and 14 injuries, according to the regional governor. The strikes damaged local infrastructure and residential property in the area. The incident marks a continuation of cross-border shelling connected to the ongoing military conflict.  \n**Key Theme:** War / Regional Conflict\n\n---\n\n### Stunned witnesses detail EXACTLY what happened inside the football club 'Ladies Night' sex scandal rocking the sleepy Notswold town of Banbury - as it's revealed one middle-aged woman has been KICKED OUT by her partner\n**Source:** Daily Mail UK  \n**Summary:** A \"Ladies Night\" event at Banbury United FC's clubhouse triggered local public reaction after reports and video emerged showing explicit acts involving male models and attendees. Eyewitnesses detailed the events that took place during the weekend gathering. The fallout from the event has led to personal and administrative consequences for those involved.  \n**Key Theme:** Local Scandal\n\n---\n\n### EDEN CONFIDENTIAL: Vivienne Westwood son's fears over her last collection\n**Source:** Daily Mail UK  \n**Summary:** A dispute continues between the family of the late Dame Vivienne Westwood and the brand's management over the designer's final collection. Westwood's son expressed concerns regarding how her artistic legacy and unreleased works are being handled by the fashion house. The ongoing conflict emphasizes broader tensions regarding control over the brand's creative direction.  \n**Key Theme:** Fashion / Business Dispute\n\n---\n\n### NFL Week 7 predictions, best bets: Picks against the spread for every game\n**Source:** New York Post  \n**Summary:** Sports analyst Dave Blezow released detailed predictions and betting analyses for the upcoming Week 7 of the NFL season. The coverage features picks against the spread for every scheduled professional football game. The analysis aims to inform readers about team match-ups and point spread lines.  \n**Key Theme:** Sports Betting\n\n---\n\n### TV news hourly summary \u00b7 Oct 25, 10:03 UTC\n**Source:** Internet Archive TV News (hourly summary)  \n**Summary:** A global news summary captures major developments, including mass arrests during French protests, snap elections in Serbia, and political campaigning in the U.S. and Brazil. Severe weather updates highlighted high winds and amber warnings from Storm Babet in the UK. Additional segments covered international conflict updates regarding Ukraine and Middle East security developments.  \n**Key Theme:** Global News",
@@ -858,5 +858,5 @@
   "data_current_html_path": "data/current/index.html",
   "archive_html_path": "output/archive/2026-10-25/index.html",
   "data_archive_html_path": "data/archive/2026-10-25/index.html",
-  "feed_hash": "b8e4eacabb14a690326f22ae30cfed73"
+  "feed_hash": "3c06b67379232d10ce886dfd52a7a95b"
 }
