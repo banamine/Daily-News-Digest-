@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Intelligence Briefing – 2026-10-27</title>
+    <style>
+        :root {
+            --bg: #0f1115;
+            --card: #1a1d24;
+            --text: #e6e8ec;
+            --muted: #9ba1ad;
+            --accent: #3b82f6;
+            --border: #2a2e38;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; padding: 2rem 1rem; }
+        .container { max-width: 960px; margin: 0 auto; }
+        header { text-align: center; margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+        header h1 { font-size: 2.2rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 0.4rem; color: #ffffff; }
+        header .date { color: var(--accent); font-size: 1rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+        
+        .hero-image { width: 100%; border-radius: 16px; overflow: hidden; margin-bottom: 2.5rem; box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6); border: 1px solid var(--border); background: #0b0f19; }
+        
+        /* Flexible Photo Collage Component */
+        .collage-wrapper { position: relative; width: 100%; }
+        .collage-header-pill {
+            position: absolute; top: 14px; left: 14px; z-index: 10;
+            background: rgba(15, 23, 42, 0.88); backdrop-filter: blur(8px);
+            border: 1px solid rgba(56, 189, 248, 0.35); color: #38bdf8;
+            padding: 5px 12px; border-radius: 999px; font-size: 11px; font-weight: 800;
+            letter-spacing: 0.5px; display: flex; align-items: center; gap: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        }
+        .collage-container {
+            display: grid; gap: 8px; background: #090d16; padding: 8px; border-radius: 16px; min-height: 280px;
+        }
+        .collage-container.collage-count-1 { grid-template-columns: 1fr; grid-template-rows: 360px; }
+        .collage-container.collage-count-1 .hero-tile { grid-row: auto; }
+
+        .collage-container.collage-count-2 { grid-template-columns: 1fr 1fr; grid-template-rows: 320px; }
+        .collage-container.collage-count-2 .hero-tile { grid-row: auto; }
+
+        .collage-container.collage-count-3 { grid-template-columns: 1.6fr 1fr; grid-template-rows: 170px 170px; }
+        .collage-container.collage-count-3 .hero-tile { grid-row: span 2; }
+
+        .collage-container.collage-count-4 { grid-template-columns: 1.6fr 1fr 1fr; grid-template-rows: 170px 170px; }
+        .collage-container.collage-count-4 .hero-tile { grid-row: span 2; }
+        .collage-container.collage-count-4 .collage-tile:nth-child(4) { grid-column: span 2; }
+
+        .collage-container.collage-count-5 { grid-template-columns: 1.8fr 1fr 1fr; grid-template-rows: 180px 180px; }
+        .collage-container.collage-count-5 .hero-tile { grid-row: span 2; }
+
+        @media (max-width: 768px) {
+            .collage-container,
+            .collage-container.collage-count-2,
+            .collage-container.collage-count-3,
+            .collage-container.collage-count-4,
+            .collage-container.collage-count-5 {
+                grid-template-columns: 1fr; grid-template-rows: auto;
+            }
+            .collage-tile, .hero-tile { min-height: 180px; }
+        }
+        .collage-tile {
+            position: relative; border-radius: 10px; overflow: hidden; background: #131927;
+            border: 1px solid rgba(255, 255, 255, 0.08); transition: transform 0.3s ease;
+        }
+        .collage-tile.hero-tile { grid-row: span 2; }
+        .collage-tile img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
+        .collage-tile:hover img { transform: scale(1.06); }
+        .collage-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(to top, rgba(11, 15, 23, 0.95) 0%, rgba(11, 15, 23, 0.2) 60%, transparent 100%);
+            display: flex; flex-direction: column; justify-content: flex-end; padding: 12px;
+        }
+        .collage-badge {
+            align-self: flex-start; background: rgba(56, 189, 248, 0.2); color: #38bdf8;
+            border: 1px solid rgba(56, 189, 248, 0.4); font-size: 10px; font-weight: 700;
+            text-transform: uppercase; padding: 2px 8px; border-radius: 999px; margin-bottom: 6px;
+        }
+        .collage-badge.hero-badge { background: rgba(16, 185, 129, 0.2); color: #34d399; border-color: rgba(16, 185, 129, 0.4); }
+        .collage-title { color: #ffffff; font-size: 12px; font-weight: 700; line-height: 1.35; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        .hero-tile .collage-title { font-size: 17px; }
+
+        .stories { display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 3rem; }
+        .story { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem; }
+        .story h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: #f1f3f5; }
+        .story-body { color: var(--muted); font-size: 0.98rem; overflow-wrap: anywhere; word-break: break-word; }
+        .story h2, .mini-card h3, .mini-card p { overflow-wrap: anywhere; }
+        .container { min-width: 0; max-width: 100%; }
+        .section-title { font-size: 1.3rem; font-weight: 800; color: var(--accent); margin: 2rem 0 1rem; border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; }
+        .segmented-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
+        .mini-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+        .mini-card.scraped { border-left: 3px solid #8b5cf6; }
+        .mini-card.rss { border-left: 3px solid #3b82f6; }
+        .source-tag { font-size: 0.75rem; font-weight: bold; color: var(--accent); margin-bottom: 0.4rem; }
+        .mini-card h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.4rem; }
+        .mini-card h3 a { color: #f1f3f5; text-decoration: none; }
+        .mini-card h3 a:hover { text-decoration: underline; color: var(--accent); }
+        .mini-card p { font-size: 0.82rem; color: var(--muted); line-height: 1.4; }
+        footer { text-align: center; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="date">2026-10-27</div>
+            <h1>Daily Intelligence Briefing</h1>
+        </header>
+
+        <div class="hero-image">
+            
+                
+    <div class="collage-wrapper">
+        <div class="collage-header-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7"/><path d="M16 5h5v5"/><path d="m21 5-9 9"/></svg>
+            <span>Parsed Feeds Mixed Photo Collage (5 Photos)</span>
+        </div>
+        <div class="collage-container collage-count-5">
+            <div class="collage-tile hero-tile">
+                <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9543/live/7b21c3e0-d1cc-11f1-837e-832a94a7445c.png" alt="Turnout so far highest in decades as Israelis vote in pivotal election" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+                <div class="collage-overlay">
+                    <span class="collage-badge hero-badge">BBC World News</span>
+                    <h3 class="collage-title hero-title">Turnout so far highest in decades as Israelis vote in pivotal election</h3>
+                </div>
+            </div>
+            
+        <div class="collage-tile">
+            <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/05b2/live/06753110-d192-11f1-8c41-0bbbeafdc6d4.jpg" alt="Lula&#x27;s comeback in Brazil dents Trump&#x27;s ambitions for Latin America" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">BBC World News</span>
+                <h4 class="collage-title">Lula&#x27;s comeback in Brazil dents Trump&#x27;s ambitions for Latin America</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/af90/live/ca109650-d1b0-11f1-93f3-e3ba7480d857.jpg" alt="Truce begins in Ukraine city where residents ate weeds to survive" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">BBC World News</span>
+                <h4 class="collage-title">Truce begins in Ukraine city where residents ate weeds to survive</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Leaders of Norway, Finland hold calls with Putin then Zelenskiy - Reuters" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">Reuters Top News</span>
+                <h4 class="collage-title">Leaders of Norway, Finland hold calls with Putin then Zelenskiy - Reuters</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Chinese brands show Mbappe red card over alleged Mao meme comments - Reuters" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">Reuters Top News</span>
+                <h4 class="collage-title">Chinese brands show Mbappe red card over alleged Mao meme comments - Reuters</h4>
+            </div>
+        </div>
+        
+        </div>
+    </div>
+    
+            
+        </div>
+
+        <main class="stories">
+            
+        <div class="story">
+            <h2>Turnout so far highest in decades as Israelis vote in pivotal election</h2>
+            <div class="story-body"><strong>Source:</strong> BBC World News<br><strong>Summary:</strong> The elections - the first since the Hamas-led attacks on Israel and the wars which followed - are widely seen as a referendum on Benjamin Netanyahu....</div>
+        </div>
+        
+        <div class="story">
+            <h2>Lula&#x27;s comeback in Brazil dents Trump&#x27;s ambitions for Latin America</h2>
+            <div class="story-body"><strong>Source:</strong> BBC World News<br><strong>Summary:</strong> The Trump-Lula relationship may have thawed, but several issues could reignite tensions between the two leaders....</div>
+        </div>
+        
+        <div class="story">
+            <h2>Leaders of Norway, Finland hold calls with Putin then Zelenskiy - Reuters</h2>
+            <div class="story-body"><strong>Source:</strong> Reuters Top News<br><strong>Summary:</strong> Leaders of Norway, Finland hold calls with Putin then Zelenskiy Reuters...</div>
+        </div>
+        
+        <div class="story">
+            <h2>Chinese brands show Mbappe red card over alleged Mao meme comments - Reuters</h2>
+            <div class="story-body"><strong>Source:</strong> Reuters Top News<br><strong>Summary:</strong> Chinese brands show Mbappe red card over alleged Mao meme comments Reuters...</div>
+        </div>
+        
+        <div class="story">
+            <h2>Cash-strapped MoD blows £3million on &#x27;diversity&#x27;: Labour should put frontline soldiers first, say critics</h2>
+            <div class="story-body"><strong>Source:</strong> Daily Mail UK<br><strong>Summary:</strong> Despite Labour scrabbling to find more cash for defence, as many as 53 staff have been employed at the MoD to champion DEI under its watch....</div>
+        </div>
+        
+        <div class="story">
+            <h2>Two men are charged with National Security Act offences following RAF Fairford &#x27;terror plot&#x27; - as suspect believed to be assisting Iran</h2>
+            <div class="story-body"><strong>Source:</strong> Daily Mail UK<br><strong>Summary:</strong> Mohmed Abdulkarim, 24, and Nouman Essghir, 24, both of Westminster, London, have both been charged with offences under the National Security Act 2023....</div>
+        </div>
+        
+        <div class="story">
+            <h2>Savannah Chrisley announces she is pregnant, engaged to much-older mystery man after almost 2 years of dating: ‘Timing is nothing’</h2>
+            <div class="story-body"><strong>Source:</strong> New York Post<br><strong>Summary:</strong> The &quot;Chrisley Knows Best&quot; alum showed off her growing baby bump in an Instagram post....</div>
+        </div>
+        
+        <div class="story">
+            <h2>TV news hourly summary · Oct 27, 11:03 UTC</h2>
+            <div class="story-body"><strong>Source:</strong> Internet Archive TV News (hourly summary)<br><strong>Summary:</strong> Israelis voted in a pivotal election, with Netanyahu seeking another term. U.S. midterm campaigns focused on fraud, corruption, the economy, transgender issues and close Senate races in Texas and elsewhere; Trump campaigned with Ken Paxton and critic...</div>
+        </div>
+        
+        </main>
+
+        
+        <div class='section-title'>Global &amp; Alternative RSS Feeds</div><div class='segmented-grid'>
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/articles/c3j47l4kdez4o?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>Turnout so far highest in decades as Israelis vote in pivotal election</a></h3>
+                <p>The elections - the first since the Hamas-led attacks on Israel and the wars which followed - are widely seen as a referendum on Benjamin Netanyahu....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/articles/cq62yg6rggj0o?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>Lula&#x27;s comeback in Brazil dents Trump&#x27;s ambitions for Latin America</a></h3>
+                <p>The Trump-Lula relationship may have thawed, but several issues could reignite tensions between the two leaders....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/articles/ck20wjnv3w0jo?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>Truce begins in Ukraine city where residents ate weeds to survive</a></h3>
+                <p>The Oleshky ceasefire, which the White House said was secured by US First Lady Melania Trump, is meant to allow aid to get in and civilians to get out....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMisgFBVV95cUxOR2g4YXlhMGFuazRpZ0pOWmZpaFBZWGpCNWMzb3JOQkFMWjFVQ1c3bVo4MjJGZDZPS1h5Z3FUMUxEZllDODNtd2NkSWRUQ1hZNzR5X19OVVphRlEyZTYzb3dqclBOd0hrNXRPLVdWZ1M3YzF4TUtJSWhXZjgteXZuM2pfTTR1b1h5UGJiNW5NV2xDbFhzcDdXTDRlaWlpbnZCaXgyNU9wSzZ5UDhmalJtUXhR?oc=5' target='_blank' rel='noopener'>Leaders of Norway, Finland hold calls with Putin then Zelenskiy - Reuters</a></h3>
+                <p>Leaders of Norway, Finland hold calls with Putin then Zelenskiy Reuters...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMivwFBVV95cUxNdUEtRWJxSk5SSk1MQUh1TXhtZlNxa0VwOHFZaWNaMEVHZlpneEJza25scXpwaE5tSFo0MkxDVWwtSzZXWVp1X05EaUpHTFFJQ1JWMXVmdjhTc29ldVF6d081emZhYlduWS1fYXVzMmdLOEdhN3RXemYzR0J6amN1MXRyRHNyZ205dWxqaXcwZXJRaG1IQlR2RkJTUGJIZjJWUEpLVkZEWVBfTWd6c21zdlFBLUJaeVZKekpkZWhMWQ?oc=5' target='_blank' rel='noopener'>Chinese brands show Mbappe red card over alleged Mao meme comments - Reuters</a></h3>
+                <p>Chinese brands show Mbappe red card over alleged Mao meme comments Reuters...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMiwwFBVV95cUxPaUFIUG9BWUhXLUlUbkJBaWVyaEhLRm93el9SZWN2ZUpmWVc5aHJFSWwxNW5rTjJiNEJJUFFXRHBDS1doMjV4SERTSHNDNzJnOHEweDQ3bFlUVThHRzlYcGwxUXVSa3haLXh2dm9vdGtja2lvVWVud25XcWZuMFg0WmpuRF9YU3JSek9OMHJYS3ZLbS1PX3l3UXZZNDJoVjBMamVuN3dQVWU2QnZfN2xESmtwVUhYZExfY2ZtcGd6Q2NXN0U?oc=5' target='_blank' rel='noopener'>Congo&#x27;s Ebola cases surpass 10,000 as fears grow of wider African spread - Reuters</a></h3>
+                <p>Congo&#x27;s Ebola cases surpass 10,000 as fears grow of wider African spread Reuters...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/news/article-16240685/Cash-strapped-MoD-spent-3-million-50-diversity-officers.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>Cash-strapped MoD blows £3million on &#x27;diversity&#x27;: Labour should put frontline soldiers first, say critics</a></h3>
+                <p>Despite Labour scrabbling to find more cash for defence, as many as 53 staff have been employed at the MoD to champion DEI under its watch....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/news/article-16241781/Two-men-charged-National-Security-offence-RAF-Fairford.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>Two men are charged with National Security Act offences following RAF Fairford &#x27;terror plot&#x27; - as suspect believed to be assisting Iran</a></h3>
+                <p>Mohmed Abdulkarim, 24, and Nouman Essghir, 24, both of Westminster, London, have both been charged with offences under the National Security Act 2023....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/news/article-16240925/Warning-stockpile-supplies-triggers-baked-bean-water-battery-shortage.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>Labour&#x27;s warnings empty shelves of baked beans, water and batteries - as Streeting says &#x27;prepper panic&#x27; is &#x27;encouraging&#x27;</a></h3>
+                <p>Wes Streeting welcomed a stockpiling rush after Labour issued a stark warning last week that the nation could face disruption....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>New York Post</div>
+                <h3><a href='https://pagesix.com/2026/10/27/parents/savannah-chrisley-announces-she-is-pregnant-engaged-to-much-older-mystery-man-after-almost-2-years-of-dating/' target='_blank' rel='noopener'>Savannah Chrisley announces she is pregnant, engaged to much-older mystery man after almost 2 years of dating: ‘Timing is nothing’</a></h3>
+                <p>The &quot;Chrisley Knows Best&quot; alum showed off her growing baby bump in an Instagram post....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>New York Post</div>
+                <h3><a href='https://nypost.com/2026/10/27/entertainment/perverted-2-time-jeopardy-champ-joey-desena-arrested-for-2nd-time/' target='_blank' rel='noopener'>2-time ‘Jeopardy!’ champ arrested for child porn — less than year after caught peeping</a></h3>
+                <p>A judge denied his bond on Monday....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/when-your-doctor-said-thats-just-age-day/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=when-your-doctor-said-thats-just-age-day' target='_blank' rel='noopener'>When Your Doctor Said “That’s Just Age” – By Day 6, These 3 Peptides You’ve Never Heard Of Said Otherwise</a></h3>
+                <p>Three little-known peptides are drawing attention from people frustrated by stubborn joint pain, limited mobility and being told it is just age....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/democrats-turn-borrowedsh-as-republicans-score-76/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=democrats-turn-borrowedsh-as-republicans-score-76' target='_blank' rel='noopener'>Democrats Turn to Borrowed Cash as Republicans Score $76 Million Windfall in Midterm Home Stretch</a></h3>
+                <p>Senate Democrats drew a $15 million loan as new FEC filings showed Elon Musk pouring roughly $76.8 million into America PAC for the Republican midterm fight....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/must-see-president-trump-likes-big-buttsnnot/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=must-see-president-trump-likes-big-buttsnnot' target='_blank' rel='noopener'>MUST SEE: President Trump Likes BIG BUTTS and Cannot Lie! (Feat. Shawn Farash)</a></h3>
+                <p>Trust me, you’re going to want to stick with me on this because it’s SO worth it and SO hilarious! […]...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/10/27/either-ilhan-omar-lied-about-her-age-in-her-autobiography-or-shes-lying-now/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=either-ilhan-omar-lied-about-her-age-in-her-autobiography-or-shes-lying-now' target='_blank' rel='noopener'>Either Ilhan Omar Lied About Her Age In Her Autobiography, Or She’s Lying Now</a></h3>
+                <p>The autobiography written by Rep. Ilhan Omar, D-Minn., appears to prove she was an adult at the time she says her father obtained U.S. citizenship in 2000. Omar herself obtained citizenship on the bas...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/10/26/ice-calls-out-cbs-news-for-leaving-out-deported-aliens-apparent-immigration-fraud/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=ice-calls-out-cbs-news-for-leaving-out-deported-aliens-apparent-immigration-fraud' target='_blank' rel='noopener'>‘Fake And Gay’: ICE Calls Out CBS News For Leaving Out Deported Alien’s Apparent Immigration Fraud</a></h3>
+                <p>According to DHS, Diawara &#x27;oddly claimed he would be persecuted for homosexuality if returned home to Mali, and requested a withholding of removal from his home country.&#x27;...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/10/26/cbs-news-invites-dem-who-kicked-trump-off-the-ballot-to-spread-election-denier-garbage/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=cbs-news-invites-dem-who-kicked-trump-off-the-ballot-to-spread-election-denier-garbage' target='_blank' rel='noopener'>CBS News Invites Dem Who Kicked Trump Off The Ballot To Spread ‘Election Denier’ Garbage</a></h3>
+                <p>CBS&#x27;s 60 Minutes gave Jena Griswold a free pass to smear Tina Peters while evading scrutiny of her own failures....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/tech/amazon-alexa-tablets-launch' target='_blank' rel='noopener'>Amazon killed the Fire tablet for something much better — and pricier</a></h3>
+                <p>For 15 years, Amazon’s Fire tablets served as affordable options for anyone who liked to read books, surf the web, watch videos, and shop for products on Amazon. That’s why it&#x27;s a surprise that A...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/columns/analysis/springfield-residents-say-the-crashes-keep-coming-and-so-do-the-bills' target='_blank' rel='noopener'>Springfield residents say the crashes keep coming — and so do the bills</a></h3>
+                <p>I was put into contact with a Springfield, Ohio, man named Quinn Ferrell, who showed me pictures of the complete destruction of his detached garage by a Haitian driver. Quinn is an exotic pet owner, a...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/news/hells-angels-biker-sentenced-after-pleading-guilty-to-coercing-sexually-explicit-videos-from-children-online' target='_blank' rel='noopener'>Hells Angels biker sentenced after pleading guilty to coercing sexually explicit videos from children online</a></h3>
+                <p>A 42-year-old member of the Hells Angels biker gang was sentenced after pleading guilty to numerous charges related to child pornography, according to the Fontana Police Department. Investigators of t...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/ed-morrissey/2026/10/26/mondays-final-word-n3820341' target='_blank' rel='noopener'>Monday&#x27;s Final Word</a></h3>
+                <p>Monday&#x27;s Final Word...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/john-s-2/2026/10/26/conservative-lawyer-points-to-a-double-standard-at-the-ny-times-n3820361' target='_blank' rel='noopener'>Conservative Lawyer Points to a Double Standard at the NYTimes</a></h3>
+                <p>Conservative Lawyer Points to a Double Standard at the NYTimes...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/tree-hugging-sister/2026/10/26/more-syrupean-economic-bleeding-from-the-tariff-fight-n3820359' target='_blank' rel='noopener'>More Syrupean Economic Bleeding From the Tariff Fight</a></h3>
+                <p>More Syrupean Economic Bleeding From the Tariff Fight...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Judicial Watch</div>
+                <h3><a href='https://www.judicialwatch.org/ice-records-show-drunk-illegal-alien-on-probation-for-felony-dui-when-he-killed-illinois-woman/' target='_blank' rel='noopener'>ICE Records Show Drunk Illegal Alien on Probation for Felony DUI When He Killed Illinois Woman</a></h3>
+                <p>The heavily intoxicated illegal immigrant who killed a woman last summer in a head-on crash in Illinois had…...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Judicial Watch</div>
+                <h3><a href='https://www.judicialwatch.org/victory-court-orders-cia-to-release-january-6-records/' target='_blank' rel='noopener'>Victory: Court Orders CIA to Release January 6 Records</a></h3>
+                <p>Victory: Court Orders CIA to Begin Producing January 6 Records Judicial Watch Sues for FBI’s ‘Rosetta Stone’ Report…...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Judicial Watch</div>
+                <h3><a href='https://www.judicialwatch.org/the-search-warrant-of-ilhan-omars-washington-d-c-residence-et-al-v-united-states-of-america-motion-for-extension-of-time/' target='_blank' rel='noopener'>Motion for Extension of Time in THE SEARCH WARRANT OF ILHAN OMAR’S WASHINGTON, D.C. RESIDENCE ...</a></h3>
+                <p>View the court filing by clicking the link below… CLICK HERE...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/10/polls-are-the-aids-of-american-politics/' target='_blank' rel='noopener'>Polls Are The AIDS Of American Politics</a></h3>
+                <p>Photo Credit: ChatGPT for American Thinker By Joseph Ford Cotto The polling industry has not merely failed to fix itself; it has become an electoral virus, surging through America’s body politic with ...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/10/four-soldiers-died-because-the-military-knew-the-risks-and-continued-anyway/' target='_blank' rel='noopener'>Four Soldiers Died Because The Military Knew The Risks And Continued Anyway</a></h3>
+                <p>Photo Credit: ChatGPT for American Thinker By Mike Robertson An avoidable tragedy in Canada means the U.S. should be reevaluating the competence of the nation’s military leadership....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/10/if-college-is-a-rape-culture-why-are-women-lining-up-to-attend/' target='_blank' rel='noopener'>If College Is A Rape Culture, Why Are Women Lining Up To Attend?</a></h3>
+                <p>Photo Credit: rape culture montage ChatGPT ai-generated illustration By Brian C. Joondeph Elite universities are portrayed as dangerous places for women. Their enrollment figures tell a more complicat...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMifEFVX3lxTE5sQ3M3ZTFkX19VVEFHSHNEX1BmTmZTZzlkemFnVUZfVjBja010TlFJTmIzaU1IU1BlZVRXRU1vemVIREhQeTNpZktjdEFjeGVCS0R3cXRrYVdkZ3VGRXBteUNHeTZ2UklaaWlpTnk5dEJSbF9wOWJvMFhRVjc?oc=5' target='_blank' rel='noopener'>Spot the Difference Daily- Play Now online &amp; 100% Free - The Epoch Times</a></h3>
+                <p>Spot the Difference Daily- Play Now online &amp; 100% Free The Epoch Times...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMi4wFBVV95cUxOdG5aREVvdERyaEhmVUlGS0NpbUxVTVpSNW5ndjhxRzlsZ2R0UlFuRzBxX2prLVlmNmNlem9LNS1xb0YzRTlRRmQxZ0p0TEhlejNSQVFQZGpXeHNmT2hmdE5JaUV6dEdfNkNsRFp6c2UwMDVTZjFFdkc4TVRJcWpDVHViSmVpR1ZVNHZ1REc3ZFROSk85Mk5JcjNCWWRDZFNmeDNUTVdwOVBLdkx3ZnA1V3NxZVpyb0dfRVM3T3R2dFlrNmNFVlg0bndUZ3VyZGMwUnc1UnV6Q0cxSjVNZnZFN2hhUQ?oc=5' target='_blank' rel='noopener'>Regional Chinese CDC Calls Plague Info Confidential as Public Suspicions Grow After Suspected Russia Case - The Epoch Times</a></h3>
+                <p>Regional Chinese CDC Calls Plague Info Confidential as Public Suspicions Grow After Suspected Russia Case The Epoch Times...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMiREFVX3lxTFBSU2dZLXZaX21HbzlKWGxkWnM1eEQwNEZ3VE4xUkJFWFJWSkJ3d0pSY2c4MTBKZXctUXdyWWdicWJQaklP?oc=5' target='_blank' rel='noopener'>The Epoch Times | Breaking News, Latest News, World News and Videos - The Epoch Times</a></h3>
+                <p>The Epoch Times | Breaking News, Latest News, World News and Videos The Epoch Times...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Internet Archive TV News (hourly summary)</div>
+                <h3><a href='https://mastodon.archive.org/@tv/117512535065633493' target='_blank' rel='noopener'>TV news hourly summary · Oct 27, 11:03 UTC</a></h3>
+                <p>Israelis voted in a pivotal election, with Netanyahu seeking another term. U.S. midterm campaigns focused on fraud, corruption, the economy, transgender issues and close Senate races in Texas and else...</p>
+            </div>
+            </div>
+
+        <footer>
+            Automated Segmented Pipeline powered by HTML Scrapers, 11 Global RSS Feeds &amp; Google Gemini AI &bull; 2026-10-27
+        </footer>
+    </div>
+</body>
+</html>

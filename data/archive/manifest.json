@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-10-27",
+    "timestamp": "2026-10-27T11:35:04.368329+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "Turnout so far highest in decades as Israelis vote in pivotal election",
+      "Lula's comeback in Brazil dents Trump's ambitions for Latin America",
+      "Leaders of Norway, Finland hold calls with Putin then Zelenskiy - Reuters",
+      "Chinese brands show Mbappe red card over alleged Mao meme comments - Reuters",
+      "Cash-strapped MoD blows \u00a33million on 'diversity': Labour should put frontline soldiers first, say critics"
+    ],
+    "archive_html_path": "data/archive/2026-10-27/index.html",
+    "data_json_path": "data/archive/2026-10-27/data.json"
+  },
+  {
     "date": "2026-10-26",
     "timestamp": "2026-10-26T12:13:40.914013+00:00",
     "stories_count": 8,
