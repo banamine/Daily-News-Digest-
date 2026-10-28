@@ -1,11 +1,11 @@
 {
-  "last_updated": "2026-10-28T12:05:20.533063+00:00",
+  "last_updated": "2026-10-28T13:08:41.011381+00:00",
   "source": "https://www.alexjoneslive.com/",
   "date": "2026-10-28",
-  "stories_hash": "d1cae6296e82c607da7de59ae8e0c69f",
+  "stories_hash": "23a8a3c8afb2cf98a32c9315e4b5e12f",
   "stories_count": 8,
   "scraped_articles_count": 0,
-  "rss_articles_count": 34,
+  "rss_articles_count": 33,
   "scraped_articles": [],
   "rss_feeds_articles": [
     {
@@ -26,7 +26,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/7eaf/live/69ded4d0-d26f-11f1-a4f1-4fff2e6cf5f3.jpg",
-      "scraped_at": "2026-10-28T12:05:03.697915+00:00"
+      "scraped_at": "2026-10-28T13:08:27.224386+00:00"
     },
     {
       "id": "1bb83243bfb9",
@@ -46,7 +46,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/f8aa/live/94f66d00-d2b4-11f1-8cf0-c5d120932f9f.jpg",
-      "scraped_at": "2026-10-28T12:05:03.697968+00:00"
+      "scraped_at": "2026-10-28T13:08:27.224442+00:00"
     },
     {
       "id": "49e4cbe17fae",
@@ -66,7 +66,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/0a9d/live/58c194a0-d2ae-11f1-b441-2b33b063138f.png",
-      "scraped_at": "2026-10-28T12:05:03.698000+00:00"
+      "scraped_at": "2026-10-28T13:08:27.224475+00:00"
     },
     {
       "id": "93130b3c1427",
@@ -76,8 +76,8 @@
       "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNdWZTWUkyUHE5V0p0b3B1TmJZWmpaM2JpMXVfRnhYbG53VEJycjFwNEpnSmROU0duVENhalpFV1JjZzdUb05MQXRnLW1nTnE0dWRuWWJ4VFNVUmlvWFVpZW1DVFVua201N1o3MTVZMGpfMk5ybW03Y1laRkZjcHFxX0Z6dUJiNnpKWjRqb1hRLUZiN3k4bG15QTZUV1c4eTZ2RlQ0ZWkxN01EQndxek8tMjFTeVJDUDJC?oc=5",
       "excerpt": "As forest fires rage, hundreds of Indonesian students protest government response Reuters",
       "summary": "As forest fires rage, hundreds of Indonesian students protest government response Reuters",
-      "relative_time": "Wed, 28 Oct 2026 11:06:51 GMT",
-      "published": "Wed, 28 Oct 2026 11:06:51 GMT",
+      "relative_time": "Wed, 28 Oct 2026 12:23:43 GMT",
+      "published": "Wed, 28 Oct 2026 12:23:43 GMT",
       "author": "Reuters Top News",
       "feed": "Reuters Top News",
       "feedName": "Reuters Top News",
@@ -86,18 +86,18 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-28T12:05:03.856708+00:00"
+      "scraped_at": "2026-10-28T13:08:27.752686+00:00"
     },
     {
-      "id": "4ffb6842c07d",
-      "headline": "Norway's premier says call with Putin was effort to present European views - Reuters",
-      "title": "Norway's premier says call with Putin was effort to present European views - Reuters",
-      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPa0tFU3FmZUI4RzVyc2hwUzJWbXRDRTNLQWxDSFhhbUlrb19qNVdkWHNmbXBBaGkwMmx4b1o1SEJDY2MtM2hNbWhGWk9yNnRYeXAyVTdyWFFLMUN1MUNNejJWZndqaTJ0aGVwdkVsTkhGYW9TVDdPclRQU0dZS3VQbkhISm90QTlmNGVvZnZKcVZpUFhUenhFZFpscXhtUlZRMVpqTklNRjJuUmthRHJGX3RTZzRBUldPTnFV?oc=5",
-      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPa0tFU3FmZUI4RzVyc2hwUzJWbXRDRTNLQWxDSFhhbUlrb19qNVdkWHNmbXBBaGkwMmx4b1o1SEJDY2MtM2hNbWhGWk9yNnRYeXAyVTdyWFFLMUN1MUNNejJWZndqaTJ0aGVwdkVsTkhGYW9TVDdPclRQU0dZS3VQbkhISm90QTlmNGVvZnZKcVZpUFhUenhFZFpscXhtUlZRMVpqTklNRjJuUmthRHJGX3RTZzRBUldPTnFV?oc=5",
-      "excerpt": "Norway's premier says call with Putin was effort to present European views Reuters",
-      "summary": "Norway's premier says call with Putin was effort to present European views Reuters",
-      "relative_time": "Wed, 28 Oct 2026 10:46:09 GMT",
-      "published": "Wed, 28 Oct 2026 10:46:09 GMT",
+      "id": "e2f5617ea00e",
+      "headline": "Flavio Bolsonaro expected to land in Miami shortly after Trump offers Brazil exit - Reuters",
+      "title": "Flavio Bolsonaro expected to land in Miami shortly after Trump offers Brazil exit - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPTXM0WlJ4eWFnOU96alFqZTd5VklwV1pETlVBNjdhejYzX0hXUHQzZFczWkxRMzhxOGhzOWJqSGdwRTlubFRqMTJQckJ5NXljSFFqYzB2UXRReTVCc0lDR3BvOVlhcERydVBUU3duZFA3THNRZmt1OGZseURzeDAwX2ZCSE5tX3pRUUJ0elpaMU5odHFkcmhJQVU5OS1yRGp4N0FPVVVEWWJQMXFWNHQyOExkVWVjVFQtVDl3SGcybkt3ZzRE?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPTXM0WlJ4eWFnOU96alFqZTd5VklwV1pETlVBNjdhejYzX0hXUHQzZFczWkxRMzhxOGhzOWJqSGdwRTlubFRqMTJQckJ5NXljSFFqYzB2UXRReTVCc0lDR3BvOVlhcERydVBUU3duZFA3THNRZmt1OGZseURzeDAwX2ZCSE5tX3pRUUJ0elpaMU5odHFkcmhJQVU5OS1yRGp4N0FPVVVEWWJQMXFWNHQyOExkVWVjVFQtVDl3SGcybkt3ZzRE?oc=5",
+      "excerpt": "Flavio Bolsonaro expected to land in Miami shortly after Trump offers Brazil exit Reuters",
+      "summary": "Flavio Bolsonaro expected to land in Miami shortly after Trump offers Brazil exit Reuters",
+      "relative_time": "Wed, 28 Oct 2026 11:56:54 GMT",
+      "published": "Wed, 28 Oct 2026 11:56:54 GMT",
       "author": "Reuters Top News",
       "feed": "Reuters Top News",
       "feedName": "Reuters Top News",
@@ -106,18 +106,18 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-28T12:05:03.856762+00:00"
+      "scraped_at": "2026-10-28T13:08:27.752738+00:00"
     },
     {
-      "id": "9492476e8385",
-      "headline": "Qatari mediators present Iran with new deal to end the war, official says - Reuters",
-      "title": "Qatari mediators present Iran with new deal to end the war, official says - Reuters",
-      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQMTAtQ19McEJXRVg0bmN2S1JaMm9lX2VsbUpzSjZnZi1md09fZnBoREF1U2lKT25ybDRzR0lxcC13XzcxRU1UTFFFUXRzem9TVjdNMHA4cjVPel9Rdk02UHk4M1BDUXFZcGRyR0FqcnlhUDNtTFczdy1Nd0VNNktvM3V0bUEzNC1qdXNLQngwOE9HVGtydEFIa1hqdm5sWjRHVHNNaFVteUZSbnVwa2U0MWxvd2RleGJpaXIxeg?oc=5",
-      "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQMTAtQ19McEJXRVg0bmN2S1JaMm9lX2VsbUpzSjZnZi1md09fZnBoREF1U2lKT25ybDRzR0lxcC13XzcxRU1UTFFFUXRzem9TVjdNMHA4cjVPel9Rdk02UHk4M1BDUXFZcGRyR0FqcnlhUDNtTFczdy1Nd0VNNktvM3V0bUEzNC1qdXNLQngwOE9HVGtydEFIa1hqdm5sWjRHVHNNaFVteUZSbnVwa2U0MWxvd2RleGJpaXIxeg?oc=5",
-      "excerpt": "Qatari mediators present Iran with new deal to end the war, official says Reuters",
-      "summary": "Qatari mediators present Iran with new deal to end the war, official says Reuters",
-      "relative_time": "Wed, 28 Oct 2026 09:07:52 GMT",
-      "published": "Wed, 28 Oct 2026 09:07:52 GMT",
+      "id": "8bd81c78ab30",
+      "headline": "Cruise ship residents left stranded in Cambodia after fuel prices soar - Reuters",
+      "title": "Cruise ship residents left stranded in Cambodia after fuel prices soar - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPb3J0MEVjUDYzWV9pcnBYVTBRcFd3SHZZVVF5d29naldtQjRmRGhlOGZkemtiUEdCWU0zUXFNR3FvLS05Mjc2SFRHSXU5SlZpSnRTenZOcFYxV3lyVFBXRmlKZHNxX0lOMXZkRUJHYXNHZGFxMVgzN3kySVRJU2ctb19hYUZYRElpQ1JYY2hmTkhyeFFJVy1GWVZZc08tUERFb3RhR0wwdGM3YnNxWTMzalJISUdJRTRiN3YtczZrRQ?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPb3J0MEVjUDYzWV9pcnBYVTBRcFd3SHZZVVF5d29naldtQjRmRGhlOGZkemtiUEdCWU0zUXFNR3FvLS05Mjc2SFRHSXU5SlZpSnRTenZOcFYxV3lyVFBXRmlKZHNxX0lOMXZkRUJHYXNHZGFxMVgzN3kySVRJU2ctb19hYUZYRElpQ1JYY2hmTkhyeFFJVy1GWVZZc08tUERFb3RhR0wwdGM3YnNxWTMzalJISUdJRTRiN3YtczZrRQ?oc=5",
+      "excerpt": "Cruise ship residents left stranded in Cambodia after fuel prices soar Reuters",
+      "summary": "Cruise ship residents left stranded in Cambodia after fuel prices soar Reuters",
+      "relative_time": "Wed, 28 Oct 2026 11:05:46 GMT",
+      "published": "Wed, 28 Oct 2026 11:05:46 GMT",
       "author": "Reuters Top News",
       "feed": "Reuters Top News",
       "feedName": "Reuters Top News",
@@ -126,18 +126,38 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-28T12:05:03.856801+00:00"
+      "scraped_at": "2026-10-28T13:08:27.752773+00:00"
     },
     {
-      "id": "99d175201328",
-      "headline": "Autumn Budget 2026 live updates: Chancellor leaves Number 11 with red box - as Labour set to raid banks, hike minimum wage and extend fuel duty freeze",
-      "title": "Autumn Budget 2026 live updates: Chancellor leaves Number 11 with red box - as Labour set to raid banks, hike minimum wage and extend fuel duty freeze",
+      "id": "d5c3404fb92f",
+      "headline": "The key points from Chancellor John Healey's first Budget",
+      "title": "The key points from Chancellor John Healey's first Budget",
+      "url": "https://www.dailymail.com/money/markets/article-16245643/The-key-points-Chancellor-John-Healeys-Budget.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
+      "link": "https://www.dailymail.com/money/markets/article-16245643/The-key-points-Chancellor-John-Healeys-Budget.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
+      "excerpt": "Chancellor John Healey is delivering his first Budget against a challenging economic backdrop.",
+      "summary": "Chancellor John Healey is delivering his first Budget against a challenging economic backdrop.",
+      "relative_time": "Wed, 28 Oct 2026 13:04:33 GMT",
+      "published": "Wed, 28 Oct 2026 13:04:33 GMT",
+      "author": "Daily Mail UK",
+      "feed": "Daily Mail UK",
+      "feedName": "Daily Mail UK",
+      "feedId": "59b9073e561e",
+      "category": "Global",
+      "ingestionType": "rss",
+      "sourceGroup": "rss",
+      "imageUrl": "https://i.dailymail.com/1s/2026/10/28/11/112143573-0-image-a-5_1793188512405.jpg",
+      "scraped_at": "2026-10-28T13:08:28.273669+00:00"
+    },
+    {
+      "id": "b8888a2192b7",
+      "headline": "Autumn Budget 2026 live updates: Chancellor John Healey scraps gas bill standing charges, announces \u00a3100 energy bill payment and increases national wage",
+      "title": "Autumn Budget 2026 live updates: Chancellor John Healey scraps gas bill standing charges, announces \u00a3100 energy bill payment and increases national wage",
       "url": "https://www.dailymail.com/news/article-16239695/Autumn-Budget-2026-live-updates-John-Healey.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
       "link": "https://www.dailymail.com/news/article-16239695/Autumn-Budget-2026-live-updates-John-Healey.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
-      "excerpt": "LIVE UPDATES: Chancellor John Healey has left Downing Street clutching his red Budget box as he prepares to unveil Labour's tax and spending plans for Britain.",
-      "summary": "LIVE UPDATES: Chancellor John Healey has left Downing Street clutching his red Budget box as he prepares to unveil Labour's tax and spending plans for Britain.",
-      "relative_time": "Wed, 28 Oct 2026 12:00:40 GMT",
-      "published": "Wed, 28 Oct 2026 12:00:40 GMT",
+      "excerpt": "LIVE UPDATES: Brexit has dominated a fiery Prime Minister's Questions as Chancellor John Healey prepares to deliver his first Budget under Andy Burnham's Labour government.",
+      "summary": "LIVE UPDATES: Brexit has dominated a fiery Prime Minister's Questions as Chancellor John Healey prepares to deliver his first Budget under Andy Burnham's Labour government.",
+      "relative_time": "Wed, 28 Oct 2026 13:04:19 GMT",
+      "published": "Wed, 28 Oct 2026 13:04:19 GMT",
       "author": "Daily Mail UK",
       "feed": "Daily Mail UK",
       "feedName": "Daily Mail UK",
@@ -145,19 +165,19 @@
       "category": "Global",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://i.dailymail.com/1s/2026/10/28/11/112142691-0-image-a-35_1793186985510.jpg",
-      "scraped_at": "2026-10-28T12:05:04.584806+00:00"
+      "imageUrl": "https://i.dailymail.com/1s/2026/10/28/12/112144451-0-image-a-49_1793190878291.jpg",
+      "scraped_at": "2026-10-28T13:08:28.273745+00:00"
     },
     {
-      "id": "5e42d0c58e5e",
-      "headline": "Business backlash over plans to hike the minimum wage as firms say jobs will be at risk",
-      "title": "Business backlash over plans to hike the minimum wage as firms say jobs will be at risk",
-      "url": "https://www.dailymail.com/news/article-16244201/Business-backlash-plans-hike-minimum-wage-firms-say-jobs-risk.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
-      "link": "https://www.dailymail.com/news/article-16244201/Business-backlash-plans-hike-minimum-wage-firms-say-jobs-risk.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
-      "excerpt": "Restaurant and retail bosses said they desperately need to be given breathing space in the Budget, as further wage rises will make it even harder for them to retain or take on staff.",
-      "summary": "Restaurant and retail bosses said they desperately need to be given breathing space in the Budget, as further wage rises will make it even harder for them to retain or take on staff.",
-      "relative_time": "Wed, 28 Oct 2026 11:52:13 GMT",
-      "published": "Wed, 28 Oct 2026 11:52:13 GMT",
+      "id": "a0ec9073ee79",
+      "headline": "Government scraps standing charges on gas bills - what will it mean for your energy bills?",
+      "title": "Government scraps standing charges on gas bills - what will it mean for your energy bills?",
+      "url": "https://www.dailymail.com/money/bills/article-16244937/Government-scraps-standing-charges-gas-bills-mean-energy-bills.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
+      "link": "https://www.dailymail.com/money/bills/article-16244937/Government-scraps-standing-charges-gas-bills-mean-energy-bills.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
+      "excerpt": "This is Money examines what standing charges are, how much they cost households and how the scrapping of them on gas bills will affect you.",
+      "summary": "This is Money examines what standing charges are, how much they cost households and how the scrapping of them on gas bills will affect you.",
+      "relative_time": "Wed, 28 Oct 2026 13:04:03 GMT",
+      "published": "Wed, 28 Oct 2026 13:04:03 GMT",
       "author": "Daily Mail UK",
       "feed": "Daily Mail UK",
       "feedName": "Daily Mail UK",
@@ -165,88 +185,48 @@
       "category": "Global",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://i.dailymail.com/1s/2026/10/27/22/112132463-0-image-a-10_1793141283635.jpg",
-      "scraped_at": "2026-10-28T12:05:04.584869+00:00"
+      "imageUrl": "https://i.dailymail.com/1s/2026/10/28/09/112138459-0-image-a-2_1793180640802.jpg",
+      "scraped_at": "2026-10-28T13:08:28.273787+00:00"
     },
     {
-      "id": "5e038a25c2c9",
-      "headline": "Chancellor set to hand out billions to benefits claimants in Budget as he hosts Martin Lewis at Number 11",
-      "title": "Chancellor set to hand out billions to benefits claimants in Budget as he hosts Martin Lewis at Number 11",
-      "url": "https://www.dailymail.com/news/article-16244183/Chancellor-welfare-reform-Budget-boosts-handouts-10-Millions.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
-      "link": "https://www.dailymail.com/news/article-16244183/Chancellor-welfare-reform-Budget-boosts-handouts-10-Millions.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
-      "excerpt": "John Healey will not curb runaway welfare spending despite growing pressure on the public finances. Instead, he is expected to increase the tax burden to the highest level on record to help boost handouts.",
-      "summary": "John Healey will not curb runaway welfare spending despite growing pressure on the public finances. Instead, he is expected to increase the tax burden to the highest level on record to help boost handouts.",
-      "relative_time": "Wed, 28 Oct 2026 11:06:23 GMT",
-      "published": "Wed, 28 Oct 2026 11:06:23 GMT",
-      "author": "Daily Mail UK",
-      "feed": "Daily Mail UK",
-      "feedName": "Daily Mail UK",
-      "feedId": "59b9073e561e",
-      "category": "Global",
-      "ingestionType": "rss",
-      "sourceGroup": "rss",
-      "imageUrl": "https://i.dailymail.com/1s/2026/10/28/07/112138197-0-image-a-15_1793173029091.jpg",
-      "scraped_at": "2026-10-28T12:05:04.584921+00:00"
-    },
-    {
-      "id": "8e32be78eec5",
-      "headline": "Clippers\u2019 Rui Hachimura dishes about \u2018tough\u2019 Lakers exit",
-      "title": "Clippers\u2019 Rui Hachimura dishes about \u2018tough\u2019 Lakers exit",
-      "url": "https://nypost.com/2026/10/28/sports/clippers-rui-hachimura-tough-lakers-exit/",
-      "link": "https://nypost.com/2026/10/28/sports/clippers-rui-hachimura-tough-lakers-exit/",
-      "excerpt": "Did Rui Hachimura want to stay with the Lakers before joining the Clippers in free agency?",
-      "summary": "Did Rui Hachimura want to stay with the Lakers before joining the Clippers in free agency?",
-      "relative_time": "Wed, 28 Oct 2026 08:00:00 -0400",
-      "published": "Wed, 28 Oct 2026 08:00:00 -0400",
-      "author": "Khobi Price",
+      "id": "f6f9c46b8a2e",
+      "headline": "Julia Stiles dubs \u2018DWTS\u2019 partner Ezra Sosa a \u2018cranky bitch\u2019 after heated rehearsal",
+      "title": "Julia Stiles dubs \u2018DWTS\u2019 partner Ezra Sosa a \u2018cranky bitch\u2019 after heated rehearsal",
+      "url": "https://pagesix.com/2026/10/28/entertainment/julia-stiles-dubs-dwts-partner-ezra-sosa-a-cranky-bitch-after-heated-rehearsal/",
+      "link": "https://pagesix.com/2026/10/28/entertainment/julia-stiles-dubs-dwts-partner-ezra-sosa-a-cranky-bitch-after-heated-rehearsal/",
+      "excerpt": "Sosa admitted in a confessional that he was \"being too hard\" on his partner ahead of their \"Horror Movie Night\" performance Tuesday.",
+      "summary": "Sosa admitted in a confessional that he was \"being too hard\" on his partner ahead of their \"Horror Movie Night\" performance Tuesday.",
+      "relative_time": "Wed, 28 Oct 2026 09:04:29 -0400",
+      "published": "Wed, 28 Oct 2026 09:04:29 -0400",
+      "author": "Jolie Zenna",
       "feed": "New York Post",
       "feedName": "New York Post",
       "feedId": "f35f2eec037f",
       "category": "Global",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F10%2Frui-hachimura-seen-warmups-los-146272096_4a2591.jpg?w%3D1024",
-      "scraped_at": "2026-10-28T12:05:05.507156+00:00"
+      "imageUrl": "https://pagesix.com/wp-content%2Fuploads%2Fsites%2F3%2F2026%2F10%2Fjulia-stiles-dubs-dwts-partner-146730133.jpg?w%3D1024",
+      "scraped_at": "2026-10-28T13:08:29.313721+00:00"
     },
     {
-      "id": "9fe8e1186607",
-      "headline": "Best Margaret Qualley Movies: From \u2018Once Upon a Time in Hollywood\u2019 to \u2018Love of Your Life\u2019",
-      "title": "Best Margaret Qualley Movies: From \u2018Once Upon a Time in Hollywood\u2019 to \u2018Love of Your Life\u2019",
-      "url": "https://decider.com/2026/10/28/best-margaret-qualley-movies-on-streaming/",
-      "link": "https://decider.com/2026/10/28/best-margaret-qualley-movies-on-streaming/",
-      "excerpt": "The budding star (and daughter of Andie MacDowell) has a history of strong roles for top-shelf directors.",
-      "summary": "The budding star (and daughter of Andie MacDowell) has a history of strong roles for top-shelf directors.",
-      "relative_time": "Wed, 28 Oct 2026 08:00:00 -0400",
-      "published": "Wed, 28 Oct 2026 08:00:00 -0400",
-      "author": "mliss1578",
+      "id": "2444120595c2",
+      "headline": "The GOP\u2019s pre-midterms mistakes | Heather Higgins",
+      "title": "The GOP\u2019s pre-midterms mistakes | Heather Higgins",
+      "url": "https://nypost.com/video/the-gops-pre-midterms-mistakes-heather-higgins/",
+      "link": "https://nypost.com/video/the-gops-pre-midterms-mistakes-heather-higgins/",
+      "excerpt": "Heather Higgins, CEO of Independent Women\u2019s Voice joins Miranda this week for a pre-midterm election conversation. Higgins tells Miranda she doesn\u2019t see a blue wave coming as big as many predict and election outcomes could be even better for conservatives if Republican candidates learn to communicate impactfully to women and swing voters rather than get...",
+      "summary": "Heather Higgins, CEO of Independent Women\u2019s Voice joins Miranda this week for a pre-midterm election conversation. Higgins tells Miranda she doesn\u2019t see a blue wave coming as big as many predict and election outcomes could be even better for conservatives if Republican candidates learn to communicate impactfully to women and swing voters rather than get...",
+      "relative_time": "Wed, 28 Oct 2026 09:00:07 -0400",
+      "published": "Wed, 28 Oct 2026 09:00:07 -0400",
+      "author": "New York Post Video",
       "feed": "New York Post",
       "feedName": "New York Post",
       "feedId": "f35f2eec037f",
       "category": "Global",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F10%2FDECIDER-MOVIES-1.jpg?quality%3D90%26strip%3Dall",
-      "scraped_at": "2026-10-28T12:05:05.507217+00:00"
-    },
-    {
-      "id": "458512c0b71b",
-      "headline": "The World Series gave us a thriller \u2014 and a reminder of what we\u2019ll be missing",
-      "title": "The World Series gave us a thriller \u2014 and a reminder of what we\u2019ll be missing",
-      "url": "https://nypost.com/2026/10/28/sports/rays-brewers-world-series-game-4-thriller-delays-mlb-labor-hell/",
-      "link": "https://nypost.com/2026/10/28/sports/rays-brewers-world-series-game-4-thriller-delays-mlb-labor-hell/",
-      "excerpt": "This October, more than most, we could use a long, classic World Series.",
-      "summary": "This October, more than most, we could use a long, classic World Series.",
-      "relative_time": "Wed, 28 Oct 2026 07:56:32 -0400",
-      "published": "Wed, 28 Oct 2026 07:56:32 -0400",
-      "author": "Dan Martin",
-      "feed": "New York Post",
-      "feedName": "New York Post",
-      "feedId": "f35f2eec037f",
-      "category": "Global",
-      "ingestionType": "rss",
-      "sourceGroup": "rss",
-      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F10%2Ftampa-bay-rays-ben-williamson-146700946.jpg?quality%3D90%26strip%3Dall",
-      "scraped_at": "2026-10-28T12:05:05.507257+00:00"
+      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F10%2Fpfo_higgins_wp.png",
+      "scraped_at": "2026-10-28T13:08:29.313854+00:00"
     },
     {
       "id": "6b1dbe2abba3",
@@ -266,7 +246,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://100percentfedup.com/wp-content/uploads/2026/10/cassidy-hutchinson-grand-jury-20261027.jpg",
-      "scraped_at": "2026-10-28T12:05:06.202393+00:00"
+      "scraped_at": "2026-10-28T13:08:29.685102+00:00"
     },
     {
       "id": "1bfcde41838b",
@@ -286,7 +266,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://100percentfedup.com/wp-content/uploads/2026/10/67c371eb-df13-4a7a-80b8-50c0abb70ce9.jpg",
-      "scraped_at": "2026-10-28T12:05:06.202457+00:00"
+      "scraped_at": "2026-10-28T13:08:29.685168+00:00"
     },
     {
       "id": "17cf86264c42",
@@ -306,7 +286,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://100percentfedup.com/wp-content/uploads/2026/10/hakeem-jeffries-polls-featured-1600x900-v2.jpg",
-      "scraped_at": "2026-10-28T12:05:06.202524+00:00"
+      "scraped_at": "2026-10-28T13:08:29.685234+00:00"
     },
     {
       "id": "8528378c428c",
@@ -326,7 +306,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://thefederalist.com/wp-content/uploads/2026/10/Truman-Dewey-polls-1948-e1793184281907-1158x675.jpg",
-      "scraped_at": "2026-10-28T12:05:06.368735+00:00"
+      "scraped_at": "2026-10-28T13:08:29.853917+00:00"
     },
     {
       "id": "fa5f1a5fde06",
@@ -346,7 +326,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://thefederalist.com/wp-content/uploads/2026/10/Woman-Holding-Child-Unsplash-1200x675.jpg",
-      "scraped_at": "2026-10-28T12:05:06.368782+00:00"
+      "scraped_at": "2026-10-28T13:08:29.853967+00:00"
     },
     {
       "id": "bcd48fdf3454",
@@ -366,7 +346,47 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://thefederalist.com/wp-content/uploads/2026/10/lia-1200x675.jpg",
-      "scraped_at": "2026-10-28T12:05:06.368827+00:00"
+      "scraped_at": "2026-10-28T13:08:29.854013+00:00"
+    },
+    {
+      "id": "9ed0254eae94",
+      "headline": "Efforts by Melania Trump, Pope Leo continue to pay off in war-torn Ukrainian city",
+      "title": "Efforts by Melania Trump, Pope Leo continue to pay off in war-torn Ukrainian city",
+      "url": "https://www.theblaze.com/news/ceasefire-urged-by-pope-brokered-by-melania-trump-holds-firm-in-war-torn-ukrainian-city",
+      "link": "https://www.theblaze.com/news/ceasefire-urged-by-pope-brokered-by-melania-trump-holds-firm-in-war-torn-ukrainian-city",
+      "excerpt": "It took a Trump to cool the guns in one of Europe's most war-torn cities. The ruined city of Oleshky in Ukraine's southern Kherson region has been occupied by Russian forces for over four years. In addition to the persistent threat of violence, the estimated 2,000 residents trapped in the city \u2014 a city flooded after the destruction of the Kakhovka Dam \u2014 have long faced severe food, water, and medicine shortages. 'Her personal involvement is crucial to the entire process.' Some civilians reportedly began consuming soup made from garden weeds in recent months to survive. After Pope Leo XIV urged Moscow and Kiev to agree to a ceasefire in the...",
+      "summary": "It took a Trump to cool the guns in one of Europe's most war-torn cities. The ruined city of Oleshky in Ukraine's southern Kherson region has been occupied by Russian forces for over four years. In addition to the persistent threat of violence, the estimated 2,000 residents trapped in the city \u2014 a city flooded after the destruction of the Kakhovka Dam \u2014 have long faced severe food, water, and medicine shortages. 'Her personal involvement is crucial to the entire process.' Some civilians reportedly began consuming soup made from garden weeds in recent months to survive. After Pope Leo XIV urged Moscow and Kiev to agree to a ceasefire in the...",
+      "relative_time": "Wed, 28 Oct 2026 12:35:00 +0000",
+      "published": "Wed, 28 Oct 2026 12:35:00 +0000",
+      "author": "Joseph MacKinnon",
+      "feed": "The Blaze",
+      "feedName": "The Blaze",
+      "feedId": "ebb74cbdeb82",
+      "category": "Alternative",
+      "ingestionType": "rss",
+      "sourceGroup": "rss",
+      "imageUrl": "https://www.theblaze.com/media-library/efforts-by-melania-trump-pope-leo-continue-to-pay-off-in-war-torn-ukrainian-city.jpg?id=68542615&width=980",
+      "scraped_at": "2026-10-28T13:08:30.102549+00:00"
+    },
+    {
+      "id": "f94810e25f84",
+      "headline": "Democrats can\u2019t discourage oil investment and demand cheap gas",
+      "title": "Democrats can\u2019t discourage oil investment and demand cheap gas",
+      "url": "https://www.theblaze.com/columns/opinion/democrats-cant-discourage-oil-investment-and-demand-cheap-gas",
+      "link": "https://www.theblaze.com/columns/opinion/democrats-cant-discourage-oil-investment-and-demand-cheap-gas",
+      "excerpt": "America can produce more crude oil and still fail to put much more gasoline in a driver\u2019s tank. Between the well and the pump stand pipelines, refineries, and investments that take years to build. Politicians who promise affordability while making that work harder have a problem no campaign slogan can fix. Americans don\u2019t need another lecture about why they should accept higher electric bills. They need leaders willing to confront the policies that make energy harder to produce and deliver. Every family heating a home, filling a gas tank, or buying groceries pays the price. When energy gets more expensive, the cost works its way through...",
+      "summary": "America can produce more crude oil and still fail to put much more gasoline in a driver\u2019s tank. Between the well and the pump stand pipelines, refineries, and investments that take years to build. Politicians who promise affordability while making that work harder have a problem no campaign slogan can fix. Americans don\u2019t need another lecture about why they should accept higher electric bills. They need leaders willing to confront the policies that make energy harder to produce and deliver. Every family heating a home, filling a gas tank, or buying groceries pays the price. When energy gets more expensive, the cost works its way through...",
+      "relative_time": "Wed, 28 Oct 2026 12:00:00 +0000",
+      "published": "Wed, 28 Oct 2026 12:00:00 +0000",
+      "author": "Michael Schwartz",
+      "feed": "The Blaze",
+      "feedName": "The Blaze",
+      "feedId": "ebb74cbdeb82",
+      "category": "Alternative",
+      "ingestionType": "rss",
+      "sourceGroup": "rss",
+      "imageUrl": "https://www.theblaze.com/media-library/democrats-cant-discourage-oil-investment-and-demand-cheap-gas.jpg?id=68538586&width=980",
+      "scraped_at": "2026-10-28T13:08:30.103315+00:00"
     },
     {
       "id": "c547e2c32f92",
@@ -386,47 +406,47 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://www.theblaze.com/media-library/bargain-buyer-beware-that-cheap-car-could-cost-you-thousands-more.jpg?id=68538696&width=980",
-      "scraped_at": "2026-10-28T12:05:06.618995+00:00"
+      "scraped_at": "2026-10-28T13:08:30.104013+00:00"
     },
     {
-      "id": "9583352155af",
-      "headline": "The VFW should be fighting for veterans, not gender ideology",
-      "title": "The VFW should be fighting for veterans, not gender ideology",
-      "url": "https://www.theblaze.com/columns/opinion/the-vfw-should-be-fighting-for-veterans-not-gender-ideology",
-      "link": "https://www.theblaze.com/columns/opinion/the-vfw-should-be-fighting-for-veterans-not-gender-ideology",
-      "excerpt": "Democratic lawmakers want the Department of Veterans Affairs to reintroduce special taxpayer-funded support staff services dedicated to assisting veterans who want to \u201cchange\u201d their gender. If they take Congress in November, they might be able to pressure the Trump administration to do just that. If this happens, conservatives may have the Veterans of Foreign Wars to thank for it \u2014 even though veterans tend to be conservative and there is never a need for taxpayers to pay for gender transition treatments and recovery. In fact, it\u2019s horrible for national security. But the VFW doesn\u2019t seem to care. Veterans need advocates, not another...",
-      "summary": "Democratic lawmakers want the Department of Veterans Affairs to reintroduce special taxpayer-funded support staff services dedicated to assisting veterans who want to \u201cchange\u201d their gender. If they take Congress in November, they might be able to pressure the Trump administration to do just that. If this happens, conservatives may have the Veterans of Foreign Wars to thank for it \u2014 even though veterans tend to be conservative and there is never a need for taxpayers to pay for gender transition treatments and recovery. In fact, it\u2019s horrible for national security. But the VFW doesn\u2019t seem to care. Veterans need advocates, not another...",
-      "relative_time": "Wed, 28 Oct 2026 10:00:00 +0000",
-      "published": "Wed, 28 Oct 2026 10:00:00 +0000",
-      "author": "Matt Cover",
-      "feed": "The Blaze",
-      "feedName": "The Blaze",
-      "feedId": "ebb74cbdeb82",
+      "id": "9f84926db7c8",
+      "headline": "US Navy & Marine Corps Boards Defying Orders To Keep Trans Personnel",
+      "title": "US Navy & Marine Corps Boards Defying Orders To Keep Trans Personnel",
+      "url": "https://hotair.com/headlines/2026/10/27/us-navy-and-marine-corps-boards-defying-orders-to-keep-trans-personnel-n3820334",
+      "link": "https://hotair.com/headlines/2026/10/27/us-navy-and-marine-corps-boards-defying-orders-to-keep-trans-personnel-n3820334",
+      "excerpt": "US Navy & Marine Corps Boards Defying Orders To Keep Trans Personnel",
+      "summary": "US Navy & Marine Corps Boards Defying Orders To Keep Trans Personnel",
+      "relative_time": "Wed, 28 Oct 2026 09:00:00 -0400",
+      "published": "Wed, 28 Oct 2026 09:00:00 -0400",
+      "author": "Hot Air",
+      "feed": "Hot Air",
+      "feedName": "Hot Air",
+      "feedId": "9c153127586e",
       "category": "Alternative",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://www.theblaze.com/media-library/the-vfw-should-be-fighting-for-veterans-not-gender-ideology.jpg?id=68538691&width=980",
-      "scraped_at": "2026-10-28T12:05:06.619552+00:00"
+      "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
+      "scraped_at": "2026-10-28T13:08:30.262736+00:00"
     },
     {
-      "id": "3999338b3d1e",
-      "headline": "4-year-old child found dead in Atlanta \u2014 cops arrest friend of the mother more than 100 miles away",
-      "title": "4-year-old child found dead in Atlanta \u2014 cops arrest friend of the mother more than 100 miles away",
-      "url": "https://www.theblaze.com/news/child-death-atlanta-mom-friend",
-      "link": "https://www.theblaze.com/news/child-death-atlanta-mom-friend",
-      "excerpt": "Atlanta police investigating the tragic death of a 4-year-old boy have arrested a friend of the boy's mother. Police said they were called to a townhome in a gated community in southwest Atlanta on Monday evening at about 7:15 p.m. for a welfare check. 'He was 4. He was just the sweetest little boy ever, always smiling, and he loved his mommy.' After forcing their way into the home, police found the child deceased inside. They tried to resuscitate the child, but he was declared dead at the scene. Police determined that 32-year-old Jasmaine Smoak had allegedly fled from the scene with three children. Smoak's vehicle was tracked by license...",
-      "summary": "Atlanta police investigating the tragic death of a 4-year-old boy have arrested a friend of the boy's mother. Police said they were called to a townhome in a gated community in southwest Atlanta on Monday evening at about 7:15 p.m. for a welfare check. 'He was 4. He was just the sweetest little boy ever, always smiling, and he loved his mommy.' After forcing their way into the home, police found the child deceased inside. They tried to resuscitate the child, but he was declared dead at the scene. Police determined that 32-year-old Jasmaine Smoak had allegedly fled from the scene with three children. Smoak's vehicle was tracked by license...",
-      "relative_time": "Wed, 28 Oct 2026 09:30:00 +0000",
-      "published": "Wed, 28 Oct 2026 09:30:00 +0000",
-      "author": "Carlos Garcia",
-      "feed": "The Blaze",
-      "feedName": "The Blaze",
-      "feedId": "ebb74cbdeb82",
+      "id": "c16bd9c5255b",
+      "headline": "Surprise: Another Bibi Comeback?",
+      "title": "Surprise: Another Bibi Comeback?",
+      "url": "https://hotair.com/ed-morrissey/2026/10/28/surprise-another-bibi-comeback-n3820412",
+      "link": "https://hotair.com/ed-morrissey/2026/10/28/surprise-another-bibi-comeback-n3820412",
+      "excerpt": "Surprise: Another Bibi Comeback?",
+      "summary": "Surprise: Another Bibi Comeback?",
+      "relative_time": "Wed, 28 Oct 2026 08:40:44 -0400",
+      "published": "Wed, 28 Oct 2026 08:40:44 -0400",
+      "author": "Hot Air",
+      "feed": "Hot Air",
+      "feedName": "Hot Air",
+      "feedId": "9c153127586e",
       "category": "Alternative",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://www.theblaze.com/media-library/4-year-old-child-found-dead-in-atlanta-cops-arrest-friend-of-the-mother-more-than-100-miles-away.jpg?id=68539807&width=980",
-      "scraped_at": "2026-10-28T12:05:06.619829+00:00"
+      "imageUrl": "https://media.townhall.com/cdn/hodl/2026/272/602b60d8-4d9c-4189-a2e3-9e59f748ccda.png",
+      "scraped_at": "2026-10-28T13:08:30.262764+00:00"
     },
     {
       "id": "0207449104dd",
@@ -446,47 +466,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://media.townhall.com/cdn/hodl/2026/222/d1bb68cf-d3e1-43c7-986d-9a9cfcc3af3b.jpg",
-      "scraped_at": "2026-10-28T12:05:07.069853+00:00"
-    },
-    {
-      "id": "a88f7cb77849",
-      "headline": "\u2018I\u2019ve Got Six Shots And The High Ground\u2019: Candidate Live Updates While in Shootout With Police",
-      "title": "\u2018I\u2019ve Got Six Shots And The High Ground\u2019: Candidate Live Updates While in Shootout With Police",
-      "url": "https://hotair.com/headlines/2026/10/28/ive-got-six-shots-and-the-high-ground-candidate-live-updates-while-in-shootout-with-police-n3820365",
-      "link": "https://hotair.com/headlines/2026/10/28/ive-got-six-shots-and-the-high-ground-candidate-live-updates-while-in-shootout-with-police-n3820365",
-      "excerpt": "\u2018I\u2019ve Got Six Shots And The High Ground\u2019: Candidate Live Updates While in Shootout With Police",
-      "summary": "\u2018I\u2019ve Got Six Shots And The High Ground\u2019: Candidate Live Updates While in Shootout With Police",
-      "relative_time": "Wed, 28 Oct 2026 08:00:00 -0400",
-      "published": "Wed, 28 Oct 2026 08:00:00 -0400",
-      "author": "Hot Air",
-      "feed": "Hot Air",
-      "feedName": "Hot Air",
-      "feedId": "9c153127586e",
-      "category": "Alternative",
-      "ingestionType": "rss",
-      "sourceGroup": "rss",
-      "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-28T12:05:07.069901+00:00"
-    },
-    {
-      "id": "915f2d17028c",
-      "headline": "Tuesday's Final Word",
-      "title": "Tuesday's Final Word",
-      "url": "https://hotair.com/ed-morrissey/2026/10/27/tuesdays-final-word-n3820395",
-      "link": "https://hotair.com/ed-morrissey/2026/10/27/tuesdays-final-word-n3820395",
-      "excerpt": "Tuesday's Final Word",
-      "summary": "Tuesday's Final Word",
-      "relative_time": "Tue, 27 Oct 2026 22:00:03 -0400",
-      "published": "Tue, 27 Oct 2026 22:00:03 -0400",
-      "author": "Hot Air",
-      "feed": "Hot Air",
-      "feedName": "Hot Air",
-      "feedId": "9c153127586e",
-      "category": "Alternative",
-      "ingestionType": "rss",
-      "sourceGroup": "rss",
-      "imageUrl": "https://media.townhall.com/cdn/hodl/2026/267/69d25ff7-9e03-41cc-9683-b03275e90e16.jpg",
-      "scraped_at": "2026-10-28T12:05:07.069914+00:00"
+      "scraped_at": "2026-10-28T13:08:30.262794+00:00"
     },
     {
       "id": "ddf2fc0e0edd",
@@ -506,7 +486,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-28T12:05:07.553773+00:00"
+      "scraped_at": "2026-10-28T13:08:30.493750+00:00"
     },
     {
       "id": "19b71ed26541",
@@ -526,7 +506,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-28T12:05:07.553838+00:00"
+      "scraped_at": "2026-10-28T13:08:30.493812+00:00"
     },
     {
       "id": "b604d1a1d732",
@@ -546,7 +526,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-28T12:05:07.553893+00:00"
+      "scraped_at": "2026-10-28T13:08:30.493866+00:00"
     },
     {
       "id": "1819bc04e9ba",
@@ -566,7 +546,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.americanthinker.com/9a/9aolnftrxumgby1kvnuo_640.jpg",
-      "scraped_at": "2026-10-28T12:05:07.993525+00:00"
+      "scraped_at": "2026-10-28T13:08:30.720778+00:00"
     },
     {
       "id": "4e2618d8caf5",
@@ -586,7 +566,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.americanthinker.com/7l/7lf9vlq4oq8nqzaypbau_640.jpg",
-      "scraped_at": "2026-10-28T12:05:07.993812+00:00"
+      "scraped_at": "2026-10-28T13:08:30.721071+00:00"
     },
     {
       "id": "12fc1234ad57",
@@ -606,7 +586,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.americanthinker.com/gu/guupqjyrkhxpro2lzp6p_640.jpg",
-      "scraped_at": "2026-10-28T12:05:07.994090+00:00"
+      "scraped_at": "2026-10-28T13:08:30.721385+00:00"
     },
     {
       "id": "983644140dac",
@@ -626,7 +606,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-28T12:05:08.549803+00:00"
+      "scraped_at": "2026-10-28T13:08:31.235556+00:00"
     },
     {
       "id": "efb4a273c3f7",
@@ -646,7 +626,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-28T12:05:08.549860+00:00"
+      "scraped_at": "2026-10-28T13:08:31.235616+00:00"
     },
     {
       "id": "373547fec632",
@@ -666,18 +646,18 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-28T12:05:08.549900+00:00"
+      "scraped_at": "2026-10-28T13:08:31.235654+00:00"
     },
     {
-      "id": "232c5a305059",
-      "headline": "TV news hourly summary \u00b7 Oct 28, 12:03 UTC",
-      "title": "TV news hourly summary \u00b7 Oct 28, 12:03 UTC",
-      "url": "https://mastodon.archive.org/@tv/117518433347571523",
-      "link": "https://mastodon.archive.org/@tv/117518433347571523",
-      "excerpt": "With six days until midterms, Trump and other leaders campaign across battleground states. Polls show a tight South Carolina Senate race, a moderate GOP lead in Florida and a wide Democratic lead in Minnesota. DOJ plans election monitors in all 50 states and seeks to intervene in vote counting in Alaska and California. At least 30 people died in a Spanish high-speed train collision. Israel\u2019s election has no clear winner.",
-      "summary": "With six days until midterms, Trump and other leaders campaign across battleground states. Polls show a tight South Carolina Senate race, a moderate GOP lead in Florida and a wide Democratic lead in Minnesota. DOJ plans election monitors in all 50 states and seeks to intervene in vote counting in Alaska and California. At least 30 people died in a Spanish high-speed train collision. Israel\u2019s election has no clear winner.",
-      "relative_time": "Wed, 28 Oct 2026 12:03:05 +0000",
-      "published": "Wed, 28 Oct 2026 12:03:05 +0000",
+      "id": "6ac0bdf8a82e",
+      "headline": "TV news hourly summary \u00b7 Oct 28, 13:03 UTC",
+      "title": "TV news hourly summary \u00b7 Oct 28, 13:03 UTC",
+      "url": "https://mastodon.archive.org/@tv/117518669338518484",
+      "link": "https://mastodon.archive.org/@tv/117518669338518484",
+      "excerpt": "At least 31 people were reported dead in a high-speed train crash in Spain, with the toll expected to rise. Israel\u2019s election produced no clear winner, with neither Netanyahu nor his rival projected to secure a majority. U.S. midterm campaigns intensified, polls showed a South Carolina Senate tossup, and the Fed\u2019s rate decision loomed. Bolsonaro reportedly fled Brazil amid legal uncertainty.",
+      "summary": "At least 31 people were reported dead in a high-speed train crash in Spain, with the toll expected to rise. Israel\u2019s election produced no clear winner, with neither Netanyahu nor his rival projected to secure a majority. U.S. midterm campaigns intensified, polls showed a South Carolina Senate tossup, and the Fed\u2019s rate decision loomed. Bolsonaro reportedly fled Brazil amid legal uncertainty.",
+      "relative_time": "Wed, 28 Oct 2026 13:03:06 +0000",
+      "published": "Wed, 28 Oct 2026 13:03:06 +0000",
       "author": "Internet Archive TV News",
       "feed": "Internet Archive TV News (hourly summary)",
       "feedName": "Internet Archive TV News (hourly summary)",
@@ -686,7 +666,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "",
-      "scraped_at": "2026-10-28T12:05:08.859036+00:00"
+      "scraped_at": "2026-10-28T13:08:41.010491+00:00"
     }
   ],
   "stories": [
@@ -708,7 +688,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/7eaf/live/69ded4d0-d26f-11f1-a4f1-4fff2e6cf5f3.jpg",
-      "scraped_at": "2026-10-28T12:05:03.697915+00:00"
+      "scraped_at": "2026-10-28T13:08:27.224386+00:00"
     },
     {
       "id": "1bb83243bfb9",
@@ -728,7 +708,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/f8aa/live/94f66d00-d2b4-11f1-8cf0-c5d120932f9f.jpg",
-      "scraped_at": "2026-10-28T12:05:03.697968+00:00"
+      "scraped_at": "2026-10-28T13:08:27.224442+00:00"
     },
     {
       "id": "93130b3c1427",
@@ -738,8 +718,8 @@
       "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNdWZTWUkyUHE5V0p0b3B1TmJZWmpaM2JpMXVfRnhYbG53VEJycjFwNEpnSmROU0duVENhalpFV1JjZzdUb05MQXRnLW1nTnE0dWRuWWJ4VFNVUmlvWFVpZW1DVFVua201N1o3MTVZMGpfMk5ybW03Y1laRkZjcHFxX0Z6dUJiNnpKWjRqb1hRLUZiN3k4bG15QTZUV1c4eTZ2RlQ0ZWkxN01EQndxek8tMjFTeVJDUDJC?oc=5",
       "excerpt": "As forest fires rage, hundreds of Indonesian students protest government response Reuters",
       "summary": "As forest fires rage, hundreds of Indonesian students protest government response Reuters",
-      "relative_time": "Wed, 28 Oct 2026 11:06:51 GMT",
-      "published": "Wed, 28 Oct 2026 11:06:51 GMT",
+      "relative_time": "Wed, 28 Oct 2026 12:23:43 GMT",
+      "published": "Wed, 28 Oct 2026 12:23:43 GMT",
       "author": "Reuters Top News",
       "feed": "Reuters Top News",
       "feedName": "Reuters Top News",
@@ -748,18 +728,18 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-28T12:05:03.856708+00:00"
+      "scraped_at": "2026-10-28T13:08:27.752686+00:00"
     },
     {
-      "id": "4ffb6842c07d",
-      "headline": "Norway's premier says call with Putin was effort to present European views - Reuters",
-      "title": "Norway's premier says call with Putin was effort to present European views - Reuters",
-      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPa0tFU3FmZUI4RzVyc2hwUzJWbXRDRTNLQWxDSFhhbUlrb19qNVdkWHNmbXBBaGkwMmx4b1o1SEJDY2MtM2hNbWhGWk9yNnRYeXAyVTdyWFFLMUN1MUNNejJWZndqaTJ0aGVwdkVsTkhGYW9TVDdPclRQU0dZS3VQbkhISm90QTlmNGVvZnZKcVZpUFhUenhFZFpscXhtUlZRMVpqTklNRjJuUmthRHJGX3RTZzRBUldPTnFV?oc=5",
-      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPa0tFU3FmZUI4RzVyc2hwUzJWbXRDRTNLQWxDSFhhbUlrb19qNVdkWHNmbXBBaGkwMmx4b1o1SEJDY2MtM2hNbWhGWk9yNnRYeXAyVTdyWFFLMUN1MUNNejJWZndqaTJ0aGVwdkVsTkhGYW9TVDdPclRQU0dZS3VQbkhISm90QTlmNGVvZnZKcVZpUFhUenhFZFpscXhtUlZRMVpqTklNRjJuUmthRHJGX3RTZzRBUldPTnFV?oc=5",
-      "excerpt": "Norway's premier says call with Putin was effort to present European views Reuters",
-      "summary": "Norway's premier says call with Putin was effort to present European views Reuters",
-      "relative_time": "Wed, 28 Oct 2026 10:46:09 GMT",
-      "published": "Wed, 28 Oct 2026 10:46:09 GMT",
+      "id": "e2f5617ea00e",
+      "headline": "Flavio Bolsonaro expected to land in Miami shortly after Trump offers Brazil exit - Reuters",
+      "title": "Flavio Bolsonaro expected to land in Miami shortly after Trump offers Brazil exit - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPTXM0WlJ4eWFnOU96alFqZTd5VklwV1pETlVBNjdhejYzX0hXUHQzZFczWkxRMzhxOGhzOWJqSGdwRTlubFRqMTJQckJ5NXljSFFqYzB2UXRReTVCc0lDR3BvOVlhcERydVBUU3duZFA3THNRZmt1OGZseURzeDAwX2ZCSE5tX3pRUUJ0elpaMU5odHFkcmhJQVU5OS1yRGp4N0FPVVVEWWJQMXFWNHQyOExkVWVjVFQtVDl3SGcybkt3ZzRE?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPTXM0WlJ4eWFnOU96alFqZTd5VklwV1pETlVBNjdhejYzX0hXUHQzZFczWkxRMzhxOGhzOWJqSGdwRTlubFRqMTJQckJ5NXljSFFqYzB2UXRReTVCc0lDR3BvOVlhcERydVBUU3duZFA3THNRZmt1OGZseURzeDAwX2ZCSE5tX3pRUUJ0elpaMU5odHFkcmhJQVU5OS1yRGp4N0FPVVVEWWJQMXFWNHQyOExkVWVjVFQtVDl3SGcybkt3ZzRE?oc=5",
+      "excerpt": "Flavio Bolsonaro expected to land in Miami shortly after Trump offers Brazil exit Reuters",
+      "summary": "Flavio Bolsonaro expected to land in Miami shortly after Trump offers Brazil exit Reuters",
+      "relative_time": "Wed, 28 Oct 2026 11:56:54 GMT",
+      "published": "Wed, 28 Oct 2026 11:56:54 GMT",
       "author": "Reuters Top News",
       "feed": "Reuters Top News",
       "feedName": "Reuters Top News",
@@ -768,18 +748,38 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-10-28T12:05:03.856762+00:00"
+      "scraped_at": "2026-10-28T13:08:27.752738+00:00"
     },
     {
-      "id": "99d175201328",
-      "headline": "Autumn Budget 2026 live updates: Chancellor leaves Number 11 with red box - as Labour set to raid banks, hike minimum wage and extend fuel duty freeze",
-      "title": "Autumn Budget 2026 live updates: Chancellor leaves Number 11 with red box - as Labour set to raid banks, hike minimum wage and extend fuel duty freeze",
+      "id": "d5c3404fb92f",
+      "headline": "The key points from Chancellor John Healey's first Budget",
+      "title": "The key points from Chancellor John Healey's first Budget",
+      "url": "https://www.dailymail.com/money/markets/article-16245643/The-key-points-Chancellor-John-Healeys-Budget.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
+      "link": "https://www.dailymail.com/money/markets/article-16245643/The-key-points-Chancellor-John-Healeys-Budget.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
+      "excerpt": "Chancellor John Healey is delivering his first Budget against a challenging economic backdrop.",
+      "summary": "Chancellor John Healey is delivering his first Budget against a challenging economic backdrop.",
+      "relative_time": "Wed, 28 Oct 2026 13:04:33 GMT",
+      "published": "Wed, 28 Oct 2026 13:04:33 GMT",
+      "author": "Daily Mail UK",
+      "feed": "Daily Mail UK",
+      "feedName": "Daily Mail UK",
+      "feedId": "59b9073e561e",
+      "category": "Global",
+      "ingestionType": "rss",
+      "sourceGroup": "rss",
+      "imageUrl": "https://i.dailymail.com/1s/2026/10/28/11/112143573-0-image-a-5_1793188512405.jpg",
+      "scraped_at": "2026-10-28T13:08:28.273669+00:00"
+    },
+    {
+      "id": "b8888a2192b7",
+      "headline": "Autumn Budget 2026 live updates: Chancellor John Healey scraps gas bill standing charges, announces \u00a3100 energy bill payment and increases national wage",
+      "title": "Autumn Budget 2026 live updates: Chancellor John Healey scraps gas bill standing charges, announces \u00a3100 energy bill payment and increases national wage",
       "url": "https://www.dailymail.com/news/article-16239695/Autumn-Budget-2026-live-updates-John-Healey.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
       "link": "https://www.dailymail.com/news/article-16239695/Autumn-Budget-2026-live-updates-John-Healey.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
-      "excerpt": "LIVE UPDATES: Chancellor John Healey has left Downing Street clutching his red Budget box as he prepares to unveil Labour's tax and spending plans for Britain.",
-      "summary": "LIVE UPDATES: Chancellor John Healey has left Downing Street clutching his red Budget box as he prepares to unveil Labour's tax and spending plans for Britain.",
-      "relative_time": "Wed, 28 Oct 2026 12:00:40 GMT",
-      "published": "Wed, 28 Oct 2026 12:00:40 GMT",
+      "excerpt": "LIVE UPDATES: Brexit has dominated a fiery Prime Minister's Questions as Chancellor John Healey prepares to deliver his first Budget under Andy Burnham's Labour government.",
+      "summary": "LIVE UPDATES: Brexit has dominated a fiery Prime Minister's Questions as Chancellor John Healey prepares to deliver his first Budget under Andy Burnham's Labour government.",
+      "relative_time": "Wed, 28 Oct 2026 13:04:19 GMT",
+      "published": "Wed, 28 Oct 2026 13:04:19 GMT",
       "author": "Daily Mail UK",
       "feed": "Daily Mail UK",
       "feedName": "Daily Mail UK",
@@ -787,59 +787,39 @@
       "category": "Global",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://i.dailymail.com/1s/2026/10/28/11/112142691-0-image-a-35_1793186985510.jpg",
-      "scraped_at": "2026-10-28T12:05:04.584806+00:00"
+      "imageUrl": "https://i.dailymail.com/1s/2026/10/28/12/112144451-0-image-a-49_1793190878291.jpg",
+      "scraped_at": "2026-10-28T13:08:28.273745+00:00"
     },
     {
-      "id": "5e42d0c58e5e",
-      "headline": "Business backlash over plans to hike the minimum wage as firms say jobs will be at risk",
-      "title": "Business backlash over plans to hike the minimum wage as firms say jobs will be at risk",
-      "url": "https://www.dailymail.com/news/article-16244201/Business-backlash-plans-hike-minimum-wage-firms-say-jobs-risk.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
-      "link": "https://www.dailymail.com/news/article-16244201/Business-backlash-plans-hike-minimum-wage-firms-say-jobs-risk.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
-      "excerpt": "Restaurant and retail bosses said they desperately need to be given breathing space in the Budget, as further wage rises will make it even harder for them to retain or take on staff.",
-      "summary": "Restaurant and retail bosses said they desperately need to be given breathing space in the Budget, as further wage rises will make it even harder for them to retain or take on staff.",
-      "relative_time": "Wed, 28 Oct 2026 11:52:13 GMT",
-      "published": "Wed, 28 Oct 2026 11:52:13 GMT",
-      "author": "Daily Mail UK",
-      "feed": "Daily Mail UK",
-      "feedName": "Daily Mail UK",
-      "feedId": "59b9073e561e",
-      "category": "Global",
-      "ingestionType": "rss",
-      "sourceGroup": "rss",
-      "imageUrl": "https://i.dailymail.com/1s/2026/10/27/22/112132463-0-image-a-10_1793141283635.jpg",
-      "scraped_at": "2026-10-28T12:05:04.584869+00:00"
-    },
-    {
-      "id": "8e32be78eec5",
-      "headline": "Clippers\u2019 Rui Hachimura dishes about \u2018tough\u2019 Lakers exit",
-      "title": "Clippers\u2019 Rui Hachimura dishes about \u2018tough\u2019 Lakers exit",
-      "url": "https://nypost.com/2026/10/28/sports/clippers-rui-hachimura-tough-lakers-exit/",
-      "link": "https://nypost.com/2026/10/28/sports/clippers-rui-hachimura-tough-lakers-exit/",
-      "excerpt": "Did Rui Hachimura want to stay with the Lakers before joining the Clippers in free agency?",
-      "summary": "Did Rui Hachimura want to stay with the Lakers before joining the Clippers in free agency?",
-      "relative_time": "Wed, 28 Oct 2026 08:00:00 -0400",
-      "published": "Wed, 28 Oct 2026 08:00:00 -0400",
-      "author": "Khobi Price",
+      "id": "f6f9c46b8a2e",
+      "headline": "Julia Stiles dubs \u2018DWTS\u2019 partner Ezra Sosa a \u2018cranky bitch\u2019 after heated rehearsal",
+      "title": "Julia Stiles dubs \u2018DWTS\u2019 partner Ezra Sosa a \u2018cranky bitch\u2019 after heated rehearsal",
+      "url": "https://pagesix.com/2026/10/28/entertainment/julia-stiles-dubs-dwts-partner-ezra-sosa-a-cranky-bitch-after-heated-rehearsal/",
+      "link": "https://pagesix.com/2026/10/28/entertainment/julia-stiles-dubs-dwts-partner-ezra-sosa-a-cranky-bitch-after-heated-rehearsal/",
+      "excerpt": "Sosa admitted in a confessional that he was \"being too hard\" on his partner ahead of their \"Horror Movie Night\" performance Tuesday.",
+      "summary": "Sosa admitted in a confessional that he was \"being too hard\" on his partner ahead of their \"Horror Movie Night\" performance Tuesday.",
+      "relative_time": "Wed, 28 Oct 2026 09:04:29 -0400",
+      "published": "Wed, 28 Oct 2026 09:04:29 -0400",
+      "author": "Jolie Zenna",
       "feed": "New York Post",
       "feedName": "New York Post",
       "feedId": "f35f2eec037f",
       "category": "Global",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F10%2Frui-hachimura-seen-warmups-los-146272096_4a2591.jpg?w%3D1024",
-      "scraped_at": "2026-10-28T12:05:05.507156+00:00"
+      "imageUrl": "https://pagesix.com/wp-content%2Fuploads%2Fsites%2F3%2F2026%2F10%2Fjulia-stiles-dubs-dwts-partner-146730133.jpg?w%3D1024",
+      "scraped_at": "2026-10-28T13:08:29.313721+00:00"
     },
     {
-      "id": "232c5a305059",
-      "headline": "TV news hourly summary \u00b7 Oct 28, 12:03 UTC",
-      "title": "TV news hourly summary \u00b7 Oct 28, 12:03 UTC",
-      "url": "https://mastodon.archive.org/@tv/117518433347571523",
-      "link": "https://mastodon.archive.org/@tv/117518433347571523",
-      "excerpt": "With six days until midterms, Trump and other leaders campaign across battleground states. Polls show a tight South Carolina Senate race, a moderate GOP lead in Florida and a wide Democratic lead in Minnesota. DOJ plans election monitors in all 50 states and seeks to intervene in vote counting in Alaska and California. At least 30 people died in a Spanish high-speed train collision. Israel\u2019s election has no clear winner.",
-      "summary": "With six days until midterms, Trump and other leaders campaign across battleground states. Polls show a tight South Carolina Senate race, a moderate GOP lead in Florida and a wide Democratic lead in Minnesota. DOJ plans election monitors in all 50 states and seeks to intervene in vote counting in Alaska and California. At least 30 people died in a Spanish high-speed train collision. Israel\u2019s election has no clear winner.",
-      "relative_time": "Wed, 28 Oct 2026 12:03:05 +0000",
-      "published": "Wed, 28 Oct 2026 12:03:05 +0000",
+      "id": "6ac0bdf8a82e",
+      "headline": "TV news hourly summary \u00b7 Oct 28, 13:03 UTC",
+      "title": "TV news hourly summary \u00b7 Oct 28, 13:03 UTC",
+      "url": "https://mastodon.archive.org/@tv/117518669338518484",
+      "link": "https://mastodon.archive.org/@tv/117518669338518484",
+      "excerpt": "At least 31 people were reported dead in a high-speed train crash in Spain, with the toll expected to rise. Israel\u2019s election produced no clear winner, with neither Netanyahu nor his rival projected to secure a majority. U.S. midterm campaigns intensified, polls showed a South Carolina Senate tossup, and the Fed\u2019s rate decision loomed. Bolsonaro reportedly fled Brazil amid legal uncertainty.",
+      "summary": "At least 31 people were reported dead in a high-speed train crash in Spain, with the toll expected to rise. Israel\u2019s election produced no clear winner, with neither Netanyahu nor his rival projected to secure a majority. U.S. midterm campaigns intensified, polls showed a South Carolina Senate tossup, and the Fed\u2019s rate decision loomed. Bolsonaro reportedly fled Brazil amid legal uncertainty.",
+      "relative_time": "Wed, 28 Oct 2026 13:03:06 +0000",
+      "published": "Wed, 28 Oct 2026 13:03:06 +0000",
       "author": "Internet Archive TV News",
       "feed": "Internet Archive TV News (hourly summary)",
       "feedName": "Internet Archive TV News (hourly summary)",
@@ -848,7 +828,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "",
-      "scraped_at": "2026-10-28T12:05:08.859036+00:00"
+      "scraped_at": "2026-10-28T13:08:41.010491+00:00"
     }
   ],
   "raw_summary": "### Luxury cruise passengers stranded in Cambodia due to soaring fuel costs\n**Source:** BBC World News  \n**Summary:** Passengers aboard the Villa Vie Odyssey cruise ship have been stranded in Cambodia after the vessel suspended its journey due to escalating fuel expenses. The cruise operator is currently working to arrange temporary living accommodations for affected travelers while resolving the voyage's future.  \n**Key Theme:** Travel / Economy\n\n---\n\n### Serbian shot dead after attacking officer outside Israeli embassy, minister says\n**Source:** BBC World News  \n**Summary:** An underage Serbian male was shot and killed after launching an attack against a police officer stationed outside the Israeli embassy in Belgrade. According to government authorities, the attacker was already being actively monitored by local security services prior to the incident.  \n**Key Theme:** Security / Crime\n\n---\n\n### As forest fires rage, hundreds of Indonesian students protest government response - Reuters\n**Source:** Reuters Top News  \n**Summary:** Hundreds of students in Indonesia have staged protests against the national government's handling of ongoing severe forest fires. The demonstrators are calling for more decisive state intervention and emergency measures as blazes continue to cause environmental damage across the region.  \n**Key Theme:** Environment / Protest\n\n---\n\n### Norway's premier says call with Putin was effort to present European views - Reuters\n**Source:** Reuters Top News  \n**Summary:** Norway's Prime Minister stated that a recent telephone conversation with Russian President Vladimir Putin was intended to directly communicate European perspectives to Moscow. The leader emphasized that maintaining direct communication channels was critical for presenting regional concerns amid ongoing diplomatic tensions.  \n**Key Theme:** Diplomacy / Geopolitics\n\n---\n\n### Autumn Budget 2026 live updates: Chancellor leaves Number 11 with red box - as Labour set to raid banks, hike minimum wage and extend fuel duty freeze\n**Source:** Daily Mail UK  \n**Summary:** UK Chancellor John Healey has departed Downing Street to present the Labour government's latest tax and spending plans to Parliament. The upcoming Autumn Budget is expected to feature tax increases on financial institutions, a minimum wage raise, and an extension of the current freeze on fuel duties.  \n**Key Theme:** Politics / Finance\n\n---\n\n### Business backlash over plans to hike the minimum wage as firms say jobs will be at risk\n**Source:** Daily Mail UK  \n**Summary:** Business leaders in the British retail and hospitality sectors have voiced opposition to proposed national minimum wage increases, warning the move puts job security at risk. Employers argue that rising wage costs will make it significantly harder to retain existing staff or hire new workers without government relief.  \n**Key Theme:** Business / Employment\n\n---\n\n### Clippers\u2019 Rui Hachimura dishes about \u2018tough\u2019 Lakers exit\n**Source:** New York Post  \n**Summary:** NBA player Rui Hachimura opened up about his transition to the Los Angeles Clippers following his departure from the Los Angeles Lakers in free agency. Hachimura described the exit process as difficult while discussing his mindset leading up to his agency move.  \n**Key Theme:** Sports / Basketball\n\n---\n\n### TV news hourly summary \u00b7 Oct 28, 12:03 UTC\n**Source:** Internet Archive TV News (hourly summary)  \n**Summary:** US political candidates are making final battleground state campaign pushes ahead of the midterms as the DOJ prepares election monitoring in all 50 states. Internationally, at least 30 people died in a major Spanish high-speed train collision, while Israel's general election yielded no immediate clear victor.  \n**Key Theme:** World News / Elections",
@@ -857,5 +837,6 @@
   "current_html_path": "output/current/index.html",
   "data_current_html_path": "data/current/index.html",
   "archive_html_path": "output/archive/2026-10-28/index.html",
-  "data_archive_html_path": "data/archive/2026-10-28/index.html"
+  "data_archive_html_path": "data/archive/2026-10-28/index.html",
+  "feed_hash": "735a522699a14c0c8ed1d717ddbf02a8"
 }
