@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-10-28",
+    "timestamp": "2026-10-28T12:05:20.536462+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "Luxury cruise passengers stranded in Cambodia due to soaring fuel costs",
+      "Serbian shot dead after attacking officer outside Israeli embassy, minister says",
+      "As forest fires rage, hundreds of Indonesian students protest government response - Reuters",
+      "Norway's premier says call with Putin was effort to present European views - Reuters",
+      "Autumn Budget 2026 live updates: Chancellor leaves Number 11 with red box - as Labour set to raid banks, hike minimum wage and extend fuel duty freeze"
+    ],
+    "archive_html_path": "data/archive/2026-10-28/index.html",
+    "data_json_path": "data/archive/2026-10-28/data.json"
+  },
+  {
     "date": "2026-10-27",
     "timestamp": "2026-10-27T11:35:04.368329+00:00",
     "stories_count": 8,
