@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Intelligence Briefing – 2026-10-29</title>
+    <style>
+        :root {
+            --bg: #0f1115;
+            --card: #1a1d24;
+            --text: #e6e8ec;
+            --muted: #9ba1ad;
+            --accent: #3b82f6;
+            --border: #2a2e38;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; padding: 2rem 1rem; }
+        .container { max-width: 960px; margin: 0 auto; }
+        header { text-align: center; margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+        header h1 { font-size: 2.2rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 0.4rem; color: #ffffff; }
+        header .date { color: var(--accent); font-size: 1rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+        
+        .hero-image { width: 100%; border-radius: 16px; overflow: hidden; margin-bottom: 2.5rem; box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6); border: 1px solid var(--border); background: #0b0f19; }
+        
+        /* Flexible Photo Collage Component */
+        .collage-wrapper { position: relative; width: 100%; }
+        .collage-header-pill {
+            position: absolute; top: 14px; left: 14px; z-index: 10;
+            background: rgba(15, 23, 42, 0.88); backdrop-filter: blur(8px);
+            border: 1px solid rgba(56, 189, 248, 0.35); color: #38bdf8;
+            padding: 5px 12px; border-radius: 999px; font-size: 11px; font-weight: 800;
+            letter-spacing: 0.5px; display: flex; align-items: center; gap: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        }
+        .collage-container {
+            display: grid; gap: 8px; background: #090d16; padding: 8px; border-radius: 16px; min-height: 280px;
+        }
+        .collage-container.collage-count-1 { grid-template-columns: 1fr; grid-template-rows: 360px; }
+        .collage-container.collage-count-1 .hero-tile { grid-row: auto; }
+
+        .collage-container.collage-count-2 { grid-template-columns: 1fr 1fr; grid-template-rows: 320px; }
+        .collage-container.collage-count-2 .hero-tile { grid-row: auto; }
+
+        .collage-container.collage-count-3 { grid-template-columns: 1.6fr 1fr; grid-template-rows: 170px 170px; }
+        .collage-container.collage-count-3 .hero-tile { grid-row: span 2; }
+
+        .collage-container.collage-count-4 { grid-template-columns: 1.6fr 1fr 1fr; grid-template-rows: 170px 170px; }
+        .collage-container.collage-count-4 .hero-tile { grid-row: span 2; }
+        .collage-container.collage-count-4 .collage-tile:nth-child(4) { grid-column: span 2; }
+
+        .collage-container.collage-count-5 { grid-template-columns: 1.8fr 1fr 1fr; grid-template-rows: 180px 180px; }
+        .collage-container.collage-count-5 .hero-tile { grid-row: span 2; }
+
+        @media (max-width: 768px) {
+            .collage-container,
+            .collage-container.collage-count-2,
+            .collage-container.collage-count-3,
+            .collage-container.collage-count-4,
+            .collage-container.collage-count-5 {
+                grid-template-columns: 1fr; grid-template-rows: auto;
+            }
+            .collage-tile, .hero-tile { min-height: 180px; }
+        }
+        .collage-tile {
+            position: relative; border-radius: 10px; overflow: hidden; background: #131927;
+            border: 1px solid rgba(255, 255, 255, 0.08); transition: transform 0.3s ease;
+        }
+        .collage-tile.hero-tile { grid-row: span 2; }
+        .collage-tile img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
+        .collage-tile:hover img { transform: scale(1.06); }
+        .collage-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(to top, rgba(11, 15, 23, 0.95) 0%, rgba(11, 15, 23, 0.2) 60%, transparent 100%);
+            display: flex; flex-direction: column; justify-content: flex-end; padding: 12px;
+        }
+        .collage-badge {
+            align-self: flex-start; background: rgba(56, 189, 248, 0.2); color: #38bdf8;
+            border: 1px solid rgba(56, 189, 248, 0.4); font-size: 10px; font-weight: 700;
+            text-transform: uppercase; padding: 2px 8px; border-radius: 999px; margin-bottom: 6px;
+        }
+        .collage-badge.hero-badge { background: rgba(16, 185, 129, 0.2); color: #34d399; border-color: rgba(16, 185, 129, 0.4); }
+        .collage-title { color: #ffffff; font-size: 12px; font-weight: 700; line-height: 1.35; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        .hero-tile .collage-title { font-size: 17px; }
+
+        .stories { display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 3rem; }
+        .story { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem; }
+        .story h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: #f1f3f5; }
+        .story-body { color: var(--muted); font-size: 0.98rem; overflow-wrap: anywhere; word-break: break-word; }
+        .story h2, .mini-card h3, .mini-card p { overflow-wrap: anywhere; }
+        .container { min-width: 0; max-width: 100%; }
+        .section-title { font-size: 1.3rem; font-weight: 800; color: var(--accent); margin: 2rem 0 1rem; border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; }
+        .segmented-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
+        .mini-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+        .mini-card.scraped { border-left: 3px solid #8b5cf6; }
+        .mini-card.rss { border-left: 3px solid #3b82f6; }
+        .source-tag { font-size: 0.75rem; font-weight: bold; color: var(--accent); margin-bottom: 0.4rem; }
+        .mini-card h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.4rem; }
+        .mini-card h3 a { color: #f1f3f5; text-decoration: none; }
+        .mini-card h3 a:hover { text-decoration: underline; color: var(--accent); }
+        .mini-card p { font-size: 0.82rem; color: var(--muted); line-height: 1.4; }
+        footer { text-align: center; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="date">2026-10-29</div>
+            <h1>Daily Intelligence Briefing</h1>
+        </header>
+
+        <div class="hero-image">
+            
+                
+    <div class="collage-wrapper">
+        <div class="collage-header-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7"/><path d="M16 5h5v5"/><path d="m21 5-9 9"/></svg>
+            <span>Parsed Feeds Mixed Photo Collage (5 Photos)</span>
+        </div>
+        <div class="collage-container collage-count-5">
+            <div class="collage-tile hero-tile">
+                <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3dc9/live/708f0da0-d34a-11f1-8a05-59afc813496d.jpg" alt="Audio reveals exchanges between control centre and drivers before deadly Spain train crash" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+                <div class="collage-overlay">
+                    <span class="collage-badge hero-badge">BBC World News</span>
+                    <h3 class="collage-title hero-title">Audio reveals exchanges between control centre and drivers before deadly Spain train crash</h3>
+                </div>
+            </div>
+            
+        <div class="collage-tile">
+            <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/2c2c/live/4c19c1e0-d2eb-11f1-b441-2b33b063138f.jpg" alt="Flávio Bolsonaro denies fleeing Brazil after landing in Miami" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">BBC World News</span>
+                <h4 class="collage-title">Flávio Bolsonaro denies fleeing Brazil after landing in Miami</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3381/live/719a4410-d2f2-11f1-8d86-83eebc838351.jpg" alt="Netanyahu&#x27;s bloc leading Israel election but short of majority, partial results show" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">BBC World News</span>
+                <h4 class="collage-title">Netanyahu&#x27;s bloc leading Israel election but short of majority, partial results show</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Iran’s hidden web of military agencies is slipping hardware past the US blockade - Reuters" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">Reuters Top News</span>
+                <h4 class="collage-title">Iran’s hidden web of military agencies is slipping hardware past the US blockade - Reuters</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Russian drone attack on train station kills 13 in Ukraine’s Dnipro - Reuters" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">Reuters Top News</span>
+                <h4 class="collage-title">Russian drone attack on train station kills 13 in Ukraine’s Dnipro - Reuters</h4>
+            </div>
+        </div>
+        
+        </div>
+    </div>
+    
+            
+        </div>
+
+        <main class="stories">
+            
+        <div class="story">
+            <h2>Audio reveals exchanges between control centre and drivers before deadly Spain train crash</h2>
+            <div class="story-body"><strong>Source:</strong> BBC World News<br><strong>Summary:</strong> The recordings appear to show one high-speed train was given clearance to move even though another up ahead had stalled....</div>
+        </div>
+        
+        <div class="story">
+            <h2>Flávio Bolsonaro denies fleeing Brazil after landing in Miami</h2>
+            <div class="story-body"><strong>Source:</strong> BBC World News<br><strong>Summary:</strong> The defeated Brazilian candidate claims to be the victim of a coup d’état and political persecution, recycling unsubstantiated allegations of “electoral fraud”....</div>
+        </div>
+        
+        <div class="story">
+            <h2>Iran’s hidden web of military agencies is slipping hardware past the US blockade - Reuters</h2>
+            <div class="story-body"><strong>Source:</strong> Reuters Top News<br><strong>Summary:</strong> Iran’s hidden web of military agencies is slipping hardware past the US blockade Reuters...</div>
+        </div>
+        
+        <div class="story">
+            <h2>Russian drone attack on train station kills 13 in Ukraine’s Dnipro - Reuters</h2>
+            <div class="story-body"><strong>Source:</strong> Reuters Top News<br><strong>Summary:</strong> Russian drone attack on train station kills 13 in Ukraine’s Dnipro Reuters...</div>
+        </div>
+        
+        <div class="story">
+            <h2>Worse off under Burnham: The middle-earners and families struggling with bills who face a fall in living standards under Labour&#x27;s &#x27;is that it?&#x27; Budget</h2>
+            <div class="story-body"><strong>Source:</strong> Daily Mail UK<br><strong>Summary:</strong> The Chancellor pushed up taxes to a record high and poured billions of pounds more into benefits. But he ducked tough decisions on increasing defence spending and curbing the runaway welfare budget....</div>
+        </div>
+        
+        <div class="story">
+            <h2>Labour desperately backpedals on Chancellor&#x27;s vow to bring down benefits bill before election - amid outcry at failure to act in Budget</h2>
+            <div class="story-body"><strong>Source:</strong> Daily Mail UK<br><strong>Summary:</strong> The Government&#x27;s position on welfare descended into confusion as aides denied a commitment had been made - despite John Healey giving a seemingly clear statement....</div>
+        </div>
+        
+        <div class="story">
+            <h2>Stranded couple paid $1M for lifetime travel on now-broke cruise — but still have no regrets</h2>
+            <div class="story-body"><strong>Source:</strong> New York Post<br><strong>Summary:</strong> &quot;It was great, for a while,&quot; Randy Cassingham said. &quot;Money aside, it was a fantastic adventure.&quot;...</div>
+        </div>
+        
+        <div class="story">
+            <h2>TV news hourly summary · Oct 29, 12:03 UTC</h2>
+            <div class="story-body"><strong>Source:</strong> Internet Archive TV News (hourly summary)<br><strong>Summary:</strong> New polls show Democrats with opportunities in key Senate races; Texas Democrat James Talarico leads Ken Paxton 49%–43%. Alaska’s governor ordered an investigation into Mary Peltola’s campaign over allegations Democrats recruited a same-name spoiler ...</div>
+        </div>
+        
+        </main>
+
+        
+        <div class='section-title'>Global &amp; Alternative RSS Feeds</div><div class='segmented-grid'>
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/articles/cmqxnl312v34o?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>Audio reveals exchanges between control centre and drivers before deadly Spain train crash</a></h3>
+                <p>The recordings appear to show one high-speed train was given clearance to move even though another up ahead had stalled....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/articles/c6kglwe4lxwzo?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>Flávio Bolsonaro denies fleeing Brazil after landing in Miami</a></h3>
+                <p>The defeated Brazilian candidate claims to be the victim of a coup d’état and political persecution, recycling unsubstantiated allegations of “electoral fraud”....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/articles/cmdx3knq1xexo?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>Netanyahu&#x27;s bloc leading Israel election but short of majority, partial results show</a></h3>
+                <p>With 93% of ballots counted, Netanyahu&#x27;s Likud party and its allies are set to win 53 seats in the 120-seat Knesset....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMiuwFBVV95cUxPWDdNT2d1X203WGstY0tRd0xFeXFhWlBQVmlXM2hRRXdzZHQ3UmszXzNXcVE3LTB5TWhUcXJwWUVlSi15cGFUNVFqd2xTNllBQm9PdlphUVQ3bU1pOTI5dUtGb3pZYUstMmpaa2hzbk5RXzd2bVp5YmlhR19nYkNJTjdfTG11amxxZ0dOWXBveEowTC1wRHozRWxPYUx5OXo2TWpjdHRnOXc5eTRQWXN6S2RyWVUxVF8wMGk0?oc=5' target='_blank' rel='noopener'>Iran’s hidden web of military agencies is slipping hardware past the US blockade - Reuters</a></h3>
+                <p>Iran’s hidden web of military agencies is slipping hardware past the US blockade Reuters...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMirAFBVV95cUxPMVJMbm5Vb3NTVmNud01fMHc3WHJUWTNvWl8zSmJYZjVUUHhRbm5VWGZxVWZmbGpQdHZNZUlCQVFuLWxWb1FoR0xTZThVSmRTRVBlWUlLaWNKUTZzVnV1dTYyellibWN0XzFXNGpsUk45U2o1Z2hzUndOUEJYM0Q3WmUxSHFteS1WRXpyRk5JcmdTaEdyNVMzV2dwRGxCc0hGMlpQRElXQzMxZXdj?oc=5' target='_blank' rel='noopener'>Russian drone attack on train station kills 13 in Ukraine’s Dnipro - Reuters</a></h3>
+                <p>Russian drone attack on train station kills 13 in Ukraine’s Dnipro Reuters...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMivgFBVV95cUxNZWtDa2JmUnFRRENlQ0RoX2hseFpyajltZE5vbjUwdnlDeTQ5M01zanFrNTBJcE1NV0RwZGFCd29LQXZQN2RYd3pBZnhNbU91eEdZalRSbVpXbTdnS2VXMXNaWE9ZdV9tSHVub29PUy1kX3BFYTNZUWM2NFpTLTZTWGdLX2hTXzYxR2JPanVaeVowcVZmMTZubVZxZE9QSjFPYmVuQjJFVVZqTUJKRUlMclM0NGM4YTNzMmR0ZUdR?oc=5' target='_blank' rel='noopener'>EXCLUSIVE: Pentagon treating military base freezer malfunctions as suspected cyberattack, officials say - Reuters</a></h3>
+                <p>EXCLUSIVE: Pentagon treating military base freezer malfunctions as suspected cyberattack, officials say Reuters...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/news/article-16239743/Tax-rises-unfair-marching-hell-Britons-Budget.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>Worse off under Burnham: The middle-earners and families struggling with bills who face a fall in living standards under Labour&#x27;s &#x27;is that it?&#x27; Budget</a></h3>
+                <p>The Chancellor pushed up taxes to a record high and poured billions of pounds more into benefits. But he ducked tough decisions on increasing defence spending and curbing the runaway welfare budget....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/news/article-16248307/Chancellor-Labour-benefits-Budget-tax-welfare-health-election.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>Labour desperately backpedals on Chancellor&#x27;s vow to bring down benefits bill before election - amid outcry at failure to act in Budget</a></h3>
+                <p>The Government&#x27;s position on welfare descended into confusion as aides denied a commitment had been made - despite John Healey giving a seemingly clear statement....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/news/article-16248245/psychic-died-falling-stairs-unexpectedly-inquest.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>Award-winning psychic, 44, died after falling down flight of stairs, inquest hears</a></h3>
+                <p>Kate Golby, 44, had been working from home at her property in Norwich, Norfolk on the day of the accident....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>New York Post</div>
+                <h3><a href='https://nypost.com/2026/10/29/world-news/stranded-couple-paid-1m-for-lifetime-travel-on-now-broke-cruise-but-still-have-no-regrets/' target='_blank' rel='noopener'>Stranded couple paid $1M for lifetime travel on now-broke cruise — but still have no regrets</a></h3>
+                <p>&quot;It was great, for a while,&quot; Randy Cassingham said. &quot;Money aside, it was a fantastic adventure.&quot;...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>New York Post</div>
+                <h3><a href='https://nypost.com/2026/10/29/sports/brewers-pat-murphy-uses-world-celebration-to-shade-horsest-yankees/' target='_blank' rel='noopener'>Brewers manager uses World celebration to shade ‘horses—t’ Yankees to star player</a></h3>
+                <p>Win a title, rip the Yankees....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>New York Post</div>
+                <h3><a href='https://nypost.com/2026/10/29/sports/rams-trent-mcduffie-reveals-groin-injury-details-delivers-encouraging-update-on-return/' target='_blank' rel='noopener'>Trent McDuffie breaks silence on injury, says Rams have rediscovered swagger</a></h3>
+                <p>Rams All-Pro cornerback Trent McDuffie reveals exclusive details about his groin injury, potential return against the Chargers and LA&#x27;s renewed swagger....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/hegseth-fires-pentagons-top-war-planner-as-trump/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=hegseth-fires-pentagons-top-war-planner-as-trump' target='_blank' rel='noopener'>Hegseth Fires Pentagon’s Top War Planner as Trump Weighs New Iran Strikes</a></h3>
+                <p>Defense Secretary Pete Hegseth removed Lt. Gen. Brett Sylvia from the Joint Staff&#x27;s top strategy post as President Trump considers renewed military action against Iran....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/conservatives-john-thune-ultimatum-save-america-act/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=conservatives-john-thune-ultimatum-save-america-act' target='_blank' rel='noopener'>Conservatives Give John Thune an Ultimatum Over the SAVE America Act</a></h3>
+                <p>With Election Day approaching, conservatives are warning John Thune that another symbolic SAVE America Act vote will not be enough....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/trump-white-house-dei-dead-21-month-scorecard/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=trump-white-house-dei-dead-21-month-scorecard' target='_blank' rel='noopener'>Trump White House Declares ‘DEI Is Dead’ — Here Is the 21-Month Scorecard</a></h3>
+                <p>The Trump White House says its 21-month campaign against DEI has reshaped federal policy, universities, corporate America and more than $1 billion in contracts....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/10/29/nyt-columnist-wants-democrats-to-drain-trump-allies-bank-accounts-to-save-democracy/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=nyt-columnist-wants-democrats-to-drain-trump-allies-bank-accounts-to-save-democracy' target='_blank' rel='noopener'>NYT Columnist Wants Democrats To ‘Drain’ Trump Allies’ Bank Accounts To Save ‘Democracy’</a></h3>
+                <p>New York Times columnist Jamelle Bouie wants Democrats to “begin the reconstruction of American democracy with the rule of law in mind” if they win next Tuesday. His proposed starting point? Draining ...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/10/29/democrats-care-too-much-about-power-to-distance-themselves-from-terrorism-apologists/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=democrats-care-too-much-about-power-to-distance-themselves-from-terrorism-apologists' target='_blank' rel='noopener'>Democrats Care Too Much About Power To Distance Themselves From Terrorism Apologists</a></h3>
+                <p>A free society cannot survive unless terrorists, supporters of terrorists, and apologists for terrorists are driven from polite society and politics....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/10/29/americas-future-is-either-mass-immigration-or-mass-deportations/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=americas-future-is-either-mass-immigration-or-mass-deportations' target='_blank' rel='noopener'>America’s Future Is Either Mass Immigration Or Mass Deportations</a></h3>
+                <p>Republicans have to decide whether they will be the party that fights to preserve America or go along with the party trying to destroy it....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/tech/deepseek-government-ban' target='_blank' rel='noopener'>Homeland Security just BANNED this popular AI from the government</a></h3>
+                <p>Artificial intelligence has quickly evolved from an interesting novelty to an economic driver and a cybersecurity threat . But while the United States tries to rein in its domestic models, foreign-own...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/columns/opinion/from-the-golden-state-to-the-socialist-state' target='_blank' rel='noopener'>From the Golden State to the socialist state</a></h3>
+                <p>On November 3, California voters will find 37 candidates for local office on their ballots endorsed by the Democratic Socialists of America. That’s more than half of the 69 DSA-endorsed local candidat...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/news/pregnant-double-murder-oklahoma' target='_blank' rel='noopener'>Oklahoma man charged with double murder after his pregnant girlfriend is found dead, police say</a></h3>
+                <p>Stephanie Strock was in her seventh month of pregnancy when she was found dead, according to one of her friends. The Heavener Police Department said officers responded to a residence in the 500 block ...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/david-strom/2026/10/29/whiplash-democrat-calls-for-paper-ballots-to-prevent-election-from-elon-musk-n3820439' target='_blank' rel='noopener'>Whiplash: Democrat Calls for Paper Ballots to Secure Election From Elon Musk</a></h3>
+                <p>Whiplash: Democrat Calls for Paper Ballots to Secure Election From Elon Musk...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/headlines/2026/10/29/on-el-hierro-island-at-least-they-kept-the-diesel-backup-n3820391' target='_blank' rel='noopener'>On El Hierro Island, At Least They Kept The Diesel Backup</a></h3>
+                <p>On El Hierro Island, At Least They Kept The Diesel Backup...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/ed-morrissey/2026/10/28/wednesdays-final-word-n3820432' target='_blank' rel='noopener'>Wednesday&#x27;s Final Word</a></h3>
+                <p>Wednesday&#x27;s Final Word...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/10/george-bush-was-wrong-on-9-11-and-still-is/' target='_blank' rel='noopener'>George Bush Was Wrong On 9/11 And Still Is</a></h3>
+                <p>Photo Credit: Islamic army illustration Grok, ai-generated illustration By Alicia Colon Islam a religion of peace? Nothing in its works would suggest that....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/10/marxism-and-cancel-culture/' target='_blank' rel='noopener'>Marxism And Cancel Culture</a></h3>
+                <p>Photo Credit: AI for American Thinker By F. Charles Parker IV The Democratic Socialists of America would do well to remember that cancel culture will turn on them. The Soviets canceled Karl Marx himse...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/10/incremental-socialism/' target='_blank' rel='noopener'>Incremental Socialism</a></h3>
+                <p>Photo Credit: National Archives By Luis Gonzalez Once socialism is embedded in our laws and institutions, the march to communism begins....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMifEFVX3lxTE5sQ3M3ZTFkX19VVEFHSHNEX1BmTmZTZzlkemFnVUZfVjBja010TlFJTmIzaU1IU1BlZVRXRU1vemVIREhQeTNpZktjdEFjeGVCS0R3cXRrYVdkZ3VGRXBteUNHeTZ2UklaaWlpTnk5dEJSbF9wOWJvMFhRVjc?oc=5' target='_blank' rel='noopener'>Spot the Difference Daily- Play Now online &amp; 100% Free - The Epoch Times</a></h3>
+                <p>Spot the Difference Daily- Play Now online &amp; 100% Free The Epoch Times...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMiREFVX3lxTFBSU2dZLXZaX21HbzlKWGxkWnM1eEQwNEZ3VE4xUkJFWFJWSkJ3d0pSY2c4MTBKZXctUXdyWWdicWJQaklP?oc=5' target='_blank' rel='noopener'>The Epoch Times | Breaking News, Latest News, World News and Videos - The Epoch Times</a></h3>
+                <p>The Epoch Times | Breaking News, Latest News, World News and Videos The Epoch Times...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMiwAFBVV95cUxOV2ZYU1g3WkVzVlAxNF9lYzNNZE9Qb0FmYTVBeWl6c1g1SzNHaW1NdTliRzVaM3dSWFhQNXBfM1pYNHlobTE1c2FldjRWbVhhS1UwTm5UdHFFcmp1SFU0OE5ya3hRZEJIMUNrZjlSSDhOdDVNRDhWdnJlMnoyZ3MyOHIyaU5wNjNhN21XOTJGTzIzNFBGNVRzRW5XYnFfRXhmOXdETXhJdTdPbFh2eXM0REJ0dTd3N3N2ajlHYkd4cUI?oc=5' target='_blank' rel='noopener'>Comey Charged for Alleged Unauthorized Disclosure of National Security Information - The Epoch Times</a></h3>
+                <p>Comey Charged for Alleged Unauthorized Disclosure of National Security Information The Epoch Times...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Internet Archive TV News (hourly summary)</div>
+                <h3><a href='https://mastodon.archive.org/@tv/117524095612530043' target='_blank' rel='noopener'>TV news hourly summary · Oct 29, 12:03 UTC</a></h3>
+                <p>New polls show Democrats with opportunities in key Senate races; Texas Democrat James Talarico leads Ken Paxton 49%–43%. Alaska’s governor ordered an investigation into Mary Peltola’s campaign over al...</p>
+            </div>
+            </div>
+
+        <footer>
+            Automated Segmented Pipeline powered by HTML Scrapers, 11 Global RSS Feeds &amp; Google Gemini AI &bull; 2026-10-29
+        </footer>
+    </div>
+</body>
+</html>

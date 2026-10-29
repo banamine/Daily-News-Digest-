@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-10-29",
+    "timestamp": "2026-10-29T12:16:07.025257+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "Audio reveals exchanges between control centre and drivers before deadly Spain train crash",
+      "Fl\u00e1vio Bolsonaro denies fleeing Brazil after landing in Miami",
+      "Iran\u2019s hidden web of military agencies is slipping hardware past the US blockade - Reuters",
+      "Russian drone attack on train station kills 13 in Ukraine\u2019s Dnipro - Reuters",
+      "Worse off under Burnham: The middle-earners and families struggling with bills who face a fall in living standards under Labour's 'is that it?' Budget"
+    ],
+    "archive_html_path": "data/archive/2026-10-29/index.html",
+    "data_json_path": "data/archive/2026-10-29/data.json"
+  },
+  {
     "date": "2026-10-28",
     "timestamp": "2026-10-28T12:05:20.536462+00:00",
     "stories_count": 8,
