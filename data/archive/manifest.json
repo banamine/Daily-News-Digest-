@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-10-30",
+    "timestamp": "2026-10-30T12:07:05.744139+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "Residents leave devastated Russian-occupied Oleshky as evacuation corridor opens",
+      "Mushroom murderer fails to overturn convictions in Australian court challenge",
+      "Gone in 20 minutes: How the biggest heist in crypto history unfolded - Reuters",
+      "Spanish train was travelling at 160 kph when it smashed into second one, report finds - Reuters",
+      "Furious protesters cover Wetherspoon Gosport pub in poppies after military veterans wearing the remembrance symbol were banned from entering"
+    ],
+    "archive_html_path": "data/archive/2026-10-30/index.html",
+    "data_json_path": "data/archive/2026-10-30/data.json"
+  },
+  {
     "date": "2026-10-29",
     "timestamp": "2026-10-29T12:16:07.025257+00:00",
     "stories_count": 8,
