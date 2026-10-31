@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-10-31",
+    "timestamp": "2026-10-31T11:40:19.783105+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "Evacuated Ukrainians from Russian-occupied Oleshky arrive in Belarus",
+      "US approves sale of 500 Patriot missiles to Ukraine",
+      "Residents of Russian-controlled Ukrainian town arrive in Belarus - Reuters",
+      "After Louvre heist and string of thefts, Europe's smaller museums are on guard - Reuters",
+      "Mulberry is back! Princess Kate is regularly seen holding this British handbag brand - and now they're flying off the shelves"
+    ],
+    "archive_html_path": "data/archive/2026-10-31/index.html",
+    "data_json_path": "data/archive/2026-10-31/data.json"
+  },
+  {
     "date": "2026-10-30",
     "timestamp": "2026-10-30T12:07:05.744139+00:00",
     "stories_count": 8,
