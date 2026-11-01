@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Intelligence Briefing – 2026-11-01</title>
+    <style>
+        :root {
+            --bg: #0f1115;
+            --card: #1a1d24;
+            --text: #e6e8ec;
+            --muted: #9ba1ad;
+            --accent: #3b82f6;
+            --border: #2a2e38;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; padding: 2rem 1rem; }
+        .container { max-width: 960px; margin: 0 auto; }
+        header { text-align: center; margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+        header h1 { font-size: 2.2rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 0.4rem; color: #ffffff; }
+        header .date { color: var(--accent); font-size: 1rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+        
+        .hero-image { width: 100%; border-radius: 16px; overflow: hidden; margin-bottom: 2.5rem; box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6); border: 1px solid var(--border); background: #0b0f19; }
+        
+        /* Flexible Photo Collage Component */
+        .collage-wrapper { position: relative; width: 100%; }
+        .collage-header-pill {
+            position: absolute; top: 14px; left: 14px; z-index: 10;
+            background: rgba(15, 23, 42, 0.88); backdrop-filter: blur(8px);
+            border: 1px solid rgba(56, 189, 248, 0.35); color: #38bdf8;
+            padding: 5px 12px; border-radius: 999px; font-size: 11px; font-weight: 800;
+            letter-spacing: 0.5px; display: flex; align-items: center; gap: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        }
+        .collage-container {
+            display: grid; gap: 8px; background: #090d16; padding: 8px; border-radius: 16px; min-height: 280px;
+        }
+        .collage-container.collage-count-1 { grid-template-columns: 1fr; grid-template-rows: 360px; }
+        .collage-container.collage-count-1 .hero-tile { grid-row: auto; }
+
+        .collage-container.collage-count-2 { grid-template-columns: 1fr 1fr; grid-template-rows: 320px; }
+        .collage-container.collage-count-2 .hero-tile { grid-row: auto; }
+
+        .collage-container.collage-count-3 { grid-template-columns: 1.6fr 1fr; grid-template-rows: 170px 170px; }
+        .collage-container.collage-count-3 .hero-tile { grid-row: span 2; }
+
+        .collage-container.collage-count-4 { grid-template-columns: 1.6fr 1fr 1fr; grid-template-rows: 170px 170px; }
+        .collage-container.collage-count-4 .hero-tile { grid-row: span 2; }
+        .collage-container.collage-count-4 .collage-tile:nth-child(4) { grid-column: span 2; }
+
+        .collage-container.collage-count-5 { grid-template-columns: 1.8fr 1fr 1fr; grid-template-rows: 180px 180px; }
+        .collage-container.collage-count-5 .hero-tile { grid-row: span 2; }
+
+        @media (max-width: 768px) {
+            .collage-container,
+            .collage-container.collage-count-2,
+            .collage-container.collage-count-3,
+            .collage-container.collage-count-4,
+            .collage-container.collage-count-5 {
+                grid-template-columns: 1fr; grid-template-rows: auto;
+            }
+            .collage-tile, .hero-tile { min-height: 180px; }
+        }
+        .collage-tile {
+            position: relative; border-radius: 10px; overflow: hidden; background: #131927;
+            border: 1px solid rgba(255, 255, 255, 0.08); transition: transform 0.3s ease;
+        }
+        .collage-tile.hero-tile { grid-row: span 2; }
+        .collage-tile img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
+        .collage-tile:hover img { transform: scale(1.06); }
+        .collage-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(to top, rgba(11, 15, 23, 0.95) 0%, rgba(11, 15, 23, 0.2) 60%, transparent 100%);
+            display: flex; flex-direction: column; justify-content: flex-end; padding: 12px;
+        }
+        .collage-badge {
+            align-self: flex-start; background: rgba(56, 189, 248, 0.2); color: #38bdf8;
+            border: 1px solid rgba(56, 189, 248, 0.4); font-size: 10px; font-weight: 700;
+            text-transform: uppercase; padding: 2px 8px; border-radius: 999px; margin-bottom: 6px;
+        }
+        .collage-badge.hero-badge { background: rgba(16, 185, 129, 0.2); color: #34d399; border-color: rgba(16, 185, 129, 0.4); }
+        .collage-title { color: #ffffff; font-size: 12px; font-weight: 700; line-height: 1.35; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        .hero-tile .collage-title { font-size: 17px; }
+
+        .stories { display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 3rem; }
+        .story { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem; }
+        .story h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: #f1f3f5; }
+        .story-body { color: var(--muted); font-size: 0.98rem; overflow-wrap: anywhere; word-break: break-word; }
+        .story h2, .mini-card h3, .mini-card p { overflow-wrap: anywhere; }
+        .container { min-width: 0; max-width: 100%; }
+        .section-title { font-size: 1.3rem; font-weight: 800; color: var(--accent); margin: 2rem 0 1rem; border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; }
+        .segmented-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
+        .mini-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+        .mini-card.scraped { border-left: 3px solid #8b5cf6; }
+        .mini-card.rss { border-left: 3px solid #3b82f6; }
+        .source-tag { font-size: 0.75rem; font-weight: bold; color: var(--accent); margin-bottom: 0.4rem; }
+        .mini-card h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.4rem; }
+        .mini-card h3 a { color: #f1f3f5; text-decoration: none; }
+        .mini-card h3 a:hover { text-decoration: underline; color: var(--accent); }
+        .mini-card p { font-size: 0.82rem; color: var(--muted); line-height: 1.4; }
+        footer { text-align: center; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="date">2026-11-01</div>
+            <h1>Daily Intelligence Briefing</h1>
+        </header>
+
+        <div class="hero-image">
+            
+                
+    <div class="collage-wrapper">
+        <div class="collage-header-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7"/><path d="M16 5h5v5"/><path d="m21 5-9 9"/></svg>
+            <span>Parsed Feeds Mixed Photo Collage (5 Photos)</span>
+        </div>
+        <div class="collage-container collage-count-5">
+            <div class="collage-tile hero-tile">
+                <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/0ace/live/3e4ef120-d5d4-11f1-8629-7b9503d639be.jpg" alt="Shops looted as German cost of living protests turn violent" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+                <div class="collage-overlay">
+                    <span class="collage-badge hero-badge">BBC World News</span>
+                    <h3 class="collage-title hero-title">Shops looted as German cost of living protests turn violent</h3>
+                </div>
+            </div>
+            
+        <div class="collage-tile">
+            <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/053a/live/d1a9e840-d54c-11f1-bcb7-8f812b44c2e5.jpg" alt="&#x27;We came back from hell&#x27;, say Ukrainians after years in Russia-occupied front-line city" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">BBC World News</span>
+                <h4 class="collage-title">&#x27;We came back from hell&#x27;, say Ukrainians after years in Russia-occupied front-line city</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/41b8/live/9f93a310-d532-11f1-b441-2b33b063138f.jpg" alt="Ukrainian evacuees reunite with family after years trapped in Russia-occupied city" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">BBC World News</span>
+                <h4 class="collage-title">Ukrainian evacuees reunite with family after years trapped in Russia-occupied city</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Bulgaria votes in presidential runoff after tight first round - Reuters" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">Reuters Top News</span>
+                <h4 class="collage-title">Bulgaria votes in presidential runoff after tight first round - Reuters</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Trump White House maps path to govern without Congress if Democrats win - Reuters" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">Reuters Top News</span>
+                <h4 class="collage-title">Trump White House maps path to govern without Congress if Democrats win - Reuters</h4>
+            </div>
+        </div>
+        
+        </div>
+    </div>
+    
+            
+        </div>
+
+        <main class="stories">
+            
+        <div class="story">
+            <h2>Shops looted as German cost of living protests turn violent</h2>
+            <div class="story-body"><strong>Source:</strong> BBC World News<br><strong>Summary:</strong> Cost of living demonstrations across major German cities, including Berlin, Hamburg, and Frankfurt, escalated into violence and shop looting. The unrest coincided with massive economic protests taking place in France on the same day.<br><strong>Key Theme:</strong> Civil Unrest</div>
+        </div>
+        
+        <div class="story">
+            <h2>&#x27;We came back from hell&#x27;, say Ukrainians after years in Russia-occupied front-line city</h2>
+            <div class="story-body"><strong>Source:</strong> BBC World News<br><strong>Summary:</strong> Evacuated Ukrainian citizens have shared accounts of living through years of Russian occupation in the front-line city of Oleshky. One couple described risking their lives by navigating minefields simply to find food before successfully escaping.<br><strong>Key Theme:</strong> Ukraine Conflict</div>
+        </div>
+        
+        <div class="story">
+            <h2>Bulgaria votes in presidential runoff after tight first round - Reuters</h2>
+            <div class="story-body"><strong>Source:</strong> Reuters Top News<br><strong>Summary:</strong> Voters in Bulgaria have cast their ballots in a presidential runoff election following a closely contested first round. The election will determine the country&#x27;s next head of state amid heightened political competition.<br><strong>Key Theme:</strong> Elections</div>
+        </div>
+        
+        <div class="story">
+            <h2>Trump White House maps path to govern without Congress if Democrats win - Reuters</h2>
+            <div class="story-body"><strong>Source:</strong> Reuters Top News<br><strong>Summary:</strong> The Trump administration has reportedly mapped out plans to govern using executive authority if Democrats win legislative majorities. The strategy seeks alternative pathways to implement policies without reliance on Congressional approval.<br><strong>Key Theme:</strong> US Politics</div>
+        </div>
+        
+        <div class="story">
+            <h2>Heirbnb! How you can live like a King in rental properties on royal estates including Sandringham, Balmoral and Queen Victoria&#x27;s seaside escape</h2>
+            <div class="story-body"><strong>Source:</strong> Daily Mail UK<br><strong>Summary:</strong> Public holidaymakers can now rent holiday homes located directly on historic British royal estates, including Sandringham and Balmoral. The available properties include former residences owned by King Charles and locations hosted by Prince William.<br><strong>Key Theme:</strong> Travel</div>
+        </div>
+        
+        <div class="story">
+            <h2>Forget three days! Scientist tells Brits to stockpile enough for two WEEKS - here&#x27;s exactly what you should be buying</h2>
+            <div class="story-body"><strong>Source:</strong> Daily Mail UK<br><strong>Summary:</strong> Experts are urging British citizens to update their emergency preparedness by stockpiling two weeks&#x27; worth of essential supplies rather than the typical three-day provision. The advisory highlights specific long-term goods households should keep in store for potential disasters.<br><strong>Key Theme:</strong> Emergency Preparedness</div>
+        </div>
+        
+        <div class="story">
+            <h2>College basketball preseason top 25: Ranking the nation’s best teams</h2>
+            <div class="story-body"><strong>Source:</strong> New York Post<br><strong>Summary:</strong> The New York Post has published its preseason top 25 rankings for the upcoming college basketball season. The report breaks down and ranks the top-tier men&#x27;s teams across the nation ahead of opening play.<br><strong>Key Theme:</strong> Sports</div>
+        </div>
+        
+        <div class="story">
+            <h2>TV news hourly summary · Nov 1, 12:03 UTC</h2>
+            <div class="story-body"><strong>Source:</strong> Internet Archive TV News (hourly summary)<br><strong>Summary:</strong> An hourly broadcast summary reports on key international developments, including the upcoming U.S. midterm elections and violent cost-of-living protests in Europe. Other top stories include FBI allegations linking North Korea to a major cryptocurrency theft and voter-roll protests in India.<br><strong>Key Theme:</strong> Global News</div>
+        </div>
+        
+        </main>
+
+        
+        <div class='section-title'>Global &amp; Alternative RSS Feeds</div><div class='segmented-grid'>
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/articles/cqj34gnd3n30o?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>Shops looted as German cost of living protests turn violent</a></h3>
+                <p>The protests in cities across Germany - including Berlin, Hamburg and Frankfurt - came on the same day hundreds of thousands also protested in France....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/articles/cqglw3k7djp1o?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>&#x27;We came back from hell&#x27;, say Ukrainians after years in Russia-occupied front-line city</a></h3>
+                <p>One evacuated couple says they crossed minefields in Oleshky in search of food....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/articles/cqx2818elrnzo?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>Ukrainian evacuees reunite with family after years trapped in Russia-occupied city</a></h3>
+                <p>Oleshky residents had been without food, water and electricity, with many resorting to cooking garden weeds to survive....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMiogFBVV95cUxNUWVuZkFvVFlJOEJiem9lZWhrb1hTLXVaS1ZyWnhwLUZpNUpUcm9VM3JYb1BLeGxxUTZ3NXVkWWVMOGNKQUVtdFNZNWFnajRrdi1uYWdKRUFyRjltZVZsTUdQdDBpdFFoX0dseVJTY3UxMzlOeTRNUjY1b3pqZGE1YXRjWmZNRExQUjYyNXJwZTBXbGRvbWNjdl95U1U4WHF1b1E?oc=5' target='_blank' rel='noopener'>Bulgaria votes in presidential runoff after tight first round - Reuters</a></h3>
+                <p>Bulgaria votes in presidential runoff after tight first round Reuters...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMivgFBVV95cUxOOXdkX2hvMlBTTmRRRGlTbndZSTFnWnZyYkJ5STRjNFBOUkdwQ3VDUjRuTUQySzhQMkp2UXh0MW5VS3E4WHVXeEhQQ2JnRnUxV0pIVTM3T1J6Y0o3Y1JWamZ4YXMwNEtjazNiU3pERzRaWC1XNXZBZk56UU1KSUFNMWtZS0hrUjNUSW5ILW9kdWVQa3BqYkNPSl9tQk90SEtWcDdXRjZXdkdUT1IzS2ViaTgwTmE5MnlCclh1T0pB?oc=5' target='_blank' rel='noopener'>Trump White House maps path to govern without Congress if Democrats win - Reuters</a></h3>
+                <p>Trump White House maps path to govern without Congress if Democrats win Reuters...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMipgFBVV95cUxNMVRNX1Y5b0xXX3dlMU1QX2lRbVkxbkJYSU9SUVdxUFlXQ2hGcjRpRlVIbklCeTlZa1d2VnNOQWFaaVN0NHJVcnJSRVhUSngyVmcxdzlsZVpwSm1wbmduTGpNbXkwWEhKbGZQdURzZ0c0UHl2S28zLUxjbDdSUkdzZTFnMmtubVlvbmFVMHlsX3BvOVpLa2NqcWozZTJUWlhnUWUxYXFn?oc=5' target='_blank' rel='noopener'>OPEC+ set to keep oil output targets steady, sources say - Reuters</a></h3>
+                <p>OPEC+ set to keep oil output targets steady, sources say Reuters...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/news/royals/article-16243237/Heirbnb-you-live-like-King-rental-properties-royal-estates-including-Sandringham-Balmoral-Queen-Victorias-seaside-escape.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>Heirbnb! How you can live like a King in rental properties on royal estates including Sandringham, Balmoral and Queen Victoria&#x27;s seaside escape</a></h3>
+                <p>From a country home formerly owned by King Charles, to a holiday home that hosted Prince William, here are all of the Royal properties that you can actually stay in....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/sciencetech/article-16249865/Scientist-tells-Brits-stockpile-2-WEEKS.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>Forget three days! Scientist tells Brits to stockpile enough for two WEEKS - here&#x27;s exactly what you should be buying</a></h3>
+                <p>If you think a few tins of baked beans at the back of the cupboard are enough to see you through a disaster, experts say you&#x27;re dangerously underprepared....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/news/article-16249247/Thomas-markle-sr-allegations-storage-unit-device-search.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>Daily Mail finds child pornography in Thomas Markle&#x27;s Mexico storage unit: Explicit images and pedophilia magazines uncovered as we report him to the FBI</a></h3>
+                <p>The Daily Mail has reported the Duchess of Sussex&#x27;s estranged father to the FBI after discovering a stash of child pornography in a storage unit he rented near his former home in Mexico....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>New York Post</div>
+                <h3><a href='https://nypost.com/2026/11/01/sports/college-basketball-preseason-top-25-ranking-the-nations-best-teams/' target='_blank' rel='noopener'>College basketball preseason top 25: Ranking the nation’s best teams</a></h3>
+                <p>The Post’s Zach Braziller breaks it all down in his preseason top 25....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>New York Post</div>
+                <h3><a href='https://nypost.com/2026/11/01/betting/ravens-vs-bills-prediction-best-bet-nfl-week-8-odds-picks-best-bets/' target='_blank' rel='noopener'>Ravens vs. Bills prediction, props: Josh Allen, Lamar Jackson to shine in Week 8 marquee clash</a></h3>
+                <p>Lamar Jackson is back after a three-week absence and he’s just in time for the game football fans yearn for....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>New York Post</div>
+                <h3><a href='https://nypost.com/2026/11/01/betting/titans-vs-bengals-prediction-nfl-week-8-odds-picks-best-bet/' target='_blank' rel='noopener'>Titans vs. Bengals prediction, odds: Target this 2nd-quarter bet that favors Cincy</a></h3>
+                <p>Two AFC teams heading in opposite directions meet in Cincinnati....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/texas-arrests-convicted-felons-accused-voting-illegally/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=texas-arrests-convicted-felons-accused-voting-illegally' target='_blank' rel='noopener'>Texas Arrests Convicted Felons Accused Of Voting Illegally</a></h3>
+                <p>Ken Paxton’s Election Integrity Unit says multiple convicted felons cast ballots while on parole, with more allegations still under investigation....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/president-trump-goes-all-two-state-midterm-blitz/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=president-trump-goes-all-two-state-midterm-blitz' target='_blank' rel='noopener'>President Trump Goes All-In With Two-State Midterm Blitz, Multi-State Tele-Rally Push</a></h3>
+                <p>President Trump is closing the midterm campaign with two heartland rallies and a multi-state tele-rally push aimed at driving Republican turnout....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/michigan-democrats-senate-unity-show-collapses-election/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=michigan-democrats-senate-unity-show-collapses-election' target='_blank' rel='noopener'>Michigan Democrats’ Senate Unity Show Collapses Days Before Election</a></h3>
+                <p>A planned Democratic unity appearance erupted into a public fight after Abdul El-Sayed’s campaign reportedly tried to exclude Haley Stevens....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/10/30/minnesota-rep-by-2016-everyone-knew-ilhan-omar-married-her-brother/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=minnesota-rep-by-2016-everyone-knew-ilhan-omar-married-her-brother' target='_blank' rel='noopener'>Minnesota Rep: By 2016 Everyone Knew Ilhan Omar Married Her Brother</a></h3>
+                <p>Evidence suggesting Rep. Ilhan Omar, D-Minn., married her brother goes back at least to 2016, when the Obama administration opened an investigation into the alleged marital and immigration fraud. Repu...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/10/30/trans-kids-madness-is-built-on-a-foundation-of-constant-and-increasingly-aggressive-lies/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=trans-kids-madness-is-built-on-a-foundation-of-constant-and-increasingly-aggressive-lies' target='_blank' rel='noopener'>‘Trans Kids’ Madness Is Built On A Foundation Of Constant And Increasingly Aggressive Lies</a></h3>
+                <p>&#x27;Sex-rejecting medicine is fraud from the diagnosis to the coding to the treatment.&#x27;...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/10/30/study-links-frozen-embryo-transfers-to-higher-rates-of-childhood-cancer/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=study-links-frozen-embryo-transfers-to-higher-rates-of-childhood-cancer' target='_blank' rel='noopener'>Study Links Frozen Embryo Transfers To Higher Rates Of Childhood Cancer</a></h3>
+                <p>Pediatric cancer rates doubled in children born of frozen embryos. Most IVF transfers around the world involve cryopreserved embryos....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/shows/live-free-with-josh-howerton/pastor-warns-women-call-her-daddys-divorce-advice-is-worse-than-andrew-tate' target='_blank' rel='noopener'>Pastor warns women: ‘Call Her Daddy’s’ divorce advice is worse than Andrew Tate</a></h3>
+                <p>On the October 21 episode of “Call Her Daddy” — the number-one podcast listened to by American women — host Alex Cooper and guest Sophia Bush discussed divorce while talking about Bush’s past relation...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/lifestyle/america-doesnt-need-a-jesus-made-in-our-political-image' target='_blank' rel='noopener'>America doesn&#x27;t need a Jesus made in our political image</a></h3>
+                <p>Progressive Christians have long found support for their politics in the Bible. Often, the argument begins with what Scripture doesn’t explicitly condemn: Jesus never mentioned gay marriage or abortio...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/lifestyle/starstruck-late-night-hacks-gush-over-dems-as-midterms-loom' target='_blank' rel='noopener'>STARSTRUCK: Late-night hacks gush over Dems as midterms loom</a></h3>
+                <p>They don’t even try to hide it anymore. Late-night hacks are now full-on DNC pitchmen in the days leading up to the midterm elections. The only thing missing? Door hangers and lawn signs. Imagine an a...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/tree-hugging-sister/2026/10/31/pole-r-opposites-and-a-mexican-stand-off-shaping-up-nawrocki-and-poland-v-tusk-and-the-eu-n3820553' target='_blank' rel='noopener'>Pole-r Opposites and a Mexican Stand Off Shaping Up: Nawrocki and Poland v Tusk and the EU</a></h3>
+                <p>Pole-r Opposites and a Mexican Stand Off Shaping Up: Nawrocki and Poland v Tusk and the EU...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/headlines/2026/10/31/happy-halloween-white-house-trick-or-treating-edition-and-ichabod-crane-n3820497' target='_blank' rel='noopener'>Happy Halloween! White House Trick or Treating and Vintage Ichabod Crane Edition</a></h3>
+                <p>Happy Halloween! White House Trick or Treating and Vintage Ichabod Crane Edition...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/ed-morrissey/2026/10/31/saturdays-final-word-n3820549' target='_blank' rel='noopener'>Saturday&#x27;s Final Word</a></h3>
+                <p>Saturday&#x27;s Final Word...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Judicial Watch</div>
+                <h3><a href='https://www.judicialwatch.org/judicial-watch-challenges-government-secrecy-over-search-of-rep-ilhan-omars-dc-home/' target='_blank' rel='noopener'>Judicial Watch Challenges Government Secrecy Over Search of Rep. Ilhan Omar’s DC Home</a></h3>
+                <p>(Washington, DC) – Judicial Watch announced today that it filed a reply brief urging the U.S. District Court…...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Judicial Watch</div>
+                <h3><a href='https://www.judicialwatch.org/fbi-sued-over-recalled-report-on-chinese-election-interference/' target='_blank' rel='noopener'>FBI Sued Over Recalled Report on Chinese Election Interference</a></h3>
+                <p>Judicial Watch Sues FBI for Records on Chinese Election Interference Report/a&gt; Judicial Watch Sues FBI for Aldrich Ames…...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Judicial Watch</div>
+                <h3><a href='https://www.judicialwatch.org/sues-fbi-records-aldrich-ames-espionage-investigation/' target='_blank' rel='noopener'>Judicial Watch Sues FBI for Records on Aldrich Ames Espionage Investigation</a></h3>
+                <p>(Washington, DC) – Judicial Watch announced today that it filed a Freedom of Information Act (FOIA) lawsuit…...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/11/the-eu-met-its-waterloo-in-warsaw/' target='_blank' rel='noopener'>The EU Met Its Waterloo In Warsaw</a></h3>
+                <p>Photo Credit: Clarice F By Clarice Feldman EU-supported politicians attempted a coup d’etat in Poland and lost due to the bravery of the Polish president Karol Nawrocki and the thousands of Poles who ...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/11/giving-citizens-the-power-to-judge-their-government-directly/' target='_blank' rel='noopener'>Giving Citizens The Power To Judge Their Government Directly</a></h3>
+                <p>Photo Credit: AI for American Thinker By David DeMay It is long past time for citizens to judge the bureaucracy, rather than giving the bureaucracy sole power to judge itself....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/11/fixing-our-broken-elections/' target='_blank' rel='noopener'>Fixing Our Broken Elections</a></h3>
+                <p>Photo Credit: Pexels By J. Kevin Jenkins Here are a few politically incorrect suggestions....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMifEFVX3lxTE5sQ3M3ZTFkX19VVEFHSHNEX1BmTmZTZzlkemFnVUZfVjBja010TlFJTmIzaU1IU1BlZVRXRU1vemVIREhQeTNpZktjdEFjeGVCS0R3cXRrYVdkZ3VGRXBteUNHeTZ2UklaaWlpTnk5dEJSbF9wOWJvMFhRVjc?oc=5' target='_blank' rel='noopener'>Spot the Difference Daily- Play Now online &amp; 100% Free - The Epoch Times</a></h3>
+                <p>Spot the Difference Daily- Play Now online &amp; 100% Free The Epoch Times...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMiREFVX3lxTFBSU2dZLXZaX21HbzlKWGxkWnM1eEQwNEZ3VE4xUkJFWFJWSkJ3d0pSY2c4MTBKZXctUXdyWWdicWJQaklP?oc=5' target='_blank' rel='noopener'>The Epoch Times | Breaking News, Latest News, World News and Videos - The Epoch Times</a></h3>
+                <p>The Epoch Times | Breaking News, Latest News, World News and Videos The Epoch Times...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMisAFBVV95cUxNSHF4eWVXMmVTRW1KRDQ1cWEtWHZJNWJhOFNycUtqV3RhOFEwMnBqT1EwaFdSbGsxRUUzZEJVZlBpUUZKblNiTG4zbzlXSE9vZVppYkQ5bmxPWlpsTzQ0RG1Pek15NVptZlBkVG9Ea0pSdVpUN284Z1ZhRGhDTnNkTHBLZkw4Y2Ewa3dxTG02M2NkdTZ2X1gzbGZVeVFqRDJFMWhVcC11cTR1b0Y4Ym5Fdg?oc=5' target='_blank' rel='noopener'>US Grants Visa to Flavio Bolsonaro After He Flees Brazil - The Epoch Times</a></h3>
+                <p>US Grants Visa to Flavio Bolsonaro After He Flees Brazil The Epoch Times...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Internet Archive TV News (hourly summary)</div>
+                <h3><a href='https://mastodon.archive.org/@tv/117541082534467291' target='_blank' rel='noopener'>TV news hourly summary · Nov 1, 12:03 UTC</a></h3>
+                <p>The U.S. midterm election is days away, with attention on a Michigan Senate race and questions surrounding Rep. Ilhan Omar’s eligibility. Across Europe, protests have turned violent, including clashes...</p>
+            </div>
+            </div>
+
+        <footer>
+            Automated Segmented Pipeline powered by HTML Scrapers, 11 Global RSS Feeds &amp; Google Gemini AI &bull; 2026-11-01
+        </footer>
+    </div>
+</body>
+</html>

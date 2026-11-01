@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-11-01",
+    "timestamp": "2026-11-01T12:39:20.158172+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "Shops looted as German cost of living protests turn violent",
+      "'We came back from hell', say Ukrainians after years in Russia-occupied front-line city",
+      "Bulgaria votes in presidential runoff after tight first round - Reuters",
+      "Trump White House maps path to govern without Congress if Democrats win - Reuters",
+      "Heirbnb! How you can live like a King in rental properties on royal estates including Sandringham, Balmoral and Queen Victoria's seaside escape"
+    ],
+    "archive_html_path": "data/archive/2026-11-01/index.html",
+    "data_json_path": "data/archive/2026-11-01/data.json"
+  },
+  {
     "date": "2026-10-31",
     "timestamp": "2026-10-31T11:40:19.783105+00:00",
     "stories_count": 8,
