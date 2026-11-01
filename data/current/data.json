@@ -1,23 +1,23 @@
 {
-  "last_updated": "2026-11-01T19:45:06.959676+00:00",
+  "last_updated": "2026-11-01T23:40:54.352161+00:00",
   "source": "https://www.alexjoneslive.com/",
   "date": "2026-11-01",
-  "stories_hash": "a323d5ae2a0c8ecb48dcef3ae18b963d",
+  "stories_hash": "c3ebb48128f6beb5e2d7c92fa6cf9383",
   "stories_count": 8,
   "scraped_articles_count": 0,
   "rss_articles_count": 34,
   "scraped_articles": [],
   "rss_feeds_articles": [
     {
-      "id": "9b86ba092e55",
-      "headline": "Shops looted as German cost-of-living protests turn violent",
-      "title": "Shops looted as German cost-of-living protests turn violent",
-      "url": "https://www.bbc.co.uk/news/articles/cqj34gnd3n30o?at_medium=RSS&at_campaign=rss",
-      "link": "https://www.bbc.co.uk/news/articles/cqj34gnd3n30o?at_medium=RSS&at_campaign=rss",
-      "excerpt": "The protests in cities across Germany - including Berlin, Hamburg and Frankfurt - came on the same day hundreds of thousands also protested in France.",
-      "summary": "The protests in cities across Germany - including Berlin, Hamburg and Frankfurt - came on the same day hundreds of thousands also protested in France.",
-      "relative_time": "Sun, 01 Nov 2026 11:57:48 GMT",
-      "published": "Sun, 01 Nov 2026 11:57:48 GMT",
+      "id": "7281dd6a8635",
+      "headline": "Russian strikes cut power to thousands in Ukraine as Kherson ceasefire ends",
+      "title": "Russian strikes cut power to thousands in Ukraine as Kherson ceasefire ends",
+      "url": "https://www.bbc.co.uk/news/articles/c64g1y90p71eo?at_medium=RSS&at_campaign=rss",
+      "link": "https://www.bbc.co.uk/news/articles/c64g1y90p71eo?at_medium=RSS&at_campaign=rss",
+      "excerpt": "A rare humanitarian ceasefire allowed civilians to evacuate the Russian-occupied city of Oleshky.",
+      "summary": "A rare humanitarian ceasefire allowed civilians to evacuate the Russian-occupied city of Oleshky.",
+      "relative_time": "Sun, 01 Nov 2026 21:55:01 GMT",
+      "published": "Sun, 01 Nov 2026 21:55:01 GMT",
       "author": "BBC World News",
       "feed": "BBC World News",
       "feedName": "BBC World News",
@@ -25,8 +25,8 @@
       "category": "Global",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/0ace/live/3e4ef120-d5d4-11f1-8629-7b9503d639be.jpg",
-      "scraped_at": "2026-11-01T19:45:04.380525+00:00"
+      "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d8e6/live/7871d270-d627-11f1-a947-0507737f09b2.jpg",
+      "scraped_at": "2026-11-01T23:40:51.118024+00:00"
     },
     {
       "id": "14c5f1010b50",
@@ -46,7 +46,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/c922/live/4fe4c8d0-d5fa-11f1-a701-fddedf244c16.jpg",
-      "scraped_at": "2026-11-01T19:45:04.380574+00:00"
+      "scraped_at": "2026-11-01T23:40:51.118054+00:00"
     },
     {
       "id": "af75c29d7e34",
@@ -66,18 +66,18 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/ea05/live/c6f18070-d5ec-11f1-bfdd-73f39e6db31d.jpg",
-      "scraped_at": "2026-11-01T19:45:04.380612+00:00"
+      "scraped_at": "2026-11-01T23:40:51.118073+00:00"
     },
     {
-      "id": "85da8b9bf9cd",
-      "headline": "US judge dismisses Trump election lawsuit in Alaska - Reuters",
-      "title": "US judge dismisses Trump election lawsuit in Alaska - Reuters",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPck1iY1RiSVI0MWpxbGhyZzlYWm9PeGh6WXJnYTVIX0VqTS1UbGpTQUh0WkFxbUpFdlNsbmJCUzg0bENnWmtEUjcxUWxTbmIzMzlKUGdXNGFidFl0Nk10a29rYVlVUkdLRVM2TUtBU0NRcTlXUS0xSjhmOTRZNWVjUW1yMVVIOHh4QnFLTEFiQWZyRWNsSVE?oc=5",
-      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPck1iY1RiSVI0MWpxbGhyZzlYWm9PeGh6WXJnYTVIX0VqTS1UbGpTQUh0WkFxbUpFdlNsbmJCUzg0bENnWmtEUjcxUWxTbmIzMzlKUGdXNGFidFl0Nk10a29rYVlVUkdLRVM2TUtBU0NRcTlXUS0xSjhmOTRZNWVjUW1yMVVIOHh4QnFLTEFiQWZyRWNsSVE?oc=5",
-      "excerpt": "US judge dismisses Trump election lawsuit in Alaska Reuters",
-      "summary": "US judge dismisses Trump election lawsuit in Alaska Reuters",
-      "relative_time": "Sun, 01 Nov 2026 18:29:51 GMT",
-      "published": "Sun, 01 Nov 2026 18:29:51 GMT",
+      "id": "dd6f3df95f2c",
+      "headline": "Ukrainian air force says public air raid alert app sent erroneous alerts after being hacked - Reuters",
+      "title": "Ukrainian air force says public air raid alert app sent erroneous alerts after being hacked - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPYjdWbExXZ1JiYUVET2JwdTc2VVZ0T3J0czdJbUNyLWhLTzI3cW1zOWkxZF9mU3ZnVWtDYXR5SjVwZTlDZ0tFdXE5bkdIUjBwZEZRbmRDWGY4WkNvVkFqSFRJeXdBMzBPS0VJSmlzRkRTS1lCekRwOWRWZ3dSUXNyOVJMRk1Ga3lKZHV2bnctMFhVNTJDVFQ3UlBSWGl5QV95b3pMR2lGd05TRXdiRDdlUHFITkxmZw?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPYjdWbExXZ1JiYUVET2JwdTc2VVZ0T3J0czdJbUNyLWhLTzI3cW1zOWkxZF9mU3ZnVWtDYXR5SjVwZTlDZ0tFdXE5bkdIUjBwZEZRbmRDWGY4WkNvVkFqSFRJeXdBMzBPS0VJSmlzRkRTS1lCekRwOWRWZ3dSUXNyOVJMRk1Ga3lKZHV2bnctMFhVNTJDVFQ3UlBSWGl5QV95b3pMR2lGd05TRXdiRDdlUHFITkxmZw?oc=5",
+      "excerpt": "Ukrainian air force says public air raid alert app sent erroneous alerts after being hacked Reuters",
+      "summary": "Ukrainian air force says public air raid alert app sent erroneous alerts after being hacked Reuters",
+      "relative_time": "Sun, 01 Nov 2026 22:53:46 GMT",
+      "published": "Sun, 01 Nov 2026 22:53:46 GMT",
       "author": "Reuters Top News",
       "feed": "Reuters Top News",
       "feedName": "Reuters Top News",
@@ -86,18 +86,18 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-11-01T19:45:04.505665+00:00"
+      "scraped_at": "2026-11-01T23:40:51.616968+00:00"
     },
     {
-      "id": "b675a1e08fdd",
-      "headline": "Democratic Senator Murphy hospitalized after stroke, chief of staff says - Reuters",
-      "title": "Democratic Senator Murphy hospitalized after stroke, chief of staff says - Reuters",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQNFRBVkdFd1REUGNsaWd3Z2lRUzVQdEwtczZmOUtvZHBiWmVmSkUyMGdURWVNSV9SbV9Oa0hPRW5iV0hXS2JtN1JIYTdqcjJBeXJzOVpGSTYtYVNFM3FHUVdDSU9TcnpoNVF0XzNPTVVsclNPa3JabVlEVEZVbEFYdnA4U1Z1YWxSQ2lkU01lM0YwbHd4dWxqRjNodV8tUDUxWmk3MGxFMHVNLVFRV1FWaWVVUQ?oc=5",
-      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQNFRBVkdFd1REUGNsaWd3Z2lRUzVQdEwtczZmOUtvZHBiWmVmSkUyMGdURWVNSV9SbV9Oa0hPRW5iV0hXS2JtN1JIYTdqcjJBeXJzOVpGSTYtYVNFM3FHUVdDSU9TcnpoNVF0XzNPTVVsclNPa3JabVlEVEZVbEFYdnA4U1Z1YWxSQ2lkU01lM0YwbHd4dWxqRjNodV8tUDUxWmk3MGxFMHVNLVFRV1FWaWVVUQ?oc=5",
-      "excerpt": "Democratic Senator Murphy hospitalized after stroke, chief of staff says Reuters",
-      "summary": "Democratic Senator Murphy hospitalized after stroke, chief of staff says Reuters",
-      "relative_time": "Sun, 01 Nov 2026 17:47:07 GMT",
-      "published": "Sun, 01 Nov 2026 17:47:07 GMT",
+      "id": "23b1b85046de",
+      "headline": "Iran's IRGC Navy says two tankers 'exploded' after hitting mines in Hormuz - Reuters",
+      "title": "Iran's IRGC Navy says two tankers 'exploded' after hitting mines in Hormuz - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNZmk2dmxjdk1sOW96UkZiaUlJVXhzc1pJMjZJUnY2WGtvaXd4aXRJY3d4UTNoUmFJdUVQQjlkb0JPSmxEc2YzS1JOZ2NSWmpTUnhzYzBiU1hfeXBvb2F2WEp2NHc5YkFfUUNKSHc2NW1PMUVKT0xqUTdOa0tfUmZpQWE2SDFtdzJ5TmZleWpLd0Zid1JWR2Z0d0dOeVMwekFzNTNTYndHMmMyV0poZ2h0UmFOVWc2M3o3Z2h6TUR2SQ?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNZmk2dmxjdk1sOW96UkZiaUlJVXhzc1pJMjZJUnY2WGtvaXd4aXRJY3d4UTNoUmFJdUVQQjlkb0JPSmxEc2YzS1JOZ2NSWmpTUnhzYzBiU1hfeXBvb2F2WEp2NHc5YkFfUUNKSHc2NW1PMUVKT0xqUTdOa0tfUmZpQWE2SDFtdzJ5TmZleWpLd0Zid1JWR2Z0d0dOeVMwekFzNTNTYndHMmMyV0poZ2h0UmFOVWc2M3o3Z2h6TUR2SQ?oc=5",
+      "excerpt": "Iran's IRGC Navy says two tankers 'exploded' after hitting mines in Hormuz Reuters",
+      "summary": "Iran's IRGC Navy says two tankers 'exploded' after hitting mines in Hormuz Reuters",
+      "relative_time": "Sun, 01 Nov 2026 20:12:33 GMT",
+      "published": "Sun, 01 Nov 2026 20:12:33 GMT",
       "author": "Reuters Top News",
       "feed": "Reuters Top News",
       "feedName": "Reuters Top News",
@@ -106,7 +106,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-11-01T19:45:04.505715+00:00"
+      "scraped_at": "2026-11-01T23:40:51.617000+00:00"
     },
     {
       "id": "624e074a679e",
@@ -126,7 +126,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-11-01T19:45:04.505753+00:00"
+      "scraped_at": "2026-11-01T23:40:51.617021+00:00"
     },
     {
       "id": "2bbabb85c1de",
@@ -146,7 +146,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://i.dailymail.com/1s/2026/10/28/16/112140961-0-This_19th_century_building_has_served_various_purposes_including-a-30_1793204846552.jpg",
-      "scraped_at": "2026-11-01T19:45:04.751083+00:00"
+      "scraped_at": "2026-11-01T23:40:52.214960+00:00"
     },
     {
       "id": "6b18c971dd51",
@@ -166,7 +166,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://i.dailymail.com/1s/2026/10/31/12/112212243-0-image-a-51_1793451087290.jpg",
-      "scraped_at": "2026-11-01T19:45:04.751146+00:00"
+      "scraped_at": "2026-11-01T23:40:52.214996+00:00"
     },
     {
       "id": "2616c04bb5bf",
@@ -186,127 +186,127 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://i.dailymail.com/1s/2026/10/30/15/112194459-0-image-a-57_1793373039420.jpg",
-      "scraped_at": "2026-11-01T19:45:04.751206+00:00"
+      "scraped_at": "2026-11-01T23:40:52.215030+00:00"
     },
     {
-      "id": "36d7c62dce39",
-      "headline": "$2M Learjet 60 crashes near Palm Beach, demolishing mobile home in fireball",
-      "title": "$2M Learjet 60 crashes near Palm Beach, demolishing mobile home in fireball",
-      "url": "https://nypost.com/2026/11/01/us-news/2m-learjet-60-crashes-near-palm-beach-florida/",
-      "link": "https://nypost.com/2026/11/01/us-news/2m-learjet-60-crashes-near-palm-beach-florida/",
-      "excerpt": "A $2 million private jet crashed into a south Florida mobile home park \u2014 apparently demolishing at least one trailer in a massive fireball.",
-      "summary": "A $2 million private jet crashed into a south Florida mobile home park \u2014 apparently demolishing at least one trailer in a massive fireball.",
-      "relative_time": "Sun, 01 Nov 2026 11:35:26 -0800",
-      "published": "Sun, 01 Nov 2026 11:35:26 -0800",
-      "author": "Anthony Blair",
+      "id": "649f79bad92b",
+      "headline": "GOP governor hopeful Blakeman launches eight-city sweep across NY in just 48 hours",
+      "title": "GOP governor hopeful Blakeman launches eight-city sweep across NY in just 48 hours",
+      "url": "https://nypost.com/2026/11/01/us-news/ny-governor-hopeful-blakeman-launches-eight-city-sweep-in-just-48-hours/",
+      "link": "https://nypost.com/2026/11/01/us-news/ny-governor-hopeful-blakeman-launches-eight-city-sweep-in-just-48-hours/",
+      "excerpt": "\u201cWe are leaving no stone left unturned.\"",
+      "summary": "\u201cWe are leaving no stone left unturned.\"",
+      "relative_time": "Sun, 01 Nov 2026 18:39:49 -0500",
+      "published": "Sun, 01 Nov 2026 18:39:49 -0500",
+      "author": "Brandon Cruz",
       "feed": "New York Post",
       "feedName": "New York Post",
       "feedId": "f35f2eec037f",
       "category": "Global",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fmultiple-fatalities-feared-small-plane-147227052.jpg?w%3D802",
-      "scraped_at": "2026-11-01T19:45:04.846268+00:00"
+      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fnew-york-governor-candidate-bruce-147231447.jpg?w%3D1024",
+      "scraped_at": "2026-11-01T23:40:52.340899+00:00"
     },
     {
-      "id": "e36f516e309c",
-      "headline": "Wu-Tang Clan to perform at halftime show during Lions-Bears Thanksgiving game",
-      "title": "Wu-Tang Clan to perform at halftime show during Lions-Bears Thanksgiving game",
-      "url": "https://nypost.com/2026/11/01/sports/wu-tang-clan-to-perform-at-halftime-show-during-lions-bears-thanksgiving-game/",
-      "link": "https://nypost.com/2026/11/01/sports/wu-tang-clan-to-perform-at-halftime-show-during-lions-bears-thanksgiving-game/",
-      "excerpt": "It\u2019s time to bring da ruckus \u2014 and the stuffing. Wu-Tang Clan is bringing its legendary catalog to one of the NFL\u2019s biggest regular-season stages. The arguably most influential hip-hop group of all time will headline the Detroit Lions\u2019 Thanksgiving Day halftime show on Nov. 26, when the Lions host the Chicago Bears at Ford...",
-      "summary": "It\u2019s time to bring da ruckus \u2014 and the stuffing. Wu-Tang Clan is bringing its legendary catalog to one of the NFL\u2019s biggest regular-season stages. The arguably most influential hip-hop group of all time will headline the Detroit Lions\u2019 Thanksgiving Day halftime show on Nov. 26, when the Lions host the Chicago Bears at Ford...",
-      "relative_time": "Sun, 01 Nov 2026 11:34:19 -0800",
-      "published": "Sun, 01 Nov 2026 11:34:19 -0800",
-      "author": "Bryan Fonseca",
+      "id": "4bd13a47c3ac",
+      "headline": "Chargers offensive woes summarized in fail mary attempt during final seconds of first half",
+      "title": "Chargers offensive woes summarized in fail mary attempt during final seconds of first half",
+      "url": "https://nypost.com/2026/11/01/sports/chargers-offensive-woes-summarized-in-fail-mary-attempt-during-final-seconds-of-first-half/",
+      "link": "https://nypost.com/2026/11/01/sports/chargers-offensive-woes-summarized-in-fail-mary-attempt-during-final-seconds-of-first-half/",
+      "excerpt": "The Los Angeles Chargers\u2019 offensive woes have hit a new low during the final play of the first half in Sunday\u2019s Week 8 game against the Los Angeles Rams. During the final seconds of the second quarter, the Chargers executed a hail mary attempt that was successful and wasn\u2019t. Los Angeles Chargers offensive woes were...",
+      "summary": "The Los Angeles Chargers\u2019 offensive woes have hit a new low during the final play of the first half in Sunday\u2019s Week 8 game against the Los Angeles Rams. During the final seconds of the second quarter, the Chargers executed a hail mary attempt that was successful and wasn\u2019t. Los Angeles Chargers offensive woes were...",
+      "relative_time": "Sun, 01 Nov 2026 18:38:30 -0500",
+      "published": "Sun, 01 Nov 2026 18:38:30 -0500",
+      "author": "Thomas L. Murray",
       "feed": "New York Post",
       "feedName": "New York Post",
       "feedId": "f35f2eec037f",
       "category": "Global",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2FGettyImages-2298537804.jpg?w%3D1024",
-      "scraped_at": "2026-11-01T19:45:04.846355+00:00"
+      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2FAP_Chargers_Rams_Football_59119-91baa-0.jpg?w%3D1024",
+      "scraped_at": "2026-11-01T23:40:52.340950+00:00"
     },
     {
-      "id": "93587f73ce42",
-      "headline": "OnlyFans star blasts girlfriends banning boyfriends from GTA VI : \u2018At least he\u2019s not cheating in real life\u2019",
-      "title": "OnlyFans star blasts girlfriends banning boyfriends from GTA VI : \u2018At least he\u2019s not cheating in real life\u2019",
-      "url": "https://nypost.com/2026/11/01/lifestyle/is-gta-6-virtual-cheating-onlyfans-star-skylar-mae-weighs-in/",
-      "link": "https://nypost.com/2026/11/01/lifestyle/is-gta-6-virtual-cheating-onlyfans-star-skylar-mae-weighs-in/",
-      "excerpt": "Is it cheating if it\u2019s in a video game? An OnlyFans star says women are being too strict on boyfriends.",
-      "summary": "Is it cheating if it\u2019s in a video game? An OnlyFans star says women are being too strict on boyfriends.",
-      "relative_time": "Sun, 01 Nov 2026 11:31:51 -0800",
-      "published": "Sun, 01 Nov 2026 11:31:51 -0800",
-      "author": "Andrea Palladino",
+      "id": "ab68d96fb7f9",
+      "headline": "Raiders Kirk Cousins makes insanely complimentary comp for Brock Bowers",
+      "title": "Raiders Kirk Cousins makes insanely complimentary comp for Brock Bowers",
+      "url": "https://nypost.com/2026/11/01/sports/brock-bowers-making-kirk-cousions-rethink-meaning-of-covered/",
+      "link": "https://nypost.com/2026/11/01/sports/brock-bowers-making-kirk-cousions-rethink-meaning-of-covered/",
+      "excerpt": "There is covered. And then there is Brock Bowers covered. Kirk Cousins is learning those are two entirely different things. The Raiders quarterback offered an incredible window into the challenge of playing with an extraordinary talent Sunday, placing Bowers in a conversation with some of the best receivers he has thrown to during his career....",
+      "summary": "There is covered. And then there is Brock Bowers covered. Kirk Cousins is learning those are two entirely different things. The Raiders quarterback offered an incredible window into the challenge of playing with an extraordinary talent Sunday, placing Bowers in a conversation with some of the best receivers he has thrown to during his career....",
+      "relative_time": "Sun, 01 Nov 2026 18:29:52 -0500",
+      "published": "Sun, 01 Nov 2026 18:29:52 -0500",
+      "author": "Vincent Bonsignore",
       "feed": "New York Post",
       "feedName": "New York Post",
       "feedId": "f35f2eec037f",
       "category": "Global",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fweighed-growing-debate-playing-game-147214186.jpg?w%3D767",
-      "scraped_at": "2026-11-01T19:45:04.846407+00:00"
+      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fcatches-pass-touchdown-new-york-147243559.jpg?w%3D1024",
+      "scraped_at": "2026-11-01T23:40:52.340983+00:00"
     },
     {
-      "id": "ca8f8e8682ae",
-      "headline": "Suspect Arrested After Fox News Media Editor Found Dead",
-      "title": "Suspect Arrested After Fox News Media Editor Found Dead",
-      "url": "https://100percentfedup.com/suspect-arrested-after-fox-news-media-editor-found/?utm_source=rss&utm_medium=rss&utm_campaign=suspect-arrested-after-fox-news-media-editor-found",
-      "link": "https://100percentfedup.com/suspect-arrested-after-fox-news-media-editor-found/?utm_source=rss&utm_medium=rss&utm_campaign=suspect-arrested-after-fox-news-media-editor-found",
-      "excerpt": "Police arrested and charged a suspect in the death of a 44-year-old man who had disappeared in Virginia. Joshua Cochran, [\u2026]",
-      "summary": "Police arrested and charged a suspect in the death of a 44-year-old man who had disappeared in Virginia. Joshua Cochran, [\u2026]",
-      "relative_time": "Sun, 01 Nov 2026 19:40:29 +0000",
-      "published": "Sun, 01 Nov 2026 19:40:29 +0000",
-      "author": "Danielle",
+      "id": "13ef549372c1",
+      "headline": "President Trump Vows Close Review After Chinese Spy Plot Targets Nvidia CEO",
+      "title": "President Trump Vows Close Review After Chinese Spy Plot Targets Nvidia CEO",
+      "url": "https://100percentfedup.com/president-trump-vows-close-review-after-chinese-spy/?utm_source=rss&utm_medium=rss&utm_campaign=president-trump-vows-close-review-after-chinese-spy",
+      "link": "https://100percentfedup.com/president-trump-vows-close-review-after-chinese-spy/?utm_source=rss&utm_medium=rss&utm_campaign=president-trump-vows-close-review-after-chinese-spy",
+      "excerpt": "President Trump says his administration will closely examine a reported Chinese intelligence operation targeting Nvidia CEO Jensen Huang.",
+      "summary": "President Trump says his administration will closely examine a reported Chinese intelligence operation targeting Nvidia CEO Jensen Huang.",
+      "relative_time": "Sun, 01 Nov 2026 22:37:00 +0000",
+      "published": "Sun, 01 Nov 2026 22:37:00 +0000",
+      "author": "Isaac",
       "feed": "100% Fed Up",
       "feedName": "100% Fed Up",
       "feedId": "fa340e6e9ab1",
       "category": "Alternative",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://100percentfedup.com/wp-content/uploads/2023/01/fox-news.jpeg",
-      "scraped_at": "2026-11-01T19:45:05.370966+00:00"
+      "imageUrl": "https://100percentfedup.com/wp-content/uploads/2026/11/president-trump-ai-tech-leaders-official-us-government-image.jpg",
+      "scraped_at": "2026-11-01T23:40:52.621841+00:00"
     },
     {
-      "id": "32757b5383d7",
-      "headline": "BREAKING: Top Michigan Democrat Crosses Party Lines To Back Trump-Endorsed Republican",
-      "title": "BREAKING: Top Michigan Democrat Crosses Party Lines To Back Trump-Endorsed Republican",
-      "url": "https://100percentfedup.com/breaking-top-michigan-democrat-crosses-party-lines-back/?utm_source=rss&utm_medium=rss&utm_campaign=breaking-top-michigan-democrat-crosses-party-lines-back",
-      "link": "https://100percentfedup.com/breaking-top-michigan-democrat-crosses-party-lines-back/?utm_source=rss&utm_medium=rss&utm_campaign=breaking-top-michigan-democrat-crosses-party-lines-back",
-      "excerpt": "A prominent Michigan Democrat crossed party lines Sunday and endorsed the Trump-backed Republican in the state's pivotal U.S. Senate race.",
-      "summary": "A prominent Michigan Democrat crossed party lines Sunday and endorsed the Trump-backed Republican in the state's pivotal U.S. Senate race.",
-      "relative_time": "Sun, 01 Nov 2026 19:25:43 +0000",
-      "published": "Sun, 01 Nov 2026 19:25:43 +0000",
-      "author": "Jack",
+      "id": "d84891967b37",
+      "headline": "WATCH: Dashcam Captures Terrifying Moment Learjet Plunges Into Palm Beach Neighborhood",
+      "title": "WATCH: Dashcam Captures Terrifying Moment Learjet Plunges Into Palm Beach Neighborhood",
+      "url": "https://100percentfedup.com/watch-dashcamptures-terrifying-moment-learjet-plunges-palm/?utm_source=rss&utm_medium=rss&utm_campaign=watch-dashcamptures-terrifying-moment-learjet-plunges-palm",
+      "link": "https://100percentfedup.com/watch-dashcamptures-terrifying-moment-learjet-plunges-palm/?utm_source=rss&utm_medium=rss&utm_campaign=watch-dashcamptures-terrifying-moment-learjet-plunges-palm",
+      "excerpt": "Dashcam video captured a Learjet 60 plunging into a Palm Beach County neighborhood. All nine people aboard were killed, officials said.",
+      "summary": "Dashcam video captured a Learjet 60 plunging into a Palm Beach County neighborhood. All nine people aboard were killed, officials said.",
+      "relative_time": "Sun, 01 Nov 2026 22:24:00 +0000",
+      "published": "Sun, 01 Nov 2026 22:24:00 +0000",
+      "author": "Isaac",
       "feed": "100% Fed Up",
       "feedName": "100% Fed Up",
       "feedId": "fa340e6e9ab1",
       "category": "Alternative",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://100percentfedup.com/wp-content/uploads/2026/11/mike-rogers-michigan-senate-poll.jpg",
-      "scraped_at": "2026-11-01T19:45:05.371044+00:00"
+      "imageUrl": "https://100percentfedup.com/wp-content/uploads/2026/11/palm-beach-learjet-crash-representative-private-jet.jpg",
+      "scraped_at": "2026-11-01T23:40:52.621875+00:00"
     },
     {
-      "id": "9dd4d028fc7f",
-      "headline": "Democratic Senator Hospitalized After Having Stroke",
-      "title": "Democratic Senator Hospitalized After Having Stroke",
-      "url": "https://100percentfedup.com/democratic-senator-hospitalized-after-having-stroke/?utm_source=rss&utm_medium=rss&utm_campaign=democratic-senator-hospitalized-after-having-stroke",
-      "link": "https://100percentfedup.com/democratic-senator-hospitalized-after-having-stroke/?utm_source=rss&utm_medium=rss&utm_campaign=democratic-senator-hospitalized-after-having-stroke",
-      "excerpt": "Sen. Chris Murphy (D-CT) was hospitalized after having a stroke on Saturday. \u201cYesterday afternoon, Senator Murphy started experiencing numbness in [\u2026]",
-      "summary": "Sen. Chris Murphy (D-CT) was hospitalized after having a stroke on Saturday. \u201cYesterday afternoon, Senator Murphy started experiencing numbness in [\u2026]",
-      "relative_time": "Sun, 01 Nov 2026 19:11:20 +0000",
-      "published": "Sun, 01 Nov 2026 19:11:20 +0000",
-      "author": "Danielle",
+      "id": "a6d6de87c46a",
+      "headline": "Alaska Election Chaos: Real Sen. Dan Sullivan\u2019s Campaign Account Branded \u2018Inauthentic\u2019",
+      "title": "Alaska Election Chaos: Real Sen. Dan Sullivan\u2019s Campaign Account Branded \u2018Inauthentic\u2019",
+      "url": "https://100percentfedup.com/alaska-election-chaos-real-sen-dan-sullivansmpaign/?utm_source=rss&utm_medium=rss&utm_campaign=alaska-election-chaos-real-sen-dan-sullivansmpaign",
+      "link": "https://100percentfedup.com/alaska-election-chaos-real-sen-dan-sullivansmpaign/?utm_source=rss&utm_medium=rss&utm_campaign=alaska-election-chaos-real-sen-dan-sullivansmpaign",
+      "excerpt": "The real Sen. Dan Sullivan\u2019s campaign account was temporarily suspended as \u2018inauthentic\u2019 while a same-name candidate remains on Alaska\u2019s Senate ballot.",
+      "summary": "The real Sen. Dan Sullivan\u2019s campaign account was temporarily suspended as \u2018inauthentic\u2019 while a same-name candidate remains on Alaska\u2019s Senate ballot.",
+      "relative_time": "Sun, 01 Nov 2026 21:35:56 +0000",
+      "published": "Sun, 01 Nov 2026 21:35:56 +0000",
+      "author": "Isaac",
       "feed": "100% Fed Up",
       "feedName": "100% Fed Up",
       "feedId": "fa340e6e9ab1",
       "category": "Alternative",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://100percentfedup.com/wp-content/uploads/2026/11/image-12.jpg",
-      "scraped_at": "2026-11-01T19:45:05.371101+00:00"
+      "imageUrl": "https://100percentfedup.com/wp-content/uploads/2026/11/sen-dan-sullivan-alaska-x-account-1600x900-1.jpg",
+      "scraped_at": "2026-11-01T23:40:52.621914+00:00"
     },
     {
       "id": "2626ca21dabd",
@@ -326,7 +326,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://thefederalist.com/wp-content/uploads/2026/10/Screenshot-2026-10-30-164346-1200x675.jpg",
-      "scraped_at": "2026-11-01T19:45:05.495248+00:00"
+      "scraped_at": "2026-11-01T23:40:52.749773+00:00"
     },
     {
       "id": "6365bf84dc67",
@@ -346,7 +346,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://thefederalist.com/wp-content/uploads/2026/10/haim-testimony-1200x675.jpg",
-      "scraped_at": "2026-11-01T19:45:05.495303+00:00"
+      "scraped_at": "2026-11-01T23:40:52.749805+00:00"
     },
     {
       "id": "5198f6698779",
@@ -366,7 +366,27 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://thefederalist.com/wp-content/uploads/2026/10/https___thefederalist.com_wp-admin_post.php_post412998actionedit.jpg",
-      "scraped_at": "2026-11-01T19:45:05.495344+00:00"
+      "scraped_at": "2026-11-01T23:40:52.749828+00:00"
+    },
+    {
+      "id": "2d0b5f1bc1d2",
+      "headline": "The forgotten colleges that could restore hope to American education",
+      "title": "The forgotten colleges that could restore hope to American education",
+      "url": "https://www.theblaze.com/columns/opinion/the-forgotten-colleges-that-could-restore-hope-to-american-education",
+      "link": "https://www.theblaze.com/columns/opinion/the-forgotten-colleges-that-could-restore-hope-to-american-education",
+      "excerpt": "When I was in high school, I began attending Paradise Valley Community College in Phoenix. This was before dual enrollment became commonplace. Yes, I\u2019m that old. Why did I go to community college while still in high school? I wanted to study philosophy. I also enrolled in literature, political science, and English composition, eager to learn from professors who had devoted their lives to teaching. A good education should answer two questions: How will I make a living? And what makes life worth living? I\u2019ll never forget the first day of my first philosophy class. The professor asked a simple question: What is the good for human beings? Not...",
+      "summary": "When I was in high school, I began attending Paradise Valley Community College in Phoenix. This was before dual enrollment became commonplace. Yes, I\u2019m that old. Why did I go to community college while still in high school? I wanted to study philosophy. I also enrolled in literature, political science, and English composition, eager to learn from professors who had devoted their lives to teaching. A good education should answer two questions: How will I make a living? And what makes life worth living? I\u2019ll never forget the first day of my first philosophy class. The professor asked a simple question: What is the good for human beings? Not...",
+      "relative_time": "Sun, 01 Nov 2026 20:30:00 +0000",
+      "published": "Sun, 01 Nov 2026 20:30:00 +0000",
+      "author": "Owen Anderson",
+      "feed": "The Blaze",
+      "feedName": "The Blaze",
+      "feedId": "ebb74cbdeb82",
+      "category": "Alternative",
+      "ingestionType": "rss",
+      "sourceGroup": "rss",
+      "imageUrl": "https://www.theblaze.com/media-library/the-forgotten-colleges-that-could-restore-hope-to-american-education.jpg?id=68563014&width=980",
+      "scraped_at": "2026-11-01T23:40:52.959354+00:00"
     },
     {
       "id": "2d19f9cec1d6",
@@ -386,7 +406,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://www.theblaze.com/media-library/image.jpg?id=68553777&width=980",
-      "scraped_at": "2026-11-01T19:45:05.633706+00:00"
+      "scraped_at": "2026-11-01T23:40:52.959598+00:00"
     },
     {
       "id": "695b76a44df2",
@@ -406,38 +426,18 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://www.theblaze.com/media-library/the-strange-dark-story-of-how-john-3-16-infiltrated-american-sports.jpg?id=68563729&width=980",
-      "scraped_at": "2026-11-01T19:45:05.635331+00:00"
+      "scraped_at": "2026-11-01T23:40:52.960506+00:00"
     },
     {
-      "id": "5a4778bea919",
-      "headline": "Allie Beth Stuckey: The school debate isn\u2019t public vs. homeschool \u2014 it\u2019s Christ-centered vs. secular",
-      "title": "Allie Beth Stuckey: The school debate isn\u2019t public vs. homeschool \u2014 it\u2019s Christ-centered vs. secular",
-      "url": "https://www.theblaze.com/shows/relatable/allie-beth-stuckey-the-school-debate-isnt-public-vs-homeschool-its-christ-centered-vs-secular",
-      "link": "https://www.theblaze.com/shows/relatable/allie-beth-stuckey-the-school-debate-isnt-public-vs-homeschool-its-christ-centered-vs-secular",
-      "excerpt": "Public school or homeschool? BlazeTV host Allie Beth Stuckey warns that parents are asking the wrong question. \u201cThese are not the only two options. It\u2019s not public school or homeschool. It\u2019s public school versus Christ-centered education. That can be homeschool. That can be a co-op. That can be a hybrid,\u201d she explains, noting that a \u201chybrid\u201d is a \u201cChristian school.\u201d And while there are traditional Christian schools, college prep-type Christian schools, and classical Christian schools, Stuckey says that \u201cthey\u2019re not all created equal.\u201d \u201cYou really have to go into these schools if you\u2019re looking for Christian private education, hybrid academy,...",
-      "summary": "Public school or homeschool? BlazeTV host Allie Beth Stuckey warns that parents are asking the wrong question. \u201cThese are not the only two options. It\u2019s not public school or homeschool. It\u2019s public school versus Christ-centered education. That can be homeschool. That can be a co-op. That can be a hybrid,\u201d she explains, noting that a \u201chybrid\u201d is a \u201cChristian school.\u201d And while there are traditional Christian schools, college prep-type Christian schools, and classical Christian schools, Stuckey says that \u201cthey\u2019re not all created equal.\u201d \u201cYou really have to go into these schools if you\u2019re looking for Christian private education, hybrid academy,...",
-      "relative_time": "Sun, 01 Nov 2026 16:00:00 +0000",
-      "published": "Sun, 01 Nov 2026 16:00:00 +0000",
-      "author": "BlazeTV Staff",
-      "feed": "The Blaze",
-      "feedName": "The Blaze",
-      "feedId": "ebb74cbdeb82",
-      "category": "Alternative",
-      "ingestionType": "rss",
-      "sourceGroup": "rss",
-      "imageUrl": "https://www.theblaze.com/media-library/image.jpg?id=68554062&width=980",
-      "scraped_at": "2026-11-01T19:45:05.635764+00:00"
-    },
-    {
-      "id": "aa10bbe36dbf",
-      "headline": "Abdul El-Sayed: Tribune of America\u2019s Islamo-Left",
-      "title": "Abdul El-Sayed: Tribune of America\u2019s Islamo-Left",
-      "url": "https://hotair.com/headlines/2026/11/01/abdul-el-sayed-tribune-of-americas-islamo-left-n3820536",
-      "link": "https://hotair.com/headlines/2026/11/01/abdul-el-sayed-tribune-of-americas-islamo-left-n3820536",
-      "excerpt": "Abdul El-Sayed: Tribune of America\u2019s Islamo-Left",
-      "summary": "Abdul El-Sayed: Tribune of America\u2019s Islamo-Left",
-      "relative_time": "Sun, 01 Nov 2026 14:20:00 -0500",
-      "published": "Sun, 01 Nov 2026 14:20:00 -0500",
+      "id": "c84227d3cc7c",
+      "headline": "'Alaskan Voters Need to Know': Did the Peltola Capaign Conspire for Confusion?",
+      "title": "'Alaskan Voters Need to Know': Did the Peltola Capaign Conspire for Confusion?",
+      "url": "https://hotair.com/headlines/2026/11/01/alaskan-voters-need-to-know-did-the-peltola-capaign-conspire-for-confusion-n3820542",
+      "link": "https://hotair.com/headlines/2026/11/01/alaskan-voters-need-to-know-did-the-peltola-capaign-conspire-for-confusion-n3820542",
+      "excerpt": "'Alaskan Voters Need to Know': Did the Peltola Capaign Conspire for Confusion?",
+      "summary": "'Alaskan Voters Need to Know': Did the Peltola Capaign Conspire for Confusion?",
+      "relative_time": "Sun, 01 Nov 2026 18:20:00 -0500",
+      "published": "Sun, 01 Nov 2026 18:20:00 -0500",
       "author": "Hot Air",
       "feed": "Hot Air",
       "feedName": "Hot Air",
@@ -446,18 +446,18 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-11-01T19:45:05.725825+00:00"
+      "scraped_at": "2026-11-01T23:40:53.105632+00:00"
     },
     {
-      "id": "991437b4ce26",
-      "headline": "Sunday Smiles",
-      "title": "Sunday Smiles",
-      "url": "https://hotair.com/david-strom/2026/11/01/sunday-smiles-n3820554",
-      "link": "https://hotair.com/david-strom/2026/11/01/sunday-smiles-n3820554",
-      "excerpt": "Sunday Smiles",
-      "summary": "Sunday Smiles",
-      "relative_time": "Sun, 01 Nov 2026 14:00:48 -0500",
-      "published": "Sun, 01 Nov 2026 14:00:48 -0500",
+      "id": "f0f0cc33c402",
+      "headline": "Sunday's Final Word",
+      "title": "Sunday's Final Word",
+      "url": "https://hotair.com/ed-morrissey/2026/11/01/sundays-final-word-n3820570",
+      "link": "https://hotair.com/ed-morrissey/2026/11/01/sundays-final-word-n3820570",
+      "excerpt": "Sunday's Final Word",
+      "summary": "Sunday's Final Word",
+      "relative_time": "Sun, 01 Nov 2026 18:00:03 -0500",
+      "published": "Sun, 01 Nov 2026 18:00:03 -0500",
       "author": "Hot Air",
       "feed": "Hot Air",
       "feedName": "Hot Air",
@@ -465,19 +465,19 @@
       "category": "Alternative",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://media.townhall.com/cdn/hodl/ha/images/up/2026/144/62c7c95b-ef52-4ebf-8416-c0272fa06e60.jpg",
-      "scraped_at": "2026-11-01T19:45:05.725844+00:00"
+      "imageUrl": "https://media.townhall.com/cdn/hodl/2026/305/fa5f0ac4-a69d-414d-a50d-2f4857b81136.jpg",
+      "scraped_at": "2026-11-01T23:40:53.105644+00:00"
     },
     {
-      "id": "a87140a6e92f",
-      "headline": "Why Do They Despise Musk?",
-      "title": "Why Do They Despise Musk?",
-      "url": "https://hotair.com/headlines/2026/11/01/why-do-they-despise-musk-n3820535",
-      "link": "https://hotair.com/headlines/2026/11/01/why-do-they-despise-musk-n3820535",
-      "excerpt": "Why Do They Despise Musk?",
-      "summary": "Why Do They Despise Musk?",
-      "relative_time": "Sun, 01 Nov 2026 13:40:00 -0500",
-      "published": "Sun, 01 Nov 2026 13:40:00 -0500",
+      "id": "f0e3c931eeef",
+      "headline": "The Spookiest Interview in American Political History",
+      "title": "The Spookiest Interview in American Political History",
+      "url": "https://hotair.com/headlines/2026/11/01/the-spookiest-interview-in-american-political-history-n3820541",
+      "link": "https://hotair.com/headlines/2026/11/01/the-spookiest-interview-in-american-political-history-n3820541",
+      "excerpt": "The Spookiest Interview in American Political History",
+      "summary": "The Spookiest Interview in American Political History",
+      "relative_time": "Sun, 01 Nov 2026 17:40:00 -0500",
+      "published": "Sun, 01 Nov 2026 17:40:00 -0500",
       "author": "Hot Air",
       "feed": "Hot Air",
       "feedName": "Hot Air",
@@ -486,7 +486,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-11-01T19:45:05.725861+00:00"
+      "scraped_at": "2026-11-01T23:40:53.105655+00:00"
     },
     {
       "id": "064de78684f3",
@@ -506,7 +506,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-11-01T19:45:06.010305+00:00"
+      "scraped_at": "2026-11-01T23:40:53.280873+00:00"
     },
     {
       "id": "49947d4bb6c1",
@@ -526,7 +526,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-11-01T19:45:06.010365+00:00"
+      "scraped_at": "2026-11-01T23:40:53.280908+00:00"
     },
     {
       "id": "859d8002c548",
@@ -546,7 +546,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-11-01T19:45:06.010421+00:00"
+      "scraped_at": "2026-11-01T23:40:53.280938+00:00"
     },
     {
       "id": "7a7a0dd83405",
@@ -566,7 +566,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.americanthinker.com/65/65iw6uyrf4bso7q2hlmk_640.jpg",
-      "scraped_at": "2026-11-01T19:45:06.383652+00:00"
+      "scraped_at": "2026-11-01T23:40:53.530064+00:00"
     },
     {
       "id": "27bb9cce879c",
@@ -586,7 +586,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.americanthinker.com/5p/5paj9tzlapxksbadwzav_640.jpg",
-      "scraped_at": "2026-11-01T19:45:06.383931+00:00"
+      "scraped_at": "2026-11-01T23:40:53.530224+00:00"
     },
     {
       "id": "f3686d7b38a9",
@@ -606,7 +606,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.americanthinker.com/w1/w1nye6lrg4n0tezoro9i_640.jpg",
-      "scraped_at": "2026-11-01T19:45:06.384207+00:00"
+      "scraped_at": "2026-11-01T23:40:53.530351+00:00"
     },
     {
       "id": "c423c0d5375c",
@@ -626,7 +626,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-11-01T19:45:06.776675+00:00"
+      "scraped_at": "2026-11-01T23:40:53.930986+00:00"
     },
     {
       "id": "983644140dac",
@@ -646,7 +646,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-11-01T19:45:06.776725+00:00"
+      "scraped_at": "2026-11-01T23:40:53.931017+00:00"
     },
     {
       "id": "373547fec632",
@@ -666,18 +666,18 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-11-01T19:45:06.776769+00:00"
+      "scraped_at": "2026-11-01T23:40:53.931041+00:00"
     },
     {
-      "id": "f6a6a2d0dc3c",
-      "headline": "TV news hourly summary \u00b7 Nov 1, 19:03 UTC",
-      "title": "TV news hourly summary \u00b7 Nov 1, 19:03 UTC",
-      "url": "https://mastodon.archive.org/@tv/117542734060107800",
-      "link": "https://mastodon.archive.org/@tv/117542734060107800",
-      "excerpt": "Thousands protested across Europe; unrest turned violent in Germany and Albania, and more than 770 people were arrested in France. In India, opposition protesters demanded the election chief\u2019s resignation amid anger over voter-roll removals. Gaza medics reported eight killed in Israeli strikes. King Charles visited Antigua and Barbuda and was set to address slavery. Other headlines included a Latvia-reported airspace incursion and commemorations of Serbia\u2019s train-station disaster.",
-      "summary": "Thousands protested across Europe; unrest turned violent in Germany and Albania, and more than 770 people were arrested in France. In India, opposition protesters demanded the election chief\u2019s resignation amid anger over voter-roll removals. Gaza medics reported eight killed in Israeli strikes. King Charles visited Antigua and Barbuda and was set to address slavery. Other headlines included a Latvia-reported airspace incursion and commemorations of Serbia\u2019s train-station disaster.",
-      "relative_time": "Sun, 01 Nov 2026 19:03:04 +0000",
-      "published": "Sun, 01 Nov 2026 19:03:04 +0000",
+      "id": "d947f899faa5",
+      "headline": "TV news hourly summary \u00b7 Nov 1, 23:03 UTC",
+      "title": "TV news hourly summary \u00b7 Nov 1, 23:03 UTC",
+      "url": "https://mastodon.archive.org/@tv/117543677706132209",
+      "link": "https://mastodon.archive.org/@tv/117543677706132209",
+      "excerpt": "With U.S. midterm elections two days away, Trump rallied in Iowa and attacked Democrats. Election coverage highlighted competitive Senate and governor\u2019s races, including Michigan, Mississippi and Florida, and reported more than 54 million early votes. Other headlines included protests in Europe and India, fighting in Yemen, and King Charles\u2019s visit to Antigua and Barbuda.",
+      "summary": "With U.S. midterm elections two days away, Trump rallied in Iowa and attacked Democrats. Election coverage highlighted competitive Senate and governor\u2019s races, including Michigan, Mississippi and Florida, and reported more than 54 million early votes. Other headlines included protests in Europe and India, fighting in Yemen, and King Charles\u2019s visit to Antigua and Barbuda.",
+      "relative_time": "Sun, 01 Nov 2026 23:03:03 +0000",
+      "published": "Sun, 01 Nov 2026 23:03:03 +0000",
       "author": "Internet Archive TV News",
       "feed": "Internet Archive TV News (hourly summary)",
       "feedName": "Internet Archive TV News (hourly summary)",
@@ -686,20 +686,20 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "",
-      "scraped_at": "2026-11-01T19:45:06.958805+00:00"
+      "scraped_at": "2026-11-01T23:40:54.351620+00:00"
     }
   ],
   "stories": [
     {
-      "id": "9b86ba092e55",
-      "headline": "Shops looted as German cost-of-living protests turn violent",
-      "title": "Shops looted as German cost-of-living protests turn violent",
-      "url": "https://www.bbc.co.uk/news/articles/cqj34gnd3n30o?at_medium=RSS&at_campaign=rss",
-      "link": "https://www.bbc.co.uk/news/articles/cqj34gnd3n30o?at_medium=RSS&at_campaign=rss",
-      "excerpt": "The protests in cities across Germany - including Berlin, Hamburg and Frankfurt - came on the same day hundreds of thousands also protested in France.",
-      "summary": "The protests in cities across Germany - including Berlin, Hamburg and Frankfurt - came on the same day hundreds of thousands also protested in France.",
-      "relative_time": "Sun, 01 Nov 2026 11:57:48 GMT",
-      "published": "Sun, 01 Nov 2026 11:57:48 GMT",
+      "id": "7281dd6a8635",
+      "headline": "Russian strikes cut power to thousands in Ukraine as Kherson ceasefire ends",
+      "title": "Russian strikes cut power to thousands in Ukraine as Kherson ceasefire ends",
+      "url": "https://www.bbc.co.uk/news/articles/c64g1y90p71eo?at_medium=RSS&at_campaign=rss",
+      "link": "https://www.bbc.co.uk/news/articles/c64g1y90p71eo?at_medium=RSS&at_campaign=rss",
+      "excerpt": "A rare humanitarian ceasefire allowed civilians to evacuate the Russian-occupied city of Oleshky.",
+      "summary": "A rare humanitarian ceasefire allowed civilians to evacuate the Russian-occupied city of Oleshky.",
+      "relative_time": "Sun, 01 Nov 2026 21:55:01 GMT",
+      "published": "Sun, 01 Nov 2026 21:55:01 GMT",
       "author": "BBC World News",
       "feed": "BBC World News",
       "feedName": "BBC World News",
@@ -707,8 +707,8 @@
       "category": "Global",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/0ace/live/3e4ef120-d5d4-11f1-8629-7b9503d639be.jpg",
-      "scraped_at": "2026-11-01T19:45:04.380525+00:00"
+      "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d8e6/live/7871d270-d627-11f1-a947-0507737f09b2.jpg",
+      "scraped_at": "2026-11-01T23:40:51.118024+00:00"
     },
     {
       "id": "14c5f1010b50",
@@ -728,18 +728,18 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/c922/live/4fe4c8d0-d5fa-11f1-a701-fddedf244c16.jpg",
-      "scraped_at": "2026-11-01T19:45:04.380574+00:00"
+      "scraped_at": "2026-11-01T23:40:51.118054+00:00"
     },
     {
-      "id": "85da8b9bf9cd",
-      "headline": "US judge dismisses Trump election lawsuit in Alaska - Reuters",
-      "title": "US judge dismisses Trump election lawsuit in Alaska - Reuters",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPck1iY1RiSVI0MWpxbGhyZzlYWm9PeGh6WXJnYTVIX0VqTS1UbGpTQUh0WkFxbUpFdlNsbmJCUzg0bENnWmtEUjcxUWxTbmIzMzlKUGdXNGFidFl0Nk10a29rYVlVUkdLRVM2TUtBU0NRcTlXUS0xSjhmOTRZNWVjUW1yMVVIOHh4QnFLTEFiQWZyRWNsSVE?oc=5",
-      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPck1iY1RiSVI0MWpxbGhyZzlYWm9PeGh6WXJnYTVIX0VqTS1UbGpTQUh0WkFxbUpFdlNsbmJCUzg0bENnWmtEUjcxUWxTbmIzMzlKUGdXNGFidFl0Nk10a29rYVlVUkdLRVM2TUtBU0NRcTlXUS0xSjhmOTRZNWVjUW1yMVVIOHh4QnFLTEFiQWZyRWNsSVE?oc=5",
-      "excerpt": "US judge dismisses Trump election lawsuit in Alaska Reuters",
-      "summary": "US judge dismisses Trump election lawsuit in Alaska Reuters",
-      "relative_time": "Sun, 01 Nov 2026 18:29:51 GMT",
-      "published": "Sun, 01 Nov 2026 18:29:51 GMT",
+      "id": "dd6f3df95f2c",
+      "headline": "Ukrainian air force says public air raid alert app sent erroneous alerts after being hacked - Reuters",
+      "title": "Ukrainian air force says public air raid alert app sent erroneous alerts after being hacked - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPYjdWbExXZ1JiYUVET2JwdTc2VVZ0T3J0czdJbUNyLWhLTzI3cW1zOWkxZF9mU3ZnVWtDYXR5SjVwZTlDZ0tFdXE5bkdIUjBwZEZRbmRDWGY4WkNvVkFqSFRJeXdBMzBPS0VJSmlzRkRTS1lCekRwOWRWZ3dSUXNyOVJMRk1Ga3lKZHV2bnctMFhVNTJDVFQ3UlBSWGl5QV95b3pMR2lGd05TRXdiRDdlUHFITkxmZw?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPYjdWbExXZ1JiYUVET2JwdTc2VVZ0T3J0czdJbUNyLWhLTzI3cW1zOWkxZF9mU3ZnVWtDYXR5SjVwZTlDZ0tFdXE5bkdIUjBwZEZRbmRDWGY4WkNvVkFqSFRJeXdBMzBPS0VJSmlzRkRTS1lCekRwOWRWZ3dSUXNyOVJMRk1Ga3lKZHV2bnctMFhVNTJDVFQ3UlBSWGl5QV95b3pMR2lGd05TRXdiRDdlUHFITkxmZw?oc=5",
+      "excerpt": "Ukrainian air force says public air raid alert app sent erroneous alerts after being hacked Reuters",
+      "summary": "Ukrainian air force says public air raid alert app sent erroneous alerts after being hacked Reuters",
+      "relative_time": "Sun, 01 Nov 2026 22:53:46 GMT",
+      "published": "Sun, 01 Nov 2026 22:53:46 GMT",
       "author": "Reuters Top News",
       "feed": "Reuters Top News",
       "feedName": "Reuters Top News",
@@ -748,18 +748,18 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-11-01T19:45:04.505665+00:00"
+      "scraped_at": "2026-11-01T23:40:51.616968+00:00"
     },
     {
-      "id": "b675a1e08fdd",
-      "headline": "Democratic Senator Murphy hospitalized after stroke, chief of staff says - Reuters",
-      "title": "Democratic Senator Murphy hospitalized after stroke, chief of staff says - Reuters",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQNFRBVkdFd1REUGNsaWd3Z2lRUzVQdEwtczZmOUtvZHBiWmVmSkUyMGdURWVNSV9SbV9Oa0hPRW5iV0hXS2JtN1JIYTdqcjJBeXJzOVpGSTYtYVNFM3FHUVdDSU9TcnpoNVF0XzNPTVVsclNPa3JabVlEVEZVbEFYdnA4U1Z1YWxSQ2lkU01lM0YwbHd4dWxqRjNodV8tUDUxWmk3MGxFMHVNLVFRV1FWaWVVUQ?oc=5",
-      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQNFRBVkdFd1REUGNsaWd3Z2lRUzVQdEwtczZmOUtvZHBiWmVmSkUyMGdURWVNSV9SbV9Oa0hPRW5iV0hXS2JtN1JIYTdqcjJBeXJzOVpGSTYtYVNFM3FHUVdDSU9TcnpoNVF0XzNPTVVsclNPa3JabVlEVEZVbEFYdnA4U1Z1YWxSQ2lkU01lM0YwbHd4dWxqRjNodV8tUDUxWmk3MGxFMHVNLVFRV1FWaWVVUQ?oc=5",
-      "excerpt": "Democratic Senator Murphy hospitalized after stroke, chief of staff says Reuters",
-      "summary": "Democratic Senator Murphy hospitalized after stroke, chief of staff says Reuters",
-      "relative_time": "Sun, 01 Nov 2026 17:47:07 GMT",
-      "published": "Sun, 01 Nov 2026 17:47:07 GMT",
+      "id": "23b1b85046de",
+      "headline": "Iran's IRGC Navy says two tankers 'exploded' after hitting mines in Hormuz - Reuters",
+      "title": "Iran's IRGC Navy says two tankers 'exploded' after hitting mines in Hormuz - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNZmk2dmxjdk1sOW96UkZiaUlJVXhzc1pJMjZJUnY2WGtvaXd4aXRJY3d4UTNoUmFJdUVQQjlkb0JPSmxEc2YzS1JOZ2NSWmpTUnhzYzBiU1hfeXBvb2F2WEp2NHc5YkFfUUNKSHc2NW1PMUVKT0xqUTdOa0tfUmZpQWE2SDFtdzJ5TmZleWpLd0Zid1JWR2Z0d0dOeVMwekFzNTNTYndHMmMyV0poZ2h0UmFOVWc2M3o3Z2h6TUR2SQ?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNZmk2dmxjdk1sOW96UkZiaUlJVXhzc1pJMjZJUnY2WGtvaXd4aXRJY3d4UTNoUmFJdUVQQjlkb0JPSmxEc2YzS1JOZ2NSWmpTUnhzYzBiU1hfeXBvb2F2WEp2NHc5YkFfUUNKSHc2NW1PMUVKT0xqUTdOa0tfUmZpQWE2SDFtdzJ5TmZleWpLd0Zid1JWR2Z0d0dOeVMwekFzNTNTYndHMmMyV0poZ2h0UmFOVWc2M3o3Z2h6TUR2SQ?oc=5",
+      "excerpt": "Iran's IRGC Navy says two tankers 'exploded' after hitting mines in Hormuz Reuters",
+      "summary": "Iran's IRGC Navy says two tankers 'exploded' after hitting mines in Hormuz Reuters",
+      "relative_time": "Sun, 01 Nov 2026 20:12:33 GMT",
+      "published": "Sun, 01 Nov 2026 20:12:33 GMT",
       "author": "Reuters Top News",
       "feed": "Reuters Top News",
       "feedName": "Reuters Top News",
@@ -768,7 +768,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-11-01T19:45:04.505715+00:00"
+      "scraped_at": "2026-11-01T23:40:51.617000+00:00"
     },
     {
       "id": "2bbabb85c1de",
@@ -788,7 +788,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://i.dailymail.com/1s/2026/10/28/16/112140961-0-This_19th_century_building_has_served_various_purposes_including-a-30_1793204846552.jpg",
-      "scraped_at": "2026-11-01T19:45:04.751083+00:00"
+      "scraped_at": "2026-11-01T23:40:52.214960+00:00"
     },
     {
       "id": "6b18c971dd51",
@@ -808,38 +808,38 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://i.dailymail.com/1s/2026/10/31/12/112212243-0-image-a-51_1793451087290.jpg",
-      "scraped_at": "2026-11-01T19:45:04.751146+00:00"
+      "scraped_at": "2026-11-01T23:40:52.214996+00:00"
     },
     {
-      "id": "36d7c62dce39",
-      "headline": "$2M Learjet 60 crashes near Palm Beach, demolishing mobile home in fireball",
-      "title": "$2M Learjet 60 crashes near Palm Beach, demolishing mobile home in fireball",
-      "url": "https://nypost.com/2026/11/01/us-news/2m-learjet-60-crashes-near-palm-beach-florida/",
-      "link": "https://nypost.com/2026/11/01/us-news/2m-learjet-60-crashes-near-palm-beach-florida/",
-      "excerpt": "A $2 million private jet crashed into a south Florida mobile home park \u2014 apparently demolishing at least one trailer in a massive fireball.",
-      "summary": "A $2 million private jet crashed into a south Florida mobile home park \u2014 apparently demolishing at least one trailer in a massive fireball.",
-      "relative_time": "Sun, 01 Nov 2026 11:35:26 -0800",
-      "published": "Sun, 01 Nov 2026 11:35:26 -0800",
-      "author": "Anthony Blair",
+      "id": "649f79bad92b",
+      "headline": "GOP governor hopeful Blakeman launches eight-city sweep across NY in just 48 hours",
+      "title": "GOP governor hopeful Blakeman launches eight-city sweep across NY in just 48 hours",
+      "url": "https://nypost.com/2026/11/01/us-news/ny-governor-hopeful-blakeman-launches-eight-city-sweep-in-just-48-hours/",
+      "link": "https://nypost.com/2026/11/01/us-news/ny-governor-hopeful-blakeman-launches-eight-city-sweep-in-just-48-hours/",
+      "excerpt": "\u201cWe are leaving no stone left unturned.\"",
+      "summary": "\u201cWe are leaving no stone left unturned.\"",
+      "relative_time": "Sun, 01 Nov 2026 18:39:49 -0500",
+      "published": "Sun, 01 Nov 2026 18:39:49 -0500",
+      "author": "Brandon Cruz",
       "feed": "New York Post",
       "feedName": "New York Post",
       "feedId": "f35f2eec037f",
       "category": "Global",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fmultiple-fatalities-feared-small-plane-147227052.jpg?w%3D802",
-      "scraped_at": "2026-11-01T19:45:04.846268+00:00"
+      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fnew-york-governor-candidate-bruce-147231447.jpg?w%3D1024",
+      "scraped_at": "2026-11-01T23:40:52.340899+00:00"
     },
     {
-      "id": "f6a6a2d0dc3c",
-      "headline": "TV news hourly summary \u00b7 Nov 1, 19:03 UTC",
-      "title": "TV news hourly summary \u00b7 Nov 1, 19:03 UTC",
-      "url": "https://mastodon.archive.org/@tv/117542734060107800",
-      "link": "https://mastodon.archive.org/@tv/117542734060107800",
-      "excerpt": "Thousands protested across Europe; unrest turned violent in Germany and Albania, and more than 770 people were arrested in France. In India, opposition protesters demanded the election chief\u2019s resignation amid anger over voter-roll removals. Gaza medics reported eight killed in Israeli strikes. King Charles visited Antigua and Barbuda and was set to address slavery. Other headlines included a Latvia-reported airspace incursion and commemorations of Serbia\u2019s train-station disaster.",
-      "summary": "Thousands protested across Europe; unrest turned violent in Germany and Albania, and more than 770 people were arrested in France. In India, opposition protesters demanded the election chief\u2019s resignation amid anger over voter-roll removals. Gaza medics reported eight killed in Israeli strikes. King Charles visited Antigua and Barbuda and was set to address slavery. Other headlines included a Latvia-reported airspace incursion and commemorations of Serbia\u2019s train-station disaster.",
-      "relative_time": "Sun, 01 Nov 2026 19:03:04 +0000",
-      "published": "Sun, 01 Nov 2026 19:03:04 +0000",
+      "id": "d947f899faa5",
+      "headline": "TV news hourly summary \u00b7 Nov 1, 23:03 UTC",
+      "title": "TV news hourly summary \u00b7 Nov 1, 23:03 UTC",
+      "url": "https://mastodon.archive.org/@tv/117543677706132209",
+      "link": "https://mastodon.archive.org/@tv/117543677706132209",
+      "excerpt": "With U.S. midterm elections two days away, Trump rallied in Iowa and attacked Democrats. Election coverage highlighted competitive Senate and governor\u2019s races, including Michigan, Mississippi and Florida, and reported more than 54 million early votes. Other headlines included protests in Europe and India, fighting in Yemen, and King Charles\u2019s visit to Antigua and Barbuda.",
+      "summary": "With U.S. midterm elections two days away, Trump rallied in Iowa and attacked Democrats. Election coverage highlighted competitive Senate and governor\u2019s races, including Michigan, Mississippi and Florida, and reported more than 54 million early votes. Other headlines included protests in Europe and India, fighting in Yemen, and King Charles\u2019s visit to Antigua and Barbuda.",
+      "relative_time": "Sun, 01 Nov 2026 23:03:03 +0000",
+      "published": "Sun, 01 Nov 2026 23:03:03 +0000",
       "author": "Internet Archive TV News",
       "feed": "Internet Archive TV News (hourly summary)",
       "feedName": "Internet Archive TV News (hourly summary)",
@@ -848,7 +848,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "",
-      "scraped_at": "2026-11-01T19:45:06.958805+00:00"
+      "scraped_at": "2026-11-01T23:40:54.351620+00:00"
     }
   ],
   "raw_summary": "### Shops looted as German cost of living protests turn violent\n**Source:** BBC World News\n**Summary:** Cost of living demonstrations across major German cities, including Berlin, Hamburg, and Frankfurt, escalated into violence and shop looting. The unrest coincided with massive economic protests taking place in France on the same day.\n**Key Theme:** Civil Unrest\n\n### 'We came back from hell', say Ukrainians after years in Russia-occupied front-line city\n**Source:** BBC World News\n**Summary:** Evacuated Ukrainian citizens have shared accounts of living through years of Russian occupation in the front-line city of Oleshky. One couple described risking their lives by navigating minefields simply to find food before successfully escaping.\n**Key Theme:** Ukraine Conflict\n\n### Bulgaria votes in presidential runoff after tight first round - Reuters\n**Source:** Reuters Top News\n**Summary:** Voters in Bulgaria have cast their ballots in a presidential runoff election following a closely contested first round. The election will determine the country's next head of state amid heightened political competition.\n**Key Theme:** Elections\n\n### Trump White House maps path to govern without Congress if Democrats win - Reuters\n**Source:** Reuters Top News\n**Summary:** The Trump administration has reportedly mapped out plans to govern using executive authority if Democrats win legislative majorities. The strategy seeks alternative pathways to implement policies without reliance on Congressional approval.\n**Key Theme:** US Politics\n\n### Heirbnb! How you can live like a King in rental properties on royal estates including Sandringham, Balmoral and Queen Victoria's seaside escape\n**Source:** Daily Mail UK\n**Summary:** Public holidaymakers can now rent holiday homes located directly on historic British royal estates, including Sandringham and Balmoral. The available properties include former residences owned by King Charles and locations hosted by Prince William.\n**Key Theme:** Travel\n\n### Forget three days! Scientist tells Brits to stockpile enough for two WEEKS - here's exactly what you should be buying\n**Source:** Daily Mail UK\n**Summary:** Experts are urging British citizens to update their emergency preparedness by stockpiling two weeks' worth of essential supplies rather than the typical three-day provision. The advisory highlights specific long-term goods households should keep in store for potential disasters.\n**Key Theme:** Emergency Preparedness\n\n### College basketball preseason top 25: Ranking the nation\u2019s best teams\n**Source:** New York Post\n**Summary:** The New York Post has published its preseason top 25 rankings for the upcoming college basketball season. The report breaks down and ranks the top-tier men's teams across the nation ahead of opening play.\n**Key Theme:** Sports\n\n### TV news hourly summary \u00b7 Nov 1, 12:03 UTC\n**Source:** Internet Archive TV News (hourly summary)\n**Summary:** An hourly broadcast summary reports on key international developments, including the upcoming U.S. midterm elections and violent cost-of-living protests in Europe. Other top stories include FBI allegations linking North Korea to a major cryptocurrency theft and voter-roll protests in India.\n**Key Theme:** Global News",
@@ -858,5 +858,5 @@
   "data_current_html_path": "data/current/index.html",
   "archive_html_path": "output/archive/2026-11-01/index.html",
   "data_archive_html_path": "data/archive/2026-11-01/index.html",
-  "feed_hash": "714572098cc0752c90e1e9b3b294fb11"
+  "feed_hash": "8fc24dd6518e222baf0d03660f125448"
 }
