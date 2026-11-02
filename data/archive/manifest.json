@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-11-02",
+    "timestamp": "2026-11-02T14:43:09.657307+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "UK: Family of Man Handcuffed and Left To Die by Police Say They Were \u201cHoodwinked\u201d and \u201cManipulated\u201d",
+      "Shop freezers in seven European countries hit by suspected cyber-attack",
+      "Fake nuclear warnings issued after Ukrainian and Russian air alert apps hacked",
+      "UK adventurer returns home after 28-year trek around the world - Reuters",
+      "Marvell to buy Lumentum in $115 billion deal in AI data-center bet - Reuters"
+    ],
+    "archive_html_path": "data/archive/2026-11-02/index.html",
+    "data_json_path": "data/archive/2026-11-02/data.json"
+  },
+  {
     "date": "2026-11-01",
     "timestamp": "2026-11-01T12:39:20.158172+00:00",
     "stories_count": 8,
