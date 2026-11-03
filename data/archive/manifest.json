@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-11-03",
+    "timestamp": "2026-11-03T13:35:57.775298+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "US strikes Iranian island ahead of midterm elections",
+      "Tenerife striker De Miguel dies after on-field collision",
+      "Prediction markets face US midterms test as election bets soar - Reuters",
+      "Nine things on US voters' minds ahead of midterm elections, according to Reuters/Ipsos poll - Reuters",
+      "Homicide police launch investigation into on-pitch collision which killed Spanish footballer - but goalkeeper who clashed with fans shouting 'murderer' at him likely to avoid criminal sanctions"
+    ],
+    "archive_html_path": "data/archive/2026-11-03/index.html",
+    "data_json_path": "data/archive/2026-11-03/data.json"
+  },
+  {
     "date": "2026-11-02",
     "timestamp": "2026-11-02T14:43:09.657307+00:00",
     "stories_count": 8,
