@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-11-04",
+    "timestamp": "2026-11-04T13:45:57.849519+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "Trump takes aim at Republicans but says Democrats did a 'good job'",
+      "Left-wing Democrat Abdul El-Sayed wins in Michigan to become first Muslim senator",
+      "Iranian officials gloat as US voters deal blow to Trump - Reuters",
+      "Netanyahu rivals seize on Democrats' sweep of US Congress, seeking his ouster - Reuters",
+      "Scammers turn to AI to generate fake pictures of missing cats in bid to fleece owners of reward cash"
+    ],
+    "archive_html_path": "data/archive/2026-11-04/index.html",
+    "data_json_path": "data/archive/2026-11-04/data.json"
+  },
+  {
     "date": "2026-11-03",
     "timestamp": "2026-11-03T13:35:57.775298+00:00",
     "stories_count": 8,
