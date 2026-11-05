@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-11-05",
+    "timestamp": "2026-11-05T13:58:29.067930+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "Vance walks Trump tightrope with scathing election critique blaming Iran war",
+      "What Democrats can and can't do with their new power after taking Congress",
+      "Putin will not be invited to Britain's G20 summit, UK PM Burnham says - Reuters",
+      "EXCLUSIVE: Nvidia chips pile up in Hong Kong as China withholds import approval - Reuters",
+      "Inside team Trump's 'ill-prepared' midterm strategy and missed red flags before blue tsunami.. as aides scrambled and president focused on ballroom"
+    ],
+    "archive_html_path": "data/archive/2026-11-05/index.html",
+    "data_json_path": "data/archive/2026-11-05/data.json"
+  },
+  {
     "date": "2026-11-04",
     "timestamp": "2026-11-04T13:45:57.849519+00:00",
     "stories_count": 8,

@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Intelligence Briefing – 2026-11-05</title>
+    <style>
+        :root {
+            --bg: #0f1115;
+            --card: #1a1d24;
+            --text: #e6e8ec;
+            --muted: #9ba1ad;
+            --accent: #3b82f6;
+            --border: #2a2e38;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; padding: 2rem 1rem; }
+        .container { max-width: 960px; margin: 0 auto; }
+        header { text-align: center; margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+        header h1 { font-size: 2.2rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 0.4rem; color: #ffffff; }
+        header .date { color: var(--accent); font-size: 1rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+        
+        .hero-image { width: 100%; border-radius: 16px; overflow: hidden; margin-bottom: 2.5rem; box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6); border: 1px solid var(--border); background: #0b0f19; }
+        
+        /* Flexible Photo Collage Component */
+        .collage-wrapper { position: relative; width: 100%; }
+        .collage-header-pill {
+            position: absolute; top: 14px; left: 14px; z-index: 10;
+            background: rgba(15, 23, 42, 0.88); backdrop-filter: blur(8px);
+            border: 1px solid rgba(56, 189, 248, 0.35); color: #38bdf8;
+            padding: 5px 12px; border-radius: 999px; font-size: 11px; font-weight: 800;
+            letter-spacing: 0.5px; display: flex; align-items: center; gap: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        }
+        .collage-container {
+            display: grid; gap: 8px; background: #090d16; padding: 8px; border-radius: 16px; min-height: 280px;
+        }
+        .collage-container.collage-count-1 { grid-template-columns: 1fr; grid-template-rows: 360px; }
+        .collage-container.collage-count-1 .hero-tile { grid-row: auto; }
+
+        .collage-container.collage-count-2 { grid-template-columns: 1fr 1fr; grid-template-rows: 320px; }
+        .collage-container.collage-count-2 .hero-tile { grid-row: auto; }
+
+        .collage-container.collage-count-3 { grid-template-columns: 1.6fr 1fr; grid-template-rows: 170px 170px; }
+        .collage-container.collage-count-3 .hero-tile { grid-row: span 2; }
+
+        .collage-container.collage-count-4 { grid-template-columns: 1.6fr 1fr 1fr; grid-template-rows: 170px 170px; }
+        .collage-container.collage-count-4 .hero-tile { grid-row: span 2; }
+        .collage-container.collage-count-4 .collage-tile:nth-child(4) { grid-column: span 2; }
+
+        .collage-container.collage-count-5 { grid-template-columns: 1.8fr 1fr 1fr; grid-template-rows: 180px 180px; }
+        .collage-container.collage-count-5 .hero-tile { grid-row: span 2; }
+
+        @media (max-width: 768px) {
+            .collage-container,
+            .collage-container.collage-count-2,
+            .collage-container.collage-count-3,
+            .collage-container.collage-count-4,
+            .collage-container.collage-count-5 {
+                grid-template-columns: 1fr; grid-template-rows: auto;
+            }
+            .collage-tile, .hero-tile { min-height: 180px; }
+        }
+        .collage-tile {
+            position: relative; border-radius: 10px; overflow: hidden; background: #131927;
+            border: 1px solid rgba(255, 255, 255, 0.08); transition: transform 0.3s ease;
+        }
+        .collage-tile.hero-tile { grid-row: span 2; }
+        .collage-tile img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
+        .collage-tile:hover img { transform: scale(1.06); }
+        .collage-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(to top, rgba(11, 15, 23, 0.95) 0%, rgba(11, 15, 23, 0.2) 60%, transparent 100%);
+            display: flex; flex-direction: column; justify-content: flex-end; padding: 12px;
+        }
+        .collage-badge {
+            align-self: flex-start; background: rgba(56, 189, 248, 0.2); color: #38bdf8;
+            border: 1px solid rgba(56, 189, 248, 0.4); font-size: 10px; font-weight: 700;
+            text-transform: uppercase; padding: 2px 8px; border-radius: 999px; margin-bottom: 6px;
+        }
+        .collage-badge.hero-badge { background: rgba(16, 185, 129, 0.2); color: #34d399; border-color: rgba(16, 185, 129, 0.4); }
+        .collage-title { color: #ffffff; font-size: 12px; font-weight: 700; line-height: 1.35; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        .hero-tile .collage-title { font-size: 17px; }
+
+        .stories { display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 3rem; }
+        .story { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem; }
+        .story h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: #f1f3f5; }
+        .story-body { color: var(--muted); font-size: 0.98rem; overflow-wrap: anywhere; word-break: break-word; }
+        .story h2, .mini-card h3, .mini-card p { overflow-wrap: anywhere; }
+        .container { min-width: 0; max-width: 100%; }
+        .section-title { font-size: 1.3rem; font-weight: 800; color: var(--accent); margin: 2rem 0 1rem; border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; }
+        .segmented-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
+        .mini-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+        .mini-card.scraped { border-left: 3px solid #8b5cf6; }
+        .mini-card.rss { border-left: 3px solid #3b82f6; }
+        .source-tag { font-size: 0.75rem; font-weight: bold; color: var(--accent); margin-bottom: 0.4rem; }
+        .mini-card h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.4rem; }
+        .mini-card h3 a { color: #f1f3f5; text-decoration: none; }
+        .mini-card h3 a:hover { text-decoration: underline; color: var(--accent); }
+        .mini-card p { font-size: 0.82rem; color: var(--muted); line-height: 1.4; }
+        footer { text-align: center; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="date">2026-11-05</div>
+            <h1>Daily Intelligence Briefing</h1>
+        </header>
+
+        <div class="hero-image">
+            
+                
+    <div class="collage-wrapper">
+        <div class="collage-header-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7"/><path d="M16 5h5v5"/><path d="m21 5-9 9"/></svg>
+            <span>Parsed Feeds Mixed Photo Collage (5 Photos)</span>
+        </div>
+        <div class="collage-container collage-count-5">
+            <div class="collage-tile hero-tile">
+                <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3c74/live/1d4cf850-d8e5-11f1-a701-fddedf244c16.jpg" alt="Vance walks Trump tightrope with scathing election critique blaming Iran war" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+                <div class="collage-overlay">
+                    <span class="collage-badge hero-badge">BBC World News</span>
+                    <h3 class="collage-title hero-title">Vance walks Trump tightrope with scathing election critique blaming Iran war</h3>
+                </div>
+            </div>
+            
+        <div class="collage-tile">
+            <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/f863/live/48cc8c40-d889-11f1-8203-5d774478c31c.jpg" alt="What Democrats can and can&#x27;t do with their new power after taking Congress" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">BBC World News</span>
+                <h4 class="collage-title">What Democrats can and can&#x27;t do with their new power after taking Congress</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/f641/live/977c1840-d91c-11f1-b441-2b33b063138f.jpg" alt="France holds new strikes and protests as unions demand immediate answers" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">BBC World News</span>
+                <h4 class="collage-title">France holds new strikes and protests as unions demand immediate answers</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Putin will not be invited to Britain&#x27;s G20 summit, UK PM Burnham says - Reuters" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">Reuters Top News</span>
+                <h4 class="collage-title">Putin will not be invited to Britain&#x27;s G20 summit, UK PM Burnham says - Reuters</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="EXCLUSIVE: Nvidia chips pile up in Hong Kong as China withholds import approval - Reuters" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">Reuters Top News</span>
+                <h4 class="collage-title">EXCLUSIVE: Nvidia chips pile up in Hong Kong as China withholds import approval - Reuters</h4>
+            </div>
+        </div>
+        
+        </div>
+    </div>
+    
+            
+        </div>
+
+        <main class="stories">
+            
+        <div class="story">
+            <h2>Vance walks Trump tightrope with scathing election critique blaming Iran war</h2>
+            <div class="story-body"><strong>Source:</strong> BBC World News<br><strong>Summary:</strong> Vice President J.D. Vance delivered a sharp assessment of recent Republican electoral defeats, placing direct blame on the ongoing war with Iran. The public comments represent one of the most notable public rifts between a sitting vice president and president in recent political history.<br><strong>Key Theme:</strong> U.S. Politics</div>
+        </div>
+        
+        <div class="story">
+            <h2>What Democrats can and can&#x27;t do with their new power after taking Congress</h2>
+            <div class="story-body"><strong>Source:</strong> BBC World News<br><strong>Summary:</strong> Following recent election victories, Democrats have secured control of Congress, enabling them to advance legislative priorities. However, their policy agenda faces significant limits as President Donald Trump retains his constitutional veto power. This split dynamic is expected to set up major legislative gridlock between Capitol Hill and the White House.<br><strong>Key Theme:</strong> Governance</div>
+        </div>
+        
+        <div class="story">
+            <h2>Putin will not be invited to Britain&#x27;s G20 summit, UK PM Burnham says - Reuters</h2>
+            <div class="story-body"><strong>Source:</strong> Reuters Top News<br><strong>Summary:</strong> British Prime Minister Burnham announced that Russian President Vladimir Putin will not be invited to the upcoming G20 summit hosted by the United Kingdom. The decision underscores ongoing diplomatic isolation of Russia by Western powers over international security conflicts.<br><strong>Key Theme:</strong> Diplomacy</div>
+        </div>
+        
+        <div class="story">
+            <h2>EXCLUSIVE: Nvidia chips pile up in Hong Kong as China withholds import approval - Reuters</h2>
+            <div class="story-body"><strong>Source:</strong> Reuters Top News<br><strong>Summary:</strong> Advanced semiconductor chips from Nvidia are accumulating in Hong Kong as Chinese regulatory authorities delay standard import approvals. The bottleneck highlights continuing trade tensions and regulatory hurdles affecting international tech supply chains. The withheld approvals impact high-performance processing hardware intended for mainland markets.<br><strong>Key Theme:</strong> Technology Trade</div>
+        </div>
+        
+        <div class="story">
+            <h2>Inside team Trump&#x27;s &#x27;ill-prepared&#x27; midterm strategy and missed red flags before blue tsunami.. as aides scrambled and president focused on ballroom</h2>
+            <div class="story-body"><strong>Source:</strong> Daily Mail UK<br><strong>Summary:</strong> Insiders within Donald Trump&#x27;s political team expressed growing frustration over the strategy that led to significant Republican losses in the midterm elections. Campaign aides highlighted issues including flawed candidate selections, misallocated funds, and overlooked voter trends. Critics also cited internal distractions and misaligned priorities leading up to Election Day.<br><strong>Key Theme:</strong> Campaign Strategy</div>
+        </div>
+        
+        <div class="story">
+            <h2>Britain&#x27;s cost of living crisis is set to get even worse, warns BofE as it hikes interest rates - and says inflation could rise to 5%</h2>
+            <div class="story-body"><strong>Source:</strong> Daily Mail UK<br><strong>Summary:</strong> The Bank of England&#x27;s Monetary Policy Committee has raised the UK base interest rate by 0.25 percentage points to 4.0 percent. Central bank officials warned that household financial pressures could intensify, projecting inflation may rise to 5 percent. The decision comes as policymakers attempt to manage persistent inflationary pressures across the UK economy.<br><strong>Key Theme:</strong> Macroeconomics</div>
+        </div>
+        
+        <div class="story">
+            <h2>Democrat, 19, wins Massachusetts House seat by knocking off eight-term Republican member</h2>
+            <div class="story-body"><strong>Source:</strong> New York Post<br><strong>Summary:</strong> A 19-year-old Democratic challenger defeated an eight-term Republican incumbent to secure a seat in the Massachusetts House of Representatives. The victory makes the teenager one of the youngest lawmakers ever elected to the state&#x27;s legislature.<br><strong>Key Theme:</strong> State Politics</div>
+        </div>
+        
+        <div class="story">
+            <h2>TV news hourly summary · Nov 5, 13:03 UTC</h2>
+            <div class="story-body"><strong>Source:</strong> Internet Archive TV News<br><strong>Summary:</strong> International coverage highlighted the political fallout from U.S. midterm elections alongside nationwide civil protests in France over rising living costs. Security concerns mounted across Europe after bomb threats disrupted at least 11 commercial flights. Additional updates noted the political process to assemble a new coalition government in Israel.<br><strong>Key Theme:</strong> World News</div>
+        </div>
+        
+        </main>
+
+        
+        <div class='section-title'>Global &amp; Alternative RSS Feeds</div><div class='segmented-grid'>
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/articles/crz98zqkz7z0o?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>Vance walks Trump tightrope with scathing election critique blaming Iran war</a></h3>
+                <p>The vice-president&#x27;s blunt assessment of Republican election defeat marked one of the sharpest breaks with a sitting president in recent memory....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/articles/cq1kdgnn2xdeo?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>What Democrats can and can&#x27;t do with their new power after taking Congress</a></h3>
+                <p>Democrats can vote legislation through. But Trump still has veto power....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/articles/ckx2qzv835pgo?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>France holds new strikes and protests as unions demand immediate answers</a></h3>
+                <p>Five of France&#x27;s unions join a wave of strikes and protests in a national day of action....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMiswFBVV95cUxQTXFVQUNkTkZhSmpfeDJjQlJzdjZyeTlHc1VmbEE0MkpOU0Z4bEY3eHhZTy1ENkxiT2lscDM1OE5uNlN0Sm12TS1xZXFjeXozcWdLZ0pVS3NvNzZ3b215dHVNZjRURG5QUHZ2c3c3c3NXQWlxS2ozT1Rvb1FBRVh0YWhEQ3NYRWpqVTcteFp0VTB0X1JzaUVGc1hzN1I2ZHdJRkZJc2xPTEt2ZU5KR1RWU1hvYw?oc=5' target='_blank' rel='noopener'>Putin will not be invited to Britain&#x27;s G20 summit, UK PM Burnham says - Reuters</a></h3>
+                <p>Putin will not be invited to Britain&#x27;s G20 summit, UK PM Burnham says Reuters...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMirwFBVV95cUxQZHNUQnlURFBWSTlTSE5wNWUzekR0cDZfcWQzQVRFLVNweXJiSGhtSFZ6cWdvMXF4SHpLRy1YT1Y2QjJZMGxRajNaRGQ1Y25SVGkycEphaU4zTTRJSzV0QjNPTFMxeEl0Mm9CdGFQc0JJTHBNemVoSXdkTnhsR1FNR0t1b2hoUHdfSW0yVnlGMl95Qkd4dDAtMGdhYTFhUzRhc0U1Mm9fdGxLRnhacUNr?oc=5' target='_blank' rel='noopener'>EXCLUSIVE: Nvidia chips pile up in Hong Kong as China withholds import approval - Reuters</a></h3>
+                <p>EXCLUSIVE: Nvidia chips pile up in Hong Kong as China withholds import approval Reuters...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMivAFBVV95cUxONXl2TW1pRDd2eEFya2FTU0pkOWJWd3lFZG1PdUdSNlBWTVR5VGp3UWtLb2E0Ri1iTmt1SWhRckdOVVhkN2ItZ1Y2QlhjT2NrcGR0ZTg3MklhcENpZUFOM0I1SDRYdTZwMFlYeGMwMTM1SWF5ZzNnd2h4ZnJ1bC1BZWhlNDlYUXM3S3FRdXVyR1p3SE5GYUFoMm1wSWRYSlBYY3NkcTBpVklrTnZibm51eURCWkszdHBtdU9vYQ?oc=5' target='_blank' rel='noopener'>Netanyahu&#x27;s position weakens as ultra-Orthodox party withholds support - Reuters</a></h3>
+                <p>Netanyahu&#x27;s position weakens as ultra-Orthodox party withholds support Reuters...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/news/article-16267279/Team-Trump-midterm-strategy-red-flags.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>Inside team Trump&#x27;s &#x27;ill-prepared&#x27; midterm strategy and missed red flags before blue tsunami.. as aides scrambled and president focused on ballroom</a></h3>
+                <p>Donald Trump&#x27;s inner circle expressed frustration with the President&#x27;s focus heading into the midterms, in addition to the GOP&#x27;s candidate selection and poorly spent campaign funds....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/news/article-16267609/Christmas-mortgages-economy-tax-rates-Trump-midterms.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>Britain&#x27;s cost of living crisis is set to get even worse, warns BofE as it hikes interest rates - and says inflation could rise to 5%</a></h3>
+                <p>The Monetary Policy Committee has raised the base rate by 0.25 percentage points to 4 per cent....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/news/article-16267447/Wife-raped-home-husband-string-men-given-potentially-fatal-cocktail-11-drugs-sedate-her.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>Wife &#x27;raped in her home by husband and string of other men was given potentially fatal cocktail of 11 drugs to sedate her&#x27;</a></h3>
+                <p>A wife raped by her husband and a string of other men was found with a &#x27;potentially fatal&#x27; cocktail of 11 drugs in her system, a court heard....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>New York Post</div>
+                <h3><a href='https://nypost.com/2026/11/05/us-news/democrat-19-wins-massachusetts-house-seat-by-knocking-off-eight-term-republican-member/' target='_blank' rel='noopener'>Democrat, 19, wins Massachusetts House seat by knocking off eight-term Republican member</a></h3>
+                <p>The teenager will be one of the youngest representatives elected to the Massachusetts state legislature....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>New York Post</div>
+                <h3><a href='https://nypost.com/2026/11/05/sports/terry-bradshaw-reveals-new-details-about-troy-aikman-joe-buck-feud-after-texting-mnf-star/' target='_blank' rel='noopener'>Terry Bradshaw reveals new details about Troy Aikman-Joe Buck feud after texting ‘MNF’ star</a></h3>
+                <p>Terry Bradshaw doesn’t want to believe that the fight between Troy Aikman and Joe Buck is real....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>New York Post</div>
+                <h3><a href='https://nypost.com/2026/11/05/sports/jalen-hurts-makes-rare-appearance-at-eagles-facility-after-blood-clot/' target='_blank' rel='noopener'>Jalen Hurts makes rare appearance at Eagles facility after blood clot</a></h3>
+                <p>As quarterback drama engulfs the Eagles before their rivalry contest this weekend with the Giants, sidelined starter Jalen Hurts made a rare appearance at the team’s facility Wednesday while he recove...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/trump-doj-forces-lockheed-martin-29-5-million/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=trump-doj-forces-lockheed-martin-29-5-million' target='_blank' rel='noopener'>Trump DOJ Forces Lockheed Martin Into $29.5 Million DEI Discrimination Settlement</a></h3>
+                <p>Lockheed Martin agreed to pay $29.5 million to resolve federal allegations that race and sex affected pay, bonuses, hiring and promotions....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/president-trump-sends-democrats-one-word-warning-after/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=president-trump-sends-democrats-one-word-warning-after' target='_blank' rel='noopener'>President Trump Sends Democrats A One-Word Warning After Midterm Sweep</a></h3>
+                <p>President Trump is making clear that an incoming Democratic Congress will not have a free hand to erase his agenda....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/trump-dot-pulls-393-drivers-vehicles-arkansas-roads/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=trump-dot-pulls-393-drivers-vehicles-arkansas-roads' target='_blank' rel='noopener'>Trump DOT Pulls 393 Drivers And Vehicles Off Arkansas Roads In 48-Hour Sweep</a></h3>
+                <p>A 48-hour Arkansas trucking sweep put 393 drivers and vehicles out of service, found 183 English-proficiency violations and led to 44 criminal arrests....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/11/05/muslim-candidates-ride-democrats-blue-tsunami-into-power-as-the-red-green-alliance-rises/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=muslim-candidates-ride-democrats-blue-tsunami-into-power-as-the-red-green-alliance-rises' target='_blank' rel='noopener'>Muslim Candidates Ride Democrats’ ‘Blue Tsunami’ Into Power As The Red-Green Alliance Rises</a></h3>
+                <p>NBC exit polling puts Muslims at just 1 percent of overall voters, but they swung overwhelmingly Democrat (86 percent)....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/11/05/after-deeply-unpleasant-campaign-season-dems-promise-to-soothe-economically-anxious-americans-with-screeching-lawfare-jihad/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=after-deeply-unpleasant-campaign-season-dems-promise-to-soothe-economically-anxious-americans-with-screeching-lawfare-jihad' target='_blank' rel='noopener'>After Deeply Unpleasant Campaign Season, Dems Promise To Soothe Economically Anxious Americans With Screeching Lawfare Jihad</a></h3>
+                <p>It was a double-negative election, two messages about negating and impugning....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/11/05/newsoms-dirty-medicaid-trick-sticks-californians-with-pricier-premiums-or-a-budget-shortfall/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=newsoms-dirty-medicaid-trick-sticks-californians-with-pricier-premiums-or-a-budget-shortfall' target='_blank' rel='noopener'>Newsom’s Dirty Medicaid Trick Sticks Californians With Pricier Premiums Or A Budget Shortfall</a></h3>
+                <p>Because Newsom leads from behind, Californians will face either higher health insurance premiums or yet another state budget shortfall....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/tech/reddit-logged-in-experience' target='_blank' rel='noopener'>Reddit locks down as bots eat the internet. Can online anonymity survive?</a></h3>
+                <p>Reddit was boosted heavily in Google Search results for years, driving clicks and promoting sustainability. So it’s no surprise that Reddit took a massive hit when AI Overview overshadowed Search, and...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/columns/opinion/why-christians-lose-elections' target='_blank' rel='noopener'>Why Christians lose elections</a></h3>
+                <p>The midterm left me with a question: Why do Christians lose elections? Is it because there aren&#x27;t enough Christians left? Because the other side has more money? Because Christians aren&#x27;t pol...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/news/wisconsin-child-porn-school-official' target='_blank' rel='noopener'>&#x27;It&#x27;s horrific&#x27;: Wisconsin high school official arrested for allegedly possessing child porn</a></h3>
+                <p>A high school official in Wisconsin was arrested Wednesday for allegedly possessing child pornography, according to police. Thomas William Johnson, 51, worked as a district administrator of Union Grov...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/headlines/2026/11/05/russia-confirms-new-ukraine-peace-talks-as-melania-trump-prepares-to-host-ceasefire-meeting-n3820686' target='_blank' rel='noopener'>Russia Confirms New Ukraine Peace Talks as Melania Trump Prepares to Host Ceasefire Meeting</a></h3>
+                <p>Russia Confirms New Ukraine Peace Talks as Melania Trump Prepares to Host Ceasefire Meeting...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/david-strom/2026/11/05/some-people-are-just-too-stupid-to-breathe-yet-they-have-cultural-power-n3820667' target='_blank' rel='noopener'>Some People Are Just Too Stupid to Breathe, yet They Have Cultural Power</a></h3>
+                <p>Some People Are Just Too Stupid to Breathe, yet They Have Cultural Power...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/ed-morrissey/2026/11/04/wednesdays-final-word-n3820657' target='_blank' rel='noopener'>Wednesday&#x27;s Final Word</a></h3>
+                <p>Wednesday&#x27;s Final Word...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Judicial Watch</div>
+                <h3><a href='https://www.judicialwatch.org/doj-punches-back-after-illinois-city-moves-to-dismiss-lawsuit-against-race-based-reparations-program/' target='_blank' rel='noopener'>DOJ punches back after Illinois city moves to dismiss lawsuit against ‘race-based’ repar...</a></h3>
+                <p>FIRST ON FOX: The Department of Justice (DOJ) is pushing back after the city of Evanston, Illinois, signaled…...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Judicial Watch</div>
+                <h3><a href='https://www.judicialwatch.org/californias-dirty-voter-rolls-and-what-they-mean-for-future-elections/' target='_blank' rel='noopener'>California’s dirty voter rolls and what they mean for future elections</a></h3>
+                <p>The Left media-political complex has spent years assuring the American public that illegal aliens and other non-citizens are…...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Judicial Watch</div>
+                <h3><a href='https://www.judicialwatch.org/judicial-watch-challenges-government-secrecy-over-search-of-rep-ilhan-omars-dc-home/' target='_blank' rel='noopener'>Judicial Watch Challenges Government Secrecy Over Search of Rep. Ilhan Omar’s DC Home</a></h3>
+                <p>(Washington, DC) – Judicial Watch announced today that it filed a reply brief urging the U.S. District Court…...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/11/congratulations-democrats-now-what-do-you-do/' target='_blank' rel='noopener'>Congratulations Democrats. Now What Do You do?</a></h3>
+                <p>Photo Credit: ChatGPT By Christopher Knight What possible good can come from a party driven by ten years of raw hatred?...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/11/passively-accepting-defeat-is-not-the-american-way/' target='_blank' rel='noopener'>Passively Accepting Defeat Is Not The American Way</a></h3>
+                <p>Photo Credit: AI for American Thinker By Andrea Widburg George Washington set the American template: We do not give in to despair. We fail, learn, return, and eventually win....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/11/multiculturalism-must-die/' target='_blank' rel='noopener'>Multiculturalism Must Die</a></h3>
+                <p>Photo Credit: ChatGPT for American Thinker By Cole Ellison The war over American inheritance....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMifEFVX3lxTE5sQ3M3ZTFkX19VVEFHSHNEX1BmTmZTZzlkemFnVUZfVjBja010TlFJTmIzaU1IU1BlZVRXRU1vemVIREhQeTNpZktjdEFjeGVCS0R3cXRrYVdkZ3VGRXBteUNHeTZ2UklaaWlpTnk5dEJSbF9wOWJvMFhRVjc?oc=5' target='_blank' rel='noopener'>Spot the Difference Daily- Play Now online &amp; 100% Free - The Epoch Times</a></h3>
+                <p>Spot the Difference Daily- Play Now online &amp; 100% Free The Epoch Times...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMiREFVX3lxTFBSU2dZLXZaX21HbzlKWGxkWnM1eEQwNEZ3VE4xUkJFWFJWSkJ3d0pSY2c4MTBKZXctUXdyWWdicWJQaklP?oc=5' target='_blank' rel='noopener'>The Epoch Times | Breaking News, Latest News, World News and Videos - The Epoch Times</a></h3>
+                <p>The Epoch Times | Breaking News, Latest News, World News and Videos The Epoch Times...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMitgFBVV95cUxNNy1LcUlxTXZrNHczUjNZSC15Wm0xUk5vOUZURXc1cnFKS0FvbTA2U0tYNmtMUmVHaWpsM2xQUFRHdXpNYTBaeXA5MjR6MzBpa1pUd2t4TmZjQU8wS3I5aE44S1BwcmlacEd4U3FZVVdfZ0RWbDdCUkxWcVJIT0R0Yi1tVG5XZXNOOEJKLS1NNFduSXN2R2xwaWRobXhwbFUwZUM0Z1pMQ196U0tsS0hsZTlrWUtmUQ?oc=5' target='_blank' rel='noopener'>Mike Johnson to Step Down as Top House Republican in Wake of Election Loss - The Epoch Times</a></h3>
+                <p>Mike Johnson to Step Down as Top House Republican in Wake of Election Loss The Epoch Times...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Internet Archive TV News (hourly summary)</div>
+                <h3><a href='https://mastodon.archive.org/@tv/117563967742948436' target='_blank' rel='noopener'>TV news hourly summary · Nov 5, 13:03 UTC</a></h3>
+                <p>U.S. midterm results are prompting debate over the parties’ paths to 2028, Democratic priorities and unity, and Republican losses. France faces nationwide protests over living costs and public service...</p>
+            </div>
+            </div>
+
+        <footer>
+            Automated Segmented Pipeline powered by HTML Scrapers, 11 Global RSS Feeds &amp; Google Gemini AI &bull; 2026-11-05
+        </footer>
+    </div>
+</body>
+</html>
