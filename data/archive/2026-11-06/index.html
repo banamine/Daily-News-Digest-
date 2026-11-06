@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Intelligence Briefing – 2026-11-06</title>
+    <style>
+        :root {
+            --bg: #0f1115;
+            --card: #1a1d24;
+            --text: #e6e8ec;
+            --muted: #9ba1ad;
+            --accent: #3b82f6;
+            --border: #2a2e38;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; padding: 2rem 1rem; }
+        .container { max-width: 960px; margin: 0 auto; }
+        header { text-align: center; margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+        header h1 { font-size: 2.2rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 0.4rem; color: #ffffff; }
+        header .date { color: var(--accent); font-size: 1rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+        
+        .hero-image { width: 100%; border-radius: 16px; overflow: hidden; margin-bottom: 2.5rem; box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6); border: 1px solid var(--border); background: #0b0f19; }
+        
+        /* Flexible Photo Collage Component */
+        .collage-wrapper { position: relative; width: 100%; }
+        .collage-header-pill {
+            position: absolute; top: 14px; left: 14px; z-index: 10;
+            background: rgba(15, 23, 42, 0.88); backdrop-filter: blur(8px);
+            border: 1px solid rgba(56, 189, 248, 0.35); color: #38bdf8;
+            padding: 5px 12px; border-radius: 999px; font-size: 11px; font-weight: 800;
+            letter-spacing: 0.5px; display: flex; align-items: center; gap: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        }
+        .collage-container {
+            display: grid; gap: 8px; background: #090d16; padding: 8px; border-radius: 16px; min-height: 280px;
+        }
+        .collage-container.collage-count-1 { grid-template-columns: 1fr; grid-template-rows: 360px; }
+        .collage-container.collage-count-1 .hero-tile { grid-row: auto; }
+
+        .collage-container.collage-count-2 { grid-template-columns: 1fr 1fr; grid-template-rows: 320px; }
+        .collage-container.collage-count-2 .hero-tile { grid-row: auto; }
+
+        .collage-container.collage-count-3 { grid-template-columns: 1.6fr 1fr; grid-template-rows: 170px 170px; }
+        .collage-container.collage-count-3 .hero-tile { grid-row: span 2; }
+
+        .collage-container.collage-count-4 { grid-template-columns: 1.6fr 1fr 1fr; grid-template-rows: 170px 170px; }
+        .collage-container.collage-count-4 .hero-tile { grid-row: span 2; }
+        .collage-container.collage-count-4 .collage-tile:nth-child(4) { grid-column: span 2; }
+
+        .collage-container.collage-count-5 { grid-template-columns: 1.8fr 1fr 1fr; grid-template-rows: 180px 180px; }
+        .collage-container.collage-count-5 .hero-tile { grid-row: span 2; }
+
+        @media (max-width: 768px) {
+            .collage-container,
+            .collage-container.collage-count-2,
+            .collage-container.collage-count-3,
+            .collage-container.collage-count-4,
+            .collage-container.collage-count-5 {
+                grid-template-columns: 1fr; grid-template-rows: auto;
+            }
+            .collage-tile, .hero-tile { min-height: 180px; }
+        }
+        .collage-tile {
+            position: relative; border-radius: 10px; overflow: hidden; background: #131927;
+            border: 1px solid rgba(255, 255, 255, 0.08); transition: transform 0.3s ease;
+        }
+        .collage-tile.hero-tile { grid-row: span 2; }
+        .collage-tile img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
+        .collage-tile:hover img { transform: scale(1.06); }
+        .collage-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(to top, rgba(11, 15, 23, 0.95) 0%, rgba(11, 15, 23, 0.2) 60%, transparent 100%);
+            display: flex; flex-direction: column; justify-content: flex-end; padding: 12px;
+        }
+        .collage-badge {
+            align-self: flex-start; background: rgba(56, 189, 248, 0.2); color: #38bdf8;
+            border: 1px solid rgba(56, 189, 248, 0.4); font-size: 10px; font-weight: 700;
+            text-transform: uppercase; padding: 2px 8px; border-radius: 999px; margin-bottom: 6px;
+        }
+        .collage-badge.hero-badge { background: rgba(16, 185, 129, 0.2); color: #34d399; border-color: rgba(16, 185, 129, 0.4); }
+        .collage-title { color: #ffffff; font-size: 12px; font-weight: 700; line-height: 1.35; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        .hero-tile .collage-title { font-size: 17px; }
+
+        .stories { display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 3rem; }
+        .story { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem; }
+        .story h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: #f1f3f5; }
+        .story-body { color: var(--muted); font-size: 0.98rem; overflow-wrap: anywhere; word-break: break-word; }
+        .story h2, .mini-card h3, .mini-card p { overflow-wrap: anywhere; }
+        .container { min-width: 0; max-width: 100%; }
+        .section-title { font-size: 1.3rem; font-weight: 800; color: var(--accent); margin: 2rem 0 1rem; border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; }
+        .segmented-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
+        .mini-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+        .mini-card.scraped { border-left: 3px solid #8b5cf6; }
+        .mini-card.rss { border-left: 3px solid #3b82f6; }
+        .source-tag { font-size: 0.75rem; font-weight: bold; color: var(--accent); margin-bottom: 0.4rem; }
+        .mini-card h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.4rem; }
+        .mini-card h3 a { color: #f1f3f5; text-decoration: none; }
+        .mini-card h3 a:hover { text-decoration: underline; color: var(--accent); }
+        .mini-card p { font-size: 0.82rem; color: var(--muted); line-height: 1.4; }
+        footer { text-align: center; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="date">2026-11-06</div>
+            <h1>Daily Intelligence Briefing</h1>
+        </header>
+
+        <div class="hero-image">
+            
+                
+    <div class="collage-wrapper">
+        <div class="collage-header-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7"/><path d="M16 5h5v5"/><path d="m21 5-9 9"/></svg>
+            <span>Parsed Feeds Mixed Photo Collage (5 Photos)</span>
+        </div>
+        <div class="collage-container collage-count-5">
+            <div class="collage-tile hero-tile">
+                <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/69dd/live/60312250-d9ca-11f1-93e1-3b657b665bcf.jpg" alt="White House denies Hegseth and Rubio to leave jobs after Republican election losses" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+                <div class="collage-overlay">
+                    <span class="collage-badge hero-badge">BBC World News</span>
+                    <h3 class="collage-title hero-title">White House denies Hegseth and Rubio to leave jobs after Republican election losses</h3>
+                </div>
+            </div>
+            
+        <div class="collage-tile">
+            <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/97ff/live/e5957760-d9b2-11f1-93e1-3b657b665bcf.jpg" alt="Trump signs order to preserve Oval Office as national monument" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">BBC World News</span>
+                <h4 class="collage-title">Trump signs order to preserve Oval Office as national monument</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/5740/live/92c81290-d9cb-11f1-bb8e-efaa31738708.jpg" alt="Two dead after bus crashes in France, officials say" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">BBC World News</span>
+                <h4 class="collage-title">Two dead after bus crashes in France, officials say</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Kenyan cult leader sentenced to 200 years in prison for mass starvation murders of children - Reuters" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">Reuters Top News</span>
+                <h4 class="collage-title">Kenyan cult leader sentenced to 200 years in prison for mass starvation murders of children - Reuters</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="EXCLUSIVE: Apple&#x27;s predictive text restrictions include &#x27;Dictator Trump&#x27; and &#x27;Sleepy Joe,&#x27; researcher finds - Reuters" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">Reuters Top News</span>
+                <h4 class="collage-title">EXCLUSIVE: Apple&#x27;s predictive text restrictions include &#x27;Dictator Trump&#x27; and &#x27;Sleepy Joe,&#x27; researcher finds - Reuters</h4>
+            </div>
+        </div>
+        
+        </div>
+    </div>
+    
+            
+        </div>
+
+        <main class="stories">
+            
+        <div class="story">
+            <h2>White House denies Hegseth and Rubio to leave jobs after Republican election losses</h2>
+            <div class="story-body"><strong>Source:</strong> BBC World News<br><strong>Summary:</strong> The White House has denied media reports suggesting that Defense Secretary Pete Hegseth and Secretary of State Marco Rubio will be leaving their administration roles following recent Republican election losses. Reports had indicated growing calls to replace Hegseth, who faces a potential impeachment vote, alongside rumors that Rubio is planning a future presidential campaign. Administration officials maintain that both cabinet members remain in their positions despite the political speculation.<br><strong>Key Theme:</strong> Politics</div>
+        </div>
+        
+        <div class="story">
+            <h2>Trump signs order to preserve Oval Office as national monument</h2>
+            <div class="story-body"><strong>Source:</strong> BBC World News<br><strong>Summary:</strong> President Trump has signed an executive order designating the Oval Office as a national monument to ensure its long-term preservation. The designation follows significant alterations Trump made to the room&#x27;s interior decor and the recent demolition of the White House East Wing. The order is intended to prevent future administration alterations and protect the historical space.<br><strong>Key Theme:</strong> Politics</div>
+        </div>
+        
+        <div class="story">
+            <h2>Kenyan cult leader sentenced to 200 years in prison for mass starvation murders of children</h2>
+            <div class="story-body"><strong>Source:</strong> Reuters Top News<br><strong>Summary:</strong> A Kenyan court has sentenced a prominent cult leader to 200 years in prison for his role in the mass starvation deaths of children. The ruling marks a major legal milestone following widespread investigations into the cult&#x27;s deadly activities. Authorities found the leader responsible for convincing followers to starve themselves and their children to death in a tragic religious ritual.<br><strong>Key Theme:</strong> Justice</div>
+        </div>
+        
+        <div class="story">
+            <h2>EXCLUSIVE: Apple&#x27;s predictive text restrictions include &#x27;Dictator Trump&#x27; and &#x27;Sleepy Joe,&#x27; researcher finds</h2>
+            <div class="story-body"><strong>Source:</strong> Reuters Top News<br><strong>Summary:</strong> A researcher has discovered that Apple&#x27;s predictive text system active on iOS devices restricts specific political phrases, including &quot;Dictator Trump&quot; and &quot;Sleepy Joe.&quot; The findings reveal how the technology company moderates language to filter out potentially sensitive or politically charged terms during auto-suggest typing. Apple has not publicly commented on the full list of blacklisted phrases or the criteria used to restrict them.<br><strong>Key Theme:</strong> Technology</div>
+        </div>
+        
+        <div class="story">
+            <h2>Met Police chief says &#x27;many, many more victims&#x27; of Russell Brand could come forward as comedian faces two new rape probes</h2>
+            <div class="story-body"><strong>Source:</strong> Daily Mail UK<br><strong>Summary:</strong> Metropolitan Police Commissioner Sir Mark Rowley stated that detectives expect additional victims to come forward as they investigate two new rape allegations against Russell Brand. The police chief confirmed active ongoing probes into the comedian and actor following recently reported allegations. Law enforcement continues to encourage anyone with relevant information regarding Brand&#x27;s conduct to contact investigators.<br><strong>Key Theme:</strong> Law Enforcement</div>
+        </div>
+        
+        <div class="story">
+            <h2>Five schools are locked down as armed police hunt knifeman after boy is taken to hospital with injuries</h2>
+            <div class="story-body"><strong>Source:</strong> Daily Mail UK<br><strong>Summary:</strong> Five schools in Tuffley, Gloucester were placed on immediate lockdown after a young boy was injured in a knife attack and rushed to the hospital. Armed police officers launched an intensive search in the surrounding area for a suspect seen near St Peter&#x27;s High School. Emergency services remain deployed to maintain public safety while the manhunt continues.<br><strong>Key Theme:</strong> Public Safety</div>
+        </div>
+        
+        <div class="story">
+            <h2>Blue Jays blast own $93 million outfielder Anthony Santander after Islamophobic comments</h2>
+            <div class="story-body"><strong>Source:</strong> New York Post<br><strong>Summary:</strong> The Toronto Blue Jays issued a public statement condemning outfielder Anthony Santander over Islamophobic remarks he recently made. Santander, who signed a five-year, $92.5 million deal in 2025, faces swift backlash from team leadership and fans alike. The franchise emphasized its stance against discriminatory language while addressing the ongoing situation.<br><strong>Key Theme:</strong> Sports</div>
+        </div>
+        
+        <div class="story">
+            <h2>TV news hourly summary · Nov 6, 13:03 UTC</h2>
+            <div class="story-body"><strong>Source:</strong> Internet Archive TV News<br><strong>Summary:</strong> An hourly global news roundup highlighted a Colorado shootout that resulted in a police officer&#x27;s death, alongside a separate fatal shooting at a Citibank location. Internationally, coverage focused on a 200-year sentence handed to a Kenyan cult leader, new legal updates surrounding Russell Brand, and a school bus crash in France. Additionally, heavy severe weather flooded towns across the Tennessee-Georgia border while Donald Trump indicated a decision on Iran is expected shortly.<br><strong>Key Theme:</strong> World News</div>
+        </div>
+        
+        </main>
+
+        
+        <div class='section-title'>Global &amp; Alternative RSS Feeds</div><div class='segmented-grid'>
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/articles/cqg7xxg4jdv5o?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>White House denies Hegseth and Rubio to leave jobs after Republican election losses</a></h3>
+                <p>US media reports there are calls to replace Pete Hegseth, who also faces a possible impeachment vote, while Marco Rubio is rumoured to be eyeing a presidential run....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/articles/cmy0eeg101djo?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>Trump signs order to preserve Oval Office as national monument</a></h3>
+                <p>The order comes after Trump made a series of big changes to the decor of the Oval Office and tore down the White House East Wing....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/articles/cmly00l4p3lwo?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>Two dead after bus crashes in France, officials say</a></h3>
+                <p>One child and one young adult were killed in the crash, local authorities say, with more injured....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMivAFBVV95cUxPOVFQN3ZZdXgwV0VlOWE3MF8zbXg0ZF9ZenNaZ3pVTl8xcHpuREFHUFpodWFmMXVzSmN3c29kRVViMDZhdkZ1QjB1WGdoR0tLZ09OaTRORzBOWmNQQUFUb2RvMnpVdjQ3eGlCcmJsSGxPNzFVM0N2bEJCZ3V5SVJ0OTRyZW9LbFVhVmRXeUV2a0Q0eFE4WVR1Vl81V1NoTWZ4THNYbklpbFc1RmxIZ043WTBVWWxwTW4yVmNYXw?oc=5' target='_blank' rel='noopener'>Kenyan cult leader sentenced to 200 years in prison for mass starvation murders of children - Reuters</a></h3>
+                <p>Kenyan cult leader sentenced to 200 years in prison for mass starvation murders of children Reuters...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMi2AFBVV95cUxNTUR2UGkwV2c4dmhzNURLVE9HOFU0Vks4d3FkRzFBa1hWZXloRGtwaVVoUnl4WFVBU0ktdXl3eU1lclhVTC1xUjBPX2NWMG82V2IzdVZXZVd5dFEwSkhSUzdMV2I1VlB5a1R4czhndXdGQURaY3pzTVZoUC1UNm5OUXBRZXNFSXpBV3VOODc1UUZGV21oTkxtWW9fMGdsanBDV2NUUVNST3R3Zm5mUW5JQWtvdXRSem1ZSlJSaE93d0FtckdmX2c0MGlLT2I3Tjh5eXVlZlFpNW0?oc=5' target='_blank' rel='noopener'>EXCLUSIVE: Apple&#x27;s predictive text restrictions include &#x27;Dictator Trump&#x27; and &#x27;Sleepy Joe,&#x27; researcher finds - Reuters</a></h3>
+                <p>EXCLUSIVE: Apple&#x27;s predictive text restrictions include &#x27;Dictator Trump&#x27; and &#x27;Sleepy Joe,&#x27; researcher finds Reuters...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMiwAFBVV95cUxPM1hGX3FNRUVaMDhGcnI2WkxBSk53bDZLT1A3RDZvZFktR0wyZy05Ym8xc2hsTFlQMDJzT3lHeHZkTl9UMkttb3RocE9KSDB6OGNmNG9iNFY0aFdVelhFeXREVWJ1OUpUNG1zWEFMUnZueUVMdGhXNVVuUFBCY2lhMm1EY0pxUEsweDVveC11eF9ZRmwwSEdVUy1Jbndzdi1GWXd3M282NHdpdkdqeU83T1FRcmtXZ2RGSDRFN2pKRzg?oc=5' target='_blank' rel='noopener'>Wave of bomb threats afflict European flights for third time this week - Reuters</a></h3>
+                <p>Wave of bomb threats afflict European flights for third time this week Reuters...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/news/article-16271125/Met-Police-chief-says-victims-Russell-Brand-come-forward-comedian-faces-two-new-rape-probes.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>Met Police chief says &#x27;many, many more victims&#x27; of Russell Brand could come forward as comedian faces two new rape probes</a></h3>
+                <p>Sir Mark Rowley, Commissioner of the Metropolitan Police, confirmed detectives are already investigating two further rape allegations involving the disgraced comedian and actor....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/news/article-16271333/Armed-police-rush-school-hunt-knifeman-boy-hospital.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>Five schools are locked down as armed police hunt knifeman after boy is taken to hospital with injuries</a></h3>
+                <p>Armed police officers are hunting a knifeman seen near to St Peter&#x27;s High School in Tuffley, in Gloucester on Friday morning, as one boy has been reported injured....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/lifestyle/article-16262497/Laura-Brand-Bernard-Gallacher-family-Russell-teenager-KATIE-HIND.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>What &#x27;sweet and shy&#x27; Laura Gallacher&#x27;s well-heeled family really think of her obsessive loyalty to rapist husband Russell Brand... after she acted like a &#x27;hostage&#x27; in court</a></h3>
+                <p>It&#x27;s fair to say that being Mrs Russell Brand wasn&#x27;t quite the life path expected for Laura, the youngest child of multi-millionaire golfer Bernard Gallacher and his wife Lesley......</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>New York Post</div>
+                <h3><a href='https://nypost.com/2026/11/06/sports/blue-jays-blast-anthony-santander-after-islamophobic-comments/' target='_blank' rel='noopener'>Blue Jays blast own $93 million outfielder Anthony Santander after Islamophobic comments</a></h3>
+                <p>Santander, 32, is two seasons into a five-year, $92.5 million contract he signed in 2025....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>New York Post</div>
+                <h3><a href='https://nypost.com/2026/11/06/sports/who-st-johns-insiders-are-tipping-to-be-teams-next-leaders/' target='_blank' rel='noopener'>Who St. John’s insiders are tipping to be the team’s next leaders</a></h3>
+                <p>Zuby Ejiofor and Sadiku Ibine Ayo are gone now, and someone will have to emerge to fill that void....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>New York Post</div>
+                <h3><a href='https://decider.com/2026/11/06/nocturne-rory-culkin-karl-interview-apple-tv/' target='_blank' rel='noopener'>Rory Culkin Reveals How He Approached Karl’s “Ambiguous” Relationship With Stephen Graham’s “Exotic Predator” Jurek In ‘Nocturne’</a></h3>
+                <p>&quot;If he were to get his paws on me, he would tear me apart, and that just makes him even more fascinating,&quot; Culkin told Decider....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/feds-charge-18-year-old-alleged-threats-against/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=feds-charge-18-year-old-alleged-threats-against' target='_blank' rel='noopener'>Feds Charge 18-Year-Old Over Alleged Threats Against President Trump And A School</a></h3>
+                <p>Federal prosecutors say an 18-year-old Massachusetts man threatened President Trump and a school, with a firearm and military-style gear later recovered....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/pete-hegseth-humvees-patrol-boats-washington/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=pete-hegseth-humvees-patrol-boats-washington' target='_blank' rel='noopener'>Pete Hegseth Authorizes Humvees and Patrol Boats for Washington Patrols</a></h3>
+                <p>Pete Hegseth authorized expanded National Guard patrol capabilities in Washington, including Humvees, marked patrol cars, boats and portable light towers....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/trump-tax-law-6576-new-opportunity-zones/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=trump-tax-law-6576-new-opportunity-zones' target='_blank' rel='noopener'>Trump Tax Law Unlocks 6,576 New Opportunity Zones Across America</a></h3>
+                <p>President Trump’s permanent Opportunity Zone program is opening a new decade of private investment across 6,576 communities, including 2,594 rural areas....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/11/06/neocons-are-desperate-to-blame-the-gop-midterm-wipeout-on-everything-but-iran/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=neocons-are-desperate-to-blame-the-gop-midterm-wipeout-on-everything-but-iran' target='_blank' rel='noopener'>Neocons Are Desperate To Blame The GOP Midterm Wipeout On Everything But Iran</a></h3>
+                <p>They blame tariffs, corruption, immigration enforcement–anything but the one obvious thing: the Iran war and its associated costs....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/11/06/christian-conservatives-cant-import-a-new-electorate-like-democrats-but-we-can-have-lots-of-babies/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=christian-conservatives-cant-import-a-new-electorate-like-democrats-but-we-can-have-lots-of-babies' target='_blank' rel='noopener'>Christian Conservatives Can’t Import A New Electorate Like Democrats, But We Can Have Lots Of Babies</a></h3>
+                <p>While Democrats wave the next generation of leftist &#x27;Americans&#x27; across the Rio Grande, Christians contracept their way out of cultural renewal as they throw up their hands in defeat....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/11/06/mississippis-midterm-upset-proves-that-demographics-matter-now-more-than-ever/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=mississippis-midterm-upset-proves-that-demographics-matter-now-more-than-ever' target='_blank' rel='noopener'>Mississippi’s Midterm Upset Proves That Demographics Matter Now More Than Ever</a></h3>
+                <p>The demographic shift in Mississippi proved decisive in this year&#x27;s election....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/tech/apple-selfie-age-verification' target='_blank' rel='noopener'>Apple’s AI now needs a photo of your face — to satisfy new age-verify laws</a></h3>
+                <p>Some of the first age verification laws are starting to roll out across the United States. One of them requires iPhone owners to take a selfie so that Apple’s AI can verify their age. Here’s which sta...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/news/missing-10-year-old-dead' target='_blank' rel='noopener'>Remains of missing 10-year-old girl found in car trunk — police arrest shocking suspect</a></h3>
+                <p>Philadelphia residents who helped search for a missing 10-year-old are stunned and angry after the girl&#x27;s foster mother was arrested more than a week later. The Philadelphia Police Dept. issued t...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/shows/making-the-argument-with-nick-freitas/nick-freitas-is-trump-quietly-achieving-what-libertarians-have-wanted-for-decades' target='_blank' rel='noopener'>Nick Freitas: Is Trump quietly achieving what libertarians have wanted for decades?</a></h3>
+                <p>Libertarians have long called for a smaller American footprint overseas, and Austin Padgett is making the argument that Trump’s foreign policy is doing exactly that. “The way I would generally describ...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/david-strom/2026/11/06/i-dug-into-the-exit-polls-and-vance-is-not-entirely-right-n3820708' target='_blank' rel='noopener'>I Dug Into the Exit Polls, and Vance Is Not Entirely Right</a></h3>
+                <p>I Dug Into the Exit Polls, and Vance Is Not Entirely Right...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/headlines/2026/11/06/lawyer-up-democrats-prepare-to-unleash-political-rage-in-congress-n3820680' target='_blank' rel='noopener'>&#x27;Lawyer Up&#x27;: Democrats Prepare to Unleash Political Rage in Congress</a></h3>
+                <p>&#x27;Lawyer Up&#x27;: Democrats Prepare to Unleash Political Rage in Congress...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/ed-morrissey/2026/11/05/thursdays-final-word-n3820700' target='_blank' rel='noopener'>Thursday&#x27;s Final Word</a></h3>
+                <p>Thursday&#x27;s Final Word...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Judicial Watch</div>
+                <h3><a href='https://www.judicialwatch.org/doj-punches-back-after-illinois-city-moves-to-dismiss-lawsuit-against-race-based-reparations-program/' target='_blank' rel='noopener'>DOJ punches back after Illinois city moves to dismiss lawsuit against ‘race-based’ repar...</a></h3>
+                <p>FIRST ON FOX: The Department of Justice (DOJ) is pushing back after the city of Evanston, Illinois, signaled…...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Judicial Watch</div>
+                <h3><a href='https://www.judicialwatch.org/californias-dirty-voter-rolls-and-what-they-mean-for-future-elections/' target='_blank' rel='noopener'>California’s dirty voter rolls and what they mean for future elections</a></h3>
+                <p>The Left media-political complex has spent years assuring the American public that illegal aliens and other non-citizens are…...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Judicial Watch</div>
+                <h3><a href='https://www.judicialwatch.org/judicial-watch-challenges-government-secrecy-over-search-of-rep-ilhan-omars-dc-home/' target='_blank' rel='noopener'>Judicial Watch Challenges Government Secrecy Over Search of Rep. Ilhan Omar’s DC Home</a></h3>
+                <p>(Washington, DC) – Judicial Watch announced today that it filed a reply brief urging the U.S. District Court…...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/11/the-cuban-vote-saved-florida/' target='_blank' rel='noopener'>The Cuban Vote Saved Florida</a></h3>
+                <p>Photo Credit: Osseous By Luis Gonzalez Florida offered our families something the old country could no longer provide: a future....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/11/an-israeli-american-female-journalist-noted-for-having-a-pair/' target='_blank' rel='noopener'>An Israeli-American Female Journalist Noted For… Having A Pair!</a></h3>
+                <p>Photo Credit: Caroline Glick, CC BY-SA 3.0 , via Wikimedia Commons, unaltered. Caroline Glick, CC BY-SA 3.0, via Wikimedia Commons. By James Zumwalt Caroline Glick takes European nations to task for b...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/11/paranoid-or-prescient/' target='_blank' rel='noopener'>Paranoid Or Prescient?</a></h3>
+                <p>Photo Credit: AI for American Thinker By Susan Quinn The midterm elections may signal a disastrous turn toward antisemitism in America....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMif0FVX3lxTE1BRzREQU1Rcy00aGVKT2k0VmdZbC1JcXpiQTc1dnEtOVFVUGQ4NFpHQmdNWVUtYU5aeURWMFo0eDhlYk9XLXlramR0T3dmUUhlRHo2RGJITE1sUDJ5bFU4MktKR1VBVUpFNHBKbzdnRlNKRGZYeXlOSXhnb3BYMFE?oc=5' target='_blank' rel='noopener'>Democrats Win Control of Congress - The Epoch Times</a></h3>
+                <p>Democrats Win Control of Congress The Epoch Times...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMifEFVX3lxTE5sQ3M3ZTFkX19VVEFHSHNEX1BmTmZTZzlkemFnVUZfVjBja010TlFJTmIzaU1IU1BlZVRXRU1vemVIREhQeTNpZktjdEFjeGVCS0R3cXRrYVdkZ3VGRXBteUNHeTZ2UklaaWlpTnk5dEJSbF9wOWJvMFhRVjc?oc=5' target='_blank' rel='noopener'>Spot the Difference Daily- Play Now online &amp; 100% Free - The Epoch Times</a></h3>
+                <p>Spot the Difference Daily- Play Now online &amp; 100% Free The Epoch Times...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMiREFVX3lxTFBSU2dZLXZaX21HbzlKWGxkWnM1eEQwNEZ3VE4xUkJFWFJWSkJ3d0pSY2c4MTBKZXctUXdyWWdicWJQaklP?oc=5' target='_blank' rel='noopener'>The Epoch Times | Breaking News, Latest News, World News and Videos - The Epoch Times</a></h3>
+                <p>The Epoch Times | Breaking News, Latest News, World News and Videos The Epoch Times...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Internet Archive TV News (hourly summary)</div>
+                <h3><a href='https://mastodon.archive.org/@tv/117569630021734909' target='_blank' rel='noopener'>TV news hourly summary · Nov 6, 13:03 UTC</a></h3>
+                <p>A Colorado police officer was killed and three others shot in a shootout. Kenya’s cult leader was sentenced to 200 years; Russell Brand was found guilty of rape and sexual assault. One person was kill...</p>
+            </div>
+            </div>
+
+        <footer>
+            Automated Segmented Pipeline powered by HTML Scrapers, 11 Global RSS Feeds &amp; Google Gemini AI &bull; 2026-11-06
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-11-06",
+    "timestamp": "2026-11-06T13:43:56.053494+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "White House denies Hegseth and Rubio to leave jobs after Republican election losses",
+      "Trump signs order to preserve Oval Office as national monument",
+      "Kenyan cult leader sentenced to 200 years in prison for mass starvation murders of children - Reuters",
+      "EXCLUSIVE: Apple's predictive text restrictions include 'Dictator Trump' and 'Sleepy Joe,' researcher finds - Reuters",
+      "Met Police chief says 'many, many more victims' of Russell Brand could come forward as comedian faces two new rape probes"
+    ],
+    "archive_html_path": "data/archive/2026-11-06/index.html",
+    "data_json_path": "data/archive/2026-11-06/data.json"
+  },
+  {
     "date": "2026-11-05",
     "timestamp": "2026-11-05T13:58:29.067930+00:00",
     "stories_count": 8,
