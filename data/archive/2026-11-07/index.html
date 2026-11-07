@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Intelligence Briefing – 2026-11-07</title>
+    <style>
+        :root {
+            --bg: #0f1115;
+            --card: #1a1d24;
+            --text: #e6e8ec;
+            --muted: #9ba1ad;
+            --accent: #3b82f6;
+            --border: #2a2e38;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; padding: 2rem 1rem; }
+        .container { max-width: 960px; margin: 0 auto; }
+        header { text-align: center; margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+        header h1 { font-size: 2.2rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 0.4rem; color: #ffffff; }
+        header .date { color: var(--accent); font-size: 1rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+        
+        .hero-image { width: 100%; border-radius: 16px; overflow: hidden; margin-bottom: 2.5rem; box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6); border: 1px solid var(--border); background: #0b0f19; }
+        
+        /* Flexible Photo Collage Component */
+        .collage-wrapper { position: relative; width: 100%; }
+        .collage-header-pill {
+            position: absolute; top: 14px; left: 14px; z-index: 10;
+            background: rgba(15, 23, 42, 0.88); backdrop-filter: blur(8px);
+            border: 1px solid rgba(56, 189, 248, 0.35); color: #38bdf8;
+            padding: 5px 12px; border-radius: 999px; font-size: 11px; font-weight: 800;
+            letter-spacing: 0.5px; display: flex; align-items: center; gap: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        }
+        .collage-container {
+            display: grid; gap: 8px; background: #090d16; padding: 8px; border-radius: 16px; min-height: 280px;
+        }
+        .collage-container.collage-count-1 { grid-template-columns: 1fr; grid-template-rows: 360px; }
+        .collage-container.collage-count-1 .hero-tile { grid-row: auto; }
+
+        .collage-container.collage-count-2 { grid-template-columns: 1fr 1fr; grid-template-rows: 320px; }
+        .collage-container.collage-count-2 .hero-tile { grid-row: auto; }
+
+        .collage-container.collage-count-3 { grid-template-columns: 1.6fr 1fr; grid-template-rows: 170px 170px; }
+        .collage-container.collage-count-3 .hero-tile { grid-row: span 2; }
+
+        .collage-container.collage-count-4 { grid-template-columns: 1.6fr 1fr 1fr; grid-template-rows: 170px 170px; }
+        .collage-container.collage-count-4 .hero-tile { grid-row: span 2; }
+        .collage-container.collage-count-4 .collage-tile:nth-child(4) { grid-column: span 2; }
+
+        .collage-container.collage-count-5 { grid-template-columns: 1.8fr 1fr 1fr; grid-template-rows: 180px 180px; }
+        .collage-container.collage-count-5 .hero-tile { grid-row: span 2; }
+
+        @media (max-width: 768px) {
+            .collage-container,
+            .collage-container.collage-count-2,
+            .collage-container.collage-count-3,
+            .collage-container.collage-count-4,
+            .collage-container.collage-count-5 {
+                grid-template-columns: 1fr; grid-template-rows: auto;
+            }
+            .collage-tile, .hero-tile { min-height: 180px; }
+        }
+        .collage-tile {
+            position: relative; border-radius: 10px; overflow: hidden; background: #131927;
+            border: 1px solid rgba(255, 255, 255, 0.08); transition: transform 0.3s ease;
+        }
+        .collage-tile.hero-tile { grid-row: span 2; }
+        .collage-tile img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
+        .collage-tile:hover img { transform: scale(1.06); }
+        .collage-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(to top, rgba(11, 15, 23, 0.95) 0%, rgba(11, 15, 23, 0.2) 60%, transparent 100%);
+            display: flex; flex-direction: column; justify-content: flex-end; padding: 12px;
+        }
+        .collage-badge {
+            align-self: flex-start; background: rgba(56, 189, 248, 0.2); color: #38bdf8;
+            border: 1px solid rgba(56, 189, 248, 0.4); font-size: 10px; font-weight: 700;
+            text-transform: uppercase; padding: 2px 8px; border-radius: 999px; margin-bottom: 6px;
+        }
+        .collage-badge.hero-badge { background: rgba(16, 185, 129, 0.2); color: #34d399; border-color: rgba(16, 185, 129, 0.4); }
+        .collage-title { color: #ffffff; font-size: 12px; font-weight: 700; line-height: 1.35; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        .hero-tile .collage-title { font-size: 17px; }
+
+        .stories { display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 3rem; }
+        .story { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem; }
+        .story h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: #f1f3f5; }
+        .story-body { color: var(--muted); font-size: 0.98rem; overflow-wrap: anywhere; word-break: break-word; }
+        .story h2, .mini-card h3, .mini-card p { overflow-wrap: anywhere; }
+        .container { min-width: 0; max-width: 100%; }
+        .section-title { font-size: 1.3rem; font-weight: 800; color: var(--accent); margin: 2rem 0 1rem; border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; }
+        .segmented-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
+        .mini-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+        .mini-card.scraped { border-left: 3px solid #8b5cf6; }
+        .mini-card.rss { border-left: 3px solid #3b82f6; }
+        .source-tag { font-size: 0.75rem; font-weight: bold; color: var(--accent); margin-bottom: 0.4rem; }
+        .mini-card h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.4rem; }
+        .mini-card h3 a { color: #f1f3f5; text-decoration: none; }
+        .mini-card h3 a:hover { text-decoration: underline; color: var(--accent); }
+        .mini-card p { font-size: 0.82rem; color: var(--muted); line-height: 1.4; }
+        footer { text-align: center; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="date">2026-11-07</div>
+            <h1>Daily Intelligence Briefing</h1>
+        </header>
+
+        <div class="hero-image">
+            
+                
+    <div class="collage-wrapper">
+        <div class="collage-header-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7"/><path d="M16 5h5v5"/><path d="m21 5-9 9"/></svg>
+            <span>Parsed Feeds Mixed Photo Collage (5 Photos)</span>
+        </div>
+        <div class="collage-container collage-count-5">
+            <div class="collage-tile hero-tile">
+                <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/492d/live/41326240-da17-11f1-bba7-b50f1faa7672.jpg" alt="With Stephen Miller pick, Trump readies for a battle" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+                <div class="collage-overlay">
+                    <span class="collage-badge hero-badge">BBC World News</span>
+                    <h3 class="collage-title hero-title">With Stephen Miller pick, Trump readies for a battle</h3>
+                </div>
+            </div>
+            
+        <div class="collage-tile">
+            <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/a65d/live/3fe15d20-da57-11f1-af22-a97b84c9ca63.jpg" alt="Paraguay&#x27;s president impeached and under house arrest after bank collapse" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">BBC World News</span>
+                <h4 class="collage-title">Paraguay&#x27;s president impeached and under house arrest after bank collapse</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/15d3/live/886b05a0-da75-11f1-85ad-fd31eff31154.jpg" alt="Pope in &#x27;pretty good health&#x27; as he starts Latin America tour" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">BBC World News</span>
+                <h4 class="collage-title">Pope in &#x27;pretty good health&#x27; as he starts Latin America tour</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="After midterm rout, Vance tries to build his own 2028 brand - Reuters" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">Reuters Top News</span>
+                <h4 class="collage-title">After midterm rout, Vance tries to build his own 2028 brand - Reuters</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Russian diplomats and military officials to join talks with US and Ukraine, Kremlin says - Reuters" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">Reuters Top News</span>
+                <h4 class="collage-title">Russian diplomats and military officials to join talks with US and Ukraine, Kremlin says - Reuters</h4>
+            </div>
+        </div>
+        
+        </div>
+    </div>
+    
+            
+        </div>
+
+        <main class="stories">
+            
+        <div class="story">
+            <h2>With Stephen Miller pick, Trump readies for a battle</h2>
+            <div class="story-body"><strong>Source:</strong> BBC World News<br><strong>Summary:</strong> U.S. President Donald Trump has named loyalist Stephen Miller as his new White House chief of staff. The appointment of the partisan firebrand signals a combative approach by the administration, setting up likely political clashes with Congress over key domestic policies.<br><strong>Key Theme:</strong> U.S. Politics</div>
+        </div>
+        
+        <div class="story">
+            <h2>Paraguay&#x27;s president impeached and under house arrest after bank collapse</h2>
+            <div class="story-body"><strong>Source:</strong> BBC World News<br><strong>Summary:</strong> Paraguayan President Santiago Peña has been impeached and placed under house arrest following a severe national banking crisis. The economic turmoil left millions of citizens unable to access their funds, triggering political instability and his swift removal from office.<br><strong>Key Theme:</strong> World Politics</div>
+        </div>
+        
+        <div class="story">
+            <h2>After midterm rout, Vance tries to build his own 2028 brand - Reuters</h2>
+            <div class="story-body"><strong>Source:</strong> Reuters Top News<br><strong>Summary:</strong> Following significant losses in the midterm elections, Vice President JD Vance is taking steps to establish his own distinct political brand. The strategic shift comes as he seeks to position himself for a potential presidential bid in 2028.<br><strong>Key Theme:</strong> U.S. Politics</div>
+        </div>
+        
+        <div class="story">
+            <h2>Russian diplomats and military officials to join talks with US and Ukraine, Kremlin says - Reuters</h2>
+            <div class="story-body"><strong>Source:</strong> Reuters Top News<br><strong>Summary:</strong> The Kremlin announced that Russian diplomatic and military representatives will participate in upcoming talks involving the United States and Ukraine. The meeting indicates a potential movement toward formal negotiations amid the ongoing conflict.<br><strong>Key Theme:</strong> Diplomacy</div>
+        </div>
+        
+        <div class="story">
+            <h2>Pictured: Husband whose wife smeared her own faeces in his mouth at their £1million farmhouse after a row &#x27;over him talking s***&#x27;</h2>
+            <div class="story-body"><strong>Source:</strong> Daily Mail UK<br><strong>Summary:</strong> A UK court heard details regarding an assault involving Alison Moore, who targeted her husband Rob at their home following a domestic dispute. The premeditated attack reportedly stemmed from an earlier argument at a local pub.<br><strong>Key Theme:</strong> Crime</div>
+        </div>
+        
+        <div class="story">
+            <h2>Meghan Markle&#x27;s estranged dad Thomas is charged after Daily Mail reported him to the FBI and new storage unit containing &#x27;photos of him abusing girls&#x27; is found in LA</h2>
+            <div class="story-body"><strong>Source:</strong> Daily Mail UK<br><strong>Summary:</strong> Thomas Markle, the estranged father of the Duchess of Sussex, was arrested in Florida on charges related to illicit material involving minors. Authorities initiated charges following the discovery of evidence in Los Angeles storage units.<br><strong>Key Theme:</strong> Crime</div>
+        </div>
+        
+        <div class="story">
+            <h2>There’s only one way LeBron James’ return to Cleveland could’ve gone worse: ‘Depths of hell’</h2>
+            <div class="story-body"><strong>Source:</strong> New York Post<br><strong>Summary:</strong> NBA star LeBron James struggled significantly during his return game to Cleveland while playing for the Philadelphia 76ers. Following the disappointing loss, James publicly criticized his own performance on the court.<br><strong>Key Theme:</strong> Sports</div>
+        </div>
+        
+        <div class="story">
+            <h2>TV news hourly summary · Nov 7, 12:03 UTC</h2>
+            <div class="story-body"><strong>Source:</strong> Internet Archive TV News (hourly summary)<br><strong>Summary:</strong> A summary of top headlines highlights key political moves, including Donald Trump appointing Stephen Miller as chief of staff and ongoing leadership debates among Senate Democrats. On the international front, Russia launched attacks on Ukraine ahead of planned peace discussions, while the U.S. offered a reward for information regarding Iran&#x27;s nuclear program. Additionally, domestic economic reports noted October job gains alongside market volatility.<br><strong>Key Theme:</strong> World News</div>
+        </div>
+        
+        </main>
+
+        
+        <div class='section-title'>Global &amp; Alternative RSS Feeds</div><div class='segmented-grid'>
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/articles/crp3gg2z171go?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>With Stephen Miller pick, Trump readies for a battle</a></h3>
+                <p>The US president&#x27;s promotion of Miller, a loyal partisan firebrand to be his new chief of staff sets up likely clashes with Congress....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/articles/c68jzzvjgdy9o?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>Paraguay&#x27;s president impeached and under house arrest after bank collapse</a></h3>
+                <p>Santiago Peña was ousted due to a banking crisis which left millions of people unable to access their money....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/articles/c60e0001ve9wo?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>Pope in &#x27;pretty good health&#x27; as he starts Latin America tour</a></h3>
+                <p>Pope Leo travels to Uruguay just three weeks after having surgery for lung cancer....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMiogFBVV95cUxPUVFPc2NPajA0TVFQNEtVb2lEU19xSE93aFFXSWtYckVwU3JsVDR2MXd5azd4X2M3eG13bHlBLWRGUWR3NHNzeFdWdi12VVJZTDQ2THlCSHhkLVNXWHNsRUwxQ1V2RTFjSDd6bEdSYjB0Y1V5cVdYNjRaVWZ4T2R4UnN1NWoxNDZYUlo5dFVFaVJFUV8tQkt2WGdrNDBRSlV5Tmc?oc=5' target='_blank' rel='noopener'>After midterm rout, Vance tries to build his own 2028 brand - Reuters</a></h3>
+                <p>After midterm rout, Vance tries to build his own 2028 brand Reuters...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMixAFBVV95cUxPckRkTENydGpmMGpDbWpfYVhKemxXQnRLcWVIU05MdHZMS2Nma2Z3UlRONVpMWkg0bFh2N2J5STdSRVRPVUZNdWQ3eTRGWVZoTm90LW9acDZaOUNLYU0xQ2FubkxtbGVDc3NidWtNbkFMM0VOQ1BPS2Nfa2ptLXBGN1NKQXlIZ0F6RE5lSWtjb0dQZHFva3N5SzM2WWZnNWIwOXZlZDhTekpIMy1pQnBpZFpQbFk4VkxOc05IWU40NFR6RS0z?oc=5' target='_blank' rel='noopener'>Russian diplomats and military officials to join talks with US and Ukraine, Kremlin says - Reuters</a></h3>
+                <p>Russian diplomats and military officials to join talks with US and Ukraine, Kremlin says Reuters...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMisgFBVV95cUxOVkpxUWQ1cUFXSEJhbTI5OFNqVGZNOUFIb3ZoY3lZWmdEUHNYMHYwWXowdnNQZ1dlcWJ3dDF5engyV0VaaG1XUEVia2oyTjNJTEgwYUI3VHhCaml6RTdZMEQwbm9YZ1BTcUZjekdhOHhwQ2gwcFI5YkpJcTV2YUQ3WjVWampRdS1SZk5JQXA0WW04OV9ZMzNQcklSTDhIS2IxT3I4OE14VkRBN0huQzhmdktR?oc=5' target='_blank' rel='noopener'>Russia says it hit targets in and around Kyiv in massive overnight strike - Reuters</a></h3>
+                <p>Russia says it hit targets in and around Kyiv in massive overnight strike Reuters...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/news/article-16270227/Pictured-husband-wife-smeared-faeces-mouth.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>Pictured: Husband whose wife smeared her own faeces in his mouth at their £1million farmhouse after a row &#x27;over him talking s***&#x27;</a></h3>
+                <p>Alison Moore carried out a sickening &#x27;pre-meditated&#x27; attack on her partner Rob for &#x27;not standing up for her&#x27; when staff refused to serve her at a pub, a court heard....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/news/article-16269367/Meghan-Markle-father-Thomas-arrest-child-porn.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>Meghan Markle&#x27;s estranged dad Thomas is charged after Daily Mail reported him to the FBI and new storage unit containing &#x27;photos of him abusing girls&#x27; is found in LA</a></h3>
+                <p>The Duchess of Sussex&#x27;s estranged father Thomas Markle, 82, was arrested in Florida on Friday after his trove of alleged child pornography was discovered in storage units in Los Angeles....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/news/article-16268497/Met-boss-warns-Britain-risks-having-fewer-bobbies-beat-soaring-crime-rates-unless-red-tape-cut-biggest-shake-forces-half-century.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>Police will fail to tackle grooming gangs and organised crime unless &#x27;super forces&#x27; are created, Met chief warns</a></h3>
+                <p>Met Police Commissioner Sir Mark Rowley said replacing the &#x27;bureaucratic, top-heavy spaghetti model&#x27; will result in more &#x27;bobbies on the beat&#x27; and free up resources for the front-l...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>New York Post</div>
+                <h3><a href='https://nypost.com/2026/11/07/sports/theres-only-one-way-lebron-james-return-to-cleveland-with-76ers-couldve-gone-worse/' target='_blank' rel='noopener'>There’s only one way LeBron James’ return to Cleveland could’ve gone worse: ‘Depths of hell’</a></h3>
+                <p>&quot;I know I damn sure wasn&#x27;t good at all,&quot; James said....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>New York Post</div>
+                <h3><a href='https://nypost.com/2026/11/07/world-news/russia-pounds-power-facilities-around-kyiv-damages-major-bridge/' target='_blank' rel='noopener'>Russia pounds power facilities around Kyiv, damages major bridge</a></h3>
+                <p>Explosions rocked the city as Russia fired multiple waves of ballistic missiles....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>New York Post</div>
+                <h3><a href='https://nypost.com/2026/11/07/us-news/florida-teen-morons-beat-disabled-man-in-sickening-40-minute-attack-at-bonfire-party/' target='_blank' rel='noopener'>Four Florida teen ‘morons’ beat disabled man in sickening 40-minute attack at bonfire party</a></h3>
+                <p>&quot;These morons decide it’s a good idea to beat somebody down who can’t defend themselves,” Sheriff Mike Chitwood said....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/blue-state-voters-deliver-clear-verdict-girls-womens/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=blue-state-voters-deliver-clear-verdict-girls-womens' target='_blank' rel='noopener'>Blue-State Voters Deliver a Clear Verdict for Girls’ and Women’s Sports</a></h3>
+                <p>Voters in Democratic-leaning Colorado and Washington approved sex-based eligibility rules for girls’ and women’s sports, delivering a significant post-election result that crossed familiar partisan li...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/georgia-house-race-takes-stunning-turn-after-officials/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=georgia-house-race-takes-stunning-turn-after-officials' target='_blank' rel='noopener'>Georgia House Race Takes Stunning Turn After Officials Find What Was Missing</a></h3>
+                <p>An overlooked memory card reversed the unofficial leader in Georgia House District 154 and put the chamber&#x27;s razor-thin balance back in focus....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/trump-treasury-drops-hammer-eightnadian-money-firms/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=trump-treasury-drops-hammer-eightnadian-money-firms' target='_blank' rel='noopener'>Trump Treasury Drops Hammer On Eight Canadian Money Firms Accused Of Helping Iran</a></h3>
+                <p>Treasury targets eight Canadian money firms accused of helping Iran move digital assets, with alleged links to a major narcotics network....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/11/06/stephen-miller-to-take-over-as-white-house-chief-of-staff/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=stephen-miller-to-take-over-as-white-house-chief-of-staff' target='_blank' rel='noopener'>Stephen Miller To Take Over As White House Chief Of Staff</a></h3>
+                <p>Miller has demonstrated laser focus on mass deportations and how government policy needs to benefit the American people....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/11/06/neocon-marc-thiessen-denies-reality-and-lies-about-j-d-vance/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=neocon-marc-thiessen-denies-reality-and-lies-about-j-d-vance' target='_blank' rel='noopener'>Neocon Marc Thiessen Denies Reality And Lies About J.D. Vance</a></h3>
+                <p>That Washington Post content creator Marc Thiessen is out here lying wouldn’t be worth commenting on if not for his reportedly being one of the main people who advised President Trump that striking Ir...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/11/06/doj-initiates-criminal-probe-into-supreme-court-dobbs-leak-report/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=doj-initiates-criminal-probe-into-supreme-court-dobbs-leak-report' target='_blank' rel='noopener'>DOJ Initiates Criminal Probe Into Supreme Court Dobbs Leak: Report</a></h3>
+                <p>The Department of Justice is pursuing a criminal investigation into the individual(s) responsible for leaking the Supreme Court’s Dobbs decision, according to a new report. The New York Times first re...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/columns/opinion/who-rules-the-ruling-class' target='_blank' rel='noopener'>Who rules the ruling class?</a></h3>
+                <p>The results of the midterm elections are clear; their meaning is not. The blue tsunami apparently has not budged either of the dominant intellectual factions on the right. The so-called “doomers” see ...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/news/church-trafficking-sex-abuse-oklahoma' target='_blank' rel='noopener'>Pastor sexually assaulted and trafficked women and children of his Oklahoma church</a></h3>
+                <p>An Oklahoma pastor claimed to be a part of the notorious MS-13 criminal gang in order to coerce members of his flock to work for him without pay. Elmer Baca Flores, 41, told his church members to quit...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/shows/pat-gray-unleashed/this-two-time-world-series-champion-is-exactly-the-kind-of-immigrant-conservatives-want-to-see' target='_blank' rel='noopener'>This two-time World Series champion is exactly the kind of immigrant conservatives want to see</a></h3>
+                <p>Conservatives get smeared as anti-immigrant, but the truth is simple: They want people who come here legally, respect the process, and actually want to become Americans. Miguel Rojas is exactly that i...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/ed-morrissey/2026/11/06/fridays-final-word-n3820742' target='_blank' rel='noopener'>Friday&#x27;s Final Word</a></h3>
+                <p>Friday&#x27;s Final Word...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/john-s-2/2026/11/06/kenyan-cult-leader-sentenced-to-200-years-n3820758' target='_blank' rel='noopener'>Kenyan Cult Leader Sentenced to 200 Years</a></h3>
+                <p>Kenyan Cult Leader Sentenced to 200 Years...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/tree-hugging-sister/2026/11/06/poland-simmering-away-n3820756' target='_blank' rel='noopener'>Poland Simmering Away</a></h3>
+                <p>Poland Simmering Away...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Judicial Watch</div>
+                <h3><a href='https://www.judicialwatch.org/investigates-jack-smith-teams-security-violations/' target='_blank' rel='noopener'>Judicial Watch Investigates Jack Smith Team’s Security Violations</a></h3>
+                <p>Judicial Watch Sues Over Jack Smith Team’s Security Incidents Judicial Watch Sues for FBI’s ‘Rosetta Stone’ Report on…...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Judicial Watch</div>
+                <h3><a href='https://www.judicialwatch.org/sues-defense-dept-covid-19-origins-investigation-records/' target='_blank' rel='noopener'>Judicial Watch Sues Defense Dept. for Covid-19 Origins Investigation Records</a></h3>
+                <p>(Washington, DC) – Judicial Watch announced today that it filed a Freedom of Information Act (FOIA) lawsuit against…...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Judicial Watch</div>
+                <h3><a href='https://www.judicialwatch.org/sues-justice-records-jack-smith-teams-classified-information-security-incidents/' target='_blank' rel='noopener'>Judicial Watch Sues Justice Dept. for Records on Jack Smith Team’s Classified-Information Security I...</a></h3>
+                <p>(Washington, DC) – Judicial Watch announced today that it filed a Freedom of Information Act (FOIA) lawsuit against…...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/11/john-thune-and-donald-trump-share-some-blame-for-the-election/' target='_blank' rel='noopener'>John Thune (A Lot) And Donald Trump (Somewhat) Drove Tuesday’s Outcome</a></h3>
+                <p>Photo Credit: AI for American Thinker By Ted Noel Yes, there’s a lot of blame to go around, with John Thune bearing much of it, but Trump is not free of responsibility....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/11/how-moral-relativism-ushers-in-moral-repression/' target='_blank' rel='noopener'>How Moral Relativism Ushers in Moral Repression</a></h3>
+                <p>Photo Credit: Image: Abdul El-Sayed. Credit: Conlan Houston via Flickr , CC BY-SA 4.0 . Conlan Houston By Jeannie DeAngelis Pro-abortion feminists who vote militant Muslims into power shoot themselves...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/11/a-requiem-for-the-midterms/' target='_blank' rel='noopener'>A Requiem for the Midterms</a></h3>
+                <p>Photo Credit: Image via Picryl . Picryl By J.B. Shurk Defeats often turn into victories....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMivgFBVV95cUxPQU5iSzBNbmJFY0pmM25KUXh0WHZLWVBmSkRlbHVWalNnWFFxY0tLNGxtMVNmYkpwWTQ0bkdzaDRQb0pjQ3NYaXhSV3c5LTA5QnE3cXl1U3AtLWlhUllLWEpqMGY0TXVBT05jU2w1cUlRMFoyaWh0SnRSZ09CMEEyQ2hqRk5oNExwUHJTQzYtQjlwQlVtZUdTYXNJZ1VxQS1feHd3ZG5vU0ZWc1VmMVd4dFAwRl8tVm83REdjMjJn?oc=5' target='_blank' rel='noopener'>US Economy Adds 165,000 New Jobs in October, Unemployment Rate Dips to 4.1 Percent - The Epoch Times</a></h3>
+                <p>US Economy Adds 165,000 New Jobs in October, Unemployment Rate Dips to 4.1 Percent The Epoch Times...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMifEFVX3lxTE5sQ3M3ZTFkX19VVEFHSHNEX1BmTmZTZzlkemFnVUZfVjBja010TlFJTmIzaU1IU1BlZVRXRU1vemVIREhQeTNpZktjdEFjeGVCS0R3cXRrYVdkZ3VGRXBteUNHeTZ2UklaaWlpTnk5dEJSbF9wOWJvMFhRVjc?oc=5' target='_blank' rel='noopener'>Spot the Difference Daily- Play Now online &amp; 100% Free - The Epoch Times</a></h3>
+                <p>Spot the Difference Daily- Play Now online &amp; 100% Free The Epoch Times...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMiREFVX3lxTFBSU2dZLXZaX21HbzlKWGxkWnM1eEQwNEZ3VE4xUkJFWFJWSkJ3d0pSY2c4MTBKZXctUXdyWWdicWJQaklP?oc=5' target='_blank' rel='noopener'>The Epoch Times | Breaking News, Latest News, World News and Videos - The Epoch Times</a></h3>
+                <p>The Epoch Times | Breaking News, Latest News, World News and Videos The Epoch Times...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Internet Archive TV News (hourly summary)</div>
+                <h3><a href='https://mastodon.archive.org/@tv/117575056401385597' target='_blank' rel='noopener'>TV news hourly summary · Nov 7, 12:03 UTC</a></h3>
+                <p>Trump named Stephen Miller to replace Susie Wiles as chief of staff and backed RNC Chair Joe Gruters. Democrats debated leadership and unity as newly elected senators questioned support for Chuck Schu...</p>
+            </div>
+            </div>
+
+        <footer>
+            Automated Segmented Pipeline powered by HTML Scrapers, 11 Global RSS Feeds &amp; Google Gemini AI &bull; 2026-11-07
+        </footer>
+    </div>
+</body>
+</html>

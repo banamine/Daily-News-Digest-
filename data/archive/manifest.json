@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-11-07",
+    "timestamp": "2026-11-07T12:25:33.671135+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "With Stephen Miller pick, Trump readies for a battle",
+      "Paraguay's president impeached and under house arrest after bank collapse",
+      "After midterm rout, Vance tries to build his own 2028 brand - Reuters",
+      "Russian diplomats and military officials to join talks with US and Ukraine, Kremlin says - Reuters",
+      "Pictured: Husband whose wife smeared her own faeces in his mouth at their \u00a31million farmhouse after a row 'over him talking s***'"
+    ],
+    "archive_html_path": "data/archive/2026-11-07/index.html",
+    "data_json_path": "data/archive/2026-11-07/data.json"
+  },
+  {
     "date": "2026-11-06",
     "timestamp": "2026-11-06T13:43:56.053494+00:00",
     "stories_count": 8,
