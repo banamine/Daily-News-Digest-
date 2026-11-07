@@ -1,8 +1,8 @@
 {
-  "last_updated": "2026-11-07T00:08:57.016619+00:00",
+  "last_updated": "2026-11-07T06:09:49.871966+00:00",
   "source": "https://www.alexjoneslive.com/",
   "date": "2026-11-07",
-  "stories_hash": "c21556874c5464fa1aee249b8ab3ff4a",
+  "stories_hash": "d51b5e1f9b5ab255ea158450a3030e77",
   "stories_count": 8,
   "scraped_articles_count": 0,
   "rss_articles_count": 34,
@@ -26,7 +26,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/fdde/live/9036f7e0-da01-11f1-93e1-3b657b665bcf.jpg",
-      "scraped_at": "2026-11-07T00:08:53.218698+00:00"
+      "scraped_at": "2026-11-07T06:09:45.785046+00:00"
     },
     {
       "id": "9d3bbd61ffd4",
@@ -46,7 +46,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/613a/live/900577b0-d9ed-11f1-b441-2b33b063138f.png",
-      "scraped_at": "2026-11-07T00:08:53.218746+00:00"
+      "scraped_at": "2026-11-07T06:09:45.785090+00:00"
     },
     {
       "id": "23c0756d7b8f",
@@ -66,18 +66,18 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/5740/live/92c81290-d9cb-11f1-bb8e-efaa31738708.jpg",
-      "scraped_at": "2026-11-07T00:08:53.218779+00:00"
+      "scraped_at": "2026-11-07T06:09:45.785122+00:00"
     },
     {
-      "id": "77682ec15a4a",
-      "headline": "OpenAI secures $11 billion funding at $1.25 trillion valuation, Bloomberg News reports - Reuters",
-      "title": "OpenAI secures $11 billion funding at $1.25 trillion valuation, Bloomberg News reports - Reuters",
-      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNdlpNRm5XVy11c3hLY0NRdjh2T3VmOE1LOWQ2LXlvcFhmZlFJYkQya3N3QWxud2UteUZpWVlCTXVHUXZZTjIwRlVQaUhqOGhyM2lDaDJTSGcxMnE5MzhOZ1NHYlJIc1p5bHRxaVZjZDd4MFY2RWMtRkNlYkhSVkdpMlRBWi1PYUNmZGNydXZnOTZFMTFoOHR0azBpUlU1aHpVdFA4dlhCV0dDNm91VE0xSVg0bXZhcF9jaVAzcXYzaldOdw?oc=5",
-      "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNdlpNRm5XVy11c3hLY0NRdjh2T3VmOE1LOWQ2LXlvcFhmZlFJYkQya3N3QWxud2UteUZpWVlCTXVHUXZZTjIwRlVQaUhqOGhyM2lDaDJTSGcxMnE5MzhOZ1NHYlJIc1p5bHRxaVZjZDd4MFY2RWMtRkNlYkhSVkdpMlRBWi1PYUNmZGNydXZnOTZFMTFoOHR0azBpUlU1aHpVdFA4dlhCV0dDNm91VE0xSVg0bXZhcF9jaVAzcXYzaldOdw?oc=5",
-      "excerpt": "OpenAI secures $11 billion funding at $1.25 trillion valuation, Bloomberg News reports Reuters",
-      "summary": "OpenAI secures $11 billion funding at $1.25 trillion valuation, Bloomberg News reports Reuters",
-      "relative_time": "Fri, 06 Nov 2026 21:31:47 GMT",
-      "published": "Fri, 06 Nov 2026 21:31:47 GMT",
+      "id": "d88e29c6dfee",
+      "headline": "Google executive Donald Harrison resigns from SpaceX board - Reuters",
+      "title": "Google executive Donald Harrison resigns from SpaceX board - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPaFBQUUZob254UUQxOGhmLUd6Vm1xNThSU2RNTXVib3Rja0R3OVdMbkR4MjR0UDY4ZWRUMkZab1JaZmVaZmllSW96SkR1WmVFb1dXblU4dDg1Y05mUDlPUmlpTlI3VjBxcFpFbVIweUNhRlNxeE5ZLU93VDJzVmE4Y3c5VTByV1poaVFfRG5CUy0wNWlFeUZ6bnA3bmZhek1VOENqdWFyQ0poUzIxU016SUN3?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPaFBQUUZob254UUQxOGhmLUd6Vm1xNThSU2RNTXVib3Rja0R3OVdMbkR4MjR0UDY4ZWRUMkZab1JaZmVaZmllSW96SkR1WmVFb1dXblU4dDg1Y05mUDlPUmlpTlI3VjBxcFpFbVIweUNhRlNxeE5ZLU93VDJzVmE4Y3c5VTByV1poaVFfRG5CUy0wNWlFeUZ6bnA3bmZhek1VOENqdWFyQ0poUzIxU016SUN3?oc=5",
+      "excerpt": "Google executive Donald Harrison resigns from SpaceX board Reuters",
+      "summary": "Google executive Donald Harrison resigns from SpaceX board Reuters",
+      "relative_time": "Fri, 06 Nov 2026 23:48:00 GMT",
+      "published": "Fri, 06 Nov 2026 23:48:00 GMT",
       "author": "Reuters Top News",
       "feed": "Reuters Top News",
       "feedName": "Reuters Top News",
@@ -86,18 +86,18 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-11-07T00:08:53.692090+00:00"
+      "scraped_at": "2026-11-07T06:09:45.943299+00:00"
     },
     {
-      "id": "dfbbb4372698",
-      "headline": "Google acquires Wyoming data center site from AI infrastructure firm Crusoe - Reuters",
-      "title": "Google acquires Wyoming data center site from AI infrastructure firm Crusoe - Reuters",
-      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQUmdYV3dXUTRhWEJ2UTJxUXBMMmxVX292SEdXZlVJNmJIa0lzNVNRT0J3QjJhc0VnN2lYUnQybkNkd0JsRV8xUTc1Qk1nZllyQUx0RnJTTENFVEhJdXUyYW9SQXVodjFLT1RmSDF3UE1PODFDRnkzVnhkaEpVSDdwSDJRV2Y5dDZOTXF2cUoxUWlVVnBXWklYRjNpNGp0N2x1N0I1bFgtMFl3eldkdHZxUUlZRVdzQQ?oc=5",
-      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQUmdYV3dXUTRhWEJ2UTJxUXBMMmxVX292SEdXZlVJNmJIa0lzNVNRT0J3QjJhc0VnN2lYUnQybkNkd0JsRV8xUTc1Qk1nZllyQUx0RnJTTENFVEhJdXUyYW9SQXVodjFLT1RmSDF3UE1PODFDRnkzVnhkaEpVSDdwSDJRV2Y5dDZOTXF2cUoxUWlVVnBXWklYRjNpNGp0N2x1N0I1bFgtMFl3eldkdHZxUUlZRVdzQQ?oc=5",
-      "excerpt": "Google acquires Wyoming data center site from AI infrastructure firm Crusoe Reuters",
-      "summary": "Google acquires Wyoming data center site from AI infrastructure firm Crusoe Reuters",
-      "relative_time": "Fri, 06 Nov 2026 20:03:34 GMT",
-      "published": "Fri, 06 Nov 2026 20:03:34 GMT",
+      "id": "25517a15fe7e",
+      "headline": "Haiti PM says gang leader Mathias Saintil is dead - Reuters",
+      "title": "Haiti PM says gang leader Mathias Saintil is dead - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOUkdOZEEtMTQ5NzlLdWRCRUlzdVFsWkFoR0xPOTdIV2szN1hTWmNLQTBHejRjVUI0YTU1bDJpUXdONl9VSlQtZU9iLVRTWFhEbi1RLTZuNEJGQTFxZ1JXWVBBRk43Rjl0VXJrTnF5MXNONkM2TFRYRUM3QXVqTVBOR0R0a1o4NkNsZDhUVVNYTzRkTWNvYm4yRFpEWmVfUQ?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxOUkdOZEEtMTQ5NzlLdWRCRUlzdVFsWkFoR0xPOTdIV2szN1hTWmNLQTBHejRjVUI0YTU1bDJpUXdONl9VSlQtZU9iLVRTWFhEbi1RLTZuNEJGQTFxZ1JXWVBBRk43Rjl0VXJrTnF5MXNONkM2TFRYRUM3QXVqTVBOR0R0a1o4NkNsZDhUVVNYTzRkTWNvYm4yRFpEWmVfUQ?oc=5",
+      "excerpt": "Haiti PM says gang leader Mathias Saintil is dead Reuters",
+      "summary": "Haiti PM says gang leader Mathias Saintil is dead Reuters",
+      "relative_time": "Sat, 07 Nov 2026 00:27:00 GMT",
+      "published": "Sat, 07 Nov 2026 00:27:00 GMT",
       "author": "Reuters Top News",
       "feed": "Reuters Top News",
       "feedName": "Reuters Top News",
@@ -106,18 +106,18 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-11-07T00:08:53.692146+00:00"
+      "scraped_at": "2026-11-07T06:09:45.943344+00:00"
     },
     {
-      "id": "39a139046c6c",
-      "headline": "US Treasury sanctions Canadian money services firms over Iran-related transactions - Reuters",
-      "title": "US Treasury sanctions Canadian money services firms over Iran-related transactions - Reuters",
-      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQanB1RlNfclNuTUN5SEpJTjFWWUM1UVR2V2xLclNnTjhfNnp0VjNGZE5qeDBiekZXOFpLR2hOTnFud1ZKYlgzaFF6dGpwbkdENXF5VldQSEl0MEE1X0dHbWMyWHFvOU82WC01SjNSamFuSFQtY1M4VHJMN1VEMzlyQnN3UkotaXhiTm4taGdud2w5Wnk0cmtVQlp1MjRvNEJreERfdzZZbmtRQWo5d3NTYnVpOThYRjUwU3BJSGRFSEE?oc=5",
-      "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQanB1RlNfclNuTUN5SEpJTjFWWUM1UVR2V2xLclNnTjhfNnp0VjNGZE5qeDBiekZXOFpLR2hOTnFud1ZKYlgzaFF6dGpwbkdENXF5VldQSEl0MEE1X0dHbWMyWHFvOU82WC01SjNSamFuSFQtY1M4VHJMN1VEMzlyQnN3UkotaXhiTm4taGdud2w5Wnk0cmtVQlp1MjRvNEJreERfdzZZbmtRQWo5d3NTYnVpOThYRjUwU3BJSGRFSEE?oc=5",
-      "excerpt": "US Treasury sanctions Canadian money services firms over Iran-related transactions Reuters",
-      "summary": "US Treasury sanctions Canadian money services firms over Iran-related transactions Reuters",
-      "relative_time": "Fri, 06 Nov 2026 21:02:22 GMT",
-      "published": "Fri, 06 Nov 2026 21:02:22 GMT",
+      "id": "2266ff034664",
+      "headline": "Two missiles strike Iran's Qeshm Island, Tasnim news agency says - Reuters",
+      "title": "Two missiles strike Iran's Qeshm Island, Tasnim news agency says - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNSVljNk9VX0xKSElKQjgwMVhnLVpzdmZMTE9YMW5Eb0FpdFpkb0tkczBNZkh1eWFyLU5VanpKU3VGd21EUk52bGc3ZDN4UVd2UFhHM3VReWVUa2kxTVQ3TlJ5UkRFbmdYQzAxTVF0bldhS1BIYjhIOWx4RVU3UnZiMkRORW5nUHJERUQzeTdoSE1kRzlmYVduLVhUbzkzMVFNX1pqb0I2YXZpT1FJRW00alBCWXQydmc?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNSVljNk9VX0xKSElKQjgwMVhnLVpzdmZMTE9YMW5Eb0FpdFpkb0tkczBNZkh1eWFyLU5VanpKU3VGd21EUk52bGc3ZDN4UVd2UFhHM3VReWVUa2kxTVQ3TlJ5UkRFbmdYQzAxTVF0bldhS1BIYjhIOWx4RVU3UnZiMkRORW5nUHJERUQzeTdoSE1kRzlmYVduLVhUbzkzMVFNX1pqb0I2YXZpT1FJRW00alBCWXQydmc?oc=5",
+      "excerpt": "Two missiles strike Iran's Qeshm Island, Tasnim news agency says Reuters",
+      "summary": "Two missiles strike Iran's Qeshm Island, Tasnim news agency says Reuters",
+      "relative_time": "Fri, 06 Nov 2026 23:04:12 GMT",
+      "published": "Fri, 06 Nov 2026 23:04:12 GMT",
       "author": "Reuters Top News",
       "feed": "Reuters Top News",
       "feedName": "Reuters Top News",
@@ -126,7 +126,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-11-07T00:08:53.692188+00:00"
+      "scraped_at": "2026-11-07T06:09:45.943384+00:00"
     },
     {
       "id": "50746ee7941b",
@@ -146,7 +146,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://i.dailymail.com/1s/2026/11/06/17/112353731-0-image-a-41_1793987059312.jpg",
-      "scraped_at": "2026-11-07T00:08:54.306319+00:00"
+      "scraped_at": "2026-11-07T06:09:46.265984+00:00"
     },
     {
       "id": "546cb0e37832",
@@ -166,7 +166,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://i.dailymail.com/1s/2026/11/05/18/112329589-0-image-a-4_1793902090769.jpg",
-      "scraped_at": "2026-11-07T00:08:54.306388+00:00"
+      "scraped_at": "2026-11-07T06:09:46.266048+00:00"
     },
     {
       "id": "80778abed3cf",
@@ -186,78 +186,78 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://i.dailymail.com/1s/2026/11/06/13/112346719-0-image-a-8_1793971717229.jpg",
-      "scraped_at": "2026-11-07T00:08:54.306438+00:00"
+      "scraped_at": "2026-11-07T06:09:46.266097+00:00"
     },
     {
-      "id": "056536498cc4",
-      "headline": "Kenyon Sadiq eager for Jets matchup with Travis Kelce as rookie navigates his own way: \u2018Paved the path\u2019",
-      "title": "Kenyon Sadiq eager for Jets matchup with Travis Kelce as rookie navigates his own way: \u2018Paved the path\u2019",
-      "url": "https://nypost.com/2026/11/06/sports/kenyon-sadiq-eager-for-jets-matchup-with-travis-kelce/",
-      "link": "https://nypost.com/2026/11/06/sports/kenyon-sadiq-eager-for-jets-matchup-with-travis-kelce/",
-      "excerpt": "Sadiq said he was introduced to Kelce while on a predraft visit with the Chiefs before the Jets snagged him 13 picks before Kansas City\u2019s selection.",
-      "summary": "Sadiq said he was introduced to Kelce while on a predraft visit with the Chiefs before the Jets snagged him 13 picks before Kansas City\u2019s selection.",
-      "relative_time": "Fri, 06 Nov 2026 19:08:27 -0500",
-      "published": "Fri, 06 Nov 2026 19:08:27 -0500",
-      "author": "Dan Martin",
+      "id": "9d536b488dcd",
+      "headline": "China confirms discussions underway on historic Xi-Trump-Putin meeting",
+      "title": "China confirms discussions underway on historic Xi-Trump-Putin meeting",
+      "url": "https://nypost.com/2026/11/07/world-news/china-confirms-discussions-underway-on-historic-xi-trump-putin-meeting/",
+      "link": "https://nypost.com/2026/11/07/world-news/china-confirms-discussions-underway-on-historic-xi-trump-putin-meeting/",
+      "excerpt": "Beijing revealed for the first time that it is discussing a historic meeting between Chinese leader Xi Jinping, President Trump and Russian President Vladimir Putin.",
+      "summary": "Beijing revealed for the first time that it is discussing a historic meeting between Chinese leader Xi Jinping, President Trump and Russian President Vladimir Putin.",
+      "relative_time": "Sat, 07 Nov 2026 00:54:33 -0500",
+      "published": "Sat, 07 Nov 2026 00:54:33 -0500",
+      "author": "Associated Press",
       "feed": "New York Post",
       "feedName": "New York Post",
       "feedId": "f35f2eec037f",
       "category": "Global",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2F16-reacts-making-catch-third-147236142.jpg?quality%3D90%26strip%3Dall",
-      "scraped_at": "2026-11-07T00:08:54.474240+00:00"
+      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fu-s-president-donald-j-147831287.jpg?w%3D1024",
+      "scraped_at": "2026-11-07T06:09:47.260058+00:00"
     },
     {
-      "id": "a012befbbf21",
-      "headline": "LA gang \u2018peacemaker\u2019 with lucrative taxpayer-funded contracts busted in alleged murder plot",
-      "title": "LA gang \u2018peacemaker\u2019 with lucrative taxpayer-funded contracts busted in alleged murder plot",
-      "url": "https://nypost.com/2026/11/06/us-news/la-peacemaker-clifford-skipp-townsend-arrested-in-murder-plot/",
-      "link": "https://nypost.com/2026/11/06/us-news/la-peacemaker-clifford-skipp-townsend-arrested-in-murder-plot/",
-      "excerpt": "A famed Los Angeles gang peacemaker \u2013\u2013 and former gangster \u2013\u2013 was busted on suspicion of conspiracy to commit murder.",
-      "summary": "A famed Los Angeles gang peacemaker \u2013\u2013 and former gangster \u2013\u2013 was busted on suspicion of conspiracy to commit murder.",
-      "relative_time": "Fri, 06 Nov 2026 19:05:03 -0500",
-      "published": "Fri, 06 Nov 2026 19:05:03 -0500",
-      "author": "Justin Choi",
+      "id": "09f410b166fd",
+      "headline": "Ousted Paraguayan President Santiago Pe\u00f1a placed under house arrest after bank collapse",
+      "title": "Ousted Paraguayan President Santiago Pe\u00f1a placed under house arrest after bank collapse",
+      "url": "https://nypost.com/2026/11/07/world-news/ousted-paraguayan-president-santiago-pena-placed-under-house-arrest-after-bank-collapse/",
+      "link": "https://nypost.com/2026/11/07/world-news/ousted-paraguayan-president-santiago-pena-placed-under-house-arrest-after-bank-collapse/",
+      "excerpt": "Former Paraguayan President Santiago Pe\u00f1a was placed under house arrest after all 44 senators voted to impeach him over the Ueno Bank collapse.",
+      "summary": "Former Paraguayan President Santiago Pe\u00f1a was placed under house arrest after all 44 senators voted to impeach him over the Ueno Bank collapse.",
+      "relative_time": "Sat, 07 Nov 2026 00:47:44 -0500",
+      "published": "Sat, 07 Nov 2026 00:47:44 -0500",
+      "author": "Associated Press",
       "feed": "New York Post",
       "feedName": "New York Post",
       "feedId": "f35f2eec037f",
       "category": "Global",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fla-gang-peacemaker-lucrative-taxpayer-147811486.jpg?w%3D1024",
-      "scraped_at": "2026-11-07T00:08:54.474301+00:00"
+      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fparaguay-president-santiago-pe-speaks-147839127.jpg?w%3D1024",
+      "scraped_at": "2026-11-07T06:09:47.260114+00:00"
     },
     {
-      "id": "833d286a5502",
-      "headline": "Lakers\u2019 new big man accepts JJ Redick\u2019s challenge, takes team to new heights",
-      "title": "Lakers\u2019 new big man accepts JJ Redick\u2019s challenge, takes team to new heights",
-      "url": "https://nypost.com/2026/11/06/sports/lakers-walker-kessler-rebounding/",
-      "link": "https://nypost.com/2026/11/06/sports/lakers-walker-kessler-rebounding/",
-      "excerpt": "Luka Don\u010di\u0107 is dominating headlines with arguably the greatest start in NBA history. But it\u2019s no secret that Walker Kessler\u2019s blue-collar work in the paint is just as essential to the Lakers\u2019 success this season. Before the Lakers played the Clippers on Oct. 28, coach JJ Redick issued a challenge to Kessler after he fell short of grabbing...",
-      "summary": "Luka Don\u010di\u0107 is dominating headlines with arguably the greatest start in NBA history. But it\u2019s no secret that Walker Kessler\u2019s blue-collar work in the paint is just as essential to the Lakers\u2019 success this season. Before the Lakers played the Clippers on Oct. 28, coach JJ Redick issued a challenge to Kessler after he fell short of grabbing...",
-      "relative_time": "Fri, 06 Nov 2026 18:57:42 -0500",
-      "published": "Fri, 06 Nov 2026 18:57:42 -0500",
-      "author": "Melissa Rohlin",
+      "id": "0b5a2cfc775b",
+      "headline": "Woman storms onto Kentucky high school football field during game and strangles player: cops",
+      "title": "Woman storms onto Kentucky high school football field during game and strangles player: cops",
+      "url": "https://nypost.com/2026/11/07/us-news/woman-storms-onto-kentucky-high-school-football-and-strangles-player-cops/",
+      "link": "https://nypost.com/2026/11/07/us-news/woman-storms-onto-kentucky-high-school-football-and-strangles-player-cops/",
+      "excerpt": "Kayla Barrett, 36, was arrested after she allegedly stormed onto a Kentucky high school football field and strangled an underage player during a game.",
+      "summary": "Kayla Barrett, 36, was arrested after she allegedly stormed onto a Kentucky high school football field and strangled an underage player during a game.",
+      "relative_time": "Sat, 07 Nov 2026 00:44:56 -0500",
+      "published": "Sat, 07 Nov 2026 00:44:56 -0500",
+      "author": "Ella Morrison",
       "feed": "New York Post",
       "feedName": "New York Post",
       "feedId": "f35f2eec037f",
       "category": "Global",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Flakers-guard-luka-doncic-defend-147376124.jpg?w%3D1024",
-      "scraped_at": "2026-11-07T00:08:54.474399+00:00"
+      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Flaurel-county-detention-center-147841070.jpg?w%3D1024",
+      "scraped_at": "2026-11-07T06:09:47.260158+00:00"
     },
     {
-      "id": "60f4c090d6dd",
-      "headline": "WATCH: Mike Lindell Says His Team Found the Same Pattern in Texas and Kansas\u2014Then Issues a Dire Warning",
-      "title": "WATCH: Mike Lindell Says His Team Found the Same Pattern in Texas and Kansas\u2014Then Issues a Dire Warning",
-      "url": "https://100percentfedup.com/watch-mike-lindell-says-his-team-found-same/?utm_source=rss&utm_medium=rss&utm_campaign=watch-mike-lindell-says-his-team-found-same",
-      "link": "https://100percentfedup.com/watch-mike-lindell-says-his-team-found-same/?utm_source=rss&utm_medium=rss&utm_campaign=watch-mike-lindell-says-his-team-found-same",
-      "excerpt": "Mike Lindell says his cybersecurity team found matching patterns in the 2026 midterm results and is promising to reveal its evidence Monday night.",
-      "summary": "Mike Lindell says his cybersecurity team found matching patterns in the 2026 midterm results and is promising to reveal its evidence Monday night.",
-      "relative_time": "Fri, 06 Nov 2026 23:25:03 +0000",
-      "published": "Fri, 06 Nov 2026 23:25:03 +0000",
+      "id": "b6e7ecb6fcd1",
+      "headline": "Blue-State Voters Deliver a Clear Verdict for Girls\u2019 and Women\u2019s Sports",
+      "title": "Blue-State Voters Deliver a Clear Verdict for Girls\u2019 and Women\u2019s Sports",
+      "url": "https://100percentfedup.com/blue-state-voters-deliver-clear-verdict-girls-womens/?utm_source=rss&utm_medium=rss&utm_campaign=blue-state-voters-deliver-clear-verdict-girls-womens",
+      "link": "https://100percentfedup.com/blue-state-voters-deliver-clear-verdict-girls-womens/?utm_source=rss&utm_medium=rss&utm_campaign=blue-state-voters-deliver-clear-verdict-girls-womens",
+      "excerpt": "Voters in Democratic-leaning Colorado and Washington approved sex-based eligibility rules for girls\u2019 and women\u2019s sports, delivering a significant post-election result that crossed familiar partisan lines.",
+      "summary": "Voters in Democratic-leaning Colorado and Washington approved sex-based eligibility rules for girls\u2019 and women\u2019s sports, delivering a significant post-election result that crossed familiar partisan lines.",
+      "relative_time": "Sat, 07 Nov 2026 04:35:55 +0000",
+      "published": "Sat, 07 Nov 2026 04:35:55 +0000",
       "author": "Isaac",
       "feed": "100% Fed Up",
       "feedName": "100% Fed Up",
@@ -265,48 +265,48 @@
       "category": "Alternative",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://100percentfedup.com/wp-content/uploads/2026/11/mike-lindell-media-700658.jpg",
-      "scraped_at": "2026-11-07T00:08:54.803924+00:00"
+      "imageUrl": "https://100percentfedup.com/wp-content/uploads/2026/11/riley-gaines-girls-sports-ballot-victory-1600x900-1.jpg",
+      "scraped_at": "2026-11-07T06:09:47.818364+00:00"
     },
     {
-      "id": "7304c23432cf",
-      "headline": "Bessent Puts China On Notice: Honor Trade Commitments \u2018Fully And Immediately\u2019",
-      "title": "Bessent Puts China On Notice: Honor Trade Commitments \u2018Fully And Immediately\u2019",
-      "url": "https://100percentfedup.com/bessent-puts-china-notice-honor-trade-commitments-fully/?utm_source=rss&utm_medium=rss&utm_campaign=bessent-puts-china-notice-honor-trade-commitments-fully",
-      "link": "https://100percentfedup.com/bessent-puts-china-notice-honor-trade-commitments-fully/?utm_source=rss&utm_medium=rss&utm_campaign=bessent-puts-china-notice-honor-trade-commitments-fully",
-      "excerpt": "Treasury Secretary Scott Bessent and U.S. Trade Representative Jamieson Greer are demanding concrete Chinese action on agriculture, rare earths, and critical minerals, with American jobs, supply chains, and national security on the line.",
-      "summary": "Treasury Secretary Scott Bessent and U.S. Trade Representative Jamieson Greer are demanding concrete Chinese action on agriculture, rare earths, and critical minerals, with American jobs, supply chains, and national security on the line.",
-      "relative_time": "Fri, 06 Nov 2026 22:50:54 +0000",
-      "published": "Fri, 06 Nov 2026 22:50:54 +0000",
-      "author": "Isaac",
+      "id": "cf159392a388",
+      "headline": "Georgia House Race Takes Stunning Turn After Officials Find What Was Missing",
+      "title": "Georgia House Race Takes Stunning Turn After Officials Find What Was Missing",
+      "url": "https://100percentfedup.com/georgia-house-race-takes-stunning-turn-after-officials/?utm_source=rss&utm_medium=rss&utm_campaign=georgia-house-race-takes-stunning-turn-after-officials",
+      "link": "https://100percentfedup.com/georgia-house-race-takes-stunning-turn-after-officials/?utm_source=rss&utm_medium=rss&utm_campaign=georgia-house-race-takes-stunning-turn-after-officials",
+      "excerpt": "An overlooked memory card reversed the unofficial leader in Georgia House District 154 and put the chamber's razor-thin balance back in focus.",
+      "summary": "An overlooked memory card reversed the unofficial leader in Georgia House District 154 and put the chamber's razor-thin balance back in focus.",
+      "relative_time": "Sat, 07 Nov 2026 03:55:03 +0000",
+      "published": "Sat, 07 Nov 2026 03:55:03 +0000",
+      "author": "Jack",
       "feed": "100% Fed Up",
       "feedName": "100% Fed Up",
       "feedId": "fa340e6e9ab1",
       "category": "Alternative",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://100percentfedup.com/wp-content/uploads/2026/11/scott-bessent-bank-of-america-enforcement.jpg",
-      "scraped_at": "2026-11-07T00:08:54.804001+00:00"
+      "imageUrl": "https://100percentfedup.com/wp-content/uploads/2026/11/brad-raffensperger-wltr-featured.jpg",
+      "scraped_at": "2026-11-07T06:09:47.818424+00:00"
     },
     {
-      "id": "40585d486c8d",
-      "headline": "Iran Sends President Trump A Nuclear Proposal, But There Is A Seven-Demand Catch",
-      "title": "Iran Sends President Trump A Nuclear Proposal, But There Is A Seven-Demand Catch",
-      "url": "https://100percentfedup.com/iran-sends-president-trump-nuclear-proposal-there-is/?utm_source=rss&utm_medium=rss&utm_campaign=iran-sends-president-trump-nuclear-proposal-there-is",
-      "link": "https://100percentfedup.com/iran-sends-president-trump-nuclear-proposal-there-is/?utm_source=rss&utm_medium=rss&utm_campaign=iran-sends-president-trump-nuclear-proposal-there-is",
-      "excerpt": "Iran has sent the Trump administration a nuclear proposal through Qatar, but Tehran says Washington must first satisfy seven major demands.",
-      "summary": "Iran has sent the Trump administration a nuclear proposal through Qatar, but Tehran says Washington must first satisfy seven major demands.",
-      "relative_time": "Fri, 06 Nov 2026 21:36:02 +0000",
-      "published": "Fri, 06 Nov 2026 21:36:02 +0000",
-      "author": "Isaac",
+      "id": "9e3919c9cfb8",
+      "headline": "Trump Treasury Drops Hammer On Eight Canadian Money Firms Accused Of Helping Iran",
+      "title": "Trump Treasury Drops Hammer On Eight Canadian Money Firms Accused Of Helping Iran",
+      "url": "https://100percentfedup.com/trump-treasury-drops-hammer-eightnadian-money-firms/?utm_source=rss&utm_medium=rss&utm_campaign=trump-treasury-drops-hammer-eightnadian-money-firms",
+      "link": "https://100percentfedup.com/trump-treasury-drops-hammer-eightnadian-money-firms/?utm_source=rss&utm_medium=rss&utm_campaign=trump-treasury-drops-hammer-eightnadian-money-firms",
+      "excerpt": "Treasury targets eight Canadian money firms accused of helping Iran move digital assets, with alleged links to a major narcotics network.",
+      "summary": "Treasury targets eight Canadian money firms accused of helping Iran move digital assets, with alleged links to a major narcotics network.",
+      "relative_time": "Sat, 07 Nov 2026 03:35:54 +0000",
+      "published": "Sat, 07 Nov 2026 03:35:54 +0000",
+      "author": "Jack",
       "feed": "100% Fed Up",
       "feedName": "100% Fed Up",
       "feedId": "fa340e6e9ab1",
       "category": "Alternative",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://100percentfedup.com/wp-content/uploads/2026/11/president-trump-iran-proposal-1600x900-1.png",
-      "scraped_at": "2026-11-07T00:08:54.804073+00:00"
+      "imageUrl": "https://100percentfedup.com/wp-content/uploads/2026/11/scott-bessent-treasury-1600x900-1.jpg",
+      "scraped_at": "2026-11-07T06:09:47.818472+00:00"
     },
     {
       "id": "b4be178410f3",
@@ -326,7 +326,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://thefederalist.com/wp-content/uploads/2026/11/IMG_3807-1200x675.jpg",
-      "scraped_at": "2026-11-07T00:08:54.921497+00:00"
+      "scraped_at": "2026-11-07T06:09:47.961191+00:00"
     },
     {
       "id": "9d16d9bedec9",
@@ -346,7 +346,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://thefederalist.com/wp-content/uploads/2026/11/Marc-Thiessen-1-1200x675.png",
-      "scraped_at": "2026-11-07T00:08:54.921590+00:00"
+      "scraped_at": "2026-11-07T06:09:47.961276+00:00"
     },
     {
       "id": "9fc16dd7b2eb",
@@ -366,7 +366,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://thefederalist.com/wp-content/uploads/2026/11/SCOTUS-1-1200x675.jpg",
-      "scraped_at": "2026-11-07T00:08:54.921670+00:00"
+      "scraped_at": "2026-11-07T06:09:47.961354+00:00"
     },
     {
       "id": "3522dd809676",
@@ -386,7 +386,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://www.theblaze.com/media-library/hasan-piker-says-democrats-must-do-the-unthinkable-to-keep-the-anti-fascist-coalition-that-won-the-election.jpg?id=68619002&width=980",
-      "scraped_at": "2026-11-07T00:08:55.127965+00:00"
+      "scraped_at": "2026-11-07T06:09:48.220659+00:00"
     },
     {
       "id": "62c19e53903c",
@@ -406,7 +406,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://www.theblaze.com/media-library/double-win-colorado-bans-gender-surgeries-for-minors-protects-girls-sports.png?id=68538721&width=980",
-      "scraped_at": "2026-11-07T00:08:55.128586+00:00"
+      "scraped_at": "2026-11-07T06:09:48.221161+00:00"
     },
     {
       "id": "151291cf259b",
@@ -426,18 +426,18 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://www.theblaze.com/media-library/image.jpg?id=68616356&width=980",
-      "scraped_at": "2026-11-07T00:08:55.128870+00:00"
+      "scraped_at": "2026-11-07T06:09:48.221431+00:00"
     },
     {
-      "id": "6ef1b692eb46",
-      "headline": "Ilhan Omar: Untouchable With Democrats Back in Power",
-      "title": "Ilhan Omar: Untouchable With Democrats Back in Power",
-      "url": "https://hotair.com/headlines/2026/11/06/ilhan-omar-untouchable-with-democrats-back-in-power-n3820715",
-      "link": "https://hotair.com/headlines/2026/11/06/ilhan-omar-untouchable-with-democrats-back-in-power-n3820715",
-      "excerpt": "Ilhan Omar: Untouchable With Democrats Back in Power",
-      "summary": "Ilhan Omar: Untouchable With Democrats Back in Power",
-      "relative_time": "Fri, 06 Nov 2026 19:00:00 -0500",
-      "published": "Fri, 06 Nov 2026 19:00:00 -0500",
+      "id": "431414449ee8",
+      "headline": "Friday's Final Word",
+      "title": "Friday's Final Word",
+      "url": "https://hotair.com/ed-morrissey/2026/11/06/fridays-final-word-n3820742",
+      "link": "https://hotair.com/ed-morrissey/2026/11/06/fridays-final-word-n3820742",
+      "excerpt": "Friday's Final Word",
+      "summary": "Friday's Final Word",
+      "relative_time": "Fri, 06 Nov 2026 22:00:55 -0500",
+      "published": "Fri, 06 Nov 2026 22:00:55 -0500",
       "author": "Hot Air",
       "feed": "Hot Air",
       "feedName": "Hot Air",
@@ -445,19 +445,19 @@
       "category": "Alternative",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-11-07T00:08:55.210729+00:00"
+      "imageUrl": "https://media.townhall.com/cdn/hodl/2026/212/350bcc0b-94fb-473f-8d62-62b881196665.jpg",
+      "scraped_at": "2026-11-07T06:09:48.327583+00:00"
     },
     {
-      "id": "3efa0119cded",
-      "headline": "Someone Sued the NYTimes for Refusing to Call the War in Gaza 'Genocide'",
-      "title": "Someone Sued the NYTimes for Refusing to Call the War in Gaza 'Genocide'",
-      "url": "https://hotair.com/john-s-2/2026/11/06/someone-sued-the-ny-times-for-refusing-to-call-gaza-war-a-genocide-n3820743",
-      "link": "https://hotair.com/john-s-2/2026/11/06/someone-sued-the-ny-times-for-refusing-to-call-gaza-war-a-genocide-n3820743",
-      "excerpt": "Someone Sued the NYTimes for Refusing to Call the War in Gaza 'Genocide'",
-      "summary": "Someone Sued the NYTimes for Refusing to Call the War in Gaza 'Genocide'",
-      "relative_time": "Fri, 06 Nov 2026 18:00:57 -0500",
-      "published": "Fri, 06 Nov 2026 18:00:57 -0500",
+      "id": "9118129ae7a4",
+      "headline": "Kenyan Cult Leader Sentenced to 200 Years",
+      "title": "Kenyan Cult Leader Sentenced to 200 Years",
+      "url": "https://hotair.com/john-s-2/2026/11/06/kenyan-cult-leader-sentenced-to-200-years-n3820758",
+      "link": "https://hotair.com/john-s-2/2026/11/06/kenyan-cult-leader-sentenced-to-200-years-n3820758",
+      "excerpt": "Kenyan Cult Leader Sentenced to 200 Years",
+      "summary": "Kenyan Cult Leader Sentenced to 200 Years",
+      "relative_time": "Fri, 06 Nov 2026 21:20:34 -0500",
+      "published": "Fri, 06 Nov 2026 21:20:34 -0500",
       "author": "Hot Air",
       "feed": "Hot Air",
       "feedName": "Hot Air",
@@ -465,19 +465,19 @@
       "category": "Alternative",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://media.townhall.com/cdn/hodl/2026/16/665181ad-d1d6-4f33-9fb6-b40a49b10f26.jpg",
-      "scraped_at": "2026-11-07T00:08:55.210766+00:00"
+      "imageUrl": "https://media.townhall.com/cdn/hodl/2017/324/a708fa0c-1d9c-4b57-b902-b427258c68ba.jpg",
+      "scraped_at": "2026-11-07T06:09:48.327609+00:00"
     },
     {
-      "id": "d0c80a06d9ca",
-      "headline": "How Ron DeSantis transformed swing-state Florida into the GOP\u2019s best hope",
-      "title": "How Ron DeSantis transformed swing-state Florida into the GOP\u2019s best hope",
-      "url": "https://hotair.com/headlines/2026/11/06/how-ron-desantis-transformed-swing-state-florida-into-the-gops-best-hope-n3820714",
-      "link": "https://hotair.com/headlines/2026/11/06/how-ron-desantis-transformed-swing-state-florida-into-the-gops-best-hope-n3820714",
-      "excerpt": "How Ron DeSantis transformed swing-state Florida into the GOP\u2019s best hope",
-      "summary": "How Ron DeSantis transformed swing-state Florida into the GOP\u2019s best hope",
-      "relative_time": "Fri, 06 Nov 2026 18:00:00 -0500",
-      "published": "Fri, 06 Nov 2026 18:00:00 -0500",
+      "id": "d64d7b867857",
+      "headline": "Poland Simmering Away",
+      "title": "Poland Simmering Away",
+      "url": "https://hotair.com/tree-hugging-sister/2026/11/06/poland-simmering-away-n3820756",
+      "link": "https://hotair.com/tree-hugging-sister/2026/11/06/poland-simmering-away-n3820756",
+      "excerpt": "Poland Simmering Away",
+      "summary": "Poland Simmering Away",
+      "relative_time": "Fri, 06 Nov 2026 20:40:15 -0500",
+      "published": "Fri, 06 Nov 2026 20:40:15 -0500",
       "author": "Hot Air",
       "feed": "Hot Air",
       "feedName": "Hot Air",
@@ -485,8 +485,8 @@
       "category": "Alternative",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-11-07T00:08:55.210800+00:00"
+      "imageUrl": "https://media.townhall.com/cdn/hodl/2025/316/ee129770-541c-4886-a6c4-39cf19807f8a.jpg",
+      "scraped_at": "2026-11-07T06:09:48.327623+00:00"
     },
     {
       "id": "9ef0305fab12",
@@ -506,7 +506,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-11-07T00:08:55.480988+00:00"
+      "scraped_at": "2026-11-07T06:09:48.828749+00:00"
     },
     {
       "id": "e028eddbda84",
@@ -526,7 +526,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-11-07T00:08:55.481104+00:00"
+      "scraped_at": "2026-11-07T06:09:48.828815+00:00"
     },
     {
       "id": "9b0e73558c63",
@@ -546,7 +546,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-11-07T00:08:55.481176+00:00"
+      "scraped_at": "2026-11-07T06:09:48.828878+00:00"
     },
     {
       "id": "67dbeb0b4631",
@@ -566,7 +566,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.americanthinker.com/9s/9ssmk4pnr7mohkf1whow_640.jpg",
-      "scraped_at": "2026-11-07T00:08:55.642042+00:00"
+      "scraped_at": "2026-11-07T06:09:49.194819+00:00"
     },
     {
       "id": "11f47a94fb15",
@@ -586,7 +586,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.americanthinker.com/2t/2tcr1bsujez7sv4eilio_640.jpg",
-      "scraped_at": "2026-11-07T00:08:55.642374+00:00"
+      "scraped_at": "2026-11-07T06:09:49.195119+00:00"
     },
     {
       "id": "2abfba24cba6",
@@ -606,7 +606,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.americanthinker.com/1a/1a7m8vauxewxiwmmiakr_640.jpg",
-      "scraped_at": "2026-11-07T00:08:55.642650+00:00"
+      "scraped_at": "2026-11-07T06:09:49.195378+00:00"
     },
     {
       "id": "aa9d4834c816",
@@ -626,7 +626,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-11-07T00:08:56.059976+00:00"
+      "scraped_at": "2026-11-07T06:09:49.609688+00:00"
     },
     {
       "id": "983644140dac",
@@ -646,7 +646,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-11-07T00:08:56.060076+00:00"
+      "scraped_at": "2026-11-07T06:09:49.609743+00:00"
     },
     {
       "id": "373547fec632",
@@ -666,18 +666,18 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-11-07T00:08:56.060122+00:00"
+      "scraped_at": "2026-11-07T06:09:49.609787+00:00"
     },
     {
-      "id": "35faa8e0a490",
-      "headline": "TV news hourly summary \u00b7 Nov 7, 00:03 UTC",
-      "title": "TV news hourly summary \u00b7 Nov 7, 00:03 UTC",
-      "url": "https://mastodon.archive.org/@tv/117572225255168064",
-      "link": "https://mastodon.archive.org/@tv/117572225255168064",
-      "excerpt": "Trump appointed Stephen Miller to replace Susie Wiles as White House chief of staff; Democrats criticized the move, while reports noted Miller\u2019s role in Trump policies and executive orders. Democrats won control of the House and Senate in historic midterm results, with a record number of female governors elected.",
-      "summary": "Trump appointed Stephen Miller to replace Susie Wiles as White House chief of staff; Democrats criticized the move, while reports noted Miller\u2019s role in Trump policies and executive orders. Democrats won control of the House and Senate in historic midterm results, with a record number of female governors elected.",
-      "relative_time": "Sat, 07 Nov 2026 00:03:04 +0000",
-      "published": "Sat, 07 Nov 2026 00:03:04 +0000",
+      "id": "57e768e96b9c",
+      "headline": "TV news hourly summary \u00b7 Nov 7, 06:03 UTC",
+      "title": "TV news hourly summary \u00b7 Nov 7, 06:03 UTC",
+      "url": "https://mastodon.archive.org/@tv/117573640831182076",
+      "link": "https://mastodon.archive.org/@tv/117573640831182076",
+      "excerpt": "Trump named Stephen Miller chief of staff as Democrats vowed to oppose his agenda; party members also questioned Chuck Schumer\u2019s leadership. Democrat Scott Colom led Mississippi\u2019s Senate race, which remained too close to call, while Cindy Hyde-Smith claimed victory. Democrats made gains in state governments, and Nithya Raman won Los Angeles mayor.",
+      "summary": "Trump named Stephen Miller chief of staff as Democrats vowed to oppose his agenda; party members also questioned Chuck Schumer\u2019s leadership. Democrat Scott Colom led Mississippi\u2019s Senate race, which remained too close to call, while Cindy Hyde-Smith claimed victory. Democrats made gains in state governments, and Nithya Raman won Los Angeles mayor.",
+      "relative_time": "Sat, 07 Nov 2026 06:03:04 +0000",
+      "published": "Sat, 07 Nov 2026 06:03:04 +0000",
       "author": "Internet Archive TV News",
       "feed": "Internet Archive TV News (hourly summary)",
       "feedName": "Internet Archive TV News (hourly summary)",
@@ -686,7 +686,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "",
-      "scraped_at": "2026-11-07T00:08:57.015731+00:00"
+      "scraped_at": "2026-11-07T06:09:49.871066+00:00"
     }
   ],
   "stories": [
@@ -708,7 +708,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/fdde/live/9036f7e0-da01-11f1-93e1-3b657b665bcf.jpg",
-      "scraped_at": "2026-11-07T00:08:53.218698+00:00"
+      "scraped_at": "2026-11-07T06:09:45.785046+00:00"
     },
     {
       "id": "9d3bbd61ffd4",
@@ -728,18 +728,18 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/613a/live/900577b0-d9ed-11f1-b441-2b33b063138f.png",
-      "scraped_at": "2026-11-07T00:08:53.218746+00:00"
+      "scraped_at": "2026-11-07T06:09:45.785090+00:00"
     },
     {
-      "id": "77682ec15a4a",
-      "headline": "OpenAI secures $11 billion funding at $1.25 trillion valuation, Bloomberg News reports - Reuters",
-      "title": "OpenAI secures $11 billion funding at $1.25 trillion valuation, Bloomberg News reports - Reuters",
-      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNdlpNRm5XVy11c3hLY0NRdjh2T3VmOE1LOWQ2LXlvcFhmZlFJYkQya3N3QWxud2UteUZpWVlCTXVHUXZZTjIwRlVQaUhqOGhyM2lDaDJTSGcxMnE5MzhOZ1NHYlJIc1p5bHRxaVZjZDd4MFY2RWMtRkNlYkhSVkdpMlRBWi1PYUNmZGNydXZnOTZFMTFoOHR0azBpUlU1aHpVdFA4dlhCV0dDNm91VE0xSVg0bXZhcF9jaVAzcXYzaldOdw?oc=5",
-      "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNdlpNRm5XVy11c3hLY0NRdjh2T3VmOE1LOWQ2LXlvcFhmZlFJYkQya3N3QWxud2UteUZpWVlCTXVHUXZZTjIwRlVQaUhqOGhyM2lDaDJTSGcxMnE5MzhOZ1NHYlJIc1p5bHRxaVZjZDd4MFY2RWMtRkNlYkhSVkdpMlRBWi1PYUNmZGNydXZnOTZFMTFoOHR0azBpUlU1aHpVdFA4dlhCV0dDNm91VE0xSVg0bXZhcF9jaVAzcXYzaldOdw?oc=5",
-      "excerpt": "OpenAI secures $11 billion funding at $1.25 trillion valuation, Bloomberg News reports Reuters",
-      "summary": "OpenAI secures $11 billion funding at $1.25 trillion valuation, Bloomberg News reports Reuters",
-      "relative_time": "Fri, 06 Nov 2026 21:31:47 GMT",
-      "published": "Fri, 06 Nov 2026 21:31:47 GMT",
+      "id": "d88e29c6dfee",
+      "headline": "Google executive Donald Harrison resigns from SpaceX board - Reuters",
+      "title": "Google executive Donald Harrison resigns from SpaceX board - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPaFBQUUZob254UUQxOGhmLUd6Vm1xNThSU2RNTXVib3Rja0R3OVdMbkR4MjR0UDY4ZWRUMkZab1JaZmVaZmllSW96SkR1WmVFb1dXblU4dDg1Y05mUDlPUmlpTlI3VjBxcFpFbVIweUNhRlNxeE5ZLU93VDJzVmE4Y3c5VTByV1poaVFfRG5CUy0wNWlFeUZ6bnA3bmZhek1VOENqdWFyQ0poUzIxU016SUN3?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPaFBQUUZob254UUQxOGhmLUd6Vm1xNThSU2RNTXVib3Rja0R3OVdMbkR4MjR0UDY4ZWRUMkZab1JaZmVaZmllSW96SkR1WmVFb1dXblU4dDg1Y05mUDlPUmlpTlI3VjBxcFpFbVIweUNhRlNxeE5ZLU93VDJzVmE4Y3c5VTByV1poaVFfRG5CUy0wNWlFeUZ6bnA3bmZhek1VOENqdWFyQ0poUzIxU016SUN3?oc=5",
+      "excerpt": "Google executive Donald Harrison resigns from SpaceX board Reuters",
+      "summary": "Google executive Donald Harrison resigns from SpaceX board Reuters",
+      "relative_time": "Fri, 06 Nov 2026 23:48:00 GMT",
+      "published": "Fri, 06 Nov 2026 23:48:00 GMT",
       "author": "Reuters Top News",
       "feed": "Reuters Top News",
       "feedName": "Reuters Top News",
@@ -748,18 +748,18 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-11-07T00:08:53.692090+00:00"
+      "scraped_at": "2026-11-07T06:09:45.943299+00:00"
     },
     {
-      "id": "dfbbb4372698",
-      "headline": "Google acquires Wyoming data center site from AI infrastructure firm Crusoe - Reuters",
-      "title": "Google acquires Wyoming data center site from AI infrastructure firm Crusoe - Reuters",
-      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQUmdYV3dXUTRhWEJ2UTJxUXBMMmxVX292SEdXZlVJNmJIa0lzNVNRT0J3QjJhc0VnN2lYUnQybkNkd0JsRV8xUTc1Qk1nZllyQUx0RnJTTENFVEhJdXUyYW9SQXVodjFLT1RmSDF3UE1PODFDRnkzVnhkaEpVSDdwSDJRV2Y5dDZOTXF2cUoxUWlVVnBXWklYRjNpNGp0N2x1N0I1bFgtMFl3eldkdHZxUUlZRVdzQQ?oc=5",
-      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQUmdYV3dXUTRhWEJ2UTJxUXBMMmxVX292SEdXZlVJNmJIa0lzNVNRT0J3QjJhc0VnN2lYUnQybkNkd0JsRV8xUTc1Qk1nZllyQUx0RnJTTENFVEhJdXUyYW9SQXVodjFLT1RmSDF3UE1PODFDRnkzVnhkaEpVSDdwSDJRV2Y5dDZOTXF2cUoxUWlVVnBXWklYRjNpNGp0N2x1N0I1bFgtMFl3eldkdHZxUUlZRVdzQQ?oc=5",
-      "excerpt": "Google acquires Wyoming data center site from AI infrastructure firm Crusoe Reuters",
-      "summary": "Google acquires Wyoming data center site from AI infrastructure firm Crusoe Reuters",
-      "relative_time": "Fri, 06 Nov 2026 20:03:34 GMT",
-      "published": "Fri, 06 Nov 2026 20:03:34 GMT",
+      "id": "25517a15fe7e",
+      "headline": "Haiti PM says gang leader Mathias Saintil is dead - Reuters",
+      "title": "Haiti PM says gang leader Mathias Saintil is dead - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOUkdOZEEtMTQ5NzlLdWRCRUlzdVFsWkFoR0xPOTdIV2szN1hTWmNLQTBHejRjVUI0YTU1bDJpUXdONl9VSlQtZU9iLVRTWFhEbi1RLTZuNEJGQTFxZ1JXWVBBRk43Rjl0VXJrTnF5MXNONkM2TFRYRUM3QXVqTVBOR0R0a1o4NkNsZDhUVVNYTzRkTWNvYm4yRFpEWmVfUQ?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxOUkdOZEEtMTQ5NzlLdWRCRUlzdVFsWkFoR0xPOTdIV2szN1hTWmNLQTBHejRjVUI0YTU1bDJpUXdONl9VSlQtZU9iLVRTWFhEbi1RLTZuNEJGQTFxZ1JXWVBBRk43Rjl0VXJrTnF5MXNONkM2TFRYRUM3QXVqTVBOR0R0a1o4NkNsZDhUVVNYTzRkTWNvYm4yRFpEWmVfUQ?oc=5",
+      "excerpt": "Haiti PM says gang leader Mathias Saintil is dead Reuters",
+      "summary": "Haiti PM says gang leader Mathias Saintil is dead Reuters",
+      "relative_time": "Sat, 07 Nov 2026 00:27:00 GMT",
+      "published": "Sat, 07 Nov 2026 00:27:00 GMT",
       "author": "Reuters Top News",
       "feed": "Reuters Top News",
       "feedName": "Reuters Top News",
@@ -768,7 +768,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-11-07T00:08:53.692146+00:00"
+      "scraped_at": "2026-11-07T06:09:45.943344+00:00"
     },
     {
       "id": "50746ee7941b",
@@ -788,7 +788,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://i.dailymail.com/1s/2026/11/06/17/112353731-0-image-a-41_1793987059312.jpg",
-      "scraped_at": "2026-11-07T00:08:54.306319+00:00"
+      "scraped_at": "2026-11-07T06:09:46.265984+00:00"
     },
     {
       "id": "546cb0e37832",
@@ -808,38 +808,38 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://i.dailymail.com/1s/2026/11/05/18/112329589-0-image-a-4_1793902090769.jpg",
-      "scraped_at": "2026-11-07T00:08:54.306388+00:00"
+      "scraped_at": "2026-11-07T06:09:46.266048+00:00"
     },
     {
-      "id": "056536498cc4",
-      "headline": "Kenyon Sadiq eager for Jets matchup with Travis Kelce as rookie navigates his own way: \u2018Paved the path\u2019",
-      "title": "Kenyon Sadiq eager for Jets matchup with Travis Kelce as rookie navigates his own way: \u2018Paved the path\u2019",
-      "url": "https://nypost.com/2026/11/06/sports/kenyon-sadiq-eager-for-jets-matchup-with-travis-kelce/",
-      "link": "https://nypost.com/2026/11/06/sports/kenyon-sadiq-eager-for-jets-matchup-with-travis-kelce/",
-      "excerpt": "Sadiq said he was introduced to Kelce while on a predraft visit with the Chiefs before the Jets snagged him 13 picks before Kansas City\u2019s selection.",
-      "summary": "Sadiq said he was introduced to Kelce while on a predraft visit with the Chiefs before the Jets snagged him 13 picks before Kansas City\u2019s selection.",
-      "relative_time": "Fri, 06 Nov 2026 19:08:27 -0500",
-      "published": "Fri, 06 Nov 2026 19:08:27 -0500",
-      "author": "Dan Martin",
+      "id": "9d536b488dcd",
+      "headline": "China confirms discussions underway on historic Xi-Trump-Putin meeting",
+      "title": "China confirms discussions underway on historic Xi-Trump-Putin meeting",
+      "url": "https://nypost.com/2026/11/07/world-news/china-confirms-discussions-underway-on-historic-xi-trump-putin-meeting/",
+      "link": "https://nypost.com/2026/11/07/world-news/china-confirms-discussions-underway-on-historic-xi-trump-putin-meeting/",
+      "excerpt": "Beijing revealed for the first time that it is discussing a historic meeting between Chinese leader Xi Jinping, President Trump and Russian President Vladimir Putin.",
+      "summary": "Beijing revealed for the first time that it is discussing a historic meeting between Chinese leader Xi Jinping, President Trump and Russian President Vladimir Putin.",
+      "relative_time": "Sat, 07 Nov 2026 00:54:33 -0500",
+      "published": "Sat, 07 Nov 2026 00:54:33 -0500",
+      "author": "Associated Press",
       "feed": "New York Post",
       "feedName": "New York Post",
       "feedId": "f35f2eec037f",
       "category": "Global",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2F16-reacts-making-catch-third-147236142.jpg?quality%3D90%26strip%3Dall",
-      "scraped_at": "2026-11-07T00:08:54.474240+00:00"
+      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fu-s-president-donald-j-147831287.jpg?w%3D1024",
+      "scraped_at": "2026-11-07T06:09:47.260058+00:00"
     },
     {
-      "id": "35faa8e0a490",
-      "headline": "TV news hourly summary \u00b7 Nov 7, 00:03 UTC",
-      "title": "TV news hourly summary \u00b7 Nov 7, 00:03 UTC",
-      "url": "https://mastodon.archive.org/@tv/117572225255168064",
-      "link": "https://mastodon.archive.org/@tv/117572225255168064",
-      "excerpt": "Trump appointed Stephen Miller to replace Susie Wiles as White House chief of staff; Democrats criticized the move, while reports noted Miller\u2019s role in Trump policies and executive orders. Democrats won control of the House and Senate in historic midterm results, with a record number of female governors elected.",
-      "summary": "Trump appointed Stephen Miller to replace Susie Wiles as White House chief of staff; Democrats criticized the move, while reports noted Miller\u2019s role in Trump policies and executive orders. Democrats won control of the House and Senate in historic midterm results, with a record number of female governors elected.",
-      "relative_time": "Sat, 07 Nov 2026 00:03:04 +0000",
-      "published": "Sat, 07 Nov 2026 00:03:04 +0000",
+      "id": "57e768e96b9c",
+      "headline": "TV news hourly summary \u00b7 Nov 7, 06:03 UTC",
+      "title": "TV news hourly summary \u00b7 Nov 7, 06:03 UTC",
+      "url": "https://mastodon.archive.org/@tv/117573640831182076",
+      "link": "https://mastodon.archive.org/@tv/117573640831182076",
+      "excerpt": "Trump named Stephen Miller chief of staff as Democrats vowed to oppose his agenda; party members also questioned Chuck Schumer\u2019s leadership. Democrat Scott Colom led Mississippi\u2019s Senate race, which remained too close to call, while Cindy Hyde-Smith claimed victory. Democrats made gains in state governments, and Nithya Raman won Los Angeles mayor.",
+      "summary": "Trump named Stephen Miller chief of staff as Democrats vowed to oppose his agenda; party members also questioned Chuck Schumer\u2019s leadership. Democrat Scott Colom led Mississippi\u2019s Senate race, which remained too close to call, while Cindy Hyde-Smith claimed victory. Democrats made gains in state governments, and Nithya Raman won Los Angeles mayor.",
+      "relative_time": "Sat, 07 Nov 2026 06:03:04 +0000",
+      "published": "Sat, 07 Nov 2026 06:03:04 +0000",
       "author": "Internet Archive TV News",
       "feed": "Internet Archive TV News (hourly summary)",
       "feedName": "Internet Archive TV News (hourly summary)",
@@ -848,7 +848,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "",
-      "scraped_at": "2026-11-07T00:08:57.015731+00:00"
+      "scraped_at": "2026-11-07T06:09:49.871066+00:00"
     }
   ],
   "raw_summary": "### White House denies Hegseth and Rubio to leave jobs after Republican election losses\n**Source:** BBC World News\n**Summary:** The White House has denied media reports suggesting that Defense Secretary Pete Hegseth and Secretary of State Marco Rubio will be leaving their administration roles following recent Republican election losses. Reports had indicated growing calls to replace Hegseth, who faces a potential impeachment vote, alongside rumors that Rubio is planning a future presidential campaign. Administration officials maintain that both cabinet members remain in their positions despite the political speculation.\n**Key Theme:** Politics\n\n### Trump signs order to preserve Oval Office as national monument\n**Source:** BBC World News\n**Summary:** President Trump has signed an executive order designating the Oval Office as a national monument to ensure its long-term preservation. The designation follows significant alterations Trump made to the room's interior decor and the recent demolition of the White House East Wing. The order is intended to prevent future administration alterations and protect the historical space.\n**Key Theme:** Politics\n\n### Kenyan cult leader sentenced to 200 years in prison for mass starvation murders of children\n**Source:** Reuters Top News\n**Summary:** A Kenyan court has sentenced a prominent cult leader to 200 years in prison for his role in the mass starvation deaths of children. The ruling marks a major legal milestone following widespread investigations into the cult's deadly activities. Authorities found the leader responsible for convincing followers to starve themselves and their children to death in a tragic religious ritual.\n**Key Theme:** Justice\n\n### EXCLUSIVE: Apple's predictive text restrictions include 'Dictator Trump' and 'Sleepy Joe,' researcher finds\n**Source:** Reuters Top News\n**Summary:** A researcher has discovered that Apple's predictive text system active on iOS devices restricts specific political phrases, including \"Dictator Trump\" and \"Sleepy Joe.\" The findings reveal how the technology company moderates language to filter out potentially sensitive or politically charged terms during auto-suggest typing. Apple has not publicly commented on the full list of blacklisted phrases or the criteria used to restrict them.\n**Key Theme:** Technology\n\n### Met Police chief says 'many, many more victims' of Russell Brand could come forward as comedian faces two new rape probes\n**Source:** Daily Mail UK\n**Summary:** Metropolitan Police Commissioner Sir Mark Rowley stated that detectives expect additional victims to come forward as they investigate two new rape allegations against Russell Brand. The police chief confirmed active ongoing probes into the comedian and actor following recently reported allegations. Law enforcement continues to encourage anyone with relevant information regarding Brand's conduct to contact investigators.\n**Key Theme:** Law Enforcement\n\n### Five schools are locked down as armed police hunt knifeman after boy is taken to hospital with injuries\n**Source:** Daily Mail UK\n**Summary:** Five schools in Tuffley, Gloucester were placed on immediate lockdown after a young boy was injured in a knife attack and rushed to the hospital. Armed police officers launched an intensive search in the surrounding area for a suspect seen near St Peter's High School. Emergency services remain deployed to maintain public safety while the manhunt continues.\n**Key Theme:** Public Safety\n\n### Blue Jays blast own $93 million outfielder Anthony Santander after Islamophobic comments\n**Source:** New York Post\n**Summary:** The Toronto Blue Jays issued a public statement condemning outfielder Anthony Santander over Islamophobic remarks he recently made. Santander, who signed a five-year, $92.5 million deal in 2025, faces swift backlash from team leadership and fans alike. The franchise emphasized its stance against discriminatory language while addressing the ongoing situation.\n**Key Theme:** Sports\n\n### TV news hourly summary \u00b7 Nov 6, 13:03 UTC\n**Source:** Internet Archive TV News\n**Summary:** An hourly global news roundup highlighted a Colorado shootout that resulted in a police officer's death, alongside a separate fatal shooting at a Citibank location. Internationally, coverage focused on a 200-year sentence handed to a Kenyan cult leader, new legal updates surrounding Russell Brand, and a school bus crash in France. Additionally, heavy severe weather flooded towns across the Tennessee-Georgia border while Donald Trump indicated a decision on Iran is expected shortly.\n**Key Theme:** World News",
@@ -858,5 +858,5 @@
   "data_current_html_path": "data/current/index.html",
   "archive_html_path": "output/archive/2026-11-06/index.html",
   "data_archive_html_path": "data/archive/2026-11-06/index.html",
-  "feed_hash": "cb9f9072bc8e95c5fada8d8e56db9bbd"
+  "feed_hash": "f9241b0f28e8c463d2d0904132b34cda"
 }
