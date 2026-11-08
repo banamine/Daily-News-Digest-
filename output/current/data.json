@@ -1,8 +1,8 @@
 {
-  "last_updated": "2026-11-08T12:43:44.239866+00:00",
+  "last_updated": "2026-11-08T16:02:18.948753+00:00",
   "source": "https://www.alexjoneslive.com/",
   "date": "2026-11-08",
-  "stories_hash": "18311958ca9fa6999c384d8563f465f6",
+  "stories_hash": "e0646b5293eca7543031f374a62ab1ae",
   "stories_count": 8,
   "scraped_articles_count": 0,
   "rss_articles_count": 34,
@@ -16,8 +16,8 @@
       "link": "https://www.bbc.co.uk/news/articles/cmd7q15drwgeo?at_medium=RSS&at_campaign=rss",
       "excerpt": "Six people were killed in a random shooting in Krakow's main square, and three bodies were later found at the home of the attacker.",
       "summary": "Six people were killed in a random shooting in Krakow's main square, and three bodies were later found at the home of the attacker.",
-      "relative_time": "Sun, 08 Nov 2026 11:22:17 GMT",
-      "published": "Sun, 08 Nov 2026 11:22:17 GMT",
+      "relative_time": "Sun, 08 Nov 2026 14:32:52 GMT",
+      "published": "Sun, 08 Nov 2026 14:32:52 GMT",
       "author": "BBC World News",
       "feed": "BBC World News",
       "feedName": "BBC World News",
@@ -26,7 +26,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/f6c3/live/95455f00-dac5-11f1-bda8-29fb69dbc026.jpg",
-      "scraped_at": "2026-11-08T12:43:30.402328+00:00"
+      "scraped_at": "2026-11-08T16:02:16.054778+00:00"
     },
     {
       "id": "1c8390e0d4fa",
@@ -46,7 +46,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/2670/live/bfaac760-dacc-11f1-bda8-29fb69dbc026.jpg",
-      "scraped_at": "2026-11-08T12:43:30.402365+00:00"
+      "scraped_at": "2026-11-08T16:02:16.054828+00:00"
     },
     {
       "id": "737d9ae0bf5a",
@@ -66,18 +66,18 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d485/live/0685e840-dab9-11f1-b441-2b33b063138f.jpg",
-      "scraped_at": "2026-11-08T12:43:30.402398+00:00"
+      "scraped_at": "2026-11-08T16:02:16.054872+00:00"
     },
     {
-      "id": "105a464035cb",
-      "headline": "'Trump has cost us': After midterm losses, MAGA asks if it's over - Reuters",
-      "title": "'Trump has cost us': After midterm losses, MAGA asks if it's over - Reuters",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQaTdYU2RDRkZwOVM0SXV4d2VCdExubk1wWngyTG5LOFNRVC1MWUU5NnVkS1FseU0zTlhwRXBRdW1OR2haNHNZcFM5cmVzNWI4cEhadmpDVzdVM2h4YmtuTU1TWFdtRTNMbjdnWGRQaGh2QTZrcnd6U0phWENkTVVNbFJUSWhEZXV2WVU4RWMtV0Vwc2dzQy05Ylp1cjFTZkhoZFVtY3pSTms?oc=5",
-      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQaTdYU2RDRkZwOVM0SXV4d2VCdExubk1wWngyTG5LOFNRVC1MWUU5NnVkS1FseU0zTlhwRXBRdW1OR2haNHNZcFM5cmVzNWI4cEhadmpDVzdVM2h4YmtuTU1TWFdtRTNMbjdnWGRQaGh2QTZrcnd6U0phWENkTVVNbFJUSWhEZXV2WVU4RWMtV0Vwc2dzQy05Ylp1cjFTZkhoZFVtY3pSTms?oc=5",
-      "excerpt": "'Trump has cost us': After midterm losses, MAGA asks if it's over Reuters",
-      "summary": "'Trump has cost us': After midterm losses, MAGA asks if it's over Reuters",
-      "relative_time": "Sun, 08 Nov 2026 11:50:51 GMT",
-      "published": "Sun, 08 Nov 2026 11:50:51 GMT",
+      "id": "3b69908a5dac",
+      "headline": "Anthropic secures $3.4 billion generator deal for AI data centers, FT reports - Reuters",
+      "title": "Anthropic secures $3.4 billion generator deal for AI data centers, FT reports - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNTUktcGxpNENhQ1llV2F3a3V5RUZya0dDc0ZLeFVTZmFqclBqSVhuYkNiSFpSTkkwVnZ2NkFVVEVjQjZPLTJzMGMyU0dnaFg0X1pPd2pMV0ZCWWtMWlpSdTNvckRlaGxLcWs1SnljenEwcUs0N0doWG0yRDdET2o4YlZMVWl6c2lpYWJ1emstVFI1S3VyUXdIdG1xdmZpS3k3ZW5LVUpibUZ0SWxmZUNLNXN0SDBMZE5nWFJZdDlQSQ?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNTUktcGxpNENhQ1llV2F3a3V5RUZya0dDc0ZLeFVTZmFqclBqSVhuYkNiSFpSTkkwVnZ2NkFVVEVjQjZPLTJzMGMyU0dnaFg0X1pPd2pMV0ZCWWtMWlpSdTNvckRlaGxLcWs1SnljenEwcUs0N0doWG0yRDdET2o4YlZMVWl6c2lpYWJ1emstVFI1S3VyUXdIdG1xdmZpS3k3ZW5LVUpibUZ0SWxmZUNLNXN0SDBMZE5nWFJZdDlQSQ?oc=5",
+      "excerpt": "Anthropic secures $3.4 billion generator deal for AI data centers, FT reports Reuters",
+      "summary": "Anthropic secures $3.4 billion generator deal for AI data centers, FT reports Reuters",
+      "relative_time": "Sun, 08 Nov 2026 12:54:10 GMT",
+      "published": "Sun, 08 Nov 2026 12:54:10 GMT",
       "author": "Reuters Top News",
       "feed": "Reuters Top News",
       "feedName": "Reuters Top News",
@@ -86,18 +86,18 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-11-08T12:43:30.507644+00:00"
+      "scraped_at": "2026-11-08T16:02:16.548723+00:00"
     },
     {
-      "id": "9a6d71aafac9",
-      "headline": "Zaporizhzhia nuclear plant relying on generators again after losing external power supply - Reuters",
-      "title": "Zaporizhzhia nuclear plant relying on generators again after losing external power supply - Reuters",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxORkE4VEFBVF9KWlRaRk9HRmtvVGh4cTlxanVleGY5WXZtVnNVSF9LTEQtd0NvbW9YbnE0TndLS052dU5kaUZtRjJrUzZiMXVhVFdWTlNBT2xGV203cTdOREg1YmZDMGRkM081d1hzbjJJWlR4ZG9tTVpSX19rZkVHdGhhRVVmbHVFRVhfVTJnVWFvRVlSYTdLSGRmTHd2WGxMZm15RTNGQ05DLVRXVm1jMDh1Rms?oc=5",
-      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxORkE4VEFBVF9KWlRaRk9HRmtvVGh4cTlxanVleGY5WXZtVnNVSF9LTEQtd0NvbW9YbnE0TndLS052dU5kaUZtRjJrUzZiMXVhVFdWTlNBT2xGV203cTdOREg1YmZDMGRkM081d1hzbjJJWlR4ZG9tTVpSX19rZkVHdGhhRVVmbHVFRVhfVTJnVWFvRVlSYTdLSGRmTHd2WGxMZm15RTNGQ05DLVRXVm1jMDh1Rms?oc=5",
-      "excerpt": "Zaporizhzhia nuclear plant relying on generators again after losing external power supply Reuters",
-      "summary": "Zaporizhzhia nuclear plant relying on generators again after losing external power supply Reuters",
-      "relative_time": "Sun, 08 Nov 2026 11:08:25 GMT",
-      "published": "Sun, 08 Nov 2026 11:08:25 GMT",
+      "id": "02bd6d5245a4",
+      "headline": "Europeans will join Ukraine talks in Abu Dhabi, French foreign minister says - Reuters",
+      "title": "Europeans will join Ukraine talks in Abu Dhabi, French foreign minister says - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQZ2FDU05aeklyMGVkQjdLeFI3el9yaEtTUTF0RUlTQndFY2hZTVM2MFM0ZkhUX0RoUkI3VWxMQmZ0WGdmbmxyNVN2ZVRsQ2J0U29QaEljZXZVdFkwVG9IYmtHaGhIeUYyNXZ2U3didGRaUm95S3M5WEJBMjhCTkRhbndRUURPcXdmUVZWR2pHV0hWT0ZvTEFuUTVKcFdNZElmeklRNHhpWEc4TkQ0VEZ3ZUxqbVJKb0NzaTJ2cnBR?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQZ2FDU05aeklyMGVkQjdLeFI3el9yaEtTUTF0RUlTQndFY2hZTVM2MFM0ZkhUX0RoUkI3VWxMQmZ0WGdmbmxyNVN2ZVRsQ2J0U29QaEljZXZVdFkwVG9IYmtHaGhIeUYyNXZ2U3didGRaUm95S3M5WEJBMjhCTkRhbndRUURPcXdmUVZWR2pHV0hWT0ZvTEFuUTVKcFdNZElmeklRNHhpWEc4TkQ0VEZ3ZUxqbVJKb0NzaTJ2cnBR?oc=5",
+      "excerpt": "Europeans will join Ukraine talks in Abu Dhabi, French foreign minister says Reuters",
+      "summary": "Europeans will join Ukraine talks in Abu Dhabi, French foreign minister says Reuters",
+      "relative_time": "Sun, 08 Nov 2026 12:07:25 GMT",
+      "published": "Sun, 08 Nov 2026 12:07:25 GMT",
       "author": "Reuters Top News",
       "feed": "Reuters Top News",
       "feedName": "Reuters Top News",
@@ -106,18 +106,18 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-11-08T12:43:30.507688+00:00"
+      "scraped_at": "2026-11-08T16:02:16.548777+00:00"
     },
     {
-      "id": "aed536838a37",
-      "headline": "Poland mourns victims of Krakow mass shooting as security fears grow - Reuters",
-      "title": "Poland mourns victims of Krakow mass shooting as security fears grow - Reuters",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNVjUxVkw1TWRaU0FNWjdiZlUyUk9KcmFRMjlobjltclhvd2xEMFZic2QyLVJ1U2M4WEtOVWJ0S3J6WHdkT19pcUJwQml5Z3UyLV9PalUtQWV5X1J0dzJVMnFyc2pDQllBWTNKNTh2dVNkUVFMQWZ0OWlnUFp0Tm5LZmt0YXItSUprX09QVE93dElVd082LXpyck04QU0xemMySklEV0xSVDZRcWx5LVdUWA?oc=5",
-      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNVjUxVkw1TWRaU0FNWjdiZlUyUk9KcmFRMjlobjltclhvd2xEMFZic2QyLVJ1U2M4WEtOVWJ0S3J6WHdkT19pcUJwQml5Z3UyLV9PalUtQWV5X1J0dzJVMnFyc2pDQllBWTNKNTh2dVNkUVFMQWZ0OWlnUFp0Tm5LZmt0YXItSUprX09QVE93dElVd082LXpyck04QU0xemMySklEV0xSVDZRcWx5LVdUWA?oc=5",
-      "excerpt": "Poland mourns victims of Krakow mass shooting as security fears grow Reuters",
-      "summary": "Poland mourns victims of Krakow mass shooting as security fears grow Reuters",
-      "relative_time": "Sun, 08 Nov 2026 11:24:09 GMT",
-      "published": "Sun, 08 Nov 2026 11:24:09 GMT",
+      "id": "2aec33d2d947",
+      "headline": "At least 21 dead after migrant boat sinks off Senegal coast, government says - Reuters",
+      "title": "At least 21 dead after migrant boat sinks off Senegal coast, government says - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNQWEyY01QZXphanRHT21PZUR2UVdNcEQzUVdRSW44Z2oxb1hfanV3TE00ZXhkMDJnZVdXYnF6OTdsZ3Jwd0lqamgxYlpTS2h3NjBjaTVaNC1nQXM0RXFNX2phMWItS1Q4UldFdzN3WFlocExfUElZZEJwQ2hVX1YzRmlDQnpDMEhrTC1oNk5VYmVCQ2pLc090LUlfbFY5VXk3YTFhTlg4NUJSTXk1WDVVTXdNYkp1RmF3TW02bDZR?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNQWEyY01QZXphanRHT21PZUR2UVdNcEQzUVdRSW44Z2oxb1hfanV3TE00ZXhkMDJnZVdXYnF6OTdsZ3Jwd0lqamgxYlpTS2h3NjBjaTVaNC1nQXM0RXFNX2phMWItS1Q4UldFdzN3WFlocExfUElZZEJwQ2hVX1YzRmlDQnpDMEhrTC1oNk5VYmVCQ2pLc090LUlfbFY5VXk3YTFhTlg4NUJSTXk1WDVVTXdNYkp1RmF3TW02bDZR?oc=5",
+      "excerpt": "At least 21 dead after migrant boat sinks off Senegal coast, government says Reuters",
+      "summary": "At least 21 dead after migrant boat sinks off Senegal coast, government says Reuters",
+      "relative_time": "Sun, 08 Nov 2026 13:35:48 GMT",
+      "published": "Sun, 08 Nov 2026 13:35:48 GMT",
       "author": "Reuters Top News",
       "feed": "Reuters Top News",
       "feedName": "Reuters Top News",
@@ -126,7 +126,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-11-08T12:43:30.507717+00:00"
+      "scraped_at": "2026-11-08T16:02:16.548820+00:00"
     },
     {
       "id": "aa6217aafb81",
@@ -146,7 +146,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://i.dailymail.com/1s/2026/11/06/10/112344101-0-image-a-6_1793962114278.jpg",
-      "scraped_at": "2026-11-08T12:43:30.704137+00:00"
+      "scraped_at": "2026-11-08T16:02:17.043525+00:00"
     },
     {
       "id": "6373c4ad0b98",
@@ -166,7 +166,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://i.dailymail.com/1s/2026/11/05/23/112336755-0-image-a-9_1793921972535.jpg",
-      "scraped_at": "2026-11-08T12:43:30.704197+00:00"
+      "scraped_at": "2026-11-08T16:02:17.043601+00:00"
     },
     {
       "id": "50746ee7941b",
@@ -186,67 +186,87 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://i.dailymail.com/1s/2026/11/06/17/112353731-0-image-a-41_1793987059312.jpg",
-      "scraped_at": "2026-11-08T12:43:30.704246+00:00"
+      "scraped_at": "2026-11-08T16:02:17.043666+00:00"
     },
     {
-      "id": "22049c54e938",
-      "headline": "Giants vs. Eagles: Preview, prediction, what to watch for in Week 9",
-      "title": "Giants vs. Eagles: Preview, prediction, what to watch for in Week 9",
-      "url": "https://nypost.com/2026/11/08/sports/giants-vs-eagles-preview-prediction-what-to-watch-for-in-week-9/",
-      "link": "https://nypost.com/2026/11/08/sports/giants-vs-eagles-preview-prediction-what-to-watch-for-in-week-9/",
-      "excerpt": "An inside look at Sunday's Giants-Eagles matchup at Lincoln Financial Field in Philadelphia:",
-      "summary": "An inside look at Sunday's Giants-Eagles matchup at Lincoln Financial Field in Philadelphia:",
-      "relative_time": "Sun, 08 Nov 2026 07:30:00 -0500",
-      "published": "Sun, 08 Nov 2026 07:30:00 -0500",
-      "author": "Paul Schwartz",
+      "id": "b5d72240c6fc",
+      "headline": "Is \u2018Tracker\u2019 On Tonight? Here\u2019s When \u2018Tracker\u2019 Returns To CBS With New Episodes",
+      "title": "Is \u2018Tracker\u2019 On Tonight? Here\u2019s When \u2018Tracker\u2019 Returns To CBS With New Episodes",
+      "url": "https://decider.com/2026/11/08/is-tracker-on-tonight-cbs-tracker-season-4-episode-6-release-date/",
+      "link": "https://decider.com/2026/11/08/is-tracker-on-tonight-cbs-tracker-season-4-episode-6-release-date/",
+      "excerpt": "Here's when Tracker will be back-er.",
+      "summary": "Here's when Tracker will be back-er.",
+      "relative_time": "Sun, 08 Nov 2026 11:00:00 -0500",
+      "published": "Sun, 08 Nov 2026 11:00:00 -0500",
+      "author": "mliss1578",
       "feed": "New York Post",
       "feedName": "New York Post",
       "feedId": "f35f2eec037f",
       "category": "Global",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2FQuinyon-Mitchell.jpg?w%3D1024",
-      "scraped_at": "2026-11-08T12:43:31.451840+00:00"
+      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fjustin-hartley.jpg?quality%3D90%26strip%3Dall",
+      "scraped_at": "2026-11-08T16:02:17.172429+00:00"
     },
     {
-      "id": "073d5470b352",
-      "headline": "Cowboys vs. Colts prediction: Everything is on the line for Brian Schottenheimer",
-      "title": "Cowboys vs. Colts prediction: Everything is on the line for Brian Schottenheimer",
-      "url": "https://nypost.com/2026/11/08/betting/cowboys-vs-colts-prediction-nfl-week-9-odds-picks-best-bets/",
-      "link": "https://nypost.com/2026/11/08/betting/cowboys-vs-colts-prediction-nfl-week-9-odds-picks-best-bets/",
-      "excerpt": "Dallas is in desperate need of a win on Sunday. They face a Colts team that completely caved last week against a divison rival the Jaguars in a ridiculous 30-point blowout loss. The Cowboys are just 5.5-point favorites on the road against a Colts team that looked ready to shutter their doors last week. The...",
-      "summary": "Dallas is in desperate need of a win on Sunday. They face a Colts team that completely caved last week against a divison rival the Jaguars in a ridiculous 30-point blowout loss. The Cowboys are just 5.5-point favorites on the road against a Colts team that looked ready to shutter their doors last week. The...",
-      "relative_time": "Sun, 08 Nov 2026 07:30:00 -0500",
-      "published": "Sun, 08 Nov 2026 07:30:00 -0500",
-      "author": "Erich Richter",
+      "id": "b9d53926d03b",
+      "headline": "I haven\u2019t peed in five years \u2014 now I\u2019m forced to use tubes, and doctors are baffled",
+      "title": "I haven\u2019t peed in five years \u2014 now I\u2019m forced to use tubes, and doctors are baffled",
+      "url": "https://nypost.com/2026/11/08/health/a-mom-hasnt-been-able-to-pee-for-5-years-and-uses-a-catheter/",
+      "link": "https://nypost.com/2026/11/08/health/a-mom-hasnt-been-able-to-pee-for-5-years-and-uses-a-catheter/",
+      "excerpt": "At 29, the mom of has to catheterize herself and carry special signs to explain her bathroom needs to strangers.",
+      "summary": "At 29, the mom of has to catheterize herself and carry special signs to explain her bathroom needs to strangers.",
+      "relative_time": "Sun, 08 Nov 2026 11:00:00 -0500",
+      "published": "Sun, 08 Nov 2026 11:00:00 -0500",
+      "author": "SWNS",
       "feed": "New York Post",
       "feedName": "New York Post",
       "feedId": "f35f2eec037f",
       "category": "Global",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fcowboys-colts-prediction.jpg?quality%3D90%26strip%3Dall",
-      "scraped_at": "2026-11-08T12:43:31.451905+00:00"
+      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2F2021-realised-hadnt-weed-since-147685672.jpg",
+      "scraped_at": "2026-11-08T16:02:17.172487+00:00"
     },
     {
-      "id": "b37ce9b9cd02",
-      "headline": "Week 9 might be the worst bunch of starting quarterbacks you\u2019ll ever see",
-      "title": "Week 9 might be the worst bunch of starting quarterbacks you\u2019ll ever see",
-      "url": "https://nypost.com/2026/11/08/sports/nfls-week-9-quarterback-slate-is-an-ugly-sight/",
-      "link": "https://nypost.com/2026/11/08/sports/nfls-week-9-quarterback-slate-is-an-ugly-sight/",
-      "excerpt": "NFL Week 9 is hit by a wave of QB injuries and benchings, forcing teams to rely on backups like Shedeur Sanders, Drew Lock, and Joe Milton III.",
-      "summary": "NFL Week 9 is hit by a wave of QB injuries and benchings, forcing teams to rely on backups like Shedeur Sanders, Drew Lock, and Joe Milton III.",
-      "relative_time": "Sun, 08 Nov 2026 07:30:00 -0500",
-      "published": "Sun, 08 Nov 2026 07:30:00 -0500",
-      "author": "Dylan Svoboda",
+      "id": "af481fbcf986",
+      "headline": "Alexander brothers allegedly bribed reporters for positive coverage of sex-trafficking trial",
+      "title": "Alexander brothers allegedly bribed reporters for positive coverage of sex-trafficking trial",
+      "url": "https://nypost.com/2026/11/08/us-news/alexander-bros-allegedly-paid-writers-for-positive-trial-coverage/",
+      "link": "https://nypost.com/2026/11/08/us-news/alexander-bros-allegedly-paid-writers-for-positive-trial-coverage/",
+      "excerpt": "Journalists Daniel Mael and Frank Parlato deny allegations they accepted up to $15,000 to publish favorable trial coverage of the Alexander brothers.",
+      "summary": "Journalists Daniel Mael and Frank Parlato deny allegations they accepted up to $15,000 to publish favorable trial coverage of the Alexander brothers.",
+      "relative_time": "Sun, 08 Nov 2026 10:53:40 -0500",
+      "published": "Sun, 08 Nov 2026 10:53:40 -0500",
+      "author": "Fox News",
       "feed": "New York Post",
       "feedName": "New York Post",
       "feedId": "f35f2eec037f",
       "category": "Global",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fjoe-fagnano-12-baltimore-ravens-147716099.jpg?w%3D1024",
-      "scraped_at": "2026-11-08T12:43:31.451947+00:00"
+      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2F2024-federal-prosecutors-arrested-oren-145037115.jpg?w%3D1024",
+      "scraped_at": "2026-11-08T16:02:17.172531+00:00"
+    },
+    {
+      "id": "ec61f922408e",
+      "headline": "Trump Makes His Move As Fight For Control Of The RNC Erupts",
+      "title": "Trump Makes His Move As Fight For Control Of The RNC Erupts",
+      "url": "https://100percentfedup.com/trump-makes-his-move-as-fight-control-rnc/?utm_source=rss&utm_medium=rss&utm_campaign=trump-makes-his-move-as-fight-control-rnc",
+      "link": "https://100percentfedup.com/trump-makes-his-move-as-fight-control-rnc/?utm_source=rss&utm_medium=rss&utm_campaign=trump-makes-his-move-as-fight-control-rnc",
+      "excerpt": "President Trump has intervened in a brewing Republican National Committee leadership fight as the GOP regroups from its midterm losses.",
+      "summary": "President Trump has intervened in a brewing Republican National Committee leadership fight as the GOP regroups from its midterm losses.",
+      "relative_time": "Sun, 08 Nov 2026 15:55:00 +0000",
+      "published": "Sun, 08 Nov 2026 15:55:00 +0000",
+      "author": "Isaac",
+      "feed": "100% Fed Up",
+      "feedName": "100% Fed Up",
+      "feedId": "fa340e6e9ab1",
+      "category": "Alternative",
+      "ingestionType": "rss",
+      "sourceGroup": "rss",
+      "imageUrl": "https://100percentfedup.com/wp-content/uploads/2026/11/president-trump-white-house-arcade-1600x900-1.jpg",
+      "scraped_at": "2026-11-08T16:02:17.391177+00:00"
     },
     {
       "id": "e004cf0381db",
@@ -266,7 +286,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://100percentfedup.com/wp-content/uploads/2026/11/ana-reyes-golf-course-ethics-inquiry-1600x900-1.jpg",
-      "scraped_at": "2026-11-08T12:43:31.937232+00:00"
+      "scraped_at": "2026-11-08T16:02:17.391252+00:00"
     },
     {
       "id": "914e8b044f2a",
@@ -286,27 +306,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://100percentfedup.com/wp-content/uploads/2026/11/task-force-iron-gate-centcom-1600x900-1.jpg",
-      "scraped_at": "2026-11-08T12:43:31.937291+00:00"
-    },
-    {
-      "id": "5ad1f0e35f2c",
-      "headline": "Netanyahu Dealt Major Setback As Israel\u2019s President Gives Rival First Shot At Forming Government",
-      "title": "Netanyahu Dealt Major Setback As Israel\u2019s President Gives Rival First Shot At Forming Government",
-      "url": "https://100percentfedup.com/netanyahu-dealt-major-setback-as-israels-president-gives/?utm_source=rss&utm_medium=rss&utm_campaign=netanyahu-dealt-major-setback-as-israels-president-gives",
-      "link": "https://100percentfedup.com/netanyahu-dealt-major-setback-as-israels-president-gives/?utm_source=rss&utm_medium=rss&utm_campaign=netanyahu-dealt-major-setback-as-israels-president-gives",
-      "excerpt": "Israel's president will give Gadi Eisenkot the first chance to build a coalition, but Netanyahu remains in office and the 61-seat test is unresolved.",
-      "summary": "Israel's president will give Gadi Eisenkot the first chance to build a coalition, but Netanyahu remains in office and the 61-seat test is unresolved.",
-      "relative_time": "Sun, 08 Nov 2026 02:20:56 +0000",
-      "published": "Sun, 08 Nov 2026 02:20:56 +0000",
-      "author": "Isaac",
-      "feed": "100% Fed Up",
-      "feedName": "100% Fed Up",
-      "feedId": "fa340e6e9ab1",
-      "category": "Alternative",
-      "ingestionType": "rss",
-      "sourceGroup": "rss",
-      "imageUrl": "https://100percentfedup.com/wp-content/uploads/2026/11/israel-president-herzog-government-mandate-1600x900-1.png",
-      "scraped_at": "2026-11-08T12:43:31.937340+00:00"
+      "scraped_at": "2026-11-08T16:02:17.391315+00:00"
     },
     {
       "id": "b4be178410f3",
@@ -326,7 +326,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://thefederalist.com/wp-content/uploads/2026/11/IMG_3807-1200x675.jpg",
-      "scraped_at": "2026-11-08T12:43:32.050291+00:00"
+      "scraped_at": "2026-11-08T16:02:17.510587+00:00"
     },
     {
       "id": "9d16d9bedec9",
@@ -346,7 +346,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://thefederalist.com/wp-content/uploads/2026/11/Marc-Thiessen-1-1200x675.png",
-      "scraped_at": "2026-11-08T12:43:32.050364+00:00"
+      "scraped_at": "2026-11-08T16:02:17.510676+00:00"
     },
     {
       "id": "9fc16dd7b2eb",
@@ -366,7 +366,27 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://thefederalist.com/wp-content/uploads/2026/11/SCOTUS-1-1200x675.jpg",
-      "scraped_at": "2026-11-08T12:43:32.050426+00:00"
+      "scraped_at": "2026-11-08T16:02:17.510755+00:00"
+    },
+    {
+      "id": "5f5a094519c1",
+      "headline": "Don\u2019t be fooled by Bernie Sanders \u2014 tech won the midterms",
+      "title": "Don\u2019t be fooled by Bernie Sanders \u2014 tech won the midterms",
+      "url": "https://www.theblaze.com/columns/opinion/dont-be-fooled-by-bernie-sanders-tech-won-the-midterms",
+      "link": "https://www.theblaze.com/columns/opinion/dont-be-fooled-by-bernie-sanders-tech-won-the-midterms",
+      "excerpt": "Thanks to the loud noises of a few boldface names on the left, Americans are getting the impression that the Democrats of 2026 are the anti-technology party. With the blue team surging into Congress this election cycle, the logical inference is that the tech industry lost big \u2014 a huge deal for the many voters who had just about resigned themselves to the idea that technology is the one thing that can\u2019t be stopped in America. Drawing this conclusion would be a colossal misread of reality, no matter how sensationalist the headlines about draconian tech crackdown plans coming from Bernie Sanders and company. The left elites do not want to...",
+      "summary": "Thanks to the loud noises of a few boldface names on the left, Americans are getting the impression that the Democrats of 2026 are the anti-technology party. With the blue team surging into Congress this election cycle, the logical inference is that the tech industry lost big \u2014 a huge deal for the many voters who had just about resigned themselves to the idea that technology is the one thing that can\u2019t be stopped in America. Drawing this conclusion would be a colossal misread of reality, no matter how sensationalist the headlines about draconian tech crackdown plans coming from Bernie Sanders and company. The left elites do not want to...",
+      "relative_time": "Sun, 08 Nov 2026 14:30:00 +0000",
+      "published": "Sun, 08 Nov 2026 14:30:00 +0000",
+      "author": "James Poulos",
+      "feed": "The Blaze",
+      "feedName": "The Blaze",
+      "feedId": "ebb74cbdeb82",
+      "category": "Alternative",
+      "ingestionType": "rss",
+      "sourceGroup": "rss",
+      "imageUrl": "https://www.theblaze.com/media-library/dont-be-fooled-by-bernie-sanders-tech-won-the-midterms.jpg?id=68615081&width=980",
+      "scraped_at": "2026-11-08T16:02:17.690696+00:00"
     },
     {
       "id": "153a81aaa508",
@@ -386,7 +406,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://www.theblaze.com/media-library/the-best-caregiver-support-may-come-with-terrible-coffee.jpg?id=68618072&width=980",
-      "scraped_at": "2026-11-08T12:43:32.213843+00:00"
+      "scraped_at": "2026-11-08T16:02:17.691376+00:00"
     },
     {
       "id": "4da8a063e3a1",
@@ -406,38 +426,18 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://www.theblaze.com/media-library/image.jpg?id=68596165&width=980",
-      "scraped_at": "2026-11-08T12:43:32.214412+00:00"
+      "scraped_at": "2026-11-08T16:02:17.692012+00:00"
     },
     {
-      "id": "0bb200e34b0e",
-      "headline": "GOD AND GUNS: The biblical case for armed self-defense",
-      "title": "GOD AND GUNS: The biblical case for armed self-defense",
-      "url": "https://www.theblaze.com/lifestyle/god-and-guns-the-biblical-case-for-armed-self-defense",
-      "link": "https://www.theblaze.com/lifestyle/god-and-guns-the-biblical-case-for-armed-self-defense",
-      "excerpt": "God does not leave His people unarmed and then call the resulting vulnerability \u201cfaith.\u201d From the first organization of Israel after the Exodus to the final instructions Jesus gives His disciples before the cross, Scripture treats the capacity for defensive force as ordinary, necessary, and compatible with obedience. In Numbers 1, God commands Moses to count every male 20 years old and upward who is able to go to war. \u201cTake a census of all the congregation of the children of Israel, by their families, by their fathers\u2019 houses, according to the number of names, every male individually, from 20 years old and above \u2014 all who are able to go to...",
-      "summary": "God does not leave His people unarmed and then call the resulting vulnerability \u201cfaith.\u201d From the first organization of Israel after the Exodus to the final instructions Jesus gives His disciples before the cross, Scripture treats the capacity for defensive force as ordinary, necessary, and compatible with obedience. In Numbers 1, God commands Moses to count every male 20 years old and upward who is able to go to war. \u201cTake a census of all the congregation of the children of Israel, by their families, by their fathers\u2019 houses, according to the number of names, every male individually, from 20 years old and above \u2014 all who are able to go to...",
-      "relative_time": "Sun, 08 Nov 2026 09:30:00 +0000",
-      "published": "Sun, 08 Nov 2026 09:30:00 +0000",
-      "author": "Vik Khanna",
-      "feed": "The Blaze",
-      "feedName": "The Blaze",
-      "feedId": "ebb74cbdeb82",
-      "category": "Alternative",
-      "ingestionType": "rss",
-      "sourceGroup": "rss",
-      "imageUrl": "https://www.theblaze.com/media-library/god-and-guns-the-biblical-case-for-armed-self-defense.jpg?id=68613919&width=980",
-      "scraped_at": "2026-11-08T12:43:32.215249+00:00"
-    },
-    {
-      "id": "e8a3301cd0d4",
-      "headline": "Rocky Mountain Wreckers TV Followed Cheyenne Wreckers During Record 100-MPH Winds",
-      "title": "Rocky Mountain Wreckers TV Followed Cheyenne Wreckers During Record 100-MPH Winds",
-      "url": "https://hotair.com/headlines/2026/11/07/rocky-mountain-wreckers-tv-followed-cheyenne-wreckers-during-record-100-mph-winds-n3820768",
-      "link": "https://hotair.com/headlines/2026/11/07/rocky-mountain-wreckers-tv-followed-cheyenne-wreckers-during-record-100-mph-winds-n3820768",
-      "excerpt": "Rocky Mountain Wreckers TV Followed Cheyenne Wreckers During Record 100-MPH Winds",
-      "summary": "Rocky Mountain Wreckers TV Followed Cheyenne Wreckers During Record 100-MPH Winds",
-      "relative_time": "Sat, 07 Nov 2026 20:20:00 -0500",
-      "published": "Sat, 07 Nov 2026 20:20:00 -0500",
+      "id": "a21e396e56e6",
+      "headline": "Newsom\u2019s Prop 50 Pays Off as GOP Gerrymanders Flop",
+      "title": "Newsom\u2019s Prop 50 Pays Off as GOP Gerrymanders Flop",
+      "url": "https://hotair.com/headlines/2026/11/08/newsoms-prop-50-pays-off-as-gop-gerrymanders-flop-n3820764",
+      "link": "https://hotair.com/headlines/2026/11/08/newsoms-prop-50-pays-off-as-gop-gerrymanders-flop-n3820764",
+      "excerpt": "Newsom\u2019s Prop 50 Pays Off as GOP Gerrymanders Flop",
+      "summary": "Newsom\u2019s Prop 50 Pays Off as GOP Gerrymanders Flop",
+      "relative_time": "Sun, 08 Nov 2026 10:20:00 -0500",
+      "published": "Sun, 08 Nov 2026 10:20:00 -0500",
       "author": "Hot Air",
       "feed": "Hot Air",
       "feedName": "Hot Air",
@@ -446,38 +446,18 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-11-08T12:43:32.317833+00:00"
+      "scraped_at": "2026-11-08T16:02:17.783095+00:00"
     },
     {
-      "id": "cdc43f743313",
-      "headline": "Saturday's Final Word",
-      "title": "Saturday's Final Word",
-      "url": "https://hotair.com/ed-morrissey/2026/11/07/saturdays-final-word-n3820783",
-      "link": "https://hotair.com/ed-morrissey/2026/11/07/saturdays-final-word-n3820783",
-      "excerpt": "Saturday's Final Word",
-      "summary": "Saturday's Final Word",
-      "relative_time": "Sat, 07 Nov 2026 20:00:21 -0500",
-      "published": "Sat, 07 Nov 2026 20:00:21 -0500",
-      "author": "Hot Air",
-      "feed": "Hot Air",
-      "feedName": "Hot Air",
-      "feedId": "9c153127586e",
-      "category": "Alternative",
-      "ingestionType": "rss",
-      "sourceGroup": "rss",
-      "imageUrl": "https://media.townhall.com/cdn/hodl/2026/196/442c6dd6-be94-481c-9595-1dc6e076fbb6.png",
-      "scraped_at": "2026-11-08T12:43:32.317852+00:00"
-    },
-    {
-      "id": "c64d7490d7c2",
-      "headline": "Three Cheers for Melania Trump-Led Ceasefire in Ukraine",
-      "title": "Three Cheers for Melania Trump-Led Ceasefire in Ukraine",
-      "url": "https://hotair.com/headlines/2026/11/07/three-cheers-for-melania-trump-led-ceasefire-in-ukraine-n3820767",
-      "link": "https://hotair.com/headlines/2026/11/07/three-cheers-for-melania-trump-led-ceasefire-in-ukraine-n3820767",
-      "excerpt": "Three Cheers for Melania Trump-Led Ceasefire in Ukraine",
-      "summary": "Three Cheers for Melania Trump-Led Ceasefire in Ukraine",
-      "relative_time": "Sat, 07 Nov 2026 19:40:00 -0500",
-      "published": "Sat, 07 Nov 2026 19:40:00 -0500",
+      "id": "1267d478e4c5",
+      "headline": "Democrats\u2019 \u201cAffordability\u201d Hoax Comes into Full View",
+      "title": "Democrats\u2019 \u201cAffordability\u201d Hoax Comes into Full View",
+      "url": "https://hotair.com/headlines/2026/11/08/democrats-affordability-hoax-comes-into-full-view-n3820763",
+      "link": "https://hotair.com/headlines/2026/11/08/democrats-affordability-hoax-comes-into-full-view-n3820763",
+      "excerpt": "Democrats\u2019 \u201cAffordability\u201d Hoax Comes into Full View",
+      "summary": "Democrats\u2019 \u201cAffordability\u201d Hoax Comes into Full View",
+      "relative_time": "Sun, 08 Nov 2026 09:40:00 -0500",
+      "published": "Sun, 08 Nov 2026 09:40:00 -0500",
       "author": "Hot Air",
       "feed": "Hot Air",
       "feedName": "Hot Air",
@@ -486,7 +466,27 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-11-08T12:43:32.317867+00:00"
+      "scraped_at": "2026-11-08T16:02:17.783126+00:00"
+    },
+    {
+      "id": "416511bcc9c3",
+      "headline": "Why Is There No Accountability for John Thune?",
+      "title": "Why Is There No Accountability for John Thune?",
+      "url": "https://hotair.com/headlines/2026/11/08/why-is-there-no-accountability-for-john-thune-n3820765",
+      "link": "https://hotair.com/headlines/2026/11/08/why-is-there-no-accountability-for-john-thune-n3820765",
+      "excerpt": "Why Is There No Accountability for John Thune?",
+      "summary": "Why Is There No Accountability for John Thune?",
+      "relative_time": "Sun, 08 Nov 2026 09:00:00 -0500",
+      "published": "Sun, 08 Nov 2026 09:00:00 -0500",
+      "author": "Hot Air",
+      "feed": "Hot Air",
+      "feedName": "Hot Air",
+      "feedId": "9c153127586e",
+      "category": "Alternative",
+      "ingestionType": "rss",
+      "sourceGroup": "rss",
+      "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
+      "scraped_at": "2026-11-08T16:02:17.783149+00:00"
     },
     {
       "id": "9ef0305fab12",
@@ -506,7 +506,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-11-08T12:43:32.493669+00:00"
+      "scraped_at": "2026-11-08T16:02:18.095811+00:00"
     },
     {
       "id": "e028eddbda84",
@@ -526,7 +526,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-11-08T12:43:32.493723+00:00"
+      "scraped_at": "2026-11-08T16:02:18.095879+00:00"
     },
     {
       "id": "9b0e73558c63",
@@ -546,7 +546,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-11-08T12:43:32.493773+00:00"
+      "scraped_at": "2026-11-08T16:02:18.095943+00:00"
     },
     {
       "id": "275cab72b42a",
@@ -566,7 +566,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.americanthinker.com/jv/jvb6zggjs6fs3pacfmug_640.jpg",
-      "scraped_at": "2026-11-08T12:43:32.847919+00:00"
+      "scraped_at": "2026-11-08T16:02:18.270261+00:00"
     },
     {
       "id": "d2b98aa1d2a5",
@@ -586,7 +586,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.americanthinker.com/51/517icobogw6znlwscjxg_640.jpg",
-      "scraped_at": "2026-11-08T12:43:32.848162+00:00"
+      "scraped_at": "2026-11-08T16:02:18.270539+00:00"
     },
     {
       "id": "8cd86c857fb0",
@@ -606,27 +606,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.americanthinker.com/z9/z9fualpqehvsuozhkf11_640.jpg",
-      "scraped_at": "2026-11-08T12:43:32.848387+00:00"
-    },
-    {
-      "id": "aa9d4834c816",
-      "headline": "US Economy Adds 165,000 New Jobs in October, Unemployment Rate Dips to 4.1 Percent - The Epoch Times",
-      "title": "US Economy Adds 165,000 New Jobs in October, Unemployment Rate Dips to 4.1 Percent - The Epoch Times",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPQU5iSzBNbmJFY0pmM25KUXh0WHZLWVBmSkRlbHVWalNnWFFxY0tLNGxtMVNmYkpwWTQ0bkdzaDRQb0pjQ3NYaXhSV3c5LTA5QnE3cXl1U3AtLWlhUllLWEpqMGY0TXVBT05jU2w1cUlRMFoyaWh0SnRSZ09CMEEyQ2hqRk5oNExwUHJTQzYtQjlwQlVtZUdTYXNJZ1VxQS1feHd3ZG5vU0ZWc1VmMVd4dFAwRl8tVm83REdjMjJn?oc=5",
-      "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPQU5iSzBNbmJFY0pmM25KUXh0WHZLWVBmSkRlbHVWalNnWFFxY0tLNGxtMVNmYkpwWTQ0bkdzaDRQb0pjQ3NYaXhSV3c5LTA5QnE3cXl1U3AtLWlhUllLWEpqMGY0TXVBT05jU2w1cUlRMFoyaWh0SnRSZ09CMEEyQ2hqRk5oNExwUHJTQzYtQjlwQlVtZUdTYXNJZ1VxQS1feHd3ZG5vU0ZWc1VmMVd4dFAwRl8tVm83REdjMjJn?oc=5",
-      "excerpt": "US Economy Adds 165,000 New Jobs in October, Unemployment Rate Dips to 4.1 Percent The Epoch Times",
-      "summary": "US Economy Adds 165,000 New Jobs in October, Unemployment Rate Dips to 4.1 Percent The Epoch Times",
-      "relative_time": "Fri, 06 Nov 2026 15:45:33 GMT",
-      "published": "Fri, 06 Nov 2026 15:45:33 GMT",
-      "author": "Epoch Times",
-      "feed": "Epoch Times",
-      "feedName": "Epoch Times",
-      "feedId": "0c3ddaca4649",
-      "category": "Alternative",
-      "ingestionType": "rss",
-      "sourceGroup": "rss",
-      "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-11-08T12:43:33.192701+00:00"
+      "scraped_at": "2026-11-08T16:02:18.270819+00:00"
     },
     {
       "id": "983644140dac",
@@ -646,7 +626,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-11-08T12:43:33.192744+00:00"
+      "scraped_at": "2026-11-08T16:02:18.642912+00:00"
     },
     {
       "id": "373547fec632",
@@ -666,7 +646,27 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-11-08T12:43:33.192777+00:00"
+      "scraped_at": "2026-11-08T16:02:18.642969+00:00"
+    },
+    {
+      "id": "9f08d83a04c5",
+      "headline": "Trump Says US Launched New \u2018Minor Strikes\u2019 on Iran - The Epoch Times",
+      "title": "Trump Says US Launched New \u2018Minor Strikes\u2019 on Iran - The Epoch Times",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNeFR1ZE9aRVlKbVJTX0k4THJVNE5ETHI5UE1kb2FMNmpvSEtfX1VfWVNuTXk3NmVtR0lqRTFWNEhuckxscFgxVXNpbTVvLUxSSFhKcFpWaHI0WFJEVXdkRFIwLUxOOUNUMVNyVDZJdV9USHUzUUJNWGlRaUNKYVY0MkFQWnVqcnRhMmJGU2gwUDY1Nm1wR1Jr?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNeFR1ZE9aRVlKbVJTX0k4THJVNE5ETHI5UE1kb2FMNmpvSEtfX1VfWVNuTXk3NmVtR0lqRTFWNEhuckxscFgxVXNpbTVvLUxSSFhKcFpWaHI0WFJEVXdkRFIwLUxOOUNUMVNyVDZJdV9USHUzUUJNWGlRaUNKYVY0MkFQWnVqcnRhMmJGU2gwUDY1Nm1wR1Jr?oc=5",
+      "excerpt": "Trump Says US Launched New \u2018Minor Strikes\u2019 on Iran The Epoch Times",
+      "summary": "Trump Says US Launched New \u2018Minor Strikes\u2019 on Iran The Epoch Times",
+      "relative_time": "Sat, 07 Nov 2026 05:05:02 GMT",
+      "published": "Sat, 07 Nov 2026 05:05:02 GMT",
+      "author": "Epoch Times",
+      "feed": "Epoch Times",
+      "feedName": "Epoch Times",
+      "feedId": "0c3ddaca4649",
+      "category": "Alternative",
+      "ingestionType": "rss",
+      "sourceGroup": "rss",
+      "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
+      "scraped_at": "2026-11-08T16:02:18.643023+00:00"
     },
     {
       "id": "d8ac7bf53cf2",
@@ -686,7 +686,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "",
-      "scraped_at": "2026-11-08T12:43:33.614067+00:00"
+      "scraped_at": "2026-11-08T16:02:18.947806+00:00"
     }
   ],
   "stories": [
@@ -698,8 +698,8 @@
       "link": "https://www.bbc.co.uk/news/articles/cmd7q15drwgeo?at_medium=RSS&at_campaign=rss",
       "excerpt": "Six people were killed in a random shooting in Krakow's main square, and three bodies were later found at the home of the attacker.",
       "summary": "Six people were killed in a random shooting in Krakow's main square, and three bodies were later found at the home of the attacker.",
-      "relative_time": "Sun, 08 Nov 2026 11:22:17 GMT",
-      "published": "Sun, 08 Nov 2026 11:22:17 GMT",
+      "relative_time": "Sun, 08 Nov 2026 14:32:52 GMT",
+      "published": "Sun, 08 Nov 2026 14:32:52 GMT",
       "author": "BBC World News",
       "feed": "BBC World News",
       "feedName": "BBC World News",
@@ -708,7 +708,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/f6c3/live/95455f00-dac5-11f1-bda8-29fb69dbc026.jpg",
-      "scraped_at": "2026-11-08T12:43:30.402328+00:00"
+      "scraped_at": "2026-11-08T16:02:16.054778+00:00"
     },
     {
       "id": "1c8390e0d4fa",
@@ -728,18 +728,18 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/2670/live/bfaac760-dacc-11f1-bda8-29fb69dbc026.jpg",
-      "scraped_at": "2026-11-08T12:43:30.402365+00:00"
+      "scraped_at": "2026-11-08T16:02:16.054828+00:00"
     },
     {
-      "id": "105a464035cb",
-      "headline": "'Trump has cost us': After midterm losses, MAGA asks if it's over - Reuters",
-      "title": "'Trump has cost us': After midterm losses, MAGA asks if it's over - Reuters",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQaTdYU2RDRkZwOVM0SXV4d2VCdExubk1wWngyTG5LOFNRVC1MWUU5NnVkS1FseU0zTlhwRXBRdW1OR2haNHNZcFM5cmVzNWI4cEhadmpDVzdVM2h4YmtuTU1TWFdtRTNMbjdnWGRQaGh2QTZrcnd6U0phWENkTVVNbFJUSWhEZXV2WVU4RWMtV0Vwc2dzQy05Ylp1cjFTZkhoZFVtY3pSTms?oc=5",
-      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQaTdYU2RDRkZwOVM0SXV4d2VCdExubk1wWngyTG5LOFNRVC1MWUU5NnVkS1FseU0zTlhwRXBRdW1OR2haNHNZcFM5cmVzNWI4cEhadmpDVzdVM2h4YmtuTU1TWFdtRTNMbjdnWGRQaGh2QTZrcnd6U0phWENkTVVNbFJUSWhEZXV2WVU4RWMtV0Vwc2dzQy05Ylp1cjFTZkhoZFVtY3pSTms?oc=5",
-      "excerpt": "'Trump has cost us': After midterm losses, MAGA asks if it's over Reuters",
-      "summary": "'Trump has cost us': After midterm losses, MAGA asks if it's over Reuters",
-      "relative_time": "Sun, 08 Nov 2026 11:50:51 GMT",
-      "published": "Sun, 08 Nov 2026 11:50:51 GMT",
+      "id": "3b69908a5dac",
+      "headline": "Anthropic secures $3.4 billion generator deal for AI data centers, FT reports - Reuters",
+      "title": "Anthropic secures $3.4 billion generator deal for AI data centers, FT reports - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNTUktcGxpNENhQ1llV2F3a3V5RUZya0dDc0ZLeFVTZmFqclBqSVhuYkNiSFpSTkkwVnZ2NkFVVEVjQjZPLTJzMGMyU0dnaFg0X1pPd2pMV0ZCWWtMWlpSdTNvckRlaGxLcWs1SnljenEwcUs0N0doWG0yRDdET2o4YlZMVWl6c2lpYWJ1emstVFI1S3VyUXdIdG1xdmZpS3k3ZW5LVUpibUZ0SWxmZUNLNXN0SDBMZE5nWFJZdDlQSQ?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNTUktcGxpNENhQ1llV2F3a3V5RUZya0dDc0ZLeFVTZmFqclBqSVhuYkNiSFpSTkkwVnZ2NkFVVEVjQjZPLTJzMGMyU0dnaFg0X1pPd2pMV0ZCWWtMWlpSdTNvckRlaGxLcWs1SnljenEwcUs0N0doWG0yRDdET2o4YlZMVWl6c2lpYWJ1emstVFI1S3VyUXdIdG1xdmZpS3k3ZW5LVUpibUZ0SWxmZUNLNXN0SDBMZE5nWFJZdDlQSQ?oc=5",
+      "excerpt": "Anthropic secures $3.4 billion generator deal for AI data centers, FT reports Reuters",
+      "summary": "Anthropic secures $3.4 billion generator deal for AI data centers, FT reports Reuters",
+      "relative_time": "Sun, 08 Nov 2026 12:54:10 GMT",
+      "published": "Sun, 08 Nov 2026 12:54:10 GMT",
       "author": "Reuters Top News",
       "feed": "Reuters Top News",
       "feedName": "Reuters Top News",
@@ -748,18 +748,18 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-11-08T12:43:30.507644+00:00"
+      "scraped_at": "2026-11-08T16:02:16.548723+00:00"
     },
     {
-      "id": "9a6d71aafac9",
-      "headline": "Zaporizhzhia nuclear plant relying on generators again after losing external power supply - Reuters",
-      "title": "Zaporizhzhia nuclear plant relying on generators again after losing external power supply - Reuters",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxORkE4VEFBVF9KWlRaRk9HRmtvVGh4cTlxanVleGY5WXZtVnNVSF9LTEQtd0NvbW9YbnE0TndLS052dU5kaUZtRjJrUzZiMXVhVFdWTlNBT2xGV203cTdOREg1YmZDMGRkM081d1hzbjJJWlR4ZG9tTVpSX19rZkVHdGhhRVVmbHVFRVhfVTJnVWFvRVlSYTdLSGRmTHd2WGxMZm15RTNGQ05DLVRXVm1jMDh1Rms?oc=5",
-      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxORkE4VEFBVF9KWlRaRk9HRmtvVGh4cTlxanVleGY5WXZtVnNVSF9LTEQtd0NvbW9YbnE0TndLS052dU5kaUZtRjJrUzZiMXVhVFdWTlNBT2xGV203cTdOREg1YmZDMGRkM081d1hzbjJJWlR4ZG9tTVpSX19rZkVHdGhhRVVmbHVFRVhfVTJnVWFvRVlSYTdLSGRmTHd2WGxMZm15RTNGQ05DLVRXVm1jMDh1Rms?oc=5",
-      "excerpt": "Zaporizhzhia nuclear plant relying on generators again after losing external power supply Reuters",
-      "summary": "Zaporizhzhia nuclear plant relying on generators again after losing external power supply Reuters",
-      "relative_time": "Sun, 08 Nov 2026 11:08:25 GMT",
-      "published": "Sun, 08 Nov 2026 11:08:25 GMT",
+      "id": "02bd6d5245a4",
+      "headline": "Europeans will join Ukraine talks in Abu Dhabi, French foreign minister says - Reuters",
+      "title": "Europeans will join Ukraine talks in Abu Dhabi, French foreign minister says - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQZ2FDU05aeklyMGVkQjdLeFI3el9yaEtTUTF0RUlTQndFY2hZTVM2MFM0ZkhUX0RoUkI3VWxMQmZ0WGdmbmxyNVN2ZVRsQ2J0U29QaEljZXZVdFkwVG9IYmtHaGhIeUYyNXZ2U3didGRaUm95S3M5WEJBMjhCTkRhbndRUURPcXdmUVZWR2pHV0hWT0ZvTEFuUTVKcFdNZElmeklRNHhpWEc4TkQ0VEZ3ZUxqbVJKb0NzaTJ2cnBR?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQZ2FDU05aeklyMGVkQjdLeFI3el9yaEtTUTF0RUlTQndFY2hZTVM2MFM0ZkhUX0RoUkI3VWxMQmZ0WGdmbmxyNVN2ZVRsQ2J0U29QaEljZXZVdFkwVG9IYmtHaGhIeUYyNXZ2U3didGRaUm95S3M5WEJBMjhCTkRhbndRUURPcXdmUVZWR2pHV0hWT0ZvTEFuUTVKcFdNZElmeklRNHhpWEc4TkQ0VEZ3ZUxqbVJKb0NzaTJ2cnBR?oc=5",
+      "excerpt": "Europeans will join Ukraine talks in Abu Dhabi, French foreign minister says Reuters",
+      "summary": "Europeans will join Ukraine talks in Abu Dhabi, French foreign minister says Reuters",
+      "relative_time": "Sun, 08 Nov 2026 12:07:25 GMT",
+      "published": "Sun, 08 Nov 2026 12:07:25 GMT",
       "author": "Reuters Top News",
       "feed": "Reuters Top News",
       "feedName": "Reuters Top News",
@@ -768,7 +768,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-11-08T12:43:30.507688+00:00"
+      "scraped_at": "2026-11-08T16:02:16.548777+00:00"
     },
     {
       "id": "aa6217aafb81",
@@ -788,7 +788,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://i.dailymail.com/1s/2026/11/06/10/112344101-0-image-a-6_1793962114278.jpg",
-      "scraped_at": "2026-11-08T12:43:30.704137+00:00"
+      "scraped_at": "2026-11-08T16:02:17.043525+00:00"
     },
     {
       "id": "6373c4ad0b98",
@@ -808,27 +808,27 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://i.dailymail.com/1s/2026/11/05/23/112336755-0-image-a-9_1793921972535.jpg",
-      "scraped_at": "2026-11-08T12:43:30.704197+00:00"
+      "scraped_at": "2026-11-08T16:02:17.043601+00:00"
     },
     {
-      "id": "22049c54e938",
-      "headline": "Giants vs. Eagles: Preview, prediction, what to watch for in Week 9",
-      "title": "Giants vs. Eagles: Preview, prediction, what to watch for in Week 9",
-      "url": "https://nypost.com/2026/11/08/sports/giants-vs-eagles-preview-prediction-what-to-watch-for-in-week-9/",
-      "link": "https://nypost.com/2026/11/08/sports/giants-vs-eagles-preview-prediction-what-to-watch-for-in-week-9/",
-      "excerpt": "An inside look at Sunday's Giants-Eagles matchup at Lincoln Financial Field in Philadelphia:",
-      "summary": "An inside look at Sunday's Giants-Eagles matchup at Lincoln Financial Field in Philadelphia:",
-      "relative_time": "Sun, 08 Nov 2026 07:30:00 -0500",
-      "published": "Sun, 08 Nov 2026 07:30:00 -0500",
-      "author": "Paul Schwartz",
+      "id": "b5d72240c6fc",
+      "headline": "Is \u2018Tracker\u2019 On Tonight? Here\u2019s When \u2018Tracker\u2019 Returns To CBS With New Episodes",
+      "title": "Is \u2018Tracker\u2019 On Tonight? Here\u2019s When \u2018Tracker\u2019 Returns To CBS With New Episodes",
+      "url": "https://decider.com/2026/11/08/is-tracker-on-tonight-cbs-tracker-season-4-episode-6-release-date/",
+      "link": "https://decider.com/2026/11/08/is-tracker-on-tonight-cbs-tracker-season-4-episode-6-release-date/",
+      "excerpt": "Here's when Tracker will be back-er.",
+      "summary": "Here's when Tracker will be back-er.",
+      "relative_time": "Sun, 08 Nov 2026 11:00:00 -0500",
+      "published": "Sun, 08 Nov 2026 11:00:00 -0500",
+      "author": "mliss1578",
       "feed": "New York Post",
       "feedName": "New York Post",
       "feedId": "f35f2eec037f",
       "category": "Global",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2FQuinyon-Mitchell.jpg?w%3D1024",
-      "scraped_at": "2026-11-08T12:43:31.451840+00:00"
+      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fjustin-hartley.jpg?quality%3D90%26strip%3Dall",
+      "scraped_at": "2026-11-08T16:02:17.172429+00:00"
     },
     {
       "id": "d8ac7bf53cf2",
@@ -848,7 +848,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "",
-      "scraped_at": "2026-11-08T12:43:33.614067+00:00"
+      "scraped_at": "2026-11-08T16:02:18.947806+00:00"
     }
   ],
   "raw_summary": "### What We Know So Far After Krakow Gun Attack\n**Source:** BBC World News\n**Summary:** A shooting in the main square of Krakow, Poland, resulted in six deaths and left 15 people injured. Following the public attack, law enforcement discovered three additional bodies at the gunman's home. Police are actively investigating the motives behind the incident.\n**Key Theme:** Mass Shooting\n\n### Houthis Say at Least 33 Killed in Saudi Air Strike\n**Source:** BBC World News\n**Summary:** Houthi officials report that an air strike conducted by a Saudi-led coalition has killed at least 33 people in Yemen. Saudi Arabia, which commands the coalition forces fighting the Houthi movement, has not officially responded to the claims. \n**Key Theme:** Military Conflict\n\n### 'Trump Has Cost Us': After Midterm Losses, MAGA Asks If It's Over\n**Source:** Reuters Top News\n**Summary:** Conservative figures within the \"Make America Great Again\" movement are reassessing former President Donald Trump's role in the Republican Party following recent midterm election losses. The electoral setbacks have prompted internal debate over the future direction of the movement and its leadership.\n**Key Theme:** US Politics\n\n### Zaporizhzhia Nuclear Plant Relying on Generators Again After Losing External Power Supply\n**Source:** Reuters Top News\n**Summary:** Ukraine's Zaporizhzhia nuclear power plant has been forced to rely on emergency diesel generators after losing its connection to external electrical grid power. The loss of outside electricity poses ongoing security and operational challenges for the facility amid the regional conflict.\n**Key Theme:** Nuclear Safety\n\n### Prince Harry Tells Audience Off for Filming Him on Their Phones During Surprise Speech in London\n**Source:** Daily Mail UK\n**Summary:** Prince Harry delivered an unannounced speech at the Wanderlust Reader Travel Awards in London on behalf of his sustainable travel coalition, Travalyst. During his appearance, the Duke of Sussex reprimanded members of the audience for recording him on their mobile phones. The event took place shortly before his planned departure to Europe with Meghan Markle.\n**Key Theme:** Royalty\n\n### Husband Assaulted by Wife Following Pub Argument Featured in Court Hearing\n**Source:** Daily Mail UK\n**Summary:** Details emerged in court regarding a domestic assault involving Alison Moore and her husband at their UK farmhouse. The incident reportedly escalated after an argument in which the victim was blamed for not defending his wife when local pub staff refused her service. \n**Key Theme:** Domestic Crime\n\n### Giants vs. Eagles: Preview, Prediction, What to Watch for in Week 9\n**Source:** New York Post\n**Summary:** The New York Giants prepare to play the Philadelphia Eagles at Lincoln Financial Field for a Week 9 NFL matchup. The preview highlights tactical match-ups, key players to watch, and statistical predictions for the game.\n**Key Theme:** Sports\n\n### TV News Hourly Summary \u00b7 Nov 8, 10:03 UTC\n**Source:** Internet Archive TV News\n**Summary:** An hourly broadcast summary reports ongoing U.S. midterm vote counting in key states, alongside policy updates such as Houston limiting local ICE cooperation. Globally, the report covers the Krakow shooting, Israeli political leadership developments, and continued strikes in Riyadh and Ukraine.\n**Key Theme:** World News",
@@ -857,5 +857,6 @@
   "current_html_path": "output/current/index.html",
   "data_current_html_path": "data/current/index.html",
   "archive_html_path": "output/archive/2026-11-08/index.html",
-  "data_archive_html_path": "data/archive/2026-11-08/index.html"
+  "data_archive_html_path": "data/archive/2026-11-08/index.html",
+  "feed_hash": "124fc78976346d3896ee95ffdfd2b271"
 }
