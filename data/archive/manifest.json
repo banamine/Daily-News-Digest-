@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-11-08",
+    "timestamp": "2026-11-08T12:43:44.243059+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "What we know so far after Krakow gun attack",
+      "Houthis say at least 33 killed in Saudi air strike",
+      "'Trump has cost us': After midterm losses, MAGA asks if it's over - Reuters",
+      "Zaporizhzhia nuclear plant relying on generators again after losing external power supply - Reuters",
+      "Prince Harry tells audience off for filming him on their phones as he gives surprise speech in London before heading to Europe with Meghan"
+    ],
+    "archive_html_path": "data/archive/2026-11-08/index.html",
+    "data_json_path": "data/archive/2026-11-08/data.json"
+  },
+  {
     "date": "2026-11-07",
     "timestamp": "2026-11-07T12:25:33.671135+00:00",
     "stories_count": 8,

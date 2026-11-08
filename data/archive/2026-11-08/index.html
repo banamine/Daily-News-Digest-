@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Intelligence Briefing – 2026-11-08</title>
+    <style>
+        :root {
+            --bg: #0f1115;
+            --card: #1a1d24;
+            --text: #e6e8ec;
+            --muted: #9ba1ad;
+            --accent: #3b82f6;
+            --border: #2a2e38;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; padding: 2rem 1rem; }
+        .container { max-width: 960px; margin: 0 auto; }
+        header { text-align: center; margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+        header h1 { font-size: 2.2rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 0.4rem; color: #ffffff; }
+        header .date { color: var(--accent); font-size: 1rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+        
+        .hero-image { width: 100%; border-radius: 16px; overflow: hidden; margin-bottom: 2.5rem; box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6); border: 1px solid var(--border); background: #0b0f19; }
+        
+        /* Flexible Photo Collage Component */
+        .collage-wrapper { position: relative; width: 100%; }
+        .collage-header-pill {
+            position: absolute; top: 14px; left: 14px; z-index: 10;
+            background: rgba(15, 23, 42, 0.88); backdrop-filter: blur(8px);
+            border: 1px solid rgba(56, 189, 248, 0.35); color: #38bdf8;
+            padding: 5px 12px; border-radius: 999px; font-size: 11px; font-weight: 800;
+            letter-spacing: 0.5px; display: flex; align-items: center; gap: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        }
+        .collage-container {
+            display: grid; gap: 8px; background: #090d16; padding: 8px; border-radius: 16px; min-height: 280px;
+        }
+        .collage-container.collage-count-1 { grid-template-columns: 1fr; grid-template-rows: 360px; }
+        .collage-container.collage-count-1 .hero-tile { grid-row: auto; }
+
+        .collage-container.collage-count-2 { grid-template-columns: 1fr 1fr; grid-template-rows: 320px; }
+        .collage-container.collage-count-2 .hero-tile { grid-row: auto; }
+
+        .collage-container.collage-count-3 { grid-template-columns: 1.6fr 1fr; grid-template-rows: 170px 170px; }
+        .collage-container.collage-count-3 .hero-tile { grid-row: span 2; }
+
+        .collage-container.collage-count-4 { grid-template-columns: 1.6fr 1fr 1fr; grid-template-rows: 170px 170px; }
+        .collage-container.collage-count-4 .hero-tile { grid-row: span 2; }
+        .collage-container.collage-count-4 .collage-tile:nth-child(4) { grid-column: span 2; }
+
+        .collage-container.collage-count-5 { grid-template-columns: 1.8fr 1fr 1fr; grid-template-rows: 180px 180px; }
+        .collage-container.collage-count-5 .hero-tile { grid-row: span 2; }
+
+        @media (max-width: 768px) {
+            .collage-container,
+            .collage-container.collage-count-2,
+            .collage-container.collage-count-3,
+            .collage-container.collage-count-4,
+            .collage-container.collage-count-5 {
+                grid-template-columns: 1fr; grid-template-rows: auto;
+            }
+            .collage-tile, .hero-tile { min-height: 180px; }
+        }
+        .collage-tile {
+            position: relative; border-radius: 10px; overflow: hidden; background: #131927;
+            border: 1px solid rgba(255, 255, 255, 0.08); transition: transform 0.3s ease;
+        }
+        .collage-tile.hero-tile { grid-row: span 2; }
+        .collage-tile img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
+        .collage-tile:hover img { transform: scale(1.06); }
+        .collage-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(to top, rgba(11, 15, 23, 0.95) 0%, rgba(11, 15, 23, 0.2) 60%, transparent 100%);
+            display: flex; flex-direction: column; justify-content: flex-end; padding: 12px;
+        }
+        .collage-badge {
+            align-self: flex-start; background: rgba(56, 189, 248, 0.2); color: #38bdf8;
+            border: 1px solid rgba(56, 189, 248, 0.4); font-size: 10px; font-weight: 700;
+            text-transform: uppercase; padding: 2px 8px; border-radius: 999px; margin-bottom: 6px;
+        }
+        .collage-badge.hero-badge { background: rgba(16, 185, 129, 0.2); color: #34d399; border-color: rgba(16, 185, 129, 0.4); }
+        .collage-title { color: #ffffff; font-size: 12px; font-weight: 700; line-height: 1.35; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        .hero-tile .collage-title { font-size: 17px; }
+
+        .stories { display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 3rem; }
+        .story { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem; }
+        .story h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: #f1f3f5; }
+        .story-body { color: var(--muted); font-size: 0.98rem; overflow-wrap: anywhere; word-break: break-word; }
+        .story h2, .mini-card h3, .mini-card p { overflow-wrap: anywhere; }
+        .container { min-width: 0; max-width: 100%; }
+        .section-title { font-size: 1.3rem; font-weight: 800; color: var(--accent); margin: 2rem 0 1rem; border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; }
+        .segmented-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
+        .mini-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+        .mini-card.scraped { border-left: 3px solid #8b5cf6; }
+        .mini-card.rss { border-left: 3px solid #3b82f6; }
+        .source-tag { font-size: 0.75rem; font-weight: bold; color: var(--accent); margin-bottom: 0.4rem; }
+        .mini-card h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.4rem; }
+        .mini-card h3 a { color: #f1f3f5; text-decoration: none; }
+        .mini-card h3 a:hover { text-decoration: underline; color: var(--accent); }
+        .mini-card p { font-size: 0.82rem; color: var(--muted); line-height: 1.4; }
+        footer { text-align: center; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="date">2026-11-08</div>
+            <h1>Daily Intelligence Briefing</h1>
+        </header>
+
+        <div class="hero-image">
+            
+                
+    <div class="collage-wrapper">
+        <div class="collage-header-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7"/><path d="M16 5h5v5"/><path d="m21 5-9 9"/></svg>
+            <span>Parsed Feeds Mixed Photo Collage (5 Photos)</span>
+        </div>
+        <div class="collage-container collage-count-5">
+            <div class="collage-tile hero-tile">
+                <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/f6c3/live/95455f00-dac5-11f1-bda8-29fb69dbc026.jpg" alt="What we know so far after Krakow gun attack" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+                <div class="collage-overlay">
+                    <span class="collage-badge hero-badge">BBC World News</span>
+                    <h3 class="collage-title hero-title">What we know so far after Krakow gun attack</h3>
+                </div>
+            </div>
+            
+        <div class="collage-tile">
+            <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/2670/live/bfaac760-dacc-11f1-bda8-29fb69dbc026.jpg" alt="Houthis say at least 33 killed in Saudi air strike" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">BBC World News</span>
+                <h4 class="collage-title">Houthis say at least 33 killed in Saudi air strike</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d485/live/0685e840-dab9-11f1-b441-2b33b063138f.jpg" alt="&#x27;Flat&#x27;, &#x27;tired&#x27;, &#x27;cynical&#x27;: Unusually gloomy Kiwis deliver New Zealand&#x27;s tightest election in years" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">BBC World News</span>
+                <h4 class="collage-title">&#x27;Flat&#x27;, &#x27;tired&#x27;, &#x27;cynical&#x27;: Unusually gloomy Kiwis deliver New Zealand&#x27;s tightest election in years</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="&#x27;Trump has cost us&#x27;: After midterm losses, MAGA asks if it&#x27;s over - Reuters" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">Reuters Top News</span>
+                <h4 class="collage-title">&#x27;Trump has cost us&#x27;: After midterm losses, MAGA asks if it&#x27;s over - Reuters</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Zaporizhzhia nuclear plant relying on generators again after losing external power supply - Reuters" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">Reuters Top News</span>
+                <h4 class="collage-title">Zaporizhzhia nuclear plant relying on generators again after losing external power supply - Reuters</h4>
+            </div>
+        </div>
+        
+        </div>
+    </div>
+    
+            
+        </div>
+
+        <main class="stories">
+            
+        <div class="story">
+            <h2>What We Know So Far After Krakow Gun Attack</h2>
+            <div class="story-body"><strong>Source:</strong> BBC World News<br><strong>Summary:</strong> A shooting in the main square of Krakow, Poland, resulted in six deaths and left 15 people injured. Following the public attack, law enforcement discovered three additional bodies at the gunman&#x27;s home. Police are actively investigating the motives behind the incident.<br><strong>Key Theme:</strong> Mass Shooting</div>
+        </div>
+        
+        <div class="story">
+            <h2>Houthis Say at Least 33 Killed in Saudi Air Strike</h2>
+            <div class="story-body"><strong>Source:</strong> BBC World News<br><strong>Summary:</strong> Houthi officials report that an air strike conducted by a Saudi-led coalition has killed at least 33 people in Yemen. Saudi Arabia, which commands the coalition forces fighting the Houthi movement, has not officially responded to the claims.<br><strong>Key Theme:</strong> Military Conflict</div>
+        </div>
+        
+        <div class="story">
+            <h2>&#x27;Trump Has Cost Us&#x27;: After Midterm Losses, MAGA Asks If It&#x27;s Over</h2>
+            <div class="story-body"><strong>Source:</strong> Reuters Top News<br><strong>Summary:</strong> Conservative figures within the &quot;Make America Great Again&quot; movement are reassessing former President Donald Trump&#x27;s role in the Republican Party following recent midterm election losses. The electoral setbacks have prompted internal debate over the future direction of the movement and its leadership.<br><strong>Key Theme:</strong> US Politics</div>
+        </div>
+        
+        <div class="story">
+            <h2>Zaporizhzhia Nuclear Plant Relying on Generators Again After Losing External Power Supply</h2>
+            <div class="story-body"><strong>Source:</strong> Reuters Top News<br><strong>Summary:</strong> Ukraine&#x27;s Zaporizhzhia nuclear power plant has been forced to rely on emergency diesel generators after losing its connection to external electrical grid power. The loss of outside electricity poses ongoing security and operational challenges for the facility amid the regional conflict.<br><strong>Key Theme:</strong> Nuclear Safety</div>
+        </div>
+        
+        <div class="story">
+            <h2>Prince Harry Tells Audience Off for Filming Him on Their Phones During Surprise Speech in London</h2>
+            <div class="story-body"><strong>Source:</strong> Daily Mail UK<br><strong>Summary:</strong> Prince Harry delivered an unannounced speech at the Wanderlust Reader Travel Awards in London on behalf of his sustainable travel coalition, Travalyst. During his appearance, the Duke of Sussex reprimanded members of the audience for recording him on their mobile phones. The event took place shortly before his planned departure to Europe with Meghan Markle.<br><strong>Key Theme:</strong> Royalty</div>
+        </div>
+        
+        <div class="story">
+            <h2>Husband Assaulted by Wife Following Pub Argument Featured in Court Hearing</h2>
+            <div class="story-body"><strong>Source:</strong> Daily Mail UK<br><strong>Summary:</strong> Details emerged in court regarding a domestic assault involving Alison Moore and her husband at their UK farmhouse. The incident reportedly escalated after an argument in which the victim was blamed for not defending his wife when local pub staff refused her service.<br><strong>Key Theme:</strong> Domestic Crime</div>
+        </div>
+        
+        <div class="story">
+            <h2>Giants vs. Eagles: Preview, Prediction, What to Watch for in Week 9</h2>
+            <div class="story-body"><strong>Source:</strong> New York Post<br><strong>Summary:</strong> The New York Giants prepare to play the Philadelphia Eagles at Lincoln Financial Field for a Week 9 NFL matchup. The preview highlights tactical match-ups, key players to watch, and statistical predictions for the game.<br><strong>Key Theme:</strong> Sports</div>
+        </div>
+        
+        <div class="story">
+            <h2>TV News Hourly Summary · Nov 8, 10:03 UTC</h2>
+            <div class="story-body"><strong>Source:</strong> Internet Archive TV News<br><strong>Summary:</strong> An hourly broadcast summary reports ongoing U.S. midterm vote counting in key states, alongside policy updates such as Houston limiting local ICE cooperation. Globally, the report covers the Krakow shooting, Israeli political leadership developments, and continued strikes in Riyadh and Ukraine.<br><strong>Key Theme:</strong> World News</div>
+        </div>
+        
+        </main>
+
+        
+        <div class='section-title'>Global &amp; Alternative RSS Feeds</div><div class='segmented-grid'>
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/articles/cmd7q15drwgeo?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>What we know so far after Krakow gun attack</a></h3>
+                <p>Six people were killed in a random shooting in Krakow&#x27;s main square, and three bodies were later found at the home of the attacker....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/articles/c65yn1v99ypmo?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>Houthis say at least 33 killed in Saudi air strike</a></h3>
+                <p>Saudi Arabia, which leads a coalition fighting the Houthis in Yemen, has not commented....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/articles/cxr5yyg2nj9eo?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>&#x27;Flat&#x27;, &#x27;tired&#x27;, &#x27;cynical&#x27;: Unusually gloomy Kiwis deliver New Zealand&#x27;s tightest election in years</a></h3>
+                <p>The national mood is low, and faith in politics even lower - with voters deserting the major parties at the polls....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMiqAFBVV95cUxQaTdYU2RDRkZwOVM0SXV4d2VCdExubk1wWngyTG5LOFNRVC1MWUU5NnVkS1FseU0zTlhwRXBRdW1OR2haNHNZcFM5cmVzNWI4cEhadmpDVzdVM2h4YmtuTU1TWFdtRTNMbjdnWGRQaGh2QTZrcnd6U0phWENkTVVNbFJUSWhEZXV2WVU4RWMtV0Vwc2dzQy05Ylp1cjFTZkhoZFVtY3pSTms?oc=5' target='_blank' rel='noopener'>&#x27;Trump has cost us&#x27;: After midterm losses, MAGA asks if it&#x27;s over - Reuters</a></h3>
+                <p>&#x27;Trump has cost us&#x27;: After midterm losses, MAGA asks if it&#x27;s over Reuters...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMitAFBVV95cUxORkE4VEFBVF9KWlRaRk9HRmtvVGh4cTlxanVleGY5WXZtVnNVSF9LTEQtd0NvbW9YbnE0TndLS052dU5kaUZtRjJrUzZiMXVhVFdWTlNBT2xGV203cTdOREg1YmZDMGRkM081d1hzbjJJWlR4ZG9tTVpSX19rZkVHdGhhRVVmbHVFRVhfVTJnVWFvRVlSYTdLSGRmTHd2WGxMZm15RTNGQ05DLVRXVm1jMDh1Rms?oc=5' target='_blank' rel='noopener'>Zaporizhzhia nuclear plant relying on generators again after losing external power supply - Reuters</a></h3>
+                <p>Zaporizhzhia nuclear plant relying on generators again after losing external power supply Reuters...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMisAFBVV95cUxNVjUxVkw1TWRaU0FNWjdiZlUyUk9KcmFRMjlobjltclhvd2xEMFZic2QyLVJ1U2M4WEtOVWJ0S3J6WHdkT19pcUJwQml5Z3UyLV9PalUtQWV5X1J0dzJVMnFyc2pDQllBWTNKNTh2dVNkUVFMQWZ0OWlnUFp0Tm5LZmt0YXItSUprX09QVE93dElVd082LXpyck04QU0xemMySklEV0xSVDZRcWx5LVdUWA?oc=5' target='_blank' rel='noopener'>Poland mourns victims of Krakow mass shooting as security fears grow - Reuters</a></h3>
+                <p>Poland mourns victims of Krakow mass shooting as security fears grow Reuters...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/news/article-16271007/Prince-Harry-audience-phones-surprise-speech-London.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>Prince Harry tells audience off for filming him on their phones as he gives surprise speech in London before heading to Europe with Meghan</a></h3>
+                <p>The Duke of Sussex, 42, was speaking at the Wanderlust Reader Travel Awards on behalf of his non-profit initiative Travalyst, a coalition which focuses on the sustainability of travel....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/news/article-16270227/Pictured-husband-wife-smeared-faeces-mouth.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>Pictured: Husband whose wife smeared her own faeces in his mouth at their £1million farmhouse after a row &#x27;over him talking s***&#x27;</a></h3>
+                <p>Alison Moore carried out a sickening &#x27;pre-meditated&#x27; attack on her partner Rob for &#x27;not standing up for her&#x27; when staff refused to serve her at a pub, a court heard....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/news/article-16269367/Meghan-Markle-father-Thomas-arrest-child-porn.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>Meghan Markle&#x27;s estranged dad Thomas is charged after Daily Mail reported him to the FBI and new storage unit containing &#x27;photos of him abusing girls&#x27; is found in LA</a></h3>
+                <p>The Duchess of Sussex&#x27;s estranged father Thomas Markle, 82, was arrested in Florida on Friday after his trove of alleged child pornography was discovered in storage units in Los Angeles....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>New York Post</div>
+                <h3><a href='https://nypost.com/2026/11/08/sports/giants-vs-eagles-preview-prediction-what-to-watch-for-in-week-9/' target='_blank' rel='noopener'>Giants vs. Eagles: Preview, prediction, what to watch for in Week 9</a></h3>
+                <p>An inside look at Sunday&#x27;s Giants-Eagles matchup at Lincoln Financial Field in Philadelphia:...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>New York Post</div>
+                <h3><a href='https://nypost.com/2026/11/08/betting/cowboys-vs-colts-prediction-nfl-week-9-odds-picks-best-bets/' target='_blank' rel='noopener'>Cowboys vs. Colts prediction: Everything is on the line for Brian Schottenheimer</a></h3>
+                <p>Dallas is in desperate need of a win on Sunday. They face a Colts team that completely caved last week against a divison rival the Jaguars in a ridiculous 30-point blowout loss. The Cowboys are just 5...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>New York Post</div>
+                <h3><a href='https://nypost.com/2026/11/08/sports/nfls-week-9-quarterback-slate-is-an-ugly-sight/' target='_blank' rel='noopener'>Week 9 might be the worst bunch of starting quarterbacks you’ll ever see</a></h3>
+                <p>NFL Week 9 is hit by a wave of QB injuries and benchings, forcing teams to rely on backups like Shedeur Sanders, Drew Lock, and Joe Milton III....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/biden-appointed-judge-moves-tap-trump-era-prosecutor/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=biden-appointed-judge-moves-tap-trump-era-prosecutor' target='_blank' rel='noopener'>Biden-Appointed Judge Moves To Tap Trump-Era Prosecutor For DOJ Ethics Probe</a></h3>
+                <p>Judge Ana Reyes plans to tap Trump-era U.S. Attorney Jessie Liu to examine possible ethics violations in the East Potomac golf course fight....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/u-s-opens-new-front-against-iran-task/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=u-s-opens-new-front-against-iran-task' target='_blank' rel='noopener'>U.S. Opens New Front Against Iran With ‘Task Force Iron Gate’</a></h3>
+                <p>CENTCOM has launched a new interagency task force aimed at choking off Iranian weapons, sanctioned materials and illicit revenue across land routes and the Caspian Sea....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/netanyahu-dealt-major-setback-as-israels-president-gives/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=netanyahu-dealt-major-setback-as-israels-president-gives' target='_blank' rel='noopener'>Netanyahu Dealt Major Setback As Israel’s President Gives Rival First Shot At Forming Government</a></h3>
+                <p>Israel&#x27;s president will give Gadi Eisenkot the first chance to build a coalition, but Netanyahu remains in office and the 61-seat test is unresolved....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/11/06/stephen-miller-to-take-over-as-white-house-chief-of-staff/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=stephen-miller-to-take-over-as-white-house-chief-of-staff' target='_blank' rel='noopener'>Stephen Miller To Take Over As White House Chief Of Staff</a></h3>
+                <p>Miller has demonstrated laser focus on mass deportations and how government policy needs to benefit the American people....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/11/06/neocon-marc-thiessen-denies-reality-and-lies-about-j-d-vance/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=neocon-marc-thiessen-denies-reality-and-lies-about-j-d-vance' target='_blank' rel='noopener'>Neocon Marc Thiessen Denies Reality And Lies About J.D. Vance</a></h3>
+                <p>That Washington Post content creator Marc Thiessen is out here lying wouldn’t be worth commenting on if not for his reportedly being one of the main people who advised President Trump that striking Ir...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/11/06/doj-initiates-criminal-probe-into-supreme-court-dobbs-leak-report/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=doj-initiates-criminal-probe-into-supreme-court-dobbs-leak-report' target='_blank' rel='noopener'>DOJ Initiates Criminal Probe Into Supreme Court Dobbs Leak: Report</a></h3>
+                <p>The Department of Justice is pursuing a criminal investigation into the individual(s) responsible for leaking the Supreme Court’s Dobbs decision, according to a new report. The New York Times first re...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/columns/opinion/the-best-caregiver-support-may-come-with-terrible-coffee' target='_blank' rel='noopener'>The best caregiver support may come with terrible coffee</a></h3>
+                <p>The election is over. People will spend weeks picking apart the results. Meanwhile, family caregivers are sorting medications, helping someone get dressed, and having late-night conversations with the...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/shows/live-free-with-josh-howerton/louie-giglio-josh-howerton-get-real-about-battling-anxiety' target='_blank' rel='noopener'>Louie Giglio and Josh Howerton get real about battling anxiety — ‘I thought I was going to die’</a></h3>
+                <p>There was a time when Josh Howerton — BlazeTV host of “Live Free” and pastor of Lakepointe Church — thought anxiety attacks were “a Gen Z way to say you had a bad day.” But when a crushing season of a...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/lifestyle/god-and-guns-the-biblical-case-for-armed-self-defense' target='_blank' rel='noopener'>GOD AND GUNS: The biblical case for armed self-defense</a></h3>
+                <p>God does not leave His people unarmed and then call the resulting vulnerability “faith.” From the first organization of Israel after the Exodus to the final instructions Jesus gives His disciples befo...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/headlines/2026/11/07/rocky-mountain-wreckers-tv-followed-cheyenne-wreckers-during-record-100-mph-winds-n3820768' target='_blank' rel='noopener'>Rocky Mountain Wreckers TV Followed Cheyenne Wreckers During Record 100-MPH Winds</a></h3>
+                <p>Rocky Mountain Wreckers TV Followed Cheyenne Wreckers During Record 100-MPH Winds...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/ed-morrissey/2026/11/07/saturdays-final-word-n3820783' target='_blank' rel='noopener'>Saturday&#x27;s Final Word</a></h3>
+                <p>Saturday&#x27;s Final Word...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/headlines/2026/11/07/three-cheers-for-melania-trump-led-ceasefire-in-ukraine-n3820767' target='_blank' rel='noopener'>Three Cheers for Melania Trump-Led Ceasefire in Ukraine</a></h3>
+                <p>Three Cheers for Melania Trump-Led Ceasefire in Ukraine...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Judicial Watch</div>
+                <h3><a href='https://www.judicialwatch.org/investigates-jack-smith-teams-security-violations/' target='_blank' rel='noopener'>Judicial Watch Investigates Jack Smith Team’s Security Violations</a></h3>
+                <p>Judicial Watch Sues Over Jack Smith Team’s Security Incidents Judicial Watch Sues for FBI’s ‘Rosetta Stone’ Report on…...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Judicial Watch</div>
+                <h3><a href='https://www.judicialwatch.org/sues-defense-dept-covid-19-origins-investigation-records/' target='_blank' rel='noopener'>Judicial Watch Sues Defense Dept. for Covid-19 Origins Investigation Records</a></h3>
+                <p>(Washington, DC) – Judicial Watch announced today that it filed a Freedom of Information Act (FOIA) lawsuit against…...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Judicial Watch</div>
+                <h3><a href='https://www.judicialwatch.org/sues-justice-records-jack-smith-teams-classified-information-security-incidents/' target='_blank' rel='noopener'>Judicial Watch Sues Justice Dept. for Records on Jack Smith Team’s Classified-Information Security I...</a></h3>
+                <p>(Washington, DC) – Judicial Watch announced today that it filed a Freedom of Information Act (FOIA) lawsuit against…...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/11/the-character-of-freedom/' target='_blank' rel='noopener'>The Character Of Freedom</a></h3>
+                <p>Photo Credit: Luis Gonzalez By Luis Gonzalez A free society cannot survive when its citizens surrender the responsibilities that make freedom possible....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/11/democrats-in-and-out-of-the-media-live-in-a-fantasy-world/' target='_blank' rel='noopener'>Democrats (In And Out Of The Media) Live In A Fantasy World</a></h3>
+                <p>Photo Credit: AI for American Thinker By Jack Hellner Unfortunately, feckless Republicans made it possible for them to win....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/11/slow-learners/' target='_blank' rel='noopener'>Slow Learners</a></h3>
+                <p>Photo Credit: Thomas COuture By Paul E. Scates Americans, as brilliant and insightful as we like to think we are, can be so dead wrong about the real-world consequences of something like sexual immora...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMivgFBVV95cUxPQU5iSzBNbmJFY0pmM25KUXh0WHZLWVBmSkRlbHVWalNnWFFxY0tLNGxtMVNmYkpwWTQ0bkdzaDRQb0pjQ3NYaXhSV3c5LTA5QnE3cXl1U3AtLWlhUllLWEpqMGY0TXVBT05jU2w1cUlRMFoyaWh0SnRSZ09CMEEyQ2hqRk5oNExwUHJTQzYtQjlwQlVtZUdTYXNJZ1VxQS1feHd3ZG5vU0ZWc1VmMVd4dFAwRl8tVm83REdjMjJn?oc=5' target='_blank' rel='noopener'>US Economy Adds 165,000 New Jobs in October, Unemployment Rate Dips to 4.1 Percent - The Epoch Times</a></h3>
+                <p>US Economy Adds 165,000 New Jobs in October, Unemployment Rate Dips to 4.1 Percent The Epoch Times...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMifEFVX3lxTE5sQ3M3ZTFkX19VVEFHSHNEX1BmTmZTZzlkemFnVUZfVjBja010TlFJTmIzaU1IU1BlZVRXRU1vemVIREhQeTNpZktjdEFjeGVCS0R3cXRrYVdkZ3VGRXBteUNHeTZ2UklaaWlpTnk5dEJSbF9wOWJvMFhRVjc?oc=5' target='_blank' rel='noopener'>Spot the Difference Daily- Play Now online &amp; 100% Free - The Epoch Times</a></h3>
+                <p>Spot the Difference Daily- Play Now online &amp; 100% Free The Epoch Times...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMiREFVX3lxTFBSU2dZLXZaX21HbzlKWGxkWnM1eEQwNEZ3VE4xUkJFWFJWSkJ3d0pSY2c4MTBKZXctUXdyWWdicWJQaklP?oc=5' target='_blank' rel='noopener'>The Epoch Times | Breaking News, Latest News, World News and Videos - The Epoch Times</a></h3>
+                <p>The Epoch Times | Breaking News, Latest News, World News and Videos The Epoch Times...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Internet Archive TV News (hourly summary)</div>
+                <h3><a href='https://mastodon.archive.org/@tv/117580246810211128' target='_blank' rel='noopener'>TV news hourly summary · Nov 8, 10:03 UTC</a></h3>
+                <p>Midterm counting continues, with close races in Alaska and Mississippi; Democrats claim majorities, while Florida elects Republican Byron Donalds governor. Houston moves to limit ICE cooperation. A gu...</p>
+            </div>
+            </div>
+
+        <footer>
+            Automated Segmented Pipeline powered by HTML Scrapers, 11 Global RSS Feeds &amp; Google Gemini AI &bull; 2026-11-08
+        </footer>
+    </div>
+</body>
+</html>
