@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-11-09",
+    "timestamp": "2026-11-09T15:06:48.821093+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "Krakow shooting suspect has died in hospital, police say",
+      "Inside the French drug gangs recruiting children to kill",
+      "Google to introduce two variants of in-house chips, Bloomberg News reports - Reuters",
+      "Disney, Adobe to co-develop custom AI models tailored for media giant - Reuters",
+      "When my husband started forgetting things, doctors dismissed us... and told me I was imagining it because of menopausal brain fog. Then he was diagnosed with early-onset Alzheimer's at 55 - these were all the warning signs"
+    ],
+    "archive_html_path": "data/archive/2026-11-09/index.html",
+    "data_json_path": "data/archive/2026-11-09/data.json"
+  },
+  {
     "date": "2026-11-08",
     "timestamp": "2026-11-08T12:43:44.243059+00:00",
     "stories_count": 8,

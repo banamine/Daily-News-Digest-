@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Intelligence Briefing – 2026-11-09</title>
+    <style>
+        :root {
+            --bg: #0f1115;
+            --card: #1a1d24;
+            --text: #e6e8ec;
+            --muted: #9ba1ad;
+            --accent: #3b82f6;
+            --border: #2a2e38;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; padding: 2rem 1rem; }
+        .container { max-width: 960px; margin: 0 auto; }
+        header { text-align: center; margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+        header h1 { font-size: 2.2rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 0.4rem; color: #ffffff; }
+        header .date { color: var(--accent); font-size: 1rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+        
+        .hero-image { width: 100%; border-radius: 16px; overflow: hidden; margin-bottom: 2.5rem; box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6); border: 1px solid var(--border); background: #0b0f19; }
+        
+        /* Flexible Photo Collage Component */
+        .collage-wrapper { position: relative; width: 100%; }
+        .collage-header-pill {
+            position: absolute; top: 14px; left: 14px; z-index: 10;
+            background: rgba(15, 23, 42, 0.88); backdrop-filter: blur(8px);
+            border: 1px solid rgba(56, 189, 248, 0.35); color: #38bdf8;
+            padding: 5px 12px; border-radius: 999px; font-size: 11px; font-weight: 800;
+            letter-spacing: 0.5px; display: flex; align-items: center; gap: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        }
+        .collage-container {
+            display: grid; gap: 8px; background: #090d16; padding: 8px; border-radius: 16px; min-height: 280px;
+        }
+        .collage-container.collage-count-1 { grid-template-columns: 1fr; grid-template-rows: 360px; }
+        .collage-container.collage-count-1 .hero-tile { grid-row: auto; }
+
+        .collage-container.collage-count-2 { grid-template-columns: 1fr 1fr; grid-template-rows: 320px; }
+        .collage-container.collage-count-2 .hero-tile { grid-row: auto; }
+
+        .collage-container.collage-count-3 { grid-template-columns: 1.6fr 1fr; grid-template-rows: 170px 170px; }
+        .collage-container.collage-count-3 .hero-tile { grid-row: span 2; }
+
+        .collage-container.collage-count-4 { grid-template-columns: 1.6fr 1fr 1fr; grid-template-rows: 170px 170px; }
+        .collage-container.collage-count-4 .hero-tile { grid-row: span 2; }
+        .collage-container.collage-count-4 .collage-tile:nth-child(4) { grid-column: span 2; }
+
+        .collage-container.collage-count-5 { grid-template-columns: 1.8fr 1fr 1fr; grid-template-rows: 180px 180px; }
+        .collage-container.collage-count-5 .hero-tile { grid-row: span 2; }
+
+        @media (max-width: 768px) {
+            .collage-container,
+            .collage-container.collage-count-2,
+            .collage-container.collage-count-3,
+            .collage-container.collage-count-4,
+            .collage-container.collage-count-5 {
+                grid-template-columns: 1fr; grid-template-rows: auto;
+            }
+            .collage-tile, .hero-tile { min-height: 180px; }
+        }
+        .collage-tile {
+            position: relative; border-radius: 10px; overflow: hidden; background: #131927;
+            border: 1px solid rgba(255, 255, 255, 0.08); transition: transform 0.3s ease;
+        }
+        .collage-tile.hero-tile { grid-row: span 2; }
+        .collage-tile img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
+        .collage-tile:hover img { transform: scale(1.06); }
+        .collage-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(to top, rgba(11, 15, 23, 0.95) 0%, rgba(11, 15, 23, 0.2) 60%, transparent 100%);
+            display: flex; flex-direction: column; justify-content: flex-end; padding: 12px;
+        }
+        .collage-badge {
+            align-self: flex-start; background: rgba(56, 189, 248, 0.2); color: #38bdf8;
+            border: 1px solid rgba(56, 189, 248, 0.4); font-size: 10px; font-weight: 700;
+            text-transform: uppercase; padding: 2px 8px; border-radius: 999px; margin-bottom: 6px;
+        }
+        .collage-badge.hero-badge { background: rgba(16, 185, 129, 0.2); color: #34d399; border-color: rgba(16, 185, 129, 0.4); }
+        .collage-title { color: #ffffff; font-size: 12px; font-weight: 700; line-height: 1.35; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        .hero-tile .collage-title { font-size: 17px; }
+
+        .stories { display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 3rem; }
+        .story { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem; }
+        .story h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: #f1f3f5; }
+        .story-body { color: var(--muted); font-size: 0.98rem; overflow-wrap: anywhere; word-break: break-word; }
+        .story h2, .mini-card h3, .mini-card p { overflow-wrap: anywhere; }
+        .container { min-width: 0; max-width: 100%; }
+        .section-title { font-size: 1.3rem; font-weight: 800; color: var(--accent); margin: 2rem 0 1rem; border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; }
+        .segmented-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
+        .mini-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+        .mini-card.scraped { border-left: 3px solid #8b5cf6; }
+        .mini-card.rss { border-left: 3px solid #3b82f6; }
+        .source-tag { font-size: 0.75rem; font-weight: bold; color: var(--accent); margin-bottom: 0.4rem; }
+        .mini-card h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.4rem; }
+        .mini-card h3 a { color: #f1f3f5; text-decoration: none; }
+        .mini-card h3 a:hover { text-decoration: underline; color: var(--accent); }
+        .mini-card p { font-size: 0.82rem; color: var(--muted); line-height: 1.4; }
+        footer { text-align: center; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="date">2026-11-09</div>
+            <h1>Daily Intelligence Briefing</h1>
+        </header>
+
+        <div class="hero-image">
+            
+                
+    <div class="collage-wrapper">
+        <div class="collage-header-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7"/><path d="M16 5h5v5"/><path d="m21 5-9 9"/></svg>
+            <span>Parsed Feeds Mixed Photo Collage (5 Photos)</span>
+        </div>
+        <div class="collage-container collage-count-5">
+            <div class="collage-tile hero-tile">
+                <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/707b/live/625f7400-dc3b-11f1-b441-2b33b063138f.jpg" alt="Krakow shooting suspect has died in hospital, police say" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+                <div class="collage-overlay">
+                    <span class="collage-badge hero-badge">BBC World News</span>
+                    <h3 class="collage-title hero-title">Krakow shooting suspect has died in hospital, police say</h3>
+                </div>
+            </div>
+            
+        <div class="collage-tile">
+            <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/a160/live/111155a0-dc27-11f1-b441-2b33b063138f.jpg" alt="Inside the French drug gangs recruiting children to kill" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">BBC World News</span>
+                <h4 class="collage-title">Inside the French drug gangs recruiting children to kill</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/dcbb/live/2fcfac50-dc11-11f1-a631-078d47c5aafb.jpg" alt="Trump says he was &#x27;kidding&#x27; about Dana White press secretary offer" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">BBC World News</span>
+                <h4 class="collage-title">Trump says he was &#x27;kidding&#x27; about Dana White press secretary offer</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Google to introduce two variants of in-house chips, Bloomberg News reports - Reuters" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">Reuters Top News</span>
+                <h4 class="collage-title">Google to introduce two variants of in-house chips, Bloomberg News reports - Reuters</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Disney, Adobe to co-develop custom AI models tailored for media giant - Reuters" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">Reuters Top News</span>
+                <h4 class="collage-title">Disney, Adobe to co-develop custom AI models tailored for media giant - Reuters</h4>
+            </div>
+        </div>
+        
+        </div>
+    </div>
+    
+            
+        </div>
+
+        <main class="stories">
+            
+        <div class="story">
+            <h2>Krakow shooting suspect has died in hospital, police say</h2>
+            <div class="story-body"><strong>Source:</strong> BBC World News<br><strong>Summary:</strong> Polish police reported that the suspect in a shooting in Krakow has died in the hospital. The shooting incident left six people dead. Additionally, authorities discovered the bodies of three of the suspect&#x27;s family members at their residence.<br><strong>Key Theme:</strong> Crime</div>
+        </div>
+        
+        <div class="story">
+            <h2>Inside the French drug gangs recruiting children to kill</h2>
+            <div class="story-body"><strong>Source:</strong> BBC World News<br><strong>Summary:</strong> A BBC reporting feature investigates the criminal underworld of Marseille, France. The report details how local drug gangs actively exploit, brutalize, and recruit young children to carry out violent crimes, including killings.<br><strong>Key Theme:</strong> Organized Crime</div>
+        </div>
+        
+        <div class="story">
+            <h2>Google to introduce two variants of in-house chips, Bloomberg News reports - Reuters</h2>
+            <div class="story-body"><strong>Source:</strong> Reuters Top News<br><strong>Summary:</strong> Google is preparing to introduce two distinct variants of its custom in-house chips, according to a report by Bloomberg News. The move reflects the tech company&#x27;s ongoing strategy to design proprietary hardware components.<br><strong>Key Theme:</strong> Technology</div>
+        </div>
+        
+        <div class="story">
+            <h2>Disney, Adobe to co-develop custom AI models tailored for media giant - Reuters</h2>
+            <div class="story-body"><strong>Source:</strong> Reuters Top News<br><strong>Summary:</strong> Disney and Adobe have partnered to co-develop customized artificial intelligence models specifically tailored for the media enterprise. The collaboration aims to create specialized AI tools designed to support Disney&#x27;s content creation and digital workflows.<br><strong>Key Theme:</strong> Artificial Intelligence</div>
+        </div>
+        
+        <div class="story">
+            <h2>When my husband started forgetting things, doctors dismissed us... and told me I was imagining it because of menopausal brain fog. Then he was diagnosed with early-onset Alzheimer&#x27;s at 55 - these were all the warning signs</h2>
+            <div class="story-body"><strong>Source:</strong> Daily Mail UK<br><strong>Summary:</strong> Emma Ruscoe recounted her family&#x27;s experience after her husband, Simon, was diagnosed with early-onset Alzheimer&#x27;s disease at age 55. She noted that doctors initially dismissed the early symptoms, attributing her concerns to menopausal brain fog. The personal account highlights the warning signs and challenges associated with receiving a timely dementia diagnosis.<br><strong>Key Theme:</strong> Health</div>
+        </div>
+        
+        <div class="story">
+            <h2>Is Russell Brand moving his fortune out of his victims&#x27; reach? Rapist applied to change ownership of £5million family home just SIX weeks before his conviction</h2>
+            <div class="story-body"><strong>Source:</strong> Daily Mail UK<br><strong>Summary:</strong> Land Registry documents reveal that Russell Brand applied to transfer ownership of his £5 million Oxfordshire property to his wife, Laura Gallacher. The application was submitted six weeks prior to his legal conviction for rape and sexual assault. The property transfer has raised questions regarding the movement of his financial assets.<br><strong>Key Theme:</strong> Legal</div>
+        </div>
+        
+        <div class="story">
+            <h2>Google’s Holiday 100: The most-searched gifts of the season</h2>
+            <div class="story-body"><strong>Source:</strong> New York Post<br><strong>Summary:</strong> Google has released its annual &quot;Holiday 100&quot; list identifying the most-searched gift items of the season. The compiled list highlights top trending consumer products based on aggregated search data.<br><strong>Key Theme:</strong> Retail</div>
+        </div>
+        
+        <div class="story">
+            <h2>TV news hourly summary · Nov 9, 15:03 UTC</h2>
+            <div class="story-body"><strong>Source:</strong> Internet Archive TV News (hourly summary)<br><strong>Summary:</strong> Russell Brand has been sentenced to 10½ years in prison for rape and sexual assault. In international affairs, Iran issued a two-day ultimatum to the U.S. as President Trump evaluated next steps, noting further military strikes were unlikely if negotiations advanced. Meanwhile, Nvidia initiated an investigation into CEO Jensen Huang&#x27;s relationship with an alleged Chinese spy, and newly elected House Democrats began orientation amid party leadership divisions.<br><strong>Key Theme:</strong> World Politics</div>
+        </div>
+        
+        </main>
+
+        
+        <div class='section-title'>Global &amp; Alternative RSS Feeds</div><div class='segmented-grid'>
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/articles/c6y434dw8319o?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>Krakow shooting suspect has died in hospital, police say</a></h3>
+                <p>Six people were killed in the shooting, and three bodies of the suspect&#x27;s family members were found at their home....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/articles/cq62y01r2313o?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>Inside the French drug gangs recruiting children to kill</a></h3>
+                <p>The BBC enters Marseille&#x27;s dangerous underworld, where young people are trapped, brutalised and exploited....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/articles/ck0j0j87959eo?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>Trump says he was &#x27;kidding&#x27; about Dana White press secretary offer</a></h3>
+                <p>The president told the Ultimate Fighting Championship boss to &quot;please take the job&quot; in a Truth Social post on Saturday....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMiuwFBVV95cUxOd1JDNDVNcnh0MU5wSzdrUVhVY3FpSklfazJZVWEtbGwyUkxydzhTcUVhV2F5aHdHV29OUE9Ea1JkZm93d2xVcU1VMEdEZE1xamt3RlktMVlqLUNGRVlIalpNd3ZRS2Z2LVN3b24yNUcyV1lkQm01MmJ3eHJLZVk3a3ZDSkhHcllvVHVxX1c1d3YtRHV3Q1g5d241UGNpLXJpSXRwTUYzcEdPcUhmN2FqdnBRNVZUYlM1WmJF?oc=5' target='_blank' rel='noopener'>Google to introduce two variants of in-house chips, Bloomberg News reports - Reuters</a></h3>
+                <p>Google to introduce two variants of in-house chips, Bloomberg News reports Reuters...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMivAFBVV95cUxORlk2TV9jQUFndDhlTS1XZzhXZjJFTERQaGIxamc0c09Xcnl4TlRaeDFuZ2FoTVd3Y0ZMdnVVZktNcDRzdGwxdDlnQXhFWkhUcFA0YUNIREZYTmpoTU9xV1pzeGVycHZRemRkLU1ES2pxU0NpeFVmbkVwYWVZemVJTWU0MHhiRG43b3IzNVgzZTB0bzFLN0VBUE9lZ0JKSEJ1NHdCNVJyYW84eHZyQ3NHTTJacHUtY1AwTHRiLQ?oc=5' target='_blank' rel='noopener'>Disney, Adobe to co-develop custom AI models tailored for media giant - Reuters</a></h3>
+                <p>Disney, Adobe to co-develop custom AI models tailored for media giant Reuters...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMiugFBVV95cUxOX0pwQmJtMVdmZDY2NVhWalgxSHZ0d0NvUzJ4cldzTHFQUmdHSERzZENUOXljYldMbFpRa3J5d0VhbkNtZGJVM1paVkFWZ1ZHZTFOQlNkNm5xZ2tkc0FYQkxvQkU3RHc5cm9lcjFXSzdCNlE5QjNXNnRoZktjUHhGRTRGOXZYbWZtUXlTaFBXN096VFZrTDBQQll5ZDJaZDlPdUlueEtHaGMyQ1ZnWHdxQll3UWI3WHdYZmc?oc=5' target='_blank' rel='noopener'>Trump to meet Iran war mediator Qatar, no imminent deal seen to end the war - Reuters</a></h3>
+                <p>Trump to meet Iran war mediator Qatar, no imminent deal seen to end the war Reuters...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/lifestyle/fitness-wellbeing/article-16276165/husband-forget-dementia-alzheimers-menopause.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>When my husband started forgetting things, doctors dismissed us... and told me I was imagining it because of menopausal brain fog. Then he was diagnosed with early-onset Alzheimer&#x27;s at 55 - these were all the warning signs</a></h3>
+                <p>Nine o&#x27;clock is bedtime in the Ruscoe house. But it&#x27;s not the children 58-year-old Emma puts to bed - it&#x27;s her husband Simon, 62, who was diagnosed with early-onset Alzheimer&#x27;s six...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/news/article-16272157/Russell-Brand-fortune-victims-reach.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>Is Russell Brand moving his fortune out of his victims&#x27; reach? Rapist applied to change ownership of £5million family home just SIX weeks before his conviction</a></h3>
+                <p>The fallen comic has applied to transfer the ownership of his £5million Oxfordshire cottage to his wife Laura Gallacher, 39, the mother of his three children, Land Registry documents suggest....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/news/article-16276121/Moment-Russell-Brand-asks-Vanessa-Feltz-sex-15-year-old-daughter-blasts-chilling-rapist.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>Moment Russell Brand asks Vanessa Feltz if he can have sex with her 15-year-old daughter as she blasts &#x27;chilling&#x27; rapist</a></h3>
+                <p>During an uncomfortable conversation between the pair, Brand continued to ask if he could &#x27;have it off&#x27; with Ms Feltz&#x27;s two daughters....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>New York Post</div>
+                <h3><a href='https://nypost.com/2026/11/09/shopping/google-holiday-100-the-most-searched-gifts-of-2026/' target='_blank' rel='noopener'>Google’s Holiday 100: The most-searched gifts of the season</a></h3>
+                <p>The hottest gifts, revealed....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>New York Post</div>
+                <h3><a href='https://nypost.com/2026/11/09/us-news/rubio-blasts-irans-outrageous-and-ridiculous-demands/' target='_blank' rel='noopener'>Rubio blasts Iran’s ‘outrageous and ridiculous’ demands — casting doubt on diplomatic breakthrough</a></h3>
+                <p>Secretary of State Marco Rubio accused Iran of issuing &quot;outrageous and ridiculous&quot; demands, casting doubt on the chances of a breakthrough any time soon....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>New York Post</div>
+                <h3><a href='https://nypost.com/2026/11/09/betting/kalshi-promo-code-nypmax55-trade-25-get-up-to-55-bonus-for-bills-vs-vikings-on-mnf/' target='_blank' rel='noopener'>Kalshi promo code NYPMAX55: Trade $25, get up to $55 bonus for Bills vs. Vikings on ‘MNF’</a></h3>
+                <p>The Kalshi promo code NYPMAX55 allows new traders to trade $25 for a $55 bonus on &#x27;MNF.&#x27;...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/first-openly-gay-sheriff-elected-deep-red-state/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=first-openly-gay-sheriff-elected-deep-red-state' target='_blank' rel='noopener'>First Openly Gay Sheriff Elected In Deep Red State, Vows Action On Flock Safety Cameras</a></h3>
+                <p>Democrat Brett Jones defeated incumbent Republican Sheriff Kevin Turner to become Alabama’s first openly gay sheriff. Turner was a two-term […]...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/hakeem-jeffries-hard-yes-impeaching-trumpbinet-member/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=hakeem-jeffries-hard-yes-impeaching-trumpbinet-member' target='_blank' rel='noopener'>Hakeem Jeffries A “Hard Yes” On Impeaching Trump Cabinet Member</a></h3>
+                <p>House Minority Leader Hakeem Jeffries (D-NY), who will likely by the House Speaker after the next Congress is sworn-in, said […]...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/president-trump-presses-netanyahu-israels-election-is-move/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=president-trump-presses-netanyahu-israels-election-is-move' target='_blank' rel='noopener'>President Trump Presses Netanyahu: Israel’s Election Is Over—Move On Gaza Peace Plan</a></h3>
+                <p>President Trump reportedly told Benjamin Netanyahu that Israel’s election is over and it is time to move on the Gaza peace plan. The call puts Hamas disarmament, Israeli cooperation and Netanyahu’s we...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/11/09/electing-john-thune-senate-minority-leader-would-be-rewarding-failure/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=electing-john-thune-senate-minority-leader-would-be-rewarding-failure' target='_blank' rel='noopener'>Electing John Thune Senate Minority Leader Would Be ‘Rewarding Failure’</a></h3>
+                <p>Sen. Ron Johnson says it would be &#x27;political malpractice&#x27; to rush a conference vote on leadership this week. Several others agree....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/11/09/house-race-separated-by-99-votes-shows-why-rare-noncitizen-voting-does-matter/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=house-race-separated-by-99-votes-shows-why-rare-noncitizen-voting-does-matter' target='_blank' rel='noopener'>House Race Separated By 99 Votes Shows Why ‘Rare’ Noncitizen Voting Does Matter</a></h3>
+                <p>Approximately 99 votes separate the candidates in one North Carolina congressional race, showing exactly why noncitizen voting could potentially have a major impact on U.S. elections. The narrow North...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/11/09/why-vibes-now-matter-more-than-ideas-in-recent-elections/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=why-vibes-now-matter-more-than-ideas-in-recent-elections' target='_blank' rel='noopener'>Why Vibes Now Matter More Than Ideas In Recent Elections</a></h3>
+                <p>For the foreseeable future, Republicans need to imitate the Democrats and start seeing themselves more like influencers than as statesmen....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/shows/relatable/allie-beth-stuckey-on-the-birth-plan-trap-you-cant-redeem-a-traumatic-birth-experience' target='_blank' rel='noopener'>Allie Beth Stuckey on the birth plan trap: ‘You can’t redeem’ a traumatic birth experience</a></h3>
+                <p>For a mom whose first birth was traumatic, preparing for another delivery can become about much more than bringing a baby into the world. And one woman is asking BlazeTV host Allie Beth Stuckey how to...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/news/dana-white-meeting-with-trump-after-joke-job-offer' target='_blank' rel='noopener'>Dana White to meet with Trump after &#x27;joke&#x27; job offer</a></h3>
+                <p>President Donald Trump generated waves over the weekend with his apparently tongue-in-cheek announcement on Saturday that &quot;the Great Dana White, a violent Fighter and Warrior, has been offered th...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/tech/iot-cyberattacks' target='_blank' rel='noopener'>Your smart home devices are vulnerable to cyberattack — protect yourself with these tips</a></h3>
+                <p>Everything is connected to the internet these days. Devices that you wouldn’t expect to have a Wi-Fi signal latch onto your router to provide connected features. Unfortunately, as AI pokes holes in ou...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/headlines/2026/11/09/bureaucrats-are-trying-to-subvert-the-trump-administration-former-adviser-alleges-n3820790' target='_blank' rel='noopener'>Bureaucrats Are Trying To ‘Subvert’ The Trump Administration, Former Adviser Alleges</a></h3>
+                <p>Bureaucrats Are Trying To ‘Subvert’ The Trump Administration, Former Adviser Alleges...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/ed-morrissey/2026/11/09/trump-we-may-have-been-a-wee-bit-too-tough-on-immigration-n3820804' target='_blank' rel='noopener'>Trump: We May Have Been a Wee Bit Too Tough on Immigration</a></h3>
+                <p>Trump: We May Have Been a Wee Bit Too Tough on Immigration...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/headlines/2026/11/09/cannonballs-unearthed-at-alamo-nearly-200-years-after-deadly-siege-n3820787' target='_blank' rel='noopener'>Cannonballs Unearthed at Alamo Nearly 200 Years After Deadly Siege</a></h3>
+                <p>Cannonballs Unearthed at Alamo Nearly 200 Years After Deadly Siege...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Judicial Watch</div>
+                <h3><a href='https://www.judicialwatch.org/investigates-jack-smith-teams-security-violations/' target='_blank' rel='noopener'>Judicial Watch Investigates Jack Smith Team’s Security Violations</a></h3>
+                <p>Judicial Watch Sues Over Jack Smith Team’s Security Incidents Judicial Watch Sues for FBI’s ‘Rosetta Stone’ Report on…...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Judicial Watch</div>
+                <h3><a href='https://www.judicialwatch.org/sues-defense-dept-covid-19-origins-investigation-records/' target='_blank' rel='noopener'>Judicial Watch Sues Defense Dept. for Covid-19 Origins Investigation Records</a></h3>
+                <p>(Washington, DC) – Judicial Watch announced today that it filed a Freedom of Information Act (FOIA) lawsuit against…...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Judicial Watch</div>
+                <h3><a href='https://www.judicialwatch.org/sues-justice-records-jack-smith-teams-classified-information-security-incidents/' target='_blank' rel='noopener'>Judicial Watch Sues Justice Dept. for Records on Jack Smith Team’s Classified-Information Security I...</a></h3>
+                <p>(Washington, DC) – Judicial Watch announced today that it filed a Freedom of Information Act (FOIA) lawsuit against…...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/11/trump-is-still-president/' target='_blank' rel='noopener'>Trump Is Still President</a></h3>
+                <p>Photo Credit: Trump ChatGPT ai-generated illustration By Brian C. Joondeph ... and he still has an oppositional Congress....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/11/we-were-wrong/' target='_blank' rel='noopener'>We Were Wrong</a></h3>
+                <p>Photo Credit: Bernard DuPont By Kenneth R. Timmerman Republicans should have been hammering home every single day how their policies had actually made things more affordable, such as tax cuts for work...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/11/the-war-for-freedom-is-just-beginning/' target='_blank' rel='noopener'>The War For Freedom Is Just Beginning</a></h3>
+                <p>Photo Credit: Image: Pashi via Pixabay , Pixabay License . Pashli By J.B. Shurk The midterms were one battle of a much bigger war....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMivgFBVV95cUxPQU5iSzBNbmJFY0pmM25KUXh0WHZLWVBmSkRlbHVWalNnWFFxY0tLNGxtMVNmYkpwWTQ0bkdzaDRQb0pjQ3NYaXhSV3c5LTA5QnE3cXl1U3AtLWlhUllLWEpqMGY0TXVBT05jU2w1cUlRMFoyaWh0SnRSZ09CMEEyQ2hqRk5oNExwUHJTQzYtQjlwQlVtZUdTYXNJZ1VxQS1feHd3ZG5vU0ZWc1VmMVd4dFAwRl8tVm83REdjMjJn?oc=5' target='_blank' rel='noopener'>US Economy Adds 165,000 New Jobs in October, Unemployment Rate Dips to 4.1 Percent - The Epoch Times</a></h3>
+                <p>US Economy Adds 165,000 New Jobs in October, Unemployment Rate Dips to 4.1 Percent The Epoch Times...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMifEFVX3lxTE5sQ3M3ZTFkX19VVEFHSHNEX1BmTmZTZzlkemFnVUZfVjBja010TlFJTmIzaU1IU1BlZVRXRU1vemVIREhQeTNpZktjdEFjeGVCS0R3cXRrYVdkZ3VGRXBteUNHeTZ2UklaaWlpTnk5dEJSbF9wOWJvMFhRVjc?oc=5' target='_blank' rel='noopener'>Spot the Difference Daily- Play Now online &amp; 100% Free - The Epoch Times</a></h3>
+                <p>Spot the Difference Daily- Play Now online &amp; 100% Free The Epoch Times...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMiREFVX3lxTFBSU2dZLXZaX21HbzlKWGxkWnM1eEQwNEZ3VE4xUkJFWFJWSkJ3d0pSY2c4MTBKZXctUXdyWWdicWJQaklP?oc=5' target='_blank' rel='noopener'>The Epoch Times | Breaking News, Latest News, World News and Videos - The Epoch Times</a></h3>
+                <p>The Epoch Times | Breaking News, Latest News, World News and Videos The Epoch Times...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Internet Archive TV News (hourly summary)</div>
+                <h3><a href='https://mastodon.archive.org/@tv/117587088882130919' target='_blank' rel='noopener'>TV news hourly summary · Nov 9, 15:03 UTC</a></h3>
+                <p>Russell Brand was sentenced to 10½ years for rape and sexual assault. Iran issued the U.S. a two-day diplomacy ultimatum as Trump weighed next steps and said further strikes were unlikely if talks pro...</p>
+            </div>
+            </div>
+
+        <footer>
+            Automated Segmented Pipeline powered by HTML Scrapers, 11 Global RSS Feeds &amp; Google Gemini AI &bull; 2026-11-09
+        </footer>
+    </div>
+</body>
+</html>
