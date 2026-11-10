@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-11-10",
+    "timestamp": "2026-11-10T14:17:39.240268+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "Trump says FBI investigating Nvidia boss's affair with alleged Chinese spy",
+      "Ukraine peace talks resume with 'some flexibility' by warring sides, US officials say",
+      "EXCLUSIVE: Recent Ukrainian attacks have reduced Russia's oil processing capacity by 30%, sources say - Reuters",
+      "Nvidia CEO's affair with alleged spy aided $7.5 billion in China chip shipments, Information reports - Reuters",
+      "David Walliams is named as gag order celebrity and accused of sexually assaulting a 15-year-old girl while preying on teenagers"
+    ],
+    "archive_html_path": "data/archive/2026-11-10/index.html",
+    "data_json_path": "data/archive/2026-11-10/data.json"
+  },
+  {
     "date": "2026-11-09",
     "timestamp": "2026-11-09T15:06:48.821093+00:00",
     "stories_count": 8,
