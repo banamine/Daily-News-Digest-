@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Intelligence Briefing – 2026-11-11</title>
+    <style>
+        :root {
+            --bg: #0f1115;
+            --card: #1a1d24;
+            --text: #e6e8ec;
+            --muted: #9ba1ad;
+            --accent: #3b82f6;
+            --border: #2a2e38;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; padding: 2rem 1rem; }
+        .container { max-width: 960px; margin: 0 auto; }
+        header { text-align: center; margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+        header h1 { font-size: 2.2rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 0.4rem; color: #ffffff; }
+        header .date { color: var(--accent); font-size: 1rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+        
+        .hero-image { width: 100%; border-radius: 16px; overflow: hidden; margin-bottom: 2.5rem; box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6); border: 1px solid var(--border); background: #0b0f19; }
+        
+        /* Flexible Photo Collage Component */
+        .collage-wrapper { position: relative; width: 100%; }
+        .collage-header-pill {
+            position: absolute; top: 14px; left: 14px; z-index: 10;
+            background: rgba(15, 23, 42, 0.88); backdrop-filter: blur(8px);
+            border: 1px solid rgba(56, 189, 248, 0.35); color: #38bdf8;
+            padding: 5px 12px; border-radius: 999px; font-size: 11px; font-weight: 800;
+            letter-spacing: 0.5px; display: flex; align-items: center; gap: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        }
+        .collage-container {
+            display: grid; gap: 8px; background: #090d16; padding: 8px; border-radius: 16px; min-height: 280px;
+        }
+        .collage-container.collage-count-1 { grid-template-columns: 1fr; grid-template-rows: 360px; }
+        .collage-container.collage-count-1 .hero-tile { grid-row: auto; }
+
+        .collage-container.collage-count-2 { grid-template-columns: 1fr 1fr; grid-template-rows: 320px; }
+        .collage-container.collage-count-2 .hero-tile { grid-row: auto; }
+
+        .collage-container.collage-count-3 { grid-template-columns: 1.6fr 1fr; grid-template-rows: 170px 170px; }
+        .collage-container.collage-count-3 .hero-tile { grid-row: span 2; }
+
+        .collage-container.collage-count-4 { grid-template-columns: 1.6fr 1fr 1fr; grid-template-rows: 170px 170px; }
+        .collage-container.collage-count-4 .hero-tile { grid-row: span 2; }
+        .collage-container.collage-count-4 .collage-tile:nth-child(4) { grid-column: span 2; }
+
+        .collage-container.collage-count-5 { grid-template-columns: 1.8fr 1fr 1fr; grid-template-rows: 180px 180px; }
+        .collage-container.collage-count-5 .hero-tile { grid-row: span 2; }
+
+        @media (max-width: 768px) {
+            .collage-container,
+            .collage-container.collage-count-2,
+            .collage-container.collage-count-3,
+            .collage-container.collage-count-4,
+            .collage-container.collage-count-5 {
+                grid-template-columns: 1fr; grid-template-rows: auto;
+            }
+            .collage-tile, .hero-tile { min-height: 180px; }
+        }
+        .collage-tile {
+            position: relative; border-radius: 10px; overflow: hidden; background: #131927;
+            border: 1px solid rgba(255, 255, 255, 0.08); transition: transform 0.3s ease;
+        }
+        .collage-tile.hero-tile { grid-row: span 2; }
+        .collage-tile img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
+        .collage-tile:hover img { transform: scale(1.06); }
+        .collage-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(to top, rgba(11, 15, 23, 0.95) 0%, rgba(11, 15, 23, 0.2) 60%, transparent 100%);
+            display: flex; flex-direction: column; justify-content: flex-end; padding: 12px;
+        }
+        .collage-badge {
+            align-self: flex-start; background: rgba(56, 189, 248, 0.2); color: #38bdf8;
+            border: 1px solid rgba(56, 189, 248, 0.4); font-size: 10px; font-weight: 700;
+            text-transform: uppercase; padding: 2px 8px; border-radius: 999px; margin-bottom: 6px;
+        }
+        .collage-badge.hero-badge { background: rgba(16, 185, 129, 0.2); color: #34d399; border-color: rgba(16, 185, 129, 0.4); }
+        .collage-title { color: #ffffff; font-size: 12px; font-weight: 700; line-height: 1.35; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        .hero-tile .collage-title { font-size: 17px; }
+
+        .stories { display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 3rem; }
+        .story { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem; }
+        .story h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: #f1f3f5; }
+        .story-body { color: var(--muted); font-size: 0.98rem; overflow-wrap: anywhere; word-break: break-word; }
+        .story h2, .mini-card h3, .mini-card p { overflow-wrap: anywhere; }
+        .container { min-width: 0; max-width: 100%; }
+        .section-title { font-size: 1.3rem; font-weight: 800; color: var(--accent); margin: 2rem 0 1rem; border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; }
+        .segmented-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
+        .mini-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+        .mini-card.scraped { border-left: 3px solid #8b5cf6; }
+        .mini-card.rss { border-left: 3px solid #3b82f6; }
+        .source-tag { font-size: 0.75rem; font-weight: bold; color: var(--accent); margin-bottom: 0.4rem; }
+        .mini-card h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.4rem; }
+        .mini-card h3 a { color: #f1f3f5; text-decoration: none; }
+        .mini-card h3 a:hover { text-decoration: underline; color: var(--accent); }
+        .mini-card p { font-size: 0.82rem; color: var(--muted); line-height: 1.4; }
+        footer { text-align: center; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="date">2026-11-11</div>
+            <h1>Daily Intelligence Briefing</h1>
+        </header>
+
+        <div class="hero-image">
+            
+                
+    <div class="collage-wrapper">
+        <div class="collage-header-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7"/><path d="M16 5h5v5"/><path d="m21 5-9 9"/></svg>
+            <span>Parsed Feeds Mixed Photo Collage (5 Photos)</span>
+        </div>
+        <div class="collage-container collage-count-5">
+            <div class="collage-tile hero-tile">
+                <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9ba2/live/c17cf610-dd8f-11f1-8c82-87885cae71d3.jpg" alt="Three Iran-backed suspects plotted attacks including RAF Fairford incident, US says" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+                <div class="collage-overlay">
+                    <span class="collage-badge hero-badge">BBC World News</span>
+                    <h3 class="collage-title hero-title">Three Iran-backed suspects plotted attacks including RAF Fairford incident, US says</h3>
+                </div>
+            </div>
+            
+        <div class="collage-tile">
+            <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/5391/live/eb55ba30-dd67-11f1-a701-fddedf244c16.jpg" alt="US House blocks bid to impeach Defence Secretary Pete Hegseth, for now" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">BBC World News</span>
+                <h4 class="collage-title">US House blocks bid to impeach Defence Secretary Pete Hegseth, for now</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3ce6/live/65c341e0-ddcf-11f1-a701-fddedf244c16.jpg" alt="Four grizzly bears killed in Canada after fatal attack on mother and daughter" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">BBC World News</span>
+                <h4 class="collage-title">Four grizzly bears killed in Canada after fatal attack on mother and daughter</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Russian negotiator reports some progress after Ukraine talks, sees no EU role in process for now - Reuters" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">Reuters Top News</span>
+                <h4 class="collage-title">Russian negotiator reports some progress after Ukraine talks, sees no EU role in process for now - Reuters</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Bomb alerts sent to schools in Italy and Northern Ireland in latest threats - Reuters" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">Reuters Top News</span>
+                <h4 class="collage-title">Bomb alerts sent to schools in Italy and Northern Ireland in latest threats - Reuters</h4>
+            </div>
+        </div>
+        
+        </div>
+    </div>
+    
+            
+        </div>
+
+        <main class="stories">
+            
+        <div class="story">
+            <h2>Three Iran-backed suspects plotted attacks including RAF Fairford incident, US says</h2>
+            <div class="story-body"><strong>Source:</strong> BBC World News<br><strong>Summary:</strong> The U.S. Department of Justice revealed that three Iran-backed suspects allegedly plotted multiple attacks, including a major incident near RAF Fairford in the United Kingdom. The airbase is regularly utilized by U.S. armed forces. Federal prosecutors stated the men were involved in a broader series of international attack plans.<br><strong>Key Theme:</strong> Counterterrorism</div>
+        </div>
+        
+        <div class="story">
+            <h2>US House blocks bid to impeach Defence Secretary Pete Hegseth, for now</h2>
+            <div class="story-body"><strong>Source:</strong> BBC World News<br><strong>Summary:</strong> The U.S. House of Representatives voted to block an attempt to impeach Defense Secretary Pete Hegseth. Former President Donald Trump praised the outcome, publicly commending Hegseth following the vote. Democratic lawmakers retain the ability to reintroduce impeachment efforts in the upcoming legislative year.<br><strong>Key Theme:</strong> US Politics</div>
+        </div>
+        
+        <div class="story">
+            <h2>Russian negotiator reports some progress after Ukraine talks, sees no EU role in process for now</h2>
+            <div class="story-body"><strong>Source:</strong> Reuters Top News<br><strong>Summary:</strong> A Russian negotiator reported minor progress following recent diplomatic discussions concerning the conflict in Ukraine. The official explicitly stated that Russia currently sees no role for the European Union in the peace process. The talks aim to address key points of contention amidst ongoing international diplomatic efforts.<br><strong>Key Theme:</strong> Diplomacy</div>
+        </div>
+        
+        <div class="story">
+            <h2>Bomb alerts sent to schools in Italy and Northern Ireland in latest threats</h2>
+            <div class="story-body"><strong>Source:</strong> Reuters Top News<br><strong>Summary:</strong> Educational institutions across Italy and Northern Ireland received bomb threat alerts, prompting security responses and evacuations. Law enforcement authorities are actively investigating the origins of the coordinated threats. Initial searches at the affected schools yielded no immediate evidence of explosive devices.<br><strong>Key Theme:</strong> Security</div>
+        </div>
+        
+        <div class="story">
+            <h2>SARAH VINE: Russell Brand was a grubby weirdo with bird&#x27;s nest hair. What is it about the female psyche that made beautiful, successful women ignore his walking, talking red flags? I think I know...</h2>
+            <div class="story-body"><strong>Source:</strong> Daily Mail UK<br><strong>Summary:</strong> Columnist Sarah Vine examines comedian Russell Brand&#x27;s past personal relationships and public persona in an opinion piece. Recounting personal observations from social events, Vine explores why high-profile women were drawn to him despite behavioral warning signs. The article offers a commentary on celebrity culture and interpersonal dynamics.<br><strong>Key Theme:</strong> Opinion</div>
+        </div>
+        
+        <div class="story">
+            <h2>Thomas Markle is taken into federal custody after allegedly cutting off his ankle monitor in wake of child pornography arrest</h2>
+            <div class="story-body"><strong>Source:</strong> Daily Mail UK<br><strong>Summary:</strong> Thomas Markle, 82, was taken into federal custody after allegedly removing his location-tracking ankle monitor. The breach occurred shortly after his arrest on federal charges related to possessing child sexual abuse material stored in California. Law enforcement apprehended Markle following the signal loss.<br><strong>Key Theme:</strong> Crime &amp; Justice</div>
+        </div>
+        
+        <div class="story">
+            <h2>‘Campus Drivers’ Season 2: Everything We Know About Prime Video’s New YA Romance</h2>
+            <div class="story-body"><strong>Source:</strong> New York Post<br><strong>Summary:</strong> Prime Video&#x27;s young adult romantic drama series *Campus Drivers* is drawing interest regarding potential future installments. The show centers on the relationship dynamics between characters Lois and Lane at Belrose University. Coverage examines viewer reception and updates regarding a potential second season.<br><strong>Key Theme:</strong> Entertainment</div>
+        </div>
+        
+        <div class="story">
+            <h2>TV news hourly summary · Nov 11, 13:03 UTC</h2>
+            <div class="story-body"><strong>Source:</strong> Internet Archive TV News<br><strong>Summary:</strong> Broadcast reports covered a threat on a U.S. flight involving an attempted cockpit intrusion, alongside the conclusion of Ukraine peace talks in Abu Dhabi. U.S. officials commented on diplomatic and military stances toward Iran and ongoing naval blockades. Additional coverage included international climate summits and a prominent political rally in Warsaw.<br><strong>Key Theme:</strong> Global News</div>
+        </div>
+        
+        </main>
+
+        
+        <div class='section-title'>Global &amp; Alternative RSS Feeds</div><div class='segmented-grid'>
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/articles/c3rryrryk59zo?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>Three Iran-backed suspects plotted attacks including RAF Fairford incident, US says</a></h3>
+                <p>The US Department of Justice says the men were involved in a string of plots, including a major incident near the UK airbase that is used by US armed forces....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/articles/cxly4y5jzl0qo?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>US House blocks bid to impeach Defence Secretary Pete Hegseth, for now</a></h3>
+                <p>Trump welcomes the outcome, praising Hegseth as a &quot;Great American Patriot&quot;, but Democrats can try again next year....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/articles/cwg5r8zrm11mo?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>Four grizzly bears killed in Canada after fatal attack on mother and daughter</a></h3>
+                <p>The sow and her three cubs were responsible for killing Jennifer Balcarras, 48, and her daughter Selah Reed, 20, earlier this month....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMiwwFBVV95cUxQV2RpSFF1Ym9mZkNRLTAyOFVnRk5JbzJmMmEydmFjMl9TS0lBdER0LVNieEZiSWlveXBwdjZtRkZuVWlWalBpdnNlZnZ6RmEtX3A2S0trZFF6OElSa0UyM1IxY1hUd1dnXzZzb2NZRVRkNUxJQmcycHhLN3JhRGo4RUo2N241cHpVeHMxWFlVeENaTFVtYk5GUUR6R3NYX2RxdmthQ0dKNlhKUkprN2tpNDVtVFhfWGVxUHlVbnN0bjRrUDA?oc=5' target='_blank' rel='noopener'>Russian negotiator reports some progress after Ukraine talks, sees no EU role in process for now - Reuters</a></h3>
+                <p>Russian negotiator reports some progress after Ukraine talks, sees no EU role in process for now Reuters...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMiowFBVV95cUxOLUZHS1hQdFNsS21tSW0zXzRnRDNsVEN2T1hITTBwX1l3d3VCWmw5MXVMaEYwM2ROMXpYNnR6cTNwMlVuSUNsekp2YmZtX1h2VE9wNnc2RThjc05OV2tBc0VNNzNicWNGcGtKVG9VTGo2Yzl5eUFxeE9IQ3JlZWpHb25vcWk5VmlWZkRwbmQzRmhzbDF2cmhWM1F0RmNlTGhtM0Zv?oc=5' target='_blank' rel='noopener'>Bomb alerts sent to schools in Italy and Northern Ireland in latest threats - Reuters</a></h3>
+                <p>Bomb alerts sent to schools in Italy and Northern Ireland in latest threats Reuters...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMixAFBVV95cUxNLXBjUHpKN20yZk5xM1RsTDlpZUtVZ2FwZ0J3RHBfQkNBZW41cS1hWHJKeGZUcEFuLTFrUFo0MndIV0lxb2pmb0I1VGUzU0J6R2JQTl9sTUs2UHNYMmhwNkpPZ1YzRVkzTExhMFhzc2ZpT01GbTU4UURERTBMYkdUbFg3NVR2NjB3TEJfbEtBdDRrcGNadW5JczBGZVE1cjQyYUJnYXJUb1hrVG9jLXBheGduWEoyUWRMbVRyVHhKYzNhVUE4?oc=5' target='_blank' rel='noopener'>EXCLUSIVE: How a Vitol trader&#x27;s ties to JD Vance helped land a prized Venezuela oil contract - Reuters</a></h3>
+                <p>EXCLUSIVE: How a Vitol trader&#x27;s ties to JD Vance helped land a prized Venezuela oil contract Reuters...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/debate/article-16282539/SARAH-VINE-grubby-weirdo-charmed-beautiful-successful-women.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>SARAH VINE: Russell Brand was a grubby weirdo with bird&#x27;s nest hair. What is it about the female psyche that made beautiful, successful women ignore his walking, talking red flags? I think I know...</a></h3>
+                <p>Many years ago, I was lucky enough to be invited to an evening at Jemima Goldsmith&#x27;s country house in the Cotswolds....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/news/article-16282493/Thomas-Markle-cut-ankle-monitor-child-abuse-court.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>Thomas Markle is taken into federal custody after allegedly cutting off his ankle monitor in wake of child pornography arrest</a></h3>
+                <p>Markle, 82, allegedly cut off the location monitor in the early hours of Tuesday morning, just days after his arrest for allegedly keeping child sexual abuse material in storage units in California....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/money/investing/article-16282475/Why-Nvidias-stock-market-pain-hurting-pension-you-dont-worry-you-follow-plan-RACHEL-RICKARD-STRAUS.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>Why Nvidia&#x27;s stock market pain is hurting your pension but you don&#x27;t have to worry if you follow this plan: RACHEL RICKARD STRAUS</a></h3>
+                <p>The pensions and Isas of millions of British savers have been dented this week by the revelation that a middle-aged man thousands of miles away had an affair....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>New York Post</div>
+                <h3><a href='https://decider.com/2026/11/11/campus-drivers-everything-we-know-about-season-2/' target='_blank' rel='noopener'>‘Campus Drivers’ Season 2: Everything We Know About Prime Video’s New YA Romance</a></h3>
+                <p>Lois and Lane&#x27;s relationship has already taken viewers on quite a ride in Campus Drivers, but could there be another semester ahead for the Belrose University students?...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>New York Post</div>
+                <h3><a href='https://nypost.com/video/trump-is-down-but-dont-count-him-out-brian-kilmeade/' target='_blank' rel='noopener'>Trump is down, but don’t count him out | Brian Kilmeade</a></h3>
+                <p>Fox News host Brian Kilmeade joins Miranda to dissect the Republicans’ midterm defeat and what comes next for President Trump and MAGA. He discusses the battle for the GOP’s future, why JD Vance may n...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>New York Post</div>
+                <h3><a href='https://nypost.com/2026/11/11/us-news/caped-loon-in-a-wizard-hat-attacks-turning-point-tpusa-group-at-texas-uni-event/' target='_blank' rel='noopener'>Caped nutjob in wizard hat attacks TPUSA group at Texas university event</a></h3>
+                <p>Bizarre video shows a cane-wielding wannabe wizard ripping down an American flag before unleashing a frenzied attack at a Turning Point USA event at a Texas university....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/hasncer-cure-been-known-42-years-2-2/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=hasncer-cure-been-known-42-years-2-2' target='_blank' rel='noopener'>Has The “Cancer Cure” Been Known For 42 Years?</a></h3>
+                <p>With King Charles being diagnosed with cancer this week, I thought back on this story... And I wonder if we&#x27;re about to see a cancer cure finally &quot;revealed&quot;?...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/veterans-gold-star-familiesn-visit-national-parks/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=veterans-gold-star-familiesn-visit-national-parks' target='_blank' rel='noopener'>Veterans and Gold Star Families Can Visit National Parks Free for Life</a></h3>
+                <p>A veteran designation on a driver’s license can qualify a family for free park entry. At Sequoia, the road into the Giant Forest began with an Army captain, 60 workers and a team of mules....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/nasa-astronaut-class-family-nurse-practitioners/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=nasa-astronaut-class-family-nurse-practitioners' target='_blank' rel='noopener'>NASA Is Hiring Astronauts. A Family Nurse Practitioner Can Apply Without a Single Flight Hour</a></h3>
+                <p>NASA is recruiting its next astronaut class. Here’s how a clinician qualifies, what pilots need, and when applicants can expect to hear back....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/11/11/senate-republicans-double-down-on-john-thunes-failed-leadership/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=senate-republicans-double-down-on-john-thunes-failed-leadership' target='_blank' rel='noopener'>Senate Republicans Double Down On John Thune’s Failed Leadership</a></h3>
+                <p>&#x27;Holding a rushed election ignores the message our voters sent,&#x27; Sen. Ron Johnson said of Thune&#x27;s hasty installment as leader....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/11/11/democrats-and-the-media-will-always-hate-trump-he-shouldnt-forget-that/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=democrats-and-the-media-will-always-hate-trump-he-shouldnt-forget-that' target='_blank' rel='noopener'>Democrats And The Media Will Always Hate Trump. He Shouldn’t Forget That</a></h3>
+                <p>President Trump sometimes just says things for the sake of making news, so it’s impossible to immediately know how serious he was in any number of the alarming answers he gave in a 60 Minutes intervie...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/11/11/when-democrats-say-medicare-for-all-they-mean-medicare-for-none/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=when-democrats-say-medicare-for-all-they-mean-medicare-for-none' target='_blank' rel='noopener'>When Democrats Say ‘Medicare For All,’ They Mean Medicare For None</a></h3>
+                <p>Sen. Bernie Sanders&#x27; &#x27;Medicare for All&#x27; bill wouldn’t expand the program. It would end it....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/columns/opinion/veterans-get-one-day-of-thanks-and-va-red-tape-year-round' target='_blank' rel='noopener'>Veterans get one day of thanks — and VA red tape year-round</a></h3>
+                <p>My father served as a colonel in the Army and later as chief counsel for the California Department of Veterans Affairs. Yet his own post-traumatic stress disorder went undiagnosed for years. His VA be...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/news/electoral-college-coming-to-an-end-blue-wave-gives-democrats-decades-old-scheme-new-life' target='_blank' rel='noopener'>Electoral College coming to an end? Blue wave gives Democrats’ decades-old scheme new life</a></h3>
+                <p>Some Democratic states have long planned to override the Electoral College in favor of a popular vote, and these fantasies are closer to coming to fruition than ever before. In fact, some are eyeing 2...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/tech/google-guided-learning-expansion' target='_blank' rel='noopener'>Google reels from claims it&#x27;s forcing AI on classrooms — with an all-or-nothing ultimatum</a></h3>
+                <p>Google has an unwavering foothold in the U.S. public education system, selling cheap Chromebooks and providing cloud-connected services like Drive, Docs, and more to students from coast to coast. Now ...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/david-strom/2026/11/11/not-so-fast-on-colorado-gender-victories-the-legislature-has-the-final-say-not-the-voters-n3820872' target='_blank' rel='noopener'>Not So Fast on Colorado Gender Victories: The Legislature Has the Final Say, Not the Voters</a></h3>
+                <p>Not So Fast on Colorado Gender Victories: The Legislature Has the Final Say, Not the Voters...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/headlines/2026/11/11/what-happened-in-the-midterms-n3820845' target='_blank' rel='noopener'>What Happened in the Midterms</a></h3>
+                <p>What Happened in the Midterms...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/ed-morrissey/2026/11/10/tuesdays-final-word-n3820868' target='_blank' rel='noopener'>Tuesday&#x27;s Final Word</a></h3>
+                <p>Tuesday&#x27;s Final Word...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Judicial Watch</div>
+                <h3><a href='https://www.judicialwatch.org/making-america-safe-again-most-secure-border-in-history-record-breaking-removal-of-criminal-aliens/' target='_blank' rel='noopener'>Making America Safe Again: Most Secure Border in History, Record-Breaking Removal of Criminal Aliens</a></h3>
+                <p>In a remarkable turnaround, the United States has the most secure border ever and in less than two…...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Judicial Watch</div>
+                <h3><a href='https://www.judicialwatch.org/judicial-watch-new-fbi-records-released-on-trump-butler-assassination-attempt-thomas-crooks-venmo-account-info-disclosed/' target='_blank' rel='noopener'>Judicial Watch: New FBI Records Released on Trump Butler Assassination Attempt—Thomas Crooks’ Venmo ...</a></h3>
+                <p>(Washington, DC) – Judicial Watch announced that it forced the release of 142 pages of new, heavily-redacted Federal…...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Judicial Watch</div>
+                <h3><a href='https://www.judicialwatch.org/investigates-jack-smith-teams-security-violations/' target='_blank' rel='noopener'>Judicial Watch Investigates Jack Smith Team’s Security Violations</a></h3>
+                <p>Judicial Watch Sues Over Jack Smith Team’s Security Incidents Judicial Watch Sues for FBI’s ‘Rosetta Stone’ Report on…...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/11/old-vietnam-draft-dodger-thankful-he-failed/' target='_blank' rel='noopener'>Old Vietnam Draft Dodger Thankful He Failed</a></h3>
+                <p>Photo Credit: ChatGPT for American Thinker By R.W. Trewyn Looking back, though, I’m deeply grateful the draft caught up with me....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/11/strong-leaders-and-holiness-make-america-great/' target='_blank' rel='noopener'>Strong Leaders And Holiness Make America Great</a></h3>
+                <p>Photo Credit: Image: Gage Skidmore via Flickr , CC BY-SA 2.0 . Gage Skidmore By E. Jeffrey Ludwig What kind of leader do Americans actually want?...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/11/gavin-newsom-s-mockery-of-justice/' target='_blank' rel='noopener'>Gavin Newsom&#x27;s Mockery of Justice</a></h3>
+                <p>Photo Credit: ChatGPT By Horace Cooper With the stroke of a pen, California Governor Gavin Newsom has delivered a devastating blow to the rule of law and a cruel insult to the families of murder victi...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMifEFVX3lxTE5sQ3M3ZTFkX19VVEFHSHNEX1BmTmZTZzlkemFnVUZfVjBja010TlFJTmIzaU1IU1BlZVRXRU1vemVIREhQeTNpZktjdEFjeGVCS0R3cXRrYVdkZ3VGRXBteUNHeTZ2UklaaWlpTnk5dEJSbF9wOWJvMFhRVjc?oc=5' target='_blank' rel='noopener'>Spot the Difference Daily- Play Now online &amp; 100% Free - The Epoch Times</a></h3>
+                <p>Spot the Difference Daily- Play Now online &amp; 100% Free The Epoch Times...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMiREFVX3lxTFBSU2dZLXZaX21HbzlKWGxkWnM1eEQwNEZ3VE4xUkJFWFJWSkJ3d0pSY2c4MTBKZXctUXdyWWdicWJQaklP?oc=5' target='_blank' rel='noopener'>The Epoch Times | Breaking News, Latest News, World News and Videos - The Epoch Times</a></h3>
+                <p>The Epoch Times | Breaking News, Latest News, World News and Videos The Epoch Times...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMiiAFBVV95cUxNM0RUWG11bU5iUVhRZU91djFycl9BeG1xejJ4MTEzS0taVkFrMlcxS050ZW5KR0lFbDBOM0NiM3dXT3pkaGtTcHBaUnRIemlQbUFhX1dsYmNKRF8xX1Z5WVNNVnBKVUlTcGdEWW1BdElTcVZzZ0tuTnRkOVdqMjdzMng3S2hRQlhr?oc=5' target='_blank' rel='noopener'>GOP Congressman Narrowly Wins Reelection - The Epoch Times</a></h3>
+                <p>GOP Congressman Narrowly Wins Reelection The Epoch Times...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Internet Archive TV News (hourly summary)</div>
+                <h3><a href='https://mastodon.archive.org/@tv/117597941563955000' target='_blank' rel='noopener'>TV news hourly summary · Nov 11, 13:03 UTC</a></h3>
+                <p>A twice-deported migrant was accused of threatening a United flight and trying to storm the cockpit, allegedly claiming to have a bomb; ICE sought custody. Ukraine talks in Abu Dhabi concluded, with W...</p>
+            </div>
+            </div>
+
+        <footer>
+            Automated Segmented Pipeline powered by HTML Scrapers, 11 Global RSS Feeds &amp; Google Gemini AI &bull; 2026-11-11
+        </footer>
+    </div>
+</body>
+</html>

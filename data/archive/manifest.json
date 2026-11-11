@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-11-11",
+    "timestamp": "2026-11-11T13:31:22.802836+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "Three Iran-backed suspects plotted attacks including RAF Fairford incident, US says",
+      "US House blocks bid to impeach Defence Secretary Pete Hegseth, for now",
+      "Russian negotiator reports some progress after Ukraine talks, sees no EU role in process for now - Reuters",
+      "Bomb alerts sent to schools in Italy and Northern Ireland in latest threats - Reuters",
+      "SARAH VINE: Russell Brand was a grubby weirdo with bird's nest hair. What is it about the female psyche that made beautiful, successful women ignore his walking, talking red flags? I think I know..."
+    ],
+    "archive_html_path": "data/archive/2026-11-11/index.html",
+    "data_json_path": "data/archive/2026-11-11/data.json"
+  },
+  {
     "date": "2026-11-10",
     "timestamp": "2026-11-10T14:17:39.240268+00:00",
     "stories_count": 8,
