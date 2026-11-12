@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-11-12",
+    "timestamp": "2026-11-12T14:36:05.664545+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "'No light, no water, no heat': Ukrainians struggle with blackouts as Russia hits power grid",
+      "Democrat Scott Colom makes history as Mississippi's first black senator since 19th Century",
+      "Nvidia CEO Jensen Huang to step down in big blow to AI boom - Reuters",
+      "Trump threatens to double tariffs on Mexico if it does not halt migrants - Reuters",
+      "First victim of collapsed Brooklyn building is identified as devoted father-of-one, 26, as death toll rockets to eight and 19 injured with fears more are trapped under rubble"
+    ],
+    "archive_html_path": "data/archive/2026-11-12/index.html",
+    "data_json_path": "data/archive/2026-11-12/data.json"
+  },
+  {
     "date": "2026-11-11",
     "timestamp": "2026-11-11T13:31:22.802836+00:00",
     "stories_count": 8,
