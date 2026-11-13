@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-11-13",
+    "timestamp": "2026-11-13T13:54:25.340060+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "What we know about the global Microsoft outage",
+      "Watch: How a server outage took down Microsoft Teams and Outlook",
+      "EXCLUSIVE: Amazon\u2019s plan to own the world\u2019s product data and fight AI shopping agents - Reuters",
+      "SpaceX to attempt first Starship spacecraft recovery on land in 15th flight - Reuters",
+      "Horrific footage captures moment NYC building collapses as terrified resident rushes down newly exposed staircase"
+    ],
+    "archive_html_path": "data/archive/2026-11-13/index.html",
+    "data_json_path": "data/archive/2026-11-13/data.json"
+  },
+  {
     "date": "2026-11-12",
     "timestamp": "2026-11-12T14:36:05.664545+00:00",
     "stories_count": 8,

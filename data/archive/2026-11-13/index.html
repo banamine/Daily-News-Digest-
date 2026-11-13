@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Intelligence Briefing – 2026-11-13</title>
+    <style>
+        :root {
+            --bg: #0f1115;
+            --card: #1a1d24;
+            --text: #e6e8ec;
+            --muted: #9ba1ad;
+            --accent: #3b82f6;
+            --border: #2a2e38;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; padding: 2rem 1rem; }
+        .container { max-width: 960px; margin: 0 auto; }
+        header { text-align: center; margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+        header h1 { font-size: 2.2rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 0.4rem; color: #ffffff; }
+        header .date { color: var(--accent); font-size: 1rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+        
+        .hero-image { width: 100%; border-radius: 16px; overflow: hidden; margin-bottom: 2.5rem; box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6); border: 1px solid var(--border); background: #0b0f19; }
+        
+        /* Flexible Photo Collage Component */
+        .collage-wrapper { position: relative; width: 100%; }
+        .collage-header-pill {
+            position: absolute; top: 14px; left: 14px; z-index: 10;
+            background: rgba(15, 23, 42, 0.88); backdrop-filter: blur(8px);
+            border: 1px solid rgba(56, 189, 248, 0.35); color: #38bdf8;
+            padding: 5px 12px; border-radius: 999px; font-size: 11px; font-weight: 800;
+            letter-spacing: 0.5px; display: flex; align-items: center; gap: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        }
+        .collage-container {
+            display: grid; gap: 8px; background: #090d16; padding: 8px; border-radius: 16px; min-height: 280px;
+        }
+        .collage-container.collage-count-1 { grid-template-columns: 1fr; grid-template-rows: 360px; }
+        .collage-container.collage-count-1 .hero-tile { grid-row: auto; }
+
+        .collage-container.collage-count-2 { grid-template-columns: 1fr 1fr; grid-template-rows: 320px; }
+        .collage-container.collage-count-2 .hero-tile { grid-row: auto; }
+
+        .collage-container.collage-count-3 { grid-template-columns: 1.6fr 1fr; grid-template-rows: 170px 170px; }
+        .collage-container.collage-count-3 .hero-tile { grid-row: span 2; }
+
+        .collage-container.collage-count-4 { grid-template-columns: 1.6fr 1fr 1fr; grid-template-rows: 170px 170px; }
+        .collage-container.collage-count-4 .hero-tile { grid-row: span 2; }
+        .collage-container.collage-count-4 .collage-tile:nth-child(4) { grid-column: span 2; }
+
+        .collage-container.collage-count-5 { grid-template-columns: 1.8fr 1fr 1fr; grid-template-rows: 180px 180px; }
+        .collage-container.collage-count-5 .hero-tile { grid-row: span 2; }
+
+        @media (max-width: 768px) {
+            .collage-container,
+            .collage-container.collage-count-2,
+            .collage-container.collage-count-3,
+            .collage-container.collage-count-4,
+            .collage-container.collage-count-5 {
+                grid-template-columns: 1fr; grid-template-rows: auto;
+            }
+            .collage-tile, .hero-tile { min-height: 180px; }
+        }
+        .collage-tile {
+            position: relative; border-radius: 10px; overflow: hidden; background: #131927;
+            border: 1px solid rgba(255, 255, 255, 0.08); transition: transform 0.3s ease;
+        }
+        .collage-tile.hero-tile { grid-row: span 2; }
+        .collage-tile img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
+        .collage-tile:hover img { transform: scale(1.06); }
+        .collage-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(to top, rgba(11, 15, 23, 0.95) 0%, rgba(11, 15, 23, 0.2) 60%, transparent 100%);
+            display: flex; flex-direction: column; justify-content: flex-end; padding: 12px;
+        }
+        .collage-badge {
+            align-self: flex-start; background: rgba(56, 189, 248, 0.2); color: #38bdf8;
+            border: 1px solid rgba(56, 189, 248, 0.4); font-size: 10px; font-weight: 700;
+            text-transform: uppercase; padding: 2px 8px; border-radius: 999px; margin-bottom: 6px;
+        }
+        .collage-badge.hero-badge { background: rgba(16, 185, 129, 0.2); color: #34d399; border-color: rgba(16, 185, 129, 0.4); }
+        .collage-title { color: #ffffff; font-size: 12px; font-weight: 700; line-height: 1.35; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        .hero-tile .collage-title { font-size: 17px; }
+
+        .stories { display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 3rem; }
+        .story { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem; }
+        .story h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: #f1f3f5; }
+        .story-body { color: var(--muted); font-size: 0.98rem; overflow-wrap: anywhere; word-break: break-word; }
+        .story h2, .mini-card h3, .mini-card p { overflow-wrap: anywhere; }
+        .container { min-width: 0; max-width: 100%; }
+        .section-title { font-size: 1.3rem; font-weight: 800; color: var(--accent); margin: 2rem 0 1rem; border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; }
+        .segmented-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
+        .mini-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+        .mini-card.scraped { border-left: 3px solid #8b5cf6; }
+        .mini-card.rss { border-left: 3px solid #3b82f6; }
+        .source-tag { font-size: 0.75rem; font-weight: bold; color: var(--accent); margin-bottom: 0.4rem; }
+        .mini-card h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.4rem; }
+        .mini-card h3 a { color: #f1f3f5; text-decoration: none; }
+        .mini-card h3 a:hover { text-decoration: underline; color: var(--accent); }
+        .mini-card p { font-size: 0.82rem; color: var(--muted); line-height: 1.4; }
+        footer { text-align: center; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="date">2026-11-13</div>
+            <h1>Daily Intelligence Briefing</h1>
+        </header>
+
+        <div class="hero-image">
+            
+                
+    <div class="collage-wrapper">
+        <div class="collage-header-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7"/><path d="M16 5h5v5"/><path d="m21 5-9 9"/></svg>
+            <span>Parsed Feeds Mixed Photo Collage (5 Photos)</span>
+        </div>
+        <div class="collage-container collage-count-5">
+            <div class="collage-tile hero-tile">
+                <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/dddf/live/8578f720-df49-11f1-b441-2b33b063138f.jpg" alt="What we know about the global Microsoft outage" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+                <div class="collage-overlay">
+                    <span class="collage-badge hero-badge">BBC World News</span>
+                    <h3 class="collage-title hero-title">What we know about the global Microsoft outage</h3>
+                </div>
+            </div>
+            
+        <div class="collage-tile">
+            <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/e30a/live/54c2fe10-df57-11f1-a701-fddedf244c16.jpg" alt="Watch: How a server outage took down Microsoft Teams and Outlook" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">BBC World News</span>
+                <h4 class="collage-title">Watch: How a server outage took down Microsoft Teams and Outlook</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/f66c/live/4f0358a0-def1-11f1-bb80-c5cef03337ce.jpg" alt="Ex-Nvidia CEO Jensen Huang summoned to testify before Congress about affair with alleged Chinese spy" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">BBC World News</span>
+                <h4 class="collage-title">Ex-Nvidia CEO Jensen Huang summoned to testify before Congress about affair with alleged Chinese spy</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="EXCLUSIVE: Amazon’s plan to own the world’s product data and fight AI shopping agents - Reuters" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">Reuters Top News</span>
+                <h4 class="collage-title">EXCLUSIVE: Amazon’s plan to own the world’s product data and fight AI shopping agents - Reuters</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="SpaceX to attempt first Starship spacecraft recovery on land in 15th flight - Reuters" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">Reuters Top News</span>
+                <h4 class="collage-title">SpaceX to attempt first Starship spacecraft recovery on land in 15th flight - Reuters</h4>
+            </div>
+        </div>
+        
+        </div>
+    </div>
+    
+            
+        </div>
+
+        <main class="stories">
+            
+        <div class="story">
+            <h2>What we know about the global Microsoft outage</h2>
+            <div class="story-body"><strong>Source:</strong> BBC World News<br><strong>Summary:</strong> A widespread Microsoft outage has disrupted services globally. Microsoft clarified that the issue was not triggered by a cyberattack, but efforts to resolve the technical problems have experienced significant delays.<br><strong>Key Theme:</strong> Tech Outage<br>---</div>
+        </div>
+        
+        <div class="story">
+            <h2>Watch: How a server outage took down Microsoft Teams and Outlook</h2>
+            <div class="story-body"><strong>Source:</strong> BBC World News<br><strong>Summary:</strong> A major server outage has impacted key Microsoft productivity tools worldwide. Affected platforms include workplace communication apps Teams and Outlook, as well as the AI assistant Copilot.<br><strong>Key Theme:</strong> Tech Outage<br>---</div>
+        </div>
+        
+        <div class="story">
+            <h2>EXCLUSIVE: Amazon’s plan to own the world’s product data and fight AI shopping agents</h2>
+            <div class="story-body"><strong>Source:</strong> Reuters Top News<br><strong>Summary:</strong> Amazon is working on an initiative to capture and centralize global product data. The strategic effort is designed to counter the emergence of third-party AI shopping agents and protect the company&#x27;s dominance in online retail.<br><strong>Key Theme:</strong> Artificial Intelligence<br>---</div>
+        </div>
+        
+        <div class="story">
+            <h2>SpaceX to attempt first Starship spacecraft recovery on land in 15th flight</h2>
+            <div class="story-body"><strong>Source:</strong> Reuters Top News<br><strong>Summary:</strong> SpaceX is preparing for the 15th flight test of its Starship spacecraft. During this mission, the company aims to accomplish its first land-based recovery of the Starship vehicle.<br><strong>Key Theme:</strong> Space Exploration<br>---</div>
+        </div>
+        
+        <div class="story">
+            <h2>Horrific footage captures moment NYC building collapses as terrified resident rushes down newly exposed staircase</h2>
+            <div class="story-body"><strong>Source:</strong> Daily Mail UK<br><strong>Summary:</strong> A three-story building collapsed in Flatbush, Brooklyn, on Wednesday evening. The disaster resulted in eight deaths and dozens of injuries, with video capturing residents attempting to escape as the structure fell.<br><strong>Key Theme:</strong> Disaster Response<br>---</div>
+        </div>
+        
+        <div class="story">
+            <h2>Microsoft says efforts to fix global outage &#x27;not going as expected&#x27; with millions impacted worldwide</h2>
+            <div class="story-body"><strong>Source:</strong> Daily Mail UK<br><strong>Summary:</strong> Microsoft reported that technical remediation for its massive global outage is progressing slower than anticipated. Millions of users around the world continue to experience disruptions across Microsoft 365 services, including Teams, Outlook, and Copilot.<br><strong>Key Theme:</strong> Tech Outage<br>---</div>
+        </div>
+        
+        <div class="story">
+            <h2>Ella Stiller On Tackling AI In ‘Cupertino’ And Why She Knew The Part Was For Her Instantly</h2>
+            <div class="story-body"><strong>Source:</strong> New York Post<br><strong>Summary:</strong> Actress Ella Stiller opened up about her role in the upcoming project &quot;Cupertino,&quot; which explores themes surrounding artificial intelligence. She noted feeling an immediate personal connection to the character before landing the role.<br><strong>Key Theme:</strong> Entertainment<br>---</div>
+        </div>
+        
+        <div class="story">
+            <h2>TV news hourly summary · Nov 13, 13:03 UTC</h2>
+            <div class="story-body"><strong>Source:</strong> Internet Archive TV News (hourly summary)<br><strong>Summary:</strong> Global news broadcasts covered a widespread Microsoft outage impacting over 70 countries while ruling out a cyberattack. Reports also touched on local political news in Seattle regarding girls&#x27; sports legislation, as well as diplomatic talks concerning Ukraine.<br><strong>Key Theme:</strong> News Summary</div>
+        </div>
+        
+        </main>
+
+        
+        <div class='section-title'>Global &amp; Alternative RSS Feeds</div><div class='segmented-grid'>
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/articles/cwvg238zrnm5o?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>What we know about the global Microsoft outage</a></h3>
+                <p>Microsoft has said the outage was not caused by a cyber-security incident, but efforts to fix the issues have so far been largely unsuccessful....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/videos/cqzjr903n01po?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>Watch: How a server outage took down Microsoft Teams and Outlook</a></h3>
+                <p>A Microsoft outage is affecting services including Teams, Outlook and AI software Copilot....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/articles/cmq5vd1wdgz6o?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>Ex-Nvidia CEO Jensen Huang summoned to testify before Congress about affair with alleged Chinese spy</a></h3>
+                <p>Huang abruptly quit on Thursday as head of one of the world&#x27;s most valuable companies after revelations of alleged extramarital affairs....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMivAFBVV95cUxQY2FJOXhDLWZqYzRxQ3BNVGRyeDNGWGZYU0VwNm5PV09tWGVwRklHdGFQaDRGWEQwM3pBZ1g2X0lYQVFGUU9RdHhyVk9kSnhrcWxob3o2ZUVNTE5SWW5OSWtkZEVlZm83ZUdrZHJ6X1N6bjhqT2F2WWxpWXVaUGhBZldsU0N5MEhjS19yR1pJcFlDN2N4ekpfWDZmR1FPT3k4eGY0bkdEQldjVnVZX21BYlVXX0h4d1JwbFVSaQ?oc=5' target='_blank' rel='noopener'>EXCLUSIVE: Amazon’s plan to own the world’s product data and fight AI shopping agents - Reuters</a></h3>
+                <p>EXCLUSIVE: Amazon’s plan to own the world’s product data and fight AI shopping agents Reuters...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMirwFBVV95cUxPeDE0b0ZmNTF1ZVVBMS03RlA4TDhPZVNVbUEyTG5Gb1ZFRHdnc0QtdmM1X2ZjZFQwSVBBVVRWamRTVzh0NUp1N2lKOTJDbDE3U2xob3JtLTZkb211NHR2QkZ5RnczcERVQV8zcmtVbWttdS1sMGViMmYwZnBmWDlCMkkyRVdmQVlSVmZQWTVuWGlPSTNZNFU5SExWUW1LRkNIUFhYSi1iZzRTa1BjbFQw?oc=5' target='_blank' rel='noopener'>SpaceX to attempt first Starship spacecraft recovery on land in 15th flight - Reuters</a></h3>
+                <p>SpaceX to attempt first Starship spacecraft recovery on land in 15th flight Reuters...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMivwFBVV95cUxOcEw4cVpnMkIxMTVtZEJlQmN3OHlsLUxxZnQxMWlfV3VfWTBYeHA2VEpBVWxpZk9TejdSaDgzazdlQUlMZy00aEhmZS1GYnhpVmU1bzdQTWM2VUJqd2dOWWowa1VQSWppQVdYSi1PVm0zX2J1b1hFU1QwaGs5N3lDZkJ3bEY5OG9Tai15M3VoRXVycFVBWjYwWjQ5dUhDcEJ4SWFHSXZxNDg5b2k2OG1DUVBoTHBDWE84dmVfZXc4WQ?oc=5' target='_blank' rel='noopener'>IAEA increasingly concerned about Iranian enrichment plant, its report says - Reuters</a></h3>
+                <p>IAEA increasingly concerned about Iranian enrichment plant, its report says Reuters...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/news/article-16288687/footage-new-york-city-flatbush-brooklyn-building-collapse.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>Horrific footage captures moment NYC building collapses as terrified resident rushes down newly exposed staircase</a></h3>
+                <p>Frightening footage captured the moment a three-story building collapsed in Flatbush, Brooklyn, on Wednesday evening. Eight people died and dozens more were injured....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/sciencetech/article-16289289/microsoft-outage-fix-struggles.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>Microsoft says efforts to fix global outage &#x27;not going as expected&#x27; with millions impacted worldwide</a></h3>
+                <p>Millions reported issues with Microsoft Outlook, the company&#x27;s workplace messaging app, Teams, its AI assistant, Copilot, as well as other Microsoft 365 services....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/news/article-16289457/Microsoft-Firm-says-tools-fix-global-outage-not-working-expected-millions-affected-Microsoft-365-Outlook-Teams-Copilot-OneDrive-hit.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>Microsoft is still DOWN: Firm says tools to fix global outage are &#x27;not working as expected&#x27; with millions affected as Microsoft 365, Outlook, Teams, Copilot and OneDrive all hit</a></h3>
+                <p>Monitoring website Downdetector first showed a spike in users reporting problems with Microsoft Teams in the UK at around 6.15pm on Thursday....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>New York Post</div>
+                <h3><a href='https://decider.com/2026/11/13/ella-stiller-on-tackling-ai-in-cupertino-and-why-she-knew-the-part-was-for-her-instantly/' target='_blank' rel='noopener'>Ella Stiller On Tackling AI In ‘Cupertino’ And Why She Knew The Part Was For Her Instantly</a></h3>
+                <p>Ella Stiller knew Cupertino was made for her far before she got the part....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>New York Post</div>
+                <h3><a href='https://nypost.com/2026/11/13/sports/will-st-johns-have-big-east-problem-on-ncaa-tournament-resume/' target='_blank' rel='noopener'>The danger for St. John’s if the Big East keeps disappointing</a></h3>
+                <p>The college basketball season is less than two weeks old, but the early signs are not positive for the Big East....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>New York Post</div>
+                <h3><a href='https://pagesix.com/2026/11/13/entertainment/kanye-west-sued-by-performer-over-abusive-conditions-working-on-rappers-biblical-opera/' target='_blank' rel='noopener'>Kanye West sued by performer who says he faced ‘abusive conditions’ working on rapper’s biblical opera</a></h3>
+                <p>Chase Taylor, who worked with West in 2019, is suing the Grammy winner for “multiple unfair and deceptive trade practices.&quot;...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/men-theres-one-part-getting-older-nobody-likes/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=men-theres-one-part-getting-older-nobody-likes' target='_blank' rel='noopener'>Men, There’s One Part of Getting Older Nobody Likes Talking About</a></h3>
+                <p>Let’s talk about something most men would rather keep to themselves. And no, I’m not going to make this awkward. […]...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/ag-todd-blanche-relocated-military-base-we-are/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=ag-todd-blanche-relocated-military-base-we-are' target='_blank' rel='noopener'>AG Todd Blanche Relocated To Military Base: “We are ACTIVELY investigating election integrity cases” — But There’s One Big Catch</a></h3>
+                <p>Attorney General Todd Blanche held a press conference today and honestly I have to say I have mixed feelings on […]...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/breaking-authorities-reveal-identity-deadly-d-c-gym/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=breaking-authorities-reveal-identity-deadly-d-c-gym' target='_blank' rel='noopener'>BREAKING: Authorities Reveal Identity and Motive Of Deadly D.C. Gym Shooter</a></h3>
+                <p>Authorities have identified the man accused of opening fire inside and above a busy D.C. gym, killing one person and wounding four others....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/11/13/the-gop-midterm-loss-is-not-a-mandate-for-amnesty/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=the-gop-midterm-loss-is-not-a-mandate-for-amnesty' target='_blank' rel='noopener'>The GOP Midterm Loss Is Not A Mandate For Amnesty</a></h3>
+                <p>Republicans want to use the midterms as a pretext for an &#x27;immigration deal&#x27; that would reward big business with cheap foreign labor....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/11/13/the-romney-gop-rises-from-its-grave-talking-about-principles-without-having-any/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=the-romney-gop-rises-from-its-grave-talking-about-principles-without-having-any' target='_blank' rel='noopener'>The Romney GOP Rises From Its Grave, Talking About ‘Principles’ Without Having Any</a></h3>
+                <p>If the Republican Party is going to mean anything at all in the 21st century, there has to be a floor: a set of minimum expectations that have to be met....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/11/13/midterm-blowout-was-a-feature-not-a-bug-in-neocons-bid-to-de-maga-the-gop/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=midterm-blowout-was-a-feature-not-a-bug-in-neocons-bid-to-de-maga-the-gop' target='_blank' rel='noopener'>Midterm Blowout Was A Feature, Not A Bug, In Neocons’ Bid To De-MAGA The GOP</a></h3>
+                <p>After last week&#x27;s midterm disaster, neocons like Marc Thiessen and Mark Levin must never again be viewed as credible figures on the right....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/news/poll-2028-president-vance-kamala' target='_blank' rel='noopener'>Vance and Kamala top presidential race for 2028 — but surprising candidates come in second place</a></h3>
+                <p>The latest polling after the stunning midterm Republican massacre shows that second-place candidates in the presidential race for 2028 are making gains on the top contenders. An Economist/YouGov poll ...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/lifestyle/buying-a-used-car-the-best-bargains-may-be-shifting-from-electric-to-gas' target='_blank' rel='noopener'>Buying a used car? The best bargains may be shifting from electric to gas.</a></h3>
+                <p>For years, one of the biggest concerns about buying an electric vehicle was depreciation. EVs could lose value quickly, making them expensive to own but potentially attractive bargains on the used-car...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/shows/making-the-argument-with-nick-freitas/the-primary-season-starts-now-a-hope-filled-warning-for-republican-leadership' target='_blank' rel='noopener'>‘The primary season starts now’: A hope-filled warning for Republican leadership</a></h3>
+                <p>Republicans have a serious problem heading into 2028: Their voters are losing faith in the party. But BlazeTV host Nick Freitas and Citizens Alliance CEO Cliff Maloney aren&#x27;t ready to throw in th...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/ed-morrissey/2026/11/13/its-on-van-hollen-declares-challenge-to-chuck-schumer-n3820951' target='_blank' rel='noopener'>It’s On: Van Hollen Declares Challenge to &#x27;Chuck&#x27; Schumer</a></h3>
+                <p>It’s On: Van Hollen Declares Challenge to &#x27;Chuck&#x27; Schumer...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/david-strom/2026/11/13/ilhan-omar-is-in-real-trouble-and-she-knows-it-n3820947' target='_blank' rel='noopener'>Ilhan Omar Is in Real Trouble, and She Knows It</a></h3>
+                <p>Ilhan Omar Is in Real Trouble, and She Knows It...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/headlines/2026/11/13/enforce-immigration-law-in-the-boardroom-n3820916' target='_blank' rel='noopener'>Enforce Immigration Law in the Boardroom</a></h3>
+                <p>Enforce Immigration Law in the Boardroom...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Judicial Watch</div>
+                <h3><a href='https://www.judicialwatch.org/judicial-watch-probes-election-integrity-across-the-nation/' target='_blank' rel='noopener'>Judicial Watch Probes Election Integrity Across the Nation</a></h3>
+                <p>Judicial Watch closely monitored the mid-term elections. It’s a job we’ve been doing for more than thirty years,…...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Judicial Watch</div>
+                <h3><a href='https://www.judicialwatch.org/making-america-safe-again-most-secure-border-in-history-record-breaking-removal-of-criminal-aliens/' target='_blank' rel='noopener'>Making America Safe Again: Most Secure Border in History, Record-Breaking Removal of Criminal Aliens</a></h3>
+                <p>In a remarkable turnaround, the United States has the most secure border ever and in less than two…...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Judicial Watch</div>
+                <h3><a href='https://www.judicialwatch.org/judicial-watch-new-fbi-records-released-on-trump-butler-assassination-attempt-thomas-crooks-venmo-account-info-disclosed/' target='_blank' rel='noopener'>Judicial Watch: New FBI Records Released on Trump Butler Assassination Attempt—Thomas Crooks’ Venmo ...</a></h3>
+                <p>(Washington, DC) – Judicial Watch announced that it forced the release of 142 pages of new, heavily-redacted Federal…...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/11/raw-material-scarcity/' target='_blank' rel='noopener'>Raw-Material Scarcity</a></h3>
+                <p>Photo Credit: U.S. Department of Agriculture By Thomas Kolbe China’s sharpest geopolitical weapon is an export ban on rare earths....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/11/winning-the-culture-war-in-comics/' target='_blank' rel='noopener'>Winning The Culture War In Comics</a></h3>
+                <p>Photo Credit: Rippaverse.com By Blaine L. Pardoe When comic-based stories fail, it’s usually because they are pushing some left-wing narrative and ignore the actual fans of the genre....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/11/voters-have-moved-on-from-global-warming/' target='_blank' rel='noopener'>Voters Have Moved On From Global Warming</a></h3>
+                <p>Photo Credit: Earth burning global warming climate change Pixabay By Anthony Watts Climate change, one of the Democrat Party&#x27;s signature issues of the past decade, was almost nowhere to be found ...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMiREFVX3lxTFBSU2dZLXZaX21HbzlKWGxkWnM1eEQwNEZ3VE4xUkJFWFJWSkJ3d0pSY2c4MTBKZXctUXdyWWdicWJQaklP?oc=5' target='_blank' rel='noopener'>The Epoch Times | Breaking News, Latest News, World News and Videos - The Epoch Times</a></h3>
+                <p>The Epoch Times | Breaking News, Latest News, World News and Videos The Epoch Times...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMihAFBVV95cUxNNHBwU2lfSVBJRFZobFFyRHh0bS1wTTY0QVd2V1ljVmtTbjlqRU02NTJnaXc3dkF4OFpDM1dreFpwWnQ2by13NFhSMzRaeW1zczNsd1E4eHYtaXgtVTc4a3FKV2h3U2JYcWNsUy1odXkybUl6STNSR0ZiamZ1Z2Y0dGVINU8?oc=5' target='_blank' rel='noopener'>Democrats Launch New Probes of RFK Jr. - The Epoch Times</a></h3>
+                <p>Democrats Launch New Probes of RFK Jr. The Epoch Times...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMimAFBVV95cUxPRENkb3FBeENzSWtRM0Vrd2FLdHRMUlRfeW84V3o3aFA1YmxBUmFCZHEza3otRXgya0ppRlk4dTRKUndLZmxqTUctNjE2cUNHZVZyLWZTQzFmMWNta1M1NmwwNUNFLVdMMU8zT2FiYW51b0Mwa1Y0dnk1aTlEdWhTdkdWejZfVnREZGNiaVNfbGpGTUNpc2dEag?oc=5' target='_blank' rel='noopener'>Peltola’s Lead Shrinks as Alaska Processes More Votes - The Epoch Times</a></h3>
+                <p>Peltola’s Lead Shrinks as Alaska Processes More Votes The Epoch Times...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Internet Archive TV News (hourly summary)</div>
+                <h3><a href='https://mastodon.archive.org/@tv/117609266249801065' target='_blank' rel='noopener'>TV news hourly summary · Nov 13, 13:03 UTC</a></h3>
+                <p>A global Microsoft outage disrupted users in more than 70 countries; Microsoft said recovery was progressing in Europe and ruled out a cyberattack. Seattle’s school board approved a legal fight agains...</p>
+            </div>
+            </div>
+
+        <footer>
+            Automated Segmented Pipeline powered by HTML Scrapers, 11 Global RSS Feeds &amp; Google Gemini AI &bull; 2026-11-13
+        </footer>
+    </div>
+</body>
+</html>
