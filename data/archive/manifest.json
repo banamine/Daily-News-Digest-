@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-11-14",
+    "timestamp": "2026-11-14T12:57:12.728187+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "What we know about the ground stop and what to do if you're affected",
+      "US has floated Ukraine ceding Donbas for Nato membership, Zelensky says",
+      "Trump tells advisers he may hold off on Iran attacks barring new provocations, sources say - Reuters",
+      "Tesla invites select customers to buy Cybercab for personal use - Reuters",
+      "Greta Thunberg doubles down with her criticism of eco protesters after footage emerges of her laughing 'Are they still doing that?' after she moved on to Gaza"
+    ],
+    "archive_html_path": "data/archive/2026-11-14/index.html",
+    "data_json_path": "data/archive/2026-11-14/data.json"
+  },
+  {
     "date": "2026-11-13",
     "timestamp": "2026-11-13T13:54:25.340060+00:00",
     "stories_count": 8,
