@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-11-15",
+    "timestamp": "2026-11-15T13:25:25.694926+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "New Orleans port files $1m lawsuit over 'miracle on the Mississippi' tanker collision",
+      "Three men sentenced to death in Jordan over fatal church mass shooting",
+      "Nearly 1,500 migrants arrive in Canary Islands in one day - Reuters",
+      "Megaspeed says Alice Huang left the company in August 2025 - Reuters",
+      "Greta Thunberg doubles down with her criticism of eco protesters after footage emerges of her laughing 'Are they still doing that?' after she moved on to Gaza"
+    ],
+    "archive_html_path": "data/archive/2026-11-15/index.html",
+    "data_json_path": "data/archive/2026-11-15/data.json"
+  },
+  {
     "date": "2026-11-14",
     "timestamp": "2026-11-14T12:57:12.728187+00:00",
     "stories_count": 8,

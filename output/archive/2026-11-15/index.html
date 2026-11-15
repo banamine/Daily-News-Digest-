@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Intelligence Briefing – 2026-11-15</title>
+    <style>
+        :root {
+            --bg: #0f1115;
+            --card: #1a1d24;
+            --text: #e6e8ec;
+            --muted: #9ba1ad;
+            --accent: #3b82f6;
+            --border: #2a2e38;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; padding: 2rem 1rem; }
+        .container { max-width: 960px; margin: 0 auto; }
+        header { text-align: center; margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+        header h1 { font-size: 2.2rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 0.4rem; color: #ffffff; }
+        header .date { color: var(--accent); font-size: 1rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+        
+        .hero-image { width: 100%; border-radius: 16px; overflow: hidden; margin-bottom: 2.5rem; box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6); border: 1px solid var(--border); background: #0b0f19; }
+        
+        /* Flexible Photo Collage Component */
+        .collage-wrapper { position: relative; width: 100%; }
+        .collage-header-pill {
+            position: absolute; top: 14px; left: 14px; z-index: 10;
+            background: rgba(15, 23, 42, 0.88); backdrop-filter: blur(8px);
+            border: 1px solid rgba(56, 189, 248, 0.35); color: #38bdf8;
+            padding: 5px 12px; border-radius: 999px; font-size: 11px; font-weight: 800;
+            letter-spacing: 0.5px; display: flex; align-items: center; gap: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        }
+        .collage-container {
+            display: grid; gap: 8px; background: #090d16; padding: 8px; border-radius: 16px; min-height: 280px;
+        }
+        .collage-container.collage-count-1 { grid-template-columns: 1fr; grid-template-rows: 360px; }
+        .collage-container.collage-count-1 .hero-tile { grid-row: auto; }
+
+        .collage-container.collage-count-2 { grid-template-columns: 1fr 1fr; grid-template-rows: 320px; }
+        .collage-container.collage-count-2 .hero-tile { grid-row: auto; }
+
+        .collage-container.collage-count-3 { grid-template-columns: 1.6fr 1fr; grid-template-rows: 170px 170px; }
+        .collage-container.collage-count-3 .hero-tile { grid-row: span 2; }
+
+        .collage-container.collage-count-4 { grid-template-columns: 1.6fr 1fr 1fr; grid-template-rows: 170px 170px; }
+        .collage-container.collage-count-4 .hero-tile { grid-row: span 2; }
+        .collage-container.collage-count-4 .collage-tile:nth-child(4) { grid-column: span 2; }
+
+        .collage-container.collage-count-5 { grid-template-columns: 1.8fr 1fr 1fr; grid-template-rows: 180px 180px; }
+        .collage-container.collage-count-5 .hero-tile { grid-row: span 2; }
+
+        @media (max-width: 768px) {
+            .collage-container,
+            .collage-container.collage-count-2,
+            .collage-container.collage-count-3,
+            .collage-container.collage-count-4,
+            .collage-container.collage-count-5 {
+                grid-template-columns: 1fr; grid-template-rows: auto;
+            }
+            .collage-tile, .hero-tile { min-height: 180px; }
+        }
+        .collage-tile {
+            position: relative; border-radius: 10px; overflow: hidden; background: #131927;
+            border: 1px solid rgba(255, 255, 255, 0.08); transition: transform 0.3s ease;
+        }
+        .collage-tile.hero-tile { grid-row: span 2; }
+        .collage-tile img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
+        .collage-tile:hover img { transform: scale(1.06); }
+        .collage-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(to top, rgba(11, 15, 23, 0.95) 0%, rgba(11, 15, 23, 0.2) 60%, transparent 100%);
+            display: flex; flex-direction: column; justify-content: flex-end; padding: 12px;
+        }
+        .collage-badge {
+            align-self: flex-start; background: rgba(56, 189, 248, 0.2); color: #38bdf8;
+            border: 1px solid rgba(56, 189, 248, 0.4); font-size: 10px; font-weight: 700;
+            text-transform: uppercase; padding: 2px 8px; border-radius: 999px; margin-bottom: 6px;
+        }
+        .collage-badge.hero-badge { background: rgba(16, 185, 129, 0.2); color: #34d399; border-color: rgba(16, 185, 129, 0.4); }
+        .collage-title { color: #ffffff; font-size: 12px; font-weight: 700; line-height: 1.35; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        .hero-tile .collage-title { font-size: 17px; }
+
+        .stories { display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 3rem; }
+        .story { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem; }
+        .story h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: #f1f3f5; }
+        .story-body { color: var(--muted); font-size: 0.98rem; overflow-wrap: anywhere; word-break: break-word; }
+        .story h2, .mini-card h3, .mini-card p { overflow-wrap: anywhere; }
+        .container { min-width: 0; max-width: 100%; }
+        .section-title { font-size: 1.3rem; font-weight: 800; color: var(--accent); margin: 2rem 0 1rem; border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; }
+        .segmented-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
+        .mini-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+        .mini-card.scraped { border-left: 3px solid #8b5cf6; }
+        .mini-card.rss { border-left: 3px solid #3b82f6; }
+        .source-tag { font-size: 0.75rem; font-weight: bold; color: var(--accent); margin-bottom: 0.4rem; }
+        .mini-card h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.4rem; }
+        .mini-card h3 a { color: #f1f3f5; text-decoration: none; }
+        .mini-card h3 a:hover { text-decoration: underline; color: var(--accent); }
+        .mini-card p { font-size: 0.82rem; color: var(--muted); line-height: 1.4; }
+        footer { text-align: center; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="date">2026-11-15</div>
+            <h1>Daily Intelligence Briefing</h1>
+        </header>
+
+        <div class="hero-image">
+            
+                
+    <div class="collage-wrapper">
+        <div class="collage-header-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7"/><path d="M16 5h5v5"/><path d="m21 5-9 9"/></svg>
+            <span>Parsed Feeds Mixed Photo Collage (5 Photos)</span>
+        </div>
+        <div class="collage-container collage-count-5">
+            <div class="collage-tile hero-tile">
+                <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/6592/live/907a90a0-e090-11f1-a701-fddedf244c16.jpg" alt="New Orleans port files $1m lawsuit over &#x27;miracle on the Mississippi&#x27; tanker collision" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+                <div class="collage-overlay">
+                    <span class="collage-badge hero-badge">BBC World News</span>
+                    <h3 class="collage-title hero-title">New Orleans port files $1m lawsuit over &#x27;miracle on the Mississippi&#x27; tanker collision</h3>
+                </div>
+            </div>
+            
+        <div class="collage-tile">
+            <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/0fb0/live/ed275c50-e0dd-11f1-a701-fddedf244c16.jpg" alt="Three men sentenced to death in Jordan over fatal church mass shooting" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">BBC World News</span>
+                <h4 class="collage-title">Three men sentenced to death in Jordan over fatal church mass shooting</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/4c19/live/fcdf6660-e0ce-11f1-a701-fddedf244c16.jpg" alt="Israel kills Hamas commander in strike on Gaza camp, officials say" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">BBC World News</span>
+                <h4 class="collage-title">Israel kills Hamas commander in strike on Gaza camp, officials say</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Nearly 1,500 migrants arrive in Canary Islands in one day - Reuters" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">Reuters Top News</span>
+                <h4 class="collage-title">Nearly 1,500 migrants arrive in Canary Islands in one day - Reuters</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Megaspeed says Alice Huang left the company in August 2025 - Reuters" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">Reuters Top News</span>
+                <h4 class="collage-title">Megaspeed says Alice Huang left the company in August 2025 - Reuters</h4>
+            </div>
+        </div>
+        
+        </div>
+    </div>
+    
+            
+        </div>
+
+        <main class="stories">
+            
+        <div class="story">
+            <h2>New Orleans Port Files $1M Lawsuit Over Tanker Collision</h2>
+            <div class="story-body"><strong>Source:</strong> BBC World News<br><strong>Summary:</strong> New Orleans officials have filed a $1 million lawsuit following a collision between a tanker and a cruise ship on the Mississippi River. The legal action requests that the tanker involved be seized and sold to cover the resulting damages.<br><strong>Key Theme:</strong> Maritime Law</div>
+        </div>
+        
+        <div class="story">
+            <h2>Three Men Sentenced to Death in Jordan Over Fatal Church Mass Shooting</h2>
+            <div class="story-body"><strong>Source:</strong> BBC World News<br><strong>Summary:</strong> A court in Jordan has sentenced three men to death for their roles in a mass shooting at a Greek Orthodox church funeral last month. The attack resulted in nine fatalities and left 34 others injured.<br><strong>Key Theme:</strong> Justice / Crime</div>
+        </div>
+        
+        <div class="story">
+            <h2>Nearly 1,500 Migrants Arrive in Canary Islands in One Day</h2>
+            <div class="story-body"><strong>Source:</strong> Reuters Top News<br><strong>Summary:</strong> Nearly 1,500 migrants reached the Canary Islands within a single day. The influx highlights ongoing activity along maritime migration routes into European territory.<br><strong>Key Theme:</strong> Migration</div>
+        </div>
+        
+        <div class="story">
+            <h2>Megaspeed Says Alice Huang Left Company in August 2025</h2>
+            <div class="story-body"><strong>Source:</strong> Reuters Top News<br><strong>Summary:</strong> Tech firm Megaspeed announced that executive Alice Huang officially departed the company in August 2025. The statement confirms her exit from the organization.<br><strong>Key Theme:</strong> Business</div>
+        </div>
+        
+        <div class="story">
+            <h2>Greta Thunberg Faces Criticism Over Viral Video Regarding Climate Protesters</h2>
+            <div class="story-body"><strong>Source:</strong> Daily Mail UK<br><strong>Summary:</strong> Climate activist Greta Thunberg has drawn scrutiny after footage emerged of her laughing and asking, &quot;Are they still doing that?&quot; in reference to ongoing climate demonstrations. The clip highlights her recent operational shift toward pro-Gaza activism.<br><strong>Key Theme:</strong> Activism</div>
+        </div>
+        
+        <div class="story">
+            <h2>Microsoft Reports Global Outage Fixes Struggling to Restore Services</h2>
+            <div class="story-body"><strong>Source:</strong> Daily Mail UK<br><strong>Summary:</strong> Microsoft stated that efforts to resolve a major global outage are &quot;not going as expected,&quot; leaving millions of users impacted worldwide. The disruption has hindered access to core Microsoft 365 services, including Outlook, Teams, and Copilot.<br><strong>Key Theme:</strong> Technology / Outage</div>
+        </div>
+        
+        <div class="story">
+            <h2>Italy Fines Meta $887M Over Android Photo Gallery Access</h2>
+            <div class="story-body"><strong>Source:</strong> New York Post<br><strong>Summary:</strong> Italian regulators have fined Meta $887 million for violating European privacy laws by accessing Android users&#x27; photo galleries without proper consent. Meta has been given a mandatory timeline to disable the feature.<br><strong>Key Theme:</strong> Data Privacy</div>
+        </div>
+        
+        <div class="story">
+            <h2>TV News Summary: FAA Ground Stop Recovery, Runway Collisions, and Global News</h2>
+            <div class="story-body"><strong>Source:</strong> Internet Archive TV News<br><strong>Summary:</strong> U.S. airports faced extensive delays as they recovered from a nationwide FAA ground stop caused by a telecommunications failure. Additionally, aviation authorities addressed a runway collision in Miami and an evacuation in Dallas, alongside global updates on the Russia-Ukraine war and public health.<br><strong>Key Theme:</strong> Aviation / News Summary</div>
+        </div>
+        
+        </main>
+
+        
+        <div class='section-title'>Global &amp; Alternative RSS Feeds</div><div class='segmented-grid'>
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/articles/cwe89y2r5j20o?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>New Orleans port files $1m lawsuit over &#x27;miracle on the Mississippi&#x27; tanker collision</a></h3>
+                <p>The lawsuit filed by New Orleans officials also requests that the tanker involved in the collision with the cruise ship be seized and sold to pay for damages....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/articles/c3rrg9xgqlwpo?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>Three men sentenced to death in Jordan over fatal church mass shooting</a></h3>
+                <p>The attack on funeral at a Greek Orthodox church killed nine and injured 34 others last month....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/articles/cqrkg4r6mg7xo?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>Israel kills Hamas commander in strike on Gaza camp, officials say</a></h3>
+                <p>Both Hamas and IDF officials confirm the death of Samir Abu Younis, commander of the Rafah Brigade....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMioAFBVV95cUxNNV80Q09DeEFLU2dxNDdvQTZZeWkyQkVmZUoxbEpNY2RHTHJhY2ZpRTRxT1N4QXFZaGNmWWdOV0thQ3ZLdml4cmpDdmZVTElvaWdGTG1JZUNnNUJFMFZuS2pDYTRDNEd0LUV3eUc5ZlVSU3ZmelZWT28yQm9OOF9zeXdKbnN5bWtrWURSNV9TSGhyOXN1c2J1RWhVV05MTV9o?oc=5' target='_blank' rel='noopener'>Nearly 1,500 migrants arrive in Canary Islands in one day - Reuters</a></h3>
+                <p>Nearly 1,500 migrants arrive in Canary Islands in one day Reuters...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMinAFBVV95cUxPVGhZTlZ0MDBVVUhqYkJMZmtuTk5OazlET0NjTVN5WDZsWTZPSUJjemowSWtRN09mSUdhUmUtdHRnamVjeHp4U0g2ak1VUW51NEZfaW5hM2c0X25DVkVHeG93Q1hHcW5oUlhUMDN1RFVrSDdFZG01RjdyT1pkQmc4MjJxdzhCUnNHZFhPRE9hQ21oczRBVVl2aVpFQWo?oc=5' target='_blank' rel='noopener'>Megaspeed says Alice Huang left the company in August 2025 - Reuters</a></h3>
+                <p>Megaspeed says Alice Huang left the company in August 2025 Reuters...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMizgFBVV95cUxQVW9oR0pfVGQ2U3NYTWdTRktiZ1Z4TUFnb0UyUHJ0MTJ0ejVtQU12anZRTDg1ZmQ1cGlaS3VaUWYtM3MzdlBEcVRnVVZ1T2RONmtzMVg2SFRHeWRGQXVHb01WR1NCd1pwNXo3R0c3dWRwTHlaSXFYWlctYjhSWlVWb3BXSGNqdEdlMERpYVNQaEVfRUpmRFhWSURlcVFhNmNMekNlMy1XbDNEZVphNDJEQlA4T0pkYmFQZjlHdlBFaEtfYnpBRTE3X0E1elZXQQ?oc=5' target='_blank' rel='noopener'>Yemen government forces withdraw from area near Bab el-Mandeb Strait, Houthis in control - Reuters</a></h3>
+                <p>Yemen government forces withdraw from area near Bab el-Mandeb Strait, Houthis in control Reuters...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/news/article-16290059/Documentary-maker-filmed-pro-Gaza-activist-Greta-Thunberg-laughing-doing-climate-protesters-desperately-tries-defend-her.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>Greta Thunberg doubles down with her criticism of eco protesters after footage emerges of her laughing &#x27;Are they still doing that?&#x27; after she moved on to Gaza</a></h3>
+                <p>In the clip that went viral, Greta is seen guffawing at the idea of demonstrations still taking place, saying: &#x27;Really? They still do that?&#x27;...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/sciencetech/article-16289289/microsoft-outage-fix-struggles.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>Microsoft says efforts to fix global outage &#x27;not going as expected&#x27; with millions impacted worldwide</a></h3>
+                <p>Millions reported issues with Microsoft Outlook, the company&#x27;s workplace messaging app, Teams, its AI assistant, Copilot, as well as other Microsoft 365 services....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/news/article-16290379/Police-launch-criminal-probe-David-Walliams-victims-come-forward-accusing-sexual-abuse.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>Police launch criminal probe into David Walliams as victims come forward accusing him of sexual misconduct</a></h3>
+                <p>The entertainer has been accused of using his fame to groom schoolgirls and pursue young women....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>New York Post</div>
+                <h3><a href='https://nypost.com/2026/11/15/world-news/italy-fines-meta-887m-over-access-into-android-users-photo-galleries/' target='_blank' rel='noopener'>Italy fines Meta $887M over sly access into Android users’ photo galleries</a></h3>
+                <p>Italy claims Meta has violated European privacy laws, giving them a timeline to disable the feature....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>New York Post</div>
+                <h3><a href='https://nypost.com/2026/11/15/sports/raiders-fernando-mendoza-first-nfl-start-seahawks/' target='_blank' rel='noopener'>Fernando Mendoza faces tall task in first NFL start, and that’s OK</a></h3>
+                <p>PLAYBOOK: SEATTLE SEAHAWKS (5-4) AT LAS VEGAS RAIDERS (4-5), 1:05 P.M. SUNDAY Anybody worried about Fernando Mendoza drawing the NFL’s best defense in his first start ought to consider it from the roo...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>New York Post</div>
+                <h3><a href='https://nypost.com/2026/11/15/betting/vikings-vs-packers-prediction-nfl-week-10-picks-odds-bets/' target='_blank' rel='noopener'>Vikings vs. Packers predictions, picks: Kirk Cousins won’t have a pleasant return in Week 10</a></h3>
+                <p>The Packers welcome to the Vikings to Green Bay on Sunday in a pivotal NFC North matchup....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/democrats-now-have-real-path-sideline-electoral-college/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=democrats-now-have-real-path-sideline-electoral-college' target='_blank' rel='noopener'>Democrats Now Have A Real Path To Sideline The Electoral College Before 2028</a></h3>
+                <p>Five newly blue state governments could push the National Popular Vote compact from 222 electoral votes past its 270-vote trigger—if Democratic leaders choose to move....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/72-year-old-woman-unveils-secret-that-defies/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=72-year-old-woman-unveils-secret-that-defies' target='_blank' rel='noopener'>72-Year-Old Woman Unveils Secret That Defies Aging, Is This the Real Fountain of Youth?!</a></h3>
+                <p>Are you ready to have someone put a knife to your face? (That got your attention.) Of course not! You […]...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/nasas-voyager-1-is-about-cross-frontier-no/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=nasas-voyager-1-is-about-cross-frontier-no' target='_blank' rel='noopener'>NASA’s Voyager 1 Is About To Cross A Frontier No Human-Made Object Has Ever Reached</a></h3>
+                <p>Voyager 1 is about to become the first human-made object one full light-day from Earth—16.094 billion miles from home....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/11/13/ex-cia-director-john-brennans-son-arrested-for-alleged-possession-of-child-sexual-abuse-material/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=ex-cia-director-john-brennans-son-arrested-for-alleged-possession-of-child-sexual-abuse-material' target='_blank' rel='noopener'>Ex-CIA Director John Brennan’s Son Arrested For Alleged Possession Of Child Sexual Abuse Material</a></h3>
+                <p>Editor’s note: This article addresses the alleged possession and distribution of sexually explicit images of children. The son of former CIA Director John Brennan was arrested Friday for alleged posse...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/11/13/exclusive-multiple-teacher-recruitment-programs-accused-of-racial-rigging-prompting-civil-rights-investigations/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=exclusive-multiple-teacher-recruitment-programs-accused-of-racial-rigging-prompting-civil-rights-investigations' target='_blank' rel='noopener'>Exclusive: Multiple Teacher Recruitment Programs Accused Of Racial Rigging, Prompting Civil Rights Investigations</a></h3>
+                <p>OCR is also opening investigations into 11 universities to determine if they are violating similar civil rights law with their program offerings....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/11/13/as-democrats-ready-to-take-power-alito-warns-of-threats-to-judicial-independence/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=as-democrats-ready-to-take-power-alito-warns-of-threats-to-judicial-independence' target='_blank' rel='noopener'>As Dems Ready To Take Power, Alito Warns Of Threats To Judicial ‘Independence’</a></h3>
+                <p>Supreme Court Justice Samuel Alito is sounding the alarm about potential efforts by a soon-to-be Democrat-run Congress to undermine the judiciary’s longstanding “independence.” The warning came during...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/shows/making-the-argument-with-nick-freitas/increasingly-difficult-to-resolve-peacefully-nick-freitas-warns-of-a-coming-constitutional-crisis' target='_blank' rel='noopener'>‘Increasingly difficult to resolve peacefully’: Nick Freitas warns of a coming constitutional crisis</a></h3>
+                <p>As progressives continue their anti-American crusade, BlazeTV host Nick Freitas fears America is hurtling toward a governance catastrophe that may culminate in violence. “We are moving very, very quic...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/columns/opinion/the-doctor-wanted-my-wife-in-rehab-her-legs-were-at-the-hotel' target='_blank' rel='noopener'>The doctor wanted my wife in rehab. Her legs were at the hotel.</a></h3>
+                <p>“She needs to go to rehab.” The physical therapist had enlisted the head nurse, hospital administrators, and a social worker. Their expressions suggested a “come to Jesus” meeting. Rehab is important....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/lifestyle/dinesh-d-souza-spent-years-defending-a-bible-he-didn-t-entirely-trust-then-he-went-to-israel' target='_blank' rel='noopener'>Dinesh D&#x27;Souza spent years defending a Bible he didn&#x27;t entirely trust. Then he went to Israel.</a></h3>
+                <p>Dinesh D&#x27;Souza has spent much of his career defending Christianity against its critics. But there was one argument he wasn&#x27;t entirely comfortable making: that the Bible could be trusted as h...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/headlines/2026/11/14/yes-we-have-a-bananaman-n3821013' target='_blank' rel='noopener'>Yes, We Have a Banana...Man</a></h3>
+                <p>Yes, We Have a Banana...Man...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/headlines/2026/11/14/ahats-steal-sasquatch-statue-in-albany-county-residents-demand-return-n3820997' target='_blank' rel='noopener'>&#x27;A**hats&#x27; Steal Sasquatch Statue In Albany County, Residents Demand Return</a></h3>
+                <p>&#x27;A**hats&#x27; Steal Sasquatch Statue In Albany County, Residents Demand Return...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/ed-morrissey/2026/11/14/saturdays-final-word-n3821014' target='_blank' rel='noopener'>Saturday&#x27;s Final Word</a></h3>
+                <p>Saturday&#x27;s Final Word...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Judicial Watch</div>
+                <h3><a href='https://www.judicialwatch.org/butler-assassination-attempt-update/' target='_blank' rel='noopener'>Butler Assassination Attempt Update</a></h3>
+                <p>New FBI Records Reveal Crooks’ Venmo Account Suspended After Trump Assassination Attempt Federal Judge Sets Hearing on Unsealing…...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Judicial Watch</div>
+                <h3><a href='https://www.judicialwatch.org/federal-judge-orders-november-17-hearing-unsealing-ilhan-omar-search-warrant-records/' target='_blank' rel='noopener'>Judicial Watch: Federal Judge Orders November 17 Hearing on Unsealing Ilhan Omar Search Warrant Reco...</a></h3>
+                <p>(Washington, DC) – Judicial Watch announced today that Chief Judge James E. Boasberg set a hearing for next…...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Judicial Watch</div>
+                <h3><a href='https://www.judicialwatch.org/judicial-watch-probes-election-integrity-across-the-nation/' target='_blank' rel='noopener'>Judicial Watch Probes Election Integrity Across the Nation</a></h3>
+                <p>Judicial Watch closely monitored the mid-term elections. It’s a job we’ve been doing for more than thirty years,…...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/11/jensen-huang-and-the-vicious-dwarves/' target='_blank' rel='noopener'>Jensen Huang And The Vicious Dwarves</a></h3>
+                <p>Photo Credit: Clarice F By Clarice Feldman One of the biggest stories of the week was the (forced?) resignation of Jensen Huang, a giant of the artificial intelligence industry, based on nothing more ...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/11/inshallah-coming-soon-to-a-community-near-you/' target='_blank' rel='noopener'>Inshallah: Coming Soon To A Community Near You</a></h3>
+                <p>Photo Credit: AI for American Thinker By Richard C. Crandall Examining Islamic teachings raises questions about their compatibility with America’s constitutional freedoms....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/11/republicans-are-on-the-wrong-side-of-an-asymmetric-war/' target='_blank' rel='noopener'>Republicans Are On The Wrong Side Of An Asymmetric War</a></h3>
+                <p>Photo Credit: AI for American Thinker By Steve Rose While Republicans focus on winning elections, the left wages a cultural war to shape the voters of tomorrow....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMipAFBVV95cUxOck1iSGhoRnRBaXNubkpST29ySXpDNTUtUlhOX21vR19SWDFDZWxWZHZNWWlQSGY4RmFSR3BIMTdrWmFTcUprTUpRaGhDbVFTUTMwb3dDT2RWQUxaZ00zSUZ6ZmpvRGhfRGlfdXFtQkhIWUU4aVhkZDBVQkpScjdCbGdTWGt2SUZpTmI4Q1h0QUxCRFFUWWs0b21Da21vZWtZSWtzSA?oc=5' target='_blank' rel='noopener'>Why Most Americans Couldn’t Last 72 Hours in an Emergency - The Epoch Times</a></h3>
+                <p>Why Most Americans Couldn’t Last 72 Hours in an Emergency The Epoch Times...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMiugFBVV95cUxQN0JLdlVFQVlPYnU1OGVPRG1lX0h3bE5EU3cxdWc5OUhrSW5rUXhSMEgxMHNjaXVodGxhdm9yblRFa2poanJmSHFmeUVIdzdhaHlFUm1qTmswSDF2Z3c4Z25EOW91eGVoelpsZVpIV003ZEcyYnVCcEppU0tvN2ozUzkxYXRoNkR6YzVBX3RIRGhLTk1DcFpaYk5JbW9RM1RrVG9kY0w2WGt6U2l5NENGM2d1dnJOZ1VYQUE?oc=5' target='_blank' rel='noopener'>New White House Chief of Staff Imposes Restrictions on Meeting With Lobbyists - The Epoch Times</a></h3>
+                <p>New White House Chief of Staff Imposes Restrictions on Meeting With Lobbyists The Epoch Times...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMifEFVX3lxTE5sQ3M3ZTFkX19VVEFHSHNEX1BmTmZTZzlkemFnVUZfVjBja010TlFJTmIzaU1IU1BlZVRXRU1vemVIREhQeTNpZktjdEFjeGVCS0R3cXRrYVdkZ3VGRXBteUNHeTZ2UklaaWlpTnk5dEJSbF9wOWJvMFhRVjc?oc=5' target='_blank' rel='noopener'>Spot the Difference Daily- Play Now online &amp; 100% Free - The Epoch Times</a></h3>
+                <p>Spot the Difference Daily- Play Now online &amp; 100% Free The Epoch Times...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Internet Archive TV News (hourly summary)</div>
+                <h3><a href='https://mastodon.archive.org/@tv/117620590805901873' target='_blank' rel='noopener'>TV news hourly summary · Nov 15, 13:03 UTC</a></h3>
+                <p>Airports and airlines worked to recover from a nationwide FAA ground stop caused by a telecom issue; travelers faced long lines and delays, and flights were expected to normalize by day’s end. Two pla...</p>
+            </div>
+            </div>
+
+        <footer>
+            Automated Segmented Pipeline powered by HTML Scrapers, 11 Global RSS Feeds &amp; Google Gemini AI &bull; 2026-11-15
+        </footer>
+    </div>
+</body>
+</html>
