@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-11-16",
+    "timestamp": "2026-11-16T14:45:15.605774+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "Yemeni forces retreat to defend port city from Houthis",
+      "Elon Musk joins 'Bring Jensen Back' campaign to reinstate the ex-Nvidia boss",
+      "EXCLUSIVE: Risk of nuclear accident in Ukraine increasing this winter, atomic safety regulators say - Reuters",
+      "Nvidia set to deliver first life-after-Huang briefing - Reuters",
+      "She's the fraudster whose blue eyes mesmerised rich and powerful men. But was Elizabeth Holmes an idealistic genius or just a sociopath?"
+    ],
+    "archive_html_path": "data/archive/2026-11-16/index.html",
+    "data_json_path": "data/archive/2026-11-16/data.json"
+  },
+  {
     "date": "2026-11-15",
     "timestamp": "2026-11-15T13:25:25.694926+00:00",
     "stories_count": 8,
