@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-11-17",
+    "timestamp": "2026-11-17T15:28:41.524281+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "Putin's Crimea bridge partly collapses as Zelensky hails 'unprecedented' attack by Ukraine",
+      "Ukraine accuses Russia of targeting rescue operation after 'double-tap' strike kills 72",
+      "Sony defeats \u00a32 billion UK claim over PlayStation Store pricing - Reuters",
+      "Trump says US taking seriously report of possible Iranian dirty bomb plot in Washington - Reuters",
+      "Labour's 'big state' plan to tackle NEETs as Milburn admits his own party bears blame for crisis - and MPs ready revolt against any benefits cuts"
+    ],
+    "archive_html_path": "data/archive/2026-11-17/index.html",
+    "data_json_path": "data/archive/2026-11-17/data.json"
+  },
+  {
     "date": "2026-11-16",
     "timestamp": "2026-11-16T14:45:15.605774+00:00",
     "stories_count": 8,
