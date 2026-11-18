@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-11-18",
+    "timestamp": "2026-11-18T15:04:02.749013+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "Trump shakes hands with Putin and Xi ahead of historic talks in China",
+      "William and Kate meet Indian Prime Minister Modi in New Delhi",
+      "Ethiopia and Eritrea amass forces along border, heightening war fears, sources say - Reuters",
+      "EXCLUSIVE: Trump administration weighs forcing US firms to disclose Chinese AI use - Reuters",
+      "British music tutor told 'sadist', 'I can't be without you' before he lured her to US and executed her, murder trial hears"
+    ],
+    "archive_html_path": "data/archive/2026-11-18/index.html",
+    "data_json_path": "data/archive/2026-11-18/data.json"
+  },
+  {
     "date": "2026-11-17",
     "timestamp": "2026-11-17T15:28:41.524281+00:00",
     "stories_count": 8,

@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Intelligence Briefing – 2026-11-18</title>
+    <style>
+        :root {
+            --bg: #0f1115;
+            --card: #1a1d24;
+            --text: #e6e8ec;
+            --muted: #9ba1ad;
+            --accent: #3b82f6;
+            --border: #2a2e38;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; padding: 2rem 1rem; }
+        .container { max-width: 960px; margin: 0 auto; }
+        header { text-align: center; margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+        header h1 { font-size: 2.2rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 0.4rem; color: #ffffff; }
+        header .date { color: var(--accent); font-size: 1rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+        
+        .hero-image { width: 100%; border-radius: 16px; overflow: hidden; margin-bottom: 2.5rem; box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6); border: 1px solid var(--border); background: #0b0f19; }
+        
+        /* Flexible Photo Collage Component */
+        .collage-wrapper { position: relative; width: 100%; }
+        .collage-header-pill {
+            position: absolute; top: 14px; left: 14px; z-index: 10;
+            background: rgba(15, 23, 42, 0.88); backdrop-filter: blur(8px);
+            border: 1px solid rgba(56, 189, 248, 0.35); color: #38bdf8;
+            padding: 5px 12px; border-radius: 999px; font-size: 11px; font-weight: 800;
+            letter-spacing: 0.5px; display: flex; align-items: center; gap: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        }
+        .collage-container {
+            display: grid; gap: 8px; background: #090d16; padding: 8px; border-radius: 16px; min-height: 280px;
+        }
+        .collage-container.collage-count-1 { grid-template-columns: 1fr; grid-template-rows: 360px; }
+        .collage-container.collage-count-1 .hero-tile { grid-row: auto; }
+
+        .collage-container.collage-count-2 { grid-template-columns: 1fr 1fr; grid-template-rows: 320px; }
+        .collage-container.collage-count-2 .hero-tile { grid-row: auto; }
+
+        .collage-container.collage-count-3 { grid-template-columns: 1.6fr 1fr; grid-template-rows: 170px 170px; }
+        .collage-container.collage-count-3 .hero-tile { grid-row: span 2; }
+
+        .collage-container.collage-count-4 { grid-template-columns: 1.6fr 1fr 1fr; grid-template-rows: 170px 170px; }
+        .collage-container.collage-count-4 .hero-tile { grid-row: span 2; }
+        .collage-container.collage-count-4 .collage-tile:nth-child(4) { grid-column: span 2; }
+
+        .collage-container.collage-count-5 { grid-template-columns: 1.8fr 1fr 1fr; grid-template-rows: 180px 180px; }
+        .collage-container.collage-count-5 .hero-tile { grid-row: span 2; }
+
+        @media (max-width: 768px) {
+            .collage-container,
+            .collage-container.collage-count-2,
+            .collage-container.collage-count-3,
+            .collage-container.collage-count-4,
+            .collage-container.collage-count-5 {
+                grid-template-columns: 1fr; grid-template-rows: auto;
+            }
+            .collage-tile, .hero-tile { min-height: 180px; }
+        }
+        .collage-tile {
+            position: relative; border-radius: 10px; overflow: hidden; background: #131927;
+            border: 1px solid rgba(255, 255, 255, 0.08); transition: transform 0.3s ease;
+        }
+        .collage-tile.hero-tile { grid-row: span 2; }
+        .collage-tile img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
+        .collage-tile:hover img { transform: scale(1.06); }
+        .collage-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(to top, rgba(11, 15, 23, 0.95) 0%, rgba(11, 15, 23, 0.2) 60%, transparent 100%);
+            display: flex; flex-direction: column; justify-content: flex-end; padding: 12px;
+        }
+        .collage-badge {
+            align-self: flex-start; background: rgba(56, 189, 248, 0.2); color: #38bdf8;
+            border: 1px solid rgba(56, 189, 248, 0.4); font-size: 10px; font-weight: 700;
+            text-transform: uppercase; padding: 2px 8px; border-radius: 999px; margin-bottom: 6px;
+        }
+        .collage-badge.hero-badge { background: rgba(16, 185, 129, 0.2); color: #34d399; border-color: rgba(16, 185, 129, 0.4); }
+        .collage-title { color: #ffffff; font-size: 12px; font-weight: 700; line-height: 1.35; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        .hero-tile .collage-title { font-size: 17px; }
+
+        .stories { display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 3rem; }
+        .story { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem; }
+        .story h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: #f1f3f5; }
+        .story-body { color: var(--muted); font-size: 0.98rem; overflow-wrap: anywhere; word-break: break-word; }
+        .story h2, .mini-card h3, .mini-card p { overflow-wrap: anywhere; }
+        .container { min-width: 0; max-width: 100%; }
+        .section-title { font-size: 1.3rem; font-weight: 800; color: var(--accent); margin: 2rem 0 1rem; border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; }
+        .segmented-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
+        .mini-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+        .mini-card.scraped { border-left: 3px solid #8b5cf6; }
+        .mini-card.rss { border-left: 3px solid #3b82f6; }
+        .source-tag { font-size: 0.75rem; font-weight: bold; color: var(--accent); margin-bottom: 0.4rem; }
+        .mini-card h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.4rem; }
+        .mini-card h3 a { color: #f1f3f5; text-decoration: none; }
+        .mini-card h3 a:hover { text-decoration: underline; color: var(--accent); }
+        .mini-card p { font-size: 0.82rem; color: var(--muted); line-height: 1.4; }
+        footer { text-align: center; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="date">2026-11-18</div>
+            <h1>Daily Intelligence Briefing</h1>
+        </header>
+
+        <div class="hero-image">
+            
+                
+    <div class="collage-wrapper">
+        <div class="collage-header-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7"/><path d="M16 5h5v5"/><path d="m21 5-9 9"/></svg>
+            <span>Parsed Feeds Mixed Photo Collage (5 Photos)</span>
+        </div>
+        <div class="collage-container collage-count-5">
+            <div class="collage-tile hero-tile">
+                <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/a9fb/live/b2707bf0-e349-11f1-99aa-0f40b013ad11.jpg" alt="Trump shakes hands with Putin and Xi ahead of historic talks in China" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+                <div class="collage-overlay">
+                    <span class="collage-badge hero-badge">BBC World News</span>
+                    <h3 class="collage-title hero-title">Trump shakes hands with Putin and Xi ahead of historic talks in China</h3>
+                </div>
+            </div>
+            
+        <div class="collage-tile">
+            <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/efe9/live/814a0670-e35a-11f1-a8cd-2ff5ed84046e.jpg" alt="William and Kate meet Indian Prime Minister Modi in New Delhi" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">BBC World News</span>
+                <h4 class="collage-title">William and Kate meet Indian Prime Minister Modi in New Delhi</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/492e/live/f37939a0-e346-11f1-99aa-0f40b013ad11.jpg" alt="Kuwait says it repelled first Iranian attack in two months after US strikes island" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">BBC World News</span>
+                <h4 class="collage-title">Kuwait says it repelled first Iranian attack in two months after US strikes island</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Ethiopia and Eritrea amass forces along border, heightening war fears, sources say - Reuters" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">Reuters Top News</span>
+                <h4 class="collage-title">Ethiopia and Eritrea amass forces along border, heightening war fears, sources say - Reuters</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="EXCLUSIVE: Trump administration weighs forcing US firms to disclose Chinese AI use - Reuters" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">Reuters Top News</span>
+                <h4 class="collage-title">EXCLUSIVE: Trump administration weighs forcing US firms to disclose Chinese AI use - Reuters</h4>
+            </div>
+        </div>
+        
+        </div>
+    </div>
+    
+            
+        </div>
+
+        <main class="stories">
+            
+        <div class="story">
+            <h2>Trump shakes hands with Putin and Xi ahead of historic talks in China</h2>
+            <div class="story-body"><strong>Source:</strong> BBC World News<br><strong>Summary:</strong> The three leaders will meet together for the first time on Thursday during a closely-watched summit....</div>
+        </div>
+        
+        <div class="story">
+            <h2>William and Kate meet Indian Prime Minister Modi in New Delhi</h2>
+            <div class="story-body"><strong>Source:</strong> BBC World News<br><strong>Summary:</strong> The meeting in New Delhi was a late addition to the royal couple&#x27;s India visit, which has also included their appearance at the annual Earthshot Prize...</div>
+        </div>
+        
+        <div class="story">
+            <h2>Ethiopia and Eritrea amass forces along border, heightening war fears, sources say - Reuters</h2>
+            <div class="story-body"><strong>Source:</strong> Reuters Top News<br><strong>Summary:</strong> Ethiopia and Eritrea amass forces along border, heightening war fears, sources say Reuters...</div>
+        </div>
+        
+        <div class="story">
+            <h2>EXCLUSIVE: Trump administration weighs forcing US firms to disclose Chinese AI use - Reuters</h2>
+            <div class="story-body"><strong>Source:</strong> Reuters Top News<br><strong>Summary:</strong> EXCLUSIVE: Trump administration weighs forcing US firms to disclose Chinese AI use Reuters...</div>
+        </div>
+        
+        <div class="story">
+            <h2>British music tutor told &#x27;sadist&#x27;, &#x27;I can&#x27;t be without you&#x27; before he lured her to US and executed her, murder trial hears</h2>
+            <div class="story-body"><strong>Source:</strong> Daily Mail UK<br><strong>Summary:</strong> Sonia Exelby, from Portsmouth, spent two years talking to Dwain Hall on a hardcore fetish website and offered to pay him to help brutally end her life....</div>
+        </div>
+        
+        <div class="story">
+            <h2>Is this Britain&#x27;s smallest castle? Tiny turreted 200-year-old fortified home goes on sale with one acre of land for less than the price of a London flat</h2>
+            <div class="story-body"><strong>Source:</strong> Daily Mail UK<br><strong>Summary:</strong> The Grade II-listed castellated Caroline Cottage in the historic market town of Penrith, Cumbria, has gone on the market for £360,000 to cash buyers....</div>
+        </div>
+        
+        <div class="story">
+            <h2>Schumer on the brink of a meltdown as reporter confronts him over leadership challenge</h2>
+            <div class="story-body"><strong>Source:</strong> New York Post<br><strong>Summary:</strong> On November 17, Senator Chuck Schumer stated that he has secured the necessary votes to retain his position as Senate Democratic leader, pushing back against a leadership challenge mounted the previous week by Maryland Senator Chris Van Hollen. The c...</div>
+        </div>
+        
+        <div class="story">
+            <h2>TV news hourly summary · Nov 18, 15:03 UTC</h2>
+            <div class="story-body"><strong>Source:</strong> Internet Archive TV News (hourly summary)<br><strong>Summary:</strong> Trump arrived in China for talks with Xi and Putin, with Iran tensions, tech outages and Nvidia concerns looming over the summit. The FAA paused router installations after a nationwide ground stop; Waymo halted freeway operations in California. Democ...</div>
+        </div>
+        
+        </main>
+
+        
+        <div class='section-title'>Global &amp; Alternative RSS Feeds</div><div class='segmented-grid'>
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/articles/ck9d75x5wwwwo?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>Trump shakes hands with Putin and Xi ahead of historic talks in China</a></h3>
+                <p>The three leaders will meet together for the first time on Thursday during a closely-watched summit....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/articles/cq62ped2ypy4o?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>William and Kate meet Indian Prime Minister Modi in New Delhi</a></h3>
+                <p>The meeting in New Delhi was a late addition to the royal couple&#x27;s India visit, which has also included their appearance at the annual Earthshot Prize...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/articles/cw4gn9jeqjq7o?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>Kuwait says it repelled first Iranian attack in two months after US strikes island</a></h3>
+                <p>Bahrain says it was also attacked by Iran following a US air strike on the Iranian island of Qeshm in the Gulf on Tuesday....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMiwwFBVV95cUxNeEJBNVB0dkdmX1h1VU1fRTJkVGdQN3oyWWZlOTBqaFVPOHBIcWk2YlJ1M2poeFpLcWxlNV9rOHBQYTRwdzRaN2ZKbkNveGgyMkFBRmY1b2t4REJSampnVjdaZnlmYVA3Vm1oU0o5T093T0t0QjNQZU8xeHRzWGZRaERvVXJpUFNqZDhQcjZfSVFHSktmVGZ5anIzZWpxMXlfU0VqR2VybTFlSzl1R0M1R01IY1BEanRJSFJQQU5pLWFXMGs?oc=5' target='_blank' rel='noopener'>Ethiopia and Eritrea amass forces along border, heightening war fears, sources say - Reuters</a></h3>
+                <p>Ethiopia and Eritrea amass forces along border, heightening war fears, sources say Reuters...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMitwFBVV95cUxNRDZYbWdKS2hHRWRxVU9jRTZmUW5GdUZXdXNnMW43cnNKNmV1d2JIcnByM0dBWVBKbkd0TkkydWpQSkdZVkNWQ1RnS2JRQmI1TFE0ODRrX1lCdXkwejVvN3Qwa0taTDZtMkt2VWlTblJqZ0FQeVlMajlocTZ5UE95V29GQ19xQUlkNDh6WVRKVXJDbjM2ZUdaM0c4X25lUlFWRk1qakhGSkwzMGhKdWxFNlBsSnVhVE0?oc=5' target='_blank' rel='noopener'>EXCLUSIVE: Trump administration weighs forcing US firms to disclose Chinese AI use - Reuters</a></h3>
+                <p>EXCLUSIVE: Trump administration weighs forcing US firms to disclose Chinese AI use Reuters...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMiowFBVV95cUxOaTMxUFZ4ZGV6NlFxTmZLUUVpcVc5ZFNzaVJUZ0VJbVc0VkNhWUtiSDhmbEZMX1dlU1Y1MFFIbFM3dEZJUVZEUkd2dDBkaVg3STJlTE5qU0hORXYtN28zQnpjalpvYS1tQTFZeXJPR01zLWFDOXFjYlRacXl3OFktMzZfZkdJTWFWVmYxZXNHYXlpTXdERVotaDlOYnNocU1ORGZJ?oc=5' target='_blank' rel='noopener'>Italy set to introduce social media curbs for teenagers - Reuters</a></h3>
+                <p>Italy set to introduce social media curbs for teenagers Reuters...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/crime-desk/article-16302273/British-music-tutor-told-sadist-without-you-lured-US-executed-murder-trial-hears.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>British music tutor told &#x27;sadist&#x27;, &#x27;I can&#x27;t be without you&#x27; before he lured her to US and executed her, murder trial hears</a></h3>
+                <p>Sonia Exelby, from Portsmouth, spent two years talking to Dwain Hall on a hardcore fetish website and offered to pay him to help brutally end her life....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/news/article-16302365/castle-like-cottage-sale-cheaper-london-flat.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>Is this Britain&#x27;s smallest castle? Tiny turreted 200-year-old fortified home goes on sale with one acre of land for less than the price of a London flat</a></h3>
+                <p>The Grade II-listed castellated Caroline Cottage in the historic market town of Penrith, Cumbria, has gone on the market for £360,000 to cash buyers....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/news/article-16302245/Female-army-officer-tried-kill-captain-raped-sleep-Sandhurst-court-hears.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>Female army officer tried to kill herself after captain raped her in her sleep when they were at Sandhurst, court hears</a></h3>
+                <p>The female officer said she set out to take her own life but was saved by her best friend after Captain Nathanael Rennie raped her while she was asleep in her bed at Sandhurst....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>New York Post</div>
+                <h3><a href='https://nypost.com/video/schumer-on-the-brink-of-a-meltdown-as-reporter-confronts-him-over-leadership-challenge/' target='_blank' rel='noopener'>Schumer on the brink of a meltdown as reporter confronts him over leadership challenge</a></h3>
+                <p>On November 17, Senator Chuck Schumer stated that he has secured the necessary votes to retain his position as Senate Democratic leader, pushing back against a leadership challenge mounted the previou...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>New York Post</div>
+                <h3><a href='https://decider.com/2026/11/18/the-lord-of-the-rings-the-rings-of-power-season-3-episode-5-recap/' target='_blank' rel='noopener'>‘The Lord of the Rings: The Rings of Power’ Season 3 Episode 5 recap: My brother’s keeper</a></h3>
+                <p>The vibes are off in Elrond&#x27;s brother Elros’s island kingdom...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>New York Post</div>
+                <h3><a href='https://nypost.com/2026/11/18/sports/yankees-bring-back-former-top-prospect-chase-hampton/' target='_blank' rel='noopener'>Yankees re-sign former top prospect Chase Hampton after he bounced through three teams in a month</a></h3>
+                <p>Chase Hampton&#x27;s wild journey has landed him back with the team that originally drafted him....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/hhs-secretary-robert-f-kennedy-jr-responds-after/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=hhs-secretary-robert-f-kennedy-jr-responds-after' target='_blank' rel='noopener'>HHS Secretary Robert F. Kennedy Jr. Responds After United States Loses Measles Elimination Status</a></h3>
+                <p>Health and Human Services (HHS) Secretary Robert F. Kennedy Jr. said the United States would “work to regain” its measles […]...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/nearly-50-injured-train-crash-major-european-city/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=nearly-50-injured-train-crash-major-european-city' target='_blank' rel='noopener'>Nearly 50 Injured In Train Crash In Major European City</a></h3>
+                <p>46 people were injured after two passenger trains collided head-on near Prague’s main railway station Tuesday morning. 16 of the […]...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/explosion-rocks-texas-industrial-facility/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=explosion-rocks-texas-industrial-facility' target='_blank' rel='noopener'>Explosion Rocks Texas Industrial Facility</a></h3>
+                <p>A vicious tank explosion at an industrial facility in Texas caused a fire and hospitalized one individual. The incident happened […]...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/11/18/man-convicted-of-abusing-boys-fights-to-obtain-infant-son-born-through-paid-surrogacy/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=man-convicted-of-abusing-boys-fights-to-obtain-infant-son-born-through-paid-surrogacy' target='_blank' rel='noopener'>Man Convicted Of Abusing Boys Fights To Obtain Infant Son Born Through Paid Surrogacy</a></h3>
+                <p>The case is a stark illustration of the risks inherent in commercial and quasi-commercial surrogacy arrangements....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/11/18/the-future-of-the-democrat-party-is-islamic-third-worldism-married-to-millennial-white-woman-cringe/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=the-future-of-the-democrat-party-is-islamic-third-worldism-married-to-millennial-white-woman-cringe' target='_blank' rel='noopener'>The Future Of The Democrat Party Is Islamic Third Worldism Married To Millennial White Woman Cringe</a></h3>
+                <p>The emerging alliance is both potent and insidious....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/11/18/las-homeless-industrial-complex-loses-a-big-fight-over-corruption-but-the-final-outcome-is-unclear/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=las-homeless-industrial-complex-loses-a-big-fight-over-corruption-but-the-final-outcome-is-unclear' target='_blank' rel='noopener'>LA’s Homeless Industrial Complex Loses A Big Fight Over Corruption, But The Final Outcome Is Unclear</a></h3>
+                <p>Homelessness agency executives are still in the office, doing their &#x27;ongoing&#x27; duties, while federal officials say that the agency is &#x27;ceasing operations.&#x27;...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/news/polling-analysis-flipped-stayed-home' target='_blank' rel='noopener'>Where did Trump voters go? New analysis shows how many flipped — and how many just stayed home.</a></h3>
+                <p>A new analysis of the midterm massacre found that most of the Democratic &quot;blue wave&quot; came simply from turnout, not from party defections. The report from J.L. Partners published Monday said ...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/columns/opinion/putins-road-to-the-summit-just-got-a-lot-rougher' target='_blank' rel='noopener'>Putin’s road to the summit just got a lot rougher</a></h3>
+                <p>Just days before President Donald Trump meets Russia’s Vladimir Putin and China’s Xi Jinping in China, Ukraine has delivered a sharp logistical blow to Russian forces occupying Crimea and fighting in ...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/news/winner-declared-in-alaskas-senate-race-despite-cheating-scandal' target='_blank' rel='noopener'>Winner declared in Alaska’s Senate race despite alleged cheating scandal</a></h3>
+                <p>Evidently, Senate Republicans aren&#x27;t done losing. More than two weeks past Election Day, the Associated Press has called Alaska&#x27;s U.S. Senate race for Mary Peltola — the scandal-plagued Demo...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/ed-morrissey/2026/11/18/wsj-welcome-to-bugmageddon-n3821104' target='_blank' rel='noopener'>WSJ: Welcome to &#x27;Bugmageddon&#x27;</a></h3>
+                <p>WSJ: Welcome to &#x27;Bugmageddon&#x27;...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/headlines/2026/11/18/iran-fights-dirty-plans-to-detonate-a-bomb-in-dc-n3821072' target='_blank' rel='noopener'>Iran Fights Dirty: Plans to Detonate a Bomb in DC?</a></h3>
+                <p>Iran Fights Dirty: Plans to Detonate a Bomb in DC?...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/david-strom/2026/11/18/minnesota-where-everything-is-now-below-average-n3821100' target='_blank' rel='noopener'>Minnesota: Where Everything Is Now Below Average</a></h3>
+                <p>Minnesota: Where Everything Is Now Below Average...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Judicial Watch</div>
+                <h3><a href='https://www.judicialwatch.org/cia-refuses-confirm-or-deny-existence-january-6-records/' target='_blank' rel='noopener'>Judicial Watch: CIA Refuses to Confirm or Deny Existence of January 6 Records</a></h3>
+                <p>(Washington, DC) – Judicial Watch announced that, after more than two years, the Central Intelligence Agency (CIA), instead…...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Judicial Watch</div>
+                <h3><a href='https://www.judicialwatch.org/victory-federal-judge-orders-unsealing-ilhan-omar-search-warrant-records/' target='_blank' rel='noopener'>Judicial Watch Victory: Federal Judge Orders Unsealing of Ilhan Omar Search Warrant Records</a></h3>
+                <p>(Washington, DC) – Judicial Watch announced that Chief Judge James E. Boasberg today ordered that Rep. Ilhan Omar…...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Judicial Watch</div>
+                <h3><a href='https://www.judicialwatch.org/tsa-allows-uncleared-individuals-to-access-areas-where-they-could-inflict-harm-at-airports/' target='_blank' rel='noopener'>TSA Allows “Uncleared Individuals to Access Areas Where They Could Inflict Harm” at Airports</a></h3>
+                <p>In a significant lapse decades after the worst terrorist attack on American soil, the federal agency created to…...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/11/obamacare-the-cure-that-made-insurance-sick/' target='_blank' rel='noopener'>Obamacare: The Cure That Made Insurance Sick</a></h3>
+                <p>Photo Credit: Obama By Jim Cardoza Washington has spent decades confusing insurance with prepaid healthcare....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/11/and-no-one-stopped-them-how-we-got-to-now/' target='_blank' rel='noopener'>And No One Stopped Them: How We Got To Now</a></h3>
+                <p>Photo Credit: gloomy sunset Pixabay // Pixabay Content License By Eric Utter Like Nazi Germany had been, America is on a long, slippery, slide downward to perdition....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/11/first-rule-of-the-great-replacement-don-t-talk-about-the-great-replacement/' target='_blank' rel='noopener'>First Rule Of The Great Replacement: Don’t Talk About The Great Replacement</a></h3>
+                <p>Photo Credit: Image: chidioc via Pixabay , Pixabay License . chidioc By J.B. Shurk Westerners are being systematically attacked, marginalized, and replaced....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMifEFVX3lxTE5sQ3M3ZTFkX19VVEFHSHNEX1BmTmZTZzlkemFnVUZfVjBja010TlFJTmIzaU1IU1BlZVRXRU1vemVIREhQeTNpZktjdEFjeGVCS0R3cXRrYVdkZ3VGRXBteUNHeTZ2UklaaWlpTnk5dEJSbF9wOWJvMFhRVjc?oc=5' target='_blank' rel='noopener'>Spot the Difference Daily- Play Now online &amp; 100% Free - The Epoch Times</a></h3>
+                <p>Spot the Difference Daily- Play Now online &amp; 100% Free The Epoch Times...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMingFBVV95cUxPN2xuREZ1OS1UWlU3RUFFbkNaS2xfbWxZel9CczcyQWZOSXg4aTg1VmtVMUMzSFlFZFRLZkYyMy1sQ0JncDh4NHN2Q2tkZk43RmpGNUdXYjJ4SGxuSktsSTZ5cmZEU1dLRU93Tlo3UWFaNXc4bDJUQTQzZ0NhZzJLbUZfUHE5Q1pQbTZHQVhlMDdXTWNJSXVlYXFLM3RNQQ?oc=5' target='_blank' rel='noopener'>Google Warns the ‘Era of Autonomous Attacks Has Arrived’ - The Epoch Times</a></h3>
+                <p>Google Warns the ‘Era of Autonomous Attacks Has Arrived’ The Epoch Times...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMiREFVX3lxTFBSU2dZLXZaX21HbzlKWGxkWnM1eEQwNEZ3VE4xUkJFWFJWSkJ3d0pSY2c4MTBKZXctUXdyWWdicWJQaklP?oc=5' target='_blank' rel='noopener'>The Epoch Times | Breaking News, Latest News, World News and Videos - The Epoch Times</a></h3>
+                <p>The Epoch Times | Breaking News, Latest News, World News and Videos The Epoch Times...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Internet Archive TV News (hourly summary)</div>
+                <h3><a href='https://mastodon.archive.org/@tv/117638049592505169' target='_blank' rel='noopener'>TV news hourly summary · Nov 18, 15:03 UTC</a></h3>
+                <p>Trump arrived in China for talks with Xi and Putin, with Iran tensions, tech outages and Nvidia concerns looming over the summit. The FAA paused router installations after a nationwide ground stop; Wa...</p>
+            </div>
+            </div>
+
+        <footer>
+            Automated Segmented Pipeline powered by HTML Scrapers, 11 Global RSS Feeds &amp; Google Gemini AI &bull; 2026-11-18
+        </footer>
+    </div>
+</body>
+</html>
