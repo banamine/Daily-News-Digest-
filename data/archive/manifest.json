@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-11-19",
+    "timestamp": "2026-11-19T15:16:08.824495+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "Dozens missing after boat carrying 100 migrants sinks off Senegal's coast",
+      "Van Gogh painting sells for record $190.4m after row over its Nazi history",
+      "Amazon warns NYC delivery bill could add up to $5 per order - Reuters",
+      "EXCLUSIVE: Trump official floated ceding Guyanese territory to Venezuela, sources say - Reuters",
+      "Mother-of-five who died undergoing a Brazilian Butt Lift was trying to find 'elusive perfection', inquest told"
+    ],
+    "archive_html_path": "data/archive/2026-11-19/index.html",
+    "data_json_path": "data/archive/2026-11-19/data.json"
+  },
+  {
     "date": "2026-11-18",
     "timestamp": "2026-11-18T15:04:02.749013+00:00",
     "stories_count": 8,

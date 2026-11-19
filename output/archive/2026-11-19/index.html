@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Intelligence Briefing – 2026-11-19</title>
+    <style>
+        :root {
+            --bg: #0f1115;
+            --card: #1a1d24;
+            --text: #e6e8ec;
+            --muted: #9ba1ad;
+            --accent: #3b82f6;
+            --border: #2a2e38;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; padding: 2rem 1rem; }
+        .container { max-width: 960px; margin: 0 auto; }
+        header { text-align: center; margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+        header h1 { font-size: 2.2rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 0.4rem; color: #ffffff; }
+        header .date { color: var(--accent); font-size: 1rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+        
+        .hero-image { width: 100%; border-radius: 16px; overflow: hidden; margin-bottom: 2.5rem; box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6); border: 1px solid var(--border); background: #0b0f19; }
+        
+        /* Flexible Photo Collage Component */
+        .collage-wrapper { position: relative; width: 100%; }
+        .collage-header-pill {
+            position: absolute; top: 14px; left: 14px; z-index: 10;
+            background: rgba(15, 23, 42, 0.88); backdrop-filter: blur(8px);
+            border: 1px solid rgba(56, 189, 248, 0.35); color: #38bdf8;
+            padding: 5px 12px; border-radius: 999px; font-size: 11px; font-weight: 800;
+            letter-spacing: 0.5px; display: flex; align-items: center; gap: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        }
+        .collage-container {
+            display: grid; gap: 8px; background: #090d16; padding: 8px; border-radius: 16px; min-height: 280px;
+        }
+        .collage-container.collage-count-1 { grid-template-columns: 1fr; grid-template-rows: 360px; }
+        .collage-container.collage-count-1 .hero-tile { grid-row: auto; }
+
+        .collage-container.collage-count-2 { grid-template-columns: 1fr 1fr; grid-template-rows: 320px; }
+        .collage-container.collage-count-2 .hero-tile { grid-row: auto; }
+
+        .collage-container.collage-count-3 { grid-template-columns: 1.6fr 1fr; grid-template-rows: 170px 170px; }
+        .collage-container.collage-count-3 .hero-tile { grid-row: span 2; }
+
+        .collage-container.collage-count-4 { grid-template-columns: 1.6fr 1fr 1fr; grid-template-rows: 170px 170px; }
+        .collage-container.collage-count-4 .hero-tile { grid-row: span 2; }
+        .collage-container.collage-count-4 .collage-tile:nth-child(4) { grid-column: span 2; }
+
+        .collage-container.collage-count-5 { grid-template-columns: 1.8fr 1fr 1fr; grid-template-rows: 180px 180px; }
+        .collage-container.collage-count-5 .hero-tile { grid-row: span 2; }
+
+        @media (max-width: 768px) {
+            .collage-container,
+            .collage-container.collage-count-2,
+            .collage-container.collage-count-3,
+            .collage-container.collage-count-4,
+            .collage-container.collage-count-5 {
+                grid-template-columns: 1fr; grid-template-rows: auto;
+            }
+            .collage-tile, .hero-tile { min-height: 180px; }
+        }
+        .collage-tile {
+            position: relative; border-radius: 10px; overflow: hidden; background: #131927;
+            border: 1px solid rgba(255, 255, 255, 0.08); transition: transform 0.3s ease;
+        }
+        .collage-tile.hero-tile { grid-row: span 2; }
+        .collage-tile img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
+        .collage-tile:hover img { transform: scale(1.06); }
+        .collage-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(to top, rgba(11, 15, 23, 0.95) 0%, rgba(11, 15, 23, 0.2) 60%, transparent 100%);
+            display: flex; flex-direction: column; justify-content: flex-end; padding: 12px;
+        }
+        .collage-badge {
+            align-self: flex-start; background: rgba(56, 189, 248, 0.2); color: #38bdf8;
+            border: 1px solid rgba(56, 189, 248, 0.4); font-size: 10px; font-weight: 700;
+            text-transform: uppercase; padding: 2px 8px; border-radius: 999px; margin-bottom: 6px;
+        }
+        .collage-badge.hero-badge { background: rgba(16, 185, 129, 0.2); color: #34d399; border-color: rgba(16, 185, 129, 0.4); }
+        .collage-title { color: #ffffff; font-size: 12px; font-weight: 700; line-height: 1.35; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        .hero-tile .collage-title { font-size: 17px; }
+
+        .stories { display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 3rem; }
+        .story { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem; }
+        .story h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: #f1f3f5; }
+        .story-body { color: var(--muted); font-size: 0.98rem; overflow-wrap: anywhere; word-break: break-word; }
+        .story h2, .mini-card h3, .mini-card p { overflow-wrap: anywhere; }
+        .container { min-width: 0; max-width: 100%; }
+        .section-title { font-size: 1.3rem; font-weight: 800; color: var(--accent); margin: 2rem 0 1rem; border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; }
+        .segmented-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
+        .mini-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+        .mini-card.scraped { border-left: 3px solid #8b5cf6; }
+        .mini-card.rss { border-left: 3px solid #3b82f6; }
+        .source-tag { font-size: 0.75rem; font-weight: bold; color: var(--accent); margin-bottom: 0.4rem; }
+        .mini-card h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.4rem; }
+        .mini-card h3 a { color: #f1f3f5; text-decoration: none; }
+        .mini-card h3 a:hover { text-decoration: underline; color: var(--accent); }
+        .mini-card p { font-size: 0.82rem; color: var(--muted); line-height: 1.4; }
+        footer { text-align: center; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="date">2026-11-19</div>
+            <h1>Daily Intelligence Briefing</h1>
+        </header>
+
+        <div class="hero-image">
+            
+                
+    <div class="collage-wrapper">
+        <div class="collage-header-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7"/><path d="M16 5h5v5"/><path d="m21 5-9 9"/></svg>
+            <span>Parsed Feeds Mixed Photo Collage (5 Photos)</span>
+        </div>
+        <div class="collage-container collage-count-5">
+            <div class="collage-tile hero-tile">
+                <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9aab/live/c39b82a0-e419-11f1-b37c-b3a71d7200af.jpg" alt="Dozens missing after boat carrying 100 migrants sinks off Senegal&#x27;s coast" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+                <div class="collage-overlay">
+                    <span class="collage-badge hero-badge">BBC World News</span>
+                    <h3 class="collage-title hero-title">Dozens missing after boat carrying 100 migrants sinks off Senegal&#x27;s coast</h3>
+                </div>
+            </div>
+            
+        <div class="collage-tile">
+            <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/a424/live/fe3f6bb0-e428-11f1-99b6-a35a62fa4264.jpg" alt="Van Gogh painting sells for record $190.4m after row over its Nazi history" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">BBC World News</span>
+                <h4 class="collage-title">Van Gogh painting sells for record $190.4m after row over its Nazi history</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/4dc7/live/1a9ba6c0-e424-11f1-b782-6bf340d7e154.jpg" alt="Putin vows &#x27;far more painful&#x27; response to Ukraine&#x27;s strikes on Crimean Bridge" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">BBC World News</span>
+                <h4 class="collage-title">Putin vows &#x27;far more painful&#x27; response to Ukraine&#x27;s strikes on Crimean Bridge</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Amazon warns NYC delivery bill could add up to $5 per order - Reuters" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">Reuters Top News</span>
+                <h4 class="collage-title">Amazon warns NYC delivery bill could add up to $5 per order - Reuters</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="EXCLUSIVE: Trump official floated ceding Guyanese territory to Venezuela, sources say - Reuters" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">Reuters Top News</span>
+                <h4 class="collage-title">EXCLUSIVE: Trump official floated ceding Guyanese territory to Venezuela, sources say - Reuters</h4>
+            </div>
+        </div>
+        
+        </div>
+    </div>
+    
+            
+        </div>
+
+        <main class="stories">
+            
+        <div class="story">
+            <h2>Dozens missing after boat carrying 100 migrants sinks off Senegal&#x27;s coast</h2>
+            <div class="story-body"><strong>Source:</strong> BBC World News<br><strong>Summary:</strong> A boat carrying around 100 migrants capsized off the coast of Senegal, leaving dozens of individuals missing. Local authorities and media report that at least four bodies have been recovered following the incident. Emergency responses and search efforts remain ongoing along the coast.<br><strong>Key Theme:</strong> Migration<br>---</div>
+        </div>
+        
+        <div class="story">
+            <h2>Van Gogh painting sells for record $190.4m after row over its Nazi history</h2>
+            <div class="story-body"><strong>Source:</strong> BBC World News<br><strong>Summary:</strong> Vincent van Gogh&#x27;s 1890 masterpiece *Châtaigniers en fleurs* has sold at auction for a record $190.4 million. The high-profile sale took place following a dispute over the painting&#x27;s ownership history during the Nazi era. The artwork was originally created during the final two months of Van Gogh&#x27;s life.<br><strong>Key Theme:</strong> Art<br>---</div>
+        </div>
+        
+        <div class="story">
+            <h2>Amazon warns NYC delivery bill could add up to $5 per order</h2>
+            <div class="story-body"><strong>Source:</strong> Reuters Top News<br><strong>Summary:</strong> Amazon has warned that proposed delivery legislation in New York City could increase costs by up to $5 per customer order. The e-commerce giant raised concerns over how the local regulatory bill would impact logistics and operational costs. City officials continue to review the proposed delivery regulations.<br><strong>Key Theme:</strong> Business<br>---</div>
+        </div>
+        
+        <div class="story">
+            <h2>EXCLUSIVE: Trump official floated ceding Guyanese territory to Venezuela, sources say</h2>
+            <div class="story-body"><strong>Source:</strong> Reuters Top News<br><strong>Summary:</strong> Sources reveal that an official from the Trump administration previously suggested ceding territory belonging to Guyana to Venezuela. The non-public proposal was raised amid ongoing regional disputes over international borders in South America. The report highlights previously undisclosed foreign policy conversations regarding the Essequibo territory.<br><strong>Key Theme:</strong> Foreign Policy<br>---</div>
+        </div>
+        
+        <div class="story">
+            <h2>Mother-of-five who died undergoing a Brazilian Butt Lift was trying to find &#x27;elusive perfection&#x27;, inquest told</h2>
+            <div class="story-body"><strong>Source:</strong> Daily Mail UK<br><strong>Summary:</strong> An inquest has heard details regarding the death of Alice Webb, a 33-year-old mother of five who passed away in September 2024 following a Brazilian Butt Lift. The cosmetic procedure was conducted at a home-based beauty salon in Gloucester. The coroner was informed of the circumstances surrounding the fatal medical complications.<br><strong>Key Theme:</strong> Health<br>---</div>
+        </div>
+        
+        <div class="story">
+            <h2>James Cleverly vows to end Sadiq Khan era and restore &#x27;pride&#x27; in London after winning battle to be Tory candidate for Mayor</h2>
+            <div class="story-body"><strong>Source:</strong> Daily Mail UK<br><strong>Summary:</strong> Former Cabinet minister James Cleverly has been selected as the Conservative candidate for the London mayoral election. Following his nomination victory, Cleverly pledged to restore pride to the city and challenge current Mayor Sadiq Khan. He will lead the Tory campaign in the upcoming municipal election.<br><strong>Key Theme:</strong> Politics<br>---</div>
+        </div>
+        
+        <div class="story">
+            <h2>Hello Kitty returns to SoFi Stadium for Rams’ season finale</h2>
+            <div class="story-body"><strong>Source:</strong> New York Post<br><strong>Summary:</strong> The Los Angeles Rams are hosting a return of &quot;Hello Kitty Night&quot; at SoFi Stadium for their regular-season finale against the Seattle Seahawks. The themed event will feature exclusive fan giveaways, including customized scarves and bobbleheads. The promotion aims to engage fans with special interactive game-day experiences.<br><strong>Key Theme:</strong> Sports<br>---</div>
+        </div>
+        
+        <div class="story">
+            <h2>TV news hourly summary · Nov 19, 15:03 UTC</h2>
+            <div class="story-body"><strong>Source:</strong> Internet Archive TV News<br><strong>Summary:</strong> Donald Trump, Xi Jinping, and Vladimir Putin met for a high-level summit in China to discuss international relations and criticize the International Criminal Court. Concurrently, European allies met in Berlin over the Ukraine war, while the UK expelled Myanmar&#x27;s defense attaché following a genocide ruling regarding the Rohingya. Other headlines include an Anthropic IPO, widespread U.S. tech outages, and severe flooding in Florida.<br><strong>Key Theme:</strong> Global Affairs</div>
+        </div>
+        
+        </main>
+
+        
+        <div class='section-title'>Global &amp; Alternative RSS Feeds</div><div class='segmented-grid'>
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/articles/c58j484089ewo?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>Dozens missing after boat carrying 100 migrants sinks off Senegal&#x27;s coast</a></h3>
+                <p>Some local media report that at least four bodies have been recovered....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/articles/c5dj1dkwzvzwo?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>Van Gogh painting sells for record $190.4m after row over its Nazi history</a></h3>
+                <p>Châtaigniers en fleurs was painted in 1890 in the final two months of Vincent van Gogh&#x27;s life....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/articles/cm879dqn3e1jo?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>Putin vows &#x27;far more painful&#x27; response to Ukraine&#x27;s strikes on Crimean Bridge</a></h3>
+                <p>The Russian president said the Crimean Bridge was civilian infrastructure, which Kyiv disputes....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMitwFBVV95cUxPNkFtMjlFYVZtVmJXQWlvMGtSdGNFZm5xd3JHSlJPaGR4ektBbEZUdWltOGhnbGpPTmNRblVaRFFnSU5KTWxZREdqVmpwTGREOTF0ajFtWkVMcURwY19tX1FkWndWOFlkMVYxTm85N2tjbno0TTNhWDV3VmRqSnJLSWdtUnRFOWxNYWFlWmRxelI2VjhPNkxxaWhIQ1JtYzJaZ0dQNmlxREd4dDY3S0o5N28zbkk0NXM?oc=5' target='_blank' rel='noopener'>Amazon warns NYC delivery bill could add up to $5 per order - Reuters</a></h3>
+                <p>Amazon warns NYC delivery bill could add up to $5 per order Reuters...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMitAFBVV95cUxQd2R1NE4tQ1M2UVIyVjhFeVJJVGVxa01sRldmeHk5bkpzOHM4X3Byd2RHd2JmNW0zdzRmOUFVc055dWNCR3ZxMmdTRFJDcS1Nd2ZrZjZ6a0VWS2RMeGktVnNyczVmNnMxZUpqMUZqUGdna2FwNzFZczg1dHdtckpYWHJlRXhBaWQtSG9MazZJZUJvQzRaSjZTV21jQ2VlckJ1Wnc3NmI2dG9zTUlQc0lLZEQ2RHA?oc=5' target='_blank' rel='noopener'>EXCLUSIVE: Trump official floated ceding Guyanese territory to Venezuela, sources say - Reuters</a></h3>
+                <p>EXCLUSIVE: Trump official floated ceding Guyanese territory to Venezuela, sources say Reuters...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMisgFBVV95cUxNQkkzQVk3M3pnOXRWVlFCMmVzUEN0alhCS0gzQUhYNkhCMDhCOUM0N0tmMFpZNVNKcnVNbktaYXV5MV9ERm13WHoxTEVtUGRMUkZwT3dJZmlRZ2pyRE1WMGoyZW1VcXVWdTVRTmxZV1RISHNXWE9YY1BUUC1EWlJWRWRsYzlGTXo0WmhjaUxiUnAyMDl2OU9mWmliYndLd0htWGVLYWFUUldMOUIzLV9TSnBB?oc=5' target='_blank' rel='noopener'>Trump says US will &#x27;see what happens&#x27; in conflict with Iran after January 1 - Reuters</a></h3>
+                <p>Trump says US will &#x27;see what happens&#x27; in conflict with Iran after January 1 Reuters...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/news/article-16305585/Mother-five-died-undergoing-Brazilian-Butt-Lift-trying-elusive-perfection-inquest-told.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>Mother-of-five who died undergoing a Brazilian Butt Lift was trying to find &#x27;elusive perfection&#x27;, inquest told</a></h3>
+                <p>Alice Webb, 33, died in September 2024 after receiving the cosmetic procedure at a beauty salon within a friend&#x27;s home in Gloucester, a coroner was told....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/news/article-16305291/Ex-Cabinet-minister-James-Cleverly-wins-battle-Tory-candidate-London-Mayor.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>James Cleverly vows to end Sadiq Khan era and restore &#x27;pride&#x27; in London after winning battle to be Tory candidate for Mayor</a></h3>
+                <p>James Cleverly has won the battle to be selected as the Tory candidate for London Mayor....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/news/article-16305175/The-state-school-boy-set-AI-mega-billionaire-Anthropic-founder-Jack-Clark-born-bred-Brighton-worth-19-7BN-AI-giant-makes-stock-market-debut.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>The state school boy set to become AI&#x27;s mega-billionaire: Anthropic&#x27;s Jack Clark goes from £20,000-a-year journalism job to being worth $19.7BN today</a></h3>
+                <p>Today, Brighton-born Jack is on the verge of becoming one of the richest men on the planet as his AI giant Anthropic prepares for its hotly anticipated stock market debut....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>New York Post</div>
+                <h3><a href='https://nypost.com/2026/11/19/sports/rams-bring-back-hello-kitty-night-with-exclusive-fan-giveaways/' target='_blank' rel='noopener'>Hello Kitty returns to SoFi Stadium for Rams’ season finale</a></h3>
+                <p>The Rams bring back Hello Kitty Night for their season finale against the Seahawks, featuring exclusive scarves, bobbleheads and special fan giveaways....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>New York Post</div>
+                <h3><a href='https://pagesix.com/video/rhoslc-recap-bronwyn-claims-todds-affairs-led-to-their-split-he-blames-mean-cast-members/' target='_blank' rel='noopener'>‘RHOSLC’ recap: Bronwyn claims Todd’s affairs led to their split, he blames ‘mean’ cast members</a></h3>
+                <p>“Virtual Reali-Tea” co-hosts Danny Murphy and Evan Real recap season 7, episode 10 of the “Real Housewives of Salt Lake City.” Bronwyn Newport sits down with Todd to discuss the dissolution of their m...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/denmark-votes-109-0-trumps-greenland-deal-locking/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=denmark-votes-109-0-trumps-greenland-deal-locking' target='_blank' rel='noopener'>Denmark Votes 109-0 for Trump’s Greenland Deal, Locking In Expanded U.S. Arctic Reach</a></h3>
+                <p>Denmark&#x27;s parliament voted 109-0 to approve President Trump&#x27;s Greenland agreement, completing ratification and expanding America&#x27;s long-term Arctic security role....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/senate-republicans-launch-10-bill-push-lock-president/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=senate-republicans-launch-10-bill-push-lock-president' target='_blank' rel='noopener'>Senate Republicans Launch 10-Bill Push To Lock In President Trump’s Education Overhaul</a></h3>
+                <p>Senate Republicans launched a 10-bill push to make President Trump&#x27;s Education Department restructuring permanent and return authority closer to families and states....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/president-trump-makes-history-china-first-ever-three/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=president-trump-makes-history-china-first-ever-three' target='_blank' rel='noopener'>President Trump Makes History In China With First-Ever Three-Way Summit</a></h3>
+                <p>President Trump brought the leaders of the world&#x27;s three largest nuclear powers together for a first-ever summit focused on nuclear risk, Ukraine, Iran, and trade....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/11/19/even-nuking-the-filibuster-may-not-be-enough-to-get-feckless-senate-gop-to-do-its-job/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=even-nuking-the-filibuster-may-not-be-enough-to-get-feckless-senate-gop-to-do-its-job' target='_blank' rel='noopener'>Even Nuking The Filibuster May Not Be Enough To Get Feckless Senate GOP To Do Its Job</a></h3>
+                <p>While Dems may blow up the filibuster, one conservative reminds us that the GOP Senate had a hard time finding 51 votes....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/11/19/new-memo-exposes-government-accountability-offices-radical-anti-trump-shift/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=new-memo-exposes-government-accountability-offices-radical-anti-trump-shift' target='_blank' rel='noopener'>New Memo Exposes Government Accountability Office’s ‘Radical Anti-Trump Shift’</a></h3>
+                <p>The Oversight Project argues Trump&#x27;s &#x27;pocket rescissions&#x27; cutting &#x27;woke and wasteful&#x27; spending are legal, just like the GAO did years ago....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/11/19/ny-times-conveniently-waits-until-after-midterms-to-admit-democrats-wont-bring-down-prices/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=ny-times-conveniently-waits-until-after-midterms-to-admit-democrats-wont-bring-down-prices' target='_blank' rel='noopener'>NY Times Conveniently Waits Until After Midterms To Admit Democrats Won’t Bring Down Prices</a></h3>
+                <p>The Times knew it before the election but never said anything until now. It&#x27;s too late, and that was on purpose....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/shows/conservative-review-with-daniel-horowitz/tragedy-betrayal-sickness-new-book-exposes-harrowing-accounts-buried-in-cdc-s-covid-vaccine-data' target='_blank' rel='noopener'>&#x27;Tragedy, betrayal, sickness&#x27;: New book exposes harrowing accounts buried in CDC&#x27;s COVID vaccine data</a></h3>
+                <p>Americans who reported serious health problems after receiving COVID-19 vaccines through a CDC monitoring program expected their complaints to be taken seriously. Instead, many say their pleas for hel...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/news/thats-a-myth-why-are-gas-prices-plummeting-now-that-the-election-is-over' target='_blank' rel='noopener'>&#x27;That&#x27;s a myth&#x27;: Why are gas prices plummeting now that the election is over?</a></h3>
+                <p>The price of gasoline has notably dropped in the weeks since the midterm elections, and some are speculating that the timing is more than just coincidence. But are they right? Gas prices, like the Ira...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/columns/opinion/make-american-movies-in-america-whats-so-radical-about-that' target='_blank' rel='noopener'>Make American movies in America. What’s so radical about that?</a></h3>
+                <p>Conservatives often repeat the refrain that politics is downstream of culture. We know why: For decades, we have pushed back against the left’s domination of universities, newsrooms, and Hollywood. La...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/david-strom/2026/11/19/official-religion-for-me-but-not-for-thee-n3821158' target='_blank' rel='noopener'>Official Religion for Me, but Not for Thee...</a></h3>
+                <p>Official Religion for Me, but Not for Thee......</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/headlines/2026/11/19/nvidia-ceo-found-out-about-honey-traps-the-hard-way-n3821133' target='_blank' rel='noopener'>Nvidia CEO Found Out About Honey Traps the Hard Way</a></h3>
+                <p>Nvidia CEO Found Out About Honey Traps the Hard Way...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/ed-morrissey/2026/11/19/musk-maga-moi-n3821157' target='_blank' rel='noopener'>Musk: MAGA? Moi?</a></h3>
+                <p>Musk: MAGA? Moi?...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Judicial Watch</div>
+                <h3><a href='https://www.judicialwatch.org/ilhan-omar-search-warrant-records-to-be-partially-released/' target='_blank' rel='noopener'>Ilhan Omar search warrant records to be partially released</a></h3>
+                <p>A judge has authorized the partial release of records related to the Oct. 12 federal raid on Rep.…...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Judicial Watch</div>
+                <h3><a href='https://www.judicialwatch.org/cia-refuses-confirm-or-deny-existence-january-6-records/' target='_blank' rel='noopener'>Judicial Watch: CIA Refuses to Confirm or Deny Existence of January 6 Records</a></h3>
+                <p>(Washington, DC) – Judicial Watch announced that, after more than two years, the Central Intelligence Agency (CIA), instead…...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Judicial Watch</div>
+                <h3><a href='https://www.judicialwatch.org/victory-federal-judge-orders-unsealing-ilhan-omar-search-warrant-records/' target='_blank' rel='noopener'>Judicial Watch Victory: Federal Judge Orders Unsealing of Ilhan Omar Search Warrant Records</a></h3>
+                <p>(Washington, DC) – Judicial Watch announced that Chief Judge James E. Boasberg today ordered that Rep. Ilhan Omar…...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/11/the-midterm-em-twilight-zone-em/' target='_blank' rel='noopener'>The Midterm Twilight Zone</a></h3>
+                <p>Photo Credit: ChatGPT By Jeannie DeAngelis America has been politically transformed into a realm where reality is rejected....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/11/exploiting-the-potential-fractures-in-the-democrat-party/' target='_blank' rel='noopener'>Exploiting The Potential Fractures In The Democrat Party</a></h3>
+                <p>Photo Credit: AI for American Thinker By Steve McCann Republicans have two years to expose the growing conflict between the party’s radical ideologues and the moderates who delivered its congressional...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/11/our-elections-need-a-policy-fix-before-2028/' target='_blank' rel='noopener'>Our Elections Need A Policy Fix Before 2028</a></h3>
+                <p>Photo Credit: AI for American Thinker By Ron Wright A system that cannot be independently verified should not demand unconditional public trust....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMifEFVX3lxTE5sQ3M3ZTFkX19VVEFHSHNEX1BmTmZTZzlkemFnVUZfVjBja010TlFJTmIzaU1IU1BlZVRXRU1vemVIREhQeTNpZktjdEFjeGVCS0R3cXRrYVdkZ3VGRXBteUNHeTZ2UklaaWlpTnk5dEJSbF9wOWJvMFhRVjc?oc=5' target='_blank' rel='noopener'>Spot the Difference Daily- Play Now online &amp; 100% Free - The Epoch Times</a></h3>
+                <p>Spot the Difference Daily- Play Now online &amp; 100% Free The Epoch Times...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMiREFVX3lxTFBSU2dZLXZaX21HbzlKWGxkWnM1eEQwNEZ3VE4xUkJFWFJWSkJ3d0pSY2c4MTBKZXctUXdyWWdicWJQaklP?oc=5' target='_blank' rel='noopener'>The Epoch Times | Breaking News, Latest News, World News and Videos - The Epoch Times</a></h3>
+                <p>The Epoch Times | Breaking News, Latest News, World News and Videos The Epoch Times...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMipAFBVV95cUxOck1iSGhoRnRBaXNubkpST29ySXpDNTUtUlhOX21vR19SWDFDZWxWZHZNWWlQSGY4RmFSR3BIMTdrWmFTcUprTUpRaGhDbVFTUTMwb3dDT2RWQUxaZ00zSUZ6ZmpvRGhfRGlfdXFtQkhIWUU4aVhkZDBVQkpScjdCbGdTWGt2SUZpTmI4Q1h0QUxCRFFUWWs0b21Da21vZWtZSWtzSA?oc=5' target='_blank' rel='noopener'>Why Most Americans Couldn’t Last 72 Hours in an Emergency - The Epoch Times</a></h3>
+                <p>Why Most Americans Couldn’t Last 72 Hours in an Emergency The Epoch Times...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Internet Archive TV News (hourly summary)</div>
+                <h3><a href='https://mastodon.archive.org/@tv/117643711962007383' target='_blank' rel='noopener'>TV news hourly summary · Nov 19, 15:03 UTC</a></h3>
+                <p>Trump, Xi and Putin held a historic summit in China, emphasizing cooperation and criticizing the International Criminal Court; Trump is returning to the U.S. Ukraine’s allies met in Berlin to discuss ...</p>
+            </div>
+            </div>
+
+        <footer>
+            Automated Segmented Pipeline powered by HTML Scrapers, 11 Global RSS Feeds &amp; Google Gemini AI &bull; 2026-11-19
+        </footer>
+    </div>
+</body>
+</html>
