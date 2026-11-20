@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-11-20",
+    "timestamp": "2026-11-20T14:53:50.826512+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "Russia targets Kyiv crossings days after Ukraine hits Crimean Bridge",
+      "Russian missile hits Poland as Ukraine's allies hold military exercise, says Tusk",
+      "Anthropic IPO haul rises to $93.5 billion after underwriters exercise greenshoe - Reuters",
+      "Two Danes suspected of being hired by Russia to kill Ukrainian rapper - Reuters",
+      "Harry appears on This Morning as he downs shots of whisky, tells Alison and Dermot 'it's great to be back', gives his view on the new James Bond and reveals how Archie and Lilibet are getting on at school"
+    ],
+    "archive_html_path": "data/archive/2026-11-20/index.html",
+    "data_json_path": "data/archive/2026-11-20/data.json"
+  },
+  {
     "date": "2026-11-19",
     "timestamp": "2026-11-19T15:16:08.824495+00:00",
     "stories_count": 8,
