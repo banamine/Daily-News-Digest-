@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-11-21",
+    "timestamp": "2026-11-21T14:11:21.831723+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "Zelensky says Crimean Bridge strikes 'fair response' as he meets UK's Streeting",
+      "Tech stock sell-off drags markets down as Anthropic shares slide",
+      "Cargo ship bound for Russia's Kaliningrad hit by drones, Finland tightens security - Reuters",
+      "EXCLUSIVE: Denmark pushes EU to tighten travel curbs on Russians after foiled plot - Reuters",
+      "The new migrant crisis frontline: This tiny island in the Canaries was left living in fear when 11,000 African asylum seekers arrived on 100 boats. Now many are heading to Britain..."
+    ],
+    "archive_html_path": "data/archive/2026-11-21/index.html",
+    "data_json_path": "data/archive/2026-11-21/data.json"
+  },
+  {
     "date": "2026-11-20",
     "timestamp": "2026-11-20T14:53:50.826512+00:00",
     "stories_count": 8,

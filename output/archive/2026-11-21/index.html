@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Intelligence Briefing – 2026-11-21</title>
+    <style>
+        :root {
+            --bg: #0f1115;
+            --card: #1a1d24;
+            --text: #e6e8ec;
+            --muted: #9ba1ad;
+            --accent: #3b82f6;
+            --border: #2a2e38;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; padding: 2rem 1rem; }
+        .container { max-width: 960px; margin: 0 auto; }
+        header { text-align: center; margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+        header h1 { font-size: 2.2rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 0.4rem; color: #ffffff; }
+        header .date { color: var(--accent); font-size: 1rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+        
+        .hero-image { width: 100%; border-radius: 16px; overflow: hidden; margin-bottom: 2.5rem; box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6); border: 1px solid var(--border); background: #0b0f19; }
+        
+        /* Flexible Photo Collage Component */
+        .collage-wrapper { position: relative; width: 100%; }
+        .collage-header-pill {
+            position: absolute; top: 14px; left: 14px; z-index: 10;
+            background: rgba(15, 23, 42, 0.88); backdrop-filter: blur(8px);
+            border: 1px solid rgba(56, 189, 248, 0.35); color: #38bdf8;
+            padding: 5px 12px; border-radius: 999px; font-size: 11px; font-weight: 800;
+            letter-spacing: 0.5px; display: flex; align-items: center; gap: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        }
+        .collage-container {
+            display: grid; gap: 8px; background: #090d16; padding: 8px; border-radius: 16px; min-height: 280px;
+        }
+        .collage-container.collage-count-1 { grid-template-columns: 1fr; grid-template-rows: 360px; }
+        .collage-container.collage-count-1 .hero-tile { grid-row: auto; }
+
+        .collage-container.collage-count-2 { grid-template-columns: 1fr 1fr; grid-template-rows: 320px; }
+        .collage-container.collage-count-2 .hero-tile { grid-row: auto; }
+
+        .collage-container.collage-count-3 { grid-template-columns: 1.6fr 1fr; grid-template-rows: 170px 170px; }
+        .collage-container.collage-count-3 .hero-tile { grid-row: span 2; }
+
+        .collage-container.collage-count-4 { grid-template-columns: 1.6fr 1fr 1fr; grid-template-rows: 170px 170px; }
+        .collage-container.collage-count-4 .hero-tile { grid-row: span 2; }
+        .collage-container.collage-count-4 .collage-tile:nth-child(4) { grid-column: span 2; }
+
+        .collage-container.collage-count-5 { grid-template-columns: 1.8fr 1fr 1fr; grid-template-rows: 180px 180px; }
+        .collage-container.collage-count-5 .hero-tile { grid-row: span 2; }
+
+        @media (max-width: 768px) {
+            .collage-container,
+            .collage-container.collage-count-2,
+            .collage-container.collage-count-3,
+            .collage-container.collage-count-4,
+            .collage-container.collage-count-5 {
+                grid-template-columns: 1fr; grid-template-rows: auto;
+            }
+            .collage-tile, .hero-tile { min-height: 180px; }
+        }
+        .collage-tile {
+            position: relative; border-radius: 10px; overflow: hidden; background: #131927;
+            border: 1px solid rgba(255, 255, 255, 0.08); transition: transform 0.3s ease;
+        }
+        .collage-tile.hero-tile { grid-row: span 2; }
+        .collage-tile img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
+        .collage-tile:hover img { transform: scale(1.06); }
+        .collage-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(to top, rgba(11, 15, 23, 0.95) 0%, rgba(11, 15, 23, 0.2) 60%, transparent 100%);
+            display: flex; flex-direction: column; justify-content: flex-end; padding: 12px;
+        }
+        .collage-badge {
+            align-self: flex-start; background: rgba(56, 189, 248, 0.2); color: #38bdf8;
+            border: 1px solid rgba(56, 189, 248, 0.4); font-size: 10px; font-weight: 700;
+            text-transform: uppercase; padding: 2px 8px; border-radius: 999px; margin-bottom: 6px;
+        }
+        .collage-badge.hero-badge { background: rgba(16, 185, 129, 0.2); color: #34d399; border-color: rgba(16, 185, 129, 0.4); }
+        .collage-title { color: #ffffff; font-size: 12px; font-weight: 700; line-height: 1.35; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        .hero-tile .collage-title { font-size: 17px; }
+
+        .stories { display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 3rem; }
+        .story { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem; }
+        .story h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: #f1f3f5; }
+        .story-body { color: var(--muted); font-size: 0.98rem; overflow-wrap: anywhere; word-break: break-word; }
+        .story h2, .mini-card h3, .mini-card p { overflow-wrap: anywhere; }
+        .container { min-width: 0; max-width: 100%; }
+        .section-title { font-size: 1.3rem; font-weight: 800; color: var(--accent); margin: 2rem 0 1rem; border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; }
+        .segmented-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
+        .mini-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+        .mini-card.scraped { border-left: 3px solid #8b5cf6; }
+        .mini-card.rss { border-left: 3px solid #3b82f6; }
+        .source-tag { font-size: 0.75rem; font-weight: bold; color: var(--accent); margin-bottom: 0.4rem; }
+        .mini-card h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.4rem; }
+        .mini-card h3 a { color: #f1f3f5; text-decoration: none; }
+        .mini-card h3 a:hover { text-decoration: underline; color: var(--accent); }
+        .mini-card p { font-size: 0.82rem; color: var(--muted); line-height: 1.4; }
+        footer { text-align: center; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="date">2026-11-21</div>
+            <h1>Daily Intelligence Briefing</h1>
+        </header>
+
+        <div class="hero-image">
+            
+                
+    <div class="collage-wrapper">
+        <div class="collage-header-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7"/><path d="M16 5h5v5"/><path d="m21 5-9 9"/></svg>
+            <span>Parsed Feeds Mixed Photo Collage (5 Photos)</span>
+        </div>
+        <div class="collage-container collage-count-5">
+            <div class="collage-tile hero-tile">
+                <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3686/live/9ee585d0-e5a6-11f1-99b6-a35a62fa4264.jpg" alt="Zelensky says Crimean Bridge strikes &#x27;fair response&#x27; as he meets UK&#x27;s Streeting" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+                <div class="collage-overlay">
+                    <span class="collage-badge hero-badge">BBC World News</span>
+                    <h3 class="collage-title hero-title">Zelensky says Crimean Bridge strikes &#x27;fair response&#x27; as he meets UK&#x27;s Streeting</h3>
+                </div>
+            </div>
+            
+        <div class="collage-tile">
+            <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/03d5/live/7b6fe9b0-e4ed-11f1-8781-bf15c9202663.jpg" alt="Tech stock sell-off drags markets down as Anthropic shares slide" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">BBC World News</span>
+                <h4 class="collage-title">Tech stock sell-off drags markets down as Anthropic shares slide</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/5253/live/c9ca5500-e579-11f1-a5f6-b3028adf2d6d.jpg" alt="Fight over fossil fuels leaves COP31 climate talks in deadlock" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">BBC World News</span>
+                <h4 class="collage-title">Fight over fossil fuels leaves COP31 climate talks in deadlock</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Cargo ship bound for Russia&#x27;s Kaliningrad hit by drones, Finland tightens security - Reuters" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">Reuters Top News</span>
+                <h4 class="collage-title">Cargo ship bound for Russia&#x27;s Kaliningrad hit by drones, Finland tightens security - Reuters</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="EXCLUSIVE: Denmark pushes EU to tighten travel curbs on Russians after foiled plot - Reuters" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">Reuters Top News</span>
+                <h4 class="collage-title">EXCLUSIVE: Denmark pushes EU to tighten travel curbs on Russians after foiled plot - Reuters</h4>
+            </div>
+        </div>
+        
+        </div>
+    </div>
+    
+            
+        </div>
+
+        <main class="stories">
+            
+        <div class="story">
+            <h2>Zelensky says Crimean Bridge strikes &#x27;fair response&#x27; as he meets UK&#x27;s Streeting</h2>
+            <div class="story-body"><strong>Source:</strong> BBC World News<br><strong>Summary:</strong> Ukrainian President Volodymyr Zelensky defended recent strikes on the Crimean Bridge as a &quot;fair response&quot; during a meeting with UK Health Secretary Wes Streeting. Zelensky stated that Kyiv acted following 109 separate Russian aerial attacks targeting bridges within Ukraine. The meeting highlighted continued diplomatic coordination and defense discussions between Ukraine and the United Kingdom.<br><strong>Key Theme:</strong> Defense / Geopolitics</div>
+        </div>
+        
+        <div class="story">
+            <h2>Tech stock sell-off drags markets down as Anthropic shares slide</h2>
+            <div class="story-body"><strong>Source:</strong> BBC World News<br><strong>Summary:</strong> A sharp sell-off in technology equities triggered notable declines across major U.S. stock indices, led by a slide in Anthropic shares. The market drop pushed both the S&amp;P 500 and the Dow Jones Industrial Average into correction territory. The downturn underscores growing investor caution surrounding valuation pressures within the artificial intelligence sector.<br><strong>Key Theme:</strong> Finance / Markets</div>
+        </div>
+        
+        <div class="story">
+            <h2>Cargo ship bound for Russia&#x27;s Kaliningrad hit by drones, Finland tightens security - Reuters</h2>
+            <div class="story-body"><strong>Source:</strong> Reuters Top News<br><strong>Summary:</strong> A commercial cargo vessel en route to the Russian exclave of Kaliningrad was hit by drone strikes in regional waters. In response to the incident, neighboring Finland raised its security posture to protect maritime infrastructure and trade routes. Authorities are monitoring maritime traffic while assessing the origin and impact of the attack.<br><strong>Key Theme:</strong> Maritime Security</div>
+        </div>
+        
+        <div class="story">
+            <h2>EXCLUSIVE: Denmark pushes EU to tighten travel curbs on Russians after foiled plot - Reuters</h2>
+            <div class="story-body"><strong>Source:</strong> Reuters Top News<br><strong>Summary:</strong> Denmark is urging European Union member states to implement stricter travel restrictions on Russian national entry visas following a recently thwarted plot. Danish officials argue that tighter border and travel controls are required to safeguard regional security. The proposal aims to unify intelligence and visa policies across the bloc amid ongoing geopolitical tensions.<br><strong>Key Theme:</strong> Foreign Policy</div>
+        </div>
+        
+        <div class="story">
+            <h2>The new migrant crisis frontline: This tiny island in the Canaries was left living in fear when 11,000 African asylum seekers arrived on 100 boats. Now many are heading to Britain...</h2>
+            <div class="story-body"><strong>Source:</strong> Daily Mail UK<br><strong>Summary:</strong> A small island in the Canary Islands experienced a significant influx of asylum seekers after nearly 11,000 West African migrants arrived on 100 vessels over several weeks. Local infrastructure faced heavy strain as authorities managed humanitarian aid and logistical responses. Reports indicate that many of the migrants are attempting further travel toward Northern Europe and the UK.<br><strong>Key Theme:</strong> Migration</div>
+        </div>
+        
+        <div class="story">
+            <h2>Cancer has changed me: Kate fights back tears in the most moving royal documentary ever as she describes her pain and healing</h2>
+            <div class="story-body"><strong>Source:</strong> Daily Mail UK<br><strong>Summary:</strong> The Princess of Wales shared reflections on her health challenges and recovery process in a newly released BBC documentary. The program documents her personal treatment journey alongside footage of her hiking in the UK mountains. The feature focuses on her gradual return to public duties following her cancer diagnosis.<br><strong>Key Theme:</strong> Royalty / Health</div>
+        </div>
+        
+        <div class="story">
+            <h2>Nasty weather hitting NYC this weekend — and could dampen Thanksgiving plans</h2>
+            <div class="story-body"><strong>Source:</strong> New York Post<br><strong>Summary:</strong> A significant storm system is forecasted to bring heavy rain and strong winds to the New York City metropolitan area over the weekend. Meteorologists warn that the adverse weather conditions could create travel disruptions ahead of the busy Thanksgiving holiday period. Residents and travelers are advised to check local transport advisories and prepare for delays.<br><strong>Key Theme:</strong> Weather / Travel</div>
+        </div>
+        
+        <div class="story">
+            <h2>TV news hourly summary · Nov 21, 14:03 UTC</h2>
+            <div class="story-body"><strong>Source:</strong> Internet Archive TV News (hourly summary)<br><strong>Summary:</strong> A roundup of global news reports congressional preparations for investigations into the White House alongside escalating rhetoric between Russian and Ukrainian leaders. Additional headlines cover severe weather systems causing travel warnings across Florida and the East Coast, alongside financial market volatility driven by tech stock declines. International updates also report the arrest of an alleged cartel kingpin by Mexican authorities.<br><strong>Key Theme:</strong> World News</div>
+        </div>
+        
+        </main>
+
+        
+        <div class='section-title'>Global &amp; Alternative RSS Feeds</div><div class='segmented-grid'>
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/articles/c6wy0qj7w5zqo?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>Zelensky says Crimean Bridge strikes &#x27;fair response&#x27; as he meets UK&#x27;s Streeting</a></h3>
+                <p>Ukraine&#x27;s president says Kyiv acted after 109 separate Russian aerial attacks on bridges in Ukraine....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/articles/c6808ym10vzgo?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>Tech stock sell-off drags markets down as Anthropic shares slide</a></h3>
+                <p>Pressures weighed on US markets, with the S&amp;P 500 and the Dow Jones Industrial Average pushed into correction territory....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/articles/c6ly5w40eg07o?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>Fight over fossil fuels leaves COP31 climate talks in deadlock</a></h3>
+                <p>Countries from nearly 200 countries are in a deadlock to try and get a new global climate agreement....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMiugFBVV95cUxPaUFLdlZmeWprX3A2YllLMmlQSXZrYTRIazVMOEExREZuTXFCYThyVUlnR3U0TDg3dGpUeHE5SHJyanJWQUZTRHdwUG5YYTFxVXMtUU5rY1pOVzZkRUxhQ29oUEVUS0NJTWFxcUJmLW9lRE52cGs3N2FLbXZzNmVFNFpXTmZNZnI4S1pWNDB5RWV0UFhUUGlCTVUwNjlWZDMxcXhxS0FvZUdNNWN4UU9jMEw4bWVaOVB0TlE?oc=5' target='_blank' rel='noopener'>Cargo ship bound for Russia&#x27;s Kaliningrad hit by drones, Finland tightens security - Reuters</a></h3>
+                <p>Cargo ship bound for Russia&#x27;s Kaliningrad hit by drones, Finland tightens security Reuters...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMiyAFBVV95cUxOS0J3SExfSVZDcXRXb2wtcElESFhiam1fWTR4MUh0VGIzQU9iQjRkamVnWXZMaFI2cVRyNmFxYU40dmJBdWFOZTRuZVlPcFAzXzVhanZPckVpVXdQRlE0YkE3bkhfZk1ld2o5SDhYcmg0bUMwTklpdV9Qc3Q2Sjloajd0NzdzX0JhYjZvY0NmM2hMRnhLUmd4VzZxLUlsTWZoMmRFNVVwTU5uZ1lSVlp6MlpleTVJd2FqT1Q2d1NyaHYxU0lNSG1aWg?oc=5' target='_blank' rel='noopener'>EXCLUSIVE: Denmark pushes EU to tighten travel curbs on Russians after foiled plot - Reuters</a></h3>
+                <p>EXCLUSIVE: Denmark pushes EU to tighten travel curbs on Russians after foiled plot Reuters...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMizAFBVV95cUxPUHlnc2RFZFltcC0zMXMtb1VfaEx6VFhrWVJfS2tpaHF2Vm4yMnRDYjVLX3FSTWNHaDJKdUYwZ3o5SUJfNVpvRERfcEladlQ2RkRCaFhxaEVZRGdwUTAwOVdSRDZDWjlSYXVucW83NS1aMVN0QzFKbFhVXzhBSEZtUmxKdHpYT3gwNXdCUWZxbU9MbVh3bEU3Ul9ZcXQxZTI5QjlyTHgtTUNDdWVINk9qbUwwNmo1eUt3aFFsaWlTNEJfQnZYNkVOMlVDRkY?oc=5' target='_blank' rel='noopener'>Russia&#x27;s Wildberries CEO steps down days after EU sanctions, media report - Reuters</a></h3>
+                <p>Russia&#x27;s Wildberries CEO steps down days after EU sanctions, media report Reuters...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/news/article-16310167/new-migrant-crisis-island-Canaries-African-asylum-seekers.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>The new migrant crisis frontline: This tiny island in the Canaries was left living in fear when 11,000 African asylum seekers arrived on 100 boats. Now many are heading to Britain...</a></h3>
+                <p>It is a stark illustration of the latest twist in Europe&#x27;s migration crisis, of how a tiny Spanish island was overwhelmed by 100 boats carrying nearly 11,000 West Africans within just a few weeks...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/news/article-16311113/Cancer-Kate-disease-new-BBC-documentary.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>Cancer has changed me: Kate fights back tears in the most moving royal documentary ever as she describes her pain and healing</a></h3>
+                <p>Powering her way through the wind and the mist to the summits of Britain&#x27;s three highest peaks, the Princess of Wales seems in a mood to conquer anything....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/travel/article-16300145/Europes-worst-Christmas-markets-expert.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>Europe&#x27;s worst Christmas markets, according to festive shopping expert who has visited over 100 of them</a></h3>
+                <p>Helene Sula, originally from the US, shares her take on the many Christmas markets she has visited....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>New York Post</div>
+                <h3><a href='https://nypost.com/2026/11/21/us-news/storm-expected-to-hit-nyc-sunday-and-on-thanksgiving/' target='_blank' rel='noopener'>Nasty weather hitting NYC this weekend — and could dampen Thanksgiving plans</a></h3>
+                <p>New York can look forward to some fowl weather this Thanksgiving....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>New York Post</div>
+                <h3><a href='https://nypost.com/2026/11/21/us-news/feast-your-eyes-on-mouth-watering-thanksgiving-guinness-world-records/' target='_blank' rel='noopener'>Pie-o-my! Feast your eyes on mouth-watering Thanksgiving Guinness World Records</a></h3>
+                <p>Think your family goes overboard on Thanksgiving? You ain&#x27;t seen stuffing yet....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>New York Post</div>
+                <h3><a href='https://pagesix.com/2026/11/21/photos/star-snaps-of-the-week-martin-short-winnie-harlow-pamela-anderson-and-more/' target='_blank' rel='noopener'>Star snaps of the week: Martin Short, Winnie Harlow, Pamela Anderson and more</a></h3>
+                <p>Kylie Cantrall surprises fans, David Foster and Katharine McPhee perform a duet and more snaps.....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/cant-poop-try-fix-behind-famous-blue-muffin/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=cant-poop-try-fix-behind-famous-blue-muffin' target='_blank' rel='noopener'>Can’t Poop? Try the Fix Behind the Famous “Blue Muffin” Test (Works for 98%)</a></h3>
+                <p>.pineapple-article .pineapple-cta, .pineapple-article .pineapple-cta:visited, .pineapple-article .pineapple-cta:hover, .pineapple-article .pineapple-cta:focus, .pineapple-article .pineapple-cta:active...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/president-trump-issues-veto-ultimatum-democrats-opens-door/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=president-trump-issues-veto-ultimatum-democrats-opens-door' target='_blank' rel='noopener'>President Trump Issues Veto Ultimatum To Democrats — Opens Door To Health Care Deal</a></h3>
+                <p>President Trump warned Democrats that his veto pen is ready, then opened the door to a health-care agreement and laid out the priorities he expects Congress to address....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/president-trump-says-putin-wants-peace-as-russia/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=president-trump-says-putin-wants-peace-as-russia' target='_blank' rel='noopener'>President Trump Says Putin Wants Peace As Russia Unleashes Massive Attack</a></h3>
+                <p>President Trump says Vladimir Putin wants a diplomatic end to the Ukraine war, but Russia&#x27;s massive new attack and Polish airspace violations put that claim to an immediate test....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/11/20/republicans-gave-voters-a-reason-to-hate-democrats-but-not-a-reason-to-vote-for-gop/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=republicans-gave-voters-a-reason-to-hate-democrats-but-not-a-reason-to-vote-for-gop' target='_blank' rel='noopener'>Republicans Gave Voters A Reason To Hate Democrats But Not A Reason To Vote For GOP</a></h3>
+                <p>Most Republicans could tell you exactly what Democrats wanted to do with a majority but couldn&#x27;t say what Republicans would do....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/11/20/sources-john-cornyn-is-quietly-lobbying-democrats-to-tank-wesley-hunts-ambassador-nomination/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=sources-john-cornyn-is-quietly-lobbying-democrats-to-tank-wesley-hunts-ambassador-nomination' target='_blank' rel='noopener'>Sources: John Cornyn Is Quietly Lobbying Democrats To Tank Wesley Hunt’s Ambassador Nomination</a></h3>
+                <p>&#x27;This is an entirely personal vendetta,&#x27; a committee source told The Federalist. &#x27;It makes a mockery of whatever pretense to decency or statesmanship Cornyn has left.&#x27;...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/11/20/trump-is-right-veering-from-maga-costs-republicans/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=trump-is-right-veering-from-maga-costs-republicans' target='_blank' rel='noopener'>Trump Is Right: Veering From MAGA Costs Republicans</a></h3>
+                <p>President Donald Trump said that people who veer from MAGA “don’t do very well,” and he’s right — Republicans lost both chambers of Congress in a massive blue sweep after Trump started a new war that ...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/shows/making-the-argument-with-nick-freitas/watch-nick-freitas-challenges-college-campus-socialists-at-tpusa-event' target='_blank' rel='noopener'>WATCH: Nick Freitas challenges college campus socialists at TPUSA event</a></h3>
+                <p>Socialism sounds appealing to some college students — until someone starts asking what it actually looks like in practice. Nick Freitas got a firsthand look at that disconnect when left-wing students ...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/lifestyle/show-trial-starring-role-in-ben-shapiro-s-confession-sends-rob-lowe-to-hollywood-gulag' target='_blank' rel='noopener'>SHOW TRIAL: Starring role in Ben Shapiro&#x27;s &#x27;Confession&#x27; sends Rob Lowe to Hollywood gulag</a></h3>
+                <p>Welcome to the party, Rob Lowe. The ex-Brat Packer has never been political, but that was apparently no longer an option once he accepted the lead role in “Confession,” in which he plays a Russian pro...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/news/woman-corrections-officer-shooting-michigan-boyfriend' target='_blank' rel='noopener'>Corrections officer&#x27;s boyfriend finds another man at home — girlfriend allegedly opens fire, lies that it&#x27;s a home invasion</a></h3>
+                <p>A female corrections officer from Michigan was arrested after allegedly shooting at a man she purportedly invited to her home after her boyfriend unexpectedly returned there. Authorities said she then...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/headlines/2026/11/21/christopher-laneve-tapped-by-trump-to-be-new-army-chief-n3821183' target='_blank' rel='noopener'>Christopher LaNeve Tapped by Trump to be New Army Chief</a></h3>
+                <p>Christopher LaNeve Tapped by Trump to be New Army Chief...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/headlines/2026/11/19/bank-of-america-was-warned-twenty-years-later-it-paid-12-billion-n3821142' target='_blank' rel='noopener'>Bank of America Was Warned. Twenty Years Later It Paid $1.2 Billion</a></h3>
+                <p>Bank of America Was Warned. Twenty Years Later It Paid $1.2 Billion...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/john-stossel/2026/11/21/no-train-no-problem-n3821211' target='_blank' rel='noopener'>No Train, No Problem?</a></h3>
+                <p>No Train, No Problem?...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Judicial Watch</div>
+                <h3><a href='https://www.judicialwatch.org/victory-judge-orders-release-ilhan-omar-search-warrant-records/' target='_blank' rel='noopener'>Victory: Judge Orders Release of Ilhan Omar Search Warrant Records</a></h3>
+                <p>Victory: Judge Orders Unsealing of Ilhan Omar Search Warrant Records CIA Refuses to Confirm or Deny Existence of…...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Judicial Watch</div>
+                <h3><a href='https://www.judicialwatch.org/ilhan-omar-search-warrant-records-to-be-partially-released/' target='_blank' rel='noopener'>Ilhan Omar search warrant records to be partially released</a></h3>
+                <p>A judge has authorized the partial release of records related to the Oct. 12 federal raid on Rep.…...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Judicial Watch</div>
+                <h3><a href='https://www.judicialwatch.org/cia-refuses-confirm-or-deny-existence-january-6-records/' target='_blank' rel='noopener'>Judicial Watch: CIA Refuses to Confirm or Deny Existence of January 6 Records</a></h3>
+                <p>(Washington, DC) – Judicial Watch announced that, after more than two years, the Central Intelligence Agency (CIA), instead…...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/11/save-the-lobsters-boil-the-children/' target='_blank' rel='noopener'>Save the Lobsters, Boil the Children</a></h3>
+                <p>Photo Credit: lobster supper pixabay By Jeannie DeAngelis New York City has some gruesome priorities....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/11/thinking-about-the-what-might-have-beens/' target='_blank' rel='noopener'>Thinking About The ‘What Might Have Beens’</a></h3>
+                <p>Photo Credit: AI for American Thinker By Andrea Widburg Obsessing over a different outcome for a past event may make for imaginative novels, but in real life, it can destroy our ability to move forwar...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/11/the-charge-is-genocide/' target='_blank' rel='noopener'>The Charge is Genocide</a></h3>
+                <p>Photo Credit: Magpieturtle By Stephen M. Astrachan Israel’s Gaza war, which began as a response to Hamas’ horrific attack on October 7, 2023, has led to multiple charges of “genocide.”...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMiiAFBVV95cUxQc0Q5UGZZUjZsMjhzSUEwTEpWeDNCUWI5dUVtUDhXTFdfOUI5ai05MnhscDBZZDRNMkt5SnVPc3ZBR3gzTGhVTE9ZZU80bmpvSU1zZVlvN2lzZW1vMTBqVXkwTG5OZkctZ1pXMkIyMmdNT1hvNktzcEhJVVVha1lRWnRaM0lua2sw?oc=5' target='_blank' rel='noopener'>NSA’s Internal Classified Communications Network Goes Down - The Epoch Times</a></h3>
+                <p>NSA’s Internal Classified Communications Network Goes Down The Epoch Times...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMifEFVX3lxTE5sQ3M3ZTFkX19VVEFHSHNEX1BmTmZTZzlkemFnVUZfVjBja010TlFJTmIzaU1IU1BlZVRXRU1vemVIREhQeTNpZktjdEFjeGVCS0R3cXRrYVdkZ3VGRXBteUNHeTZ2UklaaWlpTnk5dEJSbF9wOWJvMFhRVjc?oc=5' target='_blank' rel='noopener'>Spot the Difference Daily- Play Now online &amp; 100% Free - The Epoch Times</a></h3>
+                <p>Spot the Difference Daily- Play Now online &amp; 100% Free The Epoch Times...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMiREFVX3lxTFBSU2dZLXZaX21HbzlKWGxkWnM1eEQwNEZ3VE4xUkJFWFJWSkJ3d0pSY2c4MTBKZXctUXdyWWdicWJQaklP?oc=5' target='_blank' rel='noopener'>The Epoch Times | Breaking News, Latest News, World News and Videos - The Epoch Times</a></h3>
+                <p>The Epoch Times | Breaking News, Latest News, World News and Videos The Epoch Times...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Internet Archive TV News (hourly summary)</div>
+                <h3><a href='https://mastodon.archive.org/@tv/117654800673283160' target='_blank' rel='noopener'>TV news hourly summary · Nov 21, 14:03 UTC</a></h3>
+                <p>Democrats are preparing investigations into the Trump administration, while the White House tightens control over congressional testimony. Trump defended calling Putin a friend and said he was not rus...</p>
+            </div>
+            </div>
+
+        <footer>
+            Automated Segmented Pipeline powered by HTML Scrapers, 11 Global RSS Feeds &amp; Google Gemini AI &bull; 2026-11-21
+        </footer>
+    </div>
+</body>
+</html>
