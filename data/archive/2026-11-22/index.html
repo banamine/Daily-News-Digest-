@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Intelligence Briefing – 2026-11-22</title>
+    <style>
+        :root {
+            --bg: #0f1115;
+            --card: #1a1d24;
+            --text: #e6e8ec;
+            --muted: #9ba1ad;
+            --accent: #3b82f6;
+            --border: #2a2e38;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; padding: 2rem 1rem; }
+        .container { max-width: 960px; margin: 0 auto; }
+        header { text-align: center; margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+        header h1 { font-size: 2.2rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 0.4rem; color: #ffffff; }
+        header .date { color: var(--accent); font-size: 1rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+        
+        .hero-image { width: 100%; border-radius: 16px; overflow: hidden; margin-bottom: 2.5rem; box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6); border: 1px solid var(--border); background: #0b0f19; }
+        
+        /* Flexible Photo Collage Component */
+        .collage-wrapper { position: relative; width: 100%; }
+        .collage-header-pill {
+            position: absolute; top: 14px; left: 14px; z-index: 10;
+            background: rgba(15, 23, 42, 0.88); backdrop-filter: blur(8px);
+            border: 1px solid rgba(56, 189, 248, 0.35); color: #38bdf8;
+            padding: 5px 12px; border-radius: 999px; font-size: 11px; font-weight: 800;
+            letter-spacing: 0.5px; display: flex; align-items: center; gap: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        }
+        .collage-container {
+            display: grid; gap: 8px; background: #090d16; padding: 8px; border-radius: 16px; min-height: 280px;
+        }
+        .collage-container.collage-count-1 { grid-template-columns: 1fr; grid-template-rows: 360px; }
+        .collage-container.collage-count-1 .hero-tile { grid-row: auto; }
+
+        .collage-container.collage-count-2 { grid-template-columns: 1fr 1fr; grid-template-rows: 320px; }
+        .collage-container.collage-count-2 .hero-tile { grid-row: auto; }
+
+        .collage-container.collage-count-3 { grid-template-columns: 1.6fr 1fr; grid-template-rows: 170px 170px; }
+        .collage-container.collage-count-3 .hero-tile { grid-row: span 2; }
+
+        .collage-container.collage-count-4 { grid-template-columns: 1.6fr 1fr 1fr; grid-template-rows: 170px 170px; }
+        .collage-container.collage-count-4 .hero-tile { grid-row: span 2; }
+        .collage-container.collage-count-4 .collage-tile:nth-child(4) { grid-column: span 2; }
+
+        .collage-container.collage-count-5 { grid-template-columns: 1.8fr 1fr 1fr; grid-template-rows: 180px 180px; }
+        .collage-container.collage-count-5 .hero-tile { grid-row: span 2; }
+
+        @media (max-width: 768px) {
+            .collage-container,
+            .collage-container.collage-count-2,
+            .collage-container.collage-count-3,
+            .collage-container.collage-count-4,
+            .collage-container.collage-count-5 {
+                grid-template-columns: 1fr; grid-template-rows: auto;
+            }
+            .collage-tile, .hero-tile { min-height: 180px; }
+        }
+        .collage-tile {
+            position: relative; border-radius: 10px; overflow: hidden; background: #131927;
+            border: 1px solid rgba(255, 255, 255, 0.08); transition: transform 0.3s ease;
+        }
+        .collage-tile.hero-tile { grid-row: span 2; }
+        .collage-tile img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
+        .collage-tile:hover img { transform: scale(1.06); }
+        .collage-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(to top, rgba(11, 15, 23, 0.95) 0%, rgba(11, 15, 23, 0.2) 60%, transparent 100%);
+            display: flex; flex-direction: column; justify-content: flex-end; padding: 12px;
+        }
+        .collage-badge {
+            align-self: flex-start; background: rgba(56, 189, 248, 0.2); color: #38bdf8;
+            border: 1px solid rgba(56, 189, 248, 0.4); font-size: 10px; font-weight: 700;
+            text-transform: uppercase; padding: 2px 8px; border-radius: 999px; margin-bottom: 6px;
+        }
+        .collage-badge.hero-badge { background: rgba(16, 185, 129, 0.2); color: #34d399; border-color: rgba(16, 185, 129, 0.4); }
+        .collage-title { color: #ffffff; font-size: 12px; font-weight: 700; line-height: 1.35; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        .hero-tile .collage-title { font-size: 17px; }
+
+        .stories { display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 3rem; }
+        .story { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem; }
+        .story h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: #f1f3f5; }
+        .story-body { color: var(--muted); font-size: 0.98rem; overflow-wrap: anywhere; word-break: break-word; }
+        .story h2, .mini-card h3, .mini-card p { overflow-wrap: anywhere; }
+        .container { min-width: 0; max-width: 100%; }
+        .section-title { font-size: 1.3rem; font-weight: 800; color: var(--accent); margin: 2rem 0 1rem; border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; }
+        .segmented-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
+        .mini-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+        .mini-card.scraped { border-left: 3px solid #8b5cf6; }
+        .mini-card.rss { border-left: 3px solid #3b82f6; }
+        .source-tag { font-size: 0.75rem; font-weight: bold; color: var(--accent); margin-bottom: 0.4rem; }
+        .mini-card h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.4rem; }
+        .mini-card h3 a { color: #f1f3f5; text-decoration: none; }
+        .mini-card h3 a:hover { text-decoration: underline; color: var(--accent); }
+        .mini-card p { font-size: 0.82rem; color: var(--muted); line-height: 1.4; }
+        footer { text-align: center; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="date">2026-11-22</div>
+            <h1>Daily Intelligence Briefing</h1>
+        </header>
+
+        <div class="hero-image">
+            
+                
+    <div class="collage-wrapper">
+        <div class="collage-header-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7"/><path d="M16 5h5v5"/><path d="m21 5-9 9"/></svg>
+            <span>Parsed Feeds Mixed Photo Collage (5 Photos)</span>
+        </div>
+        <div class="collage-container collage-count-5">
+            <div class="collage-tile hero-tile">
+                <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/dc28/live/9c42c760-e66a-11f1-99b6-a35a62fa4264.jpg" alt="South Korea education minister resigns over exam cheating scandal" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+                <div class="collage-overlay">
+                    <span class="collage-badge hero-badge">BBC World News</span>
+                    <h3 class="collage-title hero-title">South Korea education minister resigns over exam cheating scandal</h3>
+                </div>
+            </div>
+            
+        <div class="collage-tile">
+            <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d6f9/live/a55b16b0-e66d-11f1-9e24-791c5321ff0f.jpg" alt="Russia-bound ship still on fire after attack in Gulf of Finland" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">BBC World News</span>
+                <h4 class="collage-title">Russia-bound ship still on fire after attack in Gulf of Finland</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/5701/live/7ac9e270-e5ad-11f1-99a1-253766e7ad8b.jpg" alt="Mexican drug lord on FBI&#x27;s 10 most wanted list arrested in shoot-out" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">BBC World News</span>
+                <h4 class="collage-title">Mexican drug lord on FBI&#x27;s 10 most wanted list arrested in shoot-out</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="EXCLUSIVE: Like SpaceX, Anthropic ran an unusual IPO process, chafing some bankers - Reuters" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">Reuters Top News</span>
+                <h4 class="collage-title">EXCLUSIVE: Like SpaceX, Anthropic ran an unusual IPO process, chafing some bankers - Reuters</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="COP31 climate talks see no consensus as EU, others reject deal - Reuters" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">Reuters Top News</span>
+                <h4 class="collage-title">COP31 climate talks see no consensus as EU, others reject deal - Reuters</h4>
+            </div>
+        </div>
+        
+        </div>
+    </div>
+    
+            
+        </div>
+
+        <main class="stories">
+            
+        <div class="story">
+            <h2>South Korea education minister resigns over exam cheating scandal</h2>
+            <div class="story-body"><strong>Source:</strong> BBC World News<br><strong>Summary:</strong> Choi Kyo-jin admits last-minute measures to stop AI-assisted cheating during the college entrance exam caused chaos....</div>
+        </div>
+        
+        <div class="story">
+            <h2>Russia-bound ship still on fire after attack in Gulf of Finland</h2>
+            <div class="story-body"><strong>Source:</strong> BBC World News<br><strong>Summary:</strong> Finnish defence forces say that Ukraine was likely behind the drone attack on the vessel....</div>
+        </div>
+        
+        <div class="story">
+            <h2>EXCLUSIVE: Like SpaceX, Anthropic ran an unusual IPO process, chafing some bankers - Reuters</h2>
+            <div class="story-body"><strong>Source:</strong> Reuters Top News<br><strong>Summary:</strong> EXCLUSIVE: Like SpaceX, Anthropic ran an unusual IPO process, chafing some bankers Reuters...</div>
+        </div>
+        
+        <div class="story">
+            <h2>COP31 climate talks see no consensus as EU, others reject deal - Reuters</h2>
+            <div class="story-body"><strong>Source:</strong> Reuters Top News<br><strong>Summary:</strong> COP31 climate talks see no consensus as EU, others reject deal Reuters...</div>
+        </div>
+        
+        <div class="story">
+            <h2>Spitting Image co-creator and puppeteer Peter Fluck who loved lampooning the great and the good dies aged 85</h2>
+            <div class="story-body"><strong>Source:</strong> Daily Mail UK<br><strong>Summary:</strong> For more than a decade from 1984, Peter Fluck and Roger Law had audiences falling off their chairs with laughter thanks to their cast of outrageous and irreverent latex puppets....</div>
+        </div>
+        
+        <div class="story">
+            <h2>Prince William plans to strip Harry of his titles when he&#x27;s King and all non-working royals would lose HRH, bombshell new book claims</h2>
+            <div class="story-body"><strong>Source:</strong> Daily Mail UK<br><strong>Summary:</strong> The major reform - which would take effect after Will became King - would also see Harry&#x27;s children Prince Archie, seven, and Princess Lilibet, five, lose their royal titles and their &#x27;HRH&#x27; prefixes....</div>
+        </div>
+        
+        <div class="story">
+            <h2>NFL wife opens up on chaotic 24 hours after Chiefs cut returner ‘out of the blue’</h2>
+            <div class="story-body"><strong>Source:</strong> New York Post<br><strong>Summary:</strong> While life in the NFL may seem glamorous, one NFL WAG is giving fans a peek at the chaos it can also entail in a post on social media....</div>
+        </div>
+        
+        <div class="story">
+            <h2>TV news hourly summary · Nov 22, 13:03 UTC</h2>
+            <div class="story-body"><strong>Source:</strong> Internet Archive TV News (hourly summary)<br><strong>Summary:</strong> Storms threaten Thanksgiving travel as 81 million-plus Americans are expected to travel; gas prices are falling. A shooting at an Ohio baby shower left three dead and one injured. COP31 ended without a climate deal amid accusations oil states hijacke...</div>
+        </div>
+        
+        </main>
+
+        
+        <div class='section-title'>Global &amp; Alternative RSS Feeds</div><div class='segmented-grid'>
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/articles/cw3dgk29d37no?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>South Korea education minister resigns over exam cheating scandal</a></h3>
+                <p>Choi Kyo-jin admits last-minute measures to stop AI-assisted cheating during the college entrance exam caused chaos....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/articles/cj752ddve27ko?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>Russia-bound ship still on fire after attack in Gulf of Finland</a></h3>
+                <p>Finnish defence forces say that Ukraine was likely behind the drone attack on the vessel....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/articles/ckz749ey0r75o?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>Mexican drug lord on FBI&#x27;s 10 most wanted list arrested in shoot-out</a></h3>
+                <p>Fausto Isidro &quot;Chapo Idisro&quot; Meza Flores, who is accused of drug trafficking and torture, is detained after gun fight with authorities....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMisAFBVV95cUxNT1RsTFBlMWZGejNqWjVvdVlYX2lRTGpZZXhoYXFXN2RuV3lHZ09ra0ctdnZqc3hiVENXSlc2ZTBIbDRyTmpTS1Nhdk1kdU5HLW5FNGdNRTNoeXVBeEc5cDl5VGx3c3dUSzNDYkVVTHVfenVQbHFUQ0hQS2NfalhuNDczWFdUS0FWQS1iZ1ZhVnNYMy1FOHVSUmlBMmI3NTdVTGY1X0JxTFRmYnptV3huQQ?oc=5' target='_blank' rel='noopener'>EXCLUSIVE: Like SpaceX, Anthropic ran an unusual IPO process, chafing some bankers - Reuters</a></h3>
+                <p>EXCLUSIVE: Like SpaceX, Anthropic ran an unusual IPO process, chafing some bankers Reuters...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMipgFBVV95cUxQc3loZzVPSEw4YTN0RXZEdEpveVFkV0JoU0dtRTktZXR6LS1XVGRNVElxWHpWVUQ3eEhOMllBam9jYlNIX29HeW9ncUwyWkNhenBPcmRZeTNBNmt6MF96SkU5TS1zWUVBSEFOS0FMV1gwVmJoS3c3bGw4TjgwLUU5NTFOUEtzOWx3dy04NkhLMW9CMmJxM1dLeVRBRWMyVl9SY1A3THFB?oc=5' target='_blank' rel='noopener'>COP31 climate talks see no consensus as EU, others reject deal - Reuters</a></h3>
+                <p>COP31 climate talks see no consensus as EU, others reject deal Reuters...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMizAFBVV95cUxQSFRxak5ZYUFPNWxVbzlJdy1Mcm9xMTRVZ0ctY205NFVGVEFtcDdFNG1Iem05TjVBcnYzWUVUeXcyWndZNlpnR25GMW5GdkJ2blJjeUdXdlhvZ1VqNWpVSGdYX1RsQ1F3eUhkRUFaX0lxQTNnVFNySmphdG1KM2Y0NTZrdGRoTWxEaE0ybmVSUnBtdDB2VW9tWGtrYkZfUmZUaUdxWDUyUEZGZ2tSajBqSTJydzNhb2xwaTctX21xQmxmXzFyZ1BIWE80ZF8?oc=5' target='_blank' rel='noopener'>Correction or deeper reckoning? Investors seek signs US stock selling will abate - Reuters</a></h3>
+                <p>Correction or deeper reckoning? Investors seek signs US stock selling will abate Reuters...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/news/article-16311673/Spitting-Image-creator-Peter-Fluck-dies.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>Spitting Image co-creator and puppeteer Peter Fluck who loved lampooning the great and the good dies aged 85</a></h3>
+                <p>For more than a decade from 1984, Peter Fluck and Roger Law had audiences falling off their chairs with laughter thanks to their cast of outrageous and irreverent latex puppets....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/news/article-16312089/Prince-William-strip-Harry-titles-non-working-royals.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>Prince William plans to strip Harry of his titles when he&#x27;s King and all non-working royals would lose HRH, bombshell new book claims</a></h3>
+                <p>The major reform - which would take effect after Will became King - would also see Harry&#x27;s children Prince Archie, seven, and Princess Lilibet, five, lose their royal titles and their &#x27;HRH&#...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/news/article-16311613/Pub-boss-Angela-Rayners-workers-rights-reforms.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>Boss of Britain&#x27;s second largest pub group says Angela Rayner&#x27;s new workers&#x27; rights reforms could increase costs for Britain&#x27;s watering holes</a></h3>
+                <p>The chief executive of Greene King said Ms Rayner&#x27;s guaranteed hours contracts will make pubs &#x27;hostage to factors beyond their control&#x27;....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>New York Post</div>
+                <h3><a href='https://nypost.com/2026/11/22/sports/nfl-wife-opens-up-on-chaotic-24-hours-after-chiefs-cut-returner-out-of-the-blue/' target='_blank' rel='noopener'>NFL wife opens up on chaotic 24 hours after Chiefs cut returner ‘out of the blue’</a></h3>
+                <p>While life in the NFL may seem glamorous, one NFL WAG is giving fans a peek at the chaos it can also entail in a post on social media....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>New York Post</div>
+                <h3><a href='https://nypost.com/2026/11/22/betting/cardinals-vs-chiefs-prediction-nfl-odds-picks-best-bets-for-week-11/' target='_blank' rel='noopener'>Cardinals vs. Chiefs prediction: Patrick Mahomes to steamroll the competition</a></h3>
+                <p>The Chiefs are 16-point favorites over the Cardinals in Week 11. Read our prediction on why the best play is a Chiefs shutout at 10/1 odds....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>New York Post</div>
+                <h3><a href='https://nypost.com/2026/11/22/betting/buccaneers-vs-lions-prediction-picks-nfl-week-11-odds-props-best-bets/' target='_blank' rel='noopener'>Buccaneers vs. Lions prediction, picks: Tampa Bay’s ruthless defense will yield to Jahmyr Gibbs</a></h3>
+                <p>The Lions are playing for six straight wins as they return from Germany to face the Buccaneers....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/breaking-president-trump-responds-after-hackers-breach-fbis/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=breaking-president-trump-responds-after-hackers-breach-fbis' target='_blank' rel='noopener'>BREAKING: President Trump Responds After Hackers Breach FBI’s National Crime Database</a></h3>
+                <p>President Trump responded after hackers breached the FBI database used nationwide for warrants, criminal histories, missing persons and stolen property....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/democrat-governor-demands-ice-be-abolished-after-agents/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=democrat-governor-demands-ice-be-abolished-after-agents' target='_blank' rel='noopener'>Democrat Governor Demands ICE Be Abolished After Agents Arrest Visa Overstayers At Sea-Tac</a></h3>
+                <p>Washington Gov. Bob Ferguson wants ICE abolished after two Sea-Tac arrests, but the agency says both people were visa overstayers and one assaulted officers....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/dea-colombia-seize-three-tons-cocaine-united-states/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=dea-colombia-seize-three-tons-cocaine-united-states' target='_blank' rel='noopener'>DEA Helps Colombia Seize 3 Tons Of Cocaine Bound For United States</a></h3>
+                <p>DEA intelligence helped Colombian police seize three tons of Clan del Golfo cocaine bound for the United States in Operation TERRA....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/11/21/republicans-commit-to-working-hard-by-taking-long-thanksgiving-break-1/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=republicans-commit-to-working-hard-by-taking-long-thanksgiving-break-1' target='_blank' rel='noopener'>Republicans Commit To Working Hard By Taking Long Thanksgiving Break</a></h3>
+                <p>Congress skipped town for a long Thanksgiving week holiday, as Speaker Mike Johnson urged colleagues to show up for work....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/11/20/republicans-gave-voters-a-reason-to-hate-democrats-but-not-a-reason-to-vote-for-gop/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=republicans-gave-voters-a-reason-to-hate-democrats-but-not-a-reason-to-vote-for-gop' target='_blank' rel='noopener'>Republicans Gave Voters A Reason To Hate Democrats But Not A Reason To Vote For GOP</a></h3>
+                <p>Most Republicans could tell you exactly what Democrats wanted to do with a majority but couldn&#x27;t say what Republicans would do....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/11/20/sources-john-cornyn-is-quietly-lobbying-democrats-to-tank-wesley-hunts-ambassador-nomination/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=sources-john-cornyn-is-quietly-lobbying-democrats-to-tank-wesley-hunts-ambassador-nomination' target='_blank' rel='noopener'>Sources: John Cornyn Is Quietly Lobbying Democrats To Tank Wesley Hunt’s Ambassador Nomination</a></h3>
+                <p>&#x27;This is an entirely personal vendetta,&#x27; a committee source told The Federalist. &#x27;It makes a mockery of whatever pretense to decency or statesmanship Cornyn has left.&#x27;...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/archive/yet-i-remain-grateful-for-more-than-politics-can-touch' target='_blank' rel='noopener'>Yet, I remain grateful — for more than politics can touch</a></h3>
+                <p>I watch the news. I see the election results. I listen to politicians make promises they are unable or unwilling to keep, defend positions they cannot explain, and occasionally say things that make me...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/shows/predictable-with-stu-burguiere/no-one-knows-the-day-or-hour-of-jesus-return-but-polymarket-traders-are-betting-on-it-anyway' target='_blank' rel='noopener'>No one knows the day or hour of Jesus’ return — but Polymarket traders are betting on it anyway</a></h3>
+                <p>The Bible makes it clear in multiple verses that the day of Jesus’ final return is a mystery not even Christ himself knows. Stu Burguiere, host of BlazeTV’s “Predictable with Stu,” shares three of the...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/lifestyle/dc-s-new-boss-is-a-christian-why-are-superhero-fans-so-worried' target='_blank' rel='noopener'>DC&#x27;s new boss is a Christian. Why are superhero fans so worried?</a></h3>
+                <p>Jeremy Latcham was 6 years old when his pastor showed him &quot;Top Gun.&quot; This was an unlikely choice of entertainment at the Nazarene church in Chandler, Oklahoma, where Latcham grew up. The den...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/headlines/2026/11/22/why-a-computer-scientist-thinks-superintelligence-wont-happen-n3821242' target='_blank' rel='noopener'>Why a Computer Scientist Thinks Superintelligence Won’t Happen</a></h3>
+                <p>Why a Computer Scientist Thinks Superintelligence Won’t Happen...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/headlines/2026/11/21/heal-n3821229' target='_blank' rel='noopener'>Heal</a></h3>
+                <p>Heal...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/ed-morrissey/2026/11/21/saturdays-final-word-n3821227' target='_blank' rel='noopener'>Saturday&#x27;s Final Word</a></h3>
+                <p>Saturday&#x27;s Final Word...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Judicial Watch</div>
+                <h3><a href='https://www.judicialwatch.org/victory-judge-orders-release-ilhan-omar-search-warrant-records/' target='_blank' rel='noopener'>Victory: Judge Orders Release of Ilhan Omar Search Warrant Records</a></h3>
+                <p>Victory: Judge Orders Unsealing of Ilhan Omar Search Warrant Records CIA Refuses to Confirm or Deny Existence of…...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Judicial Watch</div>
+                <h3><a href='https://www.judicialwatch.org/ilhan-omar-search-warrant-records-to-be-partially-released/' target='_blank' rel='noopener'>Ilhan Omar search warrant records to be partially released</a></h3>
+                <p>A judge has authorized the partial release of records related to the Oct. 12 federal raid on Rep.…...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Judicial Watch</div>
+                <h3><a href='https://www.judicialwatch.org/cia-refuses-confirm-or-deny-existence-january-6-records/' target='_blank' rel='noopener'>Judicial Watch: CIA Refuses to Confirm or Deny Existence of January 6 Records</a></h3>
+                <p>(Washington, DC) – Judicial Watch announced that, after more than two years, the Central Intelligence Agency (CIA), instead…...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/11/the-real-reason-we-re-seeing-more-measles/' target='_blank' rel='noopener'>The Real Reason We’re Seeing More Measles</a></h3>
+                <p>Photo Credit: Image via Wikimedia Commons , public domain. The White House By John Green Yes, we have the tools to fight the disease. That’s not the issue....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/11/ai-is-covid-2-0/' target='_blank' rel='noopener'>AI Is COVID 2.0</a></h3>
+                <p>Photo Credit: Image via Pxhere . Pxhere By J.B. Shurk How about we keep the Bill of Rights this time around?...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/11/the-best-advice-for-the-outages/' target='_blank' rel='noopener'>The Best Advice For The Outages</a></h3>
+                <p>Photo Credit: pexels public domain By Jeffrey Folks Microsoft down? Airplanes grounded? Here is what to do next time we take a hit....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMipAFBVV95cUxOck1iSGhoRnRBaXNubkpST29ySXpDNTUtUlhOX21vR19SWDFDZWxWZHZNWWlQSGY4RmFSR3BIMTdrWmFTcUprTUpRaGhDbVFTUTMwb3dDT2RWQUxaZ00zSUZ6ZmpvRGhfRGlfdXFtQkhIWUU4aVhkZDBVQkpScjdCbGdTWGt2SUZpTmI4Q1h0QUxCRFFUWWs0b21Da21vZWtZSWtzSA?oc=5' target='_blank' rel='noopener'>Why Most Americans Couldn’t Last 72 Hours in an Emergency - The Epoch Times</a></h3>
+                <p>Why Most Americans Couldn’t Last 72 Hours in an Emergency The Epoch Times...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMifEFVX3lxTE5sQ3M3ZTFkX19VVEFHSHNEX1BmTmZTZzlkemFnVUZfVjBja010TlFJTmIzaU1IU1BlZVRXRU1vemVIREhQeTNpZktjdEFjeGVCS0R3cXRrYVdkZ3VGRXBteUNHeTZ2UklaaWlpTnk5dEJSbF9wOWJvMFhRVjc?oc=5' target='_blank' rel='noopener'>Spot the Difference Daily- Play Now online &amp; 100% Free - The Epoch Times</a></h3>
+                <p>Spot the Difference Daily- Play Now online &amp; 100% Free The Epoch Times...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMisAFBVV95cUxNQmE4VXBaYjNtSi10Q1l4dEFRYXVwanRES2J0OS16UzJVQ195QmNtODJJbDllN0VEOHdkZld3UE5NdTF6aXl1WVh4VnZFdWdkMkdDdGw2UUEtWDMyeTNwcFdtR2tocnd0aG9CeTEyWDJxVHo4UThTanhNdjRZaGhsSXR1QkVKd3k0MjRSQTdueW5fS05TWXNrUmtGT0hpY2p5NkhlWDFBdllqZmRnYVhzbQ?oc=5' target='_blank' rel='noopener'>Trump, Xi, Putin Agree to Peace Declaration, Pledge Nuclear Risk Talks - The Epoch Times</a></h3>
+                <p>Trump, Xi, Putin Agree to Peace Declaration, Pledge Nuclear Risk Talks The Epoch Times...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Internet Archive TV News (hourly summary)</div>
+                <h3><a href='https://mastodon.archive.org/@tv/117660227020165876' target='_blank' rel='noopener'>TV news hourly summary · Nov 22, 13:03 UTC</a></h3>
+                <p>Storms threaten Thanksgiving travel as 81 million-plus Americans are expected to travel; gas prices are falling. A shooting at an Ohio baby shower left three dead and one injured. COP31 ended without ...</p>
+            </div>
+            </div>
+
+        <footer>
+            Automated Segmented Pipeline powered by HTML Scrapers, 11 Global RSS Feeds &amp; Google Gemini AI &bull; 2026-11-22
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-11-22",
+    "timestamp": "2026-11-22T14:01:55.976432+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "South Korea education minister resigns over exam cheating scandal",
+      "Russia-bound ship still on fire after attack in Gulf of Finland",
+      "EXCLUSIVE: Like SpaceX, Anthropic ran an unusual IPO process, chafing some bankers - Reuters",
+      "COP31 climate talks see no consensus as EU, others reject deal - Reuters",
+      "Spitting Image co-creator and puppeteer Peter Fluck who loved lampooning the great and the good dies aged 85"
+    ],
+    "archive_html_path": "data/archive/2026-11-22/index.html",
+    "data_json_path": "data/archive/2026-11-22/data.json"
+  },
+  {
     "date": "2026-11-21",
     "timestamp": "2026-11-21T14:11:21.831723+00:00",
     "stories_count": 8,
