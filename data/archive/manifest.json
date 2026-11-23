@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-11-23",
+    "timestamp": "2026-11-23T17:19:54.103783+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "Bowne Report: Prepare For The Chaos Of 2027",
+      "Trump says he 'convinced' Nvidia to reinstate Jensen Huang",
+      "Russian warship hit by Ukrainian drones in Libya, Zelensky says",
+      "EU Commission proposes ban on Russian athletes, ex-fighters in new Russia sanctions package - Reuters",
+      "US lawmakers criticize Nvidia decision to reinstate Huang as CEO - Reuters"
+    ],
+    "archive_html_path": "data/archive/2026-11-23/index.html",
+    "data_json_path": "data/archive/2026-11-23/data.json"
+  },
+  {
     "date": "2026-11-22",
     "timestamp": "2026-11-22T14:01:55.976432+00:00",
     "stories_count": 8,

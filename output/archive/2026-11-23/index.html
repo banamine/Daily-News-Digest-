@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Intelligence Briefing – 2026-11-23</title>
+    <style>
+        :root {
+            --bg: #0f1115;
+            --card: #1a1d24;
+            --text: #e6e8ec;
+            --muted: #9ba1ad;
+            --accent: #3b82f6;
+            --border: #2a2e38;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; padding: 2rem 1rem; }
+        .container { max-width: 960px; margin: 0 auto; }
+        header { text-align: center; margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+        header h1 { font-size: 2.2rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 0.4rem; color: #ffffff; }
+        header .date { color: var(--accent); font-size: 1rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+        
+        .hero-image { width: 100%; border-radius: 16px; overflow: hidden; margin-bottom: 2.5rem; box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6); border: 1px solid var(--border); background: #0b0f19; }
+        
+        /* Flexible Photo Collage Component */
+        .collage-wrapper { position: relative; width: 100%; }
+        .collage-header-pill {
+            position: absolute; top: 14px; left: 14px; z-index: 10;
+            background: rgba(15, 23, 42, 0.88); backdrop-filter: blur(8px);
+            border: 1px solid rgba(56, 189, 248, 0.35); color: #38bdf8;
+            padding: 5px 12px; border-radius: 999px; font-size: 11px; font-weight: 800;
+            letter-spacing: 0.5px; display: flex; align-items: center; gap: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        }
+        .collage-container {
+            display: grid; gap: 8px; background: #090d16; padding: 8px; border-radius: 16px; min-height: 280px;
+        }
+        .collage-container.collage-count-1 { grid-template-columns: 1fr; grid-template-rows: 360px; }
+        .collage-container.collage-count-1 .hero-tile { grid-row: auto; }
+
+        .collage-container.collage-count-2 { grid-template-columns: 1fr 1fr; grid-template-rows: 320px; }
+        .collage-container.collage-count-2 .hero-tile { grid-row: auto; }
+
+        .collage-container.collage-count-3 { grid-template-columns: 1.6fr 1fr; grid-template-rows: 170px 170px; }
+        .collage-container.collage-count-3 .hero-tile { grid-row: span 2; }
+
+        .collage-container.collage-count-4 { grid-template-columns: 1.6fr 1fr 1fr; grid-template-rows: 170px 170px; }
+        .collage-container.collage-count-4 .hero-tile { grid-row: span 2; }
+        .collage-container.collage-count-4 .collage-tile:nth-child(4) { grid-column: span 2; }
+
+        .collage-container.collage-count-5 { grid-template-columns: 1.8fr 1fr 1fr; grid-template-rows: 180px 180px; }
+        .collage-container.collage-count-5 .hero-tile { grid-row: span 2; }
+
+        @media (max-width: 768px) {
+            .collage-container,
+            .collage-container.collage-count-2,
+            .collage-container.collage-count-3,
+            .collage-container.collage-count-4,
+            .collage-container.collage-count-5 {
+                grid-template-columns: 1fr; grid-template-rows: auto;
+            }
+            .collage-tile, .hero-tile { min-height: 180px; }
+        }
+        .collage-tile {
+            position: relative; border-radius: 10px; overflow: hidden; background: #131927;
+            border: 1px solid rgba(255, 255, 255, 0.08); transition: transform 0.3s ease;
+        }
+        .collage-tile.hero-tile { grid-row: span 2; }
+        .collage-tile img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
+        .collage-tile:hover img { transform: scale(1.06); }
+        .collage-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(to top, rgba(11, 15, 23, 0.95) 0%, rgba(11, 15, 23, 0.2) 60%, transparent 100%);
+            display: flex; flex-direction: column; justify-content: flex-end; padding: 12px;
+        }
+        .collage-badge {
+            align-self: flex-start; background: rgba(56, 189, 248, 0.2); color: #38bdf8;
+            border: 1px solid rgba(56, 189, 248, 0.4); font-size: 10px; font-weight: 700;
+            text-transform: uppercase; padding: 2px 8px; border-radius: 999px; margin-bottom: 6px;
+        }
+        .collage-badge.hero-badge { background: rgba(16, 185, 129, 0.2); color: #34d399; border-color: rgba(16, 185, 129, 0.4); }
+        .collage-title { color: #ffffff; font-size: 12px; font-weight: 700; line-height: 1.35; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        .hero-tile .collage-title { font-size: 17px; }
+
+        .stories { display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 3rem; }
+        .story { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem; }
+        .story h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: #f1f3f5; }
+        .story-body { color: var(--muted); font-size: 0.98rem; overflow-wrap: anywhere; word-break: break-word; }
+        .story h2, .mini-card h3, .mini-card p { overflow-wrap: anywhere; }
+        .container { min-width: 0; max-width: 100%; }
+        .section-title { font-size: 1.3rem; font-weight: 800; color: var(--accent); margin: 2rem 0 1rem; border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; }
+        .segmented-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
+        .mini-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+        .mini-card.scraped { border-left: 3px solid #8b5cf6; }
+        .mini-card.rss { border-left: 3px solid #3b82f6; }
+        .source-tag { font-size: 0.75rem; font-weight: bold; color: var(--accent); margin-bottom: 0.4rem; }
+        .mini-card h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.4rem; }
+        .mini-card h3 a { color: #f1f3f5; text-decoration: none; }
+        .mini-card h3 a:hover { text-decoration: underline; color: var(--accent); }
+        .mini-card p { font-size: 0.82rem; color: var(--muted); line-height: 1.4; }
+        footer { text-align: center; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="date">2026-11-23</div>
+            <h1>Daily Intelligence Briefing</h1>
+        </header>
+
+        <div class="hero-image">
+            
+                
+    <div class="collage-wrapper">
+        <div class="collage-header-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7"/><path d="M16 5h5v5"/><path d="m21 5-9 9"/></svg>
+            <span>Parsed Feeds Mixed Photo Collage (5 Photos)</span>
+        </div>
+        <div class="collage-container collage-count-5">
+            <div class="collage-tile hero-tile">
+                <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Bowne Report: Prepare For The Chaos Of 2027" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+                <div class="collage-overlay">
+                    <span class="collage-badge hero-badge">Alex Jones Live (Scraper)</span>
+                    <h3 class="collage-title hero-title">Bowne Report: Prepare For The Chaos Of 2027</h3>
+                </div>
+            </div>
+            
+        <div class="collage-tile">
+            <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/e868/live/68f570d0-e758-11f1-b407-33329b1ec67a.jpg" alt="Trump says he &#x27;convinced&#x27; Nvidia to reinstate Jensen Huang" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">BBC World News</span>
+                <h4 class="collage-title">Trump says he &#x27;convinced&#x27; Nvidia to reinstate Jensen Huang</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/f684/live/02351f90-e74d-11f1-99b6-a35a62fa4264.jpg" alt="Russian warship hit by Ukrainian drones in Libya, Zelensky says" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">BBC World News</span>
+                <h4 class="collage-title">Russian warship hit by Ukrainian drones in Libya, Zelensky says</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/a5fe/live/bf5d6f10-e71f-11f1-99a1-253766e7ad8b.jpg" alt="Longest-ever UN climate talks end with no deal as deep divisions exposed" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">BBC World News</span>
+                <h4 class="collage-title">Longest-ever UN climate talks end with no deal as deep divisions exposed</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="EU Commission proposes ban on Russian athletes, ex-fighters in new Russia sanctions package - Reuters" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">Reuters Top News</span>
+                <h4 class="collage-title">EU Commission proposes ban on Russian athletes, ex-fighters in new Russia sanctions package - Reuters</h4>
+            </div>
+        </div>
+        
+        </div>
+    </div>
+    
+            
+        </div>
+
+        <main class="stories">
+            
+        <div class="story">
+            <h2>Bowne Report: Prepare For The Chaos Of 2027</h2>
+            <div class="story-body"><strong>Source:</strong> Alex Jones Live (Scraper)<br><strong>Summary:</strong> A report featured on Alex Jones Live highlights predictions regarding significant societal and political disruptions anticipated by 2027. The segment advises viewers to begin preparations for potential widespread instability. Specific policy or operational details behind the warning were not elaborated upon in the summary report.<br><strong>Key Theme:</strong> Media &amp; Speculation<br>---</div>
+        </div>
+        
+        <div class="story">
+            <h2>Trump says he &#x27;convinced&#x27; Nvidia to reinstate Jensen Huang</h2>
+            <div class="story-body"><strong>Source:</strong> BBC World News<br><strong>Summary:</strong> President Donald Trump claimed he personally intervened with Nvidia&#x27;s board of directors to persuade them to reinstate Jensen Huang as chief executive officer. The statement points to direct executive involvement in corporate executive management within the semiconductor industry. Further board commentary on the intervention has not been detailed.<br><strong>Key Theme:</strong> Corporate Politics<br>---</div>
+        </div>
+        
+        <div class="story">
+            <h2>Russian warship hit by Ukrainian drones in Libya, Zelensky says</h2>
+            <div class="story-body"><strong>Source:</strong> BBC World News<br><strong>Summary:</strong> Ukrainian President Volodymyr Zelensky announced that Ukrainian military drones targeted and struck a Russian warship located in Libya. In response, the Kremlin cautioned against escalating regional tensions, though it declined to explicitly comment on the specifics of the Libyan operation.<br><strong>Key Theme:</strong> International Conflict<br>---</div>
+        </div>
+        
+        <div class="story">
+            <h2>EU Commission proposes ban on Russian athletes, ex-fighters in new Russia sanctions package - Reuters</h2>
+            <div class="story-body"><strong>Source:</strong> Reuters Top News<br><strong>Summary:</strong> The European Commission has proposed a fresh round of sanctions targeting Russian entities and individuals. The newly introduced measure includes explicit bans aimed at Russian athletes and former military combatants. The proposal requires approval from EU member states before taking effect.<br><strong>Key Theme:</strong> International Sanctions<br>---</div>
+        </div>
+        
+        <div class="story">
+            <h2>US lawmakers criticize Nvidia decision to reinstate Huang as CEO - Reuters</h2>
+            <div class="story-body"><strong>Source:</strong> Reuters Top News<br><strong>Summary:</strong> United States lawmakers expressed sharp criticism over Nvidia’s decision to reinstate Jensen Huang as Chief Executive Officer. The pushback highlights growing political scrutiny surrounding governance and leadership decisions at top American technology companies.<br><strong>Key Theme:</strong> Tech Regulation<br>---</div>
+        </div>
+        
+        <div class="story">
+            <h2>The modest terrace hiding an art masterpiece: How Victorian labourer secretly transformed his home with stunning William Morris designs that lay untouched for more than 80 years</h2>
+            <div class="story-body"><strong>Source:</strong> Daily Mail UK<br><strong>Summary:</strong> A historic terrace home decorated by Victorian laborer David Parr has been honored with an official blue plaque. Parr spent years secretly decorating his modest residence with intricate hand-painted designs inspired by artist William Morris. The property remained preserved as an untouched time capsule for more than eight decades.<br><strong>Key Theme:</strong> Culture &amp; Heritage<br>---</div>
+        </div>
+        
+        <div class="story">
+            <h2>Schoolgirl stabbed 55 times after being &#x27;lured&#x27; to park by 14-year-old boy after she found out he was &#x27;two-timing&#x27; her, jury hears</h2>
+            <div class="story-body"><strong>Source:</strong> Daily Mail UK<br><strong>Summary:</strong> A court jury heard testimony regarding the murder of 14-year-old Lilly Jones, who sustained 55 stab wounds in a public park. Prosecutors state the victim was lured to the location by a 14-year-old boy after she discovered he was secretly dating another girl at the same time. The legal proceedings against the suspect remain ongoing.<br><strong>Key Theme:</strong> Crime &amp; Justice<br>---</div>
+        </div>
+        
+        <div class="story">
+            <h2>TV news hourly summary · Nov 23, 17:03 UTC</h2>
+            <div class="story-body"><strong>Source:</strong> Internet Archive TV News (hourly summary)<br><strong>Summary:</strong> A major technology outage disrupted global airline operations, banking networks, and email systems, causing over 1,000 Delta flight delays. Concurrently, Nvidia stock rose following Jensen Huang&#x27;s reinstatement as CEO, while the longest-running UN climate conference concluded without achieving a formal agreement. Additional developments include reports of Ukrainian maritime strikes and severe weather threats to U.S. holiday travel.<br><strong>Key Theme:</strong> Global News Digest</div>
+        </div>
+        
+        </main>
+
+        <div class='section-title'>Custom HTML Scraped Feeds</div><div class='segmented-grid'>
+            <div class='mini-card scraped'>
+                <div class='source-tag'>Alex Jones Live (Scraper)</div>
+                <h3><a href='https://www.alexjoneslive.com/2026/11/23/bowne-report-prepare-for-the-chaos-of-2027/' target='_blank' rel='noopener'>Bowne Report: Prepare For The Chaos Of 2027</a></h3>
+                <p>Breaking development from Alex Jones Live....</p>
+            </div>
+            </div>
+        <div class='section-title'>Global &amp; Alternative RSS Feeds</div><div class='segmented-grid'>
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/articles/cq5y1k8ez407o?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>Trump says he &#x27;convinced&#x27; Nvidia to reinstate Jensen Huang</a></h3>
+                <p>The US president personally intervened to speak to members of Nvidia&#x27;s board of directors....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/articles/cr894gjz0j0yo?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>Russian warship hit by Ukrainian drones in Libya, Zelensky says</a></h3>
+                <p>The Kremlin warns of an &quot;escalation of tensions in the region&quot;, but declines to comment directly on the attacks in Libya....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/articles/cqwy06zrd26lo?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>Longest-ever UN climate talks end with no deal as deep divisions exposed</a></h3>
+                <p>The prime minister of Australia, which co-hosted COP31, attributed the failure to &quot;difficult geopolitical times&quot;....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMiqAFBVV95cUxPb1A2RHl1RS1IaFcyWmlES0xYNW1lbnM5VlhwWVU5ajZhRVVBa0Mydi1OZG4tS0tCYVJKX1JiOUtmWlNTZVJmTGRTRlFtZTRXRTRxcXB1aGMya2JhWm41UXE5Y2pxTlFDNzVSQ2MyV0RPZzNoYlZtazdMX3RYRnB6VFFsaEFnTGI5RFk4TnczUE9aTXFqcGNxZ0psd1JUczRBNi1LSkpnVk8?oc=5' target='_blank' rel='noopener'>EU Commission proposes ban on Russian athletes, ex-fighters in new Russia sanctions package - Reuters</a></h3>
+                <p>EU Commission proposes ban on Russian athletes, ex-fighters in new Russia sanctions package Reuters...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMiogFBVV95cUxQY290QTRyd09iaGNpaWpuNmlnOHQ2MVZSMm43Q29tS05BSE00ekxCeF9DZ013THRtUzVsTUItS2FIa1R6UzdOQ2FlOFlscXRLVUdfNkhLNS1JZ0FNNTZuOEgxdVVhN2JnaDBYdVFJQXBhSUNxeFBnR0V2XzZLTzZBaEh4NVUxLWRhZjJHOGR5NGVZOXpjWGZjaVFWR0NobElUaUE?oc=5' target='_blank' rel='noopener'>US lawmakers criticize Nvidia decision to reinstate Huang as CEO - Reuters</a></h3>
+                <p>US lawmakers criticize Nvidia decision to reinstate Huang as CEO Reuters...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMipwFBVV95cUxQWmN5QUFQSGxDSlRyR3gxZzZQczRFSC1SNjFtY0xtMkM4cjhwbnZndkNaSW5JVDNvVVYxMDdObkhjcVZIMVpVZ2FoVFdNZ3NGQU9hckJhZUx6M0dfMERucTNVZk9aamhpRU85TE96c1pEdGUyTlhyZVRMWlNPNUJ1TG1mLTJadHltZ1Utal85WFlTb09aTXF3MTBXNG1TZ0EzeHYzUFNadw?oc=5' target='_blank' rel='noopener'>VIEW Nvidia reinstates Jensen Huang as CEO, igniting tech surge - Reuters</a></h3>
+                <p>VIEW Nvidia reinstates Jensen Huang as CEO, igniting tech surge Reuters...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/news/article-16314757/home-Victorian-labourer-David-Parr-William-Morris-designs-awarded-blue-plaque.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>The modest terrace hiding an art masterpiece: How Victorian labourer secretly transformed his home with stunning William Morris designs that lay untouched for more than 80 years</a></h3>
+                <p>Belonging to the working-class labourer David Parr, the home remained a time capsule of the Victorian era - adorned with the patterns and designs that kept the workman up through the night....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/news/article-16315177/Schoolgirl-stabbed-55-times-lured-park-14-year-old-boy-two-timing-jury-hears.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>Schoolgirl stabbed 55 times after being &#x27;lured&#x27; to park by 14-year-old boy after she found out he was &#x27;two-timing&#x27; her, jury hears</a></h3>
+                <p>Music-loving Lilly Jones, 14, had been planning to confront the teenager after realising he was cheating on both of them....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/tvshowbiz/article-16315239/Will-Smith-Jada-Pinkett-fire-Calabasas-home.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>Will Smith and wife Jada Pinkett&#x27;s $42million Calabasas estate catches on fire as firefighters rush to scene</a></h3>
+                <p>A fire broke out at Will Smith and wife Jada Pinkett&#x27;s $42 million Calabasas, California estate in the early hours of Monday morning....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>New York Post</div>
+                <h3><a href='https://nypost.com/2026/11/23/sports/hs-football-championship-game-engulfed-in-500000-controversy/' target='_blank' rel='noopener'>High school football championship game engulfed in star brothers’ $500,000 controversy</a></h3>
+                <p>There is a whole high school football mess unfolding in Ohio....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>New York Post</div>
+                <h3><a href='https://nypost.com/2026/11/23/us-news/trump-posts-edited-image-of-assassination-attempt-showing-bloody-jensen-huang-hoisting-red-bra-after-nvidia-return/' target='_blank' rel='noopener'>Trump posts edited image of assassination attempt showing bloody Jensen Huang hoisting red bra after Nvidia return</a></h3>
+                <p>President Trump repurposed the most famous photo taken of him Monday to commemorate Jensen Huang’s return as Nvidia CEO....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>New York Post</div>
+                <h3><a href='https://nypost.com/2026/11/23/world-news/canadas-pm-hires-trump-impersonator-to-roast-president-at-event/' target='_blank' rel='noopener'>Canada’s PM Mark Carney hires Trump impersonator to roast the US president at event</a></h3>
+                <p>&quot;We&#x27;re going to have a great deal. There&#x27;s only one thing standing in the way. Me. Because I&#x27;m crazy,&quot; comedian Mark Critch quipped as Trump at Ottawa&#x27;s annual press-gall...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/president-trump-taps-dni-jay-clayton-lead-white/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=president-trump-taps-dni-jay-clayton-lead-white' target='_blank' rel='noopener'>President Trump Taps DNI Jay Clayton To Lead White House Cyber Policy</a></h3>
+                <p>Director of National Intelligence Jay Clayton will also serve as acting national cyber director while President Trump&#x27;s nominee awaits Senate confirmation....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/ukraine-strikes-russia-where-putin-never-expected-warship/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=ukraine-strikes-russia-where-putin-never-expected-warship' target='_blank' rel='noopener'>Ukraine Strikes Russia Where Putin Never Expected — Warship Hit Off Libya</a></h3>
+                <p>Ukraine says seven naval drones struck a Russian warship off Libya, carrying the war into a zone Moscow likely believed was beyond Kyiv&#x27;s reach....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/fbi-dhs-tsa-warn-airlines-al-qaeda-aviation/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=fbi-dhs-tsa-warn-airlines-al-qaeda-aviation' target='_blank' rel='noopener'>FBI, DHS And TSA Warn Airlines About Al Qaeda Calls For New Aviation Attacks</a></h3>
+                <p>Federal agencies warned airlines and airports about Al Qaeda calls for attacks modeled on the attempted takeover of a Flydubai passenger jet....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/11/23/major-shift-christian-filmmaker-who-fled-persecution-in-iraq-warns-of-rising-islamification-in-u-s/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=major-shift-christian-filmmaker-who-fled-persecution-in-iraq-warns-of-rising-islamification-in-u-s' target='_blank' rel='noopener'>‘Major Shift’: Christian Filmmaker Who Fled Persecution In Iraq Warns Of Rising Islamification In U.S.</a></h3>
+                <p>&#x27;That behavior is coming from certain countries, and it&#x27;s coming ... as a result of what&#x27;s written and and the book that teaches this.&#x27;...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/11/23/democrats-introduce-bill-that-could-allow-illegal-aliens-to-stay-even-if-they-lose-in-court/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=democrats-introduce-bill-that-could-allow-illegal-aliens-to-stay-even-if-they-lose-in-court' target='_blank' rel='noopener'>Democrats Introduce Bill That Could Allow Illegal Aliens To Stay Even If They Lose In Court</a></h3>
+                <p>Democrats have spent months accusing President Donald Trump of deporting people without due process. Now the same Democrats have introduced a bill that would allow people who got that due process to r...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/11/23/biden-era-border-patrol-agent-knows-the-perils-of-the-amnesty-big-lie/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=biden-era-border-patrol-agent-knows-the-perils-of-the-amnesty-big-lie' target='_blank' rel='noopener'>Biden-Era Border Patrol Agent Knows The Perils Of The Amnesty Big Lie</a></h3>
+                <p>The RINOs contemplating amnesty deals with ready Democrats should get a reality check from guys like Ammon Blair....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/news/nvidia-has-a-sudden-change-of-heart-about-jensen-huang' target='_blank' rel='noopener'>Nvidia has a sudden change of heart about Jensen Huang</a></h3>
+                <p>After a scandal-ridden month for Nvidia, the major technology company has made a decision on who will lead the company in the future. On Monday, Nvidia issued a surprising press release detailing its ...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/news/guns-ammunition-mexico-border-bus' target='_blank' rel='noopener'>Startling lode of firearms and ammunition found hidden on bus traveling from US to Mexico, CBP says</a></h3>
+                <p>A secondary search of a commercial bus led to the discovery of a number of firearms concealed in the cargo, says U.S. Customs and Border Protection. The incident unfolded on November 15 at the Camino ...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/tech/ai-productivity-suite' target='_blank' rel='noopener'>AI is coming for your productivity suite. Your job might be next.</a></h3>
+                <p>Microsoft 365 and Google Workspace have a firm foothold in the enterprise sector with productivity suites that are trusted by professionals worldwide. Yet the AI giants think there’s room for more. Bo...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/david-strom/2026/11/23/question-about-supporting-israel-answered-rubio-now-leads-vance-in-presidential-poll-n3821279' target='_blank' rel='noopener'>Question About Supporting Israel Answered: Rubio Now Leads Vance in Presidential Poll</a></h3>
+                <p>Question About Supporting Israel Answered: Rubio Now Leads Vance in Presidential Poll...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/headlines/2026/11/22/unstuck-in-time-surfing-big-bosomsand-the-supreme-court-n3821231' target='_blank' rel='noopener'>Unstuck in Time: Surfing, Big Bosoms—and the Supreme Court</a></h3>
+                <p>Unstuck in Time: Surfing, Big Bosoms—and the Supreme Court...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/tree-hugging-sister/2026/11/23/its-super-to-be-a-selected-suzerain-burnham-burying-brexit-n3821276' target='_blank' rel='noopener'>It&#x27;s Super to Be a Selected Suzerain: Burnham Burying Brexit</a></h3>
+                <p>It&#x27;s Super to Be a Selected Suzerain: Burnham Burying Brexit...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Judicial Watch</div>
+                <h3><a href='https://www.judicialwatch.org/thousands-of-dangerous-truckers-busted-by-dot-are-illegal-aliens-or-cant-read-english/' target='_blank' rel='noopener'>Thousands of “Dangerous Truckers” Busted by DOT are Illegal Aliens or Can’t Read English</a></h3>
+                <p>In just a year and a half of enforcing federal trucking regulations by ensuring drivers of commercial vehicles…...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Judicial Watch</div>
+                <h3><a href='https://www.judicialwatch.org/victory-judge-orders-release-ilhan-omar-search-warrant-records/' target='_blank' rel='noopener'>Victory: Judge Orders Release of Ilhan Omar Search Warrant Records</a></h3>
+                <p>Victory: Judge Orders Unsealing of Ilhan Omar Search Warrant Records CIA Refuses to Confirm or Deny Existence of…...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Judicial Watch</div>
+                <h3><a href='https://www.judicialwatch.org/ilhan-omar-search-warrant-records-to-be-partially-released/' target='_blank' rel='noopener'>Ilhan Omar search warrant records to be partially released</a></h3>
+                <p>A judge has authorized the partial release of records related to the Oct. 12 federal raid on Rep.…...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/11/jeffries-s-refusal-to-work-with-the-white-house-chief-of-staff-is-un-american/' target='_blank' rel='noopener'>Jeffries’s Refusal To Work With The White House Chief Of Staff Is Un-American</a></h3>
+                <p>Photo Credit: Hakeem Jeffries Official photo, via Wikipedia // government work By Meda Parameswara Reddy The most careful man in the Democratic leadership chose to be unequivocal about closing a door?...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/11/who-is-this-j-d-vance-guy/' target='_blank' rel='noopener'>Who Is This &#x27;J.D. Vance&#x27; Guy?</a></h3>
+                <p>Photo Credit: JD Vance Official photo // The White House // government work By Joseph Ford Cotto J.D. Vance keeps changing who he is. Republicans should be alarmed. Bigly....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/11/desert-dreams-and-howitzers/' target='_blank' rel='noopener'>Desert Dreams And Howitzers</a></h3>
+                <p>Photo Credit: Michael Lucan, CC BY-SA 3.0 DE , via Wikimedia Commons Michael Lucan By Thomas Kolbe There are few things Chancellor Friedrich Merz must be longing for these days as much as good news fr...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMipAFBVV95cUxOck1iSGhoRnRBaXNubkpST29ySXpDNTUtUlhOX21vR19SWDFDZWxWZHZNWWlQSGY4RmFSR3BIMTdrWmFTcUprTUpRaGhDbVFTUTMwb3dDT2RWQUxaZ00zSUZ6ZmpvRGhfRGlfdXFtQkhIWUU4aVhkZDBVQkpScjdCbGdTWGt2SUZpTmI4Q1h0QUxCRFFUWWs0b21Da21vZWtZSWtzSA?oc=5' target='_blank' rel='noopener'>Why Most Americans Couldn’t Last 72 Hours in an Emergency - The Epoch Times</a></h3>
+                <p>Why Most Americans Couldn’t Last 72 Hours in an Emergency The Epoch Times...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMikgFBVV95cUxQbTRScFNSbVNLaHloUDBYSHhNOFNBMVNEMnhPc1F2RWl2WXI4a1BZTXYzSlA2QVZlb3d6RG9KdkNsN1Z5Ulh4STNOQlNnYkpENHlrWkRiSDZqX0ZQS0JnMVlWU0EtbHBPemZENVZLcVpOTnpSNm1TNnJHT3dLVnIwTzBkVkFkOHZCS0JjU0RtcE11Zw?oc=5' target='_blank' rel='noopener'>How the Hunt for Bigfoot Has Never Stopped - The Epoch Times</a></h3>
+                <p>How the Hunt for Bigfoot Has Never Stopped The Epoch Times...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMisAFBVV95cUxNQmE4VXBaYjNtSi10Q1l4dEFRYXVwanRES2J0OS16UzJVQ195QmNtODJJbDllN0VEOHdkZld3UE5NdTF6aXl1WVh4VnZFdWdkMkdDdGw2UUEtWDMyeTNwcFdtR2tocnd0aG9CeTEyWDJxVHo4UThTanhNdjRZaGhsSXR1QkVKd3k0MjRSQTdueW5fS05TWXNrUmtGT0hpY2p5NkhlWDFBdllqZmRnYVhzbQ?oc=5' target='_blank' rel='noopener'>Trump, Xi, Putin Agree to Peace Declaration, Pledge Nuclear Risk Talks - The Epoch Times</a></h3>
+                <p>Trump, Xi, Putin Agree to Peace Declaration, Pledge Nuclear Risk Talks The Epoch Times...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Internet Archive TV News (hourly summary)</div>
+                <h3><a href='https://mastodon.archive.org/@tv/117666833059517255' target='_blank' rel='noopener'>TV news hourly summary · Nov 23, 17:03 UTC</a></h3>
+                <p>A technology glitch disrupted airlines, banks and email; Delta’s system delays affected more than 1,000 flights. Nvidia shares rose after Jensen Huang was reinstated as CEO. Trump said he may resume s...</p>
+            </div>
+            </div>
+
+        <footer>
+            Automated Segmented Pipeline powered by HTML Scrapers, 11 Global RSS Feeds &amp; Google Gemini AI &bull; 2026-11-23
+        </footer>
+    </div>
+</body>
+</html>
