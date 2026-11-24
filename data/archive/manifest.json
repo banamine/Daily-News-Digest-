@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-11-24",
+    "timestamp": "2026-11-24T17:00:17.978143+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "Trump faces backlash after saying he 'convinced' Nvidia to reinstate CEO Jensen Huang",
+      "What Jensen Huang's return teaches China's Xi about Trump",
+      "Venezuela unveils long-awaited economic framework, puts debt at $237.5 billion - Reuters",
+      "China's BYD seeks to buy French car factory from Ineos Automotive - Reuters",
+      "QUENTIN LETTS: Burnham's surrender to the EU has waved smelling salts under Farage's nostrils - bad news for Labour's Red Wall MPs"
+    ],
+    "archive_html_path": "data/archive/2026-11-24/index.html",
+    "data_json_path": "data/archive/2026-11-24/data.json"
+  },
+  {
     "date": "2026-11-23",
     "timestamp": "2026-11-23T17:19:54.103783+00:00",
     "stories_count": 8,

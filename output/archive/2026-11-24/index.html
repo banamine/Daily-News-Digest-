@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Intelligence Briefing – 2026-11-24</title>
+    <style>
+        :root {
+            --bg: #0f1115;
+            --card: #1a1d24;
+            --text: #e6e8ec;
+            --muted: #9ba1ad;
+            --accent: #3b82f6;
+            --border: #2a2e38;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; padding: 2rem 1rem; }
+        .container { max-width: 960px; margin: 0 auto; }
+        header { text-align: center; margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+        header h1 { font-size: 2.2rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 0.4rem; color: #ffffff; }
+        header .date { color: var(--accent); font-size: 1rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+        
+        .hero-image { width: 100%; border-radius: 16px; overflow: hidden; margin-bottom: 2.5rem; box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6); border: 1px solid var(--border); background: #0b0f19; }
+        
+        /* Flexible Photo Collage Component */
+        .collage-wrapper { position: relative; width: 100%; }
+        .collage-header-pill {
+            position: absolute; top: 14px; left: 14px; z-index: 10;
+            background: rgba(15, 23, 42, 0.88); backdrop-filter: blur(8px);
+            border: 1px solid rgba(56, 189, 248, 0.35); color: #38bdf8;
+            padding: 5px 12px; border-radius: 999px; font-size: 11px; font-weight: 800;
+            letter-spacing: 0.5px; display: flex; align-items: center; gap: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        }
+        .collage-container {
+            display: grid; gap: 8px; background: #090d16; padding: 8px; border-radius: 16px; min-height: 280px;
+        }
+        .collage-container.collage-count-1 { grid-template-columns: 1fr; grid-template-rows: 360px; }
+        .collage-container.collage-count-1 .hero-tile { grid-row: auto; }
+
+        .collage-container.collage-count-2 { grid-template-columns: 1fr 1fr; grid-template-rows: 320px; }
+        .collage-container.collage-count-2 .hero-tile { grid-row: auto; }
+
+        .collage-container.collage-count-3 { grid-template-columns: 1.6fr 1fr; grid-template-rows: 170px 170px; }
+        .collage-container.collage-count-3 .hero-tile { grid-row: span 2; }
+
+        .collage-container.collage-count-4 { grid-template-columns: 1.6fr 1fr 1fr; grid-template-rows: 170px 170px; }
+        .collage-container.collage-count-4 .hero-tile { grid-row: span 2; }
+        .collage-container.collage-count-4 .collage-tile:nth-child(4) { grid-column: span 2; }
+
+        .collage-container.collage-count-5 { grid-template-columns: 1.8fr 1fr 1fr; grid-template-rows: 180px 180px; }
+        .collage-container.collage-count-5 .hero-tile { grid-row: span 2; }
+
+        @media (max-width: 768px) {
+            .collage-container,
+            .collage-container.collage-count-2,
+            .collage-container.collage-count-3,
+            .collage-container.collage-count-4,
+            .collage-container.collage-count-5 {
+                grid-template-columns: 1fr; grid-template-rows: auto;
+            }
+            .collage-tile, .hero-tile { min-height: 180px; }
+        }
+        .collage-tile {
+            position: relative; border-radius: 10px; overflow: hidden; background: #131927;
+            border: 1px solid rgba(255, 255, 255, 0.08); transition: transform 0.3s ease;
+        }
+        .collage-tile.hero-tile { grid-row: span 2; }
+        .collage-tile img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
+        .collage-tile:hover img { transform: scale(1.06); }
+        .collage-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(to top, rgba(11, 15, 23, 0.95) 0%, rgba(11, 15, 23, 0.2) 60%, transparent 100%);
+            display: flex; flex-direction: column; justify-content: flex-end; padding: 12px;
+        }
+        .collage-badge {
+            align-self: flex-start; background: rgba(56, 189, 248, 0.2); color: #38bdf8;
+            border: 1px solid rgba(56, 189, 248, 0.4); font-size: 10px; font-weight: 700;
+            text-transform: uppercase; padding: 2px 8px; border-radius: 999px; margin-bottom: 6px;
+        }
+        .collage-badge.hero-badge { background: rgba(16, 185, 129, 0.2); color: #34d399; border-color: rgba(16, 185, 129, 0.4); }
+        .collage-title { color: #ffffff; font-size: 12px; font-weight: 700; line-height: 1.35; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        .hero-tile .collage-title { font-size: 17px; }
+
+        .stories { display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 3rem; }
+        .story { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem; }
+        .story h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: #f1f3f5; }
+        .story-body { color: var(--muted); font-size: 0.98rem; overflow-wrap: anywhere; word-break: break-word; }
+        .story h2, .mini-card h3, .mini-card p { overflow-wrap: anywhere; }
+        .container { min-width: 0; max-width: 100%; }
+        .section-title { font-size: 1.3rem; font-weight: 800; color: var(--accent); margin: 2rem 0 1rem; border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; }
+        .segmented-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
+        .mini-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+        .mini-card.scraped { border-left: 3px solid #8b5cf6; }
+        .mini-card.rss { border-left: 3px solid #3b82f6; }
+        .source-tag { font-size: 0.75rem; font-weight: bold; color: var(--accent); margin-bottom: 0.4rem; }
+        .mini-card h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.4rem; }
+        .mini-card h3 a { color: #f1f3f5; text-decoration: none; }
+        .mini-card h3 a:hover { text-decoration: underline; color: var(--accent); }
+        .mini-card p { font-size: 0.82rem; color: var(--muted); line-height: 1.4; }
+        footer { text-align: center; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="date">2026-11-24</div>
+            <h1>Daily Intelligence Briefing</h1>
+        </header>
+
+        <div class="hero-image">
+            
+                
+    <div class="collage-wrapper">
+        <div class="collage-header-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7"/><path d="M16 5h5v5"/><path d="m21 5-9 9"/></svg>
+            <span>Parsed Feeds Mixed Photo Collage (5 Photos)</span>
+        </div>
+        <div class="collage-container collage-count-5">
+            <div class="collage-tile hero-tile">
+                <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/c94d/live/cfb736f0-e78a-11f1-a5c2-c57ab9df3111.jpg" alt="Trump faces backlash after saying he &#x27;convinced&#x27; Nvidia to reinstate CEO Jensen Huang" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+                <div class="collage-overlay">
+                    <span class="collage-badge hero-badge">BBC World News</span>
+                    <h3 class="collage-title hero-title">Trump faces backlash after saying he &#x27;convinced&#x27; Nvidia to reinstate CEO Jensen Huang</h3>
+                </div>
+            </div>
+            
+        <div class="collage-tile">
+            <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/47a8/live/2d61caf0-e7d5-11f1-939f-471cde339c0e.jpg" alt="What Jensen Huang&#x27;s return teaches China&#x27;s Xi about Trump" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">BBC World News</span>
+                <h4 class="collage-title">What Jensen Huang&#x27;s return teaches China&#x27;s Xi about Trump</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/f9e8/live/05da8d30-e7d7-11f1-a094-5fdc692f3e33.jpg" alt="Nato chief vows defence against space threat after Russian nuclear satellite reports" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">BBC World News</span>
+                <h4 class="collage-title">Nato chief vows defence against space threat after Russian nuclear satellite reports</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Venezuela unveils long-awaited economic framework, puts debt at $237.5 billion - Reuters" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">Reuters Top News</span>
+                <h4 class="collage-title">Venezuela unveils long-awaited economic framework, puts debt at $237.5 billion - Reuters</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="China&#x27;s BYD seeks to buy French car factory from Ineos Automotive - Reuters" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">Reuters Top News</span>
+                <h4 class="collage-title">China&#x27;s BYD seeks to buy French car factory from Ineos Automotive - Reuters</h4>
+            </div>
+        </div>
+        
+        </div>
+    </div>
+    
+            
+        </div>
+
+        <main class="stories">
+            
+        <div class="story">
+            <h2>Trump faces backlash after saying he &#x27;convinced&#x27; Nvidia to reinstate CEO Jensen Huang</h2>
+            <div class="story-body"><strong>Source:</strong> BBC World News<br><strong>Summary:</strong> President Donald Trump claimed credit for persuading Nvidia to reinstate CEO Jensen Huang following political pressure on the company. Huang&#x27;s return to leadership helped add $1 trillion to Nvidia&#x27;s market value, though Trump&#x27;s intervention has sparked political backlash.<br><strong>Key Theme:</strong> Politics / Business<br>---</div>
+        </div>
+        
+        <div class="story">
+            <h2>What Jensen Huang&#x27;s return teaches China&#x27;s Xi about Trump</h2>
+            <div class="story-body"><strong>Source:</strong> BBC World News<br><strong>Summary:</strong> Jensen Huang&#x27;s return as Nvidia CEO offers Chinese leadership insights into Donald Trump&#x27;s governance and negotiation style. Despite Huang&#x27;s reinstatement, analysts suggest Beijing is unlikely to see any immediate easing of U.S. tech trade restrictions.<br><strong>Key Theme:</strong> Geopolitics<br>---</div>
+        </div>
+        
+        <div class="story">
+            <h2>Venezuela unveils long-awaited economic framework, puts debt at $237.5 billion</h2>
+            <div class="story-body"><strong>Source:</strong> Reuters Top News<br><strong>Summary:</strong> Venezuela has officially presented a long-awaited economic framework intended to restructure its economy and outline financial recovery plans. Within the proposal, the government formally estimated its total national debt to be $237.5 billion.<br><strong>Key Theme:</strong> Global Economy<br>---</div>
+        </div>
+        
+        <div class="story">
+            <h2>China&#x27;s BYD seeks to buy French car factory from Ineos Automotive</h2>
+            <div class="story-body"><strong>Source:</strong> Reuters Top News<br><strong>Summary:</strong> Chinese electric vehicle producer BYD is seeking to acquire a manufacturing plant located in France from Ineos Automotive. The proposed acquisition reflects BYD&#x27;s broader strategy to expand its European production capabilities.<br><strong>Key Theme:</strong> Business / Automotive<br>---</div>
+        </div>
+        
+        <div class="story">
+            <h2>QUENTIN LETTS: Burnham&#x27;s surrender to the EU has waved smelling salts under Farage&#x27;s nostrils - bad news for Labour&#x27;s Red Wall MPs</h2>
+            <div class="story-body"><strong>Source:</strong> Daily Mail UK<br><strong>Summary:</strong> Political commentator Quentin Letts highlights how Manchester Mayor Andy Burnham&#x27;s recent comments on Europe have reignited public debate surrounding Brexit. The revival of the issue has re-energized Reform UK&#x27;s Nigel Farage, potentially threatening Labour&#x27;s electoral standing in traditional &quot;Red Wall&quot; districts.<br><strong>Key Theme:</strong> UK Politics<br>---</div>
+        </div>
+        
+        <div class="story">
+            <h2>The man forced to dig his own grave by a teen gang enforcer before being shot dead...</h2>
+            <div class="story-body"><strong>Source:</strong> Daily Mail UK<br><strong>Summary:</strong> A retrospective crime report examines a 2010 murder in Limerick, Ireland, where an innocent man was executed over a small drug debt after being forced to dig his own grave. The case underscores the severe history of youth gang violence that affected deprived neighborhoods like Moyross during that era.<br><strong>Key Theme:</strong> Crime / Retrospective<br>---</div>
+        </div>
+        
+        <div class="story">
+            <h2>Al Roker weighs in on fate of Macy’s Thanksgiving Day Parade as wild weather leaves iconic event ‘up in the air’</h2>
+            <div class="story-body"><strong>Source:</strong> New York Post<br><strong>Summary:</strong> Television personality and weather forecaster Al Roker addressed potential disruptions to the Macy’s Thanksgiving Day Parade caused by an incoming nor&#x27;easter. Severe weather conditions and high wind forecasts threaten to alter key parade elements, including the signature character balloons.<br><strong>Key Theme:</strong> Weather / Events<br>---</div>
+        </div>
+        
+        <div class="story">
+            <h2>TV news hourly summary · Nov 24, 16:03 UTC</h2>
+            <div class="story-body"><strong>Source:</strong> Internet Archive TV News<br><strong>Summary:</strong> Broadcast updates report record holiday air travel expectations alongside temporary flight halts at Chicago O’Hare. Additional top developments include Senegal&#x27;s 2025 AFCON title reinstatement upon appeal, political controversy surrounding Nvidia&#x27;s leadership, and unsealed documents related to a congressional investigation.<br><strong>Key Theme:</strong> News Digest</div>
+        </div>
+        
+        </main>
+
+        
+        <div class='section-title'>Global &amp; Alternative RSS Feeds</div><div class='segmented-grid'>
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/articles/cq5y1k8ez407o?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>Trump faces backlash after saying he &#x27;convinced&#x27; Nvidia to reinstate CEO Jensen Huang</a></h3>
+                <p>Nvidia had come under pressure from President Trump to reappoint Huang, whose comeback helped add $1tn to the company&#x27;s stock value....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/articles/c63rgpy50x98o?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>What Jensen Huang&#x27;s return teaches China&#x27;s Xi about Trump</a></h3>
+                <p>Huang being back at the helm of Nvidia is no guarantee of relief for Beijing....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/articles/c9x2er1ry2mzo?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>Nato chief vows defence against space threat after Russian nuclear satellite reports</a></h3>
+                <p>German media said Russia planned to launch a satellite with a nuclear warhead into space in coming weeks....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMiwAFBVV95cUxOakxRRS1xODNKVEMzdlowcjUzd2g4amNoV0JSSzdQc0JEUXg1WWxSbGxOaGhYWDZWSlQzeldBelpvUnpXb3g3bHdMUWd4NWhiZFJRZnEtSWU4TDBXS0Q1Q21CWE9QUkxkT2YxYVI5MzlJNkVJS3FRZ3NuMG90Y0JBMFNKRGEtOEhlOUktTVJwU2hoSHVVVW56NXI0ZlZIOHo3TGt0UTc3VnA4VlV5MGZoTmlfS05qQlpQcWpiUWNtSjI?oc=5' target='_blank' rel='noopener'>Venezuela unveils long-awaited economic framework, puts debt at $237.5 billion - Reuters</a></h3>
+                <p>Venezuela unveils long-awaited economic framework, puts debt at $237.5 billion Reuters...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMivwFBVV95cUxPMTVFdHUtZkhnUVF2LW9BQW1HWXUtSnFvUmFaOFN0TkY1RWtqZUx3bTBjY2p2ck5wNGpLT003cnF5dW9zQWRhX0lmcjBMS2dUc2ctdU44YW8wazA3NzkyX1M4SUhkdy1LNlc0bnJRVm1ySTVtUlRnMFJqaEJvR0tqX0w5T0dmdEdadDNfNW91dW16REg2R1BTaHhxODZET2hoSEhVemJRWGdkd0U4OW40QXJxbzRYc1ByX0RHZHpjWQ?oc=5' target='_blank' rel='noopener'>China&#x27;s BYD seeks to buy French car factory from Ineos Automotive - Reuters</a></h3>
+                <p>China&#x27;s BYD seeks to buy French car factory from Ineos Automotive Reuters...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMiowFBVV95cUxOWENXdFJEUVN5WUF1ODgwSWdpRUZiSWk0UVFoX3QzbVF4N19LRDJmaUdpTm1ZVlU2Rmx2Zm5hX1RleFg2aDRjWlN6QTBCM1JNc0VOZ2FRbEFvVUYyNF96REhoU0RsUTVyVkYzUXVfdmFHaTQxMnk2WVZQWU1XR25NaGV0TERXS2RtVmR6bVBCZ1loZHRzZzlQajlZdjkySHhpdDJV?oc=5' target='_blank' rel='noopener'>China probes Shanghai party boss Chen Jining, marking fourth Politburo member to fall since 2025 - Reuters</a></h3>
+                <p>China probes Shanghai party boss Chen Jining, marking fourth Politburo member to fall since 2025 Reuters...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/debate/article-16318281/nigel-farage-brexit-quentin-letts-andy-burnham-eu.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>QUENTIN LETTS: Burnham&#x27;s surrender to the EU has waved smelling salts under Farage&#x27;s nostrils - bad news for Labour&#x27;s Red Wall MPs</a></h3>
+                <p>Andy Burnham, by reopening the Brexit rows, has reconnected Nigel Farage to the electricity mains. He hadn&#x27;t been this lively for more than two years....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/news/article-16311775/How-paltry-80-drug-debt-culminated-ruthless-17-year-old-gang-enforcer-forcing-innocent-man-start-digging-hole-lonely-piece-Limerick-wasteland-knowing-deep-grave.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>The man forced to dig his own grave by a teen gang enforcer before being shot dead... and the reason for his killing is even more horrifying</a></h3>
+                <p>Back in 2010, Limerick was gripped by gang violence, which loomed large like a dark shadow over the city. And deprived areas like Moyross saw the worst of it,...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/news/article-16318221/Major-review-Labour-minister-concludes-disability-benefit-PIP-continue-cash-no-strings-attached.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>Major review by Labour minister concludes disability benefit PIP should continue to be &#x27;cash-first&#x27; and with no strings attached</a></h3>
+                <p>The year-long review of Personal Independence Payment (PIP) by Labour minister Sir Stephen Timms has concluded it must remain &#x27;cash-first&#x27; and &#x27;non-conditional&#x27;....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>New York Post</div>
+                <h3><a href='https://pagesix.com/2026/11/24/celebrity-news/al-roker-weighs-in-on-fate-of-macys-thanksgiving-day-parade-over-weather/' target='_blank' rel='noopener'>Al Roker weighs in on fate of Macy’s Thanksgiving Day Parade as wild weather leaves iconic event ‘up in the air’</a></h3>
+                <p>Roker told Page Six how the upcoming nor&#x27;easter may impact the beloved Thanksgiving morning program....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>New York Post</div>
+                <h3><a href='https://pagesix.com/2026/11/24/style/macys-black-friday-sale-has-2-carat-diamond-earrings-under-200/' target='_blank' rel='noopener'>Run, don’t walk: These 2-carat diamond earrings are under $200 for Black Friday</a></h3>
+                <p>These unrivaled diamond deals won&#x27;t last for long....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/mamdani-dodges-chinatown-killing-suspect-release-question/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=mamdani-dodges-chinatown-killing-suspect-release-question' target='_blank' rel='noopener'>Mamdani Dodges Question After Suspect In Chinatown Killing Was Freed One Day Earlier</a></h3>
+                <p>Zohran Mamdani dodged questions after a repeat offender was released one day before he allegedly killed a 62-year-old woman in Chinatown....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/pramila-jayapal-paris-anti-oligarchy-trip-optics/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=pramila-jayapal-paris-anti-oligarchy-trip-optics' target='_blank' rel='noopener'>Pramila Jayapal Flies To Paris To Fight ‘Excessive Wealth’—And The Optics Are Priceless</a></h3>
+                <p>Pramila Jayapal says she spent days in Paris fighting oligarchy and excessive wealth, prompting questions about the trip’s cost and optics....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/cash-panic-americas-richest-companies/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=cash-panic-americas-richest-companies' target='_blank' rel='noopener'>Cash Panic at America’s Richest Companies?</a></h3>
+                <p>By Rachel Gearhart, Publisher, The Oxford Club Something strange is going on at the top of corporate America. The richest […]...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/11/24/how-to-take-the-political-bite-out-of-your-thanksgiving-feast/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=how-to-take-the-political-bite-out-of-your-thanksgiving-feast' target='_blank' rel='noopener'>How To Take The Political Bite Out Of Your Thanksgiving Feast</a></h3>
+                <p>Make sure to laugh directly into your leftist guest&#x27;s face and say, &#x27;That’s hilarious! You think you voted for affordability.&#x27;...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/11/24/propaganda-press-downplays-illegal-aliens-decade-long-visa-overstay-to-vilify-ice/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=propaganda-press-downplays-illegal-aliens-decade-long-visa-overstay-to-vilify-ice' target='_blank' rel='noopener'>Propaganda Press Downplays Illegal Aliens’ Decade-Long Visa Overstay To Vilify ICE</a></h3>
+                <p>Immigration authorities arrested Ricardo Larrondo Mendoza and his daughter, Sofia Hernandez Mejia, on Saturday as they were boarding a flight in Seattle. The two are here illegally after they came to ...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/11/24/more-women-should-leave-the-workforce-to-raise-their-kids/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=more-women-should-leave-the-workforce-to-raise-their-kids' target='_blank' rel='noopener'>More Women Should Leave The Workforce To Raise Their Kids</a></h3>
+                <p>Women’s work is often deemed unworthy by the world (and The Washington Post) unless those efforts can be measured in dollars or data....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/tech/telegram-founder-gta-6-app' target='_blank' rel='noopener'>Controversial billionaire makes Elon Musk laugh — by revealing the crazy realaugh son he wants his app in GTA VI</a></h3>
+                <p>Artists want their songs in the game, actors and comedians want to voice characters, and Telegram founder Pavel Durov wants his messaging app in Grand Theft Auto VI. While the artists likely want to b...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/tech/php-phpaftershell-vulnerability' target='_blank' rel='noopener'>A huge vulnerability has put most of the internet&#x27;s websites open to attack — again</a></h3>
+                <p>We’ve reached the point in cybersecurity absurdity where patched software vulnerabilities pop up with more vulnerabilities that require additional patches. Researchers found that PHP, the backbone of ...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/news/another-british-village-votes-to-leave-uk-over-regimes-great-replacement-efforts' target='_blank' rel='noopener'>Another British village votes to leave UK over regime&#x27;s Great Replacement efforts</a></h3>
+                <p>Another picturesque British village has voted to leave the United Kingdom in protest over London&#x27;s plans to transform it into a dumping ground for military-age illegal aliens. Barnham, a village ...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/tree-hugging-sister/2026/11/24/daffy-kathy-hochul-suddenly-discovers-nuclear-n3821320' target='_blank' rel='noopener'>Daffy Kathy Hochul Suddenly Discovers Nuclear</a></h3>
+                <p>Daffy Kathy Hochul Suddenly Discovers Nuclear...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/headlines/2026/11/24/ga-dem-governor-elect-puts-2-dead-people-and-black-donald-trump-on-transition-team-n3821271' target='_blank' rel='noopener'>GA Dem Governor-Elect Puts 2 Dead People and &#x27;Black Donald Trump&#x27; on Transition Team</a></h3>
+                <p>GA Dem Governor-Elect Puts 2 Dead People and &#x27;Black Donald Trump&#x27; on Transition Team...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/ed-morrissey/2026/11/24/politico-dems-suddenly-struggling-against-dnc-struggle-session-demand-n3821317' target='_blank' rel='noopener'>Politico: Dems Suddenly Struggling Against DNC Struggle Session Demand</a></h3>
+                <p>Politico: Dems Suddenly Struggling Against DNC Struggle Session Demand...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Judicial Watch</div>
+                <h3><a href='https://www.judicialwatch.org/unsealed-ilhan-omar-search-warrant-cites-alleged-immigration-fraud-dating-back-to-1980-crimes-over-decades/' target='_blank' rel='noopener'>Unsealed Ilhan Omar search warrant cites alleged immigration fraud dating back to 1980: ‘Crimes over...</a></h3>
+                <p>WASHINGTON — A heavily redacted search warrant executed at the DC home of Rep. Ilhan Omar was unsealed…...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Judicial Watch</div>
+                <h3><a href='https://www.judicialwatch.org/investigators-claim-us-probing-whether-ilhan-omar-has-committed-crimes-spanning-decades/' target='_blank' rel='noopener'>Investigators claim US probing whether Ilhan Omar has committed crimes spanning decades</a></h3>
+                <p>A federal judge authorized the release Monday night of documents related to the government’s probe into Minnesota Democratic…...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Judicial Watch</div>
+                <h3><a href='https://www.judicialwatch.org/judicial-watch-victory-ilhan-omar-search-warrant-records-unsealed/' target='_blank' rel='noopener'>Judicial Watch Victory: Ilhan Omar Search Warrant Records Unsealed</a></h3>
+                <p>(Washington, DC) – Judicial Watch announced the unsealing of search warrant records from the October 12 search of…...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/11/cracking-down-on-legal-immigration-won-t-maga/' target='_blank' rel='noopener'>Cracking Down On (Legal) Immigration Won’t MAGA</a></h3>
+                <p>Photo Credit: Image: woodleywonderworks via Flickr , CC BY 2.0 . woodleywonderworks By Ruel Domi America is great when it becomes a magnet for the world’s best and brightest....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/11/oh-how-the-left-hates-competence/' target='_blank' rel='noopener'>Oh, How The Left Hates Competence!</a></h3>
+                <p>Photo Credit: AI for American Thinker By Mike McDaniel Competence drives success, but leftists are drowning in envy, which is not only a moral failing but also threatens Western Civilization itself....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/11/europe-plays-russian-roulette/' target='_blank' rel='noopener'>Europe Plays Russian Roulette</a></h3>
+                <p>Photo Credit: Pxhere By J.B. Shurk How many times can Europe pull the trigger before its luck runs out?...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMirgFBVV95cUxNRUlyVHcwRDNjeDNfV0c4ZVVhLTJjUFVzVE1pbmo5dU5zWWlXV3B2SWk2NlJqeU9pOHVnck5ZajM1OU5vU3hncXZoVWh6ZVRia1lCVTZ1alFpek9PRTlBT2dFZDNRYld4LTdfWmkyS2lQaTd6MlhwZVdpb1lTRUkwN0RUWktNWWp1YVNDZDJOWWpCeGxnVGppQkxGWVBjLUQxNzhpNzNodDlWWm9yT0E?oc=5' target='_blank' rel='noopener'>House Democrat Calls on Congress to Pass $1,700 Iran War Rebate Checks - The Epoch Times</a></h3>
+                <p>House Democrat Calls on Congress to Pass $1,700 Iran War Rebate Checks The Epoch Times...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMiREFVX3lxTFBSU2dZLXZaX21HbzlKWGxkWnM1eEQwNEZ3VE4xUkJFWFJWSkJ3d0pSY2c4MTBKZXctUXdyWWdicWJQaklP?oc=5' target='_blank' rel='noopener'>The Epoch Times | Breaking News, Latest News, World News and Videos - The Epoch Times</a></h3>
+                <p>The Epoch Times | Breaking News, Latest News, World News and Videos The Epoch Times...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMixgFBVV95cUxNc29faXVZZ0tWUC1iOTlhbUxvUlM5QXBRaXo2UVZwMmlOekkxdUlJeDV4dDVXNG02dG5RbWtrUkh0YWdfT0plYVRFdkRJTUVObDE2Z0xhR09sWU1TU18yN0FnTm9HNnhDTVFWeXdGd2c4U0wxbkxSVWNWQ0VQMVRsSUh4bTJfTGJqQ2lVVHNjYVZsTUdWUlk3ME5rUmxvQWdGUnRvNEpETDVDV0J6RmswWUNIalBSa0F3eFJrM2V3Um8wOG02Z0E?oc=5' target='_blank' rel='noopener'>Biden-Era Spending Bill Passed Unconstitutionally With Proxy Votes, Appeals Court Rules - The Epoch Times</a></h3>
+                <p>Biden-Era Spending Bill Passed Unconstitutionally With Proxy Votes, Appeals Court Rules The Epoch Times...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Internet Archive TV News (hourly summary)</div>
+                <h3><a href='https://mastodon.archive.org/@tv/117672259400742689' target='_blank' rel='noopener'>TV news hourly summary · Nov 24, 16:03 UTC</a></h3>
+                <p>The FAA expects the busiest holiday skies in 16 years; O’Hare briefly halted flights. Senegal’s 2025 AFCON title was reinstated after an appeal. Nvidia reinstated CEO Jensen Huang, as shares fell amid...</p>
+            </div>
+            </div>
+
+        <footer>
+            Automated Segmented Pipeline powered by HTML Scrapers, 11 Global RSS Feeds &amp; Google Gemini AI &bull; 2026-11-24
+        </footer>
+    </div>
+</body>
+</html>
