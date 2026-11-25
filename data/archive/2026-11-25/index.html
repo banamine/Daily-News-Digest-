@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Intelligence Briefing – 2026-11-25</title>
+    <style>
+        :root {
+            --bg: #0f1115;
+            --card: #1a1d24;
+            --text: #e6e8ec;
+            --muted: #9ba1ad;
+            --accent: #3b82f6;
+            --border: #2a2e38;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; padding: 2rem 1rem; }
+        .container { max-width: 960px; margin: 0 auto; }
+        header { text-align: center; margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+        header h1 { font-size: 2.2rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 0.4rem; color: #ffffff; }
+        header .date { color: var(--accent); font-size: 1rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+        
+        .hero-image { width: 100%; border-radius: 16px; overflow: hidden; margin-bottom: 2.5rem; box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6); border: 1px solid var(--border); background: #0b0f19; }
+        
+        /* Flexible Photo Collage Component */
+        .collage-wrapper { position: relative; width: 100%; }
+        .collage-header-pill {
+            position: absolute; top: 14px; left: 14px; z-index: 10;
+            background: rgba(15, 23, 42, 0.88); backdrop-filter: blur(8px);
+            border: 1px solid rgba(56, 189, 248, 0.35); color: #38bdf8;
+            padding: 5px 12px; border-radius: 999px; font-size: 11px; font-weight: 800;
+            letter-spacing: 0.5px; display: flex; align-items: center; gap: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        }
+        .collage-container {
+            display: grid; gap: 8px; background: #090d16; padding: 8px; border-radius: 16px; min-height: 280px;
+        }
+        .collage-container.collage-count-1 { grid-template-columns: 1fr; grid-template-rows: 360px; }
+        .collage-container.collage-count-1 .hero-tile { grid-row: auto; }
+
+        .collage-container.collage-count-2 { grid-template-columns: 1fr 1fr; grid-template-rows: 320px; }
+        .collage-container.collage-count-2 .hero-tile { grid-row: auto; }
+
+        .collage-container.collage-count-3 { grid-template-columns: 1.6fr 1fr; grid-template-rows: 170px 170px; }
+        .collage-container.collage-count-3 .hero-tile { grid-row: span 2; }
+
+        .collage-container.collage-count-4 { grid-template-columns: 1.6fr 1fr 1fr; grid-template-rows: 170px 170px; }
+        .collage-container.collage-count-4 .hero-tile { grid-row: span 2; }
+        .collage-container.collage-count-4 .collage-tile:nth-child(4) { grid-column: span 2; }
+
+        .collage-container.collage-count-5 { grid-template-columns: 1.8fr 1fr 1fr; grid-template-rows: 180px 180px; }
+        .collage-container.collage-count-5 .hero-tile { grid-row: span 2; }
+
+        @media (max-width: 768px) {
+            .collage-container,
+            .collage-container.collage-count-2,
+            .collage-container.collage-count-3,
+            .collage-container.collage-count-4,
+            .collage-container.collage-count-5 {
+                grid-template-columns: 1fr; grid-template-rows: auto;
+            }
+            .collage-tile, .hero-tile { min-height: 180px; }
+        }
+        .collage-tile {
+            position: relative; border-radius: 10px; overflow: hidden; background: #131927;
+            border: 1px solid rgba(255, 255, 255, 0.08); transition: transform 0.3s ease;
+        }
+        .collage-tile.hero-tile { grid-row: span 2; }
+        .collage-tile img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
+        .collage-tile:hover img { transform: scale(1.06); }
+        .collage-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(to top, rgba(11, 15, 23, 0.95) 0%, rgba(11, 15, 23, 0.2) 60%, transparent 100%);
+            display: flex; flex-direction: column; justify-content: flex-end; padding: 12px;
+        }
+        .collage-badge {
+            align-self: flex-start; background: rgba(56, 189, 248, 0.2); color: #38bdf8;
+            border: 1px solid rgba(56, 189, 248, 0.4); font-size: 10px; font-weight: 700;
+            text-transform: uppercase; padding: 2px 8px; border-radius: 999px; margin-bottom: 6px;
+        }
+        .collage-badge.hero-badge { background: rgba(16, 185, 129, 0.2); color: #34d399; border-color: rgba(16, 185, 129, 0.4); }
+        .collage-title { color: #ffffff; font-size: 12px; font-weight: 700; line-height: 1.35; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        .hero-tile .collage-title { font-size: 17px; }
+
+        .stories { display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 3rem; }
+        .story { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem; }
+        .story h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: #f1f3f5; }
+        .story-body { color: var(--muted); font-size: 0.98rem; overflow-wrap: anywhere; word-break: break-word; }
+        .story h2, .mini-card h3, .mini-card p { overflow-wrap: anywhere; }
+        .container { min-width: 0; max-width: 100%; }
+        .section-title { font-size: 1.3rem; font-weight: 800; color: var(--accent); margin: 2rem 0 1rem; border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; }
+        .segmented-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
+        .mini-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+        .mini-card.scraped { border-left: 3px solid #8b5cf6; }
+        .mini-card.rss { border-left: 3px solid #3b82f6; }
+        .source-tag { font-size: 0.75rem; font-weight: bold; color: var(--accent); margin-bottom: 0.4rem; }
+        .mini-card h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.4rem; }
+        .mini-card h3 a { color: #f1f3f5; text-decoration: none; }
+        .mini-card h3 a:hover { text-decoration: underline; color: var(--accent); }
+        .mini-card p { font-size: 0.82rem; color: var(--muted); line-height: 1.4; }
+        footer { text-align: center; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="date">2026-11-25</div>
+            <h1>Daily Intelligence Briefing</h1>
+        </header>
+
+        <div class="hero-image">
+            
+                
+    <div class="collage-wrapper">
+        <div class="collage-header-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7"/><path d="M16 5h5v5"/><path d="m21 5-9 9"/></svg>
+            <span>Parsed Feeds Mixed Photo Collage (5 Photos)</span>
+        </div>
+        <div class="collage-container collage-count-5">
+            <div class="collage-tile hero-tile">
+                <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/1e4e/live/dce0d700-e8c5-11f1-99b6-a35a62fa4264.jpg" alt="Russia&#x27;s own figures show it has lost nearly 500,000 people in Ukraine war" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+                <div class="collage-overlay">
+                    <span class="collage-badge hero-badge">BBC World News</span>
+                    <h3 class="collage-title hero-title">Russia&#x27;s own figures show it has lost nearly 500,000 people in Ukraine war</h3>
+                </div>
+            </div>
+            
+        <div class="collage-tile">
+            <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/c61f/live/78592c20-e8c4-11f1-99b6-a35a62fa4264.jpg" alt="My family were killed in Ukraine. My mum blamed Zelensky&#x27;s troops - the truth is complicated" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">BBC World News</span>
+                <h4 class="collage-title">My family were killed in Ukraine. My mum blamed Zelensky&#x27;s troops - the truth is complicated</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d025/live/0cb03100-e741-11f1-802a-678be58471bb.png" alt="Close-up images to be revealed of asteroid deliberately hit to test ability to protect Earth" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">BBC World News</span>
+                <h4 class="collage-title">Close-up images to be revealed of asteroid deliberately hit to test ability to protect Earth</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="EXCLUSIVE: Boehly signs US-backed share swap deal to buy Lukoil global assets - Reuters" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">Reuters Top News</span>
+                <h4 class="collage-title">EXCLUSIVE: Boehly signs US-backed share swap deal to buy Lukoil global assets - Reuters</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="US inflation rises further in October - Reuters" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">Reuters Top News</span>
+                <h4 class="collage-title">US inflation rises further in October - Reuters</h4>
+            </div>
+        </div>
+        
+        </div>
+    </div>
+    
+            
+        </div>
+
+        <main class="stories">
+            
+        <div class="story">
+            <h2>Russia&#x27;s own figures show it has lost nearly 500,000 people in Ukraine war</h2>
+            <div class="story-body"><strong>Source:</strong> BBC World News<br><strong>Summary:</strong> Leaked official Russian data reveals that Russia has lost nearly 500,000 people since initiating its full-scale invasion of Ukraine. The leaked mortality figures highlight how the ongoing war has fundamentally altered national death rates and demographic patterns in Russia.<br><strong>Key Theme:</strong> Military Casualties<br>---</div>
+        </div>
+        
+        <div class="story">
+            <h2>My family were killed in Ukraine. My mum blamed Zelensky&#x27;s troops - the truth is complicated</h2>
+            <div class="story-body"><strong>Source:</strong> BBC World News<br><strong>Summary:</strong> BBC journalist Anastasiya Gribanova investigates the deaths of her father and grandparents during the war in Ukraine. The report examines the complex circumstances surrounding civilian casualties in active combat zones and the conflicting narratives held by affected families.<br><strong>Key Theme:</strong> War Reporting<br>---</div>
+        </div>
+        
+        <div class="story">
+            <h2>EXCLUSIVE: Boehly signs US-backed share swap deal to buy Lukoil global assets - Reuters</h2>
+            <div class="story-body"><strong>Source:</strong> Reuters Top News<br><strong>Summary:</strong> American investor Todd Boehly has signed a U.S.-backed share swap agreement to acquire the international assets of Russian oil firm Lukoil. The transaction represents a major corporate shift involving global energy infrastructure amidst ongoing international sanctions frameworks.<br><strong>Key Theme:</strong> Business Acquisition<br>---</div>
+        </div>
+        
+        <div class="story">
+            <h2>US inflation rises further in October - Reuters</h2>
+            <div class="story-body"><strong>Source:</strong> Reuters Top News<br><strong>Summary:</strong> Economic data shows that consumer price inflation in the United States accelerated further during the month of October. The continued rise in price levels adds ongoing pressure on consumer purchasing power and central bank interest rate decisions.<br><strong>Key Theme:</strong> Inflation<br>---</div>
+        </div>
+        
+        <div class="story">
+            <h2>Kemi savages Burnham for letting TikTokkers use No10 to talk about white women like &#x27;cheap meat&#x27; - but PM REFUSES to apologise saying he prefers influencers to Tory MPs</h2>
+            <div class="story-body"><strong>Source:</strong> Daily Mail UK<br><strong>Summary:</strong> Conservative Party leader Kemi Badenoch criticized Downing Street after social media influencers invited to an official event posted controversial footage online. The Prime Minister declined to apologize, defending the outreach to content creators over political opponents.<br><strong>Key Theme:</strong> UK Politics<br>---</div>
+        </div>
+        
+        <div class="story">
+            <h2>Raheem Sterling avoids jail for £270,000 Lamborghini crash: England star handed suspended prison sentence after telling court he underwent 12-day rehab stint for laughing gas &#x27;problem&#x27;</h2>
+            <div class="story-body"><strong>Source:</strong> Daily Mail UK<br><strong>Summary:</strong> English footballer Raheem Sterling received a suspended prison sentence for dangerous driving and nitrous oxide possession following a £270,000 vehicle crash. The court spared the athlete immediate jail time after evidence showed he completed a 12-day rehabilitation program to address substance use.<br><strong>Key Theme:</strong> Legal / Sports<br>---</div>
+        </div>
+        
+        <div class="story">
+            <h2>Nasdaq tumbles 4% as Nvidia leads AI sell-off, inflation and tariffs weigh on investors</h2>
+            <div class="story-body"><strong>Source:</strong> New York Post<br><strong>Summary:</strong> The Nasdaq composite index dropped 4% following a sharp sell-off in artificial intelligence technology stocks, led by an 8.3% decline in Nvidia share values. Investor anxiety was heightened by macroeconomic pressures including lingering inflation and concerns over proposed international trade tariffs.<br><strong>Key Theme:</strong> Stock Market<br>---</div>
+        </div>
+        
+        <div class="story">
+            <h2>TV news hourly summary · Nov 25, 16:03 UTC</h2>
+            <div class="story-body"><strong>Source:</strong> Internet Archive TV News<br><strong>Summary:</strong> A news summary highlights global developments including proposed U.S. tariffs targeting China, the EU, and other trade partners, as well as an upcoming 26% energy bill increase for 20 million UK households. Additionally, UK retailer Poundland faces economic collapse putting 11,000 jobs at risk, alongside reports of severe flooding in the San Francisco Bay Area.<br><strong>Key Theme:</strong> News Digest</div>
+        </div>
+        
+        </main>
+
+        
+        <div class='section-title'>Global &amp; Alternative RSS Feeds</div><div class='segmented-grid'>
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/articles/cmx27g533zwyo?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>Russia&#x27;s own figures show it has lost nearly 500,000 people in Ukraine war</a></h3>
+                <p>Leaked data reveal how the full-scale invasion of Ukraine has fundamentally changed mortality patterns in Russia....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/articles/cw24e17v9e51o?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>My family were killed in Ukraine. My mum blamed Zelensky&#x27;s troops - the truth is complicated</a></h3>
+                <p>BBC journalist Anastasiya Gribanova investigates who killed her father and grandparents in the war....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/articles/cw8dv112r5gmo?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>Close-up images to be revealed of asteroid deliberately hit to test ability to protect Earth</a></h3>
+                <p>The mission is studying an asteroid deliberately knocked off course by a colliding spacecraft....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMitgFBVV95cUxQM05VWXNudnhTWW1BY2VFUHpZRzdNSjU4TG1Ob3NYZTRKM0tNUWNGQmxyNEp6NW0yTEJWaTZabF9UNW9CUUZTclBhaGpnQmZ6WVRZTVhqS3dpOTBsZEtaOGZnMzFPQlR5MDRpZThJNmU0cXc5Q0trMDNhdWtxVjV4V1lMYzYyR1RHU0lBNDdWZDlzOWxBN1J1Wm0xWlJkNEVMaVNXUXdQcTRuUHlvczlnMTd1VGRWQQ?oc=5' target='_blank' rel='noopener'>EXCLUSIVE: Boehly signs US-backed share swap deal to buy Lukoil global assets - Reuters</a></h3>
+                <p>EXCLUSIVE: Boehly signs US-backed share swap deal to buy Lukoil global assets Reuters...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMihgFBVV95cUxNalBrRjhRWHdhRDduMzduLU1kN1lGVFpzNFllX0RzdjJXMjdtajRZS1l1dms2MFJFbkhJQmx3Qzgydi1nTTJnQ1JPLUtoa1R5LWZjWjItUXJhXzhoZG51NU9ENzVBQjVSZWFpdHlqbV9PSkVncWtjUlptdXhjd0ZKRXZ6d2Y1dw?oc=5' target='_blank' rel='noopener'>US inflation rises further in October - Reuters</a></h3>
+                <p>US inflation rises further in October Reuters...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMivgFBVV95cUxOcjZ1MUw5RG5fdk0tUjNTRFNIRzl5amR0VklFSzdTOUlUS2hxNWk5aV9xcm5VWmQtZGRkdXVKMWZ3Um5qZHluSFp4MGNIdHNETlZPck1RcmJmUC1oZHFtWFdYT29PbkdjUU1IbjQyWE9GRFJZdXFwTVFRMEtDcl81bXpDS3RHSHNka3VSbGlHNmNFV09uMTE1aExBRVkxUldZUmpwX3hYdGduS1BJcW1QRlY4ZjdyYkZyWTI0dVBB?oc=5' target='_blank' rel='noopener'>Trump unveils new tariffs to fight excess factory capacity, undeterred by midterms defeat - Reuters</a></h3>
+                <p>Trump unveils new tariffs to fight excess factory capacity, undeterred by midterms defeat Reuters...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/news/article-16320621/Burnham-swipes-talking-influencers-MPs-dodges-EU-reset-ahead-doesnt-cave-student-tuition-fee-demands.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>Kemi savages Burnham for letting TikTokkers use No10 to talk about white women like &#x27;cheap meat&#x27; - but PM REFUSES to apologise saying he prefers influencers to Tory MPs</a></h3>
+                <p>Kemi Badenoch lashed out at grim footage posted from Downing Street by the PM&#x27;s guests at a reception for influencers....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/sport/football/article-16320565/Raheem-Sterling-arrives-court-drug-driving.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>Raheem Sterling avoids jail for £270,000 Lamborghini crash: England star handed suspended prison sentence after telling court he underwent 12-day rehab stint for laughing gas &#x27;problem&#x27;</a></h3>
+                <p>Raheem Sterling has been given a suspended prison sentence for dangerous driving and possession of nitrous oxide - avoiding prison time after it was revealed he spent 12 days in rehab....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/news/article-15334721/Furries-porn-chatrooms-young-men-kill-CLARE-FOGES.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>Furries, &#x27;gooning&#x27; and &#x27;muscle mommies&#x27;: What really goes on in the porn chatrooms that have broken so many brains - and caused real-life sex to plummet. Special report by CLARE FOGES</a></h3>
+                <p>If the Covid Inquiry is looking for anything else to add to its expensive agenda, it might reflect on this: how pandemic-era boys cooped up in their bedrooms got hooked on the worst of the internet....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>New York Post</div>
+                <h3><a href='https://nypost.com/2026/11/25/business/nasdaq-tumbles-4-as-nvidia-leads-ai-sell-off-inflation-and-tariffs-weigh-on-investors/' target='_blank' rel='noopener'>Nasdaq tumbles 4% as Nvidia leads AI sell-off, inflation and tariffs weigh on investors</a></h3>
+                <p>Nvidia fell 8.3% as the boost from CEO Jensen Huang’s surprising reinstatement faded....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>New York Post</div>
+                <h3><a href='https://nypost.com/2026/11/25/lifestyle/sweeping-runway-directive-could-cause-thanksgiving-travel-delays/' target='_blank' rel='noopener'>This sweeping flight change hits just before Thanksgiving chaos. Here’s what to know</a></h3>
+                <p>This puts the &quot;line&quot; in airline....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>New York Post</div>
+                <h3><a href='https://pagesix.com/2026/11/25/entertainment/ariana-grande-shades-ex-manager-scooter-braun-about-not-feeling-safe-to-create-music/' target='_blank' rel='noopener'>Ariana Grande shades ex-manager Scooter Braun as she reveals why she didn’t feel ‘safe’ to create music</a></h3>
+                <p>Grande parted ways with Braun in 2023 after ten years of working together....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/if-you-thought-what-they-did-ivermectin-was-19/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=if-you-thought-what-they-did-ivermectin-was-19' target='_blank' rel='noopener'>If You Thought What They Did to Ivermectin Was Bad, Wait Till You Hear What They Did to DMSO</a></h3>
+                <p>DMSO is widely discussed online, but evidence varies sharply by use. Here is what is established, what remains experimental and why it is not a proven cancer treatment....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/if-you-thought-what-they-did-ivermectin-was-18/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=if-you-thought-what-they-did-ivermectin-was-18' target='_blank' rel='noopener'>If You Thought What They Did to Ivermectin Was Bad, Wait Till You Hear What They Did to DMSO</a></h3>
+                <p>DMSO is widely discussed online, but evidence varies sharply by use. Here is what is established, what remains experimental and why it is not a proven cancer treatment....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/dmso-what-evidence-actually-says-about-its-medical-6/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=dmso-what-evidence-actually-says-about-its-medical-6' target='_blank' rel='noopener'>DMSO: What the Evidence Actually Says About Its Medical Uses</a></h3>
+                <p>DMSO is widely discussed online, but evidence varies sharply by use. Here is what is established, what remains experimental and why it is not a proven cancer treatment....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/11/25/the-plague-of-sports-gambling-threatens-to-swallow-up-a-whole-generation-of-men/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=the-plague-of-sports-gambling-threatens-to-swallow-up-a-whole-generation-of-men' target='_blank' rel='noopener'>The Plague Of Sports Gambling Threatens To Swallow Up A Whole Generation Of Men</a></h3>
+                <p>Cracking down on vice, especially when that vice has a detrimental effect on society at large, is not anti-American....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/11/25/for-crying-out-loud-bring-back-the-washington-redskins/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=for-crying-out-loud-bring-back-the-washington-redskins' target='_blank' rel='noopener'>For Crying Out Loud, Bring Back The Washington Redskins</a></h3>
+                <p>There was never a legitimate reason to ditch the Redskins in the first place....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/11/25/this-year-im-thankful-for-that-famous-j-d-vance-tweet-about-iran/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=this-year-im-thankful-for-that-famous-j-d-vance-tweet-about-iran' target='_blank' rel='noopener'>This Year, I’m Thankful For That Famous J.D. Vance Tweet About Iran</a></h3>
+                <p>We now know who&#x27;s being honest about the state of the Republican Party and who&#x27;s willing to hand the entire country over to Democrats....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/fearless/nfl-commissioner-washington-redskins-commanders' target='_blank' rel='noopener'>NFL commissioner calls team &#x27;Redskins&#x27; just seconds into Commanders event speech in DC</a></h3>
+                <p>Calls for the NFL&#x27;s Washington Commanders to return to the &quot;Redskins&quot; moniker have been mounting, and it seems like the topic has been on the NFL commissioner&#x27;s mind. During an eve...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/tech/silicon-valley-s-latest-cult-is-a-wake-up-call-for-christians' target='_blank' rel='noopener'>Silicon Valley&#x27;s latest cult is a wake-up call for Christians</a></h3>
+                <p>When you think of a Buddhist monk, you likely imagine a serene figure in saffron robes and sandals, contemplating the mysteries of the universe, detached from earthly possessions and entirely unintere...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/news/chicago-coffee-shop-boycott-ice' target='_blank' rel='noopener'>Coffee shop faces boycott, worker walkout, and vandalism over alleged ties to ICE</a></h3>
+                <p>A popular coffee shop in Chicago, Illinois, is facing an onslaught of criticism after a post on social media claimed the owner is married to an Immigration and Customs Enforcement officer. The website...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/mark-judge/2026/11/25/red-christmas-holidays-with-the-anti-communist-film-festival-n3821329' target='_blank' rel='noopener'>Red Christmas: Holidays With the Anti-Communist Film Festival</a></h3>
+                <p>Red Christmas: Holidays With the Anti-Communist Film Festival...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/headlines/2026/11/25/heavy-rain-damaging-winds-to-slam-east-coast-as-powerful-storms-target-holiday-travel-n3821313' target='_blank' rel='noopener'>Heavy Rain, Damaging Winds to Slam East Coast as Powerful Storms Target Holiday Travel</a></h3>
+                <p>Heavy Rain, Damaging Winds to Slam East Coast as Powerful Storms Target Holiday Travel...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/david-strom/2026/11/25/when-i-win-democracy-is-healthy-when-i-lose-its-fascism-n3821361' target='_blank' rel='noopener'>When I Win, Democracy Is Healthy; When I Lose, It&#x27;s Fascism</a></h3>
+                <p>When I Win, Democracy Is Healthy; When I Lose, It&#x27;s Fascism...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Judicial Watch</div>
+                <h3><a href='https://www.judicialwatch.org/unsealed-ilhan-omar-search-warrant-cites-alleged-immigration-fraud-dating-back-to-1980-crimes-over-decades/' target='_blank' rel='noopener'>Unsealed Ilhan Omar search warrant cites alleged immigration fraud dating back to 1980: ‘Crimes over...</a></h3>
+                <p>WASHINGTON — A heavily redacted search warrant executed at the DC home of Rep. Ilhan Omar was unsealed…...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Judicial Watch</div>
+                <h3><a href='https://www.judicialwatch.org/investigators-claim-us-probing-whether-ilhan-omar-has-committed-crimes-spanning-decades/' target='_blank' rel='noopener'>Investigators claim US probing whether Ilhan Omar has committed crimes spanning decades</a></h3>
+                <p>A federal judge authorized the release Monday night of documents related to the government’s probe into Minnesota Democratic…...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Judicial Watch</div>
+                <h3><a href='https://www.judicialwatch.org/judicial-watch-victory-ilhan-omar-search-warrant-records-unsealed/' target='_blank' rel='noopener'>Judicial Watch Victory: Ilhan Omar Search Warrant Records Unsealed</a></h3>
+                <p>(Washington, DC) – Judicial Watch announced the unsealing of search warrant records from the October 12 search of…...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/11/famous-for-one-thing-trusted-on-everything/' target='_blank' rel='noopener'>Famous for One Thing, Trusted on Everything</a></h3>
+                <p>Photo Credit: ChatGPT By Reza Abazari The problem is not that famous people speak. The problem is that we carry their fame from one subject to every other subject....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/11/on-campus-professors-are-shutting-down-debate-in-favor-of-hate/' target='_blank' rel='noopener'>On Campus, Professors Are Shutting Down Debate In Favor Of Hate</a></h3>
+                <p>Photo Credit: AI for American Thinker By Susan D. Harris While students are still willing to discuss ideas, one Cornell professor exemplifies academia’s general refusal to debate, at least when it com...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/11/it-s-time-to-rebuild-the-denmark-u-s-relationship/' target='_blank' rel='noopener'>It&#x27;s Time To Rebuild The Denmark-U.S. Relationship</a></h3>
+                <p>Photo Credit: US-Denmark crossed flags against blue sky Grok, ai-generated illustration By Stephen Helgesen It would be good if both countries get to know each other better....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMiREFVX3lxTFBSU2dZLXZaX21HbzlKWGxkWnM1eEQwNEZ3VE4xUkJFWFJWSkJ3d0pSY2c4MTBKZXctUXdyWWdicWJQaklP?oc=5' target='_blank' rel='noopener'>The Epoch Times | Breaking News, Latest News, World News and Videos - The Epoch Times</a></h3>
+                <p>The Epoch Times | Breaking News, Latest News, World News and Videos The Epoch Times...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMivgFBVV95cUxPWXpCMUhWdnE0bmNzVEktMW1ZbjdSSkRIRnhCWkMzX1BnMmloWmY5emxCQkY0cXZEWlV5NkNNYmc2Y2l5TXkyOG9LSHdNRmRSRmQ3VDhreEJ0QmxGQlhPRVZ4X0dHMnhaTXNFQTF5UVBDdU5tNFRpcWZ6VzBNZ0t4S1BJOXBIcW1vVVFlWDBEV1FmS2Q0dzBhX3BqbjF0bHFmTVNPSk90dDc3QVZBd21MeWJJd01hSXpJWlJLeW5n?oc=5' target='_blank' rel='noopener'>Medicare Announces Lower Prices for 13 Drugs, to Cut Annual Spending by $9 Billion - The Epoch Times</a></h3>
+                <p>Medicare Announces Lower Prices for 13 Drugs, to Cut Annual Spending by $9 Billion The Epoch Times...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMiT0FVX3lxTE9YbnpEMWNuUzFKLVJJUVVBTWhMSTVpNTRTQWFyQnc4Sk9TR0pBeWJFQTI0OGNrRXdqVGlRV2U1UUM2Q3h2c3NPNVhWd3lBaG8?oc=5' target='_blank' rel='noopener'>Epoch Games | Play Free &amp; Exciting Games Online - The Epoch Times</a></h3>
+                <p>Epoch Games | Play Free &amp; Exciting Games Online The Epoch Times...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Internet Archive TV News (hourly summary)</div>
+                <h3><a href='https://mastodon.archive.org/@tv/117677921729243198' target='_blank' rel='noopener'>TV news hourly summary · Nov 25, 16:03 UTC</a></h3>
+                <p>The U.S. Army detonated unstable explosives in Iowa. Most UK energy bills are set to rise 26%, affecting 20 million households, with wars cited as a cause. The U.S. proposed new tariffs on China, the ...</p>
+            </div>
+            </div>
+
+        <footer>
+            Automated Segmented Pipeline powered by HTML Scrapers, 11 Global RSS Feeds &amp; Google Gemini AI &bull; 2026-11-25
+        </footer>
+    </div>
+</body>
+</html>

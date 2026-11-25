@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-11-25",
+    "timestamp": "2026-11-25T16:46:07.683713+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "Russia's own figures show it has lost nearly 500,000 people in Ukraine war",
+      "My family were killed in Ukraine. My mum blamed Zelensky's troops - the truth is complicated",
+      "EXCLUSIVE: Boehly signs US-backed share swap deal to buy Lukoil global assets - Reuters",
+      "US inflation rises further in October - Reuters",
+      "Kemi savages Burnham for letting TikTokkers use No10 to talk about white women like 'cheap meat' - but PM REFUSES to apologise saying he prefers influencers to Tory MPs"
+    ],
+    "archive_html_path": "data/archive/2026-11-25/index.html",
+    "data_json_path": "data/archive/2026-11-25/data.json"
+  },
+  {
     "date": "2026-11-24",
     "timestamp": "2026-11-24T17:00:17.978143+00:00",
     "stories_count": 8,
