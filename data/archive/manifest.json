@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-11-26",
+    "timestamp": "2026-11-26T16:21:31.512435+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "German boat dealer suspected of supplying Channel smuggling gangs, BBC finds",
+      "Watch: BBC confronts German man suspected of supplying migrant gangs with small boats",
+      "EXCLUSIVE: Trump official floated ceding Guyanese territory to Venezuela, sources say - Reuters",
+      "Anthropic IPO to mint thousands of millionaires - Reuters",
+      "Husband who admitted drugging and raping his wife over 20 years told jurors he feels 'guilt and shame for the pain I've caused'"
+    ],
+    "archive_html_path": "data/archive/2026-11-26/index.html",
+    "data_json_path": "data/archive/2026-11-26/data.json"
+  },
+  {
     "date": "2026-11-25",
     "timestamp": "2026-11-25T16:46:07.683713+00:00",
     "stories_count": 8,

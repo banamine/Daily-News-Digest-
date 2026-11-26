@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Intelligence Briefing – 2026-11-26</title>
+    <style>
+        :root {
+            --bg: #0f1115;
+            --card: #1a1d24;
+            --text: #e6e8ec;
+            --muted: #9ba1ad;
+            --accent: #3b82f6;
+            --border: #2a2e38;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; padding: 2rem 1rem; }
+        .container { max-width: 960px; margin: 0 auto; }
+        header { text-align: center; margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+        header h1 { font-size: 2.2rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 0.4rem; color: #ffffff; }
+        header .date { color: var(--accent); font-size: 1rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+        
+        .hero-image { width: 100%; border-radius: 16px; overflow: hidden; margin-bottom: 2.5rem; box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6); border: 1px solid var(--border); background: #0b0f19; }
+        
+        /* Flexible Photo Collage Component */
+        .collage-wrapper { position: relative; width: 100%; }
+        .collage-header-pill {
+            position: absolute; top: 14px; left: 14px; z-index: 10;
+            background: rgba(15, 23, 42, 0.88); backdrop-filter: blur(8px);
+            border: 1px solid rgba(56, 189, 248, 0.35); color: #38bdf8;
+            padding: 5px 12px; border-radius: 999px; font-size: 11px; font-weight: 800;
+            letter-spacing: 0.5px; display: flex; align-items: center; gap: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        }
+        .collage-container {
+            display: grid; gap: 8px; background: #090d16; padding: 8px; border-radius: 16px; min-height: 280px;
+        }
+        .collage-container.collage-count-1 { grid-template-columns: 1fr; grid-template-rows: 360px; }
+        .collage-container.collage-count-1 .hero-tile { grid-row: auto; }
+
+        .collage-container.collage-count-2 { grid-template-columns: 1fr 1fr; grid-template-rows: 320px; }
+        .collage-container.collage-count-2 .hero-tile { grid-row: auto; }
+
+        .collage-container.collage-count-3 { grid-template-columns: 1.6fr 1fr; grid-template-rows: 170px 170px; }
+        .collage-container.collage-count-3 .hero-tile { grid-row: span 2; }
+
+        .collage-container.collage-count-4 { grid-template-columns: 1.6fr 1fr 1fr; grid-template-rows: 170px 170px; }
+        .collage-container.collage-count-4 .hero-tile { grid-row: span 2; }
+        .collage-container.collage-count-4 .collage-tile:nth-child(4) { grid-column: span 2; }
+
+        .collage-container.collage-count-5 { grid-template-columns: 1.8fr 1fr 1fr; grid-template-rows: 180px 180px; }
+        .collage-container.collage-count-5 .hero-tile { grid-row: span 2; }
+
+        @media (max-width: 768px) {
+            .collage-container,
+            .collage-container.collage-count-2,
+            .collage-container.collage-count-3,
+            .collage-container.collage-count-4,
+            .collage-container.collage-count-5 {
+                grid-template-columns: 1fr; grid-template-rows: auto;
+            }
+            .collage-tile, .hero-tile { min-height: 180px; }
+        }
+        .collage-tile {
+            position: relative; border-radius: 10px; overflow: hidden; background: #131927;
+            border: 1px solid rgba(255, 255, 255, 0.08); transition: transform 0.3s ease;
+        }
+        .collage-tile.hero-tile { grid-row: span 2; }
+        .collage-tile img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
+        .collage-tile:hover img { transform: scale(1.06); }
+        .collage-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(to top, rgba(11, 15, 23, 0.95) 0%, rgba(11, 15, 23, 0.2) 60%, transparent 100%);
+            display: flex; flex-direction: column; justify-content: flex-end; padding: 12px;
+        }
+        .collage-badge {
+            align-self: flex-start; background: rgba(56, 189, 248, 0.2); color: #38bdf8;
+            border: 1px solid rgba(56, 189, 248, 0.4); font-size: 10px; font-weight: 700;
+            text-transform: uppercase; padding: 2px 8px; border-radius: 999px; margin-bottom: 6px;
+        }
+        .collage-badge.hero-badge { background: rgba(16, 185, 129, 0.2); color: #34d399; border-color: rgba(16, 185, 129, 0.4); }
+        .collage-title { color: #ffffff; font-size: 12px; font-weight: 700; line-height: 1.35; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        .hero-tile .collage-title { font-size: 17px; }
+
+        .stories { display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 3rem; }
+        .story { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem; }
+        .story h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: #f1f3f5; }
+        .story-body { color: var(--muted); font-size: 0.98rem; overflow-wrap: anywhere; word-break: break-word; }
+        .story h2, .mini-card h3, .mini-card p { overflow-wrap: anywhere; }
+        .container { min-width: 0; max-width: 100%; }
+        .section-title { font-size: 1.3rem; font-weight: 800; color: var(--accent); margin: 2rem 0 1rem; border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; }
+        .segmented-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
+        .mini-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+        .mini-card.scraped { border-left: 3px solid #8b5cf6; }
+        .mini-card.rss { border-left: 3px solid #3b82f6; }
+        .source-tag { font-size: 0.75rem; font-weight: bold; color: var(--accent); margin-bottom: 0.4rem; }
+        .mini-card h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.4rem; }
+        .mini-card h3 a { color: #f1f3f5; text-decoration: none; }
+        .mini-card h3 a:hover { text-decoration: underline; color: var(--accent); }
+        .mini-card p { font-size: 0.82rem; color: var(--muted); line-height: 1.4; }
+        footer { text-align: center; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="date">2026-11-26</div>
+            <h1>Daily Intelligence Briefing</h1>
+        </header>
+
+        <div class="hero-image">
+            
+                
+    <div class="collage-wrapper">
+        <div class="collage-header-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7"/><path d="M16 5h5v5"/><path d="m21 5-9 9"/></svg>
+            <span>Parsed Feeds Mixed Photo Collage (5 Photos)</span>
+        </div>
+        <div class="collage-container collage-count-5">
+            <div class="collage-tile hero-tile">
+                <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/b4ee/live/c6384f50-e984-11f1-99b6-a35a62fa4264.png" alt="German boat dealer suspected of supplying Channel smuggling gangs, BBC finds" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+                <div class="collage-overlay">
+                    <span class="collage-badge hero-badge">BBC World News</span>
+                    <h3 class="collage-title hero-title">German boat dealer suspected of supplying Channel smuggling gangs, BBC finds</h3>
+                </div>
+            </div>
+            
+        <div class="collage-tile">
+            <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/db1b/live/69c522b0-e962-11f1-a094-5fdc692f3e33.jpg" alt="Watch: BBC confronts German man suspected of supplying migrant gangs with small boats" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">BBC World News</span>
+                <h4 class="collage-title">Watch: BBC confronts German man suspected of supplying migrant gangs with small boats</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3e73/live/33d0e9f0-e99e-11f1-b880-15b494ba858d.jpg" alt="Diesel tanker carrying up to 7,000 tonnes capsizes near Ibiza, killing one" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">BBC World News</span>
+                <h4 class="collage-title">Diesel tanker carrying up to 7,000 tonnes capsizes near Ibiza, killing one</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="EXCLUSIVE: Trump official floated ceding Guyanese territory to Venezuela, sources say - Reuters" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">Reuters Top News</span>
+                <h4 class="collage-title">EXCLUSIVE: Trump official floated ceding Guyanese territory to Venezuela, sources say - Reuters</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Anthropic IPO to mint thousands of millionaires - Reuters" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">Reuters Top News</span>
+                <h4 class="collage-title">Anthropic IPO to mint thousands of millionaires - Reuters</h4>
+            </div>
+        </div>
+        
+        </div>
+    </div>
+    
+            
+        </div>
+
+        <main class="stories">
+            
+        <div class="story">
+            <h2>German boat dealer suspected of supplying Channel smuggling gangs, BBC finds</h2>
+            <div class="story-body"><strong>Source:</strong> BBC World News<br><strong>Summary:</strong> A BBC investigation revealed that a German boat dealer is suspected of supplying equipment to people-smuggling syndicates operating across the English Channel. Nearly a third of small-boat crossings in early 2026 allegedly utilized vessels or engines sourced directly from the dealer&#x27;s business.<br><strong>Key Theme:</strong> Human Trafficking<br>---</div>
+        </div>
+        
+        <div class="story">
+            <h2>BBC confronts German man suspected of supplying migrant gangs with small boats</h2>
+            <div class="story-body"><strong>Source:</strong> BBC World News<br><strong>Summary:</strong> BBC reporters confronted Marvin Reuter, a German national accused of providing equipment to migrant-smuggling networks. Reuter is currently fighting extradition to France, where he faces potential charges including criminal conspiracy, human smuggling, and involuntary manslaughter.<br><strong>Key Theme:</strong> Law Enforcement<br>---</div>
+        </div>
+        
+        <div class="story">
+            <h2>EXCLUSIVE: Trump official floated ceding Guyanese territory to Venezuela, sources say</h2>
+            <div class="story-body"><strong>Source:</strong> Reuters Top News<br><strong>Summary:</strong> A former official in the Trump administration reportedly suggested ceding a portion of Guyana&#x27;s territory to Venezuela during discussions on regional diplomacy, according to sources speaking to Reuters. The proposal was allegedly raised to resolve long-standing territorial disputes in South America, representing a notable departure from standard U.S. foreign policy.<br><strong>Key Theme:</strong> Foreign Policy<br>---</div>
+        </div>
+        
+        <div class="story">
+            <h2>Anthropic IPO to mint thousands of millionaires</h2>
+            <div class="story-body"><strong>Source:</strong> Reuters Top News<br><strong>Summary:</strong> Artificial intelligence firm Anthropic is moving toward an initial public offering that is projected to yield massive financial returns for early employees and backers. The stock market debut is expected to create thousands of millionaires among the company&#x27;s equity holders.<br><strong>Key Theme:</strong> Business / Technology<br>---</div>
+        </div>
+        
+        <div class="story">
+            <h2>Husband who admitted drugging and raping his wife over 20 years told jurors he feels &#x27;guilt and shame&#x27;</h2>
+            <div class="story-body"><strong>Source:</strong> Daily Mail UK<br><strong>Summary:</strong> A man on trial after admitting to drugging and raping his wife over a 20-year period expressed guilt and shame while addressing the jury. The statement came during court proceedings evaluating the extent of the long-running domestic abuse and criminal charges against him.<br><strong>Key Theme:</strong> Criminal Justice<br>---</div>
+        </div>
+        
+        <div class="story">
+            <h2>More humiliation for Andy Burnham as another influencer dances to sexist song on steps of Downing Street</h2>
+            <div class="story-body"><strong>Source:</strong> Daily Mail UK<br><strong>Summary:</strong> Fashion influencer Felicia Pennant drew public scrutiny after sharing a video of herself dancing to a controversial song outside 10 Downing Street. Pennant later acknowledged on social media that the track was inappropriate for the location, though she chose to post the clip regardless.<br><strong>Key Theme:</strong> Social Media<br>---</div>
+        </div>
+        
+        <div class="story">
+            <h2>FDA recalls Ibuprofen over fears hidden metal particles will irritate intestines</h2>
+            <div class="story-body"><strong>Source:</strong> New York Post<br><strong>Summary:</strong> Golden State Medical Supply has issued a voluntary recall for a single lot of prescription-strength ibuprofen tablets following safety notices. The recall was prompted by concerns that tiny metal foreign particles inside the pills could cause physical irritation or damage to patients&#x27; digestive systems.<br><strong>Key Theme:</strong> Public Health<br>---</div>
+        </div>
+        
+        <div class="story">
+            <h2>TV news hourly summary · Nov 26, 16:03 UTC</h2>
+            <div class="story-body"><strong>Source:</strong> Internet Archive TV News<br><strong>Summary:</strong> An hourly news roundup highlighted key global developments, including UK net migration reaching its lowest level since 1997 and ongoing EU summits regarding financial aid for Ukraine. The summary also noted severe Thanksgiving storm warnings along the U.S. East Coast, alongside updates on Israeli strikes in Gaza and new UK legal protections for stalking victims.<br><strong>Key Theme:</strong> Global Overview</div>
+        </div>
+        
+        </main>
+
+        
+        <div class='section-title'>Global &amp; Alternative RSS Feeds</div><div class='segmented-grid'>
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/articles/cqlymky8kpzjo?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>German boat dealer suspected of supplying Channel smuggling gangs, BBC finds</a></h3>
+                <p>Nearly a third of crossings in early 2026 allegedly involved boats or engines from the German man&#x27;s firm....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/videos/cvglrz5yr79go?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>Watch: BBC confronts German man suspected of supplying migrant gangs with small boats</a></h3>
+                <p>Marvin Reuter is contesting extradition to France, where he could face smuggling, criminal conspiracy and involuntary manslaughter charges....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/articles/c9gklryvj24do?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>Diesel tanker carrying up to 7,000 tonnes capsizes near Ibiza, killing one</a></h3>
+                <p>The possible environmental damage is still being assessed by Spain&#x27;s sea rescue service....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMivgFBVV95cUxQVnB0WnNKdXV5b0F3V0djaHNNT1JkMGoyVGlmZ2M0anZxRDFRNUEwNDFsS0EtY0VDTmRWSUlCeVNhNWpTZk80SFVGVzR0d1dRbHFRMjlmV2VCSUl0cENEYUx2MGJFckt1TV82S0ljVkdLREllQ2RMZ0RENjluQk43aE9FWHR0eHlTNmxZa2RweU4wY2F0ZXhKU25ENHpoTi15WkdZU2hhZXdUZVJFOUlTQlFhdTFJeTNuTWlxdzZR?oc=5' target='_blank' rel='noopener'>EXCLUSIVE: Trump official floated ceding Guyanese territory to Venezuela, sources say - Reuters</a></h3>
+                <p>EXCLUSIVE: Trump official floated ceding Guyanese territory to Venezuela, sources say Reuters...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMipgFBVV95cUxOdW1QU3VfRndFeVFEODFZbWVTcUVkcE1CelRpYmJWZ0FleXRVd3EwbjFXeHRmbUJQUDBsQXFQc21iVjdCRHFscy1qQjZWeWhIMnF6d0NBR3gxQmRERFdyLXBDNFFpZDQtY05mT3REaThpVWdVSVQzLUtmOUpweHZmc0dvWEFjbmpxWDdadjNzaFI4ajNmNUZsVVlhb05hWm5qRFdNTV9R?oc=5' target='_blank' rel='noopener'>Anthropic IPO to mint thousands of millionaires - Reuters</a></h3>
+                <p>Anthropic IPO to mint thousands of millionaires Reuters...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMiqwFBVV95cUxQV1VHOTlUSTlCVmhEY0dIdi11T2tlc2xPMG16MHhDWkl0SnlBVFl0cHNiZlVPaEtNRERzYXJGa28yUG9DSVZobFBicGFwcXBUWG1icU1RSzYtRUpNV3V4YU1uNkVkNGtQN0tJOVpTMExic1VCMWIxMzhUZm5ISjN4eWJoRFBmSzhZM0x0YlJIRjBJYWJsNlF5WUMxN3NsUE9pWndFLVhTcG1saUE?oc=5' target='_blank' rel='noopener'>JPMorgan, Visa, Mastercard say third-party vendors targeted in cyberattack - Reuters</a></h3>
+                <p>JPMorgan, Visa, Mastercard say third-party vendors targeted in cyberattack Reuters...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/news/article-16323781/Husband-admitted-drugging-raping-wife-20-years-told-jurors-feels-guilt-shame-pain-Ive-caused.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>Husband who admitted drugging and raping his wife over 20 years told jurors he feels &#x27;guilt and shame for the pain I&#x27;ve caused&#x27;</a></h3>
+                <p>A husband who drugged and raped his wife today told jurors he feels &#x27;guilt and shame for the pain I&#x27;ve caused&#x27;....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/news/article-16321471/Humiliation-Andy-Burnham-influencer-dances-sexist-song-No10.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>More humiliation for Andy Burnham as another influencer dances to sexist song on steps of Downing Street</a></h3>
+                <p>Fashion influencer Felicia Pennant acknowledged on social media that the choice of song was inappropriate for Downing Street but said she &#x27;couldn&#x27;t resist&#x27;....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/tvshowbiz/article-16323821/TikToker-danced-sexist-song-steps-Downing-Street-flown-Australia-10k-business-class-seat-ITV-Im-Celeb-stint-midst-No-10-row.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>TikToker who danced to sexist song on the steps of Downing Street was flown out to Australia on £10k business class seat by ITV for I&#x27;m A Celeb stint in the midst of No 10 row</a></h3>
+                <p>The 27-year-old boarded a Qantas flight to Brisbane last weekend at London&#x27;s Heathrow Airport to star on the spin-off series to the jungle reality programme....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>New York Post</div>
+                <h3><a href='https://nypost.com/2026/11/26/lifestyle/fda-recalls-ibuprofen-over-fears-hidden-metal-particles-will-irritate-intestines/' target='_blank' rel='noopener'>FDA recalls Ibuprofen over fears hidden metal particles will irritate intestines</a></h3>
+                <p>What a pain! If you have a headache or slight pain, you may want to double check your medicine cabinet as Ibuprofen manufacturers just issued a recall. The California-based company — Golden State Medi...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>New York Post</div>
+                <h3><a href='https://nypost.com/2026/11/26/lifestyle/how-scammers-are-preying-on-the-elderly-this-holiday-season/' target='_blank' rel='noopener'>How scammers are preying on the elderly this holiday season — and what to do to protect them</a></h3>
+                <p>Federal authorities warn older Americans face heightened holiday scam risks, with fraudsters targeting victims an average of nine times....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>New York Post</div>
+                <h3><a href='https://pagesix.com/2026/11/26/celebrity-news/khloe-kardashian-makes-shock-lavender-marriage-admission/' target='_blank' rel='noopener'>Khloé Kardashian makes shock marriage admission after demisexuality reveal</a></h3>
+                <p>The mom of two made yet another candid revelation about her dating life during a conversation with influencer Colt Paulsen on Thursday&#x27;s episode of &quot;The Kardashians.&quot;...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/trump-dc-crime-task-force-20000-arrests/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=trump-dc-crime-task-force-20000-arrests' target='_blank' rel='noopener'>President Trump’s D.C. Crime Task Force Blows Past 20,000 Arrests</a></h3>
+                <p>President Trump&#x27;s D.C. Safe and Beautiful Task Force has crossed 20,000 arrests while recovering thousands of illegal firearms....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/early-access-up-25-nobel-prize-winning-ivermectin/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=early-access-up-25-nobel-prize-winning-ivermectin' target='_blank' rel='noopener'>Early Access: Up To 25% Off Nobel Prize-winning Ivermectin, the Medical Emergency Kit and Regenerate</a></h3>
+                <p>Happy Thanksgiving! The Wellness Company just opened early access to its Black Friday sale. Ivermectin and Regenerate are 25% off. […]...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/president-trump-launches-sweeping-new-cyber-defense-protect/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=president-trump-launches-sweeping-new-cyber-defense-protect' target='_blank' rel='noopener'>President Trump Launches Sweeping New Cyber Defense To Protect America’s Critical Infrastructure</a></h3>
+                <p>President Trump launched a government-wide cyber-defense push with new leadership, hundreds of specialists, faster security deadlines and aggressive action against foreign hackers....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/11/26/if-you-dont-know-why-you-should-be-grateful-ask-a-farmer/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=if-you-dont-know-why-you-should-be-grateful-ask-a-farmer' target='_blank' rel='noopener'>If You Don’t Know Why You Should Be Grateful, Ask A Farmer</a></h3>
+                <p>The harvest is completely dependent on our work ethic, learning from experience, and Almighty God&#x27;s protection and care....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/11/26/this-free-new-curriculum-can-revive-love-of-western-civilization-among-american-kids/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=this-free-new-curriculum-can-revive-love-of-western-civilization-among-american-kids' target='_blank' rel='noopener'>This Free New Curriculum Can Revive Love Of Western Civilization Among American Kids</a></h3>
+                <p>Our hope is that schools will start teaching Western civilization once again....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/11/26/johnny-depp-gives-us-an-ebenezer-scrooge-without-redemption/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=johnny-depp-gives-us-an-ebenezer-scrooge-without-redemption' target='_blank' rel='noopener'>Johnny Depp Gives Us An Ebenezer Scrooge Without Redemption</a></h3>
+                <p>In Ti West&#x27;s Ebenezer , the Ghosts do not care what happens to Scrooge. There is no light, no warmth, no real hope....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/shows/the-glenn-beck-program/we-have-survived-thank-you-god-glenn-beck-on-the-forgotten-heart-of-thanksgiving' target='_blank' rel='noopener'>‘We have survived. Thank you, God’: Glenn Beck on the forgotten heart of Thanksgiving</a></h3>
+                <p>Although Thanksgiving is a time for gathering and gratitude, for many families, it doesn’t come without its complications. One of the biggest issues families face today when it comes to holidays is na...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/news/ben-franklin-was-right-fire-the-eagle-hire-the-turkey' target='_blank' rel='noopener'>Ben Franklin was right: Fire the eagle; hire the turkey</a></h3>
+                <p>I like Thanksgiving as much as the next man, but it is missing something. In addition to family and tradition and all of that, we should be celebrating our country’s national bird. Why would we celebr...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/lifestyle/thanksgiving-turkey-is-for-the-birds' target='_blank' rel='noopener'>Thanksgiving turkey is for the birds</a></h3>
+                <p>At some point, Thanksgiving has gone off the tracks. I don’t know when we collectively decided Thanksgiving had to be the most over-the-top spread of dozens of incredibly time-consuming dishes, only f...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/headlines/2026/11/26/president-washingtons-thanksgiving-proclamation-n3821343' target='_blank' rel='noopener'>President Washington&#x27;s Thanksgiving Proclamation</a></h3>
+                <p>President Washington&#x27;s Thanksgiving Proclamation...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/ed-morrissey/2026/11/26/a-happy-and-blessed-thanksgiving-to-all-our-readers-n3821366' target='_blank' rel='noopener'>A Happy and Blessed Thanksgiving to All Our Readers</a></h3>
+                <p>A Happy and Blessed Thanksgiving to All Our Readers...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/headlines/2026/11/25/no-offshoring-of-experts-on-the-butterball-turkey-help-line-real-folks-answer-n3821373' target='_blank' rel='noopener'>No Offshoring of Experts: On the Butterball Turkey Talk-Line, Real Folks Answer</a></h3>
+                <p>No Offshoring of Experts: On the Butterball Turkey Talk-Line, Real Folks Answer...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Judicial Watch</div>
+                <h3><a href='https://www.judicialwatch.org/ilhan-omar-search-warrant-records-released/' target='_blank' rel='noopener'>Ilhan Omar Search Warrant Records Released</a></h3>
+                <p>Unsealed Records Reveal Broad Criminal Probe of Rep. Ilhan Omar Judicial Watch Victory: Ilhan Omar Search Warrant Records…...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Judicial Watch</div>
+                <h3><a href='https://www.judicialwatch.org/unsealed-records-reveal-broad-federal-criminal-probe-of-rep-ilhan-omar-doj-still-withholding-warrant-records-already-in-omars-possession/' target='_blank' rel='noopener'>Judicial Watch: Unsealed Records Reveal Broad Federal Criminal Probe of Rep. Ilhan Omar; DOJ Still W...</a></h3>
+                <p>(Washington, DC) – Judicial Watch announced additional findings today that unsealed court records in its lawsuit over the…...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Judicial Watch</div>
+                <h3><a href='https://www.judicialwatch.org/unsealed-ilhan-omar-search-warrant-cites-alleged-immigration-fraud-dating-back-to-1980-crimes-over-decades/' target='_blank' rel='noopener'>Unsealed Ilhan Omar search warrant cites alleged immigration fraud dating back to 1980: ‘Crimes over...</a></h3>
+                <p>WASHINGTON — A heavily redacted search warrant executed at the DC home of Rep. Ilhan Omar was unsealed…...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/11/thanksgiving-memories-take-me-home/' target='_blank' rel='noopener'>Thanksgiving Memories, Take Me Home</a></h3>
+                <p>Photo Credit: Image via Pexels . Pexels By J.B. Shurk Thanksgiving calls all Americans home....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/11/today-s-crusades-are-being-fought-by-but-one-side/' target='_blank' rel='noopener'>Today’s Crusades Are Being Fought By But One Side</a></h3>
+                <p>Photo Credit: American Thinker By James Zumwalt The Islamization of American continues apace....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/11/thank-you-sir-may-i-have-another/' target='_blank' rel='noopener'>‘Thank You, Sir. May I Have Another?’</a></h3>
+                <p>Photo Credit: AI for American Thinker By Robin M. Itzler Chronically inert Republicans, rather than girding their loins for the 2028 election, seem inclined to beg the Democrats for just a little more...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMivAFBVV95cUxQMG9rSGZOQm41MzV1MmRMTDZHd1czMnE3YzdWaXpyQVlRbjEyQjRQYUduUFdBZ3pEbU1MYWlfSjY1MDhlY0hGSDRSR1U1WE1ja0ljczdyMy1kSV9iekRibThXaGlVejhPMFBKMEhyalF0NnJXR1hPVFJ3TlExRmVodkttbzVTUW9HRzZHeUJueFdUNENydVZKSnVnd0psUzc1bG1KSnlnQVkwV1I1Y09nQ0hZTFhsaVpnMlFuZg?oc=5' target='_blank' rel='noopener'>No Signs of Lead in Atmosphere After Detonation of Lead Azide in Iowa: Officials - The Epoch Times</a></h3>
+                <p>No Signs of Lead in Atmosphere After Detonation of Lead Azide in Iowa: Officials The Epoch Times...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMiREFVX3lxTFBSU2dZLXZaX21HbzlKWGxkWnM1eEQwNEZ3VE4xUkJFWFJWSkJ3d0pSY2c4MTBKZXctUXdyWWdicWJQaklP?oc=5' target='_blank' rel='noopener'>The Epoch Times | Breaking News, Latest News, World News and Videos - The Epoch Times</a></h3>
+                <p>The Epoch Times | Breaking News, Latest News, World News and Videos The Epoch Times...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMipAFBVV95cUxQakVoclhWc3RES2dSaHZwbnBSdW40NWVJWFVrVmlCY3dMdXFFb3JDYVhvdElLNWVBelpwZVBHUVc1UVJnYk9fNzB2N19oTEprejg3Z3NhcnZKQ1F5UTNVVU04N0VrOS1UVk1JN2J1MmNFOVhjWTNTdkR2VjlJeWlHbGlqRlpWUDl0WlAteUN1UnhLQlVGcXpMaUhzSHc0Rm50M2Njeg?oc=5' target='_blank' rel='noopener'>Feds Recover $8 Billion in Largest-Ever Scam Crackdown: Blanche - The Epoch Times</a></h3>
+                <p>Feds Recover $8 Billion in Largest-Ever Scam Crackdown: Blanche The Epoch Times...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Internet Archive TV News (hourly summary)</div>
+                <h3><a href='https://mastodon.archive.org/@tv/117683583987026423' target='_blank' rel='noopener'>TV news hourly summary · Nov 26, 16:03 UTC</a></h3>
+                <p>UK net migration fell to its lowest level since 1997. EU leaders met to discuss Ukraine financing, while a third batch of Mandelson files was published. BBC investigated small-boat crossings. A Thanks...</p>
+            </div>
+            </div>
+
+        <footer>
+            Automated Segmented Pipeline powered by HTML Scrapers, 11 Global RSS Feeds &amp; Google Gemini AI &bull; 2026-11-26
+        </footer>
+    </div>
+</body>
+</html>
