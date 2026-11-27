@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-11-27",
+    "timestamp": "2026-11-27T16:08:56.493488+00:00",
+    "stories_count": 8,
+    "headlines": [
+      "Zelensky criticises 'strange' Trump-Putin friendship in BBC interview",
+      "John Simpson: Ukraine is bowed but still unbroken as freezing weather sets in",
+      "Airline Norse Atlantic's Norwegian operating unit declares bankruptcy - Reuters",
+      "Poland signs contract with Palantir worth $300 mln over 5 years - Reuters",
+      "Meloni warns Kyiv that war 'cannot spread to the Mediterranean' after bombing of Russian warship in Libya"
+    ],
+    "archive_html_path": "data/archive/2026-11-27/index.html",
+    "data_json_path": "data/archive/2026-11-27/data.json"
+  },
+  {
     "date": "2026-11-26",
     "timestamp": "2026-11-26T16:21:31.512435+00:00",
     "stories_count": 8,

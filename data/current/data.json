@@ -1,8 +1,8 @@
 {
-  "last_updated": "2026-11-27T15:13:27.133358+00:00",
+  "last_updated": "2026-11-27T16:08:56.489937+00:00",
   "source": "https://www.alexjoneslive.com/",
   "date": "2026-11-27",
-  "stories_hash": "97d97ce70bfe4e5c87960112aaf66dc5",
+  "stories_hash": "b29420a5dfa5f28172f2cabd1a1e81a0",
   "stories_count": 8,
   "scraped_articles_count": 0,
   "rss_articles_count": 34,
@@ -26,18 +26,18 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/fdee/live/21e805d0-ea60-11f1-99b6-a35a62fa4264.jpg",
-      "scraped_at": "2026-11-27T15:13:23.355174+00:00"
+      "scraped_at": "2026-11-27T16:05:54.978100+00:00"
     },
     {
-      "id": "e45561363fb1",
-      "headline": "Hundreds of thousands still without power after storms hit US on Thanksgiving",
-      "title": "Hundreds of thousands still without power after storms hit US on Thanksgiving",
-      "url": "https://www.bbc.co.uk/news/articles/cre3dj5n7dpwo?at_medium=RSS&at_campaign=rss",
-      "link": "https://www.bbc.co.uk/news/articles/cre3dj5n7dpwo?at_medium=RSS&at_campaign=rss",
-      "excerpt": "Pennsylvania and neighbouring states remain badly affected on Friday after both coasts were lashed with wind and rain.",
-      "summary": "Pennsylvania and neighbouring states remain badly affected on Friday after both coasts were lashed with wind and rain.",
-      "relative_time": "Fri, 27 Nov 2026 14:49:59 GMT",
-      "published": "Fri, 27 Nov 2026 14:49:59 GMT",
+      "id": "f70de9a2af2e",
+      "headline": "John Simpson: Ukraine is bowed but still unbroken as freezing weather sets in",
+      "title": "John Simpson: Ukraine is bowed but still unbroken as freezing weather sets in",
+      "url": "https://www.bbc.co.uk/news/articles/c3pw4yrr8kz9o?at_medium=RSS&at_campaign=rss",
+      "link": "https://www.bbc.co.uk/news/articles/c3pw4yrr8kz9o?at_medium=RSS&at_campaign=rss",
+      "excerpt": "Ukraine settles in for another devastating winter as the questions persists: how will it all end?",
+      "summary": "Ukraine settles in for another devastating winter as the questions persists: how will it all end?",
+      "relative_time": "Fri, 27 Nov 2026 15:18:51 GMT",
+      "published": "Fri, 27 Nov 2026 15:18:51 GMT",
       "author": "BBC World News",
       "feed": "BBC World News",
       "feedName": "BBC World News",
@@ -45,19 +45,19 @@
       "category": "Global",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/318d/live/6be8b890-ea6b-11f1-99b6-a35a62fa4264.jpg",
-      "scraped_at": "2026-11-27T15:13:23.355215+00:00"
+      "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9fca/live/2dd32240-e9b5-11f1-99b6-a35a62fa4264.jpg",
+      "scraped_at": "2026-11-27T16:05:54.978152+00:00"
     },
     {
-      "id": "fb09a8023f56",
-      "headline": "Leaders clash in final Spain election debate as housing dominates run-in",
-      "title": "Leaders clash in final Spain election debate as housing dominates run-in",
-      "url": "https://www.bbc.co.uk/news/articles/ckr5gr4g8gn5o?at_medium=RSS&at_campaign=rss",
-      "link": "https://www.bbc.co.uk/news/articles/ckr5gr4g8gn5o?at_medium=RSS&at_campaign=rss",
-      "excerpt": "The struggle many face in buying a home has been the biggest issue of a bitter campaign.",
-      "summary": "The struggle many face in buying a home has been the biggest issue of a bitter campaign.",
-      "relative_time": "Fri, 27 Nov 2026 06:03:39 GMT",
-      "published": "Fri, 27 Nov 2026 06:03:39 GMT",
+      "id": "4bc8efa4e47d",
+      "headline": "Marching bands scramble to cover costs after Thanksgiving parade rearranged",
+      "title": "Marching bands scramble to cover costs after Thanksgiving parade rearranged",
+      "url": "https://www.bbc.co.uk/news/articles/ckd71ypy9e8eo?at_medium=RSS&at_campaign=rss",
+      "link": "https://www.bbc.co.uk/news/articles/ckd71ypy9e8eo?at_medium=RSS&at_campaign=rss",
+      "excerpt": "Stormy weather in New York City prompted organisers to push back the Macy's parade by two days - leaving some musicians stuck.",
+      "summary": "Stormy weather in New York City prompted organisers to push back the Macy's parade by two days - leaving some musicians stuck.",
+      "relative_time": "Fri, 27 Nov 2026 15:15:19 GMT",
+      "published": "Fri, 27 Nov 2026 15:15:19 GMT",
       "author": "BBC World News",
       "feed": "BBC World News",
       "feedName": "BBC World News",
@@ -65,8 +65,8 @@
       "category": "Global",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/c5a0/live/2d2b3d80-ea39-11f1-a094-5fdc692f3e33.jpg",
-      "scraped_at": "2026-11-27T15:13:23.355243+00:00"
+      "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/4438/live/a0415f90-ea78-11f1-a094-5fdc692f3e33.jpg",
+      "scraped_at": "2026-11-27T16:05:54.978189+00:00"
     },
     {
       "id": "606103d60687",
@@ -86,7 +86,27 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-11-27T15:13:23.490968+00:00"
+      "scraped_at": "2026-11-27T16:05:55.542047+00:00"
+    },
+    {
+      "id": "b8d29310c889",
+      "headline": "Poland signs contract with Palantir worth $300 mln over 5 years - Reuters",
+      "title": "Poland signs contract with Palantir worth $300 mln over 5 years - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPcE9acGJ4ZnNpRGhDSXVvN1lpUWNyQTlJalVfQ25acTN3Q0JuTW9ydHFPb3paNUx4MEQxQUhpSnVfV0xwaEVvblo3NG8xOGtMZHlLdEs0Qi1iSGVhM1RYcVg4ZlhjU0VfYW9ReFk2cU1DdXVWMzVweElzQjkyN0ZZUFZjTDNaZmk4TF9jTnhGZDVDRnRuVWxaaUhxckxQTEJQYVJmTERxRFlGaFpNSGc?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPcE9acGJ4ZnNpRGhDSXVvN1lpUWNyQTlJalVfQ25acTN3Q0JuTW9ydHFPb3paNUx4MEQxQUhpSnVfV0xwaEVvblo3NG8xOGtMZHlLdEs0Qi1iSGVhM1RYcVg4ZlhjU0VfYW9ReFk2cU1DdXVWMzVweElzQjkyN0ZZUFZjTDNaZmk4TF9jTnhGZDVDRnRuVWxaaUhxckxQTEJQYVJmTERxRFlGaFpNSGc?oc=5",
+      "excerpt": "Poland signs contract with Palantir worth $300 mln over 5 years Reuters",
+      "summary": "Poland signs contract with Palantir worth $300 mln over 5 years Reuters",
+      "relative_time": "Fri, 27 Nov 2026 13:09:45 GMT",
+      "published": "Fri, 27 Nov 2026 13:09:45 GMT",
+      "author": "Reuters Top News",
+      "feed": "Reuters Top News",
+      "feedName": "Reuters Top News",
+      "feedId": "2a73bb6c12bf",
+      "category": "Global",
+      "ingestionType": "rss",
+      "sourceGroup": "rss",
+      "imageUrl": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80",
+      "scraped_at": "2026-11-27T16:05:55.542096+00:00"
     },
     {
       "id": "e7ed78fcd9f6",
@@ -106,38 +126,18 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-11-27T15:13:23.491011+00:00"
+      "scraped_at": "2026-11-27T16:05:55.542135+00:00"
     },
     {
-      "id": "c3bd06894d26",
-      "headline": "EXCLUSIVE: Hackers breach US Air Force flagship Cloud One computing platform - Reuters",
-      "title": "EXCLUSIVE: Hackers breach US Air Force flagship Cloud One computing platform - Reuters",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPQnhWb2oyc2Qta3k0bUhwbGZTcWZMREZ0VU41eVNZWDJZTDlBcmMxZzFrLXlmVGJpUHBRbVdBRlNoQU9lWUlIcVpMcXQwWWpyYVJ2eDJQa1ZvNFU5MUFHLWdpQW1BVloyUW5lTUlVSlFpLXJwVHNLMl9fQnBFTTNnemY4Q0JiUkN3SXFndG1pX1l1TmdySFJDOHJlWC1fMnE3cjlaVFB5M1hWbU0?oc=5",
-      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPQnhWb2oyc2Qta3k0bUhwbGZTcWZMREZ0VU41eVNZWDJZTDlBcmMxZzFrLXlmVGJpUHBRbVdBRlNoQU9lWUlIcVpMcXQwWWpyYVJ2eDJQa1ZvNFU5MUFHLWdpQW1BVloyUW5lTUlVSlFpLXJwVHNLMl9fQnBFTTNnemY4Q0JiUkN3SXFndG1pX1l1TmdySFJDOHJlWC1fMnE3cjlaVFB5M1hWbU0?oc=5",
-      "excerpt": "EXCLUSIVE: Hackers breach US Air Force flagship Cloud One computing platform Reuters",
-      "summary": "EXCLUSIVE: Hackers breach US Air Force flagship Cloud One computing platform Reuters",
-      "relative_time": "Fri, 27 Nov 2026 11:46:24 GMT",
-      "published": "Fri, 27 Nov 2026 11:46:24 GMT",
-      "author": "Reuters Top News",
-      "feed": "Reuters Top News",
-      "feedName": "Reuters Top News",
-      "feedId": "2a73bb6c12bf",
-      "category": "Global",
-      "ingestionType": "rss",
-      "sourceGroup": "rss",
-      "imageUrl": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-11-27T15:13:23.491041+00:00"
-    },
-    {
-      "id": "840013a35463",
-      "headline": "'Cancer is a lonely road': Kate reveals how she felt battling the disease in moving new documentary clip as she meets fellow sufferers at support group",
-      "title": "'Cancer is a lonely road': Kate reveals how she felt battling the disease in moving new documentary clip as she meets fellow sufferers at support group",
-      "url": "https://www.dailymail.com/news/royals/article-16326615/Cancer-lonely-road-Kate-reveals-felt-BBC-documentary.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
-      "link": "https://www.dailymail.com/news/royals/article-16326615/Cancer-lonely-road-Kate-reveals-felt-BBC-documentary.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
-      "excerpt": "The BBC documentary Heal sees the Princess of Wales speaking with unprecedented candour about her diagnosis and treatment in early 2024, as well as her ongoing recovery.",
-      "summary": "The BBC documentary Heal sees the Princess of Wales speaking with unprecedented candour about her diagnosis and treatment in early 2024, as well as her ongoing recovery.",
-      "relative_time": "Fri, 27 Nov 2026 15:05:23 GMT",
-      "published": "Fri, 27 Nov 2026 15:05:23 GMT",
+      "id": "1f4fec9dba9a",
+      "headline": "Meloni warns Kyiv that war 'cannot spread to the Mediterranean' after bombing of Russian warship in Libya",
+      "title": "Meloni warns Kyiv that war 'cannot spread to the Mediterranean' after bombing of Russian warship in Libya",
+      "url": "https://www.dailymail.com/news/article-16326607/Meloni-warns-Kyiv-war-spread-Mediterranean-Russian-warship-Libya.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
+      "link": "https://www.dailymail.com/news/article-16326607/Meloni-warns-Kyiv-war-spread-Mediterranean-Russian-warship-Libya.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
+      "excerpt": "Giorgia Meloni confronted Kyiv after Volodymyr Zelensky confirmed on Monday that Ukrainian suicide drones had destroyed the Merkury at a port in Benghazi.",
+      "summary": "Giorgia Meloni confronted Kyiv after Volodymyr Zelensky confirmed on Monday that Ukrainian suicide drones had destroyed the Merkury at a port in Benghazi.",
+      "relative_time": "Fri, 27 Nov 2026 15:56:22 GMT",
+      "published": "Fri, 27 Nov 2026 15:56:22 GMT",
       "author": "Daily Mail UK",
       "feed": "Daily Mail UK",
       "feedName": "Daily Mail UK",
@@ -145,19 +145,19 @@
       "category": "Global",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://i.dailymail.com/1s/2026/11/27/11/112761573-0-image-a-72_1795780306626.jpg",
-      "scraped_at": "2026-11-27T15:13:24.042821+00:00"
+      "imageUrl": "https://i.dailymail.com/1s/2026/11/27/13/112763465-0-image-a-17_1795787276502.jpg",
+      "scraped_at": "2026-11-27T16:05:56.269128+00:00"
     },
     {
-      "id": "69f8bdefdb63",
-      "headline": "Father, 49, died after getting trapped in fake cave at climbing centre for hours during child's birthday party: Cumbria business is fined \u00a367,500",
-      "title": "Father, 49, died after getting trapped in fake cave at climbing centre for hours during child's birthday party: Cumbria business is fined \u00a367,500",
-      "url": "https://www.dailymail.com/news/article-16325385/Father-49-died-trapped-fake-cave-climbing-Cumbria.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
-      "link": "https://www.dailymail.com/news/article-16325385/Father-49-died-trapped-fake-cave-climbing-Cumbria.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
-      "excerpt": "Carl O'Keeffe, 49, suffered fatal crush injuries after he became trapped inside an artificial cave for five hours at King Kong Climbing Centre in Keswick, Cumbria, in April 2023.",
-      "summary": "Carl O'Keeffe, 49, suffered fatal crush injuries after he became trapped inside an artificial cave for five hours at King Kong Climbing Centre in Keswick, Cumbria, in April 2023.",
-      "relative_time": "Fri, 27 Nov 2026 15:02:52 GMT",
-      "published": "Fri, 27 Nov 2026 15:02:52 GMT",
+      "id": "a0f202c1584a",
+      "headline": "F1 boss and his mother sue council and National Highways for \u00a31.1million after tons of 'sludge' from local roads spill into lake at their \u00a32.2million manor house - smothering their lily pads",
+      "title": "F1 boss and his mother sue council and National Highways for \u00a31.1million after tons of 'sludge' from local roads spill into lake at their \u00a32.2million manor house - smothering their lily pads",
+      "url": "https://www.dailymail.com/news/article-16326383/F1-boss-mother-sue-council-National-Highways-1-1million-tons-sludge-local-roads-spill-lake-2-2million-manor-house-smothering-lily-pads.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
+      "link": "https://www.dailymail.com/news/article-16326383/F1-boss-mother-sue-council-National-Highways-1-1million-tons-sludge-local-roads-spill-lake-2-2million-manor-house-smothering-lily-pads.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
+      "excerpt": "Former racing driver and ex-Alpine F1 team chief Oliver Oakes has launched legal action against a council and National Highways over his family property in Norfolk.",
+      "summary": "Former racing driver and ex-Alpine F1 team chief Oliver Oakes has launched legal action against a council and National Highways over his family property in Norfolk.",
+      "relative_time": "Fri, 27 Nov 2026 15:48:13 GMT",
+      "published": "Fri, 27 Nov 2026 15:48:13 GMT",
       "author": "Daily Mail UK",
       "feed": "Daily Mail UK",
       "feedName": "Daily Mail UK",
@@ -165,19 +165,19 @@
       "category": "Global",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://i.dailymail.com/1s/2026/11/27/07/112757455-0-image-a-2_1795766205781.jpg",
-      "scraped_at": "2026-11-27T15:13:24.042881+00:00"
+      "imageUrl": "https://i.dailymail.com/1s/2026/11/27/10/112759987-0-image-a-24_1795775863658.jpg",
+      "scraped_at": "2026-11-27T16:05:56.269209+00:00"
     },
     {
-      "id": "e41e4c004647",
-      "headline": "Iran issues chilling Thanksgiving warning targeting America's biggest tech giants... with Amazon, Microsoft and Elon Musk's SpaceX in the crosshairs",
-      "title": "Iran issues chilling Thanksgiving warning targeting America's biggest tech giants... with Amazon, Microsoft and Elon Musk's SpaceX in the crosshairs",
-      "url": "https://www.dailymail.com/news/article-16325373/Iran-Thanksgiving-Amazon-Microsoft.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
-      "link": "https://www.dailymail.com/news/article-16325373/Iran-Thanksgiving-Amazon-Microsoft.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
-      "excerpt": "Mehr News, which is based in Tehran and sponsored by the Iranian government, put out the message on their Telegram account Thursday afternoon.",
-      "summary": "Mehr News, which is based in Tehran and sponsored by the Iranian government, put out the message on their Telegram account Thursday afternoon.",
-      "relative_time": "Fri, 27 Nov 2026 14:52:28 GMT",
-      "published": "Fri, 27 Nov 2026 14:52:28 GMT",
+      "id": "4199c926539f",
+      "headline": "TV anchor breaks down and tears up during live report on stock market share slump",
+      "title": "TV anchor breaks down and tears up during live report on stock market share slump",
+      "url": "https://www.dailymail.com/news/article-16326325/TV-anchor-breaks-tears-live-report-stock-market-share-slump.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
+      "link": "https://www.dailymail.com/news/article-16326325/TV-anchor-breaks-tears-live-report-stock-market-share-slump.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
+      "excerpt": "A South Korean news anchor broke down in tears on live television while reporting on a stock market slump.",
+      "summary": "A South Korean news anchor broke down in tears on live television while reporting on a stock market slump.",
+      "relative_time": "Fri, 27 Nov 2026 15:35:07 GMT",
+      "published": "Fri, 27 Nov 2026 15:35:07 GMT",
       "author": "Daily Mail UK",
       "feed": "Daily Mail UK",
       "feedName": "Daily Mail UK",
@@ -185,68 +185,68 @@
       "category": "Global",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://i.dailymail.com/1s/2026/11/27/03/112755685-0-image-a-3_1795748581407.jpg",
-      "scraped_at": "2026-11-27T15:13:24.042922+00:00"
+      "imageUrl": "https://i.dailymail.com/1s/2026/11/27/11/112760649-0-image-a-21_1795777816130.jpg",
+      "scraped_at": "2026-11-27T16:05:56.269247+00:00"
     },
     {
-      "id": "d08eae102a67",
-      "headline": "Don\u2019t get duped by Amazon\u2019s fake Black Friday \u2018deals\u2019 \u2014 how to spot a real bargain",
-      "title": "Don\u2019t get duped by Amazon\u2019s fake Black Friday \u2018deals\u2019 \u2014 how to spot a real bargain",
-      "url": "https://nypost.com/2026/11/27/lifestyle/2026-amazon-black-friday-sale-avoid-fake-deals-find-the-best-buys/",
-      "link": "https://nypost.com/2026/11/27/lifestyle/2026-amazon-black-friday-sale-avoid-fake-deals-find-the-best-buys/",
-      "excerpt": "\"The concerning part is that if the largest retailer in the country cannot ensure its deals are genuine, that reveals plenty about the market.\"",
-      "summary": "\"The concerning part is that if the largest retailer in the country cannot ensure its deals are genuine, that reveals plenty about the market.\"",
-      "relative_time": "Fri, 27 Nov 2026 10:09:38 -0500",
-      "published": "Fri, 27 Nov 2026 10:09:38 -0500",
-      "author": "Aurielle Weiss",
+      "id": "b8a30e7b8cf7",
+      "headline": "Beloved Toronto musician gunned down in home invasion \u2014 as cops hunt down vehicle tied to deadly attack",
+      "title": "Beloved Toronto musician gunned down in home invasion \u2014 as cops hunt down vehicle tied to deadly attack",
+      "url": "https://nypost.com/2026/11/27/world-news/beloved-toronto-musician-michael-eckert-gunned-down-in-canada-home-invasion/",
+      "link": "https://nypost.com/2026/11/27/world-news/beloved-toronto-musician-michael-eckert-gunned-down-in-canada-home-invasion/",
+      "excerpt": "Michael Eckert, 39, was killed after coming face-to-face with a gun-wielding suspect who stormed his midtown Toronto home at around 2:40 a.m. Wednesday, a police press release states.",
+      "summary": "Michael Eckert, 39, was killed after coming face-to-face with a gun-wielding suspect who stormed his midtown Toronto home at around 2:40 a.m. Wednesday, a police press release states.",
+      "relative_time": "Fri, 27 Nov 2026 11:02:52 -0500",
+      "published": "Fri, 27 Nov 2026 11:02:52 -0500",
+      "author": "Georgia Worrell",
       "feed": "New York Post",
       "feedName": "New York Post",
       "feedId": "f35f2eec037f",
       "category": "Global",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fcrop-42096589.jpg?w%3D1024",
-      "scraped_at": "2026-11-27T15:13:24.965507+00:00"
+      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fmichael-eckert-victim-police-identified-150190570.jpg?w%3D1024",
+      "scraped_at": "2026-11-27T16:05:57.296043+00:00"
     },
     {
-      "id": "866c7827c050",
-      "headline": "Brittany Mahomes shreds referees after crucial call harms Chiefs in tough Bills loss: What a joke\u2019",
-      "title": "Brittany Mahomes shreds referees after crucial call harms Chiefs in tough Bills loss: What a joke\u2019",
-      "url": "https://nypost.com/2026/11/27/sports/brittany-mahomes-shreds-referees-after-crucial-call-harms-chiefs-in-tough-bills-loss/",
-      "link": "https://nypost.com/2026/11/27/sports/brittany-mahomes-shreds-referees-after-crucial-call-harms-chiefs-in-tough-bills-loss/",
-      "excerpt": "Brittany Mahomes and the Chiefs are not thankful for NFL referees this year.",
-      "summary": "Brittany Mahomes and the Chiefs are not thankful for NFL referees this year.",
-      "relative_time": "Fri, 27 Nov 2026 10:09:14 -0500",
-      "published": "Fri, 27 Nov 2026 10:09:14 -0500",
-      "author": "Matt Ehalt",
+      "id": "8653c9b2e916",
+      "headline": "NFL on Black Friday is back\u2013Where to watch Broncos vs. Steelers for free",
+      "title": "NFL on Black Friday is back\u2013Where to watch Broncos vs. Steelers for free",
+      "url": "https://nypost.com/2026/11/27/sports/where-to-watch-broncos-vs-steelers-live-for-free-on-black-friday/",
+      "link": "https://nypost.com/2026/11/27/sports/where-to-watch-broncos-vs-steelers-live-for-free-on-black-friday/",
+      "excerpt": "This is a must-win game for Pittsburgh after losing the past two weeks.",
+      "summary": "This is a must-win game for Pittsburgh after losing the past two weeks.",
+      "relative_time": "Fri, 27 Nov 2026 11:00:00 -0500",
+      "published": "Fri, 27 Nov 2026 11:00:00 -0500",
+      "author": "Matt Levy",
       "feed": "New York Post",
       "feedName": "New York Post",
       "feedId": "f35f2eec037f",
       "category": "Global",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fmahomes-wife-shreds-referees-1.jpg?w%3D707",
-      "scraped_at": "2026-11-27T15:13:24.965549+00:00"
+      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fnewspress-collage-lgz3zziy5-1795615805441.jpg?quality%3D90%26strip%3Dall%261795597906%261795597906",
+      "scraped_at": "2026-11-27T16:05:57.296092+00:00"
     },
     {
-      "id": "5257219e046e",
-      "headline": "Prince William speaks out as Princess Diana charity that still unites him and Prince Harry faces closure",
-      "title": "Prince William speaks out as Princess Diana charity that still unites him and Prince Harry faces closure",
-      "url": "https://pagesix.com/2026/11/27/royal-family/prince-william-speaks-out-as-princess-diana-charity-that-still-unites-him-and-prince-harry-faces-closure/",
-      "link": "https://pagesix.com/2026/11/27/royal-family/prince-william-speaks-out-as-princess-diana-charity-that-still-unites-him-and-prince-harry-faces-closure/",
-      "excerpt": "The Prince of Wales has expressed sadness that a charity named after his late mother is facing financial problems.",
-      "summary": "The Prince of Wales has expressed sadness that a charity named after his late mother is facing financial problems.",
-      "relative_time": "Fri, 27 Nov 2026 10:07:28 -0500",
-      "published": "Fri, 27 Nov 2026 10:07:28 -0500",
-      "author": "Nicki Gostin",
+      "id": "16fbb08de6ae",
+      "headline": "Kalshi promo code NYPMAX55: Trade $25, get up to $55 bonus for Texas vs. Texas A&M",
+      "title": "Kalshi promo code NYPMAX55: Trade $25, get up to $55 bonus for Texas vs. Texas A&M",
+      "url": "https://nypost.com/2026/11/27/betting/kalshi-promo-code-nypmax55-trade-25-get-up-to-55-bonus-for-texas-vs-texas-am/",
+      "link": "https://nypost.com/2026/11/27/betting/kalshi-promo-code-nypmax55-trade-25-get-up-to-55-bonus-for-texas-vs-texas-am/",
+      "excerpt": "Traders can use the Kalshi promo code NYPMAX55 to trade $25, to get up to a $55 bonus for Week 13.",
+      "summary": "Traders can use the Kalshi promo code NYPMAX55 to trade $25, to get up to a $55 bonus for Week 13.",
+      "relative_time": "Fri, 27 Nov 2026 11:00:00 -0500",
+      "published": "Fri, 27 Nov 2026 11:00:00 -0500",
+      "author": "Michael Leboff",
       "feed": "New York Post",
       "feedName": "New York Post",
       "feedId": "f35f2eec037f",
       "category": "Global",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://pagesix.com/wp-content%2Fuploads%2Fsites%2F3%2F2026%2F11%2Fbritains-prince-william-prince-wales-150015594.jpg",
-      "scraped_at": "2026-11-27T15:13:24.965583+00:00"
+      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Ftexas-head-coach-steve-sarkisian-148801289.jpg?quality%3D90%26strip%3Dall",
+      "scraped_at": "2026-11-27T16:05:57.296141+00:00"
     },
     {
       "id": "523293038a6b",
@@ -266,7 +266,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://100percentfedup.com/wp-content/uploads/2026/11/kushner-putin-enhanced-1600x900-1.jpg",
-      "scraped_at": "2026-11-27T15:13:25.299463+00:00"
+      "scraped_at": "2026-11-27T16:05:57.594542+00:00"
     },
     {
       "id": "686be8afc811",
@@ -286,7 +286,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://100percentfedup.com/wp-content/uploads/2026/11/white-house-thanksgiving-calls-enhanced-1600x900-1.jpg",
-      "scraped_at": "2026-11-27T15:13:25.299513+00:00"
+      "scraped_at": "2026-11-27T16:05:57.594598+00:00"
     },
     {
       "id": "805078767ca5",
@@ -306,7 +306,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://100percentfedup.com/wp-content/uploads/2026/11/ariel-velasquez-morales-enhanced-1600x900-1.png",
-      "scraped_at": "2026-11-27T15:13:25.299559+00:00"
+      "scraped_at": "2026-11-27T16:05:57.594649+00:00"
     },
     {
       "id": "2e54e668ca8c",
@@ -326,7 +326,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://thefederalist.com/wp-content/uploads/2026/11/trump-thinks-1200x675.jpg",
-      "scraped_at": "2026-11-27T15:13:25.403168+00:00"
+      "scraped_at": "2026-11-27T16:05:57.706558+00:00"
     },
     {
       "id": "3d7d16e3f3df",
@@ -346,7 +346,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://thefederalist.com/wp-content/uploads/2026/11/AR-15-1200x675.jpg",
-      "scraped_at": "2026-11-27T15:13:25.403217+00:00"
+      "scraped_at": "2026-11-27T16:05:57.706615+00:00"
     },
     {
       "id": "3f6ead661225",
@@ -366,7 +366,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://thefederalist.com/wp-content/uploads/2026/11/Russell-Brand-Event-1200x675.jpg",
-      "scraped_at": "2026-11-27T15:13:25.403252+00:00"
+      "scraped_at": "2026-11-27T16:05:57.706659+00:00"
     },
     {
       "id": "5aa086d66d82",
@@ -386,7 +386,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://www.theblaze.com/media-library/image.jpg?id=68692638&width=980",
-      "scraped_at": "2026-11-27T15:13:25.581915+00:00"
+      "scraped_at": "2026-11-27T16:05:58.026572+00:00"
     },
     {
       "id": "5e111886360e",
@@ -405,8 +405,8 @@
       "category": "Alternative",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://www.theblaze.com/media-library/image.jpg?id=68784559&width=980",
-      "scraped_at": "2026-11-27T15:13:25.582343+00:00"
+      "imageUrl": "https://www.theblaze.com/media-library/buckle-up-nanny-state-california-to-require-booster-seats-for-some-kids-as-old-as-15.jpg?id=68784559&width=980",
+      "scraped_at": "2026-11-27T16:05:58.027064+00:00"
     },
     {
       "id": "e749d72fd715",
@@ -426,7 +426,27 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://www.theblaze.com/media-library/11-american-made-christmas-gifts-he-ll-actually-use-and-never-return.jpg?id=68754406&width=980",
-      "scraped_at": "2026-11-27T15:13:25.583568+00:00"
+      "scraped_at": "2026-11-27T16:05:58.028408+00:00"
+    },
+    {
+      "id": "ed69150b30cb",
+      "headline": "Democrats Can't Win With Electoral College - So, They'll End It",
+      "title": "Democrats Can't Win With Electoral College - So, They'll End It",
+      "url": "https://hotair.com/headlines/2026/11/27/democrats-cant-win-with-electoral-college-so-theyll-end-it-n3821322",
+      "link": "https://hotair.com/headlines/2026/11/27/democrats-cant-win-with-electoral-college-so-theyll-end-it-n3821322",
+      "excerpt": "Democrats Can't Win With Electoral College - So, They'll End It",
+      "summary": "Democrats Can't Win With Electoral College - So, They'll End It",
+      "relative_time": "Fri, 27 Nov 2026 10:30:00 -0500",
+      "published": "Fri, 27 Nov 2026 10:30:00 -0500",
+      "author": "Hot Air",
+      "feed": "Hot Air",
+      "feedName": "Hot Air",
+      "feedId": "9c153127586e",
+      "category": "Alternative",
+      "ingestionType": "rss",
+      "sourceGroup": "rss",
+      "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
+      "scraped_at": "2026-11-27T16:05:58.174726+00:00"
     },
     {
       "id": "869d79c5b928",
@@ -446,7 +466,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://media.townhall.com/cdn/hodl/2019/157/d5f53bee-22b9-4cce-a1ae-26c68a53a172.png",
-      "scraped_at": "2026-11-27T15:13:25.676013+00:00"
+      "scraped_at": "2026-11-27T16:05:58.174768+00:00"
     },
     {
       "id": "ef5df7c5f619",
@@ -466,27 +486,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-11-27T15:13:25.676038+00:00"
-    },
-    {
-      "id": "277844a6dbbb",
-      "headline": "William Bradford: The Father of Thanksgiving",
-      "title": "William Bradford: The Father of Thanksgiving",
-      "url": "https://hotair.com/headlines/2026/11/26/william-bradford-the-father-of-thanksgiving-n3821378",
-      "link": "https://hotair.com/headlines/2026/11/26/william-bradford-the-father-of-thanksgiving-n3821378",
-      "excerpt": "William Bradford: The Father of Thanksgiving",
-      "summary": "William Bradford: The Father of Thanksgiving",
-      "relative_time": "Thu, 26 Nov 2026 21:00:00 -0500",
-      "published": "Thu, 26 Nov 2026 21:00:00 -0500",
-      "author": "Hot Air",
-      "feed": "Hot Air",
-      "feedName": "Hot Air",
-      "feedId": "9c153127586e",
-      "category": "Alternative",
-      "ingestionType": "rss",
-      "sourceGroup": "rss",
-      "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-11-27T15:13:25.676052+00:00"
+      "scraped_at": "2026-11-27T16:05:58.174788+00:00"
     },
     {
       "id": "f2a84a6f911c",
@@ -506,7 +506,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-11-27T15:13:25.840700+00:00"
+      "scraped_at": "2026-11-27T16:05:58.483190+00:00"
     },
     {
       "id": "245aa7bae218",
@@ -526,7 +526,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-11-27T15:13:25.840758+00:00"
+      "scraped_at": "2026-11-27T16:05:58.483258+00:00"
     },
     {
       "id": "4fb7a0d6c803",
@@ -546,7 +546,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-11-27T15:13:25.840810+00:00"
+      "scraped_at": "2026-11-27T16:05:58.483321+00:00"
     },
     {
       "id": "8baf9eb603b6",
@@ -566,7 +566,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.americanthinker.com/fi/fiv0nslhnxaqelp2hzbf_640.jpg",
-      "scraped_at": "2026-11-27T15:13:26.226552+00:00"
+      "scraped_at": "2026-11-27T16:05:58.635925+00:00"
     },
     {
       "id": "e4bf42b86e84",
@@ -586,7 +586,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.americanthinker.com/imported/2024-03/252579_640.jpeg",
-      "scraped_at": "2026-11-27T15:13:26.226842+00:00"
+      "scraped_at": "2026-11-27T16:05:58.636243+00:00"
     },
     {
       "id": "7866987e5f5c",
@@ -606,18 +606,18 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.americanthinker.com/o6/o6nij04oivrumoy3jrpy_640.jpg",
-      "scraped_at": "2026-11-27T15:13:26.227051+00:00"
+      "scraped_at": "2026-11-27T16:05:58.636473+00:00"
     },
     {
-      "id": "72d56a981226",
-      "headline": "Cancel your Epoch Times subscription for free - The Epoch Times",
-      "title": "Cancel your Epoch Times subscription for free - The Epoch Times",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPbE40V1hVY0RVS045R3lnOHo5TUNibHpJVm9HaUtqYjY2MHFnOWQycElrbDgzOUo0X1F5VWxnbVJSY0Y1cjVTclByUVFXZWtCUmtGbHktSWhRUk9WeEJyWjhFQ29qVWt1OElsZF9mYmJJYzNFdEdHUWxqN2k3U0FGamIxQ0hDdy1zVHl0Y3cyMmxMUjZOTXFGVFJUbml1Z2lON2JJX19heDZpd1k?oc=5",
-      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPbE40V1hVY0RVS045R3lnOHo5TUNibHpJVm9HaUtqYjY2MHFnOWQycElrbDgzOUo0X1F5VWxnbVJSY0Y1cjVTclByUVFXZWtCUmtGbHktSWhRUk9WeEJyWjhFQ29qVWt1OElsZF9mYmJJYzNFdEdHUWxqN2k3U0FGamIxQ0hDdy1zVHl0Y3cyMmxMUjZOTXFGVFJUbml1Z2lON2JJX19heDZpd1k?oc=5",
-      "excerpt": "Cancel your Epoch Times subscription for free The Epoch Times",
-      "summary": "Cancel your Epoch Times subscription for free The Epoch Times",
-      "relative_time": "Mon, 22 Jun 2020 07:00:00 GMT",
-      "published": "Mon, 22 Jun 2020 07:00:00 GMT",
+      "id": "db611cceef8e",
+      "headline": "Subscribe to The Epoch Times - The Epoch Times",
+      "title": "Subscribe to The Epoch Times - The Epoch Times",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1ZWFMxWlpDRlozcDR3T0RMNV94THJQbmRtYjAwY3JfSTZzZnAyZE5YU2lsQVczRHVvcUFOeng2ZktFa1RjeTlUVEJkOGoyUVFoY3YySFpmZXdBOXo4MU40NE9kUW8?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1ZWFMxWlpDRlozcDR3T0RMNV94THJQbmRtYjAwY3JfSTZzZnAyZE5YU2lsQVczRHVvcUFOeng2ZktFa1RjeTlUVEJkOGoyUVFoY3YySFpmZXdBOXo4MU40NE9kUW8?oc=5",
+      "excerpt": "Subscribe to The Epoch Times The Epoch Times",
+      "summary": "Subscribe to The Epoch Times The Epoch Times",
+      "relative_time": "Wed, 18 Sep 2019 17:59:23 GMT",
+      "published": "Wed, 18 Sep 2019 17:59:23 GMT",
       "author": "Epoch Times",
       "feed": "Epoch Times",
       "feedName": "Epoch Times",
@@ -626,18 +626,18 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-11-27T15:13:26.621656+00:00"
+      "scraped_at": "2026-11-27T16:05:59.159088+00:00"
     },
     {
-      "id": "66d3dae45907",
-      "headline": "8 Illegal Immigrants Apprehended From Private Plane Flown by Americans - The Epoch Times",
-      "title": "8 Illegal Immigrants Apprehended From Private Plane Flown by Americans - The Epoch Times",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNYXE0WlJzZGlmb2EzN21HQ3ZCeUJYenI4bHVOMjVEa0t1WnpTc2Y4LS1zNzNyQTFpM2lnRlJLOVdIZ0FHOGprODdXQXhRaUw5S21tMTdHdzZDRHdhajJ0b05hY0RaZFRJZHQ4TlVGU0xmc3ZlSElMVExIcHdaN0E2VVRwb05pYUpkVG1wQ2xJVV9KU2Izang5RktfMXRhM1h3M093Qzg3VVFkYTd2ak44Sg?oc=5",
-      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNYXE0WlJzZGlmb2EzN21HQ3ZCeUJYenI4bHVOMjVEa0t1WnpTc2Y4LS1zNzNyQTFpM2lnRlJLOVdIZ0FHOGprODdXQXhRaUw5S21tMTdHdzZDRHdhajJ0b05hY0RaZFRJZHQ4TlVGU0xmc3ZlSElMVExIcHdaN0E2VVRwb05pYUpkVG1wQ2xJVV9KU2Izang5RktfMXRhM1h3M093Qzg3VVFkYTd2ak44Sg?oc=5",
-      "excerpt": "8 Illegal Immigrants Apprehended From Private Plane Flown by Americans The Epoch Times",
-      "summary": "8 Illegal Immigrants Apprehended From Private Plane Flown by Americans The Epoch Times",
-      "relative_time": "Wed, 25 Nov 2026 10:10:51 GMT",
-      "published": "Wed, 25 Nov 2026 10:10:51 GMT",
+      "id": "373547fec632",
+      "headline": "The Epoch Times | Breaking News, Latest News, World News and Videos - The Epoch Times",
+      "title": "The Epoch Times | Breaking News, Latest News, World News and Videos - The Epoch Times",
+      "url": "https://news.google.com/rss/articles/CBMiREFVX3lxTFBSU2dZLXZaX21HbzlKWGxkWnM1eEQwNEZ3VE4xUkJFWFJWSkJ3d0pSY2c4MTBKZXctUXdyWWdicWJQaklP?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiREFVX3lxTFBSU2dZLXZaX21HbzlKWGxkWnM1eEQwNEZ3VE4xUkJFWFJWSkJ3d0pSY2c4MTBKZXctUXdyWWdicWJQaklP?oc=5",
+      "excerpt": "The Epoch Times | Breaking News, Latest News, World News and Videos The Epoch Times",
+      "summary": "The Epoch Times | Breaking News, Latest News, World News and Videos The Epoch Times",
+      "relative_time": "Sun, 07 May 2006 21:22:47 GMT",
+      "published": "Sun, 07 May 2006 21:22:47 GMT",
       "author": "Epoch Times",
       "feed": "Epoch Times",
       "feedName": "Epoch Times",
@@ -646,18 +646,18 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-11-27T15:13:26.621700+00:00"
+      "scraped_at": "2026-11-27T16:05:59.159142+00:00"
     },
     {
-      "id": "0d279629f03f",
-      "headline": "More Than 29,000 Patients in Canada Died on Health-Care Waiting Lists Last Year - The Epoch Times",
-      "title": "More Than 29,000 Patients in Canada Died on Health-Care Waiting Lists Last Year - The Epoch Times",
-      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPVGFWSVZCZnFNcGVtajl4VWNFTXdfQXMxWlpCN3FkU1NvWWg0TWZRMFJMaVI0S3FmSG5oOTZFV3QxV0dxVFh1bkV4eGxzZ1ctQUttMFgzLUpPX2ZBYWVabl9DSU9GWFZrb05BdE5ScTZ6SkljRm5sUkJNZHhid0xvVnV0dDlTS3RXRmhjaEZicHEteVJObVRDblJJVzVZSWkxZ01mZUlPb3VITUUyYy0yLUdxdUJBRFFiZzhuM3F2WQ?oc=5",
-      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPVGFWSVZCZnFNcGVtajl4VWNFTXdfQXMxWlpCN3FkU1NvWWg0TWZRMFJMaVI0S3FmSG5oOTZFV3QxV0dxVFh1bkV4eGxzZ1ctQUttMFgzLUpPX2ZBYWVabl9DSU9GWFZrb05BdE5ScTZ6SkljRm5sUkJNZHhid0xvVnV0dDlTS3RXRmhjaEZicHEteVJObVRDblJJVzVZSWkxZ01mZUlPb3VITUUyYy0yLUdxdUJBRFFiZzhuM3F2WQ?oc=5",
-      "excerpt": "More Than 29,000 Patients in Canada Died on Health-Care Waiting Lists Last Year The Epoch Times",
-      "summary": "More Than 29,000 Patients in Canada Died on Health-Care Waiting Lists Last Year The Epoch Times",
-      "relative_time": "Wed, 25 Nov 2026 15:17:16 GMT",
-      "published": "Wed, 25 Nov 2026 15:17:16 GMT",
+      "id": "48ead5127a16",
+      "headline": "Feds Recover $8 Billion in Largest-Ever Scam Crackdown: Blanche - The Epoch Times",
+      "title": "Feds Recover $8 Billion in Largest-Ever Scam Crackdown: Blanche - The Epoch Times",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQakVoclhWc3RES2dSaHZwbnBSdW40NWVJWFVrVmlCY3dMdXFFb3JDYVhvdElLNWVBelpwZVBHUVc1UVJnYk9fNzB2N19oTEprejg3Z3NhcnZKQ1F5UTNVVU04N0VrOS1UVk1JN2J1MmNFOVhjWTNTdkR2VjlJeWlHbGlqRlpWUDl0WlAteUN1UnhLQlVGcXpMaUhzSHc0Rm50M2Njeg?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQakVoclhWc3RES2dSaHZwbnBSdW40NWVJWFVrVmlCY3dMdXFFb3JDYVhvdElLNWVBelpwZVBHUVc1UVJnYk9fNzB2N19oTEprejg3Z3NhcnZKQ1F5UTNVVU04N0VrOS1UVk1JN2J1MmNFOVhjWTNTdkR2VjlJeWlHbGlqRlpWUDl0WlAteUN1UnhLQlVGcXpMaUhzSHc0Rm50M2Njeg?oc=5",
+      "excerpt": "Feds Recover $8 Billion in Largest-Ever Scam Crackdown: Blanche The Epoch Times",
+      "summary": "Feds Recover $8 Billion in Largest-Ever Scam Crackdown: Blanche The Epoch Times",
+      "relative_time": "Tue, 24 Nov 2026 17:12:47 GMT",
+      "published": "Tue, 24 Nov 2026 17:12:47 GMT",
       "author": "Epoch Times",
       "feed": "Epoch Times",
       "feedName": "Epoch Times",
@@ -666,18 +666,18 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-11-27T15:13:26.621735+00:00"
+      "scraped_at": "2026-11-27T16:05:59.159179+00:00"
     },
     {
-      "id": "640a3f7c7b6f",
-      "headline": "TV news hourly summary \u00b7 Nov 27, 15:03 UTC",
-      "title": "TV news hourly summary \u00b7 Nov 27, 15:03 UTC",
-      "url": "https://mastodon.archive.org/@tv/117689010327223557",
-      "link": "https://mastodon.archive.org/@tv/117689010327223557",
-      "excerpt": "A major storm brought flooding, snow, high winds and widespread power outages across the East and Midwest, disrupting Thanksgiving travel and delaying or canceling hundreds of flights. Macy\u2019s Thanksgiving Parade was postponed until Saturday. Trump called for bipartisanship while attacking political opponents; Democrats planned priorities after winning a House majority.",
-      "summary": "A major storm brought flooding, snow, high winds and widespread power outages across the East and Midwest, disrupting Thanksgiving travel and delaying or canceling hundreds of flights. Macy\u2019s Thanksgiving Parade was postponed until Saturday. Trump called for bipartisanship while attacking political opponents; Democrats planned priorities after winning a House majority.",
-      "relative_time": "Fri, 27 Nov 2026 15:03:03 +0000",
-      "published": "Fri, 27 Nov 2026 15:03:03 +0000",
+      "id": "14f244fc8f47",
+      "headline": "TV news hourly summary \u00b7 Nov 27, 16:03 UTC",
+      "title": "TV news hourly summary \u00b7 Nov 27, 16:03 UTC",
+      "url": "https://mastodon.archive.org/@tv/117689246322696659",
+      "link": "https://mastodon.archive.org/@tv/117689246322696659",
+      "excerpt": "Seasonal flu activity is rising nationally, while holiday travel faces storm-related delays. The U.S. is tightening controls to curb chip smuggling; Wall Street is rattled by spending and debt concerns. Trump signaled openness to bipartisan work and urged Putin to curb aggression. Spain\u2019s election campaign ended as the socialist prime minister seeks another term and Vox may join a coalition. Ukraine\u2019s Zelensky said the U.S. is not pressuring Russia enough.",
+      "summary": "Seasonal flu activity is rising nationally, while holiday travel faces storm-related delays. The U.S. is tightening controls to curb chip smuggling; Wall Street is rattled by spending and debt concerns. Trump signaled openness to bipartisan work and urged Putin to curb aggression. Spain\u2019s election campaign ended as the socialist prime minister seeks another term and Vox may join a coalition. Ukraine\u2019s Zelensky said the U.S. is not pressuring Russia enough.",
+      "relative_time": "Fri, 27 Nov 2026 16:03:04 +0000",
+      "published": "Fri, 27 Nov 2026 16:03:04 +0000",
       "author": "Internet Archive TV News",
       "feed": "Internet Archive TV News (hourly summary)",
       "feedName": "Internet Archive TV News (hourly summary)",
@@ -686,7 +686,7 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "",
-      "scraped_at": "2026-11-27T15:13:27.132605+00:00"
+      "scraped_at": "2026-11-27T16:05:59.648547+00:00"
     }
   ],
   "stories": [
@@ -708,18 +708,18 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/fdee/live/21e805d0-ea60-11f1-99b6-a35a62fa4264.jpg",
-      "scraped_at": "2026-11-27T15:13:23.355174+00:00"
+      "scraped_at": "2026-11-27T16:05:54.978100+00:00"
     },
     {
-      "id": "e45561363fb1",
-      "headline": "Hundreds of thousands still without power after storms hit US on Thanksgiving",
-      "title": "Hundreds of thousands still without power after storms hit US on Thanksgiving",
-      "url": "https://www.bbc.co.uk/news/articles/cre3dj5n7dpwo?at_medium=RSS&at_campaign=rss",
-      "link": "https://www.bbc.co.uk/news/articles/cre3dj5n7dpwo?at_medium=RSS&at_campaign=rss",
-      "excerpt": "Pennsylvania and neighbouring states remain badly affected on Friday after both coasts were lashed with wind and rain.",
-      "summary": "Pennsylvania and neighbouring states remain badly affected on Friday after both coasts were lashed with wind and rain.",
-      "relative_time": "Fri, 27 Nov 2026 14:49:59 GMT",
-      "published": "Fri, 27 Nov 2026 14:49:59 GMT",
+      "id": "f70de9a2af2e",
+      "headline": "John Simpson: Ukraine is bowed but still unbroken as freezing weather sets in",
+      "title": "John Simpson: Ukraine is bowed but still unbroken as freezing weather sets in",
+      "url": "https://www.bbc.co.uk/news/articles/c3pw4yrr8kz9o?at_medium=RSS&at_campaign=rss",
+      "link": "https://www.bbc.co.uk/news/articles/c3pw4yrr8kz9o?at_medium=RSS&at_campaign=rss",
+      "excerpt": "Ukraine settles in for another devastating winter as the questions persists: how will it all end?",
+      "summary": "Ukraine settles in for another devastating winter as the questions persists: how will it all end?",
+      "relative_time": "Fri, 27 Nov 2026 15:18:51 GMT",
+      "published": "Fri, 27 Nov 2026 15:18:51 GMT",
       "author": "BBC World News",
       "feed": "BBC World News",
       "feedName": "BBC World News",
@@ -727,8 +727,8 @@
       "category": "Global",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/318d/live/6be8b890-ea6b-11f1-99b6-a35a62fa4264.jpg",
-      "scraped_at": "2026-11-27T15:13:23.355215+00:00"
+      "imageUrl": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9fca/live/2dd32240-e9b5-11f1-99b6-a35a62fa4264.jpg",
+      "scraped_at": "2026-11-27T16:05:54.978152+00:00"
     },
     {
       "id": "606103d60687",
@@ -748,18 +748,18 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-11-27T15:13:23.490968+00:00"
+      "scraped_at": "2026-11-27T16:05:55.542047+00:00"
     },
     {
-      "id": "e7ed78fcd9f6",
-      "headline": "EXCLUSIVE: Global fashion brands shift orders from Bangladesh to India amid unrest - Reuters",
-      "title": "EXCLUSIVE: Global fashion brands shift orders from Bangladesh to India amid unrest - Reuters",
-      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQQWJhaVBEcEFiX2hwb0lHanFvdTJncnpwM3JVMEh6WTUxSmhaWjV6MHcwdGJueHd5M1pmcVB2VG9UbGxKbzlseklNR2FjNHFWMlFLbmxLQkxxeXptM1VWUVRkWngxS2dwNTVWTng2NXcyUlo4NHM5OFM3NWNsNUY2WkdJblJmcVFRaVV4X1IweXZQWUJya01ZVi1qc19IVjF1OGEtQU9aVDd0eW5xYnBkQkxhcWg0dHFUWEwyYzlPdkdqZw?oc=5",
-      "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQQWJhaVBEcEFiX2hwb0lHanFvdTJncnpwM3JVMEh6WTUxSmhaWjV6MHcwdGJueHd5M1pmcVB2VG9UbGxKbzlseklNR2FjNHFWMlFLbmxLQkxxeXptM1VWUVRkWngxS2dwNTVWTng2NXcyUlo4NHM5OFM3NWNsNUY2WkdJblJmcVFRaVV4X1IweXZQWUJya01ZVi1qc19IVjF1OGEtQU9aVDd0eW5xYnBkQkxhcWg0dHFUWEwyYzlPdkdqZw?oc=5",
-      "excerpt": "EXCLUSIVE: Global fashion brands shift orders from Bangladesh to India amid unrest Reuters",
-      "summary": "EXCLUSIVE: Global fashion brands shift orders from Bangladesh to India amid unrest Reuters",
-      "relative_time": "Fri, 27 Nov 2026 13:04:32 GMT",
-      "published": "Fri, 27 Nov 2026 13:04:32 GMT",
+      "id": "b8d29310c889",
+      "headline": "Poland signs contract with Palantir worth $300 mln over 5 years - Reuters",
+      "title": "Poland signs contract with Palantir worth $300 mln over 5 years - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPcE9acGJ4ZnNpRGhDSXVvN1lpUWNyQTlJalVfQ25acTN3Q0JuTW9ydHFPb3paNUx4MEQxQUhpSnVfV0xwaEVvblo3NG8xOGtMZHlLdEs0Qi1iSGVhM1RYcVg4ZlhjU0VfYW9ReFk2cU1DdXVWMzVweElzQjkyN0ZZUFZjTDNaZmk4TF9jTnhGZDVDRnRuVWxaaUhxckxQTEJQYVJmTERxRFlGaFpNSGc?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPcE9acGJ4ZnNpRGhDSXVvN1lpUWNyQTlJalVfQ25acTN3Q0JuTW9ydHFPb3paNUx4MEQxQUhpSnVfV0xwaEVvblo3NG8xOGtMZHlLdEs0Qi1iSGVhM1RYcVg4ZlhjU0VfYW9ReFk2cU1DdXVWMzVweElzQjkyN0ZZUFZjTDNaZmk4TF9jTnhGZDVDRnRuVWxaaUhxckxQTEJQYVJmTERxRFlGaFpNSGc?oc=5",
+      "excerpt": "Poland signs contract with Palantir worth $300 mln over 5 years Reuters",
+      "summary": "Poland signs contract with Palantir worth $300 mln over 5 years Reuters",
+      "relative_time": "Fri, 27 Nov 2026 13:09:45 GMT",
+      "published": "Fri, 27 Nov 2026 13:09:45 GMT",
       "author": "Reuters Top News",
       "feed": "Reuters Top News",
       "feedName": "Reuters Top News",
@@ -768,18 +768,18 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80",
-      "scraped_at": "2026-11-27T15:13:23.491011+00:00"
+      "scraped_at": "2026-11-27T16:05:55.542096+00:00"
     },
     {
-      "id": "840013a35463",
-      "headline": "'Cancer is a lonely road': Kate reveals how she felt battling the disease in moving new documentary clip as she meets fellow sufferers at support group",
-      "title": "'Cancer is a lonely road': Kate reveals how she felt battling the disease in moving new documentary clip as she meets fellow sufferers at support group",
-      "url": "https://www.dailymail.com/news/royals/article-16326615/Cancer-lonely-road-Kate-reveals-felt-BBC-documentary.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
-      "link": "https://www.dailymail.com/news/royals/article-16326615/Cancer-lonely-road-Kate-reveals-felt-BBC-documentary.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
-      "excerpt": "The BBC documentary Heal sees the Princess of Wales speaking with unprecedented candour about her diagnosis and treatment in early 2024, as well as her ongoing recovery.",
-      "summary": "The BBC documentary Heal sees the Princess of Wales speaking with unprecedented candour about her diagnosis and treatment in early 2024, as well as her ongoing recovery.",
-      "relative_time": "Fri, 27 Nov 2026 15:05:23 GMT",
-      "published": "Fri, 27 Nov 2026 15:05:23 GMT",
+      "id": "1f4fec9dba9a",
+      "headline": "Meloni warns Kyiv that war 'cannot spread to the Mediterranean' after bombing of Russian warship in Libya",
+      "title": "Meloni warns Kyiv that war 'cannot spread to the Mediterranean' after bombing of Russian warship in Libya",
+      "url": "https://www.dailymail.com/news/article-16326607/Meloni-warns-Kyiv-war-spread-Mediterranean-Russian-warship-Libya.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
+      "link": "https://www.dailymail.com/news/article-16326607/Meloni-warns-Kyiv-war-spread-Mediterranean-Russian-warship-Libya.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
+      "excerpt": "Giorgia Meloni confronted Kyiv after Volodymyr Zelensky confirmed on Monday that Ukrainian suicide drones had destroyed the Merkury at a port in Benghazi.",
+      "summary": "Giorgia Meloni confronted Kyiv after Volodymyr Zelensky confirmed on Monday that Ukrainian suicide drones had destroyed the Merkury at a port in Benghazi.",
+      "relative_time": "Fri, 27 Nov 2026 15:56:22 GMT",
+      "published": "Fri, 27 Nov 2026 15:56:22 GMT",
       "author": "Daily Mail UK",
       "feed": "Daily Mail UK",
       "feedName": "Daily Mail UK",
@@ -787,19 +787,19 @@
       "category": "Global",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://i.dailymail.com/1s/2026/11/27/11/112761573-0-image-a-72_1795780306626.jpg",
-      "scraped_at": "2026-11-27T15:13:24.042821+00:00"
+      "imageUrl": "https://i.dailymail.com/1s/2026/11/27/13/112763465-0-image-a-17_1795787276502.jpg",
+      "scraped_at": "2026-11-27T16:05:56.269128+00:00"
     },
     {
-      "id": "69f8bdefdb63",
-      "headline": "Father, 49, died after getting trapped in fake cave at climbing centre for hours during child's birthday party: Cumbria business is fined \u00a367,500",
-      "title": "Father, 49, died after getting trapped in fake cave at climbing centre for hours during child's birthday party: Cumbria business is fined \u00a367,500",
-      "url": "https://www.dailymail.com/news/article-16325385/Father-49-died-trapped-fake-cave-climbing-Cumbria.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
-      "link": "https://www.dailymail.com/news/article-16325385/Father-49-died-trapped-fake-cave-climbing-Cumbria.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
-      "excerpt": "Carl O'Keeffe, 49, suffered fatal crush injuries after he became trapped inside an artificial cave for five hours at King Kong Climbing Centre in Keswick, Cumbria, in April 2023.",
-      "summary": "Carl O'Keeffe, 49, suffered fatal crush injuries after he became trapped inside an artificial cave for five hours at King Kong Climbing Centre in Keswick, Cumbria, in April 2023.",
-      "relative_time": "Fri, 27 Nov 2026 15:02:52 GMT",
-      "published": "Fri, 27 Nov 2026 15:02:52 GMT",
+      "id": "a0f202c1584a",
+      "headline": "F1 boss and his mother sue council and National Highways for \u00a31.1million after tons of 'sludge' from local roads spill into lake at their \u00a32.2million manor house - smothering their lily pads",
+      "title": "F1 boss and his mother sue council and National Highways for \u00a31.1million after tons of 'sludge' from local roads spill into lake at their \u00a32.2million manor house - smothering their lily pads",
+      "url": "https://www.dailymail.com/news/article-16326383/F1-boss-mother-sue-council-National-Highways-1-1million-tons-sludge-local-roads-spill-lake-2-2million-manor-house-smothering-lily-pads.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
+      "link": "https://www.dailymail.com/news/article-16326383/F1-boss-mother-sue-council-National-Highways-1-1million-tons-sludge-local-roads-spill-lake-2-2million-manor-house-smothering-lily-pads.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
+      "excerpt": "Former racing driver and ex-Alpine F1 team chief Oliver Oakes has launched legal action against a council and National Highways over his family property in Norfolk.",
+      "summary": "Former racing driver and ex-Alpine F1 team chief Oliver Oakes has launched legal action against a council and National Highways over his family property in Norfolk.",
+      "relative_time": "Fri, 27 Nov 2026 15:48:13 GMT",
+      "published": "Fri, 27 Nov 2026 15:48:13 GMT",
       "author": "Daily Mail UK",
       "feed": "Daily Mail UK",
       "feedName": "Daily Mail UK",
@@ -807,39 +807,39 @@
       "category": "Global",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://i.dailymail.com/1s/2026/11/27/07/112757455-0-image-a-2_1795766205781.jpg",
-      "scraped_at": "2026-11-27T15:13:24.042881+00:00"
+      "imageUrl": "https://i.dailymail.com/1s/2026/11/27/10/112759987-0-image-a-24_1795775863658.jpg",
+      "scraped_at": "2026-11-27T16:05:56.269209+00:00"
     },
     {
-      "id": "d08eae102a67",
-      "headline": "Don\u2019t get duped by Amazon\u2019s fake Black Friday \u2018deals\u2019 \u2014 how to spot a real bargain",
-      "title": "Don\u2019t get duped by Amazon\u2019s fake Black Friday \u2018deals\u2019 \u2014 how to spot a real bargain",
-      "url": "https://nypost.com/2026/11/27/lifestyle/2026-amazon-black-friday-sale-avoid-fake-deals-find-the-best-buys/",
-      "link": "https://nypost.com/2026/11/27/lifestyle/2026-amazon-black-friday-sale-avoid-fake-deals-find-the-best-buys/",
-      "excerpt": "\"The concerning part is that if the largest retailer in the country cannot ensure its deals are genuine, that reveals plenty about the market.\"",
-      "summary": "\"The concerning part is that if the largest retailer in the country cannot ensure its deals are genuine, that reveals plenty about the market.\"",
-      "relative_time": "Fri, 27 Nov 2026 10:09:38 -0500",
-      "published": "Fri, 27 Nov 2026 10:09:38 -0500",
-      "author": "Aurielle Weiss",
+      "id": "b8a30e7b8cf7",
+      "headline": "Beloved Toronto musician gunned down in home invasion \u2014 as cops hunt down vehicle tied to deadly attack",
+      "title": "Beloved Toronto musician gunned down in home invasion \u2014 as cops hunt down vehicle tied to deadly attack",
+      "url": "https://nypost.com/2026/11/27/world-news/beloved-toronto-musician-michael-eckert-gunned-down-in-canada-home-invasion/",
+      "link": "https://nypost.com/2026/11/27/world-news/beloved-toronto-musician-michael-eckert-gunned-down-in-canada-home-invasion/",
+      "excerpt": "Michael Eckert, 39, was killed after coming face-to-face with a gun-wielding suspect who stormed his midtown Toronto home at around 2:40 a.m. Wednesday, a police press release states.",
+      "summary": "Michael Eckert, 39, was killed after coming face-to-face with a gun-wielding suspect who stormed his midtown Toronto home at around 2:40 a.m. Wednesday, a police press release states.",
+      "relative_time": "Fri, 27 Nov 2026 11:02:52 -0500",
+      "published": "Fri, 27 Nov 2026 11:02:52 -0500",
+      "author": "Georgia Worrell",
       "feed": "New York Post",
       "feedName": "New York Post",
       "feedId": "f35f2eec037f",
       "category": "Global",
       "ingestionType": "rss",
       "sourceGroup": "rss",
-      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fcrop-42096589.jpg?w%3D1024",
-      "scraped_at": "2026-11-27T15:13:24.965507+00:00"
+      "imageUrl": "https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F11%2Fmichael-eckert-victim-police-identified-150190570.jpg?w%3D1024",
+      "scraped_at": "2026-11-27T16:05:57.296043+00:00"
     },
     {
-      "id": "640a3f7c7b6f",
-      "headline": "TV news hourly summary \u00b7 Nov 27, 15:03 UTC",
-      "title": "TV news hourly summary \u00b7 Nov 27, 15:03 UTC",
-      "url": "https://mastodon.archive.org/@tv/117689010327223557",
-      "link": "https://mastodon.archive.org/@tv/117689010327223557",
-      "excerpt": "A major storm brought flooding, snow, high winds and widespread power outages across the East and Midwest, disrupting Thanksgiving travel and delaying or canceling hundreds of flights. Macy\u2019s Thanksgiving Parade was postponed until Saturday. Trump called for bipartisanship while attacking political opponents; Democrats planned priorities after winning a House majority.",
-      "summary": "A major storm brought flooding, snow, high winds and widespread power outages across the East and Midwest, disrupting Thanksgiving travel and delaying or canceling hundreds of flights. Macy\u2019s Thanksgiving Parade was postponed until Saturday. Trump called for bipartisanship while attacking political opponents; Democrats planned priorities after winning a House majority.",
-      "relative_time": "Fri, 27 Nov 2026 15:03:03 +0000",
-      "published": "Fri, 27 Nov 2026 15:03:03 +0000",
+      "id": "14f244fc8f47",
+      "headline": "TV news hourly summary \u00b7 Nov 27, 16:03 UTC",
+      "title": "TV news hourly summary \u00b7 Nov 27, 16:03 UTC",
+      "url": "https://mastodon.archive.org/@tv/117689246322696659",
+      "link": "https://mastodon.archive.org/@tv/117689246322696659",
+      "excerpt": "Seasonal flu activity is rising nationally, while holiday travel faces storm-related delays. The U.S. is tightening controls to curb chip smuggling; Wall Street is rattled by spending and debt concerns. Trump signaled openness to bipartisan work and urged Putin to curb aggression. Spain\u2019s election campaign ended as the socialist prime minister seeks another term and Vox may join a coalition. Ukraine\u2019s Zelensky said the U.S. is not pressuring Russia enough.",
+      "summary": "Seasonal flu activity is rising nationally, while holiday travel faces storm-related delays. The U.S. is tightening controls to curb chip smuggling; Wall Street is rattled by spending and debt concerns. Trump signaled openness to bipartisan work and urged Putin to curb aggression. Spain\u2019s election campaign ended as the socialist prime minister seeks another term and Vox may join a coalition. Ukraine\u2019s Zelensky said the U.S. is not pressuring Russia enough.",
+      "relative_time": "Fri, 27 Nov 2026 16:03:04 +0000",
+      "published": "Fri, 27 Nov 2026 16:03:04 +0000",
       "author": "Internet Archive TV News",
       "feed": "Internet Archive TV News (hourly summary)",
       "feedName": "Internet Archive TV News (hourly summary)",
@@ -848,15 +848,14 @@
       "ingestionType": "rss",
       "sourceGroup": "rss",
       "imageUrl": "",
-      "scraped_at": "2026-11-27T15:13:27.132605+00:00"
+      "scraped_at": "2026-11-27T16:05:59.648547+00:00"
     }
   ],
-  "raw_summary": "### German boat dealer suspected of supplying Channel smuggling gangs, BBC finds\n**Source:** BBC World News  \n**Summary:** A BBC investigation revealed that a German boat dealer is suspected of supplying equipment to people-smuggling syndicates operating across the English Channel. Nearly a third of small-boat crossings in early 2026 allegedly utilized vessels or engines sourced directly from the dealer's business. \n**Key Theme:** Human Trafficking\n\n---\n\n### BBC confronts German man suspected of supplying migrant gangs with small boats\n**Source:** BBC World News  \n**Summary:** BBC reporters confronted Marvin Reuter, a German national accused of providing equipment to migrant-smuggling networks. Reuter is currently fighting extradition to France, where he faces potential charges including criminal conspiracy, human smuggling, and involuntary manslaughter.  \n**Key Theme:** Law Enforcement\n\n---\n\n### EXCLUSIVE: Trump official floated ceding Guyanese territory to Venezuela, sources say\n**Source:** Reuters Top News  \n**Summary:** A former official in the Trump administration reportedly suggested ceding a portion of Guyana's territory to Venezuela during discussions on regional diplomacy, according to sources speaking to Reuters. The proposal was allegedly raised to resolve long-standing territorial disputes in South America, representing a notable departure from standard U.S. foreign policy.  \n**Key Theme:** Foreign Policy\n\n---\n\n### Anthropic IPO to mint thousands of millionaires\n**Source:** Reuters Top News  \n**Summary:** Artificial intelligence firm Anthropic is moving toward an initial public offering that is projected to yield massive financial returns for early employees and backers. The stock market debut is expected to create thousands of millionaires among the company's equity holders.  \n**Key Theme:** Business / Technology\n\n---\n\n### Husband who admitted drugging and raping his wife over 20 years told jurors he feels 'guilt and shame'\n**Source:** Daily Mail UK  \n**Summary:** A man on trial after admitting to drugging and raping his wife over a 20-year period expressed guilt and shame while addressing the jury. The statement came during court proceedings evaluating the extent of the long-running domestic abuse and criminal charges against him.  \n**Key Theme:** Criminal Justice\n\n---\n\n### More humiliation for Andy Burnham as another influencer dances to sexist song on steps of Downing Street\n**Source:** Daily Mail UK  \n**Summary:** Fashion influencer Felicia Pennant drew public scrutiny after sharing a video of herself dancing to a controversial song outside 10 Downing Street. Pennant later acknowledged on social media that the track was inappropriate for the location, though she chose to post the clip regardless.  \n**Key Theme:** Social Media\n\n---\n\n### FDA recalls Ibuprofen over fears hidden metal particles will irritate intestines\n**Source:** New York Post  \n**Summary:** Golden State Medical Supply has issued a voluntary recall for a single lot of prescription-strength ibuprofen tablets following safety notices. The recall was prompted by concerns that tiny metal foreign particles inside the pills could cause physical irritation or damage to patients' digestive systems.  \n**Key Theme:** Public Health\n\n---\n\n### TV news hourly summary \u00b7 Nov 26, 16:03 UTC\n**Source:** Internet Archive TV News  \n**Summary:** An hourly news roundup highlighted key global developments, including UK net migration reaching its lowest level since 1997 and ongoing EU summits regarding financial aid for Ukraine. The summary also noted severe Thanksgiving storm warnings along the U.S. East Coast, alongside updates on Israeli strikes in Gaza and new UK legal protections for stalking victims.  \n**Key Theme:** Global Overview",
-  "image_prompt": "Create a hyper-detailed, cinematic digital illustration in a dramatic, high-stakes news aesthetic that captures the key global events and themes of today.\n\nComposition:\nWide cinematic 16:9 frame. Multi-layered collage-style scene with strong diagonal composition. Foreground: metallic newsroom monitors, glowing holographic data streams, and dark reflective glass surfaces. Midground: split visual screens displaying global maps, satellite tracks, financial tickers, and high-contrast headlines. Background: dramatic city skyline at twilight with searchlights and volumetric atmospheric haze.\n\nLighting:\nHigh-contrast noir-cinematic lighting. Cold cyan and deep electric blue key lights combined with warm amber warning alerts.\n\nColor Palette:\nDeep midnight blue, dark slate gray, crimson red alert accents, neon cyan data overlays, and stark gold warm highlights.\n\nKey News Themes & Summaries of the Day to Visualise Conceptually:\n### German boat dealer suspected of supplying Channel smuggling gangs, BBC finds\n**Source:** BBC World News  \n**Summary:** A BBC investigation revealed that a German boat dealer is suspected of supplying equipment to people-smuggling syndicates operating across the English Channel. Nearly a third of small-boat crossings in early 2026 allegedly utilized vessels or engines sourced directly from the dealer's business. \n**Key Theme:** Human Trafficking\n\n---\n\n### BBC confronts German man suspected of supplying migrant gangs with small boats\n**Source:** BBC World News  \n**Summary:** BBC reporters confronted Marvin Reuter, a German national accused of providing equipment to migrant-smuggling networks. Reuter is currently fighting extradition to France, where he faces potential charges including criminal conspiracy, human smuggling, and involuntary manslaughter.  \n**Key Theme:** Law Enforcement\n\n---\n\n### EXCLUSIVE: Trump official floated ceding Guyanese territory to Venezuela, sources say\n**Source:** Reuters Top News  \n**Summary:** A former official in the Trump administration reportedly suggested ceding a portion of Guyana's territory to Venezuela during discussions on regional diplomacy, according to sources speaking to Reuters. The proposal was allegedly raised to resolve long-standing territorial disputes in South America, representing a notable departure from standard U.S. foreign policy.  \n**Key Theme:** Foreign Policy\n\n---\n\n### Anthropic IPO to mint thousands of millionaires\n*\n\nVisual Style:\nPhotorealistic cinematic artwork, octane render detail, crisp vector interfaces, volumetric god rays. No readable text overlays.",
+  "raw_summary": "### Zelensky criticises 'strange' Trump-Putin friendship in BBC interview\n**Source:** BBC World News  \n**Summary:** Ukrainian President Volodymyr Zelensky voiced frustration with the United States in a BBC interview, characterizing the relationship between Donald Trump and Vladimir Putin as \"strange.\" Zelensky argued that Washington is not applying enough pressure on Russia during peace negotiations. He urged Western allies to take a firmer stance to help bring an end to the war.  \n**Key Theme:** Geopolitics / Diplomacy\n\n---\n\n### John Simpson: Ukraine is bowed but still unbroken as freezing weather sets in\n**Source:** BBC World News  \n**Summary:** Ukraine is preparing for another harsh winter as its conflict with Russia drags on. Despite severe damage to national infrastructure and freezing conditions, the population demonstrates ongoing resilience. However, persistent uncertainty remains regarding how and when the war will reach a resolution.  \n**Key Theme:** Ukraine War\n\n---\n\n### Airline Norse Atlantic's Norwegian operating unit declares bankruptcy - Reuters\n**Source:** Reuters Top News  \n**Summary:** The Norwegian operating subsidiary of long-haul budget carrier Norse Atlantic has officially declared bankruptcy. The move highlights continued operational and financial challenges facing the airline industry. Further details regarding passenger impact and restructuring measures have not yet been disclosed.  \n**Key Theme:** Aviation / Business\n\n---\n\n### Poland signs contract with Palantir worth $300 mln over 5 years - Reuters\n**Source:** Reuters Top News  \n**Summary:** Poland has finalized a five-year contract valued at $300 million with US tech firm Palantir. The deal aims to enhance the country's data processing and defense capabilities. The investment comes amid heightened security focus across Eastern Europe.  \n**Key Theme:** Defense / Technology\n\n---\n\n### Meloni warns Kyiv that war 'cannot spread to the Mediterranean' after bombing of Russian warship in Libya\n**Source:** Daily Mail UK  \n**Summary:** Italian Prime Minister Giorgia Meloni warned Ukrainian President Volodymyr Zelensky against expanding the war into the Mediterranean region. The warning followed Ukraine's confirmation that its suicide drones destroyed the Russian warship *Merkury* at a port in Benghazi, Libya. Meloni voiced severe concerns regarding the geopolitical risks of military actions spreading to North Africa.  \n**Key Theme:** Defense / Geopolitics\n\n---\n\n### F1 boss and his mother sue council and National Highways for \u00a31.1million after tons of 'sludge' from local roads spill into lake at their \u00a32.2million manor house - smothering their lily pads\n**Source:** Daily Mail UK  \n**Summary:** Former Alpine F1 team boss Oliver Oakes and his mother have launched a \u00a31.1 million lawsuit against National Highways and a local council. The legal claim alleges that tons of road sludge spilled into a private lake at their \u00a32.2 million Norfolk property. The family contends the spill severely damaged the lake's ecosystem and property value.  \n**Key Theme:** Legal / Litigation\n\n---\n\n### Beloved Toronto musician gunned down in home invasion \u2014 as cops hunt down vehicle tied to deadly attack\n**Source:** New York Post  \n**Summary:** Toronto police have launched a homicide investigation after 39-year-old musician Michael Eckert was shot dead during a home invasion. Eckert confronted an armed intruder inside his midtown Toronto residence early Wednesday morning. Law enforcement officers are currently searching for a vehicle identified near the scene of the attack.  \n**Key Theme:** Crime / Investigation\n\n---\n\n### TV news hourly summary \u00b7 Nov 27, 16:03 UTC\n**Source:** Internet Archive TV News (hourly summary)  \n**Summary:** Rising seasonal flu cases and severe weather are disrupting US holiday travel, while Wall Street experiences volatility over debt concerns. Internationally, the US is implementing stricter controls on microchip smuggling, and Spain's election campaign concludes. Meanwhile, diplomatic tensions persist as President Zelensky calls for stronger US pressure on Russia.  \n**Key Theme:** World News",
+  "image_prompt": "Create a hyper-detailed, cinematic digital illustration in a dramatic, high-stakes news aesthetic that captures the key global events and themes of today.\n\nComposition:\nWide cinematic 16:9 frame. Multi-layered collage-style scene with strong diagonal composition. Foreground: metallic newsroom monitors, glowing holographic data streams, and dark reflective glass surfaces. Midground: split visual screens displaying global maps, satellite tracks, financial tickers, and high-contrast headlines. Background: dramatic city skyline at twilight with searchlights and volumetric atmospheric haze.\n\nLighting:\nHigh-contrast noir-cinematic lighting. Cold cyan and deep electric blue key lights combined with warm amber warning alerts.\n\nColor Palette:\nDeep midnight blue, dark slate gray, crimson red alert accents, neon cyan data overlays, and stark gold warm highlights.\n\nKey News Themes & Summaries of the Day to Visualise Conceptually:\n### Zelensky criticises 'strange' Trump-Putin friendship in BBC interview\n**Source:** BBC World News  \n**Summary:** Ukrainian President Volodymyr Zelensky voiced frustration with the United States in a BBC interview, characterizing the relationship between Donald Trump and Vladimir Putin as \"strange.\" Zelensky argued that Washington is not applying enough pressure on Russia during peace negotiations. He urged Western allies to take a firmer stance to help bring an end to the war.  \n**Key Theme:** Geopolitics / Diplomacy\n\n---\n\n### John Simpson: Ukraine is bowed but still unbroken as freezing weather sets in\n**Source:** BBC World News  \n**Summary:** Ukraine is preparing for another harsh winter as its conflict with Russia drags on. Despite severe damage to national infrastructure and freezing conditions, the population demonstrates ongoing resilience. However, persistent uncertainty remains regarding how and when the war will reach a resolution.  \n**Key Theme:** Ukraine War\n\n---\n\n### Airline Norse Atlantic's Norwegian operating unit declares bankruptcy - Reuters\n**Source:** Reuters Top News  \n**Summary:** The Norwegian operating subsidiary of long-haul budget carrier Norse Atlantic has officially declared bankruptcy. The move highlights continued operational and financial challenges facing the airline industry. Further details regarding passenger impact and restructuring measures have not yet been disclosed.  \n**Key Theme:** Aviation / Business\n\n---\n\n### Poland signs contract w\n\nVisual Style:\nPhotorealistic cinematic artwork, octane render detail, crisp vector interfaces, volumetric god rays. No readable text overlays.",
   "public_index_path": "index.html",
   "current_html_path": "output/current/index.html",
   "data_current_html_path": "data/current/index.html",
-  "archive_html_path": "output/archive/2026-11-26/index.html",
-  "data_archive_html_path": "data/archive/2026-11-26/index.html",
-  "feed_hash": "4ce80f8b662e1824219143e11f8c1e74"
+  "archive_html_path": "output/archive/2026-11-27/index.html",
+  "data_archive_html_path": "data/archive/2026-11-27/index.html"
 }

@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Intelligence Briefing – 2026-11-27</title>
+    <style>
+        :root {
+            --bg: #0f1115;
+            --card: #1a1d24;
+            --text: #e6e8ec;
+            --muted: #9ba1ad;
+            --accent: #3b82f6;
+            --border: #2a2e38;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; padding: 2rem 1rem; }
+        .container { max-width: 960px; margin: 0 auto; }
+        header { text-align: center; margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+        header h1 { font-size: 2.2rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 0.4rem; color: #ffffff; }
+        header .date { color: var(--accent); font-size: 1rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+        
+        .hero-image { width: 100%; border-radius: 16px; overflow: hidden; margin-bottom: 2.5rem; box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6); border: 1px solid var(--border); background: #0b0f19; }
+        
+        /* Flexible Photo Collage Component */
+        .collage-wrapper { position: relative; width: 100%; }
+        .collage-header-pill {
+            position: absolute; top: 14px; left: 14px; z-index: 10;
+            background: rgba(15, 23, 42, 0.88); backdrop-filter: blur(8px);
+            border: 1px solid rgba(56, 189, 248, 0.35); color: #38bdf8;
+            padding: 5px 12px; border-radius: 999px; font-size: 11px; font-weight: 800;
+            letter-spacing: 0.5px; display: flex; align-items: center; gap: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        }
+        .collage-container {
+            display: grid; gap: 8px; background: #090d16; padding: 8px; border-radius: 16px; min-height: 280px;
+        }
+        .collage-container.collage-count-1 { grid-template-columns: 1fr; grid-template-rows: 360px; }
+        .collage-container.collage-count-1 .hero-tile { grid-row: auto; }
+
+        .collage-container.collage-count-2 { grid-template-columns: 1fr 1fr; grid-template-rows: 320px; }
+        .collage-container.collage-count-2 .hero-tile { grid-row: auto; }
+
+        .collage-container.collage-count-3 { grid-template-columns: 1.6fr 1fr; grid-template-rows: 170px 170px; }
+        .collage-container.collage-count-3 .hero-tile { grid-row: span 2; }
+
+        .collage-container.collage-count-4 { grid-template-columns: 1.6fr 1fr 1fr; grid-template-rows: 170px 170px; }
+        .collage-container.collage-count-4 .hero-tile { grid-row: span 2; }
+        .collage-container.collage-count-4 .collage-tile:nth-child(4) { grid-column: span 2; }
+
+        .collage-container.collage-count-5 { grid-template-columns: 1.8fr 1fr 1fr; grid-template-rows: 180px 180px; }
+        .collage-container.collage-count-5 .hero-tile { grid-row: span 2; }
+
+        @media (max-width: 768px) {
+            .collage-container,
+            .collage-container.collage-count-2,
+            .collage-container.collage-count-3,
+            .collage-container.collage-count-4,
+            .collage-container.collage-count-5 {
+                grid-template-columns: 1fr; grid-template-rows: auto;
+            }
+            .collage-tile, .hero-tile { min-height: 180px; }
+        }
+        .collage-tile {
+            position: relative; border-radius: 10px; overflow: hidden; background: #131927;
+            border: 1px solid rgba(255, 255, 255, 0.08); transition: transform 0.3s ease;
+        }
+        .collage-tile.hero-tile { grid-row: span 2; }
+        .collage-tile img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
+        .collage-tile:hover img { transform: scale(1.06); }
+        .collage-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(to top, rgba(11, 15, 23, 0.95) 0%, rgba(11, 15, 23, 0.2) 60%, transparent 100%);
+            display: flex; flex-direction: column; justify-content: flex-end; padding: 12px;
+        }
+        .collage-badge {
+            align-self: flex-start; background: rgba(56, 189, 248, 0.2); color: #38bdf8;
+            border: 1px solid rgba(56, 189, 248, 0.4); font-size: 10px; font-weight: 700;
+            text-transform: uppercase; padding: 2px 8px; border-radius: 999px; margin-bottom: 6px;
+        }
+        .collage-badge.hero-badge { background: rgba(16, 185, 129, 0.2); color: #34d399; border-color: rgba(16, 185, 129, 0.4); }
+        .collage-title { color: #ffffff; font-size: 12px; font-weight: 700; line-height: 1.35; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        .hero-tile .collage-title { font-size: 17px; }
+
+        .stories { display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 3rem; }
+        .story { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem; }
+        .story h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: #f1f3f5; }
+        .story-body { color: var(--muted); font-size: 0.98rem; overflow-wrap: anywhere; word-break: break-word; }
+        .story h2, .mini-card h3, .mini-card p { overflow-wrap: anywhere; }
+        .container { min-width: 0; max-width: 100%; }
+        .section-title { font-size: 1.3rem; font-weight: 800; color: var(--accent); margin: 2rem 0 1rem; border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; }
+        .segmented-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
+        .mini-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+        .mini-card.scraped { border-left: 3px solid #8b5cf6; }
+        .mini-card.rss { border-left: 3px solid #3b82f6; }
+        .source-tag { font-size: 0.75rem; font-weight: bold; color: var(--accent); margin-bottom: 0.4rem; }
+        .mini-card h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.4rem; }
+        .mini-card h3 a { color: #f1f3f5; text-decoration: none; }
+        .mini-card h3 a:hover { text-decoration: underline; color: var(--accent); }
+        .mini-card p { font-size: 0.82rem; color: var(--muted); line-height: 1.4; }
+        footer { text-align: center; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="date">2026-11-27</div>
+            <h1>Daily Intelligence Briefing</h1>
+        </header>
+
+        <div class="hero-image">
+            
+                
+    <div class="collage-wrapper">
+        <div class="collage-header-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7"/><path d="M16 5h5v5"/><path d="m21 5-9 9"/></svg>
+            <span>Parsed Feeds Mixed Photo Collage (5 Photos)</span>
+        </div>
+        <div class="collage-container collage-count-5">
+            <div class="collage-tile hero-tile">
+                <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/fdee/live/21e805d0-ea60-11f1-99b6-a35a62fa4264.jpg" alt="Zelensky criticises &#x27;strange&#x27; Trump-Putin friendship in BBC interview" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+                <div class="collage-overlay">
+                    <span class="collage-badge hero-badge">BBC World News</span>
+                    <h3 class="collage-title hero-title">Zelensky criticises &#x27;strange&#x27; Trump-Putin friendship in BBC interview</h3>
+                </div>
+            </div>
+            
+        <div class="collage-tile">
+            <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9fca/live/2dd32240-e9b5-11f1-99b6-a35a62fa4264.jpg" alt="John Simpson: Ukraine is bowed but still unbroken as freezing weather sets in" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">BBC World News</span>
+                <h4 class="collage-title">John Simpson: Ukraine is bowed but still unbroken as freezing weather sets in</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/4438/live/a0415f90-ea78-11f1-a094-5fdc692f3e33.jpg" alt="Marching bands scramble to cover costs after Thanksgiving parade rearranged" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">BBC World News</span>
+                <h4 class="collage-title">Marching bands scramble to cover costs after Thanksgiving parade rearranged</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Airline Norse Atlantic&#x27;s Norwegian operating unit declares bankruptcy - Reuters" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">Reuters Top News</span>
+                <h4 class="collage-title">Airline Norse Atlantic&#x27;s Norwegian operating unit declares bankruptcy - Reuters</h4>
+            </div>
+        </div>
+        
+        <div class="collage-tile">
+            <img src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Poland signs contract with Palantir worth $300 mln over 5 years - Reuters" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80';" />
+            <div class="collage-overlay">
+                <span class="collage-badge">Reuters Top News</span>
+                <h4 class="collage-title">Poland signs contract with Palantir worth $300 mln over 5 years - Reuters</h4>
+            </div>
+        </div>
+        
+        </div>
+    </div>
+    
+            
+        </div>
+
+        <main class="stories">
+            
+        <div class="story">
+            <h2>Zelensky criticises &#x27;strange&#x27; Trump-Putin friendship in BBC interview</h2>
+            <div class="story-body"><strong>Source:</strong> BBC World News<br><strong>Summary:</strong> Ukrainian President Volodymyr Zelensky voiced frustration with the United States in a BBC interview, characterizing the relationship between Donald Trump and Vladimir Putin as &quot;strange.&quot; Zelensky argued that Washington is not applying enough pressure on Russia during peace negotiations. He urged Western allies to take a firmer stance to help bring an end to the war.<br><strong>Key Theme:</strong> Geopolitics / Diplomacy<br>---</div>
+        </div>
+        
+        <div class="story">
+            <h2>John Simpson: Ukraine is bowed but still unbroken as freezing weather sets in</h2>
+            <div class="story-body"><strong>Source:</strong> BBC World News<br><strong>Summary:</strong> Ukraine is preparing for another harsh winter as its conflict with Russia drags on. Despite severe damage to national infrastructure and freezing conditions, the population demonstrates ongoing resilience. However, persistent uncertainty remains regarding how and when the war will reach a resolution.<br><strong>Key Theme:</strong> Ukraine War<br>---</div>
+        </div>
+        
+        <div class="story">
+            <h2>Airline Norse Atlantic&#x27;s Norwegian operating unit declares bankruptcy - Reuters</h2>
+            <div class="story-body"><strong>Source:</strong> Reuters Top News<br><strong>Summary:</strong> The Norwegian operating subsidiary of long-haul budget carrier Norse Atlantic has officially declared bankruptcy. The move highlights continued operational and financial challenges facing the airline industry. Further details regarding passenger impact and restructuring measures have not yet been disclosed.<br><strong>Key Theme:</strong> Aviation / Business<br>---</div>
+        </div>
+        
+        <div class="story">
+            <h2>Poland signs contract with Palantir worth $300 mln over 5 years - Reuters</h2>
+            <div class="story-body"><strong>Source:</strong> Reuters Top News<br><strong>Summary:</strong> Poland has finalized a five-year contract valued at $300 million with US tech firm Palantir. The deal aims to enhance the country&#x27;s data processing and defense capabilities. The investment comes amid heightened security focus across Eastern Europe.<br><strong>Key Theme:</strong> Defense / Technology<br>---</div>
+        </div>
+        
+        <div class="story">
+            <h2>Meloni warns Kyiv that war &#x27;cannot spread to the Mediterranean&#x27; after bombing of Russian warship in Libya</h2>
+            <div class="story-body"><strong>Source:</strong> Daily Mail UK<br><strong>Summary:</strong> Italian Prime Minister Giorgia Meloni warned Ukrainian President Volodymyr Zelensky against expanding the war into the Mediterranean region. The warning followed Ukraine&#x27;s confirmation that its suicide drones destroyed the Russian warship *Merkury* at a port in Benghazi, Libya. Meloni voiced severe concerns regarding the geopolitical risks of military actions spreading to North Africa.<br><strong>Key Theme:</strong> Defense / Geopolitics<br>---</div>
+        </div>
+        
+        <div class="story">
+            <h2>F1 boss and his mother sue council and National Highways for £1.1million after tons of &#x27;sludge&#x27; from local roads spill into lake at their £2.2million manor house - smothering their lily pads</h2>
+            <div class="story-body"><strong>Source:</strong> Daily Mail UK<br><strong>Summary:</strong> Former Alpine F1 team boss Oliver Oakes and his mother have launched a £1.1 million lawsuit against National Highways and a local council. The legal claim alleges that tons of road sludge spilled into a private lake at their £2.2 million Norfolk property. The family contends the spill severely damaged the lake&#x27;s ecosystem and property value.<br><strong>Key Theme:</strong> Legal / Litigation<br>---</div>
+        </div>
+        
+        <div class="story">
+            <h2>Beloved Toronto musician gunned down in home invasion — as cops hunt down vehicle tied to deadly attack</h2>
+            <div class="story-body"><strong>Source:</strong> New York Post<br><strong>Summary:</strong> Toronto police have launched a homicide investigation after 39-year-old musician Michael Eckert was shot dead during a home invasion. Eckert confronted an armed intruder inside his midtown Toronto residence early Wednesday morning. Law enforcement officers are currently searching for a vehicle identified near the scene of the attack.<br><strong>Key Theme:</strong> Crime / Investigation<br>---</div>
+        </div>
+        
+        <div class="story">
+            <h2>TV news hourly summary · Nov 27, 16:03 UTC</h2>
+            <div class="story-body"><strong>Source:</strong> Internet Archive TV News (hourly summary)<br><strong>Summary:</strong> Rising seasonal flu cases and severe weather are disrupting US holiday travel, while Wall Street experiences volatility over debt concerns. Internationally, the US is implementing stricter controls on microchip smuggling, and Spain&#x27;s election campaign concludes. Meanwhile, diplomatic tensions persist as President Zelensky calls for stronger US pressure on Russia.<br><strong>Key Theme:</strong> World News</div>
+        </div>
+        
+        </main>
+
+        
+        <div class='section-title'>Global &amp; Alternative RSS Feeds</div><div class='segmented-grid'>
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/articles/c820q9wgrpyyo?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>Zelensky criticises &#x27;strange&#x27; Trump-Putin friendship in BBC interview</a></h3>
+                <p>Ukraine&#x27;s president voices frustration with US and says it is not pushing Russia hard enough in peace talks to end the war....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/articles/c3pw4yrr8kz9o?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>John Simpson: Ukraine is bowed but still unbroken as freezing weather sets in</a></h3>
+                <p>Ukraine settles in for another devastating winter as the questions persists: how will it all end?...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>BBC World News</div>
+                <h3><a href='https://www.bbc.co.uk/news/articles/ckd71ypy9e8eo?at_medium=RSS&amp;at_campaign=rss' target='_blank' rel='noopener'>Marching bands scramble to cover costs after Thanksgiving parade rearranged</a></h3>
+                <p>Stormy weather in New York City prompted organisers to push back the Macy&#x27;s parade by two days - leaving some musicians stuck....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMivgFBVV95cUxOZjF6SXBzRmpCeHczaU9VZnNGczNjcWtlMXNCMUFrTUxfbUViN3cxUXpPbFU0YVRTQzU0aEY5MGdLY1hnU2I1R21jd2tYNnIyLVVLeEtoSEY2WjZKNTE0QkdLWWFzcmkySGFYUWE4Vmh3OVpzLWJ3V25LX18zSUJ4TS1TcExrVFFoUUVvOS13NmF1dUZJWVo1S2hLRlZaNmMzTWh1dDFsTHpXUzlzN2lWQ01sc1VVR0hOUzlZSTJ3?oc=5' target='_blank' rel='noopener'>Airline Norse Atlantic&#x27;s Norwegian operating unit declares bankruptcy - Reuters</a></h3>
+                <p>Airline Norse Atlantic&#x27;s Norwegian operating unit declares bankruptcy Reuters...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMirgFBVV95cUxPcE9acGJ4ZnNpRGhDSXVvN1lpUWNyQTlJalVfQ25acTN3Q0JuTW9ydHFPb3paNUx4MEQxQUhpSnVfV0xwaEVvblo3NG8xOGtMZHlLdEs0Qi1iSGVhM1RYcVg4ZlhjU0VfYW9ReFk2cU1DdXVWMzVweElzQjkyN0ZZUFZjTDNaZmk4TF9jTnhGZDVDRnRuVWxaaUhxckxQTEJQYVJmTERxRFlGaFpNSGc?oc=5' target='_blank' rel='noopener'>Poland signs contract with Palantir worth $300 mln over 5 years - Reuters</a></h3>
+                <p>Poland signs contract with Palantir worth $300 mln over 5 years Reuters...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Reuters Top News</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMiwgFBVV95cUxQQWJhaVBEcEFiX2hwb0lHanFvdTJncnpwM3JVMEh6WTUxSmhaWjV6MHcwdGJueHd5M1pmcVB2VG9UbGxKbzlseklNR2FjNHFWMlFLbmxLQkxxeXptM1VWUVRkWngxS2dwNTVWTng2NXcyUlo4NHM5OFM3NWNsNUY2WkdJblJmcVFRaVV4X1IweXZQWUJya01ZVi1qc19IVjF1OGEtQU9aVDd0eW5xYnBkQkxhcWg0dHFUWEwyYzlPdkdqZw?oc=5' target='_blank' rel='noopener'>EXCLUSIVE: Global fashion brands shift orders from Bangladesh to India amid unrest - Reuters</a></h3>
+                <p>EXCLUSIVE: Global fashion brands shift orders from Bangladesh to India amid unrest Reuters...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/news/article-16326607/Meloni-warns-Kyiv-war-spread-Mediterranean-Russian-warship-Libya.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>Meloni warns Kyiv that war &#x27;cannot spread to the Mediterranean&#x27; after bombing of Russian warship in Libya</a></h3>
+                <p>Giorgia Meloni confronted Kyiv after Volodymyr Zelensky confirmed on Monday that Ukrainian suicide drones had destroyed the Merkury at a port in Benghazi....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/news/article-16326383/F1-boss-mother-sue-council-National-Highways-1-1million-tons-sludge-local-roads-spill-lake-2-2million-manor-house-smothering-lily-pads.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>F1 boss and his mother sue council and National Highways for £1.1million after tons of &#x27;sludge&#x27; from local roads spill into lake at their £2.2million manor house - smothering their lily pads</a></h3>
+                <p>Former racing driver and ex-Alpine F1 team chief Oliver Oakes has launched legal action against a council and National Highways over his family property in Norfolk....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Daily Mail UK</div>
+                <h3><a href='https://www.dailymail.com/news/article-16326325/TV-anchor-breaks-tears-live-report-stock-market-share-slump.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490' target='_blank' rel='noopener'>TV anchor breaks down and tears up during live report on stock market share slump</a></h3>
+                <p>A South Korean news anchor broke down in tears on live television while reporting on a stock market slump....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>New York Post</div>
+                <h3><a href='https://nypost.com/2026/11/27/world-news/beloved-toronto-musician-michael-eckert-gunned-down-in-canada-home-invasion/' target='_blank' rel='noopener'>Beloved Toronto musician gunned down in home invasion — as cops hunt down vehicle tied to deadly attack</a></h3>
+                <p>Michael Eckert, 39, was killed after coming face-to-face with a gun-wielding suspect who stormed his midtown Toronto home at around 2:40 a.m. Wednesday, a police press release states....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>New York Post</div>
+                <h3><a href='https://nypost.com/2026/11/27/sports/where-to-watch-broncos-vs-steelers-live-for-free-on-black-friday/' target='_blank' rel='noopener'>NFL on Black Friday is back–Where to watch Broncos vs. Steelers for free</a></h3>
+                <p>This is a must-win game for Pittsburgh after losing the past two weeks....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>New York Post</div>
+                <h3><a href='https://nypost.com/2026/11/27/betting/kalshi-promo-code-nypmax55-trade-25-get-up-to-55-bonus-for-texas-vs-texas-am/' target='_blank' rel='noopener'>Kalshi promo code NYPMAX55: Trade $25, get up to $55 bonus for Texas vs. Texas A&amp;M</a></h3>
+                <p>Traders can use the Kalshi promo code NYPMAX55 to trade $25, to get up to a $55 bonus for Week 13....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/jared-kushnerlls-putin-grandmaster-politics-says-he/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=jared-kushnerlls-putin-grandmaster-politics-says-he' target='_blank' rel='noopener'>Jared Kushner Calls Putin A ‘Grandmaster Of Politics,’ Says He Wants ‘A New Beginning’ With America</a></h3>
+                <p>Jared Kushner gave a candid assessment of Vladimir Putin, calling him a political grandmaster and saying he wants a new beginning with America....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/president-trump-tells-deployed-troops-america-has-victory/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=president-trump-tells-deployed-troops-america-has-victory' target='_blank' rel='noopener'>President Trump Tells Deployed Troops America Has ‘Victory At Hand’</a></h3>
+                <p>President Trump thanked deployed American troops on Thanksgiving and told them the United States has victory at hand over Iran....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>100% Fed Up</div>
+                <h3><a href='https://100percentfedup.com/ice-arrests-1-million-lottery-winner-then-reveals/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=ice-arrests-1-million-lottery-winner-then-reveals' target='_blank' rel='noopener'>ICE Arrests $1 Million Lottery Winner — Then Reveals Why His Luck Ran Out</a></h3>
+                <p>A $1 million Massachusetts lottery winner landed in ICE custody days after posing with his check, and the agency says a final 2014 removal order explains why....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/11/27/propublica-magically-turns-every-story-into-a-sleazy-political-hit/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=propublica-magically-turns-every-story-into-a-sleazy-political-hit' target='_blank' rel='noopener'>ProPublica Magically Turns Every Story Into A Sleazy Political Hit</a></h3>
+                <p>The headline is about a SUSAN COLLINS BRIBERY SCANDAL, but the story is about &#x27;top lawmakers of both political parties.&#x27;...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/11/27/scotus-prepares-to-scope-out-legality-of-devastating-ar-15-bans/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=scotus-prepares-to-scope-out-legality-of-devastating-ar-15-bans' target='_blank' rel='noopener'>SCOTUS Prepares To Scope Out Legality Of ‘Devastating’ AR-15 Bans</a></h3>
+                <p>The Democrat-led effort to ban these guns &#x27;is really not driven by numbers or harm. It&#x27;s driven by a political agenda that is just anti-gun in general.&#x27;...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Federalist</div>
+                <h3><a href='https://thefederalist.com/2026/11/27/the-u-k-is-trying-to-compel-american-tech-companies-to-censor-speech-again/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=the-u-k-is-trying-to-compel-american-tech-companies-to-censor-speech-again' target='_blank' rel='noopener'>The U.K. Is Trying To Compel American Tech Companies To Censor Speech Again</a></h3>
+                <p>London admits it can’t force U.S. tech companies to remove lawful speech. It’s already talking about a law that would....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/shows/live-free-with-josh-howerton/the-interruption-might-be-the-assignment-josh-howerton-on-the-unknown-usher-who-helped-bring-billy-graham-to-christ' target='_blank' rel='noopener'>‘The interruption might be the assignment’: Josh Howerton on the unknown usher who helped bring Billy Graham to Christ</a></h3>
+                <p>When it comes to serving God, there is no such thing as playing an insignificant role, says BlazeTV host and Lakepointe Church Pastor Josh Howerton. “A lot of the people who have had the greatest impa...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/news/buckle-up-nanny-state-ca' target='_blank' rel='noopener'>Buckle up, &#x27;nanny state&#x27;: California to require booster seats for some kids as old as 15</a></h3>
+                <p>It&#x27;s dawning on Californians that they may soon have to strap their teenage children into booster seats to comply with state law. Starting on Jan. 1, 2027 , parents and legal guardians will be ba...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>The Blaze</div>
+                <h3><a href='https://www.theblaze.com/lifestyle/11-american-made-christmas-gifts-he-ll-actually-use-and-never-return' target='_blank' rel='noopener'>11 American-made Christmas gifts he&#x27;ll actually use (and never return)</a></h3>
+                <p>Scrambling for a gift idea this Christmas to show your dad, husband, or boyfriend your appreciation? If you&#x27;re stumped on what to get him, we&#x27;ve got you covered. Looking for more gifts with ...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/headlines/2026/11/27/democrats-cant-win-with-electoral-college-so-theyll-end-it-n3821322' target='_blank' rel='noopener'>Democrats Can&#x27;t Win With Electoral College - So, They&#x27;ll End It</a></h3>
+                <p>Democrats Can&#x27;t Win With Electoral College - So, They&#x27;ll End It...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/ed-morrissey/2026/11/27/nbcs-thanksgiving-includes-heaping-helping-of-blood-libel-against-israel-n3821384' target='_blank' rel='noopener'>NBC&#x27;s Thanksgiving Includes Heaping Helping of Blood Libel Against Israel – And US</a></h3>
+                <p>NBC&#x27;s Thanksgiving Includes Heaping Helping of Blood Libel Against Israel – And US...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Hot Air</div>
+                <h3><a href='https://hotair.com/headlines/2026/11/27/donald-trump-owns-his-shadow-it-drives-his-critics-insane-n3821315' target='_blank' rel='noopener'>Donald Trump Owns His Shadow. It Drives His Critics Insane</a></h3>
+                <p>Donald Trump Owns His Shadow. It Drives His Critics Insane...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Judicial Watch</div>
+                <h3><a href='https://www.judicialwatch.org/ilhan-omar-search-warrant-records-released/' target='_blank' rel='noopener'>Ilhan Omar Search Warrant Records Released</a></h3>
+                <p>Unsealed Records Reveal Broad Criminal Probe of Rep. Ilhan Omar Judicial Watch Victory: Ilhan Omar Search Warrant Records…...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Judicial Watch</div>
+                <h3><a href='https://www.judicialwatch.org/unsealed-records-reveal-broad-federal-criminal-probe-of-rep-ilhan-omar-doj-still-withholding-warrant-records-already-in-omars-possession/' target='_blank' rel='noopener'>Judicial Watch: Unsealed Records Reveal Broad Federal Criminal Probe of Rep. Ilhan Omar; DOJ Still W...</a></h3>
+                <p>(Washington, DC) – Judicial Watch announced additional findings today that unsealed court records in its lawsuit over the…...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Judicial Watch</div>
+                <h3><a href='https://www.judicialwatch.org/unsealed-ilhan-omar-search-warrant-cites-alleged-immigration-fraud-dating-back-to-1980-crimes-over-decades/' target='_blank' rel='noopener'>Unsealed Ilhan Omar search warrant cites alleged immigration fraud dating back to 1980: ‘Crimes over...</a></h3>
+                <p>WASHINGTON — A heavily redacted search warrant executed at the DC home of Rep. Ilhan Omar was unsealed…...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/11/shapiro-kushner-miliband-and-the-as-a-jew-club/' target='_blank' rel='noopener'>Shapiro, Kushner, Miliband, And The &#x27;As-a-Jew&#x27; Club</a></h3>
+                <p>Photo Credit: Israel flag over Israel pixabay By Daniel Winston When a non-Jew attacks Israel, the Jew-hater hears an opinion. When a Jew does it, the Jew-hater hears a confession....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/11/it-depends-on-the-definition-of-willfully/' target='_blank' rel='noopener'>It Depends on the Definition of ‘Willfully’</a></h3>
+                <p>Photo Credit: Image via Picryl . Picryl By Jay Rogers Peter Navarro’s case offers the Supreme Court an opportunity to ensure that criminal contempt prosecutions turn on actual intent, not political af...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>American Thinker</div>
+                <h3><a href='https://www.americanthinker.com/articles/2026/11/flouting-the-taboo/' target='_blank' rel='noopener'>Flouting The Taboo</a></h3>
+                <p>Photo Credit: Public Domain By Lars Møller Holocaust amnesia and the new antisemitism in Europe....</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMiZEFVX3lxTE1ZWFMxWlpDRlozcDR3T0RMNV94THJQbmRtYjAwY3JfSTZzZnAyZE5YU2lsQVczRHVvcUFOeng2ZktFa1RjeTlUVEJkOGoyUVFoY3YySFpmZXdBOXo4MU40NE9kUW8?oc=5' target='_blank' rel='noopener'>Subscribe to The Epoch Times - The Epoch Times</a></h3>
+                <p>Subscribe to The Epoch Times The Epoch Times...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMiREFVX3lxTFBSU2dZLXZaX21HbzlKWGxkWnM1eEQwNEZ3VE4xUkJFWFJWSkJ3d0pSY2c4MTBKZXctUXdyWWdicWJQaklP?oc=5' target='_blank' rel='noopener'>The Epoch Times | Breaking News, Latest News, World News and Videos - The Epoch Times</a></h3>
+                <p>The Epoch Times | Breaking News, Latest News, World News and Videos The Epoch Times...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Epoch Times</div>
+                <h3><a href='https://news.google.com/rss/articles/CBMipAFBVV95cUxQakVoclhWc3RES2dSaHZwbnBSdW40NWVJWFVrVmlCY3dMdXFFb3JDYVhvdElLNWVBelpwZVBHUVc1UVJnYk9fNzB2N19oTEprejg3Z3NhcnZKQ1F5UTNVVU04N0VrOS1UVk1JN2J1MmNFOVhjWTNTdkR2VjlJeWlHbGlqRlpWUDl0WlAteUN1UnhLQlVGcXpMaUhzSHc0Rm50M2Njeg?oc=5' target='_blank' rel='noopener'>Feds Recover $8 Billion in Largest-Ever Scam Crackdown: Blanche - The Epoch Times</a></h3>
+                <p>Feds Recover $8 Billion in Largest-Ever Scam Crackdown: Blanche The Epoch Times...</p>
+            </div>
+            
+            <div class='mini-card rss'>
+                <div class='source-tag'>Internet Archive TV News (hourly summary)</div>
+                <h3><a href='https://mastodon.archive.org/@tv/117689246322696659' target='_blank' rel='noopener'>TV news hourly summary · Nov 27, 16:03 UTC</a></h3>
+                <p>Seasonal flu activity is rising nationally, while holiday travel faces storm-related delays. The U.S. is tightening controls to curb chip smuggling; Wall Street is rattled by spending and debt concern...</p>
+            </div>
+            </div>
+
+        <footer>
+            Automated Segmented Pipeline powered by HTML Scrapers, 11 Global RSS Feeds &amp; Google Gemini AI &bull; 2026-11-27
+        </footer>
+    </div>
+</body>
+</html>
